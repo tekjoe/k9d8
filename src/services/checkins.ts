@@ -38,6 +38,13 @@ export async function checkIn(
     }
   }
 
+  // Fire-and-forget: notify friends about check-in
+  supabase.functions
+    .invoke('friend-checkin-notification', {
+      body: { user_id: userId, park_id: parkId },
+    })
+    .catch(console.error);
+
   return checkInRecord as CheckIn;
 }
 

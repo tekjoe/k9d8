@@ -1,25 +1,33 @@
-import { useCallback, useState } from 'react';
-import { getParksNearby } from '../services/parks';
+import { useCallback, useEffect, useState } from 'react';
+import { getAllParks, getActiveCheckInCounts } from '../services/parks';
 import type { Park } from '../types/database';
 
 interface UseParksReturn {
   parks: Park[];
+  checkInCounts: Record<string, number>;
   loading: boolean;
   error: string | null;
-  loadParks: (lat: number, lng: number) => Promise<void>;
+  loadParks: () => Promise<void>;
 }
 
 export function useParks(): UseParksReturn {
   const [parks, setParks] = useState<Park[]>([]);
+  const [checkInCounts, setCheckInCounts] = useState<Record<string, number>>(
+    {},
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const loadParks = useCallback(async (lat: number, lng: number) => {
+  const loadParks = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await getParksNearby(lat, lng);
-      setParks(data);
+      const [parkData, counts] = await Promise.all([
+        getAllParks(),
+        getActiveCheckInCounts(),
+      ]);
+      setParks(parkData);
+      setCheckInCounts(counts);
     } catch (err) {
       const message =
         err instanceof Error ? err.message : 'Failed to load parks';
@@ -29,5 +37,9 @@ export function useParks(): UseParksReturn {
     }
   }, []);
 
-  return { parks, loading, error, loadParks };
+  useEffect(() => {
+    loadParks();
+  }, [loadParks]);
+
+  return { parks, checkInCounts, loading, error, loadParks };
 }

@@ -28,6 +28,12 @@ export function useCheckIn(parkId: string): UseCheckInReturn {
   const channelRef = useRef<RealtimeChannel | null>(null);
 
   const loadCheckIns = useCallback(async () => {
+    if (!parkId) {
+      setActiveCheckIns([]);
+      setUserCheckIn(null);
+      setLoading(false);
+      return;
+    }
     try {
       const [active, userActive] = await Promise.all([
         getActiveCheckIns(parkId),
@@ -47,13 +53,14 @@ export function useCheckIn(parkId: string): UseCheckInReturn {
     }
   }, [parkId, userId]);
 
-  // Load active check-ins on mount
+  // Load active check-ins on mount (skip when no parkId to avoid invalid UUID)
   useEffect(() => {
     loadCheckIns();
   }, [loadCheckIns]);
 
   // Subscribe to Realtime changes on check_ins filtered by park_id
   useEffect(() => {
+    if (!parkId) return;
     const channel = supabase
       .channel(`check_ins:park_id=eq.${parkId}`)
       .on(

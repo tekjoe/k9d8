@@ -2,6 +2,7 @@ export type DogSize = 'small' | 'medium' | 'large' | 'extra_large';
 export type DogTemperament = 'calm' | 'friendly' | 'energetic' | 'anxious' | 'aggressive';
 export type PlayDateStatus = 'scheduled' | 'cancelled' | 'completed';
 export type RSVPStatus = 'going' | 'maybe' | 'cancelled';
+export type FriendshipStatus = 'pending' | 'accepted' | 'declined';
 
 export interface Profile {
   id: string;
@@ -86,6 +87,51 @@ export interface PlayDateRSVP {
   dog?: Dog;
 }
 
+export interface Conversation {
+  id: string;
+  last_message_at: string;
+  last_message_preview: string | null;
+  created_at: string;
+  participants?: ConversationParticipant[];
+}
+
+export interface ConversationParticipant {
+  id: string;
+  conversation_id: string;
+  user_id: string;
+  last_read_at: string;
+  created_at: string;
+  profile?: Profile;
+}
+
+export interface Message {
+  id: string;
+  conversation_id: string;
+  sender_id: string;
+  content: string;
+  created_at: string;
+  sender?: Profile;
+}
+
+export interface PushToken {
+  id: string;
+  user_id: string;
+  token: string;
+  platform: 'ios' | 'android' | 'web';
+  created_at: string;
+}
+
+export interface Friendship {
+  id: string;
+  requester_id: string;
+  addressee_id: string;
+  status: FriendshipStatus;
+  created_at: string;
+  updated_at: string;
+  requester?: Profile;
+  addressee?: Profile;
+}
+
 export interface Database {
   public: {
     Tables: {
@@ -123,6 +169,31 @@ export interface Database {
         Row: PlayDateRSVP;
         Insert: Omit<PlayDateRSVP, 'id' | 'created_at' | 'profile' | 'dog'>;
         Update: Partial<Pick<PlayDateRSVP, 'status'>>;
+      };
+      conversations: {
+        Row: Conversation;
+        Insert: Omit<Conversation, 'id' | 'created_at' | 'last_message_at' | 'last_message_preview' | 'participants'>;
+        Update: Partial<Pick<Conversation, 'last_message_at' | 'last_message_preview'>>;
+      };
+      conversation_participants: {
+        Row: ConversationParticipant;
+        Insert: Omit<ConversationParticipant, 'id' | 'created_at' | 'last_read_at' | 'profile'>;
+        Update: Partial<Pick<ConversationParticipant, 'last_read_at'>>;
+      };
+      messages: {
+        Row: Message;
+        Insert: Omit<Message, 'id' | 'created_at' | 'sender'>;
+        Update: never;
+      };
+      push_tokens: {
+        Row: PushToken;
+        Insert: Omit<PushToken, 'id' | 'created_at'>;
+        Update: never;
+      };
+      friendships: {
+        Row: Friendship;
+        Insert: Omit<Friendship, 'id' | 'created_at' | 'updated_at' | 'status' | 'requester' | 'addressee'>;
+        Update: Partial<Pick<Friendship, 'status'>>;
       };
     };
   };

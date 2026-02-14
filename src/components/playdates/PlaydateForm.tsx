@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,12 +11,13 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { format } from 'date-fns';
-import type { Park } from '@/src/types/database';
+import { format, addDays, setHours, setMinutes, isSameDay } from 'date-fns';
+import { Ionicons } from '@expo/vector-icons';
+import type { Park, Dog } from '@/src/types/database';
 
 const playdateFormSchema = z.object({
   title: z.string().min(1, 'Title is required').max(200),
@@ -39,10 +40,12 @@ export interface PlaydateFormData {
   starts_at: Date;
   ends_at: Date;
   max_dogs: number | null;
+  dog_ids: string[];
 }
 
 interface PlaydateFormProps {
   parks: Park[];
+  dogs?: Dog[];
   defaultValues?: Partial<PlaydateFormData>;
   onSubmit: (data: PlaydateFormData) => Promise<void>;
   submitLabel?: string;
@@ -50,16 +53,18 @@ interface PlaydateFormProps {
 
 export function PlaydateForm({
   parks,
+  dogs = [],
   defaultValues,
   onSubmit,
   submitLabel = 'Create Play Date',
 }: PlaydateFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [showParkPicker, setShowParkPicker] = useState(false);
-  const [showStartDate, setShowStartDate] = useState(false);
-  const [showStartTime, setShowStartTime] = useState(false);
-  const [showEndDate, setShowEndDate] = useState(false);
-  const [showEndTime, setShowEndTime] = useState(false);
+  const [showStartPicker, setShowStartPicker] = useState(false);
+  const [showEndPicker, setShowEndPicker] = useState(false);
+  const [selectedDogIds, setSelectedDogIds] = useState<string[]>(
+    defaultValues?.dog_ids ?? [],
+  );
 
   const defaultStart = defaultValues?.starts_at ?? new Date();
   const defaultEnd =
@@ -92,6 +97,25 @@ export function PlaydateForm({
   const startsAt = watch('starts_at');
   const endsAt = watch('ends_at');
 
+  const [parkSearch, setParkSearch] = useState('');
+  const filteredParks = useMemo(() => {
+    if (!parkSearch.trim()) return parks;
+    const query = parkSearch.toLowerCase();
+    return parks.filter(
+      (park) =>
+        park.name.toLowerCase().includes(query) ||
+        (park.address && park.address.toLowerCase().includes(query)),
+    );
+  }, [parks, parkSearch]);
+
+  const toggleDog = (dogId: string) => {
+    setSelectedDogIds((prev) =>
+      prev.includes(dogId)
+        ? prev.filter((id) => id !== dogId)
+        : [...prev, dogId],
+    );
+  };
+
   async function onFormSubmit(values: PlaydateFormValues) {
     setSubmitting(true);
     try {
@@ -105,6 +129,7 @@ export function PlaydateForm({
         starts_at: values.starts_at,
         ends_at: values.ends_at,
         max_dogs: Number.isNaN(maxDogsNum) ? null : maxDogsNum,
+        dog_ids: selectedDogIds,
       });
     } finally {
       setSubmitting(false);
@@ -112,6 +137,46 @@ export function PlaydateForm({
   }
 
   const isWeb = Platform.OS === 'web';
+
+  // Web date/time picker modal state
+  const [webPickerField, setWebPickerField] = useState<'starts_at' | 'ends_at' | null>(null);
+  const [webPickerDate, setWebPickerDate] = useState<Date>(new Date());
+  const webPickerValue = webPickerField === 'starts_at' ? startsAt : endsAt;
+
+  const openWebPicker = (field: 'starts_at' | 'ends_at') => {
+    setWebPickerDate(field === 'starts_at' ? startsAt : endsAt);
+    setWebPickerField(field);
+  };
+
+  const confirmWebPicker = () => {
+    if (webPickerField) {
+      setValue(webPickerField, webPickerDate, { shouldValidate: true });
+      setWebPickerField(null);
+    }
+  };
+
+  // Generate next 14 days for the web picker
+  const upcomingDays = useMemo(() => {
+    const days: Date[] = [];
+    const today = new Date();
+    for (let i = 0; i < 14; i++) {
+      days.push(addDays(today, i));
+    }
+    return days;
+  }, []);
+
+  // Generate time slots (every 30 min from 6am to 10pm)
+  const timeSlots = useMemo(() => {
+    const slots: { hour: number; minute: number; label: string }[] = [];
+    for (let h = 6; h <= 22; h++) {
+      for (const m of [0, 30]) {
+        if (h === 22 && m === 30) continue;
+        const d = setMinutes(setHours(new Date(), h), m);
+        slots.push({ hour: h, minute: m, label: format(d, 'h:mm a') });
+      }
+    }
+    return slots;
+  }, []);
 
   return (
     <KeyboardAvoidingView
@@ -192,17 +257,28 @@ export function PlaydateForm({
           visible={showParkPicker}
           animationType="slide"
           presentationStyle="pageSheet"
-          onRequestClose={() => setShowParkPicker(false)}
+          onRequestClose={() => { setShowParkPicker(false); setParkSearch(''); }}
         >
           <View style={styles.modalContainer}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>Select a Park</Text>
-              <Pressable onPress={() => setShowParkPicker(false)}>
+              <Pressable onPress={() => { setShowParkPicker(false); setParkSearch(''); }}>
                 <Text style={styles.modalClose}>Done</Text>
               </Pressable>
             </View>
-            <ScrollView style={styles.flex}>
-              {parks.map((park) => (
+            <View style={styles.searchContainer}>
+              <TextInput
+                style={styles.searchInput}
+                placeholder="Search parks..."
+                placeholderTextColor="#9CA3AF"
+                value={parkSearch}
+                onChangeText={setParkSearch}
+                autoCapitalize="none"
+                autoCorrect={false}
+              />
+            </View>
+            <ScrollView style={styles.flex} keyboardShouldPersistTaps="handled">
+              {filteredParks.map((park) => (
                 <Pressable
                   key={park.id}
                   style={[
@@ -212,6 +288,7 @@ export function PlaydateForm({
                   onPress={() => {
                     setValue('park_id', park.id, { shouldValidate: true });
                     setShowParkPicker(false);
+                    setParkSearch('');
                   }}
                 >
                   <Text
@@ -230,154 +307,201 @@ export function PlaydateForm({
                   )}
                 </Pressable>
               ))}
-              {parks.length === 0 && (
-                <Text style={styles.emptyText}>No parks available</Text>
+              {filteredParks.length === 0 && (
+                <Text style={styles.emptyText}>
+                  {parkSearch.trim() ? 'No parks match your search' : 'No parks available'}
+                </Text>
               )}
             </ScrollView>
           </View>
         </Modal>
 
+        {/* Dog Selection */}
+        {dogs.length > 0 && (
+          <View style={styles.field}>
+            <Text style={styles.label}>Which dogs are coming?</Text>
+            <View style={styles.dogGrid}>
+              {dogs.map((dog) => {
+                const isSelected = selectedDogIds.includes(dog.id);
+                return (
+                  <Pressable
+                    key={dog.id}
+                    style={[
+                      styles.dogChip,
+                      isSelected && styles.dogChipSelected,
+                    ]}
+                    onPress={() => toggleDog(dog.id)}
+                  >
+                    <View
+                      style={[
+                        styles.dogCheckbox,
+                        isSelected && styles.dogCheckboxSelected,
+                      ]}
+                    >
+                      {isSelected && (
+                        <Ionicons name="checkmark" size={14} color="#fff" />
+                      )}
+                    </View>
+                    <Text
+                      style={[
+                        styles.dogChipName,
+                        isSelected && styles.dogChipNameSelected,
+                      ]}
+                      numberOfLines={1}
+                    >
+                      {dog.name}
+                    </Text>
+                    {dog.breed && (
+                      <Text style={styles.dogChipBreed} numberOfLines={1}>
+                        {dog.breed}
+                      </Text>
+                    )}
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
+        )}
+
         {/* Starts At */}
         <View style={styles.field}>
           <Text style={styles.label}>Starts At *</Text>
-          {isWeb ? (
-            <Controller
-              control={control}
-              name="starts_at"
-              render={({ field: { onChange, value } }) => (
-                <TextInput
-                  style={[styles.input, errors.starts_at && styles.inputError]}
-                  // @ts-expect-error -- web-only prop for datetime-local input
-                  type="datetime-local"
-                  value={toDatetimeLocalString(value)}
-                  onChange={(e: any) => {
-                    const newDate = new Date(e.target.value);
-                    if (!isNaN(newDate.getTime())) {
-                      onChange(newDate);
-                    }
-                  }}
-                />
-              )}
-            />
-          ) : (
-            <>
-              <Pressable
-                style={[styles.input, styles.pickerButton, errors.starts_at && styles.inputError]}
-                onPress={() => setShowStartDate(true)}
-              >
-                <Text style={styles.pickerButtonText}>
-                  {format(startsAt, 'EEE, MMM d, yyyy  h:mm a')}
-                </Text>
-              </Pressable>
-              {showStartDate && (
-                <DateTimePicker
-                  value={startsAt}
-                  mode="date"
-                  display="default"
-                  minimumDate={new Date()}
-                  onChange={(_event, date) => {
-                    setShowStartDate(false);
-                    if (date) {
-                      const merged = new Date(startsAt);
-                      merged.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
-                      setValue('starts_at', merged, { shouldValidate: true });
-                      setShowStartTime(true);
-                    }
-                  }}
-                />
-              )}
-              {showStartTime && (
-                <DateTimePicker
-                  value={startsAt}
-                  mode="time"
-                  display="default"
-                  onChange={(_event, date) => {
-                    setShowStartTime(false);
-                    if (date) {
-                      const merged = new Date(startsAt);
-                      merged.setHours(date.getHours(), date.getMinutes());
-                      setValue('starts_at', merged, { shouldValidate: true });
-                    }
-                  }}
-                />
-              )}
-            </>
-          )}
+          <Pressable
+            style={[styles.input, styles.pickerButton, errors.starts_at && styles.inputError]}
+            onPress={() => isWeb ? openWebPicker('starts_at') : setShowStartPicker(true)}
+          >
+            <View style={styles.dateTimeButtonRow}>
+              <Ionicons name="calendar-outline" size={18} color="#6B7280" />
+              <Text style={styles.pickerButtonText}>
+                {format(startsAt, 'EEE, MMM d, yyyy  \u00B7  h:mm a')}
+              </Text>
+            </View>
+          </Pressable>
           {errors.starts_at && (
             <Text style={styles.errorText}>{errors.starts_at.message}</Text>
           )}
         </View>
 
+        {!isWeb && (
+          <DateTimePickerModal
+            isVisible={showStartPicker}
+            mode="datetime"
+            date={startsAt}
+            minimumDate={new Date()}
+            onConfirm={(date) => {
+              setShowStartPicker(false);
+              setValue('starts_at', date, { shouldValidate: true });
+            }}
+            onCancel={() => setShowStartPicker(false)}
+          />
+        )}
+
         {/* Ends At */}
         <View style={styles.field}>
           <Text style={styles.label}>Ends At *</Text>
-          {isWeb ? (
-            <Controller
-              control={control}
-              name="ends_at"
-              render={({ field: { onChange, value } }) => (
-                <TextInput
-                  style={[styles.input, errors.ends_at && styles.inputError]}
-                  // @ts-expect-error -- web-only prop for datetime-local input
-                  type="datetime-local"
-                  value={toDatetimeLocalString(value)}
-                  onChange={(e: any) => {
-                    const newDate = new Date(e.target.value);
-                    if (!isNaN(newDate.getTime())) {
-                      onChange(newDate);
-                    }
-                  }}
-                />
-              )}
-            />
-          ) : (
-            <>
-              <Pressable
-                style={[styles.input, styles.pickerButton, errors.ends_at && styles.inputError]}
-                onPress={() => setShowEndDate(true)}
-              >
-                <Text style={styles.pickerButtonText}>
-                  {format(endsAt, 'EEE, MMM d, yyyy  h:mm a')}
-                </Text>
-              </Pressable>
-              {showEndDate && (
-                <DateTimePicker
-                  value={endsAt}
-                  mode="date"
-                  display="default"
-                  minimumDate={new Date()}
-                  onChange={(_event, date) => {
-                    setShowEndDate(false);
-                    if (date) {
-                      const merged = new Date(endsAt);
-                      merged.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
-                      setValue('ends_at', merged, { shouldValidate: true });
-                      setShowEndTime(true);
-                    }
-                  }}
-                />
-              )}
-              {showEndTime && (
-                <DateTimePicker
-                  value={endsAt}
-                  mode="time"
-                  display="default"
-                  onChange={(_event, date) => {
-                    setShowEndTime(false);
-                    if (date) {
-                      const merged = new Date(endsAt);
-                      merged.setHours(date.getHours(), date.getMinutes());
-                      setValue('ends_at', merged, { shouldValidate: true });
-                    }
-                  }}
-                />
-              )}
-            </>
-          )}
+          <Pressable
+            style={[styles.input, styles.pickerButton, errors.ends_at && styles.inputError]}
+            onPress={() => isWeb ? openWebPicker('ends_at') : setShowEndPicker(true)}
+          >
+            <View style={styles.dateTimeButtonRow}>
+              <Ionicons name="time-outline" size={18} color="#6B7280" />
+              <Text style={styles.pickerButtonText}>
+                {format(endsAt, 'EEE, MMM d, yyyy  \u00B7  h:mm a')}
+              </Text>
+            </View>
+          </Pressable>
           {errors.ends_at && (
             <Text style={styles.errorText}>{errors.ends_at.message}</Text>
           )}
         </View>
+
+        {!isWeb && (
+          <DateTimePickerModal
+            isVisible={showEndPicker}
+            mode="datetime"
+            date={endsAt}
+            minimumDate={startsAt}
+            onConfirm={(date) => {
+              setShowEndPicker(false);
+              setValue('ends_at', date, { shouldValidate: true });
+            }}
+            onCancel={() => setShowEndPicker(false)}
+          />
+        )}
+
+        {/* Web Date/Time Picker Modal */}
+        <Modal
+          visible={webPickerField !== null}
+          animationType="slide"
+          transparent
+          onRequestClose={() => setWebPickerField(null)}
+        >
+          <View style={styles.webPickerOverlay}>
+            <View style={styles.webPickerContainer}>
+              <View style={styles.modalHeader}>
+                <Pressable onPress={() => setWebPickerField(null)}>
+                  <Text style={styles.modalClose}>Cancel</Text>
+                </Pressable>
+                <Text style={styles.modalTitle}>
+                  {format(webPickerDate, 'EEE, MMM d  \u00B7  h:mm a')}
+                </Text>
+                <Pressable onPress={confirmWebPicker}>
+                  <Text style={[styles.modalClose, { fontWeight: '700' }]}>Done</Text>
+                </Pressable>
+              </View>
+
+              {/* Date Section */}
+              <Text style={styles.webPickerSectionLabel}>Date</Text>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.webPickerDayScroll} contentContainerStyle={styles.webPickerDayContent}>
+                {upcomingDays.map((day) => {
+                  const isSelected = isSameDay(day, webPickerDate);
+                  const isToday = isSameDay(day, new Date());
+                  return (
+                    <Pressable
+                      key={day.toISOString()}
+                      style={[styles.webPickerDayChip, isSelected && styles.webPickerDayChipSelected]}
+                      onPress={() => {
+                        const merged = new Date(webPickerDate);
+                        merged.setFullYear(day.getFullYear(), day.getMonth(), day.getDate());
+                        setWebPickerDate(merged);
+                      }}
+                    >
+                      <Text style={[styles.webPickerDayLabel, isSelected && styles.webPickerDayLabelSelected]}>
+                        {isToday ? 'Today' : format(day, 'EEE')}
+                      </Text>
+                      <Text style={[styles.webPickerDayNum, isSelected && styles.webPickerDayNumSelected]}>
+                        {format(day, 'd')}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
+              </ScrollView>
+
+              {/* Time Section */}
+              <Text style={styles.webPickerSectionLabel}>Time</Text>
+              <ScrollView style={styles.webPickerTimeScroll} contentContainerStyle={styles.webPickerTimeGrid}>
+                {timeSlots.map((slot) => {
+                  const isSelected = webPickerDate.getHours() === slot.hour && webPickerDate.getMinutes() === slot.minute;
+                  return (
+                    <Pressable
+                      key={slot.label}
+                      style={[styles.webPickerTimeChip, isSelected && styles.webPickerTimeChipSelected]}
+                      onPress={() => {
+                        const merged = new Date(webPickerDate);
+                        merged.setHours(slot.hour, slot.minute, 0, 0);
+                        setWebPickerDate(merged);
+                      }}
+                    >
+                      <Text style={[styles.webPickerTimeLabel, isSelected && styles.webPickerTimeLabelSelected]}>
+                        {slot.label}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
+              </ScrollView>
+            </View>
+          </View>
+        </Modal>
 
         {/* Max Dogs */}
         <View style={styles.field}>
@@ -415,18 +539,6 @@ export function PlaydateForm({
   );
 }
 
-/**
- * Convert a Date to the value format expected by an HTML datetime-local input.
- */
-function toDatetimeLocalString(date: Date): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  return `${year}-${month}-${day}T${hours}:${minutes}`;
-}
-
 const styles = StyleSheet.create({
   flex: {
     flex: 1,
@@ -458,6 +570,11 @@ const styles = StyleSheet.create({
   },
   textArea: {
     minHeight: 100,
+  },
+  dateTimeButtonRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
   },
   pickerButton: {
     justifyContent: 'center',
@@ -492,6 +609,20 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     backgroundColor: '#FFFFFF',
+  },
+  searchContainer: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
+  },
+  searchInput: {
+    backgroundColor: '#F7F8FA',
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    fontSize: 15,
+    color: '#1A1A2E',
   },
   modalHeader: {
     flexDirection: 'row',
@@ -533,10 +664,148 @@ const styles = StyleSheet.create({
     color: '#9CA3AF',
     marginTop: 2,
   },
+  dogGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+  },
+  dogChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F7F8FA',
+    borderRadius: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderWidth: 2,
+    borderColor: 'transparent',
+    gap: 8,
+  },
+  dogChipSelected: {
+    backgroundColor: '#F0FDF4',
+    borderColor: '#6FCF97',
+  },
+  dogCheckbox: {
+    width: 22,
+    height: 22,
+    borderRadius: 6,
+    borderWidth: 2,
+    borderColor: '#D1D5DB',
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dogCheckboxSelected: {
+    backgroundColor: '#6FCF97',
+    borderColor: '#6FCF97',
+  },
+  dogChipName: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#1A1A2E',
+  },
+  dogChipNameSelected: {
+    color: '#15803D',
+  },
+  dogChipBreed: {
+    fontSize: 13,
+    color: '#9CA3AF',
+  },
   emptyText: {
     textAlign: 'center',
     color: '#9CA3AF',
     padding: 32,
     fontSize: 16,
+  },
+  webPickerOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'flex-end',
+  },
+  webPickerContainer: {
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingBottom: 32,
+    maxHeight: '80%',
+  },
+  webPickerSectionLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#6B7280',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginTop: 16,
+    marginBottom: 10,
+    paddingHorizontal: 20,
+  },
+  webPickerDayScroll: {
+    maxHeight: 80,
+    paddingHorizontal: 12,
+  },
+  webPickerDayContent: {
+    paddingHorizontal: 8,
+    gap: 8,
+  },
+  webPickerDayChip: {
+    width: 56,
+    height: 68,
+    borderRadius: 14,
+    backgroundColor: '#F7F8FA',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: 'transparent',
+  },
+  webPickerDayChipSelected: {
+    backgroundColor: '#EBF5FF',
+    borderColor: '#4A90D9',
+  },
+  webPickerDayLabel: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: '#6B7280',
+    marginBottom: 4,
+  },
+  webPickerDayLabelSelected: {
+    color: '#4A90D9',
+    fontWeight: '600',
+  },
+  webPickerDayNum: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#1A1A2E',
+  },
+  webPickerDayNumSelected: {
+    color: '#4A90D9',
+  },
+  webPickerTimeScroll: {
+    maxHeight: 220,
+    paddingHorizontal: 20,
+  },
+  webPickerTimeGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    paddingBottom: 8,
+  },
+  webPickerTimeChip: {
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    backgroundColor: '#F7F8FA',
+    minWidth: '22%',
+    alignItems: 'center',
+  },
+  webPickerTimeChipSelected: {
+    backgroundColor: '#4A90D9',
+  },
+  webPickerTimeLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#1A1A2E',
+  },
+  webPickerTimeLabelSelected: {
+    color: '#FFFFFF',
+    fontWeight: '600',
   },
 });

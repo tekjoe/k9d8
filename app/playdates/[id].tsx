@@ -11,7 +11,9 @@ import {
   View,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { format, isSameDay } from 'date-fns';
+import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useDogs } from '@/src/hooks/useDogs';
 import { getPlayDateById } from '@/src/services/playdates';
@@ -40,6 +42,7 @@ function formatDateRange(startsAt: string, endsAt: string): string {
 export default function PlayDateDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const userId = session?.user?.id;
   const { dogs } = useDogs(userId);
@@ -186,6 +189,20 @@ export default function PlayDateDetailScreen() {
 
   return (
     <View style={styles.container}>
+      {/* Header */}
+      <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
+        <Pressable
+          onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
+          style={styles.backButton}
+        >
+          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+        </Pressable>
+        <Text style={styles.headerTitle} numberOfLines={1}>
+          {playdate.title}
+        </Text>
+        <View style={styles.headerSpacer} />
+      </View>
+
       <ScrollView
         style={styles.flex}
         contentContainerStyle={styles.scrollContent}
@@ -417,6 +434,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
+    backgroundColor: '#FFFFFF',
+  },
+  backButton: {
+    padding: 4,
+    marginRight: 12,
+  },
+  headerTitle: {
+    flex: 1,
+    fontSize: 17,
+    fontWeight: '600',
+    color: '#1A1A2E',
+  },
+  headerSpacer: {
+    width: 32,
   },
   flex: {
     flex: 1,

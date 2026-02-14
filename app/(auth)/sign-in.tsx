@@ -28,7 +28,14 @@ export default function SignIn() {
       await signInWithEmail(email, password);
       router.replace('/(tabs)');
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : 'Sign in failed';
+      let message = 'Sign in failed';
+      if (error instanceof Error) {
+        if (error.message.includes('Invalid login credentials')) {
+          message = 'Invalid email or password. If you just signed up, check your email to confirm your account first.';
+        } else {
+          message = error.message;
+        }
+      }
       Alert.alert('Error', message);
     } finally {
       setLoading(false);

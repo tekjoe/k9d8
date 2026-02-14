@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useEffect,
   useState,
   type PropsWithChildren,
@@ -10,16 +11,23 @@ import type { Session } from '@supabase/supabase-js';
 interface AuthContextType {
   session: Session | null;
   isLoading: boolean;
+  refreshSession: () => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextType>({
   session: null,
   isLoading: true,
+  refreshSession: async () => {},
 });
 
 export function AuthProvider({ children }: PropsWithChildren) {
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const refreshSession = useCallback(async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    setSession(session);
+  }, []);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -37,7 +45,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ session, isLoading }}>
+    <AuthContext.Provider value={{ session, isLoading, refreshSession }}>
       {children}
     </AuthContext.Provider>
   );

@@ -29,3 +29,11 @@ export async function signOut() {
   const { error } = await supabase.auth.signOut();
   if (error) throw error;
 }
+
+export async function updateProfile(updates: { display_name?: string; bio?: string; avatar_url?: string }) {
+  const { data, error } = await supabase.auth.updateUser({
+    data: updates,
+  });
+  if (error) throw error;
+  return data;
+}

@@ -1,5 +1,9 @@
 import { supabase } from '../lib/supabase';
-import type { Dog, Database } from '../types/database';
+import type { Dog, Profile, Database } from '../types/database';
+
+export interface DogWithOwner extends Dog {
+  owner: Profile;
+}
 
 type DogInsert = Database['public']['Tables']['dogs']['Insert'];
 type DogUpdate = Database['public']['Tables']['dogs']['Update'];
@@ -14,6 +18,17 @@ export async function getDogsByOwner(ownerId: string): Promise<Dog[]> {
 
   if (error) throw error;
   return data;
+}
+
+export async function getDogWithOwner(id: string): Promise<DogWithOwner> {
+  const { data, error } = await supabase
+    .from('dogs')
+    .select('*, owner:profiles!owner_id(*)')
+    .eq('id', id)
+    .single();
+
+  if (error) throw error;
+  return data as DogWithOwner;
 }
 
 export async function getDogById(id: string): Promise<Dog> {

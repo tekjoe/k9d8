@@ -54,11 +54,13 @@ export async function getPlayDateById(id: string): Promise<PlayDate> {
  * Fetches play dates where the user is the organizer OR has an RSVP.
  */
 export async function getMyPlayDates(userId: string): Promise<PlayDate[]> {
-  // Fetch play dates organized by the user
+  // Fetch upcoming play dates organized by the user
   const { data: organized, error: orgError } = await supabase
     .from('play_dates')
     .select(PLAY_DATE_SELECT)
     .eq('organizer_id', userId)
+    .eq('status', 'scheduled')
+    .gte('starts_at', new Date().toISOString())
     .order('starts_at', { ascending: true });
 
   if (orgError) throw orgError;
@@ -83,6 +85,8 @@ export async function getMyPlayDates(userId: string): Promise<PlayDate[]> {
       .from('play_dates')
       .select(PLAY_DATE_SELECT)
       .in('id', additionalIds)
+      .eq('status', 'scheduled')
+      .gte('starts_at', new Date().toISOString())
       .order('starts_at', { ascending: true });
 
     if (rsvpDataError) throw rsvpDataError;
@@ -162,7 +166,7 @@ export async function rsvpToPlayDate(
         dog_id: dogId,
         status,
       },
-      { onConflict: 'play_date_id,user_id' },
+      { onConflict: 'play_date_id,dog_id' },
     )
     .select(`
       *,

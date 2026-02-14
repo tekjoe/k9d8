@@ -20,18 +20,28 @@ export default function SignUp() {
   const [loading, setLoading] = useState(false);
 
   async function handleSignUp() {
+    console.log('handleSignUp called', { email, password: '***', displayName });
     if (!email || !password) {
       Alert.alert('Error', 'Please fill in email and password');
       return;
     }
     setLoading(true);
     try {
-      await signUpWithEmail(email, password, displayName || undefined);
+      const result = await signUpWithEmail(email, password, displayName || undefined);
+      console.log('signUpWithEmail success', result);
       Alert.alert('Success', 'Check your email to confirm your account', [
         { text: 'OK', onPress: () => router.replace('/(auth)/sign-in') },
       ]);
     } catch (error: unknown) {
-      const message = error instanceof Error ? error.message : 'Sign up failed';
+      console.error('signUpWithEmail error', error);
+      let message = 'Sign up failed';
+      if (error instanceof Error) {
+        if (error.message.includes('rate limit')) {
+          message = 'Too many attempts. Please wait a few minutes and try again.';
+        } else {
+          message = error.message;
+        }
+      }
       Alert.alert('Error', message);
     } finally {
       setLoading(false);
@@ -73,10 +83,16 @@ export default function SignUp() {
           onChangeText={setPassword}
           secureTextEntry
           autoComplete="new-password"
+          onSubmitEditing={handleSignUp}
+          returnKeyType="go"
         />
 
         <Pressable
-          style={[styles.button, loading && styles.buttonDisabled]}
+          style={({ pressed }) => [
+            styles.button,
+            loading && styles.buttonDisabled,
+            pressed && styles.buttonPressed,
+          ]}
           onPress={handleSignUp}
           disabled={loading}
         >
@@ -133,6 +149,9 @@ const styles = StyleSheet.create({
   },
   buttonDisabled: {
     opacity: 0.6,
+  },
+  buttonPressed: {
+    opacity: 0.8,
   },
   buttonText: {
     color: '#fff',
