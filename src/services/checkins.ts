@@ -108,6 +108,87 @@ export async function getActiveCheckIns(parkId: string): Promise<CheckIn[]> {
 }
 
 /**
+ * Gets all active check-ins across all parks (where checked_out_at IS NULL).
+ * Includes profile information, dog details, and park info for each check-in.
+ * Useful for showing "pups nearby" on the home screen.
+ */
+export async function getAllActiveCheckIns(): Promise<CheckIn[]> {
+  const { data: checkIns, error: checkInsError } = await supabase
+    .from('check_ins')
+    .select(
+      `
+      *,
+      profile:profiles!user_id(*),
+      park:parks!park_id(*),
+      check_in_dogs(
+        *,
+        dog:dogs(*)
+      )
+    `,
+    )
+    .is('checked_out_at', null)
+    .order('checked_in_at', { ascending: false });
+
+  if (checkInsError) throw checkInsError;
+
+  // Map the check_in_dogs join into a flat dogs array on each check-in
+  const enriched: CheckIn[] = (checkIns ?? []).map((ci) => {
+    const checkInDogs = (ci as Record<string, unknown>).check_in_dogs as
+      | Array<{ dog: CheckIn['dogs'] extends (infer D)[] | undefined ? D : never }>
+      | undefined;
+
+    return {
+      id: ci.id,
+      user_id: ci.user_id,
+      park_id: ci.park_id,
+      checked_in_at: ci.checked_in_at,
+      checked_out_at: ci.checked_out_at,
+      profile: ci.profile ?? undefined,
+      park: (ci as Record<string, unknown>).park ?? undefined,
+      dogs: checkInDogs
+        ? checkInDogs
+            .map((cid) => cid.dog)
+            .filter((d): d is NonNullable<typeof d> => d != null)
+        : [],
+    } as CheckIn;
+  });
+
+  return enriched;
+}
+
+/**
+ * Gets the user's recent check-ins (both active and completed).
+ * Includes park information for display.
+ */
+export async function getUserRecentCheckIns(
+  userId: string,
+  limit: number = 10,
+): Promise<CheckIn[]> {
+  const { data: checkIns, error } = await supabase
+    .from('check_ins')
+    .select(
+      `
+      *,
+      park:parks!park_id(*)
+    `,
+    )
+    .eq('user_id', userId)
+    .order('checked_in_at', { ascending: false })
+    .limit(limit);
+
+  if (error) throw error;
+
+  return (checkIns ?? []).map((ci) => ({
+    id: ci.id,
+    user_id: ci.user_id,
+    park_id: ci.park_id,
+    checked_in_at: ci.checked_in_at,
+    checked_out_at: ci.checked_out_at,
+    park: (ci as Record<string, unknown>).park ?? undefined,
+  })) as CheckIn[];
+}
+
+/**
  * Gets the current user's active check-in, if any.
  * Returns null if the user is not currently checked in anywhere.
  */

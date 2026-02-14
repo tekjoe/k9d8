@@ -27,10 +27,12 @@ export default function CreateDogScreen() {
         name: data.name,
         breed: data.breed || null,
         size: data.size,
-        temperament: data.temperament,
+        temperament: data.temperament, // Now an array
         age_years: data.age_years,
         photo_url: photoUrl,
         notes: data.notes || null,
+        color: data.color,
+        weight_lbs: data.weight_lbs,
       });
 
       router.back();

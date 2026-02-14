@@ -13,9 +13,10 @@ import {
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import * as ImagePicker from 'expo-image-picker';
 
 import { useAuth } from '@/src/hooks/useAuth';
-import { updateProfile } from '@/src/services/auth';
+import { updateProfile, uploadUserAvatar } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
 
 export default function EditProfileScreen() {
@@ -32,6 +33,8 @@ export default function EditProfileScreen() {
   const [avatarUrl, setAvatarUrl] = useState(
     session?.user?.user_metadata?.avatar_url || ''
   );
+  const [localAvatarUri, setLocalAvatarUri] = useState<string | null>(null);
+  const [isUploadingAvatar, setIsUploadingAvatar] = useState(false);
 
   const handleSave = useCallback(async () => {
     if (!displayName.trim()) {
@@ -39,12 +42,30 @@ export default function EditProfileScreen() {
       return;
     }
 
+    const userId = session?.user?.id;
+    if (!userId) {
+      Alert.alert('Error', 'You must be signed in');
+      return;
+    }
+
     setIsSaving(true);
     try {
+      let finalAvatarUrl = avatarUrl.trim() || undefined;
+
+      // Upload new avatar if one was selected
+      if (localAvatarUri) {
+        setIsUploadingAvatar(true);
+        try {
+          finalAvatarUrl = await uploadUserAvatar(userId, localAvatarUri);
+        } finally {
+          setIsUploadingAvatar(false);
+        }
+      }
+
       await updateProfile({
         display_name: displayName.trim(),
         bio: bio.trim() || undefined,
-        avatar_url: avatarUrl.trim() || undefined,
+        avatar_url: finalAvatarUrl,
       });
       
       // Refresh the session to get updated user metadata
@@ -59,26 +80,23 @@ export default function EditProfileScreen() {
     } finally {
       setIsSaving(false);
     }
-  }, [displayName, bio, avatarUrl, refreshSession]);
+  }, [displayName, bio, avatarUrl, localAvatarUri, session?.user?.id, refreshSession]);
 
   const handleBack = useCallback(() => {
     router.back();
   }, []);
 
-  const handleChangePhoto = useCallback(() => {
-    // In a real app, this would open an image picker
-    // For now, we'll just show an alert
-    Alert.alert(
-      'Change Photo',
-      'Photo upload functionality would open here',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Use Default', 
-          onPress: () => setAvatarUrl('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop')
-        },
-      ]
-    );
+  const handleChangePhoto = useCallback(async () => {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.8,
+    });
+
+    if (!result.canceled && result.assets[0]) {
+      setLocalAvatarUri(result.assets[0].uri);
+    }
   }, []);
 
   return (
@@ -114,6 +132,7 @@ export default function EditProfileScreen() {
             <Image
               source={{
                 uri:
+                  localAvatarUri ||
                   avatarUrl ||
                   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
               }}
@@ -121,9 +140,16 @@ export default function EditProfileScreen() {
               resizeMode="cover"
             />
             <Pressable style={styles.changePhotoButton} onPress={handleChangePhoto}>
-              <Ionicons name="camera" size={20} color="#fff" />
+              {isUploadingAvatar ? (
+                <ActivityIndicator size="small" color="#fff" />
+              ) : (
+                <Ionicons name="camera" size={20} color="#fff" />
+              )}
             </Pressable>
           </View>
+          {localAvatarUri && (
+            <Text style={styles.newPhotoText}>New photo selected - tap Save to upload</Text>
+          )}
         </View>
 
         {/* Form Fields */}
@@ -240,6 +266,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 3,
     borderColor: '#fff',
+  },
+  newPhotoText: {
+    fontSize: 12,
+    color: Colors.light.secondary,
+    marginTop: 8,
+    fontWeight: '500',
   },
   // Form
   form: {

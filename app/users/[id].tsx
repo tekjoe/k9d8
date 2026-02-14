@@ -11,6 +11,7 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { supabase } from '@/src/lib/supabase';
 import { getDogsByOwner } from '@/src/services/dogs';
@@ -161,7 +162,7 @@ export default function UserProfileScreen() {
           className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
           style={{ top: insets.top + 8 }}
         >
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
 
         <View className="w-24 h-24 rounded-full border-[3px] border-white bg-white mb-[-48px]">

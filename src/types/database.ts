@@ -19,10 +19,12 @@ export interface Dog {
   name: string;
   breed: string | null;
   size: DogSize;
-  temperament: DogTemperament;
+  temperament: DogTemperament[];
   age_years: number | null;
   photo_url: string | null;
   notes: string | null;
+  color: string | null;
+  weight_lbs: number | null;
   is_active: boolean;
   created_at: string;
   updated_at: string;
@@ -35,6 +37,7 @@ export interface Park {
   latitude: number;
   longitude: number;
   address: string | null;
+  image_url: string | null;
   amenities: string[];
   is_fenced: boolean;
   has_water: boolean;
@@ -49,6 +52,7 @@ export interface CheckIn {
   checked_in_at: string;
   checked_out_at: string | null;
   profile?: Profile;
+  park?: Park;
   dogs?: Dog[];
 }
 

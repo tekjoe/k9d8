@@ -111,6 +111,25 @@ export async function removeFriend(friendshipId: string): Promise<void> {
 }
 
 /**
+ * Gets recent accepted friendships for a user (for activity feed).
+ */
+export async function getRecentFriendships(
+  userId: string,
+  limit: number = 10,
+): Promise<Friendship[]> {
+  const { data, error } = await supabase
+    .from('friendships')
+    .select(FRIENDSHIP_SELECT)
+    .or(`requester_id.eq.${userId},addressee_id.eq.${userId}`)
+    .eq('status', 'accepted')
+    .order('updated_at', { ascending: false })
+    .limit(limit);
+
+  if (error) throw error;
+  return data as Friendship[];
+}
+
+/**
  * Gets the friendship record between two users, or null if none exists.
  */
 export async function getFriendshipStatus(

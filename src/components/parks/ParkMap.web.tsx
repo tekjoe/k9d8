@@ -1,9 +1,16 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect, useRef } from 'react';
 import Map, { Marker } from 'react-map-gl/mapbox';
+import type { MapRef } from 'react-map-gl/mapbox';
 import type { Park } from '../../types/database';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = process.env.EXPO_PUBLIC_MAPBOX_TOKEN ?? '';
+
+// Default to San Francisco if no location
+const DEFAULT_LOCATION = {
+  latitude: 37.7749,
+  longitude: -122.4194,
+};
 
 export interface ParkMapProps {
   parks: Park[];
@@ -20,11 +27,20 @@ export default function ParkMap({
   onParkSelect,
   onMapPress,
 }: ParkMapProps) {
-  const initialViewState = {
-    latitude: userLocation?.latitude ?? 37.7749,
-    longitude: userLocation?.longitude ?? -122.4194,
-    zoom: 9,
-  };
+  const mapRef = useRef<MapRef>(null);
+  const hasFlownToUser = useRef(false);
+
+  // Fly to user location when it becomes available
+  useEffect(() => {
+    if (userLocation && mapRef.current && !hasFlownToUser.current) {
+      mapRef.current.flyTo({
+        center: [userLocation.longitude, userLocation.latitude],
+        zoom: 12,
+        duration: 1500,
+      });
+      hasFlownToUser.current = true;
+    }
+  }, [userLocation]);
 
   const handleMarkerClick = useCallback(
     (park: Park) => {
@@ -33,10 +49,18 @@ export default function ParkMap({
     [onParkSelect]
   );
 
+  // Use user location if available, otherwise default
+  const initialCenter = userLocation || DEFAULT_LOCATION;
+
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Map
-        initialViewState={initialViewState}
+        ref={mapRef}
+        initialViewState={{
+          latitude: initialCenter.latitude,
+          longitude: initialCenter.longitude,
+          zoom: userLocation ? 12 : 9,
+        }}
         style={{ width: '100%', height: '100%' }}
         mapStyle="mapbox://styles/mapbox/outdoors-v12"
         mapboxAccessToken={MAPBOX_TOKEN}

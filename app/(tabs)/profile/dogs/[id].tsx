@@ -59,8 +59,10 @@ export default function EditDogScreen() {
         name: data.name,
         breed: data.breed || null,
         size: data.size,
-        temperament: data.temperament,
+        temperament: data.temperament, // Now an array
         age_years: data.age_years,
+        color: data.color,
+        weight_lbs: data.weight_lbs,
         notes: data.notes || null,
         ...(photoUrl !== undefined ? { photo_url: photoUrl } : {}),
       });
@@ -120,6 +122,8 @@ export default function EditDogScreen() {
           size: dog.size,
           temperament: dog.temperament,
           age_years: dog.age_years,
+          color: dog.color,
+          weight_lbs: dog.weight_lbs,
           notes: dog.notes ?? '',
           photoUri: dog.photo_url,
         }}

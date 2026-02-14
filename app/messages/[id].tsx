@@ -13,6 +13,7 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useMessages } from '@/src/hooks/useMessages';
 import { useConversations } from '@/src/hooks/useConversations';
@@ -82,7 +83,7 @@ export default function ChatScreen() {
         style={{ paddingTop: insets.top + 8 }}
       >
         <Pressable onPress={handleBack} className="mr-3 p-1">
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
         <Image
           source={{

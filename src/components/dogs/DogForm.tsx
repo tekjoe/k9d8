@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -12,9 +12,6 @@ import {
 } from 'react-native';
 import { Image } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
-import { useForm, Controller } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import type { DogSize, DogTemperament } from '@/src/types/database';
 
 const DOG_SIZES: { value: DogSize; label: string }[] = [
@@ -32,23 +29,26 @@ const DOG_TEMPERAMENTS: { value: DogTemperament; label: string }[] = [
   { value: 'aggressive', label: 'Aggressive' },
 ];
 
-const dogFormSchema = z.object({
-  name: z.string().min(1, 'Name is required').max(100),
-  breed: z.string().max(100).optional().default(''),
-  size: z.enum(['small', 'medium', 'large', 'extra_large']),
-  temperament: z.enum(['calm', 'friendly', 'energetic', 'anxious', 'aggressive']),
-  age_years: z.string().optional().default(''),
-  notes: z.string().max(500).optional().default(''),
-});
-
-type DogFormValues = z.infer<typeof dogFormSchema>;
-
 export interface DogFormData {
   name: string;
   breed: string;
   size: DogSize;
-  temperament: DogTemperament;
+  temperament: DogTemperament[];
   age_years: number | null;
+  color: string | null;
+  weight_lbs: number | null;
+  notes: string;
+  photoUri: string | null;
+}
+
+interface FormState {
+  name: string;
+  breed: string;
+  age: string;
+  size: DogSize;
+  temperaments: DogTemperament[];
+  color: string;
+  weight: string;
   notes: string;
   photoUri: string | null;
 }
@@ -60,28 +60,38 @@ interface DogFormProps {
 }
 
 export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFormProps) {
-  const [photoUri, setPhotoUri] = useState<string | null>(
-    defaultValues?.photoUri ?? null,
-  );
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<DogFormValues>({
-    resolver: zodResolver(dogFormSchema),
-    defaultValues: {
-      name: defaultValues?.name ?? '',
-      breed: defaultValues?.breed ?? '',
-      size: defaultValues?.size ?? 'medium',
-      temperament: defaultValues?.temperament ?? 'friendly',
-      age_years: defaultValues?.age_years != null ? String(defaultValues.age_years) : '',
-      notes: defaultValues?.notes ?? '',
-    },
+  const [formState, setFormState] = useState<FormState>({
+    name: defaultValues?.name ?? '',
+    breed: defaultValues?.breed ?? '',
+    age: defaultValues?.age_years != null ? String(defaultValues.age_years) : '',
+    size: defaultValues?.size ?? 'medium',
+    temperaments: defaultValues?.temperament?.length ? defaultValues.temperament : ['friendly'],
+    color: defaultValues?.color ?? '',
+    weight: defaultValues?.weight_lbs != null ? String(defaultValues.weight_lbs) : '',
+    notes: defaultValues?.notes ?? '',
+    photoUri: defaultValues?.photoUri ?? null,
   });
 
-  async function pickPhoto() {
+  const updateField = useCallback(<K extends keyof FormState>(key: K, value: FormState[K]) => {
+    setFormState((prev) => ({ ...prev, [key]: value }));
+  }, []);
+
+  const toggleTemperament = useCallback((temp: DogTemperament) => {
+    setFormState((prev) => {
+      const current = prev.temperaments;
+      if (current.includes(temp)) {
+        // Don't allow deselecting all
+        if (current.length === 1) return prev;
+        return { ...prev, temperaments: current.filter((t) => t !== temp) };
+      }
+      return { ...prev, temperaments: [...current, temp] };
+    });
+  }, []);
+
+  const pickPhoto = useCallback(async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['images'],
       allowsEditing: true,
@@ -90,27 +100,40 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
     });
 
     if (!result.canceled && result.assets[0]) {
-      setPhotoUri(result.assets[0].uri);
+      updateField('photoUri', result.assets[0].uri);
     }
-  }
+  }, [updateField]);
 
-  async function onFormSubmit(values: DogFormValues) {
+  const handleSubmit = useCallback(async () => {
+    if (!formState.name.trim()) {
+      setError('Name is required');
+      return;
+    }
+
     setSubmitting(true);
+    setError(null);
+
     try {
-      const ageNum = values.age_years ? parseInt(values.age_years, 10) : null;
+      const ageNum = formState.age ? parseInt(formState.age, 10) : null;
+      const weightNum = formState.weight ? parseInt(formState.weight, 10) : null;
+
       await onSubmit({
-        name: values.name,
-        breed: values.breed ?? '',
-        size: values.size,
-        temperament: values.temperament,
-        age_years: Number.isNaN(ageNum) ? null : ageNum,
-        notes: values.notes ?? '',
-        photoUri,
+        name: formState.name.trim(),
+        breed: formState.breed.trim(),
+        size: formState.size,
+        temperament: formState.temperaments, // All selected temperaments
+        age_years: ageNum && !Number.isNaN(ageNum) ? ageNum : null,
+        color: formState.color.trim() || null,
+        weight_lbs: weightNum && !Number.isNaN(weightNum) ? weightNum : null,
+        notes: formState.notes.trim(),
+        photoUri: formState.photoUri,
       });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to save');
     } finally {
       setSubmitting(false);
     }
-  }
+  }, [formState, onSubmit]);
 
   return (
     <KeyboardAvoidingView
@@ -122,10 +145,11 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
         contentContainerStyle={styles.scrollContent}
         keyboardShouldPersistTaps="handled"
       >
+        {/* Photo Picker */}
         <Pressable style={styles.photoPicker} onPress={pickPhoto}>
-          {photoUri ? (
+          {formState.photoUri ? (
             <Image
-              source={{ uri: photoUri }}
+              source={{ uri: formState.photoUri }}
               style={styles.photoPreview}
               contentFit="cover"
             />
@@ -137,156 +161,160 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           )}
         </Pressable>
 
+        {/* Error Message */}
+        {error && (
+          <View style={styles.errorContainer}>
+            <Text style={styles.errorText}>{error}</Text>
+          </View>
+        )}
+
+        {/* Name Field */}
         <View style={styles.field}>
           <Text style={styles.label}>Name *</Text>
-          <Controller
-            control={control}
-            name="name"
-            render={({ field: { onChange, onBlur, value } }) => (
-              <TextInput
-                style={[styles.input, errors.name && styles.inputError]}
-                placeholder="Dog's name"
-                value={value}
-                onChangeText={onChange}
-                onBlur={onBlur}
-                autoCapitalize="words"
-              />
-            )}
+          <TextInput
+            style={styles.input}
+            placeholder="Dog's name"
+            placeholderTextColor="#9CA3AF"
+            value={formState.name}
+            onChangeText={(v) => updateField('name', v)}
+            autoCapitalize="words"
           />
-          {errors.name ? (
-            <Text style={styles.errorText}>{errors.name.message}</Text>
-          ) : null}
         </View>
 
+        {/* Breed Field */}
         <View style={styles.field}>
           <Text style={styles.label}>Breed</Text>
-          <Controller
-            control={control}
-            name="breed"
-            render={({ field: { onChange, onBlur, value } }) => (
-              <TextInput
-                style={styles.input}
-                placeholder="e.g. Golden Retriever"
-                value={value}
-                onChangeText={onChange}
-                onBlur={onBlur}
-                autoCapitalize="words"
-              />
-            )}
+          <TextInput
+            style={styles.input}
+            placeholder="e.g. Golden Retriever"
+            placeholderTextColor="#9CA3AF"
+            value={formState.breed}
+            onChangeText={(v) => updateField('breed', v)}
+            autoCapitalize="words"
           />
         </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Size</Text>
-          <Controller
-            control={control}
-            name="size"
-            render={({ field: { onChange, value } }) => (
-              <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={styles.chipRow}
-              >
-                {DOG_SIZES.map((option) => (
-                  <Pressable
-                    key={option.value}
-                    style={[
-                      styles.chip,
-                      value === option.value && styles.chipSelected,
-                    ]}
-                    onPress={() => onChange(option.value)}
-                  >
-                    <Text
-                      style={[
-                        styles.chipText,
-                        value === option.value && styles.chipTextSelected,
-                      ]}
-                    >
-                      {option.label}
-                    </Text>
-                  </Pressable>
-                ))}
-              </ScrollView>
-            )}
-          />
-        </View>
-
-        <View style={styles.field}>
-          <Text style={styles.label}>Temperament</Text>
-          <Controller
-            control={control}
-            name="temperament"
-            render={({ field: { onChange, value } }) => (
-              <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={styles.chipRow}
-              >
-                {DOG_TEMPERAMENTS.map((option) => (
-                  <Pressable
-                    key={option.value}
-                    style={[
-                      styles.chip,
-                      value === option.value && styles.chipSelected,
-                    ]}
-                    onPress={() => onChange(option.value)}
-                  >
-                    <Text
-                      style={[
-                        styles.chipText,
-                        value === option.value && styles.chipTextSelected,
-                      ]}
-                    >
-                      {option.label}
-                    </Text>
-                  </Pressable>
-                ))}
-              </ScrollView>
-            )}
-          />
-        </View>
-
+        {/* Age Field */}
         <View style={styles.field}>
           <Text style={styles.label}>Age (years)</Text>
-          <Controller
-            control={control}
-            name="age_years"
-            render={({ field: { onChange, onBlur, value } }) => (
-              <TextInput
-                style={styles.input}
-                placeholder="e.g. 3"
-                value={value}
-                onChangeText={onChange}
-                onBlur={onBlur}
-                keyboardType="number-pad"
-              />
-            )}
+          <TextInput
+            style={styles.input}
+            placeholder="e.g. 3"
+            placeholderTextColor="#9CA3AF"
+            value={formState.age}
+            onChangeText={(v) => updateField('age', v)}
+            keyboardType="number-pad"
           />
         </View>
 
+        {/* Size Selector */}
+        <View style={styles.field}>
+          <Text style={styles.label}>Size</Text>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.chipRow}
+          >
+            {DOG_SIZES.map((option) => (
+              <Pressable
+                key={option.value}
+                style={[
+                  styles.chip,
+                  formState.size === option.value && styles.chipSelected,
+                ]}
+                onPress={() => updateField('size', option.value)}
+              >
+                <Text
+                  style={[
+                    styles.chipText,
+                    formState.size === option.value && styles.chipTextSelected,
+                  ]}
+                >
+                  {option.label}
+                </Text>
+              </Pressable>
+            ))}
+          </ScrollView>
+        </View>
+
+        {/* Temperament Multi-Select */}
+        <View style={styles.field}>
+          <Text style={styles.label}>Temperament (select all that apply)</Text>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.chipRow}
+          >
+            {DOG_TEMPERAMENTS.map((option) => {
+              const isSelected = formState.temperaments.includes(option.value);
+              return (
+                <Pressable
+                  key={option.value}
+                  style={[
+                    styles.chip,
+                    isSelected && styles.chipSelected,
+                  ]}
+                  onPress={() => toggleTemperament(option.value)}
+                >
+                  <Text
+                    style={[
+                      styles.chipText,
+                      isSelected && styles.chipTextSelected,
+                    ]}
+                  >
+                    {option.label}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </ScrollView>
+        </View>
+
+        {/* Color Field */}
+        <View style={styles.field}>
+          <Text style={styles.label}>Color</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="e.g. Golden, Black, White"
+            placeholderTextColor="#9CA3AF"
+            value={formState.color}
+            onChangeText={(v) => updateField('color', v)}
+            autoCapitalize="words"
+          />
+        </View>
+
+        {/* Weight Field */}
+        <View style={styles.field}>
+          <Text style={styles.label}>Weight (lbs)</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="e.g. 65"
+            placeholderTextColor="#9CA3AF"
+            value={formState.weight}
+            onChangeText={(v) => updateField('weight', v)}
+            keyboardType="number-pad"
+          />
+        </View>
+
+        {/* Notes Field */}
         <View style={styles.field}>
           <Text style={styles.label}>Notes</Text>
-          <Controller
-            control={control}
-            name="notes"
-            render={({ field: { onChange, onBlur, value } }) => (
-              <TextInput
-                style={[styles.input, styles.textArea]}
-                placeholder="Any special notes about your dog..."
-                value={value}
-                onChangeText={onChange}
-                onBlur={onBlur}
-                multiline
-                numberOfLines={4}
-                textAlignVertical="top"
-              />
-            )}
+          <TextInput
+            style={[styles.input, styles.textArea]}
+            placeholder="Any special notes about your dog..."
+            placeholderTextColor="#9CA3AF"
+            value={formState.notes}
+            onChangeText={(v) => updateField('notes', v)}
+            multiline
+            numberOfLines={4}
+            textAlignVertical="top"
           />
         </View>
 
+        {/* Submit Button */}
         <Pressable
           style={[styles.submitButton, submitting && styles.submitButtonDisabled]}
-          onPress={handleSubmit(onFormSubmit)}
+          onPress={handleSubmit}
           disabled={submitting}
         >
           {submitting ? (
@@ -356,16 +384,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#F7F8FA',
     color: '#1A1A2E',
   },
-  inputError: {
-    borderColor: '#EF4444',
-  },
   textArea: {
     minHeight: 100,
   },
+  errorContainer: {
+    backgroundColor: '#FEE2E2',
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 16,
+  },
   errorText: {
-    color: '#EF4444',
-    fontSize: 12,
-    marginTop: 4,
+    color: '#DC2626',
+    fontSize: 14,
   },
   chipRow: {
     flexDirection: 'row',
@@ -380,8 +410,8 @@ const styles = StyleSheet.create({
     borderColor: '#E5E7EB',
   },
   chipSelected: {
-    backgroundColor: '#4A90D9',
-    borderColor: '#4A90D9',
+    backgroundColor: '#2D8B57',
+    borderColor: '#2D8B57',
   },
   chipText: {
     fontSize: 14,
@@ -392,7 +422,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   submitButton: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#2D8B57',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',

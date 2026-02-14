@@ -1,5 +1,5 @@
 import { Redirect, Tabs } from 'expo-router';
-import { ActivityIndicator, Text, View } from 'react-native';
+import { ActivityIndicator, Platform, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { HapticTab } from '@/components/haptic-tab';
@@ -12,8 +12,13 @@ import { Colors } from '@/src/constants/colors';
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
   const { session, isLoading } = useAuth();
   const { unreadCount } = useConversations();
+  
+  // Show bottom tab bar on mobile (native + web when width < 768)
+  const isMobileWeb = Platform.OS === 'web' && width < 768;
+  const showTabBar = Platform.OS !== 'web' || isMobileWeb;
 
   if (isLoading) {
     return (
@@ -63,12 +68,14 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
+          display: showTabBar ? 'flex' : 'none',
           backgroundColor: '#fff',
-          borderTopWidth: 0,
+          borderTopWidth: 1,
+          borderTopColor: '#E5E7EB',
           elevation: 0,
           shadowOpacity: 0,
-          height: 80,
-          paddingBottom: 20,
+          height: Platform.OS === 'web' ? 64 : 80,
+          paddingBottom: Platform.OS === 'web' ? 8 : 20,
         },
         tabBarLabelStyle: {
           fontSize: 12,

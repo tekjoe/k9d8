@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
 import {
   ActivityIndicator,
   Animated,
@@ -17,12 +17,14 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { getParkById } from '@/src/services/parks';
+import { Colors } from '@/src/constants/colors';
+import { getParkById, getParkByShortId } from '@/src/services/parks';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useCheckIn } from '@/src/hooks/useCheckIn';
 import { useDogs } from '@/src/hooks/useDogs';
 import { usePlaydates } from '@/src/hooks/usePlaydates';
 import { PlaydateCard } from '@/src/components/playdates/PlaydateCard';
+import { parseSlugOrId } from '@/src/utils/slug';
 import type { Park, Dog } from '@/src/types/database';
 
 const DURATIONS = [
@@ -100,7 +102,7 @@ function FeatureTag({ icon, label }: FeatureTagProps) {
 }
 
 export default function ParkDetailScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id: slugOrId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { session } = useAuth();
@@ -109,6 +111,10 @@ export default function ParkDetailScreen() {
   const [park, setPark] = useState<Park | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [debugInfo, setDebugInfo] = useState<string | null>(null);
+  
+  // The park ID is derived from the fetched park
+  const parkId = park?.id || null;
   const [checkInModalVisible, setCheckInModalVisible] = useState(false);
   const [modalDismissing, setModalDismissing] = useState(false);
   const [selectedDogIds, setSelectedDogIds] = useState<string[]>([]);
@@ -120,10 +126,10 @@ export default function ParkDetailScreen() {
     loading: checkInLoading,
     checkIn,
     checkOut,
-  } = useCheckIn(id!);
+  } = useCheckIn(parkId || '');
 
   const { dogs } = useDogs(userId);
-  const { playdates, loading: playdatesLoading, refresh: refreshPlaydates } = usePlaydates(id);
+  const { playdates, loading: playdatesLoading, refresh: refreshPlaydates } = usePlaydates(parkId || '');
 
   // Drag-to-dismiss for check-in modal
   const modalTranslateY = useRef(new Animated.Value(0)).current;
@@ -182,21 +188,86 @@ export default function ParkDetailScreen() {
   );
 
   useEffect(() => {
-    if (!id) return;
+    if (!slugOrId) {
+      setError('No park ID provided');
+      setDebugInfo('URL parameter "id" is empty or undefined');
+      setLoading(false);
+      return;
+    }
 
     let isMounted = true;
 
     async function fetchPark() {
+      const parsed = parseSlugOrId(slugOrId);
+      
+      // Build debug info
+      const debugLines: string[] = [
+        `URL param: "${slugOrId}"`,
+        `Parsed type: ${parsed.type}`,
+      ];
+      
+      if (parsed.type === 'uuid') {
+        debugLines.push(`UUID: ${parsed.id}`);
+      } else if (parsed.type === 'slug') {
+        debugLines.push(`Short ID: ${parsed.shortId}`);
+      }
+      
+      // Console log for dev tools debugging
+      console.log('[ParkDetail] Fetching park:', { slugOrId, parsed });
+      
       try {
-        const data = await getParkById(id!);
+        let data: Park | null = null;
+        
+        if (parsed.type === 'uuid') {
+          debugLines.push('Query: getParkById()');
+          console.log('[ParkDetail] Querying by UUID:', parsed.id);
+          data = await getParkById(parsed.id);
+        } else if (parsed.type === 'slug') {
+          debugLines.push('Query: getParkByShortId()');
+          console.log('[ParkDetail] Querying by short ID:', parsed.shortId);
+          data = await getParkByShortId(parsed.shortId);
+        } else {
+          debugLines.push('Invalid URL format - could not extract UUID or short ID');
+          console.warn('[ParkDetail] Invalid URL format:', slugOrId);
+        }
+        
         if (isMounted) {
-          setPark(data);
+          if (data) {
+            debugLines.push(`Found park: ${data.name} (${data.id})`);
+            console.log('[ParkDetail] Found park:', { name: data.name, id: data.id });
+            setPark(data);
+            setDebugInfo(null); // Clear debug on success
+          } else {
+            debugLines.push('No park found with this ID');
+            console.warn('[ParkDetail] No park found for:', { slugOrId, parsed });
+            setError('Park not found');
+            setDebugInfo(debugLines.join('\n'));
+          }
         }
       } catch (err) {
         if (isMounted) {
-          const message =
-            err instanceof Error ? err.message : 'Failed to load park details';
-          setError(message);
+          const message = err instanceof Error ? err.message : 'Unknown error';
+          const code = (err as { code?: string })?.code;
+          const details = (err as { details?: string })?.details;
+          const hint = (err as { hint?: string })?.hint;
+          
+          debugLines.push(`Error: ${message}`);
+          if (code) debugLines.push(`Error code: ${code}`);
+          if (details) debugLines.push(`Details: ${details}`);
+          if (hint) debugLines.push(`Hint: ${hint}`);
+          
+          console.error('[ParkDetail] Error fetching park:', { 
+            slugOrId, 
+            parsed, 
+            error: err,
+            message,
+            code,
+            details,
+            hint
+          });
+          
+          setError('Failed to load park details');
+          setDebugInfo(debugLines.join('\n'));
         }
       } finally {
         if (isMounted) {
@@ -210,7 +281,7 @@ export default function ParkDetailScreen() {
     return () => {
       isMounted = false;
     };
-  }, [id]);
+  }, [slugOrId]);
 
   useEffect(() => {
     if (checkInModalVisible && dogs.length > 0) {
@@ -230,8 +301,8 @@ export default function ParkDetailScreen() {
   }, [park]);
 
   const handleSchedule = useCallback(() => {
-    router.push(`/playdates/create?parkId=${id}`);
-  }, [router, id]);
+    router.push(`/playdates/create?parkId=${parkId}`);
+  }, [router, parkId]);
 
   const handleOpenCheckIn = useCallback(() => {
     if (userCheckIn) {
@@ -283,8 +354,33 @@ export default function ParkDetailScreen() {
 
   if (error || !park) {
     return (
-      <View className="flex-1 justify-center items-center bg-background">
-        <Text className="text-base text-error text-center px-8">{error ?? 'Park not found'}</Text>
+      <View className="flex-1 justify-center items-center bg-background px-6">
+        <View className="items-center max-w-md">
+          <View className="w-16 h-16 rounded-full bg-red-100 items-center justify-center mb-4">
+            <Ionicons name="alert-circle" size={32} color="#EF4444" />
+          </View>
+          <Text className="text-lg font-semibold text-text text-center mb-2">
+            {error ?? 'Park not found'}
+          </Text>
+          <Text className="text-sm text-text-secondary text-center mb-6">
+            We couldn't load this park. It may have been removed or the link may be incorrect.
+          </Text>
+          
+          {/* Debug Info - shown in development */}
+          {debugInfo && (
+            <View className="bg-gray-100 rounded-lg p-4 w-full mb-6">
+              <Text className="text-xs font-mono text-gray-600 mb-2">Debug Info:</Text>
+              <Text className="text-xs font-mono text-gray-800">{debugInfo}</Text>
+            </View>
+          )}
+          
+          <Pressable
+            onPress={handleBack}
+            className="bg-secondary px-6 py-3 rounded-xl"
+          >
+            <Text className="text-white font-semibold">Go Back</Text>
+          </Pressable>
+        </View>
       </View>
     );
   }
@@ -324,7 +420,7 @@ export default function ParkDetailScreen() {
           className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
           style={{ top: insets.top + 8 }}
         >
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
       </View>
 

@@ -11,6 +11,7 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { getDogWithOwner } from '@/src/services/dogs';
 import { getOrCreateConversation } from '@/src/services/messages';
@@ -31,7 +32,7 @@ function formatSize(size: DogSize): string {
   return map[size];
 }
 
-function formatTemperament(temperament: DogTemperament): string {
+function formatTemperament(temperaments: DogTemperament[]): string {
   const map: Record<DogTemperament, string> = {
     calm: 'Calm',
     friendly: 'Friendly',
@@ -39,7 +40,7 @@ function formatTemperament(temperament: DogTemperament): string {
     anxious: 'Anxious',
     aggressive: 'Aggressive',
   };
-  return map[temperament];
+  return temperaments.map((t) => map[t]).join(', ');
 }
 
 interface InfoTagProps {
@@ -181,7 +182,7 @@ export default function DogProfileScreen() {
           className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
           style={{ top: insets.top + 8 }}
         >
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
       </View>
 

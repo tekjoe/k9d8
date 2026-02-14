@@ -14,6 +14,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { format, isSameDay } from 'date-fns';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useDogs } from '@/src/hooks/useDogs';
 import { getPlayDateById } from '@/src/services/playdates';
@@ -195,7 +196,7 @@ export default function PlayDateDetailScreen() {
           onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
           style={styles.backButton}
         >
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
         <Text style={styles.headerTitle} numberOfLines={1}>
           {playdate.title}

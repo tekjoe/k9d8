@@ -11,6 +11,7 @@ import {
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
 
 import { useAuth } from '@/src/hooks/useAuth';
 import { signOut } from '@/src/services/auth';
@@ -92,7 +93,7 @@ export default function ProfileTab() {
       {/* Header */}
       <View className="flex-row justify-between items-center px-4 py-3">
         <Pressable onPress={handleBack} className="w-10 h-10 justify-center items-center">
-          <Ionicons name="arrow-back" size={24} color="#1A1A2E" />
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
         <Text className="text-lg font-semibold text-text">Profile</Text>
         <Pressable onPress={handleEditProfile} className="w-10 h-10 justify-center items-center">

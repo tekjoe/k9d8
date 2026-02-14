@@ -52,7 +52,7 @@ export function DogCard({ dog, onPress }: DogCardProps) {
           <DogSizeTag size={dog.size} />
           <View style={styles.temperamentTag}>
             <Text style={styles.temperamentText}>
-              {TEMPERAMENT_LABELS[dog.temperament] ?? dog.temperament}
+              {dog.temperament.map((t) => TEMPERAMENT_LABELS[t] ?? t).join(', ')}
             </Text>
           </View>
         </View>

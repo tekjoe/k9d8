@@ -85,3 +85,35 @@ export async function getParkById(id: string): Promise<Park> {
   if (error) throw error;
   return data as Park;
 }
+
+/**
+ * Fetches a single park by a partial ID (first 8 characters of UUID).
+ * Used for SEO-friendly slug URLs like /parks/sunnyside-dog-park-9566f589
+ * 
+ * Since Supabase/PostgREST doesn't support LIKE on UUID columns directly,
+ * we fetch all parks and filter client-side. This is acceptable because:
+ * 1. Parks list is typically small (hundreds, not thousands)
+ * 2. This query is cached by useParks hook in most cases
+ * 3. The alternative (RPC function) adds complexity
+ */
+export async function getParkByShortId(shortId: string): Promise<Park | null> {
+  const normalizedShortId = shortId.toLowerCase();
+  
+  const { data, error } = await supabase
+    .from('parks')
+    .select('*');
+
+  if (error) {
+    console.error('[getParkByShortId] Supabase error:', error);
+    throw error;
+  }
+  
+  // Find the park whose ID starts with the short ID
+  const park = data?.find(p => p.id.toLowerCase().startsWith(normalizedShortId));
+  
+  console.log('[getParkByShortId] Searching for:', normalizedShortId, 
+    'Found:', park ? `${park.name} (${park.id})` : 'none',
+    'Total parks:', data?.length ?? 0);
+  
+  return park ?? null;
+}

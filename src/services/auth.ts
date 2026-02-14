@@ -37,3 +37,29 @@ export async function updateProfile(updates: { display_name?: string; bio?: stri
   if (error) throw error;
   return data;
 }
+
+export async function uploadUserAvatar(
+  userId: string,
+  uri: string,
+): Promise<string> {
+  const timestamp = Date.now();
+  const filePath = `${userId}/${timestamp}.jpg`;
+
+  const response = await fetch(uri);
+  const blob = await response.blob();
+
+  const { error: uploadError } = await supabase.storage
+    .from('user-avatars')
+    .upload(filePath, blob, {
+      contentType: 'image/jpeg',
+      upsert: false,
+    });
+
+  if (uploadError) throw uploadError;
+
+  const { data } = supabase.storage
+    .from('user-avatars')
+    .getPublicUrl(filePath);
+
+  return data.publicUrl;
+}
