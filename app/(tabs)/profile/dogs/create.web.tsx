@@ -14,6 +14,7 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
+import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
 import { createDog, uploadDogPhoto } from '@/src/services/dogs';
 import { Colors } from '@/src/constants/colors';
@@ -53,7 +54,7 @@ interface FormFieldProps {
 function FormField({ label, children }: FormFieldProps) {
   return (
     <View style={{ gap: 8 }}>
-      <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>{label}</Text>
+      <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>{label}</Text>
       {children}
     </View>
   );
@@ -72,7 +73,7 @@ function TextField({ value, onChangeText, placeholder, multiline, numberOfLines 
     <View
       style={{
         borderWidth: 1.5,
-        borderColor: '#E5E7EB',
+        borderColor: '#E5E4E1',
         borderRadius: 8,
         backgroundColor: '#fff',
         minHeight: multiline ? 120 : 48,
@@ -85,12 +86,12 @@ function TextField({ value, onChangeText, placeholder, multiline, numberOfLines 
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor="#9CA3AF"
+        placeholderTextColor="#878685"
         multiline={multiline}
         numberOfLines={numberOfLines}
         style={{
           fontSize: 15,
-          color: '#1A1A2E',
+          color: '#1A1918',
           outlineWidth: 0,
           ...(multiline ? { textAlignVertical: 'top', minHeight: 96 } : {}),
         } as any}
@@ -202,7 +203,9 @@ export default function CreateDogScreenWeb() {
   // Mobile Layout
   if (isMobile) {
     return (
-      <View style={{ flex: 1, backgroundColor: '#F7F8FA' }}>
+      <>
+      <SEOHead title="Add a Dog" description="Add a new dog to your k9d8 profile." url="/profile/dogs/create" />
+      <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
         {/* Mobile Header */}
         <View
           style={{
@@ -213,15 +216,15 @@ export default function CreateDogScreenWeb() {
             height: 56,
             paddingHorizontal: 16,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
           <Pressable onPress={handleCancel} style={{ width: 40, height: 40, justifyContent: 'center' }}>
             <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
           </Pressable>
-          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1A2E' }}>Add Dog</Text>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>Add Dog</Text>
           <Pressable onPress={handleSave} disabled={submitting}>
-            <Text style={{ fontSize: 15, fontWeight: '600', color: '#2D8B57' }}>
+            <Text style={{ fontSize: 15, fontWeight: '600', color: '#3D8A5A' }}>
               {submitting ? '...' : 'Save'}
             </Text>
           </Pressable>
@@ -234,7 +237,7 @@ export default function CreateDogScreenWeb() {
               {formData.photoUri ? (
                 <Image
                   source={{ uri: formData.photoUri }}
-                  style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E7EB' }}
+                  style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E4E1' }}
                 />
               ) : (
                 <View
@@ -243,14 +246,14 @@ export default function CreateDogScreenWeb() {
                     height: 120,
                     borderRadius: 60,
                     borderWidth: 2,
-                    borderColor: '#E5E7EB',
+                    borderColor: '#E5E4E1',
                     borderStyle: 'dashed',
-                    backgroundColor: '#F3F4F6',
+                    backgroundColor: '#EDECEA',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
                 >
-                  <Ionicons name="camera-outline" size={32} color="#9CA3AF" />
+                  <Ionicons name="camera-outline" size={32} color="#878685" />
                 </View>
               )}
             </Pressable>
@@ -259,15 +262,15 @@ export default function CreateDogScreenWeb() {
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
-                backgroundColor: '#F3F4F6',
+                backgroundColor: '#EDECEA',
                 paddingHorizontal: 16,
                 paddingVertical: 8,
                 borderRadius: 8,
                 gap: 6,
               }}
             >
-              <Ionicons name="camera-outline" size={16} color="#6B7280" />
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#6B7280' }}>
+              <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+              <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>
                 {formData.photoUri ? 'Change Photo' : 'Add Photo'}
               </Text>
             </Pressable>
@@ -298,7 +301,7 @@ export default function CreateDogScreenWeb() {
                       height: 44,
                       borderRadius: 8,
                       borderWidth: formData.size === option.value ? 2 : 1.5,
-                      borderColor: formData.size === option.value ? '#2D8B57' : '#E5E7EB',
+                      borderColor: formData.size === option.value ? '#3D8A5A' : '#E5E4E1',
                       backgroundColor: formData.size === option.value ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -308,7 +311,7 @@ export default function CreateDogScreenWeb() {
                       style={{
                         fontSize: 14,
                         fontWeight: formData.size === option.value ? '600' : '500',
-                        color: formData.size === option.value ? '#2D8B57' : '#1A1A2E',
+                        color: formData.size === option.value ? '#3D8A5A' : '#1A1918',
                       }}
                     >
                       {option.label}
@@ -333,7 +336,7 @@ export default function CreateDogScreenWeb() {
                       paddingHorizontal: 16,
                       borderRadius: 8,
                       borderWidth: formData.temperament.includes(option.value) ? 2 : 1.5,
-                      borderColor: formData.temperament.includes(option.value) ? '#2D8B57' : '#E5E7EB',
+                      borderColor: formData.temperament.includes(option.value) ? '#3D8A5A' : '#E5E4E1',
                       backgroundColor: formData.temperament.includes(option.value) ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -343,7 +346,7 @@ export default function CreateDogScreenWeb() {
                       style={{
                         fontSize: 14,
                         fontWeight: formData.temperament.includes(option.value) ? '600' : '500',
-                        color: formData.temperament.includes(option.value) ? '#2D8B57' : '#1A1A2E',
+                        color: formData.temperament.includes(option.value) ? '#3D8A5A' : '#1A1918',
                       }}
                     >
                       {option.label}
@@ -373,12 +376,15 @@ export default function CreateDogScreenWeb() {
           </View>
         </ScrollView>
       </View>
+      </>
     );
   }
 
   // Desktop Layout
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="Add a Dog" description="Add a new dog to your k9d8 profile." url="/profile/dogs/create" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {showSidebar && <DesktopSidebar />}
 
       <View style={{ flex: 1, flexDirection: 'column' }}>
@@ -392,7 +398,7 @@ export default function CreateDogScreenWeb() {
             paddingVertical: 24,
             paddingHorizontal: 40,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
@@ -402,14 +408,14 @@ export default function CreateDogScreenWeb() {
                 width: 40,
                 height: 40,
                 borderRadius: 8,
-                backgroundColor: '#F3F4F6',
+                backgroundColor: '#EDECEA',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
               <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
             </Pressable>
-            <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1A2E' }}>Add Dog</Text>
+            <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1918' }}>Add Dog</Text>
           </View>
 
           <View style={{ flexDirection: 'row', gap: 12 }}>
@@ -420,11 +426,11 @@ export default function CreateDogScreenWeb() {
                 paddingVertical: 10,
                 borderRadius: 8,
                 borderWidth: 1.5,
-                borderColor: '#E5E7EB',
+                borderColor: '#E5E4E1',
                 backgroundColor: '#fff',
               }}
             >
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>Cancel</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={handleSave}
@@ -433,7 +439,7 @@ export default function CreateDogScreenWeb() {
                 paddingHorizontal: 20,
                 paddingVertical: 10,
                 borderRadius: 8,
-                backgroundColor: '#2D8B57',
+                backgroundColor: '#3D8A5A',
                 opacity: submitting ? 0.6 : 1,
               }}
             >
@@ -456,7 +462,7 @@ export default function CreateDogScreenWeb() {
                   backgroundColor: '#fff',
                   borderRadius: 16,
                   borderWidth: 1,
-                  borderColor: '#E5E7EB',
+                  borderColor: '#E5E4E1',
                   padding: 32,
                   alignItems: 'center',
                   gap: 20,
@@ -471,7 +477,7 @@ export default function CreateDogScreenWeb() {
                         height: 160,
                         borderRadius: 80,
                         borderWidth: 4,
-                        borderColor: '#E5E7EB',
+                        borderColor: '#E5E4E1',
                       }}
                     />
                   ) : (
@@ -481,15 +487,15 @@ export default function CreateDogScreenWeb() {
                         height: 160,
                         borderRadius: 80,
                         borderWidth: 2,
-                        borderColor: '#E5E7EB',
+                        borderColor: '#E5E4E1',
                         borderStyle: 'dashed',
-                        backgroundColor: '#F3F4F6',
+                        backgroundColor: '#EDECEA',
                         alignItems: 'center',
                         justifyContent: 'center',
                       }}
                     >
-                      <Ionicons name="camera-outline" size={48} color="#9CA3AF" />
-                      <Text style={{ fontSize: 14, color: '#9CA3AF', marginTop: 8 }}>Add Photo</Text>
+                      <Ionicons name="camera-outline" size={48} color="#878685" />
+                      <Text style={{ fontSize: 14, color: '#878685', marginTop: 8 }}>Add Photo</Text>
                     </View>
                   )}
                 </Pressable>
@@ -498,15 +504,15 @@ export default function CreateDogScreenWeb() {
                   style={{
                     flexDirection: 'row',
                     alignItems: 'center',
-                    backgroundColor: '#F3F4F6',
+                    backgroundColor: '#EDECEA',
                     paddingHorizontal: 20,
                     paddingVertical: 10,
                     borderRadius: 8,
                     gap: 8,
                   }}
                 >
-                  <Ionicons name="camera-outline" size={16} color="#6B7280" />
-                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#6B7280' }}>
+                  <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>
                     {formData.photoUri ? 'Change Photo' : 'Add Photo'}
                   </Text>
                 </Pressable>
@@ -557,7 +563,7 @@ export default function CreateDogScreenWeb() {
                           height: 44,
                           borderRadius: 8,
                           borderWidth: formData.size === option.value ? 2 : 1.5,
-                          borderColor: formData.size === option.value ? '#2D8B57' : '#E5E7EB',
+                          borderColor: formData.size === option.value ? '#3D8A5A' : '#E5E4E1',
                           backgroundColor: formData.size === option.value ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -567,7 +573,7 @@ export default function CreateDogScreenWeb() {
                           style={{
                             fontSize: 14,
                             fontWeight: formData.size === option.value ? '600' : '500',
-                            color: formData.size === option.value ? '#2D8B57' : '#1A1A2E',
+                            color: formData.size === option.value ? '#3D8A5A' : '#1A1918',
                           }}
                         >
                           {option.label}
@@ -593,7 +599,7 @@ export default function CreateDogScreenWeb() {
                           paddingHorizontal: 16,
                           borderRadius: 8,
                           borderWidth: formData.temperament.includes(option.value) ? 2 : 1.5,
-                          borderColor: formData.temperament.includes(option.value) ? '#2D8B57' : '#E5E7EB',
+                          borderColor: formData.temperament.includes(option.value) ? '#3D8A5A' : '#E5E4E1',
                           backgroundColor: formData.temperament.includes(option.value) ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -603,7 +609,7 @@ export default function CreateDogScreenWeb() {
                           style={{
                             fontSize: 14,
                             fontWeight: formData.temperament.includes(option.value) ? '600' : '500',
-                            color: formData.temperament.includes(option.value) ? '#2D8B57' : '#1A1A2E',
+                            color: formData.temperament.includes(option.value) ? '#3D8A5A' : '#1A1918',
                           }}
                         >
                           {option.label}
@@ -634,5 +640,6 @@ export default function CreateDogScreenWeb() {
         </ScrollView>
       </View>
     </View>
+    </>
   );
 }

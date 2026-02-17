@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
+import { SEOHead } from '@/src/components/seo';
 import { View, Text, TextInput, Pressable, Image, ActivityIndicator, ScrollView, useWindowDimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -63,7 +64,7 @@ function ParkListItem({ park, pupCount, distanceKm, selected, onPress }: ParkLis
           {park.name}
         </Text>
         <View className="flex-row items-center">
-          <Ionicons name="paw" size={12} color="#6FCF97" />
+          <Ionicons name="paw" size={12} color="#3D8A5A" />
           <Text className="text-xs text-secondary font-medium ml-1">
             {pupCount} {pupCount === 1 ? 'pup' : 'pups'} here now
           </Text>
@@ -157,22 +158,24 @@ export default function DesktopExploreScreen() {
   // Mobile view with toggle between list and map
   if (isMobile) {
     return (
-      <View style={{ flex: 1, backgroundColor: '#F7F8FA' }}>
+      <>
+      <SEOHead title="Explore Dog Parks" description="Explore dog parks near you on an interactive map. Find parks with amenities, see active dogs, and plan your next visit." url="/explore" />
+      <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
         {/* Header with toggle */}
-        <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#E5E7EB' }}>
-          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E', marginBottom: 12 }}>Explore</Text>
-          <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#F7F8FA', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10 }}>
-            <Ionicons name="search" size={18} color="#6B7280" />
+        <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
+          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918', marginBottom: 12 }}>Explore</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#F5F4F1', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10 }}>
+            <Ionicons name="search" size={18} color="#6D6C6A" />
             <TextInput
               value={searchQuery}
               onChangeText={handleSearchChange}
               placeholder="Search parks..."
-              placeholderTextColor="#9CA3AF"
-              style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1A2E' }}
+              placeholderTextColor="#878685"
+              style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1918' }}
             />
             {searchQuery.length > 0 && (
               <Pressable onPress={() => handleSearchChange('')}>
-                <Ionicons name="close-circle" size={18} color="#9CA3AF" />
+                <Ionicons name="close-circle" size={18} color="#878685" />
               </Pressable>
             )}
           </View>
@@ -184,11 +187,11 @@ export default function DesktopExploreScreen() {
                 flex: 1,
                 paddingVertical: 10,
                 borderRadius: 8,
-                backgroundColor: !mobileShowMap ? '#2D8B57' : '#F3F4F6',
+                backgroundColor: !mobileShowMap ? '#3D8A5A' : '#EDECEA',
                 alignItems: 'center',
               }}
             >
-              <Text style={{ fontWeight: '600', color: !mobileShowMap ? '#fff' : '#6B7280' }}>List</Text>
+              <Text style={{ fontWeight: '600', color: !mobileShowMap ? '#fff' : '#6D6C6A' }}>List</Text>
             </Pressable>
             <Pressable
               onPress={() => setMobileShowMap(true)}
@@ -196,11 +199,11 @@ export default function DesktopExploreScreen() {
                 flex: 1,
                 paddingVertical: 10,
                 borderRadius: 8,
-                backgroundColor: mobileShowMap ? '#2D8B57' : '#F3F4F6',
+                backgroundColor: mobileShowMap ? '#3D8A5A' : '#EDECEA',
                 alignItems: 'center',
               }}
             >
-              <Text style={{ fontWeight: '600', color: mobileShowMap ? '#fff' : '#6B7280' }}>Map</Text>
+              <Text style={{ fontWeight: '600', color: mobileShowMap ? '#fff' : '#6D6C6A' }}>Map</Text>
             </Pressable>
           </View>
         </View>
@@ -209,8 +212,8 @@ export default function DesktopExploreScreen() {
         {mobileShowMap ? (
           <View style={{ flex: 1, position: 'relative' }}>
             {parksLoading ? (
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#F3F4F6' }}>
-                <ActivityIndicator size="large" color="#4A90D9" />
+              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#EDECEA' }}>
+                <ActivityIndicator size="large" color="#3D8A5A" />
               </View>
             ) : (
               <ParkMap
@@ -225,20 +228,20 @@ export default function DesktopExploreScreen() {
               <View style={{ position: 'absolute', bottom: 16, left: 16, right: 16, backgroundColor: '#fff', borderRadius: 12, padding: 16, shadowColor: '#000', shadowOpacity: 0.15, shadowRadius: 8, shadowOffset: { width: 0, height: 2 } }}>
                 <Pressable onPress={() => handleParkPress(selectedPark)}>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                    <Text style={{ fontSize: 16, fontWeight: '700', color: '#1A1A2E', flex: 1, marginRight: 8 }}>{selectedPark.name}</Text>
+                    <Text style={{ fontSize: 16, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }}>{selectedPark.name}</Text>
                     <Pressable onPress={() => setSelectedPark(null)}>
-                      <Ionicons name="close" size={20} color="#6B7280" />
+                      <Ionicons name="close" size={20} color="#6D6C6A" />
                     </Pressable>
                   </View>
                   <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
-                    <Ionicons name="paw" size={14} color="#6FCF97" />
-                    <Text style={{ fontSize: 14, color: '#2D8B57', fontWeight: '600', marginLeft: 6 }}>
+                    <Ionicons name="paw" size={14} color="#3D8A5A" />
+                    <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>
                       {checkInCounts[selectedPark.id] || 0} pups here now
                     </Text>
                   </View>
                   <Pressable
                     onPress={() => handleParkPress(selectedPark)}
-                    style={{ backgroundColor: '#2D8B57', borderRadius: 8, paddingVertical: 12, alignItems: 'center' }}
+                    style={{ backgroundColor: '#3D8A5A', borderRadius: 8, paddingVertical: 12, alignItems: 'center' }}
                   >
                     <Text style={{ color: '#fff', fontWeight: '600' }}>View Details</Text>
                   </Pressable>
@@ -250,7 +253,7 @@ export default function DesktopExploreScreen() {
           <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 16 }}>
             {parksLoading ? (
               <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 40 }}>
-                <ActivityIndicator size="large" color="#4A90D9" />
+                <ActivityIndicator size="large" color="#3D8A5A" />
               </View>
             ) : (
               <>
@@ -267,15 +270,15 @@ export default function DesktopExploreScreen() {
                 {hasMore && (
                   <Pressable
                     onPress={handleLoadMore}
-                    style={{ backgroundColor: '#F3F4F6', borderRadius: 8, padding: 12, marginTop: 8, alignItems: 'center' }}
+                    style={{ backgroundColor: '#EDECEA', borderRadius: 8, padding: 12, marginTop: 8, alignItems: 'center' }}
                   >
-                    <Text style={{ color: '#4A90D9', fontWeight: '600', fontSize: 14 }}>
+                    <Text style={{ color: '#3D8A5A', fontWeight: '600', fontSize: 14 }}>
                       Load More ({allFilteredParks.length - displayLimit} remaining)
                     </Text>
                   </Pressable>
                 )}
                 {filteredParks.length === 0 && (
-                  <Text style={{ color: '#6B7280', textAlign: 'center', paddingVertical: 40 }}>
+                  <Text style={{ color: '#6D6C6A', textAlign: 'center', paddingVertical: 40 }}>
                     No parks found
                   </Text>
                 )}
@@ -284,11 +287,14 @@ export default function DesktopExploreScreen() {
           </ScrollView>
         )}
       </View>
+      </>
     );
   }
 
   // Desktop/Tablet layout
   return (
+    <>
+    <SEOHead title="Explore Dog Parks" description="Explore dog parks near you on an interactive map. Find parks with amenities, see active dogs, and plan your next visit." url="/explore" />
     <View className="flex-1 flex-row bg-background">
       {/* Left Sidebar */}
       {showSidebar && <DesktopSidebar />}
@@ -297,17 +303,17 @@ export default function DesktopExploreScreen() {
       <View className="w-90 bg-white border-r border-gray-200 flex-col">
         <View className="px-4 py-5">
           <View className="flex-row items-center bg-background rounded-lg px-3 py-2.5">
-            <Ionicons name="search" size={18} color="#6B7280" />
+            <Ionicons name="search" size={18} color="#6D6C6A" />
             <TextInput
               value={searchQuery}
               onChangeText={handleSearchChange}
               placeholder="Search parks..."
-              placeholderTextColor="#9CA3AF"
+              placeholderTextColor="#878685"
               className="flex-1 ml-2 text-sm text-text outline-none"
             />
             {searchQuery.length > 0 && (
               <Pressable onPress={() => handleSearchChange('')}>
-                <Ionicons name="close-circle" size={18} color="#9CA3AF" />
+                <Ionicons name="close-circle" size={18} color="#878685" />
               </Pressable>
             )}
           </View>
@@ -320,7 +326,7 @@ export default function DesktopExploreScreen() {
 
           {parksLoading ? (
             <View className="flex-1 items-center justify-center">
-              <ActivityIndicator size="large" color="#4A90D9" />
+              <ActivityIndicator size="large" color="#3D8A5A" />
             </View>
           ) : (
             <ScrollView 
@@ -364,7 +370,7 @@ export default function DesktopExploreScreen() {
       <View className="flex-1 relative">
         {parksLoading ? (
           <View className="flex-1 items-center justify-center bg-gray-100">
-            <ActivityIndicator size="large" color="#4A90D9" />
+            <ActivityIndicator size="large" color="#3D8A5A" />
           </View>
         ) : (
           <ParkMap
@@ -384,13 +390,13 @@ export default function DesktopExploreScreen() {
                   {selectedPark.name}
                 </Text>
                 <Pressable onPress={() => setSelectedPark(null)}>
-                  <Ionicons name="close" size={24} color="#6B7280" />
+                  <Ionicons name="close" size={24} color="#6D6C6A" />
                 </Pressable>
               </View>
 
               {selectedPark.address && (
                 <View className="flex-row items-start mb-3">
-                  <Ionicons name="location-outline" size={16} color="#6B7280" />
+                  <Ionicons name="location-outline" size={16} color="#6D6C6A" />
                   <Text className="text-sm text-text-secondary ml-1 flex-1">
                     {selectedPark.address}
                   </Text>
@@ -398,7 +404,7 @@ export default function DesktopExploreScreen() {
               )}
 
               <View className="flex-row items-center mb-3">
-                <Ionicons name="paw" size={16} color="#6FCF97" />
+                <Ionicons name="paw" size={16} color="#3D8A5A" />
                 <Text className="text-sm text-secondary font-semibold ml-1.5">
                   {checkInCounts[selectedPark.id] || 0} pups here now
                 </Text>
@@ -429,5 +435,6 @@ export default function DesktopExploreScreen() {
         )}
       </View>
     </View>
+    </>
   );
 }

@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   featureBadgeText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#2D8B57',
+    color: '#3D8A5A',
   },
   amenities: {
     flexDirection: 'row',

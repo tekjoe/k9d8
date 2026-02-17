@@ -1,4 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
+import { SEOHead } from '@/src/components/seo';
 import {
   View,
   Text,
@@ -78,9 +79,9 @@ function ConversationItem({
         alignItems: 'center',
         padding: 16,
         paddingHorizontal: 20,
-        backgroundColor: isSelected ? 'rgba(45, 139, 87, 0.1)' : pressed ? '#F7F8FA' : 'transparent',
+        backgroundColor: isSelected ? 'rgba(45, 139, 87, 0.1)' : pressed ? '#F5F4F1' : 'transparent',
         borderBottomWidth: 1,
-        borderBottomColor: '#E5E7EB',
+        borderBottomColor: '#E5E4E1',
       })}
     >
       <Image
@@ -94,7 +95,7 @@ function ConversationItem({
           style={{
             fontSize: 15,
             fontWeight: isUnread ? '700' : '600',
-            color: '#1A1A2E',
+            color: '#1A1918',
             marginBottom: 4,
           }}
           numberOfLines={1}
@@ -105,7 +106,7 @@ function ConversationItem({
           style={{
             fontSize: 14,
             fontWeight: isUnread ? '500' : '400',
-            color: isUnread ? '#1A1A2E' : '#6B7280',
+            color: isUnread ? '#1A1918' : '#6D6C6A',
           }}
           numberOfLines={1}
         >
@@ -117,7 +118,7 @@ function ConversationItem({
           style={{
             fontSize: 12,
             fontWeight: isUnread ? '600' : '500',
-            color: isUnread ? '#2D8B57' : '#9CA3AF',
+            color: isUnread ? '#3D8A5A' : '#878685',
           }}
         >
           {formatRelativeTime(conversation.last_message_at)}
@@ -128,7 +129,7 @@ function ConversationItem({
               width: 10,
               height: 10,
               borderRadius: 5,
-              backgroundColor: '#2D8B57',
+              backgroundColor: '#3D8A5A',
               marginTop: 6,
             }}
           />
@@ -171,20 +172,20 @@ function MessageBubbleWeb({ message, isOwn, showAvatar, avatarUrl }: MessageBubb
       <View style={{ maxWidth: '60%' }}>
         <View
           style={{
-            backgroundColor: isOwn ? '#2D8B57' : '#F3F4F6',
+            backgroundColor: isOwn ? '#3D8A5A' : '#EDECEA',
             borderRadius: 16,
             paddingVertical: 12,
             paddingHorizontal: 16,
           }}
         >
-          <Text style={{ fontSize: 15, color: isOwn ? '#fff' : '#1A1A2E', lineHeight: 22 }}>
+          <Text style={{ fontSize: 15, color: isOwn ? '#fff' : '#1A1918', lineHeight: 22 }}>
             {message.content}
           </Text>
         </View>
         <Text
           style={{
             fontSize: 11,
-            color: '#9CA3AF',
+            color: '#878685',
             marginTop: 4,
             textAlign: isOwn ? 'right' : 'left',
             paddingHorizontal: 4,
@@ -239,11 +240,11 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
   if (!conversation) {
     return (
       <View style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }}>
-        <Ionicons name="chatbubbles-outline" size={64} color="#D1D5DB" />
-        <Text style={{ fontSize: 18, fontWeight: '600', color: '#6B7280', marginTop: 16 }}>
+        <Ionicons name="chatbubbles-outline" size={64} color="#D1D0CD" />
+        <Text style={{ fontSize: 18, fontWeight: '600', color: '#6D6C6A', marginTop: 16 }}>
           Select a conversation
         </Text>
-        <Text style={{ fontSize: 14, color: '#9CA3AF', marginTop: 4 }}>
+        <Text style={{ fontSize: 14, color: '#878685', marginTop: 4 }}>
           Choose a conversation from the list to start messaging
         </Text>
       </View>
@@ -261,7 +262,7 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
             padding: 20,
             paddingHorizontal: 32,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
             gap: 16,
           }}
         >
@@ -272,8 +273,8 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
             style={{ width: 48, height: 48, borderRadius: 24 }}
           />
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1A2E' }}>{displayName}</Text>
-            <Text style={{ fontSize: 13, fontWeight: '500', color: '#2D8B57', marginTop: 2 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918' }}>{displayName}</Text>
+            <Text style={{ fontSize: 13, fontWeight: '500', color: '#3D8A5A', marginTop: 2 }}>
               Active now
             </Text>
           </View>
@@ -283,7 +284,7 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
       {/* Messages Area */}
       {loading ? (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <ActivityIndicator size="large" color="#4A90D9" />
+          <ActivityIndicator size="large" color="#3D8A5A" />
         </View>
       ) : (
         <FlatList
@@ -314,7 +315,7 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
           }}
           ListEmptyComponent={
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop: 80 }}>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
                 Send a message to start the conversation
               </Text>
             </View>
@@ -330,7 +331,7 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
           padding: 16,
           paddingHorizontal: 32,
           borderTopWidth: 1,
-          borderTopColor: '#E5E7EB',
+          borderTopColor: '#E5E4E1',
           gap: 12,
         }}
       >
@@ -339,23 +340,23 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
             flex: 1,
             flexDirection: 'row',
             alignItems: 'center',
-            backgroundColor: '#F3F4F6',
+            backgroundColor: '#EDECEA',
             borderRadius: 24,
             paddingHorizontal: 16,
             height: 48,
             gap: 12,
           }}
         >
-          <Ionicons name="happy-outline" size={20} color="#9CA3AF" />
+          <Ionicons name="happy-outline" size={20} color="#878685" />
           <TextInput
             value={text}
             onChangeText={setText}
             placeholder="Type a message..."
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             style={{
               flex: 1,
               fontSize: 15,
-              color: '#1A1A2E',
+              color: '#1A1918',
               outlineWidth: 0,
             } as any}
             onSubmitEditing={handleSend}
@@ -368,7 +369,7 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
             width: 48,
             height: 48,
             borderRadius: 24,
-            backgroundColor: text.trim() ? '#2D8B57' : '#E5E7EB',
+            backgroundColor: text.trim() ? '#3D8A5A' : '#E5E4E1',
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -423,7 +424,9 @@ export default function DesktopMessagesScreen() {
   if (isMobile) {
     if (mobileShowThread && selectedConversation) {
       return (
-        <View style={{ flex: 1, backgroundColor: '#F7F8FA' }}>
+        <>
+        <SEOHead title="Messages" description="Chat with other dog owners on k9d8." url="/messages" />
+        <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
           {/* Mobile Thread Header with Back Button */}
           <View
             style={{
@@ -433,7 +436,7 @@ export default function DesktopMessagesScreen() {
               paddingVertical: 12,
               paddingHorizontal: 16,
               borderBottomWidth: 1,
-              borderBottomColor: '#E5E7EB',
+              borderBottomColor: '#E5E4E1',
             }}
           >
             <Pressable onPress={handleBackToList} style={{ marginRight: 12, padding: 4 }}>
@@ -448,45 +451,48 @@ export default function DesktopMessagesScreen() {
               style={{ width: 40, height: 40, borderRadius: 20, marginRight: 12 }}
             />
             <View style={{ flex: 1 }}>
-              <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1A2E' }}>
+              <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
                 {selectedConversation.participants?.find((p) => p.user_id !== userId)?.profile?.display_name || 'Unknown'}
               </Text>
-              <Text style={{ fontSize: 12, color: '#2D8B57' }}>Active now</Text>
+              <Text style={{ fontSize: 12, color: '#3D8A5A' }}>Active now</Text>
             </View>
           </View>
           <ThreadPanel conversation={selectedConversation} currentUserId={userId} hideHeader />
         </View>
+        </>
       );
     }
 
     // Mobile List View
     return (
+      <>
+      <SEOHead title="Messages" description="Chat with other dog owners on k9d8." url="/messages" />
       <View style={{ flex: 1, backgroundColor: '#fff' }}>
-        <View style={{ paddingHorizontal: 20, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#E5E7EB' }}>
-          <Text style={{ fontSize: 28, fontWeight: '700', color: '#1A1A2E', marginBottom: 16 }}>Messages</Text>
+        <View style={{ paddingHorizontal: 20, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
+          <Text style={{ fontSize: 28, fontWeight: '700', color: '#1A1918', marginBottom: 16 }}>Messages</Text>
           <View
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              backgroundColor: '#F7F8FA',
+              backgroundColor: '#F5F4F1',
               borderRadius: 8,
               paddingHorizontal: 12,
               paddingVertical: 10,
             }}
           >
-            <Ionicons name="search" size={20} color="#9CA3AF" />
+            <Ionicons name="search" size={20} color="#878685" />
             <TextInput
               value={searchQuery}
               onChangeText={setSearchQuery}
               placeholder="Search messages..."
-              placeholderTextColor="#9CA3AF"
-              style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1A2E' }}
+              placeholderTextColor="#878685"
+              style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1918' }}
             />
           </View>
         </View>
         {loading ? (
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <ActivityIndicator size="large" color="#4A90D9" />
+            <ActivityIndicator size="large" color="#3D8A5A" />
           </View>
         ) : (
           <ScrollView style={{ flex: 1 }}>
@@ -501,10 +507,10 @@ export default function DesktopMessagesScreen() {
             ))}
             {filteredConversations.length === 0 && (
               <View style={{ alignItems: 'center', paddingTop: 80 }}>
-                <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1A2E', marginBottom: 8 }}>
+                <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
                   No messages yet
                 </Text>
-                <Text style={{ fontSize: 14, color: '#6B7280', textAlign: 'center', paddingHorizontal: 32 }}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A', textAlign: 'center', paddingHorizontal: 32 }}>
                   Start a conversation by visiting a park and messaging other dog owners!
                 </Text>
               </View>
@@ -512,12 +518,15 @@ export default function DesktopMessagesScreen() {
           </ScrollView>
         )}
       </View>
+      </>
     );
   }
 
   // Desktop/Tablet Layout
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="Messages" description="Chat with other dog owners on k9d8." url="/messages" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {/* Left Sidebar Navigation */}
       {showSidebar && <DesktopSidebar />}
 
@@ -527,7 +536,7 @@ export default function DesktopMessagesScreen() {
           width: isTablet ? 300 : 360,
           backgroundColor: '#fff',
           borderRightWidth: 1,
-          borderRightColor: '#E5E7EB',
+          borderRightColor: '#E5E4E1',
           flexDirection: 'column',
         }}
       >
@@ -537,33 +546,33 @@ export default function DesktopMessagesScreen() {
             padding: 24,
             paddingBottom: 16,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
-          <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1A2E', marginBottom: 16 }}>
+          <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1918', marginBottom: 16 }}>
             Messages
           </Text>
           <View
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              backgroundColor: '#F7F8FA',
+              backgroundColor: '#F5F4F1',
               borderRadius: 8,
               paddingHorizontal: 12,
               paddingVertical: 10,
             }}
           >
-            <Ionicons name="search" size={20} color="#9CA3AF" />
+            <Ionicons name="search" size={20} color="#878685" />
             <TextInput
               value={searchQuery}
               onChangeText={setSearchQuery}
               placeholder="Search message history"
-              placeholderTextColor="#9CA3AF"
+              placeholderTextColor="#878685"
               style={{
                 flex: 1,
                 marginLeft: 8,
                 fontSize: 15,
-                color: '#1A1A2E',
+                color: '#1A1918',
                 outlineWidth: 0,
               } as any}
             />
@@ -573,7 +582,7 @@ export default function DesktopMessagesScreen() {
         {/* Conversations List */}
         {loading ? (
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <ActivityIndicator size="large" color="#4A90D9" />
+            <ActivityIndicator size="large" color="#3D8A5A" />
           </View>
         ) : (
           <ScrollView style={{ flex: 1 }}>
@@ -588,7 +597,7 @@ export default function DesktopMessagesScreen() {
             ))}
             {filteredConversations.length === 0 && (
               <View style={{ alignItems: 'center', paddingTop: 40 }}>
-                <Text style={{ fontSize: 14, color: '#6B7280' }}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
                   {searchQuery ? 'No conversations found' : 'No messages yet'}
                 </Text>
               </View>
@@ -600,5 +609,6 @@ export default function DesktopMessagesScreen() {
       {/* Message Thread Panel */}
       <ThreadPanel conversation={selectedConversation} currentUserId={userId} />
     </View>
+    </>
   );
 }

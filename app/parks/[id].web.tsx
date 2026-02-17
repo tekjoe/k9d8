@@ -21,6 +21,7 @@ import { useCheckIn } from '@/src/hooks/useCheckIn';
 import { useDogs } from '@/src/hooks/useDogs';
 import { usePlaydates } from '@/src/hooks/usePlaydates';
 import { PlaydateCard } from '@/src/components/playdates/PlaydateCard';
+import { SEOHead, StructuredData, placeSchema } from '@/src/components/seo';
 import { parseSlugOrId } from '@/src/utils/slug';
 import type { Park, Dog } from '@/src/types/database';
 
@@ -51,7 +52,7 @@ function DogAvatar({ dog, onPress }: DogAvatarProps) {
           height: 56,
           borderRadius: 28,
           borderWidth: 2,
-          borderColor: '#E5E7EB',
+          borderColor: '#E5E4E1',
         }}
         resizeMode="cover"
       />
@@ -59,7 +60,7 @@ function DogAvatar({ dog, onPress }: DogAvatarProps) {
         style={{
           fontSize: 11,
           fontWeight: '500',
-          color: '#6B7280',
+          color: '#6D6C6A',
           marginTop: 4,
           maxWidth: 64,
         }}
@@ -83,15 +84,15 @@ function FeatureTag({ icon, label }: FeatureTagProps) {
       style={{
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#EDECEA',
         paddingHorizontal: 14,
         paddingVertical: 8,
         borderRadius: 9999,
         gap: 8,
       }}
     >
-      <Ionicons name={icon} size={14} color="#6B7280" />
-      <Text style={{ fontSize: 12, fontWeight: '500', color: '#6B7280' }}>{label}</Text>
+      <Ionicons name={icon} size={14} color="#6D6C6A" />
+      <Text style={{ fontSize: 12, fontWeight: '500', color: '#6D6C6A' }}>{label}</Text>
     </View>
   );
 }
@@ -111,7 +112,7 @@ function ButtonOutline({ label, onPress }: ButtonOutlineProps) {
         paddingVertical: 12,
         borderRadius: 9999,
         borderWidth: 1.5,
-        borderColor: '#E5E7EB',
+        borderColor: '#E5E4E1',
         backgroundColor: '#fff',
       }}
     >
@@ -129,7 +130,7 @@ interface ButtonPrimaryProps {
 }
 
 function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' }: ButtonPrimaryProps) {
-  const bgColor = variant === 'danger' ? '#EF4444' : variant === 'active' ? '#2D8B57' : '#6FCF97';
+  const bgColor = variant === 'danger' ? '#B5725E' : variant === 'active' ? '#3D8A5A' : '#3D8A5A';
   
   return (
     <Pressable
@@ -139,7 +140,7 @@ function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' 
         paddingHorizontal: 20,
         paddingVertical: 12,
         borderRadius: 9999,
-        backgroundColor: disabled ? '#D1D5DB' : bgColor,
+        backgroundColor: disabled ? '#D1D0CD' : bgColor,
         flexDirection: 'row',
         alignItems: 'center',
         gap: 8,
@@ -154,6 +155,7 @@ function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' 
 export default function ParkDetailWebScreen() {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const isDesktop = width >= 1024;
   const showSidebar = width >= 768;
 
   const { id: slugOrId } = useLocalSearchParams<{ id: string }>();
@@ -323,10 +325,10 @@ export default function ParkDetailWebScreen() {
 
   if (loading) {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
         {showSidebar && <DesktopSidebar />}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <ActivityIndicator size="large" color="#6FCF97" />
+          <ActivityIndicator size="large" color="#3D8A5A" />
         </View>
       </View>
     );
@@ -334,7 +336,7 @@ export default function ParkDetailWebScreen() {
 
   if (error || !park) {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
         {showSidebar && <DesktopSidebar />}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 }}>
           <View
@@ -342,18 +344,18 @@ export default function ParkDetailWebScreen() {
               width: 64,
               height: 64,
               borderRadius: 32,
-              backgroundColor: '#FEE2E2',
+              backgroundColor: '#F5E8E3',
               justifyContent: 'center',
               alignItems: 'center',
               marginBottom: 16,
             }}
           >
-            <Ionicons name="alert-circle" size={32} color="#EF4444" />
+            <Ionicons name="alert-circle" size={32} color="#B5725E" />
           </View>
           <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text, marginBottom: 8 }}>
             {error ?? 'Park not found'}
           </Text>
-          <Text style={{ fontSize: 14, color: '#6B7280', textAlign: 'center', marginBottom: 24 }}>
+          <Text style={{ fontSize: 14, color: '#6D6C6A', textAlign: 'center', marginBottom: 24 }}>
             We couldn't load this park. It may have been removed or the link may be incorrect.
           </Text>
           <ButtonPrimary label="Go Back" onPress={handleBack} />
@@ -362,25 +364,37 @@ export default function ParkDetailWebScreen() {
     );
   }
 
-  return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
-      {/* Sidebar - Hidden on mobile */}
-      {showSidebar && <DesktopSidebar />}
+  const parkDescription = park.description
+    || `Visit ${park.name}${park.address ? ` in ${park.address}` : ''}. ${park.is_fenced ? 'Fenced off-leash area' : 'Open dog park'} with amenities for dogs and owners. Schedule a playdate today!`;
 
-      {/* Main Content */}
-      <View style={{ flex: 1 }}>
-        <ScrollView style={{ flex: 1 }}>
-          {/* Hero Image */}
-          <View style={{ position: 'relative' }}>
-            <Image
-              source={{
-                uri:
-                  park.image_url ||
-                  'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&h=400&fit=crop',
-              }}
-              style={{ width: '100%', height: isMobile ? 240 : 300 }}
-              resizeMode="cover"
-            />
+  return (
+    <>
+      <SEOHead
+        title={`${park.name} - Dog Park`}
+        description={parkDescription.slice(0, 160)}
+        url={`/parks/${slugOrId}`}
+        image={park.image_url || undefined}
+      />
+      <StructuredData data={placeSchema(park)} />
+      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
+        {/* Sidebar - Hidden on mobile */}
+        {showSidebar && <DesktopSidebar />}
+
+        {/* Main Content */}
+        <View style={{ flex: 1 }}>
+          <ScrollView style={{ flex: 1 }}>
+            {/* Hero Image */}
+            <View style={{ position: 'relative' }}>
+              <Image
+                source={{
+                  uri:
+                    park.image_url ||
+                    'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&h=400&fit=crop',
+                }}
+                accessibilityLabel={`Photo of ${park.name} dog park`}
+                style={{ width: '100%', height: isMobile ? 240 : 300 }}
+                resizeMode="cover"
+              />
             {/* Back Button */}
             <Pressable
               onPress={handleBack}
@@ -403,7 +417,7 @@ export default function ParkDetailWebScreen() {
           {/* Content Area */}
           <View
             style={{
-              flexDirection: isMobile ? 'column' : 'row',
+              flexDirection: isDesktop ? 'row' : 'column',
               gap: isMobile ? 24 : 40,
               padding: isMobile ? 20 : 40,
             }}
@@ -422,7 +436,7 @@ export default function ParkDetailWebScreen() {
                 >
                   {park.name}
                 </Text>
-                <Text style={{ fontSize: 15, color: '#6B7280' }}>
+                <Text style={{ fontSize: 15, color: '#6D6C6A' }}>
                   {park.address || 'San Francisco, CA'}
                 </Text>
               </View>
@@ -440,7 +454,7 @@ export default function ParkDetailWebScreen() {
               </View>
 
               {/* Divider */}
-              <View style={{ height: 1, backgroundColor: '#E5E7EB' }} />
+              <View style={{ height: 1, backgroundColor: '#E5E4E1' }} />
 
               {/* Park Features */}
               <View style={{ gap: 14 }}>
@@ -454,14 +468,14 @@ export default function ParkDetailWebScreen() {
                 </View>
               </View>
 
-              {/* Upcoming Play Dates - Show on mobile only, desktop shows in right column */}
-              {isMobile && (
+              {/* Upcoming Play Dates - Show on mobile/tablet, desktop shows in right column */}
+              {!isDesktop && (
                 <View style={{ gap: 14 }}>
                   <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
                     Upcoming Play Dates
                   </Text>
                   {playdatesLoading ? (
-                    <ActivityIndicator size="small" color="#6FCF97" />
+                    <ActivityIndicator size="small" color="#3D8A5A" />
                   ) : playdates.length > 0 ? (
                     playdates.map((playdate) => (
                       <PlaydateCard
@@ -471,7 +485,7 @@ export default function ParkDetailWebScreen() {
                       />
                     ))
                   ) : (
-                    <Text style={{ fontSize: 14, color: '#6B7280' }}>No upcoming play dates</Text>
+                    <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No upcoming play dates</Text>
                   )}
                   <Pressable
                     onPress={handleSchedule}
@@ -479,7 +493,7 @@ export default function ParkDetailWebScreen() {
                       flexDirection: 'row',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      backgroundColor: '#6FCF97',
+                      backgroundColor: '#3D8A5A',
                       paddingVertical: 14,
                       borderRadius: 12,
                       gap: 8,
@@ -496,7 +510,7 @@ export default function ParkDetailWebScreen() {
             </View>
 
             {/* Right Column - Cards (Desktop only) */}
-            {!isMobile && (
+            {isDesktop && (
               <View style={{ width: 360, gap: 24 }}>
                 {/* Pups at the Park Now */}
                 <View
@@ -525,7 +539,7 @@ export default function ParkDetailWebScreen() {
                       ))}
                     </View>
                   ) : (
-                    <Text style={{ fontSize: 14, color: '#6B7280' }}>No pups here right now</Text>
+                    <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
                   )}
                 </View>
 
@@ -545,13 +559,13 @@ export default function ParkDetailWebScreen() {
                   <Text style={{ fontSize: 16, fontWeight: '600', color: Colors.light.text }}>
                     About This Park
                   </Text>
-                  <Text style={{ fontSize: 14, color: '#6B7280', lineHeight: 21 }}>
+                  <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
                     {park.description ||
                       'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
                   </Text>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                    <Ionicons name="time-outline" size={14} color="#9CA3AF" />
-                    <Text style={{ fontSize: 13, color: '#9CA3AF' }}>
+                    <Ionicons name="time-outline" size={14} color="#878685" />
+                    <Text style={{ fontSize: 13, color: '#878685' }}>
                       Open daily: 6:00 AM - 10:00 PM
                     </Text>
                   </View>
@@ -574,7 +588,7 @@ export default function ParkDetailWebScreen() {
                     Upcoming Play Dates
                   </Text>
                   {playdatesLoading ? (
-                    <ActivityIndicator size="small" color="#6FCF97" />
+                    <ActivityIndicator size="small" color="#3D8A5A" />
                   ) : playdates.length > 0 ? (
                     <View style={{ gap: 12 }}>
                       {playdates.slice(0, 3).map((playdate) => (
@@ -586,7 +600,7 @@ export default function ParkDetailWebScreen() {
                       ))}
                     </View>
                   ) : (
-                    <Text style={{ fontSize: 14, color: '#6B7280' }}>No upcoming play dates</Text>
+                    <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No upcoming play dates</Text>
                   )}
                   <Pressable
                     onPress={handleSchedule}
@@ -594,7 +608,7 @@ export default function ParkDetailWebScreen() {
                       flexDirection: 'row',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      backgroundColor: '#6FCF97',
+                      backgroundColor: '#3D8A5A',
                       paddingVertical: 12,
                       borderRadius: 9999,
                       gap: 8,
@@ -610,8 +624,8 @@ export default function ParkDetailWebScreen() {
             )}
           </View>
 
-          {/* Mobile: Pups at the Park & About sections */}
-          {isMobile && (
+          {/* Mobile/Tablet: Pups at the Park & About sections */}
+          {!isDesktop && (
             <View style={{ paddingHorizontal: 20, paddingBottom: 100, gap: 24 }}>
               {/* Pups at the Park Now */}
               <View style={{ gap: 14 }}>
@@ -629,7 +643,7 @@ export default function ParkDetailWebScreen() {
                     ))}
                   </View>
                 ) : (
-                  <Text style={{ fontSize: 14, color: '#6B7280' }}>No pups here right now</Text>
+                  <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
                 )}
               </View>
 
@@ -638,13 +652,13 @@ export default function ParkDetailWebScreen() {
                 <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
                   About This Park
                 </Text>
-                <Text style={{ fontSize: 14, color: '#6B7280', lineHeight: 21 }}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
                   {park.description ||
                     'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
                 </Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                  <Ionicons name="time-outline" size={14} color="#9CA3AF" />
-                  <Text style={{ fontSize: 13, color: '#9CA3AF' }}>
+                  <Ionicons name="time-outline" size={14} color="#878685" />
+                  <Text style={{ fontSize: 13, color: '#878685' }}>
                     Open daily: 6:00 AM - 10:00 PM
                   </Text>
                 </View>
@@ -661,18 +675,18 @@ export default function ParkDetailWebScreen() {
               bottom: 0,
               left: 0,
               right: 0,
-              backgroundColor: '#F7F8FA',
+              backgroundColor: '#F5F4F1',
               paddingHorizontal: 20,
               paddingVertical: 16,
               borderTopWidth: 1,
-              borderTopColor: '#E5E7EB',
+              borderTopColor: '#E5E4E1',
             }}
           >
             <Pressable
               onPress={handleOpenCheckIn}
               disabled={checkInLoading}
               style={{
-                backgroundColor: userCheckIn ? '#EF4444' : '#6FCF97',
+                backgroundColor: userCheckIn ? '#B5725E' : '#3D8A5A',
                 paddingVertical: 16,
                 borderRadius: 12,
                 alignItems: 'center',
@@ -734,12 +748,12 @@ export default function ParkDetailWebScreen() {
                   width: 32,
                   height: 32,
                   borderRadius: 16,
-                  backgroundColor: '#F3F4F6',
+                  backgroundColor: '#EDECEA',
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}
               >
-                <Ionicons name="close" size={20} color="#6B7280" />
+                <Ionicons name="close" size={20} color="#6D6C6A" />
               </Pressable>
             </View>
 
@@ -750,7 +764,7 @@ export default function ParkDetailWebScreen() {
               </Text>
 
               {dogs.length === 0 ? (
-                <Text style={{ fontSize: 15, color: '#6B7280', textAlign: 'center', paddingVertical: 32 }}>
+                <Text style={{ fontSize: 15, color: '#6D6C6A', textAlign: 'center', paddingVertical: 32 }}>
                   You have not added any dogs yet. Add a dog from your profile first.
                 </Text>
               ) : (
@@ -768,8 +782,8 @@ export default function ParkDetailWebScreen() {
                             padding: 12,
                             borderRadius: 12,
                             borderWidth: 2,
-                            borderColor: isSelected ? '#6FCF97' : 'transparent',
-                            backgroundColor: isSelected ? '#F0FDF4' : '#F7F8FA',
+                            borderColor: isSelected ? '#3D8A5A' : 'transparent',
+                            backgroundColor: isSelected ? '#E8F0E8' : '#F5F4F1',
                           }}
                         >
                           <Image
@@ -789,8 +803,8 @@ export default function ParkDetailWebScreen() {
                               height: 24,
                               borderRadius: 6,
                               borderWidth: 2,
-                              borderColor: isSelected ? '#6FCF97' : '#E5E7EB',
-                              backgroundColor: isSelected ? '#6FCF97' : '#fff',
+                              borderColor: isSelected ? '#3D8A5A' : '#E5E4E1',
+                              backgroundColor: isSelected ? '#3D8A5A' : '#fff',
                               justifyContent: 'center',
                               alignItems: 'center',
                             }}
@@ -819,8 +833,8 @@ export default function ParkDetailWebScreen() {
                           paddingHorizontal: 16,
                           borderRadius: 12,
                           borderWidth: 2,
-                          borderColor: selectedDuration === duration.value ? '#6FCF97' : '#E5E7EB',
-                          backgroundColor: selectedDuration === duration.value ? '#6FCF97' : '#F7F8FA',
+                          borderColor: selectedDuration === duration.value ? '#3D8A5A' : '#E5E4E1',
+                          backgroundColor: selectedDuration === duration.value ? '#3D8A5A' : '#F5F4F1',
                           alignItems: 'center',
                         }}
                       >
@@ -842,7 +856,7 @@ export default function ParkDetailWebScreen() {
                     onPress={handleConfirmCheckIn}
                     disabled={selectedDogIds.length === 0}
                     style={{
-                      backgroundColor: selectedDogIds.length === 0 ? '#D1D5DB' : '#6FCF97',
+                      backgroundColor: selectedDogIds.length === 0 ? '#D1D0CD' : '#3D8A5A',
                       paddingVertical: 16,
                       borderRadius: 12,
                       alignItems: 'center',
@@ -858,6 +872,7 @@ export default function ParkDetailWebScreen() {
           </View>
         </View>
       </Modal>
-    </View>
+      </View>
+    </>
   );
 }

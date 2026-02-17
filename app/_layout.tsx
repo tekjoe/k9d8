@@ -23,6 +23,11 @@ export default function RootLayout() {
           <Stack.Screen name="playdates/[id]" options={{ headerShown: false }} />
           <Stack.Screen name="messages/[id]" options={{ headerShown: false }} />
           <Stack.Screen name="users/[id]" options={{ headerShown: false }} />
+          <Stack.Screen name="features" options={{ headerShown: false }} />
+          <Stack.Screen name="download" options={{ headerShown: false }} />
+          <Stack.Screen name="dog-parks/index" options={{ headerShown: false }} />
+          <Stack.Screen name="dog-parks/[city]" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" options={{ headerShown: false }} />
         </Stack>
         <StatusBar style="auto" />
       </ThemeProvider>

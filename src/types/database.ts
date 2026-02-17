@@ -37,6 +37,8 @@ export interface Park {
   latitude: number;
   longitude: number;
   address: string | null;
+  city: string | null;
+  state: string | null;
   image_url: string | null;
   amenities: string[];
   is_fenced: boolean;

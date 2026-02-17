@@ -174,7 +174,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={styles.input}
             placeholder="Dog's name"
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.name}
             onChangeText={(v) => updateField('name', v)}
             autoCapitalize="words"
@@ -187,7 +187,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={styles.input}
             placeholder="e.g. Golden Retriever"
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.breed}
             onChangeText={(v) => updateField('breed', v)}
             autoCapitalize="words"
@@ -200,7 +200,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={styles.input}
             placeholder="e.g. 3"
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.age}
             onChangeText={(v) => updateField('age', v)}
             keyboardType="number-pad"
@@ -276,7 +276,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={styles.input}
             placeholder="e.g. Golden, Black, White"
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.color}
             onChangeText={(v) => updateField('color', v)}
             autoCapitalize="words"
@@ -289,7 +289,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={styles.input}
             placeholder="e.g. 65"
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.weight}
             onChangeText={(v) => updateField('weight', v)}
             keyboardType="number-pad"
@@ -302,7 +302,7 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
           <TextInput
             style={[styles.input, styles.textArea]}
             placeholder="Any special notes about your dog..."
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={formState.notes}
             onChangeText={(v) => updateField('notes', v)}
             multiline
@@ -349,21 +349,21 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
     borderWidth: 2,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     borderStyle: 'dashed',
     alignItems: 'center',
     justifyContent: 'center',
   },
   photoPlaceholderIcon: {
     fontSize: 28,
-    color: '#9CA3AF',
+    color: '#878685',
     fontWeight: '300',
   },
   photoPlaceholderText: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: '#878685',
     marginTop: 2,
   },
   field: {
@@ -372,23 +372,23 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     borderRadius: 12,
     padding: 14,
     fontSize: 16,
-    backgroundColor: '#F7F8FA',
-    color: '#1A1A2E',
+    backgroundColor: '#F5F4F1',
+    color: '#1A1918',
   },
   textArea: {
     minHeight: 100,
   },
   errorContainer: {
-    backgroundColor: '#FEE2E2',
+    backgroundColor: '#F5E8E3',
     padding: 12,
     borderRadius: 8,
     marginBottom: 16,
@@ -405,24 +405,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 20,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
   },
   chipSelected: {
-    backgroundColor: '#2D8B57',
-    borderColor: '#2D8B57',
+    backgroundColor: '#3D8A5A',
+    borderColor: '#3D8A5A',
   },
   chipText: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#6D6C6A',
   },
   chipTextSelected: {
     color: '#FFFFFF',
   },
   submitButton: {
-    backgroundColor: '#2D8B57',
+    backgroundColor: '#3D8A5A',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',

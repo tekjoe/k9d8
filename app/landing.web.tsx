@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Pressable, Image, ScrollView, useWindowDimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { SEOHead, StructuredData, mobileAppSchema } from '@/src/components/seo';
 
 const MAX_WIDTH = 1200;
 
@@ -49,26 +50,26 @@ function Header() {
             justifyContent: 'space-between',
           }}
         >
-          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E' }}>k9d8</Text>
+          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
           
           {!isMobile && (
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 40 }}>
               <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6B7280' }}>Features</Text>
+                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>Features</Text>
               </Pressable>
               <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6B7280' }}>How it Works</Text>
+                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>How it Works</Text>
               </Pressable>
               <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6B7280' }}>About</Text>
+                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>About</Text>
               </Pressable>
               <Pressable onPress={() => router.push('/(auth)/sign-in')}>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6B7280' }}>Log In</Text>
+                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>Log In</Text>
               </Pressable>
               <Pressable 
                 onPress={() => router.push('/(auth)/sign-up')}
                 style={{ 
-                  backgroundColor: '#6FCF97', 
+                  backgroundColor: '#3D8A5A', 
                   paddingHorizontal: 24, 
                   paddingVertical: 12, 
                   borderRadius: 9999 
@@ -81,7 +82,7 @@ function Header() {
 
           {isMobile && (
             <Pressable onPress={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              <Ionicons name={mobileMenuOpen ? 'close' : 'menu'} size={28} color="#1A1A2E" />
+              <Ionicons name={mobileMenuOpen ? 'close' : 'menu'} size={28} color="#1A1918" />
             </Pressable>
           )}
         </View>
@@ -98,7 +99,7 @@ function Header() {
               paddingHorizontal: 24,
               paddingVertical: 24,
               borderBottomWidth: 1,
-              borderBottomColor: '#E5E7EB',
+              borderBottomColor: '#E5E4E1',
               shadowColor: '#000',
               shadowOffset: { width: 0, height: 4 },
               shadowOpacity: 0.1,
@@ -107,22 +108,22 @@ function Header() {
             }}
           >
             <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>Features</Text>
+              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>Features</Text>
             </Pressable>
             <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>How it Works</Text>
+              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>How it Works</Text>
             </Pressable>
             <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>About</Text>
+              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>About</Text>
             </Pressable>
-            <View style={{ height: 1, backgroundColor: '#E5E7EB', marginVertical: 4 }} />
+            <View style={{ height: 1, backgroundColor: '#E5E4E1', marginVertical: 4 }} />
             <Pressable 
               onPress={() => {
                 setMobileMenuOpen(false);
                 router.push('/(auth)/sign-in');
               }}
             >
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#1A1A2E' }}>Log In</Text>
+              <Text style={{ fontSize: 16, fontWeight: '500', color: '#1A1918' }}>Log In</Text>
             </Pressable>
             <Pressable 
               onPress={() => {
@@ -130,7 +131,7 @@ function Header() {
                 router.push('/(auth)/sign-up');
               }}
               style={{ 
-                backgroundColor: '#6FCF97', 
+                backgroundColor: '#3D8A5A', 
                 paddingVertical: 14, 
                 borderRadius: 12,
                 alignItems: 'center',
@@ -164,30 +165,32 @@ function HeroSection() {
           }}
         >
           <View style={{ flex: isMobile ? undefined : 1, gap: 32, maxWidth: 540 }}>
-            <Text 
-              style={{ 
-                fontSize: isMobile ? 40 : 56, 
-                fontWeight: '700', 
-                color: '#1A1A2E',
+            <Text
+              role="heading"
+              aria-level={1}
+              style={{
+                fontSize: isMobile ? 40 : 56,
+                fontWeight: '700',
+                color: '#1A1918',
                 lineHeight: isMobile ? 48 : 64,
               }}
             >
-              Find the perfect park for your pup
+              Find Dog Parks & Schedule Playdates
             </Text>
             <Text 
               style={{ 
                 fontSize: isMobile ? 16 : 20, 
-                color: '#6B7280',
+                color: '#6D6C6A',
                 lineHeight: isMobile ? 24 : 32,
               }}
             >
-              Connect with local dog owners, discover dog-friendly parks, and make every walk an adventure.
+              Connect with dog owners near you, discover dog-friendly parks, and schedule playdates for your pup.
             </Text>
             <View style={{ flexDirection: isMobile ? 'column' : 'row', gap: 16 }}>
               <Pressable 
                 onPress={() => router.push('/(auth)/sign-in')}
                 style={{ 
-                  backgroundColor: '#6FCF97', 
+                  backgroundColor: '#3D8A5A', 
                   paddingHorizontal: 32, 
                   paddingVertical: 16, 
                   borderRadius: 9999,
@@ -199,26 +202,27 @@ function HeroSection() {
               <Pressable 
                 style={{ 
                   borderWidth: 2, 
-                  borderColor: '#E5E7EB', 
+                  borderColor: '#E5E4E1', 
                   paddingHorizontal: 32, 
                   paddingVertical: 16, 
                   borderRadius: 9999,
                   alignItems: 'center',
                 }}
               >
-                <Text style={{ color: '#1A1A2E', fontWeight: '600', fontSize: 17 }}>See How It Works</Text>
+                <Text style={{ color: '#1A1918', fontWeight: '600', fontSize: 17 }}>See How It Works</Text>
               </Pressable>
             </View>
-            <Text style={{ fontSize: 14, fontWeight: '500', color: '#9CA3AF' }}>
-              Join 10,000+ dog owners already using k9d8
+            <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
+              Join 10,000+ dog owners using the #1 dog playdate app
             </Text>
           </View>
           
           <Image
             source={{ uri: 'https://images.unsplash.com/photo-1720217260818-698d951a438d?w=1080&fit=crop' }}
-            style={{ 
-              width: isMobile ? '100%' : isTablet ? 350 : 500, 
-              height: isMobile ? 280 : isTablet ? 320 : 420, 
+            accessibilityLabel="Dogs playing together at a park"
+            style={{
+              width: isMobile ? '100%' : isTablet ? 350 : 500,
+              height: isMobile ? 280 : isTablet ? 320 : 420,
               borderRadius: 24,
             }}
             resizeMode="cover"
@@ -247,26 +251,26 @@ function FeatureRow({ title, description, placeholder, imageOnLeft = true }: Fea
       style={{ 
         width: isMobile ? '100%' : isTablet ? 300 : 480, 
         height: isMobile ? 220 : isTablet ? 280 : 360, 
-        backgroundColor: '#F7F8FA', 
+        backgroundColor: '#F5F4F1', 
         borderRadius: 24,
         justifyContent: 'center',
         alignItems: 'center',
         flexShrink: 0,
       }}
     >
-      <Text style={{ fontSize: 20, fontWeight: '600', color: '#9CA3AF' }}>{placeholder}</Text>
+      <Text style={{ fontSize: 20, fontWeight: '600', color: '#878685' }}>{placeholder}</Text>
     </View>
   );
 
   const textElement = (
     <View style={{ flex: 1, gap: 20, maxWidth: 440 }}>
-      <Text style={{ fontSize: isMobile ? 28 : 32, fontWeight: '700', color: '#1A1A2E' }}>
+      <Text style={{ fontSize: isMobile ? 28 : 32, fontWeight: '700', color: '#1A1918' }}>
         {title}
       </Text>
       <Text 
         style={{ 
           fontSize: 18, 
-          color: '#6B7280', 
+          color: '#6D6C6A', 
           lineHeight: 28,
         }}
       >
@@ -310,38 +314,40 @@ function FeaturesSection() {
     <View style={{ width: '100%', backgroundColor: '#fff', paddingVertical: isMobile ? 60 : 100 }}>
       <Container style={{ gap: 64 }}>
         <View style={{ alignItems: 'center', gap: 16 }}>
-          <Text 
-            style={{ 
-              fontSize: isMobile ? 28 : 40, 
-              fontWeight: '700', 
-              color: '#1A1A2E', 
-              textAlign: 'center' 
+          <Text
+            role="heading"
+            aria-level={2}
+            style={{
+              fontSize: isMobile ? 28 : 40,
+              fontWeight: '700',
+              color: '#1A1918',
+              textAlign: 'center'
             }}
           >
-            Everything you need for happy adventures
+            Everything You Need for Dog Park Adventures
           </Text>
           <Text 
             style={{ 
               fontSize: 18, 
-              color: '#6B7280', 
+              color: '#6D6C6A', 
               textAlign: 'center',
               maxWidth: 560,
             }}
           >
-            Discover parks, connect with the community, and keep your pup safe and happy
+            Discover dog parks, connect with nearby owners, and schedule playdates
           </Text>
         </View>
         
         <View style={{ gap: 64 }}>
           <FeatureRow
-            title="Find nearby dog parks"
-            description="Browse hundreds of dog-friendly parks in your area. See real-time updates on how many dogs are there, amenities available, and reviews from other owners."
+            title="Find dog parks near you"
+            description="Browse hundreds of dog-friendly parks in your area. See real-time updates on how many dogs are there, amenities available, and reviews from other dog owners."
             placeholder="Map Screenshot"
             imageOnLeft={true}
           />
           <FeatureRow
-            title="Connect with other dog owners"
-            description="See who's at the park right now. Create playdates, join group walks, and build a community of dog lovers in your neighborhood."
+            title="Connect with dog owners nearby"
+            description="See who's at the park right now. Schedule dog playdates, join group walks, and build a community of dog lovers in your neighborhood."
             placeholder="Community Screenshot"
             imageOnLeft={false}
           />
@@ -379,9 +385,9 @@ function BenefitCard({ icon, title, description }: BenefitCardProps) {
         width: isMobile ? '100%' : undefined,
       }}
     >
-      <Ionicons name={icon} size={36} color="#6FCF97" />
-      <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1A2E' }}>{title}</Text>
-      <Text style={{ fontSize: 16, color: '#6B7280', lineHeight: 24 }}>{description}</Text>
+      <Ionicons name={icon} size={36} color="#3D8A5A" />
+      <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918' }}>{title}</Text>
+      <Text style={{ fontSize: 16, color: '#6D6C6A', lineHeight: 24 }}>{description}</Text>
     </View>
   );
 }
@@ -394,12 +400,14 @@ function BenefitsSection() {
   return (
     <View style={{ width: '100%', paddingVertical: isMobile ? 60 : 100 }}>
       <Container style={{ gap: 48 }}>
-        <Text 
-          style={{ 
-            fontSize: isMobile ? 28 : 40, 
-            fontWeight: '700', 
-            color: '#1A1A2E', 
-            textAlign: 'center' 
+        <Text
+          role="heading"
+          aria-level={2}
+          style={{
+            fontSize: isMobile ? 28 : 40,
+            fontWeight: '700',
+            color: '#1A1918',
+            textAlign: 'center'
           }}
         >
           Built for dog owners, by dog owners
@@ -443,8 +451,8 @@ function Stat({ number, label }: StatProps) {
 
   return (
     <View style={{ alignItems: 'center', gap: 8 }}>
-      <Text style={{ fontSize: isMobile ? 32 : 44, fontWeight: '700', color: '#6FCF97' }}>{number}</Text>
-      <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>{label}</Text>
+      <Text style={{ fontSize: isMobile ? 32 : 44, fontWeight: '700', color: '#3D8A5A' }}>{number}</Text>
+      <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>{label}</Text>
     </View>
   );
 }
@@ -463,15 +471,15 @@ function Testimonial({ quote, author }: TestimonialProps) {
     <View 
       style={{ 
         flex: isMobile ? undefined : 1, 
-        backgroundColor: '#F7F8FA', 
+        backgroundColor: '#F5F4F1', 
         borderRadius: 24, 
         padding: 32, 
         gap: 20,
         width: isMobile ? '100%' : undefined,
       }}
     >
-      <Text style={{ fontSize: 17, color: '#1A1A2E', lineHeight: 26 }}>"{quote}"</Text>
-      <Text style={{ fontSize: 14, fontWeight: '600', color: '#6B7280' }}>— {author}</Text>
+      <Text style={{ fontSize: 17, color: '#1A1918', lineHeight: 26 }}>"{quote}"</Text>
+      <Text style={{ fontSize: 14, fontWeight: '600', color: '#6D6C6A' }}>— {author}</Text>
     </View>
   );
 }
@@ -484,12 +492,14 @@ function SocialProofSection() {
   return (
     <View style={{ width: '100%', backgroundColor: '#fff', paddingVertical: isMobile ? 60 : 100 }}>
       <Container style={{ gap: 48 }}>
-        <Text 
-          style={{ 
-            fontSize: isMobile ? 28 : 40, 
-            fontWeight: '700', 
-            color: '#1A1A2E', 
-            textAlign: 'center' 
+        <Text
+          role="heading"
+          aria-level={2}
+          style={{
+            fontSize: isMobile ? 28 : 40,
+            fontWeight: '700',
+            color: '#1A1918',
+            textAlign: 'center'
           }}
         >
           Loved by dog owners everywhere
@@ -543,7 +553,7 @@ function FinalCTASection() {
       <Container>
         <View 
           style={{ 
-            backgroundColor: '#6FCF97', 
+            backgroundColor: '#3D8A5A', 
             borderRadius: 24, 
             padding: isMobile ? 40 : 64, 
             alignItems: 'center', 
@@ -580,7 +590,7 @@ function FinalCTASection() {
                 alignItems: 'center',
               }}
             >
-              <Text style={{ color: '#6FCF97', fontWeight: '600', fontSize: 17 }}>Get Started Free</Text>
+              <Text style={{ color: '#3D8A5A', fontWeight: '600', fontSize: 17 }}>Get Started Free</Text>
             </Pressable>
             <Pressable 
               style={{ 
@@ -620,35 +630,35 @@ function Footer() {
           }}
         >
           <View style={{ gap: 16, maxWidth: 280 }}>
-            <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E' }}>k9d8</Text>
-            <Text style={{ fontSize: 15, color: '#6B7280', lineHeight: 24 }}>
+            <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
+            <Text style={{ fontSize: 15, color: '#6D6C6A', lineHeight: 24 }}>
               Connecting dogs and their humans to the best parks and communities.
             </Text>
           </View>
           
           <View style={{ flexDirection: 'row', gap: isMobile ? 40 : 64, flexWrap: 'wrap' }}>
             <View style={{ gap: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>Product</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Features</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Pricing</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Updates</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Product</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Features</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Pricing</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Updates</Text>
             </View>
             <View style={{ gap: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>Company</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>About</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Blog</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Careers</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Company</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>About</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Blog</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Careers</Text>
             </View>
             <View style={{ gap: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>Resources</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Help Center</Text>
-              <Text style={{ fontSize: 14, color: '#6B7280' }}>Community</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Resources</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Help Center</Text>
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Community</Text>
             </View>
           </View>
         </View>
       </Container>
       
-      <View style={{ borderTopWidth: 1, borderTopColor: '#E5E7EB' }}>
+      <View style={{ borderTopWidth: 1, borderTopColor: '#E5E4E1' }}>
         <Container>
           <View 
             style={{ 
@@ -659,10 +669,10 @@ function Footer() {
               gap: isMobile ? 16 : 0,
             }}
           >
-            <Text style={{ fontSize: 14, color: '#9CA3AF' }}>© 2026 k9d8. All rights reserved.</Text>
+            <Text style={{ fontSize: 14, color: '#878685' }}>© 2026 k9d8. All rights reserved.</Text>
             <View style={{ flexDirection: 'row', gap: 32 }}>
-              <Text style={{ fontSize: 14, color: '#9CA3AF' }}>Privacy Policy</Text>
-              <Text style={{ fontSize: 14, color: '#9CA3AF' }}>Terms of Service</Text>
+              <Text style={{ fontSize: 14, color: '#878685' }}>Privacy Policy</Text>
+              <Text style={{ fontSize: 14, color: '#878685' }}>Terms of Service</Text>
             </View>
           </View>
         </Container>
@@ -674,17 +684,28 @@ function Footer() {
 // Main Landing Page
 export default function LandingPage() {
   return (
-    <ScrollView 
-      style={{ flex: 1, backgroundColor: '#F7F8FA' }}
-      contentContainerStyle={{ minHeight: '100%' }}
-    >
-      <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <BenefitsSection />
-      <SocialProofSection />
-      <FinalCTASection />
-      <Footer />
-    </ScrollView>
+    <>
+      <SEOHead
+        title="Dog Playdate App | Find Dog Parks & Connect with Owners"
+        description="Connect with dog owners and schedule playdates with k9d8. Find nearby dog parks, see active dogs in your area, and message other owners. Free for iOS & Android."
+        url="/landing"
+        rawTitle
+      />
+      <StructuredData data={mobileAppSchema()} />
+      <ScrollView
+        style={{ flex: 1, backgroundColor: '#F5F4F1' }}
+        contentContainerStyle={{ minHeight: '100%' }}
+      >
+        <Header />
+        <View role="main">
+          <HeroSection />
+          <FeaturesSection />
+          <BenefitsSection />
+          <SocialProofSection />
+          <FinalCTASection />
+        </View>
+        <Footer />
+      </ScrollView>
+    </>
   );
 }

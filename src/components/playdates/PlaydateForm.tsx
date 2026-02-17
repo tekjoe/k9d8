@@ -270,7 +270,7 @@ export function PlaydateForm({
               <TextInput
                 style={styles.searchInput}
                 placeholder="Search parks..."
-                placeholderTextColor="#9CA3AF"
+                placeholderTextColor="#878685"
                 value={parkSearch}
                 onChangeText={setParkSearch}
                 autoCapitalize="none"
@@ -371,7 +371,7 @@ export function PlaydateForm({
             onPress={() => isWeb ? openWebPicker('starts_at') : setShowStartPicker(true)}
           >
             <View style={styles.dateTimeButtonRow}>
-              <Ionicons name="calendar-outline" size={18} color="#6B7280" />
+              <Ionicons name="calendar-outline" size={18} color="#6D6C6A" />
               <Text style={styles.pickerButtonText}>
                 {format(startsAt, 'EEE, MMM d, yyyy  \u00B7  h:mm a')}
               </Text>
@@ -404,7 +404,7 @@ export function PlaydateForm({
             onPress={() => isWeb ? openWebPicker('ends_at') : setShowEndPicker(true)}
           >
             <View style={styles.dateTimeButtonRow}>
-              <Ionicons name="time-outline" size={18} color="#6B7280" />
+              <Ionicons name="time-outline" size={18} color="#6D6C6A" />
               <Text style={styles.pickerButtonText}>
                 {format(endsAt, 'EEE, MMM d, yyyy  \u00B7  h:mm a')}
               </Text>
@@ -553,20 +553,20 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     borderRadius: 12,
     padding: 14,
     fontSize: 16,
-    backgroundColor: '#F7F8FA',
-    color: '#1A1A2E',
+    backgroundColor: '#F5F4F1',
+    color: '#1A1918',
   },
   inputError: {
-    borderColor: '#EF4444',
+    borderColor: '#B5725E',
   },
   textArea: {
     minHeight: 100,
@@ -581,18 +581,18 @@ const styles = StyleSheet.create({
   },
   pickerButtonText: {
     fontSize: 16,
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   placeholderText: {
-    color: '#9CA3AF',
+    color: '#878685',
   },
   errorText: {
-    color: '#EF4444',
+    color: '#B5725E',
     fontSize: 12,
     marginTop: 4,
   },
   submitButton: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
@@ -614,15 +614,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
   },
   searchInput: {
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 10,
     fontSize: 15,
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   modalHeader: {
     flexDirection: 'row',
@@ -630,38 +630,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   modalClose: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#4A90D9',
+    color: '#3D8A5A',
   },
   parkOption: {
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: '#EDECEA',
   },
   parkOptionSelected: {
     backgroundColor: '#EBF5FF',
   },
   parkOptionText: {
     fontSize: 16,
-    color: '#1A1A2E',
+    color: '#1A1918',
     fontWeight: '500',
   },
   parkOptionTextSelected: {
-    color: '#4A90D9',
+    color: '#3D8A5A',
     fontWeight: '600',
   },
   parkOptionAddress: {
     fontSize: 13,
-    color: '#9CA3AF',
+    color: '#878685',
     marginTop: 2,
   },
   dogGrid: {
@@ -672,7 +672,7 @@ const styles = StyleSheet.create({
   dogChip: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
     borderRadius: 12,
     paddingVertical: 10,
     paddingHorizontal: 14,
@@ -681,38 +681,38 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   dogChipSelected: {
-    backgroundColor: '#F0FDF4',
-    borderColor: '#6FCF97',
+    backgroundColor: '#E8F0E8',
+    borderColor: '#3D8A5A',
   },
   dogCheckbox: {
     width: 22,
     height: 22,
     borderRadius: 6,
     borderWidth: 2,
-    borderColor: '#D1D5DB',
+    borderColor: '#D1D0CD',
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
   dogCheckboxSelected: {
-    backgroundColor: '#6FCF97',
-    borderColor: '#6FCF97',
+    backgroundColor: '#3D8A5A',
+    borderColor: '#3D8A5A',
   },
   dogChipName: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   dogChipNameSelected: {
     color: '#15803D',
   },
   dogChipBreed: {
     fontSize: 13,
-    color: '#9CA3AF',
+    color: '#878685',
   },
   emptyText: {
     textAlign: 'center',
-    color: '#9CA3AF',
+    color: '#878685',
     padding: 32,
     fontSize: 16,
   },
@@ -731,7 +731,7 @@ const styles = StyleSheet.create({
   webPickerSectionLabel: {
     fontSize: 13,
     fontWeight: '600',
-    color: '#6B7280',
+    color: '#6D6C6A',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
     marginTop: 16,
@@ -750,7 +750,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 68,
     borderRadius: 14,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -758,25 +758,25 @@ const styles = StyleSheet.create({
   },
   webPickerDayChipSelected: {
     backgroundColor: '#EBF5FF',
-    borderColor: '#4A90D9',
+    borderColor: '#3D8A5A',
   },
   webPickerDayLabel: {
     fontSize: 12,
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginBottom: 4,
   },
   webPickerDayLabelSelected: {
-    color: '#4A90D9',
+    color: '#3D8A5A',
     fontWeight: '600',
   },
   webPickerDayNum: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   webPickerDayNumSelected: {
-    color: '#4A90D9',
+    color: '#3D8A5A',
   },
   webPickerTimeScroll: {
     maxHeight: 220,
@@ -792,17 +792,17 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 10,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
     minWidth: '22%',
     alignItems: 'center',
   },
   webPickerTimeChipSelected: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
   },
   webPickerTimeLabel: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   webPickerTimeLabelSelected: {
     color: '#FFFFFF',

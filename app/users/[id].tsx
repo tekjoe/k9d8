@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
-  Alert,
   Image,
   Pressable,
   ScrollView,
@@ -12,129 +11,33 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
-import { useAuth } from '@/src/hooks/useAuth';
-import { supabase } from '@/src/lib/supabase';
-import { getDogsByOwner } from '@/src/services/dogs';
-import {
-  getFriendshipStatus,
-  sendFriendRequest,
-  acceptFriendRequest,
-  removeFriend,
-} from '@/src/services/friends';
-import { getOrCreateConversation } from '@/src/services/messages';
-import type { Profile, Dog, Friendship } from '@/src/types/database';
+import { useUserProfile } from '@/src/hooks/useUserProfile';
 
 export default function UserProfileScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { session } = useAuth();
-  const userId = session?.user?.id;
 
-  const [profile, setProfile] = useState<Profile | null>(null);
-  const [dogs, setDogs] = useState<Dog[]>([]);
-  const [friendship, setFriendship] = useState<Friendship | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [actionLoading, setActionLoading] = useState(false);
-
-  const loadProfile = useCallback(async () => {
-    if (!id) return;
-    try {
-      const [profileRes, dogsRes] = await Promise.all([
-        supabase.from('profiles').select('*').eq('id', id).single(),
-        getDogsByOwner(id),
-      ]);
-      if (profileRes.error) throw profileRes.error;
-      setProfile(profileRes.data as Profile);
-      setDogs(dogsRes);
-
-      if (userId && userId !== id) {
-        const fs = await getFriendshipStatus(userId, id);
-        setFriendship(fs);
-      }
-    } catch (err) {
-      console.error('Failed to load user profile:', err);
-    } finally {
-      setLoading(false);
-    }
-  }, [id, userId]);
-
-  useEffect(() => {
-    loadProfile();
-  }, [loadProfile]);
-
-  const handleBack = useCallback(() => {
-    router.canGoBack() ? router.back() : router.replace('/');
-  }, [router]);
-
-  const handleSendRequest = useCallback(async () => {
-    if (!userId || !id) return;
-    setActionLoading(true);
-    try {
-      const fs = await sendFriendRequest(userId, id);
-      setFriendship(fs);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to send request';
-      Alert.alert('Error', message);
-    } finally {
-      setActionLoading(false);
-    }
-  }, [userId, id]);
-
-  const handleAccept = useCallback(async () => {
-    if (!friendship) return;
-    setActionLoading(true);
-    try {
-      await acceptFriendRequest(friendship.id);
-      setFriendship({ ...friendship, status: 'accepted' });
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to accept request';
-      Alert.alert('Error', message);
-    } finally {
-      setActionLoading(false);
-    }
-  }, [friendship]);
-
-  const handleRemoveFriend = useCallback(async () => {
-    if (!friendship) return;
-    Alert.alert('Remove Friend', 'Are you sure you want to unfriend this person?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Remove',
-        style: 'destructive',
-        onPress: async () => {
-          setActionLoading(true);
-          try {
-            await removeFriend(friendship.id);
-            setFriendship(null);
-          } catch (err) {
-            const message = err instanceof Error ? err.message : 'Failed to remove friend';
-            Alert.alert('Error', message);
-          } finally {
-            setActionLoading(false);
-          }
-        },
-      },
-    ]);
-  }, [friendship]);
-
-  const handleMessage = useCallback(async () => {
-    if (!id) return;
-    setActionLoading(true);
-    try {
-      const conversationId = await getOrCreateConversation(id);
-      router.push(`/messages/${conversationId}`);
-    } catch {
-      Alert.alert('Error', 'Could not start conversation. Please try again.');
-    } finally {
-      setActionLoading(false);
-    }
-  }, [id, router]);
+  const {
+    profile,
+    dogs,
+    loading,
+    actionLoading,
+    isOwnProfile,
+    isFriend,
+    isPending,
+    isSentByMe,
+    isSentToMe,
+    handleSendRequest,
+    handleAccept,
+    handleRemoveFriend,
+    handleMessage,
+  } = useUserProfile(id);
 
   if (loading) {
     return (
       <View className="flex-1 justify-center items-center bg-background">
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -147,18 +50,12 @@ export default function UserProfileScreen() {
     );
   }
 
-  const isOwnProfile = userId === id;
-  const isPending = friendship?.status === 'pending';
-  const isSentByMe = isPending && friendship?.requester_id === userId;
-  const isSentToMe = isPending && friendship?.addressee_id === userId;
-  const isFriend = friendship?.status === 'accepted';
-
   return (
     <View className="flex-1 bg-background">
       {/* Hero */}
       <View className="relative bg-secondary/20 h-[180px] justify-end items-center">
         <Pressable
-          onPress={handleBack}
+          onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
           className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
           style={{ top: insets.top + 8 }}
         >
@@ -191,10 +88,10 @@ export default function UserProfileScreen() {
         </View>
 
         {/* Action Buttons */}
-        {!isOwnProfile && userId && (
+        {!isOwnProfile && (
           <View className="px-5 mb-6 gap-3">
             {/* Friendship button */}
-            {!friendship && (
+            {!isPending && !isFriend && (
               <Pressable
                 onPress={handleSendRequest}
                 disabled={actionLoading}
@@ -209,7 +106,7 @@ export default function UserProfileScreen() {
 
             {isSentByMe && (
               <View className="flex-row items-center justify-center bg-border py-3.5 rounded-xl">
-                <Ionicons name="time-outline" size={20} color="#6B7280" />
+                <Ionicons name="time-outline" size={20} color="#6D6C6A" />
                 <Text className="text-text-secondary text-[15px] font-semibold ml-2">
                   Request Sent
                 </Text>
@@ -246,7 +143,7 @@ export default function UserProfileScreen() {
                   disabled={actionLoading}
                   className="flex-row items-center justify-center bg-white border border-border py-3.5 rounded-xl"
                 >
-                  <Ionicons name="person-remove-outline" size={18} color="#6B7280" />
+                  <Ionicons name="person-remove-outline" size={18} color="#6D6C6A" />
                   <Text className="text-text-secondary text-[15px] font-medium ml-2">
                     Remove Friend
                   </Text>
@@ -261,7 +158,7 @@ export default function UserProfileScreen() {
                 disabled={actionLoading}
                 className="flex-row items-center justify-center bg-white border border-secondary py-3.5 rounded-xl"
               >
-                <Ionicons name="chatbubble-outline" size={20} color="#6FCF97" />
+                <Ionicons name="chatbubble-outline" size={20} color="#3D8A5A" />
                 <Text className="text-secondary text-[15px] font-semibold ml-2">
                   Message
                 </Text>
@@ -299,7 +196,7 @@ export default function UserProfileScreen() {
                       .join(', ') || 'Mixed breed'}
                   </Text>
                 </View>
-                <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+                <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
               </Pressable>
             ))}
           </View>

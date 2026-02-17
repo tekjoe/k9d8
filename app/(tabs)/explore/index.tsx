@@ -156,7 +156,7 @@ export default function ExploreScreen() {
   if (locationLoading) {
     return (
       <View className="flex-1 justify-center items-center bg-background">
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
         <Text className="mt-3 text-base text-text-secondary">
           Getting your location...
         </Text>
@@ -178,13 +178,13 @@ export default function ExploreScreen() {
           <Ionicons
             name="search"
             size={20}
-            color="#6B7280"
+            color="#6D6C6A"
             style={{ marginRight: 12 }}
           />
           <TextInput
             className="flex-1 text-base text-text"
             placeholder="Search for a park or address..."
-            placeholderTextColor="#6B7280"
+            placeholderTextColor="#6D6C6A"
             value={searchQuery}
             onChangeText={handleSearchChange}
             onFocus={() => {
@@ -199,7 +199,7 @@ export default function ExploreScreen() {
                 setShowSearchResults(false);
               }}
             >
-              <Ionicons name="close-circle" size={20} color="#9CA3AF" />
+              <Ionicons name="close-circle" size={20} color="#878685" />
             </Pressable>
           )}
         </View>
@@ -217,14 +217,14 @@ export default function ExploreScreen() {
                 className="flex-row items-center px-4 py-3"
                 style={
                   index < searchResults.length - 1
-                    ? { borderBottomWidth: 1, borderBottomColor: '#F3F4F6' }
+                    ? { borderBottomWidth: 1, borderBottomColor: '#EDECEA' }
                     : undefined
                 }
               >
                 <Ionicons
                   name="location-outline"
                   size={18}
-                  color="#6B7280"
+                  color="#6D6C6A"
                   style={{ marginRight: 12 }}
                 />
                 <View className="flex-1">
@@ -297,7 +297,7 @@ export default function ExploreScreen() {
             style={styles.cardShadow}
           >
             <View className="w-20 h-20 rounded-xl mr-4 bg-[#F0F7F4] items-center justify-center">
-              <Ionicons name="leaf-outline" size={32} color="#2D8B57" />
+              <Ionicons name="leaf-outline" size={32} color="#3D8A5A" />
             </View>
             <View className="flex-1 justify-center">
               <Text
@@ -313,8 +313,8 @@ export default function ExploreScreen() {
                 {selectedPark.address || 'Unknown address'}
               </Text>
               <View className="flex-row items-center">
-                <Ionicons name="paw" size={14} color="#2D8B57" />
-                <Text className="text-sm font-semibold ml-1.5" style={{ color: '#2D8B57' }}>
+                <Ionicons name="paw" size={14} color="#3D8A5A" />
+                <Text className="text-sm font-semibold ml-1.5" style={{ color: '#3D8A5A' }}>
                   {pupCount} {pupCount === 1 ? 'pup' : 'pups'} here now
                 </Text>
                 {distanceKm !== null && (
@@ -324,7 +324,7 @@ export default function ExploreScreen() {
                 )}
               </View>
             </View>
-            <Ionicons name="chevron-forward" size={24} color="#9CA3AF" />
+            <Ionicons name="chevron-forward" size={24} color="#878685" />
           </Pressable>
         </View>
       )}
@@ -335,7 +335,7 @@ export default function ExploreScreen() {
           className="absolute top-24 self-center bg-white px-4 py-2.5 rounded-full shadow-lg"
           style={styles.loadingShadow}
         >
-          <ActivityIndicator size="small" color="#4A90D9" />
+          <ActivityIndicator size="small" color="#3D8A5A" />
         </View>
       )}
 
@@ -386,7 +386,7 @@ export default function ExploreScreen() {
                         onPress={() => toggleDog(dog.id)}
                         className={`flex-row items-center p-3 rounded-xl mb-2.5 border-2 ${
                           isSelected
-                            ? 'border-[#2D8B57] bg-[#F0FDF4]'
+                            ? 'border-[#3D8A5A] bg-[#E8F0E8]'
                             : 'border-transparent bg-background'
                         }`}
                       >
@@ -404,7 +404,7 @@ export default function ExploreScreen() {
                         <View
                           className={`w-6 h-6 rounded-md justify-center items-center border-2 ${
                             isSelected
-                              ? 'bg-[#2D8B57] border-[#2D8B57]'
+                              ? 'bg-[#3D8A5A] border-[#3D8A5A]'
                               : 'bg-white border-border'
                           }`}
                         >
@@ -433,7 +433,7 @@ export default function ExploreScreen() {
                       onPress={() => setSelectedDuration(duration.value)}
                       className={`flex-1 min-w-[45%] py-3.5 px-4 rounded-xl items-center border-2 ${
                         selectedDuration === duration.value
-                          ? 'bg-[#2D8B57] border-[#2D8B57]'
+                          ? 'bg-[#3D8A5A] border-[#3D8A5A]'
                           : 'bg-background border-border'
                       }`}
                     >

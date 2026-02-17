@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useMemo } from 'react';
+import { SEOHead } from '@/src/components/seo';
 import { View, Text, TextInput, Pressable, Image, ActivityIndicator, ScrollView, useWindowDimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -38,47 +39,58 @@ function formatDistance(km: number): string {
   return `${mi.toFixed(1)} mi`;
 }
 
-function formatTime(dateStr: string): string {
-  const date = new Date(dateStr);
-  return format(date, 'h:mm a');
-}
-
 interface PlaydateCardProps {
   playdate: PlayDate;
   onPress: () => void;
-  compact?: boolean;
+  accentColor?: string;
 }
 
-function PlaydateCard({ playdate, onPress, compact }: PlaydateCardProps) {
+function PlaydateCard({ playdate, onPress, accentColor = '#3D8A5A' }: PlaydateCardProps) {
+  const date = new Date(playdate.starts_at);
+  const timeValue = format(date, 'h:mm');
+  const timePeriod = format(date, 'a').toUpperCase();
+
   return (
     <Pressable
       onPress={onPress}
       style={{
-        backgroundColor: '#fff',
+        flexDirection: 'row',
+        backgroundColor: '#FFFFFF',
         borderRadius: 12,
-        padding: compact ? 12 : 16,
-        borderWidth: 1,
-        borderColor: '#E5E7EB',
+        overflow: 'hidden',
+        shadowColor: '#1A1918',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.03,
+        shadowRadius: 12,
       }}
     >
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-        <Text style={{ fontSize: compact ? 13 : 14, fontWeight: '600', color: '#1A1A2E' }}>
-          {formatTime(playdate.starts_at)}
-        </Text>
-        <View style={{ backgroundColor: 'rgba(111, 207, 151, 0.1)', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4 }}>
-          <Text style={{ fontSize: 11, color: '#6FCF97', fontWeight: '500' }}>
-            Every 1 Owner
+      {/* Accent Bar */}
+      <View style={{ width: 4, backgroundColor: accentColor }} />
+
+      {/* Content */}
+      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingVertical: 14, paddingHorizontal: 16, gap: 14 }}>
+        {/* Time Column */}
+        <View style={{ width: 48, gap: 2 }}>
+          <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>
+            {timeValue}
+          </Text>
+          <Text style={{ fontSize: 10, fontWeight: '500', color: '#878685' }}>
+            {timePeriod}
           </Text>
         </View>
-      </View>
-      <Text style={{ fontSize: compact ? 15 : 16, fontWeight: '600', color: '#1A1A2E', marginBottom: 4 }} numberOfLines={1}>
-        {playdate.title}
-      </Text>
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <Ionicons name="location-outline" size={14} color="#6B7280" />
-        <Text style={{ fontSize: compact ? 13 : 14, color: '#6B7280', marginLeft: 4 }} numberOfLines={1}>
-          {playdate.park?.name || 'Unknown Park'}
-        </Text>
+
+        {/* Divider */}
+        <View style={{ width: 1, height: 36, backgroundColor: '#E5E4E1' }} />
+
+        {/* Info Column */}
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text style={{ fontSize: 15, fontWeight: '500', color: '#1A1918' }} numberOfLines={1}>
+            {playdate.title}
+          </Text>
+          <Text style={{ fontSize: 12, color: '#878685' }} numberOfLines={1}>
+            {playdate.park?.name || 'Unknown Park'}
+          </Text>
+        </View>
       </View>
     </Pressable>
   );
@@ -109,12 +121,12 @@ function NearbyPupsSection({ onPupPress }: NearbyPupsSectionProps) {
               width: 48, 
               height: 48, 
               borderRadius: 24, 
-              backgroundColor: '#E5E7EB', 
+              backgroundColor: '#E5E4E1', 
               alignItems: 'center', 
               justifyContent: 'center' 
             }}
           >
-            <ActivityIndicator size="small" color="#9CA3AF" />
+            <ActivityIndicator size="small" color="#878685" />
           </View>
         ))}
       </View>
@@ -134,7 +146,7 @@ function NearbyPupsSection({ onPupPress }: NearbyPupsSectionProps) {
   if (uniquePups.length === 0) {
     return (
       <View style={{ paddingVertical: 16, alignItems: 'center' }}>
-        <Text style={{ fontSize: 14, color: '#6B7280' }}>No pups checked in nearby</Text>
+        <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups checked in nearby</Text>
       </View>
     );
   }
@@ -161,7 +173,7 @@ function NearbyPupsSection({ onPupPress }: NearbyPupsSectionProps) {
               height: 48,
               borderRadius: 24,
               borderWidth: 2,
-              borderColor: '#E5E7EB',
+              borderColor: '#E5E4E1',
             }}
             resizeMode="cover"
           />
@@ -169,7 +181,7 @@ function NearbyPupsSection({ onPupPress }: NearbyPupsSectionProps) {
             style={{
               fontSize: 11,
               fontWeight: '500',
-              color: '#6B7280',
+              color: '#6D6C6A',
               marginTop: 4,
               textAlign: 'center',
             }}
@@ -192,7 +204,7 @@ function ParkCard({ park, pupCount, distanceKm, onPress, compact }: ParkCardProp
         borderRadius: 12,
         overflow: 'hidden',
         borderWidth: 1,
-        borderColor: '#E5E7EB',
+        borderColor: '#E5E4E1',
       }}
     >
       <Image
@@ -205,23 +217,23 @@ function ParkCard({ park, pupCount, distanceKm, onPress, compact }: ParkCardProp
       />
       <View style={{ padding: compact ? 12 : 16 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4 }}>
-          <Text style={{ fontSize: compact ? 15 : 16, fontWeight: '700', color: '#1A1A2E', flex: 1, marginRight: 8 }} numberOfLines={1}>
+          <Text style={{ fontSize: compact ? 15 : 16, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }} numberOfLines={1}>
             {park.name}
           </Text>
           {distanceKm !== undefined && (
-            <Text style={{ fontSize: compact ? 12 : 14, color: '#6B7280' }}>
+            <Text style={{ fontSize: compact ? 12 : 14, color: '#6D6C6A' }}>
               {formatDistance(distanceKm)}
             </Text>
           )}
         </View>
         {park.address && (
-          <Text style={{ fontSize: 12, color: '#6B7280', marginBottom: 8 }} numberOfLines={1}>
+          <Text style={{ fontSize: 12, color: '#6D6C6A', marginBottom: 8 }} numberOfLines={1}>
             {park.address}
           </Text>
         )}
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Ionicons name="paw" size={14} color="#6FCF97" />
-          <Text style={{ fontSize: compact ? 13 : 14, color: '#6FCF97', fontWeight: '600', marginLeft: 6 }}>
+          <Ionicons name="paw" size={14} color="#3D8A5A" />
+          <Text style={{ fontSize: compact ? 13 : 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>
             {pupCount} {pupCount === 1 ? 'pup' : 'pups'} here now
           </Text>
         </View>
@@ -300,8 +312,9 @@ export default function DesktopHomeScreen() {
       .slice(0, 5);
   }, [parks, location, searchQuery]);
 
-  // Nearby parks - always shows 2 closest parks (not affected by search)
-  const nearbyParks = useMemo(() => {
+  // All parks within 10 miles (~16.09 km), sorted by distance
+  const parksWithinRadius = useMemo(() => {
+    const TEN_MILES_KM = 16.09;
     return parks
       .map((park) => ({
         park,
@@ -309,21 +322,26 @@ export default function DesktopHomeScreen() {
           ? getDistanceKm(location.latitude, location.longitude, park.latitude, park.longitude)
           : undefined,
       }))
+      .filter((p) => p.distanceKm === undefined || p.distanceKm <= TEN_MILES_KM)
       .sort((a, b) => {
         if (a.distanceKm === undefined && b.distanceKm === undefined) return 0;
         if (a.distanceKm === undefined) return 1;
         if (b.distanceKm === undefined) return -1;
         return a.distanceKm - b.distanceKm;
-      })
-      .slice(0, 2);
+      });
   }, [parks, location]);
+
+  // Nearby parks - shows top 2 closest parks (not affected by search)
+  const nearbyParks = parksWithinRadius.slice(0, 2);
 
   const showSearchResults = isSearchFocused && searchQuery.trim().length > 0;
 
   const isLoading = parksLoading || playdatesLoading;
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="Home" description="Your k9d8 dashboard. See nearby parks, upcoming playdates, and active dogs in your area." url="/" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {/* Left Sidebar - Hidden on mobile */}
       {showSidebar && <DesktopSidebar />}
 
@@ -334,7 +352,7 @@ export default function DesktopHomeScreen() {
           style={{ 
             backgroundColor: '#fff', 
             borderBottomWidth: 1, 
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
             paddingHorizontal: isMobile ? 20 : 40,
             paddingVertical: isMobile ? 16 : 32,
             zIndex: 100,
@@ -350,10 +368,7 @@ export default function DesktopHomeScreen() {
           >
             {/* Left: Greeting */}
             <View>
-              <Text style={{ fontSize: 12, color: '#6B7280', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                GOOD MORNING 👋
-              </Text>
-              <Text style={{ fontSize: isMobile ? 24 : 28, fontWeight: '700', color: '#1A1A2E' }}>
+              <Text style={{ fontSize: isMobile ? 24 : 28, fontWeight: '700', color: '#1A1918' }}>
                 Hi, {userName}
               </Text>
             </View>
@@ -366,13 +381,13 @@ export default function DesktopHomeScreen() {
                   style={{ 
                     flexDirection: 'row', 
                     alignItems: 'center', 
-                    backgroundColor: '#F7F8FA', 
+                    backgroundColor: '#F5F4F1', 
                     borderRadius: 8, 
                     paddingHorizontal: 16, 
                     paddingVertical: 10,
                   }}
                 >
-                  <Ionicons name="search" size={20} color="#6B7280" />
+                  <Ionicons name="search" size={20} color="#6D6C6A" />
                   <TextInput
                     value={searchQuery}
                     onChangeText={setSearchQuery}
@@ -382,12 +397,12 @@ export default function DesktopHomeScreen() {
                       setTimeout(() => setIsSearchFocused(false), 200);
                     }}
                     placeholder="Search dog parks..."
-                    placeholderTextColor="#9CA3AF"
-                    style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1A2E', outlineWidth: 0 } as any}
+                    placeholderTextColor="#878685"
+                    style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1918', outlineWidth: 0 } as any}
                   />
                   {searchQuery.length > 0 && (
                     <Pressable onPress={() => setSearchQuery('')} style={{ padding: 4 }}>
-                      <Ionicons name="close-circle" size={18} color="#9CA3AF" />
+                      <Ionicons name="close-circle" size={18} color="#878685" />
                     </Pressable>
                   )}
                 </View>
@@ -410,7 +425,7 @@ export default function DesktopHomeScreen() {
                       zIndex: 1000,
                       overflow: 'hidden',
                       borderWidth: 1,
-                      borderColor: '#E5E7EB',
+                      borderColor: '#E5E4E1',
                     }}
                   >
                     {searchResults.length > 0 ? (
@@ -426,9 +441,9 @@ export default function DesktopHomeScreen() {
                             flexDirection: 'row',
                             alignItems: 'center',
                             padding: 12,
-                            backgroundColor: pressed ? '#F7F8FA' : '#fff',
+                            backgroundColor: pressed ? '#F5F4F1' : '#fff',
                             borderBottomWidth: index < searchResults.length - 1 ? 1 : 0,
-                            borderBottomColor: '#F3F4F6',
+                            borderBottomColor: '#EDECEA',
                           })}
                         >
                           <View
@@ -436,26 +451,26 @@ export default function DesktopHomeScreen() {
                               width: 40,
                               height: 40,
                               borderRadius: 8,
-                              backgroundColor: '#F3F4F6',
+                              backgroundColor: '#EDECEA',
                               alignItems: 'center',
                               justifyContent: 'center',
                               marginRight: 12,
                             }}
                           >
-                            <Ionicons name="location" size={20} color="#4A90D9" />
+                            <Ionicons name="location" size={20} color="#3D8A5A" />
                           </View>
                           <View style={{ flex: 1 }}>
-                            <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }} numberOfLines={1}>
+                            <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }} numberOfLines={1}>
                               {park.name}
                             </Text>
                             {park.address && (
-                              <Text style={{ fontSize: 12, color: '#6B7280', marginTop: 2 }} numberOfLines={1}>
+                              <Text style={{ fontSize: 12, color: '#6D6C6A', marginTop: 2 }} numberOfLines={1}>
                                 {park.address}
                               </Text>
                             )}
                           </View>
                           {distanceKm !== undefined && (
-                            <Text style={{ fontSize: 12, color: '#6B7280', marginLeft: 8 }}>
+                            <Text style={{ fontSize: 12, color: '#6D6C6A', marginLeft: 8 }}>
                               {formatDistance(distanceKm)}
                             </Text>
                           )}
@@ -463,7 +478,7 @@ export default function DesktopHomeScreen() {
                       ))
                     ) : (
                       <View style={{ padding: 16, alignItems: 'center' }}>
-                        <Text style={{ fontSize: 14, color: '#6B7280' }}>
+                        <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
                           No parks found for "{searchQuery}"
                         </Text>
                       </View>
@@ -480,10 +495,10 @@ export default function DesktopHomeScreen() {
                   alignItems: 'center', 
                   justifyContent: 'center', 
                   borderRadius: 8,
-                  backgroundColor: '#F7F8FA',
+                  backgroundColor: '#F5F4F1',
                 }}
               >
-                <Ionicons name="notifications-outline" size={24} color="#1A1A2E" />
+                <Ionicons name="notifications-outline" size={24} color="#1A1918" />
               </Pressable>
             </View>
           </View>
@@ -501,33 +516,28 @@ export default function DesktopHomeScreen() {
           >
             {isLoading ? (
               <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 80 }}>
-                <ActivityIndicator size="large" color="#4A90D9" />
+                <ActivityIndicator size="large" color="#3D8A5A" />
               </View>
             ) : (
               <View style={{ maxWidth: 800 }}>
                 {/* Upcoming Play Dates */}
                 <View style={{ marginBottom: isMobile ? 24 : 32 }}>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-                    <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '700', color: '#1A1A2E' }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', letterSpacing: -0.2 }}>
                       Upcoming Play Dates
                     </Text>
                     <Pressable onPress={() => router.push('/explore')}>
-                      <Text style={{ fontSize: 14, color: '#4A90D9', fontWeight: '600' }}>See all</Text>
+                      <Text style={{ fontSize: 13, color: '#3D8A5A', fontWeight: '500' }}>See all</Text>
                     </Pressable>
                   </View>
                   
-                  <View 
-                    style={{ 
-                      flexDirection: isMobile ? 'column' : 'row', 
-                      gap: 16,
-                    }}
-                  >
-                    {upcomingPlaydates.map((playdate) => (
+                  <View style={{ flexDirection: isMobile ? 'column' : 'row', gap: 12 }}>
+                    {upcomingPlaydates.map((playdate, index) => (
                       <View key={playdate.id} style={{ flex: isMobile ? undefined : 1 }}>
                         <PlaydateCard
                           playdate={playdate}
                           onPress={() => handlePlaydatePress(playdate.id)}
-                          compact={isMobile}
+                          accentColor={index % 2 === 0 ? '#3D8A5A' : '#D89575'}
                         />
                       </View>
                     ))}
@@ -535,7 +545,7 @@ export default function DesktopHomeScreen() {
                   
                   {upcomingPlaydates.length === 0 && (
                     <View style={{ backgroundColor: '#fff', borderRadius: 12, padding: 32, alignItems: 'center' }}>
-                      <Text style={{ color: '#6B7280', textAlign: 'center' }}>
+                      <Text style={{ color: '#6D6C6A', textAlign: 'center' }}>
                         No upcoming play dates
                       </Text>
                     </View>
@@ -545,11 +555,11 @@ export default function DesktopHomeScreen() {
                 {/* Nearby Parks */}
                 <View>
                   <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-                    <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '700', color: '#1A1A2E' }}>
+                    <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '700', color: '#1A1918' }}>
                       Nearby Parks
                     </Text>
                     <Pressable onPress={() => router.push('/explore')}>
-                      <Text style={{ fontSize: 14, color: '#4A90D9', fontWeight: '600' }}>View map</Text>
+                      <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600' }}>View map</Text>
                     </Pressable>
                   </View>
                   
@@ -563,7 +573,8 @@ export default function DesktopHomeScreen() {
                     {nearbyParks.map(({ park, distanceKm }) => (
                       <View 
                         key={park.id} 
-                        style={{ 
+                        style={{
+                          width: isMobile ? '100%' : undefined,
                           flex: isMobile ? undefined : 1,
                           maxWidth: isMobile ? undefined : '48%',
                         }}
@@ -581,21 +592,101 @@ export default function DesktopHomeScreen() {
                   
                   {nearbyParks.length === 0 && (
                     <View style={{ backgroundColor: '#fff', borderRadius: 12, padding: 32, alignItems: 'center' }}>
-                      <Text style={{ color: '#6B7280', textAlign: 'center' }}>
+                      <Text style={{ color: '#6D6C6A', textAlign: 'center' }}>
                         No nearby parks found
                       </Text>
                     </View>
                   )}
                 </View>
+
+                {/* Map & Pups — inline on mobile/tablet */}
+                {!showRightPanel && (
+                  <View style={{ gap: 16, marginTop: isMobile ? 24 : 32 }}>
+                    {/* Map Preview */}
+                    <View
+                      style={{
+                        height: 240,
+                        borderRadius: 16,
+                        overflow: 'hidden',
+                        backgroundColor: '#EDECEA',
+                        shadowColor: '#1A1918',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.03,
+                        shadowRadius: 12,
+                      }}
+                    >
+                      <ParkMap
+                        parks={parks}
+                        checkInCounts={checkInCounts}
+                        userLocation={location}
+                        onParkSelect={handleParkPress}
+                      />
+                    </View>
+
+                    {/* Map Label Bar */}
+                    <Pressable
+                      onPress={() => router.push('/explore')}
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        backgroundColor: '#FFFFFF',
+                        padding: 14,
+                        paddingHorizontal: 16,
+                        borderRadius: 12,
+                        shadowColor: '#1A1918',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.03,
+                        shadowRadius: 8,
+                        gap: 10,
+                      }}
+                    >
+                      <Ionicons name="location" size={18} color="#3D8A5A" />
+                      <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918', flex: 1 }}>
+                        {parksWithinRadius.length} {parksWithinRadius.length === 1 ? 'park' : 'parks'} near you
+                      </Text>
+                      <Text style={{ fontSize: 13, fontWeight: '600', color: '#3D8A5A' }}>
+                        Open Map
+                      </Text>
+                    </Pressable>
+
+                    {/* Pups Nearby Card */}
+                    <View
+                      style={{
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: 12,
+                        padding: 20,
+                        shadowColor: '#1A1918',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.03,
+                        shadowRadius: 12,
+                        gap: 14,
+                      }}
+                    >
+                      <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>Pups Nearby</Text>
+                      <NearbyPupsSection onPupPress={(dogId) => router.push(`/dogs/${dogId}`)} />
+                    </View>
+                  </View>
+                )}
               </View>
             )}
           </ScrollView>
 
-          {/* Right Sidebar - Map & Pups Nearby (Hidden on mobile and tablet) */}
+          {/* Right Sidebar - Map & Pups Nearby (desktop only) */}
           {showRightPanel && (
-            <View style={{ width: rightPanelWidth, borderLeftWidth: 1, borderLeftColor: '#E5E7EB', backgroundColor: '#fff', flexDirection: 'column' }}>
-              {/* Map */}
-              <View style={{ flex: 1, backgroundColor: '#F3F4F6' }}>
+            <View style={{ width: rightPanelWidth, padding: 24, gap: 16 }}>
+              {/* Map Preview */}
+              <View
+                style={{
+                  height: 320,
+                  borderRadius: 16,
+                  overflow: 'hidden',
+                  backgroundColor: '#EDECEA',
+                  shadowColor: '#1A1918',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.03,
+                  shadowRadius: 12,
+                }}
+              >
                 <ParkMap
                   parks={parks}
                   checkInCounts={checkInCounts}
@@ -604,15 +695,46 @@ export default function DesktopHomeScreen() {
                 />
               </View>
 
-              {/* Pups Nearby Section */}
-              <View style={{ padding: 24, borderTopWidth: 1, borderTopColor: '#E5E7EB' }}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-                  <Text style={{ fontSize: 16, fontWeight: '700', color: '#1A1A2E' }}>Pups Nearby</Text>
-                  <Pressable onPress={() => router.push('/explore')}>
-                    <Text style={{ fontSize: 14, color: '#4A90D9', fontWeight: '600' }}>View map</Text>
-                  </Pressable>
-                </View>
-                {/* Pup avatars from nearby check-ins */}
+              {/* Map Label Bar */}
+              <Pressable
+                onPress={() => router.push('/explore')}
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  backgroundColor: '#FFFFFF',
+                  padding: 14,
+                  paddingHorizontal: 16,
+                  borderRadius: 12,
+                  shadowColor: '#1A1918',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.03,
+                  shadowRadius: 8,
+                  gap: 10,
+                }}
+              >
+                <Ionicons name="location" size={18} color="#3D8A5A" />
+                <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918', flex: 1 }}>
+                  {parksWithinRadius.length} {parksWithinRadius.length === 1 ? 'park' : 'parks'} near you
+                </Text>
+                <Text style={{ fontSize: 13, fontWeight: '600', color: '#3D8A5A' }}>
+                  Open Map
+                </Text>
+              </Pressable>
+
+              {/* Pups Nearby Card */}
+              <View
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 12,
+                  padding: 20,
+                  shadowColor: '#1A1918',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.03,
+                  shadowRadius: 12,
+                  gap: 14,
+                }}
+              >
+                <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>Pups Nearby</Text>
                 <NearbyPupsSection onPupPress={(dogId) => router.push(`/dogs/${dogId}`)} />
               </View>
             </View>
@@ -620,5 +742,6 @@ export default function DesktopHomeScreen() {
         </View>
       </View>
     </View>
+    </>
   );
 }

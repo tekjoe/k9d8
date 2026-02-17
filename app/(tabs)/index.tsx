@@ -133,7 +133,7 @@ function NearbyParkCard({ park, pupCount, distanceKm, onPress }: ParkCardProps) 
           </Text>
         )}
         <View className="flex-row items-center">
-          <Ionicons name="paw" size={14} color="#6FCF97" />
+          <Ionicons name="paw" size={14} color="#3D8A5A" />
           <Text className="text-sm text-secondary font-semibold ml-1.5">{pupCount} {pupCount === 1 ? 'pup' : 'pups'} here now</Text>
         </View>
       </View>
@@ -253,7 +253,7 @@ export default function HomeScreen() {
   }, [searchQuery, filteredParks, parksWithDistance, location]);
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#F7F8FA', paddingTop: insets.top }}>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1', paddingTop: insets.top }}>
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={{ paddingBottom: 100 }}
@@ -263,8 +263,8 @@ export default function HomeScreen() {
         {/* Header */}
         <View className="flex-row justify-between items-start px-5 pt-2 pb-4">
           <View>
-            <Text className="text-sm text-[#6B7280] mb-1">Good morning! 👋</Text>
-            <Text className="text-[28px] font-bold text-[#1A1A2E]">Hi, {userName}</Text>
+            <Text className="text-sm text-[#6D6C6A] mb-1">Good morning! 👋</Text>
+            <Text className="text-[28px] font-bold text-[#1A1918]">Hi, {userName}</Text>
           </View>
           <Pressable 
             onPress={handleNotificationPress}
@@ -277,8 +277,8 @@ export default function HomeScreen() {
               elevation: 2,
             }}
           >
-            <Ionicons name="notifications-outline" size={24} color="#1A1A2E" />
-            <View className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#EF4444]" />
+            <Ionicons name="notifications-outline" size={24} color="#1A1918" />
+            <View className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#B5725E]" />
           </Pressable>
         </View>
 
@@ -293,11 +293,11 @@ export default function HomeScreen() {
             elevation: 2,
           }}
         >
-          <Ionicons name="search" size={20} color="#6B7280" style={{ marginRight: 12 }} />
+          <Ionicons name="search" size={20} color="#6D6C6A" style={{ marginRight: 12 }} />
           <TextInput
-            className="flex-1 text-base text-[#1A1A2E]"
+            className="flex-1 text-base text-[#1A1918]"
             placeholder="Search dog parks nearby..."
-            placeholderTextColor="#6B7280"
+            placeholderTextColor="#6D6C6A"
             value={searchQuery}
             onChangeText={setSearchQuery}
             onSubmitEditing={handleSearchSubmit}
@@ -307,7 +307,7 @@ export default function HomeScreen() {
           />
           {searchQuery.length > 0 && (
             <Pressable onPress={clearSearch} className="p-1">
-              <Ionicons name="close-circle" size={20} color="#6B7280" />
+              <Ionicons name="close-circle" size={20} color="#6D6C6A" />
             </Pressable>
           )}
         </View>
@@ -315,7 +315,7 @@ export default function HomeScreen() {
         {/* Search Results Indicator */}
         {searchQuery.trim() && (
           <View className="mx-5 mb-4">
-            <Text className="text-sm text-[#6B7280]">
+            <Text className="text-sm text-[#6D6C6A]">
               {filteredParks.length === 0
                 ? `No parks found for "${searchQuery}"`
                 : `Found ${filteredParks.length} park${filteredParks.length !== 1 ? 's' : ''}`}
@@ -327,14 +327,14 @@ export default function HomeScreen() {
         {!searchQuery.trim() && (
           <View className="mb-6 px-5">
             <View className="flex-row justify-between items-center mb-4">
-              <Text className="text-xl font-bold text-[#1A1A2E]">Upcoming Play Dates</Text>
+              <Text className="text-xl font-bold text-[#1A1918]">Upcoming Play Dates</Text>
               <Pressable onPress={handleSeeAllPlaydates}>
-                <Text className="text-sm font-semibold text-[#6FCF97]">See all</Text>
+                <Text className="text-sm font-semibold text-[#3D8A5A]">See all</Text>
               </Pressable>
             </View>
 
             {playdatesLoading && upcomingPlaydates.length === 0 ? (
-              <ActivityIndicator size="small" color="#4A90D9" />
+              <ActivityIndicator size="small" color="#3D8A5A" />
             ) : upcomingPlaydates.length > 0 ? (
               upcomingPlaydates.map((playdate) => (
                 <PlaydateItem
@@ -345,13 +345,13 @@ export default function HomeScreen() {
               ))
             ) : (
               <View className="items-center py-8">
-                <Text className="text-sm text-[#6B7280]">No upcoming play dates</Text>
+                <Text className="text-sm text-[#6D6C6A]">No upcoming play dates</Text>
               </View>
             )}
 
             <Pressable
               onPress={() => router.push('/playdates/create')}
-              className="flex-row items-center justify-center bg-[#6FCF97] py-3.5 rounded-xl mt-1"
+              className="flex-row items-center justify-center bg-[#3D8A5A] py-3.5 rounded-xl mt-1"
             >
               <Ionicons name="add-circle-outline" size={20} color="#fff" />
               <Text className="text-white text-[15px] font-semibold ml-2">Schedule a Play Date</Text>
@@ -362,18 +362,18 @@ export default function HomeScreen() {
         {/* Nearby Parks / Search Results */}
         <View className="mb-6 px-5">
           <View className="flex-row justify-between items-center mb-4">
-            <Text className="text-xl font-bold text-[#1A1A2E]">
+            <Text className="text-xl font-bold text-[#1A1918]">
               {searchQuery.trim() ? 'Search Results' : 'Nearby Parks'}
             </Text>
             {!searchQuery.trim() && (
               <Pressable onPress={handleViewMap}>
-                <Text className="text-sm font-semibold text-[#6FCF97]">View map</Text>
+                <Text className="text-sm font-semibold text-[#3D8A5A]">View map</Text>
               </Pressable>
             )}
           </View>
 
           {parksLoading && displayParks.length === 0 ? (
-            <ActivityIndicator size="small" color="#4A90D9" />
+            <ActivityIndicator size="small" color="#3D8A5A" />
           ) : displayParks.length > 0 ? (
             displayParks.map(({ park, distanceKm }) => (
               <NearbyParkCard
@@ -386,7 +386,7 @@ export default function HomeScreen() {
             ))
           ) : (
             <View className="items-center py-8">
-              <Text className="text-sm text-[#6B7280]">
+              <Text className="text-sm text-[#6D6C6A]">
                 {searchQuery.trim()
                   ? 'No parks match your search'
                   : 'No parks found nearby'}
@@ -408,8 +408,8 @@ export default function HomeScreen() {
               elevation: 2,
             }}
           >
-            <Text className="text-base font-semibold text-[#6FCF97] mr-2">View all on map</Text>
-            <Ionicons name="arrow-forward" size={16} color="#6FCF97" />
+            <Text className="text-base font-semibold text-[#3D8A5A] mr-2">View all on map</Text>
+            <Ionicons name="arrow-forward" size={16} color="#3D8A5A" />
           </Pressable>
         )}
       </ScrollView>

@@ -100,7 +100,7 @@ export default function ParkMap({
                   width: hasActivity ? 44 : 32,
                   height: hasActivity ? 44 : 32,
                   borderRadius: hasActivity ? 22 : 16,
-                  backgroundColor: hasActivity ? '#2D8B57' : '#6FCF97',
+                  backgroundColor: hasActivity ? '#3D8A5A' : '#3D8A5A',
                   border: '3px solid #FFFFFF',
                   boxShadow: '0 2px 4px rgba(0,0,0,0.25)',
                   cursor: 'pointer',

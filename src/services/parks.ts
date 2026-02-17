@@ -117,3 +117,47 @@ export async function getParkByShortId(shortId: string): Promise<Park | null> {
   
   return park ?? null;
 }
+
+/**
+ * Fetches distinct city/state combinations with park counts.
+ * Used for the dog parks directory index page.
+ */
+export async function getParkCityCounts(): Promise<
+  Array<{ city: string; state: string; count: number }>
+> {
+  const { data, error } = await supabase
+    .from('parks')
+    .select('city, state')
+    .not('city', 'is', null)
+    .not('state', 'is', null);
+
+  if (error) throw error;
+
+  const counts = new Map<string, { city: string; state: string; count: number }>();
+  for (const row of data ?? []) {
+    if (!row.city || !row.state) continue;
+    const key = `${row.city}|${row.state}`;
+    const existing = counts.get(key);
+    if (existing) {
+      existing.count++;
+    } else {
+      counts.set(key, { city: row.city, state: row.state, count: 1 });
+    }
+  }
+
+  return Array.from(counts.values()).sort((a, b) => b.count - a.count);
+}
+
+/**
+ * Fetches parks for a specific city (case-insensitive match).
+ */
+export async function getParksByCity(city: string): Promise<Park[]> {
+  const { data, error } = await supabase
+    .from('parks')
+    .select('*')
+    .ilike('city', city)
+    .order('name');
+
+  if (error) throw error;
+  return data as Park[];
+}

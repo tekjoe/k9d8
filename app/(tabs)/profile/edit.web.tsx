@@ -14,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
+import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
 import { updateProfile, uploadUserAvatar } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
@@ -109,7 +110,9 @@ export default function EditProfileWebScreen() {
   const avatarSize = isMobile ? 120 : 160;
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="Edit Profile" description="Update your k9d8 profile information." url="/profile/edit" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {/* Sidebar - Hidden on mobile */}
       {showSidebar && <DesktopSidebar />}
 
@@ -125,7 +128,7 @@ export default function EditProfileWebScreen() {
             paddingHorizontal: isMobile ? 16 : 40,
             paddingVertical: isMobile ? 16 : 24,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
@@ -140,7 +143,7 @@ export default function EditProfileWebScreen() {
             >
               <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
             </Pressable>
-            <Text style={{ fontSize: isMobile ? 18 : 24, fontWeight: '600', color: '#1A1A2E' }}>
+            <Text style={{ fontSize: isMobile ? 18 : 24, fontWeight: '600', color: '#1A1918' }}>
               Edit Profile
             </Text>
           </View>
@@ -150,14 +153,14 @@ export default function EditProfileWebScreen() {
               onPress={handleBack}
               style={{ 
                 borderWidth: 1, 
-                borderColor: '#E5E7EB', 
+                borderColor: '#E5E4E1', 
                 paddingHorizontal: isMobile ? 16 : 20, 
                 paddingVertical: isMobile ? 8 : 10, 
                 borderRadius: 9999,
                 backgroundColor: '#fff',
               }}
             >
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1A2E' }}>
+              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918' }}>
                 Cancel
               </Text>
             </Pressable>
@@ -165,7 +168,7 @@ export default function EditProfileWebScreen() {
               onPress={handleSave}
               disabled={isSaving}
               style={{ 
-                backgroundColor: isSaving ? '#9CA3AF' : '#6FCF97',
+                backgroundColor: isSaving ? '#878685' : '#3D8A5A',
                 paddingHorizontal: isMobile ? 16 : 20, 
                 paddingVertical: isMobile ? 8 : 10, 
                 borderRadius: 9999,
@@ -193,7 +196,7 @@ export default function EditProfileWebScreen() {
           {error && (
             <View 
               style={{ 
-                backgroundColor: '#FEE2E2', 
+                backgroundColor: '#F5E8E3', 
                 padding: 16, 
                 borderRadius: 12, 
                 marginBottom: 24,
@@ -206,7 +209,7 @@ export default function EditProfileWebScreen() {
           {success && (
             <View 
               style={{ 
-                backgroundColor: '#D1FAE5', 
+                backgroundColor: '#D4E8D4', 
                 padding: 16, 
                 borderRadius: 12, 
                 marginBottom: 24,
@@ -238,7 +241,7 @@ export default function EditProfileWebScreen() {
                     height: avatarSize, 
                     borderRadius: avatarSize / 2, 
                     borderWidth: 3, 
-                    borderColor: '#E5E7EB',
+                    borderColor: '#E5E4E1',
                     overflow: 'hidden',
                   }}
                 >
@@ -278,21 +281,21 @@ export default function EditProfileWebScreen() {
                   flexDirection: 'row',
                   alignItems: 'center',
                   gap: 6,
-                  backgroundColor: '#F3F4F6',
+                  backgroundColor: '#EDECEA',
                   paddingHorizontal: 16,
                   paddingVertical: 8,
                   borderRadius: 9999,
                   marginTop: 16,
                 }}
               >
-                <Ionicons name="camera-outline" size={16} color="#6B7280" />
-                <Text style={{ fontSize: 14, fontWeight: '500', color: '#6B7280' }}>
+                <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+                <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>
                   Change Photo
                 </Text>
               </Pressable>
 
               {localAvatarUri && (
-                <Text style={{ fontSize: 12, color: '#6FCF97', marginTop: 8, textAlign: 'center' }}>
+                <Text style={{ fontSize: 12, color: '#3D8A5A', marginTop: 8, textAlign: 'center' }}>
                   New photo selected
                 </Text>
               )}
@@ -302,7 +305,7 @@ export default function EditProfileWebScreen() {
             <View style={{ flex: 1, gap: 20 }}>
               {/* Name Field */}
               <View>
-                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E', marginBottom: 8 }}>
+                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
                   Name
                 </Text>
                 <TextInput
@@ -312,21 +315,21 @@ export default function EditProfileWebScreen() {
                     paddingHorizontal: 16,
                     paddingVertical: 14,
                     fontSize: 16,
-                    color: '#1A1A2E',
+                    color: '#1A1918',
                     borderWidth: 1,
-                    borderColor: '#E5E7EB',
+                    borderColor: '#E5E4E1',
                   }}
                   value={displayName}
                   onChangeText={setDisplayName}
                   placeholder="Your name"
-                  placeholderTextColor="#9CA3AF"
+                  placeholderTextColor="#878685"
                   autoCapitalize="words"
                 />
               </View>
 
               {/* Bio Field */}
               <View>
-                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E', marginBottom: 8 }}>
+                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
                   Bio
                 </Text>
                 <TextInput
@@ -336,45 +339,45 @@ export default function EditProfileWebScreen() {
                     paddingHorizontal: 16,
                     paddingVertical: 14,
                     fontSize: 16,
-                    color: '#1A1A2E',
+                    color: '#1A1918',
                     borderWidth: 1,
-                    borderColor: '#E5E7EB',
+                    borderColor: '#E5E4E1',
                     minHeight: 120,
                     textAlignVertical: 'top',
                   }}
                   value={bio}
                   onChangeText={setBio}
                   placeholder="Tell us about yourself..."
-                  placeholderTextColor="#9CA3AF"
+                  placeholderTextColor="#878685"
                   multiline
                   numberOfLines={4}
                   maxLength={200}
                 />
-                <Text style={{ fontSize: 12, color: '#9CA3AF', textAlign: 'right', marginTop: 4 }}>
+                <Text style={{ fontSize: 12, color: '#878685', textAlign: 'right', marginTop: 4 }}>
                   {bio.length}/200
                 </Text>
               </View>
 
               {/* Email Field (read-only) */}
               <View>
-                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E', marginBottom: 8 }}>
+                <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
                   Email
                 </Text>
                 <TextInput
                   style={{
-                    backgroundColor: '#F3F4F6',
+                    backgroundColor: '#EDECEA',
                     borderRadius: 12,
                     paddingHorizontal: 16,
                     paddingVertical: 14,
                     fontSize: 16,
-                    color: '#6B7280',
+                    color: '#6D6C6A',
                     borderWidth: 1,
-                    borderColor: '#E5E7EB',
+                    borderColor: '#E5E4E1',
                   }}
                   value={session?.user?.email}
                   editable={false}
                 />
-                <Text style={{ fontSize: 12, color: '#9CA3AF', marginTop: 4 }}>
+                <Text style={{ fontSize: 12, color: '#878685', marginTop: 4 }}>
                   Email cannot be changed
                 </Text>
               </View>
@@ -383,5 +386,6 @@ export default function EditProfileWebScreen() {
         </ScrollView>
       </View>
     </View>
+    </>
   );
 }

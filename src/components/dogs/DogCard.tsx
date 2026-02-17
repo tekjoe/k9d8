@@ -68,19 +68,19 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     marginBottom: 12,
   },
   cardPressed: {
     opacity: 0.7,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
   },
   photoContainer: {
     width: 64,
     height: 64,
     borderRadius: 32,
     overflow: 'hidden',
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
   },
   photo: {
     width: 64,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   placeholder: {
     width: 64,
     height: 64,
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -106,11 +106,11 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   breed: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginTop: 2,
   },
   tags: {
@@ -123,11 +123,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
   },
   temperamentText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#6B7280',
+    color: '#6D6C6A',
   },
 });

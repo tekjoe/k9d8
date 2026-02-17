@@ -5,7 +5,7 @@ const SIZE_CONFIG: Record<DogSize, { label: string; color: string; background: s
   small: { label: 'S', color: '#166534', background: '#DCFCE7' },
   medium: { label: 'M', color: '#1E40AF', background: '#DBEAFE' },
   large: { label: 'L', color: '#9A3412', background: '#FFEDD5' },
-  extra_large: { label: 'XL', color: '#991B1B', background: '#FEE2E2' },
+  extra_large: { label: 'XL', color: '#991B1B', background: '#F5E8E3' },
 };
 
 interface DogSizeTagProps {

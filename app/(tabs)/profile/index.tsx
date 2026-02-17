@@ -46,7 +46,7 @@ function DogListItem({ dog, onPress }: DogListItemProps) {
         <Text className="text-base font-semibold text-text">{dog.name}</Text>
         <Text className="text-sm text-text-secondary">{subtitle || 'Mixed breed'}</Text>
       </View>
-      <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+      <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
     </Pressable>
   );
 }
@@ -97,7 +97,7 @@ export default function ProfileTab() {
         </Pressable>
         <Text className="text-lg font-semibold text-text">Profile</Text>
         <Pressable onPress={handleEditProfile} className="w-10 h-10 justify-center items-center">
-          <Ionicons name="create-outline" size={24} color="#1A1A2E" />
+          <Ionicons name="create-outline" size={24} color="#1A1918" />
         </Pressable>
       </View>
 
@@ -210,7 +210,7 @@ export default function ProfileTab() {
         )}
         ListEmptyComponent={
           loading ? (
-            <ActivityIndicator size="small" color="#6FCF97" style={{ paddingVertical: 24 }} />
+            <ActivityIndicator size="small" color="#3D8A5A" style={{ paddingVertical: 24 }} />
           ) : error ? (
             <View className="items-center py-8 bg-white rounded-2xl">
               <Text className="text-sm text-error text-center">{error}</Text>

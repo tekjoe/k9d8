@@ -100,7 +100,7 @@ export default function EditDogScreen() {
   if (loading) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#6D6C6A',
   },
   deleteButton: {
     marginHorizontal: 24,
@@ -158,11 +158,11 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#EF4444',
+    borderColor: '#B5725E',
     alignItems: 'center',
   },
   deleteButtonText: {
-    color: '#EF4444',
+    color: '#B5725E',
     fontSize: 16,
     fontWeight: '600',
   },

@@ -14,6 +14,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
+import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
 import {
   getDogById,
@@ -65,7 +66,7 @@ function OptionButton({ label, selected, onPress }: OptionButtonProps) {
         height: 44,
         borderRadius: 8,
         borderWidth: selected ? 2 : 1.5,
-        borderColor: selected ? '#2D8B57' : '#E5E7EB',
+        borderColor: selected ? '#3D8A5A' : '#E5E4E1',
         backgroundColor: selected ? 'rgba(45, 139, 87, 0.1)' : '#fff',
         alignItems: 'center',
         justifyContent: 'center',
@@ -75,7 +76,7 @@ function OptionButton({ label, selected, onPress }: OptionButtonProps) {
         style={{
           fontSize: 14,
           fontWeight: selected ? '600' : '500',
-          color: selected ? '#2D8B57' : '#1A1A2E',
+          color: selected ? '#3D8A5A' : '#1A1918',
         }}
       >
         {label}
@@ -92,7 +93,7 @@ interface FormFieldProps {
 function FormField({ label, children }: FormFieldProps) {
   return (
     <View style={{ gap: 8 }}>
-      <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>{label}</Text>
+      <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>{label}</Text>
       {children}
     </View>
   );
@@ -111,7 +112,7 @@ function TextField({ value, onChangeText, placeholder, multiline, numberOfLines 
     <View
       style={{
         borderWidth: 1.5,
-        borderColor: '#E5E7EB',
+        borderColor: '#E5E4E1',
         borderRadius: 8,
         backgroundColor: '#fff',
         minHeight: multiline ? 120 : 48,
@@ -124,12 +125,12 @@ function TextField({ value, onChangeText, placeholder, multiline, numberOfLines 
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor="#9CA3AF"
+        placeholderTextColor="#878685"
         multiline={multiline}
         numberOfLines={numberOfLines}
         style={{
           fontSize: 15,
-          color: '#1A1A2E',
+          color: '#1A1918',
           outlineWidth: 0,
           ...(multiline ? { textAlignVertical: 'top', minHeight: 96 } : {}),
         } as any}
@@ -282,30 +283,38 @@ export default function EditDogScreenWeb() {
 
   if (loading) {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+      <>
+      <SEOHead title="Dog Profile" description="View and manage your dog's profile on k9d8." url="/profile/dogs" />
+      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
         {showSidebar && <DesktopSidebar />}
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <ActivityIndicator size="large" color="#4A90D9" />
+          <ActivityIndicator size="large" color="#3D8A5A" />
         </View>
       </View>
+      </>
     );
   }
 
   if (!dog) {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+      <>
+      <SEOHead title="Dog Profile" description="View and manage your dog's profile on k9d8." url="/profile/dogs" />
+      <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
         {showSidebar && <DesktopSidebar />}
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, color: '#6B7280' }}>Dog not found</Text>
+          <Text style={{ fontSize: 16, color: '#6D6C6A' }}>Dog not found</Text>
         </View>
       </View>
+      </>
     );
   }
 
   // Mobile Layout
   if (isMobile) {
     return (
-      <View style={{ flex: 1, backgroundColor: '#F7F8FA' }}>
+      <>
+      <SEOHead title="Dog Profile" description="View and manage your dog's profile on k9d8." url="/profile/dogs" />
+      <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
         {/* Mobile Header */}
         <View
           style={{
@@ -316,15 +325,15 @@ export default function EditDogScreenWeb() {
             height: 56,
             paddingHorizontal: 16,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
           <Pressable onPress={handleCancel} style={{ width: 40, height: 40, justifyContent: 'center' }}>
             <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
           </Pressable>
-          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1A2E' }}>Edit Dog Profile</Text>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>Edit Dog Profile</Text>
           <Pressable onPress={handleSave} disabled={submitting}>
-            <Text style={{ fontSize: 15, fontWeight: '600', color: '#2D8B57' }}>
+            <Text style={{ fontSize: 15, fontWeight: '600', color: '#3D8A5A' }}>
               {submitting ? '...' : 'Save'}
             </Text>
           </Pressable>
@@ -338,7 +347,7 @@ export default function EditDogScreenWeb() {
                 source={{
                   uri: formData.photoUri || 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop',
                 }}
-                style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E7EB' }}
+                style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E4E1' }}
               />
             </Pressable>
             <Pressable
@@ -346,15 +355,15 @@ export default function EditDogScreenWeb() {
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
-                backgroundColor: '#F3F4F6',
+                backgroundColor: '#EDECEA',
                 paddingHorizontal: 16,
                 paddingVertical: 8,
                 borderRadius: 8,
                 gap: 6,
               }}
             >
-              <Ionicons name="camera-outline" size={16} color="#6B7280" />
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#6B7280' }}>Change Photo</Text>
+              <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+              <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
             </Pressable>
           </View>
 
@@ -400,7 +409,7 @@ export default function EditDogScreenWeb() {
                       paddingHorizontal: 16,
                       borderRadius: 8,
                       borderWidth: formData.temperaments.includes(option.value) ? 2 : 1.5,
-                      borderColor: formData.temperaments.includes(option.value) ? '#2D8B57' : '#E5E7EB',
+                      borderColor: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#E5E4E1',
                       backgroundColor: formData.temperaments.includes(option.value) ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -410,7 +419,7 @@ export default function EditDogScreenWeb() {
                       style={{
                         fontSize: 14,
                         fontWeight: formData.temperaments.includes(option.value) ? '600' : '500',
-                        color: formData.temperaments.includes(option.value) ? '#2D8B57' : '#1A1A2E',
+                        color: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#1A1918',
                       }}
                     >
                       {option.label}
@@ -447,7 +456,7 @@ export default function EditDogScreenWeb() {
               flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: '#EF4444',
+              backgroundColor: '#B5725E',
               borderRadius: 8,
               height: 48,
               gap: 8,
@@ -465,12 +474,15 @@ export default function EditDogScreenWeb() {
           </Pressable>
         </ScrollView>
       </View>
+      </>
     );
   }
 
   // Desktop Layout
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="Dog Profile" description="View and manage your dog's profile on k9d8." url="/profile/dogs" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {showSidebar && <DesktopSidebar />}
 
       <View style={{ flex: 1, flexDirection: 'column' }}>
@@ -484,7 +496,7 @@ export default function EditDogScreenWeb() {
             paddingVertical: 24,
             paddingHorizontal: 40,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
@@ -494,14 +506,14 @@ export default function EditDogScreenWeb() {
                 width: 40,
                 height: 40,
                 borderRadius: 8,
-                backgroundColor: '#F3F4F6',
+                backgroundColor: '#EDECEA',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
               <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
             </Pressable>
-            <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1A2E' }}>Edit Dog Profile</Text>
+            <Text style={{ fontSize: 24, fontWeight: '600', color: '#1A1918' }}>Edit Dog Profile</Text>
           </View>
 
           <View style={{ flexDirection: 'row', gap: 12 }}>
@@ -512,11 +524,11 @@ export default function EditDogScreenWeb() {
                 paddingVertical: 10,
                 borderRadius: 8,
                 borderWidth: 1.5,
-                borderColor: '#E5E7EB',
+                borderColor: '#E5E4E1',
                 backgroundColor: '#fff',
               }}
             >
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1A2E' }}>Cancel</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={handleSave}
@@ -525,7 +537,7 @@ export default function EditDogScreenWeb() {
                 paddingHorizontal: 20,
                 paddingVertical: 10,
                 borderRadius: 8,
-                backgroundColor: '#2D8B57',
+                backgroundColor: '#3D8A5A',
                 opacity: submitting ? 0.6 : 1,
               }}
             >
@@ -548,7 +560,7 @@ export default function EditDogScreenWeb() {
                   backgroundColor: '#fff',
                   borderRadius: 16,
                   borderWidth: 1,
-                  borderColor: '#E5E7EB',
+                  borderColor: '#E5E4E1',
                   padding: 32,
                   alignItems: 'center',
                   gap: 20,
@@ -564,7 +576,7 @@ export default function EditDogScreenWeb() {
                       height: 160,
                       borderRadius: 80,
                       borderWidth: 4,
-                      borderColor: '#E5E7EB',
+                      borderColor: '#E5E4E1',
                     }}
                   />
                 </Pressable>
@@ -573,15 +585,15 @@ export default function EditDogScreenWeb() {
                   style={{
                     flexDirection: 'row',
                     alignItems: 'center',
-                    backgroundColor: '#F3F4F6',
+                    backgroundColor: '#EDECEA',
                     paddingHorizontal: 20,
                     paddingVertical: 10,
                     borderRadius: 8,
                     gap: 8,
                   }}
                 >
-                  <Ionicons name="camera-outline" size={16} color="#6B7280" />
-                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#6B7280' }}>Change Photo</Text>
+                  <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
                 </Pressable>
               </View>
             </View>
@@ -648,7 +660,7 @@ export default function EditDogScreenWeb() {
                           paddingHorizontal: 16,
                           borderRadius: 8,
                           borderWidth: formData.temperaments.includes(option.value) ? 2 : 1.5,
-                          borderColor: formData.temperaments.includes(option.value) ? '#2D8B57' : '#E5E7EB',
+                          borderColor: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#E5E4E1',
                           backgroundColor: formData.temperaments.includes(option.value) ? 'rgba(45, 139, 87, 0.1)' : '#fff',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -658,7 +670,7 @@ export default function EditDogScreenWeb() {
                           style={{
                             fontSize: 14,
                             fontWeight: formData.temperaments.includes(option.value) ? '600' : '500',
-                            color: formData.temperaments.includes(option.value) ? '#2D8B57' : '#1A1A2E',
+                            color: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#1A1918',
                           }}
                         >
                           {option.label}
@@ -694,7 +706,7 @@ export default function EditDogScreenWeb() {
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: '#EF4444',
+                    backgroundColor: '#B5725E',
                     borderRadius: 24,
                     paddingHorizontal: 24,
                     paddingVertical: 14,
@@ -717,5 +729,6 @@ export default function EditDogScreenWeb() {
         </ScrollView>
       </View>
     </View>
+    </>
   );
 }

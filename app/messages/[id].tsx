@@ -70,7 +70,7 @@ export default function ChatScreen() {
   if (loading) {
     return (
       <View className="flex-1 justify-center items-center bg-white">
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -142,9 +142,9 @@ export default function ChatScreen() {
           style={{ paddingBottom: insets.bottom + 8 }}
         >
           <TextInput
-            className="flex-1 bg-[#F0F0F0] rounded-2xl px-4 py-2.5 text-[15px] text-text mr-2 max-h-[100px]"
+            className="flex-1 bg-[#EDECEA] rounded-2xl px-4 py-2.5 text-[15px] text-text mr-2 max-h-[100px]"
             placeholder="Message..."
-            placeholderTextColor="#9CA3AF"
+            placeholderTextColor="#878685"
             value={text}
             onChangeText={setText}
             multiline
@@ -155,7 +155,7 @@ export default function ChatScreen() {
             onPress={handleSend}
             disabled={!text.trim() || sending}
             className={`w-10 h-10 rounded-full justify-center items-center mb-0.5 ${
-              text.trim() ? 'bg-secondary' : 'bg-[#E5E7EB]'
+              text.trim() ? 'bg-secondary' : 'bg-[#E5E4E1]'
             }`}
           >
             {sending ? (

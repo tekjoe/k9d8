@@ -64,14 +64,14 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors.light.secondary,
-        tabBarInactiveTintColor: '#9CA3AF',
+        tabBarInactiveTintColor: '#878685',
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
           display: showTabBar ? 'flex' : 'none',
           backgroundColor: '#fff',
           borderTopWidth: 1,
-          borderTopColor: '#E5E7EB',
+          borderTopColor: '#E5E4E1',
           elevation: 0,
           shadowOpacity: 0,
           height: Platform.OS === 'web' ? 64 : 80,

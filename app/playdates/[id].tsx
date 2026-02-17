@@ -1,7 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   FlatList,
   Modal,
   Pressable,
@@ -15,15 +13,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { format, isSameDay } from 'date-fns';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
-import { useAuth } from '@/src/hooks/useAuth';
-import { useDogs } from '@/src/hooks/useDogs';
-import { getPlayDateById } from '@/src/services/playdates';
-import {
-  cancelPlayDate,
-  rsvpToPlayDate,
-  cancelRSVP,
-} from '@/src/services/playdates';
-import type { PlayDate, PlayDateRSVP, Dog } from '@/src/types/database';
+import { usePlaydateDetail } from '@/src/hooks/usePlaydateDetail';
 
 function formatDateRange(startsAt: string, endsAt: string): string {
   const start = new Date(startsAt);
@@ -44,133 +34,31 @@ export default function PlayDateDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { session } = useAuth();
-  const userId = session?.user?.id;
-  const { dogs } = useDogs(userId);
 
-  const [playdate, setPlaydate] = useState<PlayDate | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [showDogPicker, setShowDogPicker] = useState(false);
-  const [actionLoading, setActionLoading] = useState(false);
-
-  const loadPlaydate = useCallback(async () => {
-    if (!id) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await getPlayDateById(id);
-      setPlaydate(data);
-    } catch (err) {
-      const message =
-        err instanceof Error ? err.message : 'Failed to load play date';
-      setError(message);
-    } finally {
-      setLoading(false);
-    }
-  }, [id]);
-
-  useEffect(() => {
-    loadPlaydate();
-  }, [loadPlaydate]);
-
-  const isOrganizer = playdate?.organizer_id === userId;
-
-  const userRsvp: PlayDateRSVP | undefined = (playdate?.rsvps ?? []).find(
-    (r) => r.user_id === userId,
-  );
-
-  const goingRsvps = (playdate?.rsvps ?? []).filter(
-    (r) => r.status === 'going',
-  );
-  const maybeRsvps = (playdate?.rsvps ?? []).filter(
-    (r) => r.status === 'maybe',
-  );
-
-  const handleCancel = useCallback(async () => {
-    if (!playdate) return;
-    Alert.alert(
-      'Cancel Play Date',
-      'Are you sure you want to cancel this play date?',
-      [
-        { text: 'No', style: 'cancel' },
-        {
-          text: 'Yes, Cancel',
-          style: 'destructive',
-          onPress: async () => {
-            setActionLoading(true);
-            try {
-              const updated = await cancelPlayDate(playdate.id);
-              setPlaydate(updated);
-            } catch (err) {
-              const message =
-                err instanceof Error ? err.message : 'Failed to cancel';
-              Alert.alert('Error', message);
-            } finally {
-              setActionLoading(false);
-            }
-          },
-        },
-      ],
-    );
-  }, [playdate]);
-
-  const handleRsvp = useCallback(
-    async (dog: Dog) => {
-      if (!playdate || !userId) return;
-      setShowDogPicker(false);
-      setActionLoading(true);
-      try {
-        const rsvp = await rsvpToPlayDate(playdate.id, userId, dog.id, 'going');
-        setPlaydate((prev) => {
-          if (!prev) return prev;
-          const existingIdx = (prev.rsvps ?? []).findIndex(
-            (r) => r.user_id === userId,
-          );
-          const rsvps = [...(prev.rsvps ?? [])];
-          if (existingIdx >= 0) {
-            rsvps[existingIdx] = rsvp;
-          } else {
-            rsvps.push(rsvp);
-          }
-          return { ...prev, rsvps };
-        });
-      } catch (err) {
-        const message =
-          err instanceof Error ? err.message : 'Failed to RSVP';
-        Alert.alert('Error', message);
-      } finally {
-        setActionLoading(false);
-      }
-    },
-    [playdate, userId],
-  );
-
-  const handleCancelRsvp = useCallback(async () => {
-    if (!userRsvp || !playdate) return;
-    setActionLoading(true);
-    try {
-      await cancelRSVP(userRsvp.id);
-      setPlaydate((prev) => {
-        if (!prev) return prev;
-        return {
-          ...prev,
-          rsvps: (prev.rsvps ?? []).filter((r) => r.id !== userRsvp.id),
-        };
-      });
-    } catch (err) {
-      const message =
-        err instanceof Error ? err.message : 'Failed to cancel RSVP';
-      Alert.alert('Error', message);
-    } finally {
-      setActionLoading(false);
-    }
-  }, [userRsvp, playdate]);
+  const {
+    playdate,
+    loading,
+    error,
+    actionLoading,
+    dogs,
+    userId,
+    isOrganizer,
+    isCancelled,
+    userRsvp,
+    goingRsvps,
+    maybeRsvps,
+    showDogPicker,
+    setShowDogPicker,
+    loadPlaydate,
+    handleCancel,
+    handleRsvp,
+    handleCancelRsvp,
+  } = usePlaydateDetail(id);
 
   if (loading) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -185,8 +73,6 @@ export default function PlayDateDetailScreen() {
       </View>
     );
   }
-
-  const isCancelled = playdate.status === 'cancelled';
 
   return (
     <View style={styles.container}>
@@ -349,7 +235,7 @@ export default function PlayDateDetailScreen() {
       {!isCancelled && (
         <View style={styles.actionBar}>
           {actionLoading ? (
-            <ActivityIndicator size="small" color="#4A90D9" />
+            <ActivityIndicator size="small" color="#3D8A5A" />
           ) : isOrganizer ? (
             <Pressable style={styles.cancelButton} onPress={handleCancel}>
               <Text style={styles.cancelButtonText}>Cancel Play Date</Text>
@@ -442,7 +328,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
     backgroundColor: '#FFFFFF',
   },
   backButton: {
@@ -453,7 +339,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 17,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   headerSpacer: {
     width: 32,
@@ -472,13 +358,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   cancelledBanner: {
-    backgroundColor: '#FEE2E2',
+    backgroundColor: '#F5E8E3',
     padding: 12,
     borderRadius: 8,
     marginBottom: 16,
   },
   cancelledBannerText: {
-    color: '#EF4444',
+    color: '#B5725E',
     fontWeight: '600',
     textAlign: 'center',
     fontSize: 14,
@@ -486,36 +372,36 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 8,
   },
   description: {
     fontSize: 15,
-    color: '#6B7280',
+    color: '#6D6C6A',
     lineHeight: 22,
     marginBottom: 16,
   },
   infoRow: {
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: '#EDECEA',
   },
   infoLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#9CA3AF',
+    color: '#878685',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
     marginBottom: 4,
   },
   infoValue: {
     fontSize: 16,
-    color: '#1A1A2E',
+    color: '#1A1918',
     fontWeight: '500',
   },
   infoSubvalue: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginTop: 2,
   },
   rsvpSection: {
@@ -524,7 +410,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 12,
   },
   maybeSectionTitle: {
@@ -532,7 +418,7 @@ const styles = StyleSheet.create({
   },
   emptyRsvp: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: '#878685',
     textAlign: 'center',
     paddingVertical: 20,
     lineHeight: 20,
@@ -542,18 +428,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: '#EDECEA',
   },
   rsvpAvatar: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     alignItems: 'center',
     justifyContent: 'center',
   },
   rsvpAvatarMaybe: {
-    backgroundColor: '#F59E0B',
+    backgroundColor: '#D4A64A',
   },
   rsvpAvatarText: {
     color: '#FFFFFF',
@@ -567,40 +453,40 @@ const styles = StyleSheet.create({
   rsvpName: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   rsvpDog: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginTop: 1,
   },
   statusBadge: {
-    backgroundColor: '#ECFDF5',
+    backgroundColor: '#E8F0E8',
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 10,
   },
   statusBadgeMaybe: {
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#F5EFE0',
   },
   statusBadgeText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#10B981',
+    color: '#4A6B4A',
   },
   statusBadgeTextMaybe: {
-    color: '#F59E0B',
+    color: '#D4A64A',
   },
   actionBar: {
     paddingHorizontal: 20,
     paddingVertical: 16,
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
+    borderTopColor: '#E5E4E1',
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
   },
   rsvpButton: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 48,
@@ -613,7 +499,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   cancelButton: {
-    backgroundColor: '#FEE2E2',
+    backgroundColor: '#F5E8E3',
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 48,
@@ -621,7 +507,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cancelButtonText: {
-    color: '#EF4444',
+    color: '#B5725E',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -630,36 +516,36 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   currentRsvp: {
-    backgroundColor: '#ECFDF5',
+    backgroundColor: '#E8F0E8',
     borderRadius: 12,
     padding: 14,
     alignItems: 'center',
   },
   currentRsvpText: {
-    color: '#10B981',
+    color: '#4A6B4A',
     fontSize: 14,
     fontWeight: '600',
   },
   cancelRsvpButton: {
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     borderRadius: 12,
     paddingVertical: 12,
     alignItems: 'center',
   },
   cancelRsvpButtonText: {
-    color: '#6B7280',
+    color: '#6D6C6A',
     fontSize: 14,
     fontWeight: '600',
   },
   errorText: {
     fontSize: 16,
-    color: '#EF4444',
+    color: '#B5725E',
     textAlign: 'center',
     marginBottom: 16,
   },
   retryButton: {
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     paddingHorizontal: 24,
     paddingVertical: 10,
     borderRadius: 12,
@@ -679,17 +565,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   modalClose: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#4A90D9',
+    color: '#3D8A5A',
   },
   dogList: {
     padding: 16,
@@ -700,14 +586,14 @@ const styles = StyleSheet.create({
     padding: 14,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     marginBottom: 10,
   },
   dogAvatar: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#4A90D9',
+    backgroundColor: '#3D8A5A',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -723,11 +609,11 @@ const styles = StyleSheet.create({
   dogName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
   },
   dogBreed: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginTop: 2,
   },
 });

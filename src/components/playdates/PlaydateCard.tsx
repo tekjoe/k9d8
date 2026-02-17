@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
     marginBottom: 12,
   },
   cardCancelled: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   cardPressed: {
     opacity: 0.7,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
   },
   header: {
     flexDirection: 'row',
@@ -98,14 +98,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     flex: 1,
   },
   titleCancelled: {
     textDecorationLine: 'line-through',
   },
   cancelledBadge: {
-    backgroundColor: '#FEE2E2',
+    backgroundColor: '#F5E8E3',
     paddingHorizontal: 8,
     paddingVertical: 3,
     borderRadius: 8,
@@ -114,17 +114,17 @@ const styles = StyleSheet.create({
   cancelledBadgeText: {
     fontSize: 11,
     fontWeight: '600',
-    color: '#EF4444',
+    color: '#B5725E',
   },
   parkName: {
     fontSize: 14,
-    color: '#4A90D9',
+    color: '#3D8A5A',
     fontWeight: '500',
     marginBottom: 4,
   },
   dateTime: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginBottom: 8,
   },
   footer: {
@@ -134,13 +134,13 @@ const styles = StyleSheet.create({
   },
   organizer: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: '#878685',
     flex: 1,
   },
   rsvpCount: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#6FCF97',
+    color: '#3D8A5A',
     marginLeft: 8,
   },
 });

@@ -21,7 +21,7 @@ function MobileWebHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <View style={{ width: '100%', backgroundColor: '#F7F8FA', zIndex: 100 }}>
+    <View style={{ width: '100%', backgroundColor: '#F5F4F1', zIndex: 100 }}>
       <View 
         style={{ 
           flexDirection: 'row', 
@@ -32,11 +32,11 @@ function MobileWebHeader() {
         }}
       >
         <Pressable onPress={() => router.push('/')}>
-          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E' }}>k9d8</Text>
+          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
         </Pressable>
         
         <Pressable onPress={() => setMenuOpen(!menuOpen)}>
-          <Ionicons name={menuOpen ? 'close' : 'menu'} size={28} color="#1A1A2E" />
+          <Ionicons name={menuOpen ? 'close' : 'menu'} size={28} color="#1A1918" />
         </Pressable>
       </View>
 
@@ -52,7 +52,7 @@ function MobileWebHeader() {
             paddingHorizontal: 24,
             paddingVertical: 24,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 4 },
             shadowOpacity: 0.1,
@@ -62,22 +62,22 @@ function MobileWebHeader() {
           }}
         >
           <Pressable onPress={() => { setMenuOpen(false); router.push('/landing'); }}>
-            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>Features</Text>
+            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>Features</Text>
           </Pressable>
           <Pressable onPress={() => { setMenuOpen(false); router.push('/landing'); }}>
-            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>How it Works</Text>
+            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>How it Works</Text>
           </Pressable>
           <Pressable onPress={() => { setMenuOpen(false); router.push('/landing'); }}>
-            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6B7280' }}>About</Text>
+            <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>About</Text>
           </Pressable>
-          <View style={{ height: 1, backgroundColor: '#E5E7EB', marginVertical: 4 }} />
+          <View style={{ height: 1, backgroundColor: '#E5E4E1', marginVertical: 4 }} />
           <Pressable onPress={() => { setMenuOpen(false); router.push('/(auth)/sign-in'); }}>
-            <Text style={{ fontSize: 16, fontWeight: '500', color: '#1A1A2E' }}>Log In</Text>
+            <Text style={{ fontSize: 16, fontWeight: '500', color: '#1A1918' }}>Log In</Text>
           </Pressable>
           <Pressable 
             onPress={() => { setMenuOpen(false); router.push('/(auth)/sign-up'); }}
             style={{ 
-              backgroundColor: '#6FCF97', 
+              backgroundColor: '#3D8A5A', 
               paddingVertical: 14, 
               borderRadius: 12,
               alignItems: 'center',
@@ -136,7 +136,7 @@ export default function SignIn() {
           style={{ 
             flex: 1,
             maxWidth: '50%',
-            backgroundColor: '#6FCF97', 
+            backgroundColor: '#3D8A5A', 
             padding: 80,
             justifyContent: 'center',
           }}
@@ -187,21 +187,21 @@ export default function SignIn() {
                 width: 40, 
                 height: 40, 
                 borderRadius: 12, 
-                backgroundColor: '#6FCF97',
+                backgroundColor: '#3D8A5A',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
               <Ionicons name="paw" size={24} color="#fff" />
             </View>
-            <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E' }}>k9d8</Text>
+            <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
           </View>
 
           {/* Header */}
-          <Text style={{ fontSize: 32, fontWeight: '700', color: '#1A1A2E', marginBottom: 8 }}>
+          <Text style={{ fontSize: 32, fontWeight: '700', color: '#1A1918', marginBottom: 8 }}>
             Welcome back
           </Text>
-          <Text style={{ fontSize: 16, color: '#6B7280', marginBottom: 32 }}>
+          <Text style={{ fontSize: 16, color: '#6D6C6A', marginBottom: 32 }}>
             Sign in to continue
           </Text>
 
@@ -209,7 +209,7 @@ export default function SignIn() {
           {error && (
             <View 
               style={{ 
-                backgroundColor: '#FEE2E2', 
+                backgroundColor: '#F5E8E3', 
                 padding: 16, 
                 borderRadius: 12, 
                 marginBottom: 24,
@@ -222,21 +222,21 @@ export default function SignIn() {
           {/* Form */}
           <View style={{ gap: 20, marginBottom: 24 }}>
             <View>
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1A2E', marginBottom: 8 }}>
+              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918', marginBottom: 8 }}>
                 Email
               </Text>
               <TextInput
                 style={{
                   borderWidth: 1,
-                  borderColor: '#E5E7EB',
+                  borderColor: '#E5E4E1',
                   borderRadius: 12,
                   padding: 16,
                   fontSize: 16,
                   backgroundColor: '#fff',
-                  color: '#1A1A2E',
+                  color: '#1A1918',
                 }}
                 placeholder="your@email.com"
-                placeholderTextColor="#9CA3AF"
+                placeholderTextColor="#878685"
                 value={email}
                 onChangeText={setEmail}
                 autoCapitalize="none"
@@ -247,11 +247,11 @@ export default function SignIn() {
 
             <View>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}>
-                <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1A2E' }}>
+                <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918' }}>
                   Password
                 </Text>
                 <Pressable>
-                  <Text style={{ fontSize: 14, color: '#6FCF97', fontWeight: '500' }}>
+                  <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '500' }}>
                     Forgot password?
                   </Text>
                 </Pressable>
@@ -259,15 +259,15 @@ export default function SignIn() {
               <TextInput
                 style={{
                   borderWidth: 1,
-                  borderColor: '#E5E7EB',
+                  borderColor: '#E5E4E1',
                   borderRadius: 12,
                   padding: 16,
                   fontSize: 16,
                   backgroundColor: '#fff',
-                  color: '#1A1A2E',
+                  color: '#1A1918',
                 }}
                 placeholder="••••••••"
-                placeholderTextColor="#9CA3AF"
+                placeholderTextColor="#878685"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
@@ -282,7 +282,7 @@ export default function SignIn() {
             onPress={handleSignIn}
             disabled={loading}
             style={{
-              backgroundColor: loading ? '#9CA3AF' : '#6FCF97',
+              backgroundColor: loading ? '#878685' : '#3D8A5A',
               borderRadius: 12,
               padding: 16,
               alignItems: 'center',
@@ -298,9 +298,9 @@ export default function SignIn() {
 
           {/* Footer */}
           <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 6 }}>
-            <Text style={{ fontSize: 14, color: '#6B7280' }}>Don't have an account?</Text>
+            <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Don't have an account?</Text>
             <Link href="/(auth)/sign-up">
-              <Text style={{ fontSize: 14, color: '#6FCF97', fontWeight: '600' }}>Sign up</Text>
+              <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600' }}>Sign up</Text>
             </Link>
           </View>
         </View>
@@ -310,7 +310,7 @@ export default function SignIn() {
 
   // Mobile Layout
   return (
-    <View style={{ flex: 1, backgroundColor: '#F7F8FA' }}>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Mobile Web Header */}
       {isWeb && isMobile && <MobileWebHeader />}
 
@@ -336,24 +336,24 @@ export default function SignIn() {
                     width: 40, 
                     height: 40, 
                     borderRadius: 12, 
-                    backgroundColor: '#6FCF97',
+                    backgroundColor: '#3D8A5A',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
                 >
                   <Ionicons name="paw" size={24} color="#fff" />
                 </View>
-                <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1A2E' }}>k9d8</Text>
+                <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
               </View>
             </View>
           )}
 
           {/* Header */}
           <View style={{ alignItems: 'center', marginBottom: 40 }}>
-            <Text style={{ fontSize: 28, fontWeight: '700', color: '#1A1A2E', marginBottom: 8 }}>
+            <Text style={{ fontSize: 28, fontWeight: '700', color: '#1A1918', marginBottom: 8 }}>
               Welcome back
             </Text>
-            <Text style={{ fontSize: 16, color: '#6B7280', textAlign: 'center' }}>
+            <Text style={{ fontSize: 16, color: '#6D6C6A', textAlign: 'center' }}>
               Sign in to continue connecting with your pack
             </Text>
           </View>
@@ -362,7 +362,7 @@ export default function SignIn() {
         {error && (
           <View 
             style={{ 
-              backgroundColor: '#FEE2E2', 
+              backgroundColor: '#F5E8E3', 
               padding: 16, 
               borderRadius: 12, 
               marginBottom: 24,
@@ -375,21 +375,21 @@ export default function SignIn() {
         {/* Form */}
         <View style={{ gap: 20, marginBottom: 24 }}>
           <View>
-            <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1A2E', marginBottom: 8 }}>
+            <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918', marginBottom: 8 }}>
               Email
             </Text>
             <TextInput
               style={{
                 borderWidth: 1,
-                borderColor: '#E5E7EB',
+                borderColor: '#E5E4E1',
                 borderRadius: 12,
                 padding: 16,
                 fontSize: 16,
                 backgroundColor: '#fff',
-                color: '#1A1A2E',
+                color: '#1A1918',
               }}
               placeholder="your@email.com"
-              placeholderTextColor="#9CA3AF"
+              placeholderTextColor="#878685"
               value={email}
               onChangeText={setEmail}
               autoCapitalize="none"
@@ -399,21 +399,21 @@ export default function SignIn() {
           </View>
 
           <View>
-            <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1A2E', marginBottom: 8 }}>
+            <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918', marginBottom: 8 }}>
               Password
             </Text>
             <TextInput
               style={{
                 borderWidth: 1,
-                borderColor: '#E5E7EB',
+                borderColor: '#E5E4E1',
                 borderRadius: 12,
                 padding: 16,
                 fontSize: 16,
                 backgroundColor: '#fff',
-                color: '#1A1A2E',
+                color: '#1A1918',
               }}
               placeholder="••••••••"
-              placeholderTextColor="#9CA3AF"
+              placeholderTextColor="#878685"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
@@ -425,7 +425,7 @@ export default function SignIn() {
 
         {/* Forgot Password */}
         <Pressable style={{ alignSelf: 'flex-start', marginBottom: 24 }}>
-          <Text style={{ fontSize: 14, color: '#6FCF97', fontWeight: '500' }}>
+          <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '500' }}>
             Forgot password?
           </Text>
         </Pressable>
@@ -435,7 +435,7 @@ export default function SignIn() {
           onPress={handleSignIn}
           disabled={loading}
           style={{
-            backgroundColor: loading ? '#9CA3AF' : '#6FCF97',
+            backgroundColor: loading ? '#878685' : '#3D8A5A',
             borderRadius: 12,
             padding: 16,
             alignItems: 'center',
@@ -451,9 +451,9 @@ export default function SignIn() {
 
         {/* Footer */}
         <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 6 }}>
-          <Text style={{ fontSize: 14, color: '#6B7280' }}>Don't have an account?</Text>
+          <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Don't have an account?</Text>
           <Link href="/(auth)/sign-up">
-            <Text style={{ fontSize: 14, color: '#6FCF97', fontWeight: '600' }}>Sign up</Text>
+            <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600' }}>Sign up</Text>
           </Link>
         </View>
       </ScrollView>

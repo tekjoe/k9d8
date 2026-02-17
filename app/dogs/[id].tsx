@@ -51,7 +51,7 @@ interface InfoTagProps {
 function InfoTag({ icon, label }: InfoTagProps) {
   return (
     <View className="flex-row items-center bg-white px-4 py-2.5 rounded-full border border-border">
-      <Ionicons name={icon} size={16} color="#6B7280" style={{ marginRight: 8 }} />
+      <Ionicons name={icon} size={16} color="#6D6C6A" style={{ marginRight: 8 }} />
       <Text className="text-sm text-text">{label}</Text>
     </View>
   );
@@ -146,7 +146,7 @@ export default function DogProfileScreen() {
   if (loading) {
     return (
       <View className="flex-1 justify-center items-center bg-background">
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -244,7 +244,7 @@ export default function DogProfileScreen() {
             <Text className="flex-1 text-base font-semibold text-text">
               {dog.owner.display_name || 'Dog Owner'}
             </Text>
-            <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+            <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
           </Pressable>
         </View>
 
@@ -276,10 +276,10 @@ export default function DogProfileScreen() {
                 className="flex-row items-center justify-center bg-white border border-secondary py-3.5 rounded-xl mt-3"
               >
                 {friendLoading ? (
-                  <ActivityIndicator size="small" color="#6FCF97" />
+                  <ActivityIndicator size="small" color="#3D8A5A" />
                 ) : (
                   <>
-                    <Ionicons name="person-add-outline" size={20} color="#6FCF97" />
+                    <Ionicons name="person-add-outline" size={20} color="#3D8A5A" />
                     <Text className="text-secondary text-[15px] font-semibold ml-2">
                       Add Friend
                     </Text>
@@ -290,7 +290,7 @@ export default function DogProfileScreen() {
 
             {friendship?.status === 'pending' && (
               <View className="flex-row items-center justify-center bg-border py-3.5 rounded-xl mt-3">
-                <Ionicons name="time-outline" size={20} color="#6B7280" />
+                <Ionicons name="time-outline" size={20} color="#6D6C6A" />
                 <Text className="text-text-secondary text-[15px] font-semibold ml-2">
                   {friendship.requester_id === userId ? 'Request Sent' : 'Request Pending'}
                 </Text>
@@ -299,7 +299,7 @@ export default function DogProfileScreen() {
 
             {friendship?.status === 'accepted' && (
               <View className="flex-row items-center justify-center bg-secondary/10 py-3.5 rounded-xl mt-3">
-                <Ionicons name="checkmark-circle" size={20} color="#6FCF97" />
+                <Ionicons name="checkmark-circle" size={20} color="#3D8A5A" />
                 <Text className="text-secondary text-[15px] font-semibold ml-2">
                   Friends
                 </Text>

@@ -35,6 +35,20 @@ export async function updateProfile(updates: { display_name?: string; bio?: stri
     data: updates,
   });
   if (error) throw error;
+
+  // Sync relevant fields to the profiles table so other users see them
+  const profileUpdates: Record<string, string> = {};
+  if (updates.display_name !== undefined) profileUpdates.display_name = updates.display_name;
+  if (updates.avatar_url !== undefined) profileUpdates.avatar_url = updates.avatar_url;
+
+  if (Object.keys(profileUpdates).length > 0) {
+    const { error: profileError } = await supabase
+      .from('profiles')
+      .update(profileUpdates)
+      .eq('id', data.user.id);
+    if (profileError) throw profileError;
+  }
+
   return data;
 }
 

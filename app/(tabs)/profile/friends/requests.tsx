@@ -102,7 +102,7 @@ export default function FriendRequestsScreen() {
         ListEmptyComponent={
           loading ? null : (
             <View className="items-center py-16">
-              <Ionicons name="mail-open-outline" size={48} color="#9CA3AF" />
+              <Ionicons name="mail-open-outline" size={48} color="#878685" />
               <Text className="text-base text-text-secondary mt-4">
                 No pending requests
               </Text>

@@ -26,7 +26,7 @@ export default function MessagesScreen() {
 
       {loading ? (
         <View className="flex-1 justify-center items-center">
-          <ActivityIndicator size="large" color="#4A90D9" />
+          <ActivityIndicator size="large" color="#3D8A5A" />
         </View>
       ) : (
         <FlatList

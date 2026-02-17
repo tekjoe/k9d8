@@ -20,7 +20,7 @@ export default function MessageBubble({ message, isOwn }: MessageBubbleProps) {
         className={`max-w-[80%] px-3.5 py-2.5 ${
           isOwn
             ? 'bg-secondary rounded-2xl rounded-br-md'
-            : 'bg-[#F0F0F0] rounded-2xl rounded-bl-md'
+            : 'bg-[#EDECEA] rounded-2xl rounded-bl-md'
         }`}
       >
         <Text

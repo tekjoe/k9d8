@@ -55,7 +55,7 @@ export function useRecentActivity(userId: string | undefined): UseRecentActivity
           subtitle: formatDistanceToNow(new Date(checkIn.checked_in_at), { addSuffix: true }),
           timestamp: new Date(checkIn.checked_in_at),
           icon: 'checkmark-circle',
-          iconColor: '#6FCF97',
+          iconColor: '#3D8A5A',
           iconBgColor: '#E8F5E9',
         });
       });
@@ -73,7 +73,7 @@ export function useRecentActivity(userId: string | undefined): UseRecentActivity
           subtitle: formatDistanceToNow(new Date(friendship.updated_at), { addSuffix: true }),
           timestamp: new Date(friendship.updated_at),
           icon: 'people',
-          iconColor: '#6FCF97',
+          iconColor: '#3D8A5A',
           iconBgColor: '#E8F5E9',
         });
       });
@@ -93,7 +93,7 @@ export function useRecentActivity(userId: string | undefined): UseRecentActivity
           subtitle: formatDistanceToNow(new Date(playdate.starts_at), { addSuffix: true }),
           timestamp: new Date(playdate.starts_at),
           icon: 'calendar',
-          iconColor: '#6FCF97',
+          iconColor: '#3D8A5A',
           iconBgColor: '#E8F5E9',
         });
       });

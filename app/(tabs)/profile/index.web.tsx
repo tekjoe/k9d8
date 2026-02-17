@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { SEOHead } from '@/src/components/seo';
 import {
   ActivityIndicator,
   Alert,
@@ -18,7 +19,7 @@ import { signOut } from '@/src/services/auth';
 import { useDogs } from '@/src/hooks/useDogs';
 import { useFriends } from '@/src/hooks/useFriends';
 import { useRecentActivity } from '@/src/hooks/useRecentActivity';
-import type { Dog } from '@/src/types/database';
+import type { Dog, Friendship, Profile } from '@/src/types/database';
 
 // Dog List Row Component
 interface DogListRowProps {
@@ -51,17 +52,17 @@ function DogListRow({ dog, onPress, showDivider = true }: DogListRowProps) {
           resizeMode="cover"
         />
         <View style={{ flex: 1 }}>
-          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1A2E', marginBottom: 2 }}>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 2 }}>
             {dog.name}
           </Text>
-          <Text style={{ fontSize: 14, color: '#6B7280' }}>
+          <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
             {subtitle || 'Mixed breed'}
           </Text>
         </View>
-        <Ionicons name="chevron-forward" size={20} color="#D1D5DB" />
+        <Ionicons name="chevron-forward" size={20} color="#D1D0CD" />
       </Pressable>
       {showDivider && (
-        <View style={{ height: 1, backgroundColor: '#E5E7EB', marginHorizontal: 16 }} />
+        <View style={{ height: 1, backgroundColor: '#E5E4E1', marginHorizontal: 16 }} />
       )}
     </>
   );
@@ -95,14 +96,14 @@ function ActivityItem({ icon, iconColor, iconBgColor, title, subtitle, showDivid
           <Ionicons name={icon} size={20} color={iconColor} />
         </View>
         <View style={{ flex: 1 }}>
-          <Text style={{ fontSize: 15, fontWeight: '500', color: '#1A1A2E', marginBottom: 2 }}>
+          <Text style={{ fontSize: 15, fontWeight: '500', color: '#1A1918', marginBottom: 2 }}>
             {title}
           </Text>
-          <Text style={{ fontSize: 13, color: '#6B7280' }}>{subtitle}</Text>
+          <Text style={{ fontSize: 13, color: '#6D6C6A' }}>{subtitle}</Text>
         </View>
       </View>
       {showDivider && (
-        <View style={{ height: 1, backgroundColor: '#E5E7EB', marginHorizontal: 16 }} />
+        <View style={{ height: 1, backgroundColor: '#E5E4E1', marginHorizontal: 16 }} />
       )}
     </>
   );
@@ -118,8 +119,8 @@ interface StatProps {
 function Stat({ value, label, compact }: StatProps) {
   return (
     <View style={{ alignItems: 'center' }}>
-      <Text style={{ fontSize: compact ? 20 : 24, fontWeight: '700', color: '#1A1A2E' }}>{value}</Text>
-      <Text style={{ fontSize: compact ? 11 : 13, color: '#6B7280', marginTop: 2 }}>{label}</Text>
+      <Text style={{ fontSize: compact ? 20 : 24, fontWeight: '700', color: '#1A1918' }}>{value}</Text>
+      <Text style={{ fontSize: compact ? 11 : 13, color: '#6D6C6A', marginTop: 2 }}>{label}</Text>
     </View>
   );
 }
@@ -173,7 +174,7 @@ function ProfileCard({
           height: avatarSize, 
           borderRadius: avatarSize / 2, 
           borderWidth: 3, 
-          borderColor: '#6FCF97',
+          borderColor: '#3D8A5A',
           padding: 3,
           marginBottom: isMobile ? 16 : 24,
         }}
@@ -190,10 +191,10 @@ function ProfileCard({
       </View>
 
       {/* Name & Handle */}
-      <Text style={{ fontSize: isMobile ? 20 : 24, fontWeight: '600', color: '#1A1A2E', marginBottom: 4 }}>
+      <Text style={{ fontSize: isMobile ? 20 : 24, fontWeight: '600', color: '#1A1918', marginBottom: 4 }}>
         {displayName}
       </Text>
-      <Text style={{ fontSize: 14, color: '#9CA3AF', marginBottom: 12 }}>
+      <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
         @{handle}
       </Text>
 
@@ -201,7 +202,7 @@ function ProfileCard({
       <Text 
         style={{ 
           fontSize: 14, 
-          color: '#6B7280', 
+          color: '#6D6C6A', 
           textAlign: 'center', 
           lineHeight: 21,
           marginBottom: isMobile ? 16 : 24,
@@ -221,6 +222,139 @@ function ProfileCard({
   );
 }
 
+// Friend Row Component (for accepted friends)
+function FriendRow({ friend, onPress, showDivider = true }: { friend: Profile; onPress: () => void; showDivider?: boolean }) {
+  return (
+    <>
+      <Pressable
+        onPress={onPress}
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 16,
+        }}
+      >
+        <Image
+          source={{
+            uri:
+              friend.avatar_url ||
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+          }}
+          style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
+          resizeMode="cover"
+        />
+        <View style={{ flex: 1 }}>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+            {friend.display_name || 'User'}
+          </Text>
+        </View>
+        <Ionicons name="chevron-forward" size={20} color="#D1D0CD" />
+      </Pressable>
+      {showDivider && (
+        <View style={{ height: 1, backgroundColor: '#E5E4E1', marginHorizontal: 16 }} />
+      )}
+    </>
+  );
+}
+
+// Pending Request Row Component
+function PendingRequestRow({
+  request,
+  variant,
+  onAccept,
+  onDecline,
+  showDivider = true,
+}: {
+  request: Friendship;
+  variant: 'received' | 'sent';
+  onAccept?: () => void;
+  onDecline?: () => void;
+  showDivider?: boolean;
+}) {
+  const [acting, setActing] = useState(false);
+  const person = variant === 'received' ? request.requester : request.addressee;
+
+  async function handleAction(action: (() => void) | undefined) {
+    if (!action) return;
+    setActing(true);
+    try {
+      await action();
+    } catch {
+      setActing(false);
+    }
+  }
+
+  return (
+    <>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 16,
+        }}
+      >
+        <Image
+          source={{
+            uri:
+              person?.avatar_url ||
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+          }}
+          style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
+          resizeMode="cover"
+        />
+        <View style={{ flex: 1 }}>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+            {person?.display_name || 'User'}
+          </Text>
+        </View>
+        {variant === 'received' ? (
+          <View style={{ flexDirection: 'row', gap: 8 }}>
+            <Pressable
+              onPress={() => handleAction(onAccept)}
+              disabled={acting}
+              style={{
+                backgroundColor: '#3D8A5A',
+                paddingHorizontal: 16,
+                paddingVertical: 8,
+                borderRadius: 9999,
+              }}
+            >
+              <Text style={{ color: '#FFFFFF', fontSize: 13, fontWeight: '600' }}>Accept</Text>
+            </Pressable>
+            <Pressable
+              onPress={() => handleAction(onDecline)}
+              disabled={acting}
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                paddingHorizontal: 16,
+                paddingVertical: 8,
+                borderRadius: 9999,
+              }}
+            >
+              <Text style={{ color: '#6D6C6A', fontSize: 13, fontWeight: '500' }}>Decline</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <View
+            style={{
+              backgroundColor: '#F5EFE0',
+              paddingHorizontal: 12,
+              paddingVertical: 6,
+              borderRadius: 9999,
+            }}
+          >
+            <Text style={{ color: '#B8893D', fontSize: 12, fontWeight: '600' }}>Pending</Text>
+          </View>
+        )}
+      </View>
+      {showDivider && (
+        <View style={{ height: 1, backgroundColor: '#E5E4E1', marginHorizontal: 16 }} />
+      )}
+    </>
+  );
+}
+
 export default function DesktopProfilePage() {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
@@ -230,7 +364,7 @@ export default function DesktopProfilePage() {
   const { session } = useAuth();
   const userId = session?.user?.id;
   const { dogs, loading } = useDogs(userId);
-  const { friends } = useFriends();
+  const { friends, pendingRequests, sentRequests, acceptFriendRequest, declineFriendRequest } = useFriends();
   const { activities, loading: activitiesLoading } = useRecentActivity(userId);
 
   const displayName = session?.user?.user_metadata?.display_name || 'Alex Johnson';
@@ -266,7 +400,9 @@ export default function DesktopProfilePage() {
   const friendsCount = friends.length;
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F7F8FA' }}>
+    <>
+    <SEOHead title="My Profile" description="Manage your k9d8 profile, dogs, and settings." url="/profile" />
+    <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
       {/* Left Sidebar - Hidden on mobile */}
       {showSidebar && <DesktopSidebar />}
 
@@ -282,23 +418,23 @@ export default function DesktopProfilePage() {
             paddingHorizontal: isMobile ? 20 : 40,
             paddingVertical: isMobile ? 16 : 24,
             borderBottomWidth: 1,
-            borderBottomColor: '#E5E7EB',
+            borderBottomColor: '#E5E4E1',
           }}
         >
-          <Text style={{ fontSize: isMobile ? 20 : 24, fontWeight: '600', color: '#1A1A2E' }}>
+          <Text style={{ fontSize: isMobile ? 20 : 24, fontWeight: '600', color: '#1A1918' }}>
             Profile
           </Text>
           <Pressable 
             onPress={handleEditProfile}
             style={{ 
               borderWidth: 1, 
-              borderColor: '#E5E7EB', 
+              borderColor: '#E5E4E1', 
               paddingHorizontal: isMobile ? 16 : 20, 
               paddingVertical: isMobile ? 8 : 10, 
               borderRadius: 9999,
             }}
           >
-            <Text style={{ fontSize: isMobile ? 14 : 15, fontWeight: '500', color: '#1A1A2E' }}>
+            <Text style={{ fontSize: isMobile ? 14 : 15, fontWeight: '500', color: '#1A1918' }}>
               Edit Profile
             </Text>
           </Pressable>
@@ -343,13 +479,13 @@ export default function DesktopProfilePage() {
                     marginBottom: 16,
                   }}
                 >
-                  <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '600', color: '#1A1A2E' }}>
+                  <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '600', color: '#1A1918' }}>
                     My Dogs
                   </Text>
                   <Pressable 
                     onPress={handleAddDog}
                     style={{ 
-                      backgroundColor: '#6FCF97', 
+                      backgroundColor: '#3D8A5A', 
                       paddingHorizontal: isMobile ? 16 : 20, 
                       paddingVertical: isMobile ? 8 : 10, 
                       borderRadius: 9999,
@@ -373,7 +509,7 @@ export default function DesktopProfilePage() {
                 >
                   {loading ? (
                     <View style={{ padding: 40, alignItems: 'center' }}>
-                      <ActivityIndicator size="small" color="#6FCF97" />
+                      <ActivityIndicator size="small" color="#3D8A5A" />
                     </View>
                   ) : dogs.length > 0 ? (
                     dogs.map((dog, index) => (
@@ -386,13 +522,13 @@ export default function DesktopProfilePage() {
                     ))
                   ) : (
                     <View style={{ padding: isMobile ? 32 : 40, alignItems: 'center' }}>
-                      <Text style={{ fontSize: 14, color: '#6B7280', marginBottom: 16 }}>
+                      <Text style={{ fontSize: 14, color: '#6D6C6A', marginBottom: 16 }}>
                         No dogs added yet
                       </Text>
                       <Pressable 
                         onPress={handleAddDog}
                         style={{ 
-                          backgroundColor: '#6FCF97', 
+                          backgroundColor: '#3D8A5A', 
                           paddingHorizontal: 20, 
                           paddingVertical: 10, 
                           borderRadius: 9999,
@@ -407,9 +543,128 @@ export default function DesktopProfilePage() {
                 </View>
               </View>
 
+              {/* My Friends Section */}
+              <View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    marginBottom: 16,
+                  }}
+                >
+                  <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '600', color: '#1A1918' }}>
+                    My Friends
+                  </Text>
+                  <Pressable
+                    onPress={() => router.push('/(tabs)/profile/friends')}
+                    style={{
+                      borderWidth: 1,
+                      borderColor: '#E5E4E1',
+                      paddingHorizontal: isMobile ? 16 : 20,
+                      paddingVertical: isMobile ? 8 : 10,
+                      borderRadius: 9999,
+                    }}
+                  >
+                    <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918' }}>View All</Text>
+                  </Pressable>
+                </View>
+
+                <View
+                  style={{
+                    backgroundColor: '#fff',
+                    borderRadius: 16,
+                    overflow: 'hidden',
+                    shadowColor: '#1A1918',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.03,
+                    shadowRadius: 12,
+                    elevation: 2,
+                  }}
+                >
+                  {/* Pending Received Requests */}
+                  {pendingRequests.length > 0 && (
+                    <>
+                      <View style={{ paddingHorizontal: 16, paddingTop: 16, paddingBottom: 8 }}>
+                        <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                          Requests Received
+                        </Text>
+                      </View>
+                      {pendingRequests.map((request, index) => (
+                        <PendingRequestRow
+                          key={request.id}
+                          request={request}
+                          variant="received"
+                          onAccept={() => acceptFriendRequest(request.id)}
+                          onDecline={() => declineFriendRequest(request.id)}
+                          showDivider={index < pendingRequests.length - 1 || sentRequests.length > 0 || friends.length > 0}
+                        />
+                      ))}
+                    </>
+                  )}
+
+                  {/* Pending Sent Requests */}
+                  {sentRequests.length > 0 && (
+                    <>
+                      <View style={{ paddingHorizontal: 16, paddingTop: 16, paddingBottom: 8 }}>
+                        <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                          Requests Sent
+                        </Text>
+                      </View>
+                      {sentRequests.map((request, index) => (
+                        <PendingRequestRow
+                          key={request.id}
+                          request={request}
+                          variant="sent"
+                          showDivider={index < sentRequests.length - 1 || friends.length > 0}
+                        />
+                      ))}
+                    </>
+                  )}
+
+                  {/* Accepted Friends */}
+                  {friends.length > 0 ? (
+                    <>
+                      {(pendingRequests.length > 0 || sentRequests.length > 0) && (
+                        <View style={{ paddingHorizontal: 16, paddingTop: 16, paddingBottom: 8 }}>
+                          <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                            Friends
+                          </Text>
+                        </View>
+                      )}
+                      {friends.slice(0, 5).map((friend, index) => (
+                        <FriendRow
+                          key={friend.id}
+                          friend={friend}
+                          onPress={() => router.push(`/users/${friend.id}`)}
+                          showDivider={index < Math.min(friends.length, 5) - 1}
+                        />
+                      ))}
+                      {friends.length > 5 && (
+                        <Pressable
+                          onPress={() => router.push('/(tabs)/profile/friends')}
+                          style={{ padding: 16, alignItems: 'center' }}
+                        >
+                          <Text style={{ fontSize: 14, fontWeight: '600', color: '#3D8A5A' }}>
+                            View all {friends.length} friends
+                          </Text>
+                        </Pressable>
+                      )}
+                    </>
+                  ) : pendingRequests.length === 0 && sentRequests.length === 0 ? (
+                    <View style={{ padding: isMobile ? 32 : 40, alignItems: 'center' }}>
+                      <Ionicons name="people-outline" size={36} color="#878685" style={{ marginBottom: 12 }} />
+                      <Text style={{ fontSize: 14, color: '#6D6C6A', textAlign: 'center' }}>
+                        No friends yet. Visit a dog profile to connect with other owners.
+                      </Text>
+                    </View>
+                  ) : null}
+                </View>
+              </View>
+
               {/* Recent Activity Section */}
               <View>
-                <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '600', color: '#1A1A2E', marginBottom: 16 }}>
+                <Text style={{ fontSize: isMobile ? 18 : 20, fontWeight: '600', color: '#1A1918', marginBottom: 16 }}>
                   Recent Activity
                 </Text>
 
@@ -427,7 +682,7 @@ export default function DesktopProfilePage() {
                 >
                   {activitiesLoading ? (
                     <View style={{ padding: 40, alignItems: 'center' }}>
-                      <ActivityIndicator size="small" color="#6FCF97" />
+                      <ActivityIndicator size="small" color="#3D8A5A" />
                     </View>
                   ) : activities.length > 0 ? (
                     activities.map((activity, index) => (
@@ -443,7 +698,7 @@ export default function DesktopProfilePage() {
                     ))
                   ) : (
                     <View style={{ padding: isMobile ? 32 : 40, alignItems: 'center' }}>
-                      <Text style={{ fontSize: 14, color: '#6B7280' }}>
+                      <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
                         No recent activity
                       </Text>
                     </View>
@@ -458,18 +713,19 @@ export default function DesktopProfilePage() {
                   paddingVertical: 14, 
                   borderRadius: 12, 
                   borderWidth: 1, 
-                  borderColor: '#EF4444',
+                  borderColor: '#B5725E',
                   backgroundColor: '#fff',
                   alignItems: 'center',
                   marginTop: 8,
                 }}
               >
-                <Text style={{ color: '#EF4444', fontSize: 16, fontWeight: '600' }}>Sign Out</Text>
+                <Text style={{ color: '#B5725E', fontSize: 16, fontWeight: '600' }}>Sign Out</Text>
               </Pressable>
             </View>
           </View>
         </ScrollView>
       </View>
     </View>
+    </>
   );
 }

@@ -34,6 +34,23 @@ export async function getPendingRequests(
 }
 
 /**
+ * Gets pending friend requests sent by the current user.
+ */
+export async function getSentRequests(
+  userId: string,
+): Promise<Friendship[]> {
+  const { data, error } = await supabase
+    .from('friendships')
+    .select(FRIENDSHIP_SELECT)
+    .eq('requester_id', userId)
+    .eq('status', 'pending')
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+  return data as Friendship[];
+}
+
+/**
  * Sends a friend request. Checks both directions to prevent duplicates.
  */
 export async function sendFriendRequest(

@@ -200,7 +200,7 @@ export default function EditProfileScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
   },
   // Header
   header: {
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     backgroundColor: '#fff',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
   },
   headerButton: {
     width: 60,
@@ -294,14 +294,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: Colors.light.text,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#E5E4E1',
   },
   bioInput: {
     height: 100,
     paddingTop: 14,
   },
   disabledInput: {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
     color: Colors.light.textSecondary,
   },
   characterCount: {

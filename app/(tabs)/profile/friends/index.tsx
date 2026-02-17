@@ -29,7 +29,7 @@ function FriendItem({ friend, onPress }: FriendItemProps) {
           {friend.display_name || 'User'}
         </Text>
       </View>
-      <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+      <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
     </Pressable>
   );
 }
@@ -53,7 +53,7 @@ export default function FriendsListScreen() {
               Pending Requests
             </Text>
           </View>
-          <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+          <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
         </Pressable>
       )}
 
@@ -69,7 +69,7 @@ export default function FriendsListScreen() {
         ListEmptyComponent={
           loading ? null : (
             <View className="items-center py-16">
-              <Ionicons name="people-outline" size={48} color="#9CA3AF" />
+              <Ionicons name="people-outline" size={48} color="#878685" />
               <Text className="text-base text-text-secondary mt-4 mb-2">
                 No friends yet
               </Text>

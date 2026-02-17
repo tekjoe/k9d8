@@ -64,11 +64,11 @@ function MapFallback({
             <Text style={styles.parkAddress} numberOfLines={1}>{park.address}</Text>
           ) : null}
           <View style={styles.parkRowMeta}>
-            <Ionicons name="paw" size={12} color="#2D8B57" />
+            <Ionicons name="paw" size={12} color="#3D8A5A" />
             <Text style={styles.parkPupCount}>{pupCount} {pupCount === 1 ? 'pup' : 'pups'} here</Text>
           </View>
         </View>
-        <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
+        <Ionicons name="chevron-forward" size={20} color="#878685" />
       </Pressable>
     );
   };
@@ -158,17 +158,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 16,
     paddingBottom: 8,
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#F5F4F1',
   },
   fallbackTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 4,
   },
   fallbackText: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     lineHeight: 18,
   },
   fallbackList: {
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E4E1',
   },
   parkRowContent: {
     flex: 1,
@@ -193,12 +193,12 @@ const styles = StyleSheet.create({
   parkName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#1A1918',
     marginBottom: 2,
   },
   parkAddress: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#6D6C6A',
     marginBottom: 4,
   },
   parkRowMeta: {
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
   },
   parkPupCount: {
     fontSize: 12,
-    color: '#2D8B57',
+    color: '#3D8A5A',
     fontWeight: '500',
   },
   map: {
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#2D8B57',
+    backgroundColor: '#3D8A5A',
     borderWidth: 3,
     borderColor: '#FFFFFF',
     shadowColor: '#000',
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#6FCF97',
+    backgroundColor: '#3D8A5A',
   },
   markerText: {
     color: '#fff',

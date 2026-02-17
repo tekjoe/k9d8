@@ -71,14 +71,14 @@ function ActionButton({ icon, label, onPress, variant = 'default' }: ActionButto
     <Pressable onPress={onPress} className="items-center">
       <View 
         className={`w-14 h-14 rounded-full justify-center items-center mb-2 ${
-          isActive ? 'bg-[#2D8B57]' : isPrimary ? 'bg-secondary' : 'bg-[#F0F0F0]'
+          isActive ? 'bg-[#3D8A5A]' : isPrimary ? 'bg-secondary' : 'bg-[#EDECEA]'
         }`}
       >
-        <Ionicons name={icon} size={22} color={isPrimary || isActive ? '#fff' : '#1A1A2E'} />
+        <Ionicons name={icon} size={22} color={isPrimary || isActive ? '#fff' : '#1A1918'} />
       </View>
       <Text 
         className={`text-[13px] font-medium ${
-          isActive ? 'text-[#2D8B57] font-semibold' : 'text-text-secondary'
+          isActive ? 'text-[#3D8A5A] font-semibold' : 'text-text-secondary'
         }`}
       >
         {label}
@@ -95,7 +95,7 @@ interface FeatureTagProps {
 function FeatureTag({ icon, label }: FeatureTagProps) {
   return (
     <View className="flex-row items-center bg-white px-4 py-2.5 rounded-full border border-border">
-      <Ionicons name={icon} size={16} color="#6B7280" style={{ marginRight: 8 }} />
+      <Ionicons name={icon} size={16} color="#6D6C6A" style={{ marginRight: 8 }} />
       <Text className="text-sm text-text">{label}</Text>
     </View>
   );
@@ -347,7 +347,7 @@ export default function ParkDetailScreen() {
   if (loading) {
     return (
       <View className="flex-1 justify-center items-center bg-background">
-        <ActivityIndicator size="large" color="#4A90D9" />
+        <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
@@ -357,7 +357,7 @@ export default function ParkDetailScreen() {
       <View className="flex-1 justify-center items-center bg-background px-6">
         <View className="items-center max-w-md">
           <View className="w-16 h-16 rounded-full bg-red-100 items-center justify-center mb-4">
-            <Ionicons name="alert-circle" size={32} color="#EF4444" />
+            <Ionicons name="alert-circle" size={32} color="#B5725E" />
           </View>
           <Text className="text-lg font-semibold text-text text-center mb-2">
             {error ?? 'Park not found'}
@@ -452,7 +452,7 @@ export default function ParkDetailScreen() {
           <Pressable onPress={handleOpenCheckIn} disabled={checkInLoading} className="items-center">
             <View 
               className={`w-14 h-14 rounded-full justify-center items-center mb-2 ${
-                userCheckIn ? 'bg-[#2D8B57]' : 'bg-secondary'
+                userCheckIn ? 'bg-[#3D8A5A]' : 'bg-secondary'
               }`}
             >
               {checkInLoading ? (
@@ -467,7 +467,7 @@ export default function ParkDetailScreen() {
             </View>
             <Text 
               className={`text-[13px] font-medium ${
-                userCheckIn ? 'text-[#2D8B57] font-semibold' : 'text-text-secondary'
+                userCheckIn ? 'text-[#3D8A5A] font-semibold' : 'text-text-secondary'
               }`}
             >
               {userCheckIn ? 'Checked In' : 'Check-in'}
@@ -497,7 +497,7 @@ export default function ParkDetailScreen() {
         <View className="mb-7 px-5">
           <Text className="text-lg font-bold text-text mb-4">Upcoming Play Dates</Text>
           {playdatesLoading ? (
-            <ActivityIndicator size="small" color="#4A90D9" />
+            <ActivityIndicator size="small" color="#3D8A5A" />
           ) : playdates.length > 0 ? (
             playdates.map((playdate) => (
               <PlaydateCard
@@ -537,7 +537,7 @@ export default function ParkDetailScreen() {
         <Pressable 
           onPress={handleOpenCheckIn}
           className={`py-4 rounded-xl items-center ${
-            userCheckIn ? 'bg-error' : 'bg-[#2D8B57]'
+            userCheckIn ? 'bg-error' : 'bg-[#3D8A5A]'
           }`}
         >
           <Text className="text-white text-base font-semibold">
@@ -586,7 +586,7 @@ export default function ParkDetailScreen() {
                   style={styles.modalCloseButton}
                   hitSlop={8}
                 >
-                  <Ionicons name="close" size={20} color="#6B7280" />
+                  <Ionicons name="close" size={20} color="#6D6C6A" />
                 </Pressable>
               </View>
 
@@ -613,7 +613,7 @@ export default function ParkDetailScreen() {
                         onPress={() => toggleDog(dog.id)}
                         className={`flex-row items-center p-3 rounded-xl mb-2.5 border-2 ${
                           isSelected 
-                            ? 'border-[#2D8B57] bg-[#F0FDF4]' 
+                            ? 'border-[#3D8A5A] bg-[#E8F0E8]' 
                             : 'border-transparent bg-background'
                         }`}
                       >
@@ -629,7 +629,7 @@ export default function ParkDetailScreen() {
                         <View
                           className={`w-6 h-6 rounded-md justify-center items-center border-2 ${
                             isSelected 
-                              ? 'bg-[#2D8B57] border-[#2D8B57]' 
+                              ? 'bg-[#3D8A5A] border-[#3D8A5A]' 
                               : 'bg-white border-border'
                           }`}
                         >
@@ -652,7 +652,7 @@ export default function ParkDetailScreen() {
                       onPress={() => setSelectedDuration(duration.value)}
                       className={`flex-1 min-w-[45%] py-3.5 px-4 rounded-xl items-center border-2 ${
                         selectedDuration === duration.value
-                          ? 'bg-[#2D8B57] border-[#2D8B57]'
+                          ? 'bg-[#3D8A5A] border-[#3D8A5A]'
                           : 'bg-background border-border'
                       }`}
                     >
@@ -711,7 +711,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#EDECEA',
     justifyContent: 'center',
     alignItems: 'center',
   },

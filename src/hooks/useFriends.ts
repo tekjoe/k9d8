@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase';
 import {
   getFriends,
   getPendingRequests,
+  getSentRequests,
   sendFriendRequest as sendFriendRequestService,
   acceptFriendRequest as acceptService,
   declineFriendRequest as declineService,
@@ -15,6 +16,7 @@ import type { RealtimeChannel } from '@supabase/supabase-js';
 interface UseFriendsReturn {
   friends: Profile[];
   pendingRequests: Friendship[];
+  sentRequests: Friendship[];
   pendingCount: number;
   loading: boolean;
   sendFriendRequest: (addresseeId: string) => Promise<void>;
@@ -30,18 +32,21 @@ export function useFriends(): UseFriendsReturn {
 
   const [friends, setFriends] = useState<Profile[]>([]);
   const [pendingRequests, setPendingRequests] = useState<Friendship[]>([]);
+  const [sentRequests, setSentRequests] = useState<Friendship[]>([]);
   const [loading, setLoading] = useState(true);
   const channelRef = useRef<RealtimeChannel | null>(null);
 
   const loadFriends = useCallback(async () => {
     if (!userId) return;
     try {
-      const [friendsList, pending] = await Promise.all([
+      const [friendsList, pending, sent] = await Promise.all([
         getFriends(userId),
         getPendingRequests(userId),
+        getSentRequests(userId),
       ]);
       setFriends(friendsList);
       setPendingRequests(pending);
+      setSentRequests(sent);
     } catch (err) {
       console.error('Failed to load friends:', err);
     } finally {
@@ -121,6 +126,7 @@ export function useFriends(): UseFriendsReturn {
   return {
     friends,
     pendingRequests,
+    sentRequests,
     pendingCount: pendingRequests.length,
     loading,
     sendFriendRequest,
