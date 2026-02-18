@@ -46,16 +46,15 @@ export default function DogParksDirectoryPage() {
 
   const totalParks = states.reduce((sum, s) => sum + s.count, 0);
 
-  // Filter states by search query, or show top states
+  // Filter states by search query, or show all states
   const maxPerCol = 5;
-  const colCount = isMobile ? 1 : Math.min(3, Math.ceil(states.length / maxPerCol));
-  const defaultCount = isMobile ? maxPerCol : colCount * maxPerCol;
   const filteredStates = search
     ? states.filter((s) => s.state.toLowerCase().includes(search.toLowerCase()))
-    : states.slice(0, defaultCount);
+    : states;
 
   // Split into columns with up to 5 states each
-  const columns = Array.from({ length: isMobile ? 1 : Math.ceil(filteredStates.length / maxPerCol) }, (_, i) =>
+  const colCount = Math.ceil(filteredStates.length / maxPerCol);
+  const columns = Array.from({ length: colCount }, (_, i) =>
     filteredStates.slice(i * maxPerCol, (i + 1) * maxPerCol)
   ).filter((col) => col.length > 0);
 
@@ -238,12 +237,14 @@ export default function DogParksDirectoryPage() {
                       </Text>
                     </View>
                   ) : (
-                    <View style={{ flexDirection: 'row', gap: 12 }}>
+                    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 12 }}>
                       {columns.map((col, colIdx) => (
                         <View
                           key={colIdx}
                           style={{
-                            flex: 1,
+                            flex: isMobile ? 1 : 0,
+                            flexBasis: isMobile ? '100%' : 'calc(33.333% - 8px)',
+                            minWidth: isMobile ? 'auto' : 280,
                             backgroundColor: '#FFFFFF',
                             borderRadius: 16,
                             overflow: 'hidden',
@@ -285,14 +286,7 @@ export default function DogParksDirectoryPage() {
                     </View>
                   )}
 
-                  {/* View all link - mobile */}
-                  {isMobile && !search && states.length > filteredStates.length && (
-                    <Pressable onPress={() => setSearch(' ')}>
-                      <Text style={{ fontSize: 13, fontWeight: '500', color: '#3D8A5A' }}>
-                        View all states →
-                      </Text>
-                    </Pressable>
-                  )}
+                  {/* Showing all states */}
                 </View>
 
                 {/* CTA Banner */}

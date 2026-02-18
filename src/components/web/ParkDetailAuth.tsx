@@ -380,7 +380,7 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
   }
 
   const parkDescription = park.description
-    || `Visit ${park.name}${park.address ? ` in ${park.address}` : ''}. ${park.is_fenced ? 'Fenced off-leash area' : 'Open dog park'} with amenities for dogs and owners. Schedule a playdate today!`;
+    || `Visit ${park.name}. ${park.is_fenced ? 'Fenced off-leash area' : 'Open dog park'} with amenities for dogs and owners. Schedule a playdate today!`;
 
   return (
     <>
@@ -450,9 +450,7 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
                 >
                   {park.name}
                 </Text>
-                <Text style={{ fontSize: 15, color: '#6D6C6A' }}>
-                  {park.address || 'San Francisco, CA'}
-                </Text>
+                {/* Address hidden pending data remediation */}
               </View>
 
               {/* Action Buttons */}

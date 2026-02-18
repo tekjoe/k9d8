@@ -317,12 +317,7 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
               >
                 {park.name}
               </Text>
-              {park.address && (
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <Ionicons name="location-outline" size={isMobile ? 14 : 16} color="#9C9B99" />
-                  <Text style={{ fontSize: isMobile ? 13 : 14, color: '#6D6C6A' }}>{park.address}</Text>
-                </View>
-              )}
+              {/* Address hidden pending data remediation */}
             </View>
 
             {/* Action Buttons */}
@@ -342,20 +337,6 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                 >
                   <Text style={{ fontSize: 13, fontWeight: '600', color: '#1A1918' }}>Directions</Text>
                 </Pressable>
-                <Pressable
-                  onPress={() => {}}
-                  style={{
-                    flex: 1,
-                    borderWidth: 1.5,
-                    borderColor: '#D1D0CD',
-                    borderRadius: 100,
-                    paddingVertical: 14,
-                    alignItems: 'center',
-                    backgroundColor: '#FFFFFF',
-                  }}
-                >
-                  <Text style={{ fontSize: 13, fontWeight: '600', color: '#1A1918' }}>Share</Text>
-                </Pressable>
               </View>
             ) : (
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -371,19 +352,6 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                   }}
                 >
                   <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Directions</Text>
-                </Pressable>
-                <Pressable
-                  onPress={() => {}}
-                  style={{
-                    borderWidth: 1.5,
-                    borderColor: '#D1D0CD',
-                    borderRadius: 100,
-                    paddingHorizontal: 24,
-                    paddingVertical: 14,
-                    backgroundColor: '#FFFFFF',
-                  }}
-                >
-                  <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Share</Text>
                 </Pressable>
                 <Pressable
                   onPress={() => router.push('/(auth)/sign-up')}
@@ -409,7 +377,181 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
               {divider}
               {featuresSection}
               {featuresSection && divider}
+
+              {/* Location / Map */}
+              <View style={{ gap: 14 }}>
+                <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', letterSpacing: -0.3 }}>
+                  Location
+                </Text>
+                <Pressable
+                  onPress={() => Linking.openURL(directionsUrl)}
+                  style={{
+                    width: '100%',
+                    height: 200,
+                    borderRadius: 16,
+                    overflow: 'hidden',
+                    position: 'relative',
+                  }}
+                >
+                  <Map
+                    initialViewState={{
+                      latitude: park.latitude,
+                      longitude: park.longitude,
+                      zoom: 14,
+                    }}
+                    style={{ width: '100%', height: '100%' }}
+                    mapStyle="mapbox://styles/mapbox/outdoors-v12"
+                    mapboxAccessToken={process.env.EXPO_PUBLIC_MAPBOX_TOKEN ?? ''}
+                    interactive={false}
+                    attributionControl={false}
+                  >
+                    <Marker latitude={park.latitude} longitude={park.longitude} anchor="center">
+                      <div
+                        style={{
+                          width: 28,
+                          height: 28,
+                          borderRadius: 14,
+                          backgroundColor: '#3D8A5A',
+                          border: '3px solid #FFFFFF',
+                          boxShadow: '0 2px 4px rgba(0,0,0,0.25)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <span style={{ color: '#fff', fontSize: 12 }}>🐾</span>
+                      </div>
+                    </Marker>
+                  </Map>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      bottom: 12,
+                      right: 12,
+                      width: 'max-content',
+                      backgroundColor: 'rgba(255,255,255,0.9)',
+                      borderRadius: 12,
+                      paddingVertical: 10,
+                      paddingHorizontal: 14,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      gap: 4,
+                    }}
+                  >
+                    <Ionicons name="navigate-outline" size={14} color="#3D8A5A" />
+                    <Text style={{ fontSize: 12, color: '#3D8A5A', fontWeight: '500' }}>Directions</Text>
+                  </View>
+                </Pressable>
+              </View>
+
+              {divider}
               {ctaCard}
+              {divider}
+
+              {/* Pups at the Park */}
+              <View
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 16,
+                  padding: 20,
+                  gap: 14,
+                  shadowColor: '#1A1918',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.03,
+                  shadowRadius: 12,
+                }}
+              >
+                <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Pups at the Park Now</Text>
+                {activeDogs.length === 0 ? (
+                  <View style={{ alignItems: 'center', gap: 8, paddingVertical: 14 }}>
+                    <Ionicons name="paw" size={28} color="#9C9B99" />
+                    <Text style={{ fontSize: 12, color: '#9C9B99', textAlign: 'center' }}>
+                      Sign up to see who's here!
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{ gap: 12 }}>
+                    {activeDogs.map((dog) => (
+                      <View key={dog.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                        <Image
+                          source={{
+                            uri:
+                              dog.photo_url ||
+                              'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+                          }}
+                          style={{
+                            width: 36,
+                            height: 36,
+                            borderRadius: 18,
+                            borderWidth: 2,
+                            borderColor: '#E5E4E1',
+                          }}
+                          resizeMode="cover"
+                        />
+                        <View style={{ flex: 1, gap: 1 }}>
+                          <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{dog.name}</Text>
+                          <Text style={{ fontSize: 11, color: '#9C9B99' }}>{dog.breed || 'Dog'}</Text>
+                        </View>
+                      </View>
+                    ))}
+                  </View>
+                )}
+              </View>
+
+              {/* Nearby Parks */}
+              {nearbyParks.length > 0 && (
+                <View
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 16,
+                    overflow: 'hidden',
+                    shadowColor: '#1A1918',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.03,
+                    shadowRadius: 12,
+                  }}
+                >
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      paddingVertical: 14,
+                      paddingHorizontal: 20,
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#E5E4E1',
+                    }}
+                  >
+                    <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Nearby Parks</Text>
+                    <Pressable onPress={() => router.push(`/dog-parks/${stateSlug}` as any)}>
+                      <Text style={{ fontSize: 12, fontWeight: '500', color: '#3D8A5A' }}>View All</Text>
+                    </Pressable>
+                  </View>
+                  {nearbyParks.map((np, i) => (
+                    <Pressable
+                      key={np.id}
+                      onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(np.name)}` as any)}
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: 10,
+                        paddingVertical: 12,
+                        paddingHorizontal: 20,
+                        ...(i < nearbyParks.length - 1 && {
+                          borderBottomWidth: 1,
+                          borderBottomColor: '#E5E4E1',
+                        }),
+                      }}
+                    >
+                      <Ionicons name="location" size={14} color="#9C9B99" />
+                      <View style={{ flex: 1, gap: 2 }}>
+                        <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{np.name}</Text>
+                        <Text style={{ fontSize: 11, color: '#9C9B99' }}>{np.city || ''}</Text>
+                      </View>
+                    </Pressable>
+                  ))}
+                </View>
+              )}
             </View>
           ) : (
             /* ──── Tablet+: Two Columns ──── */
@@ -479,26 +621,19 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                       style={{
                         position: 'absolute',
                         bottom: 16,
-                        left: 16,
                         right: 16,
+                        width: 'max-content',
                         backgroundColor: 'rgba(255,255,255,0.9)',
                         borderRadius: 12,
                         paddingVertical: 12,
                         paddingHorizontal: 16,
                         flexDirection: 'row',
                         alignItems: 'center',
-                        justifyContent: 'space-between',
+                        gap: 4,
                       }}
                     >
-                      <View style={{ flex: 1, gap: 2 }}>
-                        <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }} numberOfLines={1}>
-                          {park.address || `${park.latitude.toFixed(4)}, ${park.longitude.toFixed(4)}`}
-                        </Text>
-                      </View>
-                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginLeft: 12 }}>
-                        <Ionicons name="navigate-outline" size={14} color="#3D8A5A" />
-                        <Text style={{ fontSize: 12, color: '#3D8A5A', fontWeight: '500' }}>Directions</Text>
-                      </View>
+                      <Ionicons name="navigate-outline" size={14} color="#3D8A5A" />
+                      <Text style={{ fontSize: 12, color: '#3D8A5A', fontWeight: '500' }}>Directions</Text>
                     </View>
                   </Pressable>
                 </View>

@@ -397,14 +397,7 @@ export default function DesktopExploreScreen() {
                 </Pressable>
               </View>
 
-              {selectedPark.address && (
-                <View className="flex-row items-start mb-3">
-                  <Ionicons name="location-outline" size={16} color="#6D6C6A" />
-                  <Text className="text-sm text-text-secondary ml-1 flex-1">
-                    {selectedPark.address}
-                  </Text>
-                </View>
-              )}
+              {/* Address hidden pending data remediation */}
 
               <View className="flex-row items-center mb-3">
                 <Ionicons name="paw" size={16} color="#3D8A5A" />

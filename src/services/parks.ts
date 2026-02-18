@@ -251,6 +251,7 @@ export function stateNameToAbbrev(name: string): string | null {
 
 /**
  * Extracts a state slug from a park's state/city fields.
+ * Returns full state slug like "wisconsin" instead of abbreviation "wi".
  * Handles messy data like "WI 53711" or swapped city/state.
  */
 export function getParkStateSlug(park: { city?: string | null; state?: string | null }): string | null {
@@ -258,12 +259,14 @@ export function getParkStateSlug(park: { city?: string | null; state?: string | 
   // "WI" or "WI 53711"
   if (/^[A-Z]{2}(\s|$)/.test(st)) {
     const abbrev = st.slice(0, 2);
-    return abbrev.toLowerCase();
+    const stateName = STATE_NAMES[abbrev];
+    return stateName ? stateName.toLowerCase().replace(/\s+/g, '-') : null;
   }
   // Zip-only: city might hold state abbrev (swapped data)
   const city = park.city?.trim() ?? '';
   if (/^\d+$/.test(st) && /^[A-Z]{2}$/.test(city)) {
-    return city.toLowerCase();
+    const stateName = STATE_NAMES[city];
+    return stateName ? stateName.toLowerCase().replace(/\s+/g, '-') : null;
   }
   return null;
 }
@@ -271,19 +274,37 @@ export function getParkStateSlug(park: { city?: string | null; state?: string | 
 /**
  * Fetches distinct states with total park counts.
  * Used for the dog parks directory "Browse by State" section.
+ * Uses pagination to fetch all parks (API has 1000 row limit per request).
  */
 export async function getParkStateCounts(): Promise<
   Array<{ state: string; count: number }>
 > {
-  const { data, error } = await supabase
-    .from('parks')
-    .select('city, state')
-    .not('state', 'is', null);
+  const allRows: { city: string | null; state: string | null }[] = [];
+  const batchSize = 1000;
+  let offset = 0;
+  let hasMore = true;
 
-  if (error) throw error;
+  // Fetch all parks in batches
+  while (hasMore) {
+    const { data, error } = await supabase
+      .from('parks')
+      .select('city, state')
+      .not('state', 'is', null)
+      .range(offset, offset + batchSize - 1);
+
+    if (error) throw error;
+    
+    if (data && data.length > 0) {
+      allRows.push(...data);
+      offset += batchSize;
+      hasMore = data.length === batchSize;
+    } else {
+      hasMore = false;
+    }
+  }
 
   const counts = new Map<string, number>();
-  for (const row of data ?? []) {
+  for (const row of allRows) {
     const abbrev = extractStateAbbrev(row);
     if (!abbrev || !STATE_NAMES[abbrev]) continue;
     const fullName = STATE_NAMES[abbrev];
@@ -292,7 +313,7 @@ export async function getParkStateCounts(): Promise<
 
   return Array.from(counts.entries())
     .map(([state, count]) => ({ state, count }))
-    .sort((a, b) => b.count - a.count);
+    .sort((a, b) => a.state.localeCompare(b.state)); // Sort alphabetically
 }
 
 /**

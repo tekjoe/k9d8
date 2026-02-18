@@ -81,11 +81,7 @@ function ParkCard({ park, onPress }: { park: Park; onPress: () => void }) {
         <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }} numberOfLines={1}>
           {park.name}
         </Text>
-        {park.address && (
-          <Text style={{ fontSize: 13, color: '#6D6C6A' }} numberOfLines={1}>
-            {park.address}
-          </Text>
-        )}
+        {/* Address hidden pending data remediation */}
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 4 }}>
           <Ionicons name="paw" size={14} color="#3D8A5A" />
           <Text style={{ fontSize: 12, fontWeight: '500', color: '#3D8A5A' }}>View park details</Text>

@@ -131,11 +131,7 @@ function ParkCard({ park, pupCount, distanceKm, onPress }: ParkCardProps) {
             </Text>
           )}
         </View>
-        {park.address && (
-          <Text style={{ fontSize: 12, color: '#6D6C6A', marginBottom: 8 }} numberOfLines={1}>
-            {park.address}
-          </Text>
-        )}
+        {/* Address hidden pending data remediation */}
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Ionicons name="paw" size={14} color="#3D8A5A" />
           <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>

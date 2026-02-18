@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, Pressable, ScrollView, useWindowDimensions } from 'react-native';
+import { View, Text, Pressable, ScrollView, Image, useWindowDimensions } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
 import Markdown from 'react-markdown';
 import { SEOHead, StructuredData, blogPostingSchema, breadcrumbSchema } from '@/src/components/seo';
 import { blogPosts } from '@/content/blog';
@@ -17,7 +16,7 @@ function Container({ children, style }: { children: React.ReactNode; style?: any
   return (
     <View
       style={[
-        { width: '100%', maxWidth: MAX_WIDTH, marginHorizontal: 'auto', paddingHorizontal: isMobile ? 24 : 48 },
+        { width: '100%', maxWidth: MAX_WIDTH, marginHorizontal: 'auto', paddingHorizontal: isMobile ? 20 : 48 },
         style,
       ]}
     >
@@ -46,8 +45,8 @@ export default function BlogPostPage() {
     );
   }
 
-  // Strip the H1 from markdown since we render the title separately
   const content = markdown.replace(/^#\s+.+\n+/, '');
+  const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
     <>
@@ -68,69 +67,207 @@ export default function BlogPostPage() {
         <NavBar />
 
         <View role="main">
-          {/* Breadcrumb */}
-          <Container>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingVertical: 8 }}>
-              <Pressable onPress={() => router.push('/blog' as any)}>
-                <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '500' }}>Blog</Text>
-              </Pressable>
-              <Ionicons name="chevron-forward" size={12} color="#878685" />
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }} numberOfLines={1}>
-                {post.title}
-              </Text>
-            </View>
-          </Container>
-
-          {/* Article Header */}
-          <View style={{ width: '100%', paddingVertical: isMobile ? 24 : 40 }}>
-            <Container style={{ gap: 16, maxWidth: 720 }}>
-              <Text style={{ fontSize: 12, color: '#878685', fontWeight: '500' }}>
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-                {' · '}
-                {post.author}
-              </Text>
-              <Text
-                role="heading"
-                aria-level={1}
-                style={{
-                  fontSize: isMobile ? 32 : 42,
-                  fontWeight: '700',
-                  color: '#1A1918',
-                  lineHeight: isMobile ? 38 : 50,
-                }}
-              >
-                {post.title}
-              </Text>
-              <Text style={{ fontSize: 18, color: '#6D6C6A', lineHeight: 28 }}>
-                {post.description}
-              </Text>
-            </Container>
-          </View>
-
-          {/* Article Body */}
-          <View style={{ width: '100%', paddingBottom: 60 }}>
-            <Container style={{ maxWidth: 720 }}>
-              <View
-                style={{
-                  backgroundColor: '#fff',
-                  borderRadius: 16,
-                  padding: isMobile ? 24 : 40,
-                  shadowColor: '#1A1918',
-                  shadowOffset: { width: 0, height: 2 },
-                  shadowOpacity: 0.03,
-                  shadowRadius: 12,
-                }}
-              >
-                <div className="blog-content">
-                  <Markdown>{content}</Markdown>
-                </div>
+          {/* Breadcrumbs */}
+          <View style={{ backgroundColor: '#FAFAF8', width: '100%' }}>
+            <Container style={{ paddingVertical: 16 }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Pressable onPress={() => router.push('/blog' as any)}>
+                  <Text style={{ fontSize: 13, fontWeight: '500', color: '#3D8A5A' }}>Blog</Text>
+                </Pressable>
+                <Text style={{ fontSize: 13, color: '#9C9B99' }}>›</Text>
+                <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }} numberOfLines={1}>
+                  {post.title}
+                </Text>
               </View>
             </Container>
           </View>
+
+          {/* Article Header */}
+          <View style={{ backgroundColor: '#FAFAF8', width: '100%', paddingBottom: isMobile ? 32 : 40 }}>
+            <Container style={{ alignItems: 'center', gap: 20 }}>
+              <View style={{ alignItems: 'center', gap: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                  <Text style={{ fontSize: 13, color: '#9C9B99' }}>
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </Text>
+                  <Text style={{ fontSize: 13, color: '#9C9B99' }}>·</Text>
+                  <Text style={{ fontSize: 13, color: '#9C9B99' }}>{post.author}</Text>
+                </View>
+                <Text
+                  role="heading"
+                  aria-level={1}
+                  style={{
+                    fontSize: isMobile ? 28 : 40,
+                    fontWeight: '700',
+                    color: '#1A1918',
+                    lineHeight: isMobile ? 32 : 46,
+                    textAlign: 'center',
+                  }}
+                >
+                  {post.title}
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 17,
+                    color: '#6D6C6A',
+                    lineHeight: 27,
+                    textAlign: 'center',
+                    maxWidth: 680,
+                  }}
+                >
+                  {post.description}
+                </Text>
+              </View>
+            </Container>
+          </View>
+
+          {/* Hero Image */}
+          <Container style={{ paddingTop: isMobile ? 24 : 0, paddingBottom: isMobile ? 24 : 48 }}>
+            <View
+              style={{
+                width: '100%',
+                height: 420,
+                borderRadius: 20,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                source={{ uri: post.image_url || 'https://images.unsplash.com/photo-1606477787610-a3400b291eca?w=1080' }}
+                style={{ width: '100%', height: '100%' }}
+                resizeMode="cover"
+              />
+            </View>
+          </Container>
+
+          {/* Content Area */}
+          <Container style={{ paddingBottom: 60 }}>
+            <View style={{ flexDirection: isMobile ? 'column' : 'row', gap: 48 }}>
+              {/* Article Column */}
+              <View style={{ flex: 1, gap: 32 }}>
+                <View
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 20,
+                    padding: isMobile ? 24 : 40,
+                    shadowColor: '#1A1918',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.06,
+                    shadowRadius: 12,
+                  }}
+                >
+                  <div className="blog-content">
+                    <Markdown>{content}</Markdown>
+                  </div>
+                </View>
+              </View>
+
+              {/* Sidebar */}
+              {!isMobile && (
+                <View style={{ width: 340, gap: 24 }}>
+                  {/* CTA Card */}
+                  <View
+                    style={{
+                      backgroundColor: '#3D8A5A',
+                      borderRadius: 16,
+                      padding: 24,
+                      gap: 16,
+                    }}
+                  >
+                    <View style={{ alignItems: 'center', gap: 16 }}>
+                      <Text style={{ fontSize: 28, color: '#FFFFFF' }}>🐕</Text>
+                      <Text style={{ fontSize: 18, fontWeight: '600', color: '#FFFFFF', textAlign: 'center' }}>
+                        Find Dog Parks Near You
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 13,
+                          color: 'rgba(255,255,255,0.8)',
+                          textAlign: 'center',
+                          lineHeight: 20,
+                        }}
+                      >
+                        Discover off-leash parks, check in, and meet other dog owners in your area.
+                      </Text>
+                      <Pressable
+                        style={{
+                          backgroundColor: '#FFFFFF',
+                          paddingVertical: 12,
+                          paddingHorizontal: 24,
+                          borderRadius: 100,
+                          width: '100%',
+                        }}
+                      >
+                        <Text style={{ fontSize: 14, fontWeight: '600', color: '#3D8A5A', textAlign: 'center' }}>
+                          Get Started Free
+                        </Text>
+                      </Pressable>
+                    </View>
+                  </View>
+
+                  {/* Related Posts */}
+                  {relatedPosts.length > 0 && (
+                    <View
+                      style={{
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: 16,
+                        overflow: 'hidden',
+                        shadowColor: '#1A1918',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: 0.06,
+                        shadowRadius: 12,
+                      }}
+                    >
+                      <View
+                        style={{
+                          paddingVertical: 18,
+                          paddingHorizontal: 24,
+                          borderBottomWidth: 1,
+                          borderBottomColor: '#E5E4E1',
+                        }}
+                      >
+                        <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Related Posts</Text>
+                      </View>
+                      {relatedPosts.map((relatedPost, index) => (
+                        <Pressable
+                          key={relatedPost.slug}
+                          onPress={() => router.push(`/blog/${relatedPost.slug}` as any)}
+                          style={{
+                            paddingVertical: 16,
+                            paddingHorizontal: 24,
+                            borderBottomWidth: index < relatedPosts.length - 1 ? 1 : 0,
+                            borderBottomColor: '#E5E4E1',
+                          }}
+                        >
+                          <Text
+                            style={{
+                              fontSize: 14,
+                              fontWeight: '500',
+                              color: '#1A1918',
+                              lineHeight: 20,
+                            }}
+                            numberOfLines={2}
+                          >
+                            {relatedPost.title}
+                          </Text>
+                          <Text style={{ fontSize: 12, color: '#9C9B99', marginTop: 4 }}>
+                            {new Date(relatedPost.date).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  )}
+                </View>
+              )}
+            </View>
+          </Container>
         </View>
 
         <View style={{ flex: 1 }} />

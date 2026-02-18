@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
     <View
       style={{
@@ -23,7 +26,9 @@ export default function Footer() {
         <Text style={{ fontSize: 12, color: '#9C9B99' }}>© 2026 All rights reserved.</Text>
       </View>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
-        <Text style={{ fontSize: 12, fontWeight: '500', color: '#9C9B99' }}>Privacy</Text>
+        <Pressable onPress={() => router.push('/privacy' as any)}>
+          <Text style={{ fontSize: 12, fontWeight: '500', color: '#9C9B99' }}>Privacy</Text>
+        </Pressable>
         <Text style={{ fontSize: 12, fontWeight: '500', color: '#9C9B99' }}>Terms</Text>
         <Text style={{ fontSize: 12, fontWeight: '500', color: '#9C9B99' }}>Contact</Text>
       </View>
