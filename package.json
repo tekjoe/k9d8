@@ -9,8 +9,8 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "generate:sitemap": "node --env-file=.env scripts/generate-sitemap.js",
-    "build:web": "node --env-file=.env scripts/generate-sitemap.js && expo export --platform web",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "build:web": "node scripts/generate-sitemap.js && expo export --platform web",
     "lint": "expo lint"
   },
   "dependencies": {
@@ -69,6 +69,7 @@
     "@types/aes-js": "^3.1.4",
     "@types/mapbox-gl": "^3.4.1",
     "@types/react": "~19.1.0",
+    "dotenv": "^17.3.1",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
     "typescript": "~5.9.2"

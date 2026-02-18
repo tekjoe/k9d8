@@ -2,12 +2,16 @@
  * Generates a dynamic sitemap.xml from static routes, blog posts, and Supabase park state data.
  *
  * Usage:
- *   node --env-file=.env scripts/generate-sitemap.js
+ *   node scripts/generate-sitemap.js
  *
  * Environment variables required:
  *   EXPO_PUBLIC_SUPABASE_URL
  *   EXPO_PUBLIC_SUPABASE_ANON_KEY
  */
+
+// Load .env file if it exists (for local development)
+// On Vercel, environment variables are already injected
+require('dotenv').config();
 
 const fs = require('fs');
 const path = require('path');
