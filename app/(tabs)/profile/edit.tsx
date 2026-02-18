@@ -1,28 +1,25 @@
 import React, { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   Image,
   Pressable,
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   View,
+  Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
-
 import { useAuth } from '@/src/hooks/useAuth';
 import { updateProfile, uploadUserAvatar } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
 
 export default function EditProfileScreen() {
   const { session, refreshSession } = useAuth();
-  const insets = useSafeAreaInsets();
   const [isSaving, setIsSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const [displayName, setDisplayName] = useState(
     session?.user?.user_metadata?.display_name || ''
@@ -38,21 +35,21 @@ export default function EditProfileScreen() {
 
   const handleSave = useCallback(async () => {
     if (!displayName.trim()) {
-      Alert.alert('Error', 'Please enter your name');
+      setError('Please enter your name');
       return;
     }
 
     const userId = session?.user?.id;
     if (!userId) {
-      Alert.alert('Error', 'You must be signed in');
+      setError('You must be signed in');
       return;
     }
 
     setIsSaving(true);
+    setError(null);
     try {
       let finalAvatarUrl = avatarUrl.trim() || undefined;
 
-      // Upload new avatar if one was selected
       if (localAvatarUri) {
         setIsUploadingAvatar(true);
         try {
@@ -68,15 +65,11 @@ export default function EditProfileScreen() {
         avatar_url: finalAvatarUrl,
       });
       
-      // Refresh the session to get updated user metadata
       await refreshSession?.();
-      
-      Alert.alert('Success', 'Profile updated successfully', [
-        { text: 'OK', onPress: () => router.back() },
-      ]);
+      router.back();
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to update profile';
-      Alert.alert('Error', message);
+      setError(message);
     } finally {
       setIsSaving(false);
     }
@@ -100,219 +93,206 @@ export default function EditProfileScreen() {
   }, []);
 
   return (
-    <View style={[styles.container, { paddingTop: insets.top }]}>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Header */}
-      <View style={styles.header}>
-        <Pressable onPress={handleBack} style={styles.headerButton}>
+      <View 
+        style={{ 
+          flexDirection: 'row', 
+          alignItems: 'center', 
+          justifyContent: 'space-between',
+          backgroundColor: '#fff',
+          paddingHorizontal: 16,
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
+        }}
+      >
+        <Pressable 
+          onPress={handleBack}
+          style={{ width: 40, height: 40, justifyContent: 'center' }}
+        >
           <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
-        <Text style={styles.headerTitle}>Edit Profile</Text>
-        <Pressable 
-          onPress={handleSave} 
-          style={[styles.headerButton, isSaving && styles.headerButtonDisabled]}
-          disabled={isSaving}
-        >
+        <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918' }}>
+          Edit Profile
+        </Text>
+        <Pressable onPress={handleSave} disabled={isSaving}>
           {isSaving ? (
-            <ActivityIndicator size="small" color={Colors.light.secondary} />
+            <ActivityIndicator size="small" color="#3D8A5A" />
           ) : (
-            <Text style={styles.saveButton}>Save</Text>
+            <Text style={{ fontSize: 15, fontWeight: '600', color: '#3D8A5A' }}>
+              Save
+            </Text>
           )}
         </Pressable>
       </View>
 
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.content}
-        showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
-      >
-        {/* Avatar Section */}
-        <View style={styles.avatarSection}>
-          <View style={styles.avatarContainer}>
-            <Image
-              source={{
-                uri:
-                  localAvatarUri ||
-                  avatarUrl ||
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-              }}
-              style={styles.avatar}
-              resizeMode="cover"
-            />
-            <Pressable style={styles.changePhotoButton} onPress={handleChangePhoto}>
-              {isUploadingAvatar ? (
-                <ActivityIndicator size="small" color="#fff" />
-              ) : (
-                <Ionicons name="camera" size={20} color="#fff" />
-              )}
-            </Pressable>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 24 }}>
+        {/* Error */}
+        {error && (
+          <View 
+            style={{ 
+              backgroundColor: '#F5E8E3', 
+              padding: 12, 
+              borderRadius: 8, 
+              marginBottom: 24,
+            }}
+          >
+            <Text style={{ color: '#DC2626', fontSize: 14 }}>{error}</Text>
           </View>
+        )}
+
+        {/* Avatar */}
+        <View style={{ alignItems: 'center', marginBottom: 32 }}>
+          <View style={{ position: 'relative' }}>
+            <View 
+              style={{ 
+                width: 120, 
+                height: 120, 
+                borderRadius: 60, 
+                borderWidth: 3, 
+                borderColor: '#E5E4E1',
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                source={{
+                  uri:
+                    localAvatarUri ||
+                    avatarUrl ||
+                    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
+                }}
+                style={{ width: '100%', height: '100%' }}
+                resizeMode="cover"
+              />
+            </View>
+            {isUploadingAvatar && (
+              <View 
+                style={{ 
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: 'rgba(0,0,0,0.5)',
+                  borderRadius: 60,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <ActivityIndicator size="large" color="#fff" />
+              </View>
+            )}
+          </View>
+
+          <Pressable 
+            onPress={handleChangePhoto}
+            style={{ 
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: 6,
+              backgroundColor: '#EDECEA',
+              paddingHorizontal: 16,
+              paddingVertical: 8,
+              borderRadius: 9999,
+              marginTop: 16,
+            }}
+          >
+            <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+            <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>
+              Change Photo
+            </Text>
+          </Pressable>
+
           {localAvatarUri && (
-            <Text style={styles.newPhotoText}>New photo selected - tap Save to upload</Text>
+            <Text style={{ fontSize: 12, color: '#3D8A5A', marginTop: 8 }}>
+              New photo selected
+            </Text>
           )}
         </View>
 
-        {/* Form Fields */}
-        <View style={styles.form}>
-          <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>Name</Text>
+        {/* Form */}
+        <View style={{ gap: 20 }}>
+          {/* Name Field */}
+          <View>
+            <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
+              Name
+            </Text>
             <TextInput
-              style={styles.input}
+              style={{
+                backgroundColor: '#fff',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 16,
+                color: '#1A1918',
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+              }}
               value={displayName}
               onChangeText={setDisplayName}
               placeholder="Your name"
-              placeholderTextColor={Colors.light.textSecondary}
+              placeholderTextColor="#878685"
               autoCapitalize="words"
             />
           </View>
 
-          <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>Bio</Text>
+          {/* Bio Field */}
+          <View>
+            <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
+              Bio
+            </Text>
             <TextInput
-              style={[styles.input, styles.bioInput]}
+              style={{
+                backgroundColor: '#fff',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 16,
+                color: '#1A1918',
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                minHeight: 100,
+                textAlignVertical: 'top',
+              }}
               value={bio}
               onChangeText={setBio}
               placeholder="Tell us about yourself..."
-              placeholderTextColor={Colors.light.textSecondary}
+              placeholderTextColor="#878685"
               multiline
               numberOfLines={4}
-              textAlignVertical="top"
               maxLength={200}
             />
-            <Text style={styles.characterCount}>{bio.length}/200</Text>
+            <Text style={{ fontSize: 12, color: '#878685', textAlign: 'right', marginTop: 4 }}>
+              {bio.length}/200
+            </Text>
           </View>
 
-          <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>Email</Text>
+          {/* Email Field (read-only) */}
+          <View>
+            <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
+              Email
+            </Text>
             <TextInput
-              style={[styles.input, styles.disabledInput]}
+              style={{
+                backgroundColor: '#EDECEA',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 16,
+                color: '#6D6C6A',
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+              }}
               value={session?.user?.email}
               editable={false}
             />
-            <Text style={styles.helperText}>Email cannot be changed</Text>
+            <Text style={{ fontSize: 12, color: '#878685', marginTop: 4 }}>
+              Email cannot be changed
+            </Text>
           </View>
         </View>
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F4F1',
-  },
-  // Header
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5E4E1',
-  },
-  headerButton: {
-    width: 60,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  headerButtonDisabled: {
-    opacity: 0.6,
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: Colors.light.text,
-  },
-  saveButton: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: Colors.light.secondary,
-  },
-  // Scroll Content
-  scrollView: {
-    flex: 1,
-  },
-  content: {
-    paddingBottom: 40,
-  },
-  // Avatar Section
-  avatarSection: {
-    alignItems: 'center',
-    paddingVertical: 24,
-    backgroundColor: '#fff',
-    marginBottom: 16,
-  },
-  avatarContainer: {
-    position: 'relative',
-  },
-  avatar: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-  },
-  changePhotoButton: {
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: Colors.light.secondary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 3,
-    borderColor: '#fff',
-  },
-  newPhotoText: {
-    fontSize: 12,
-    color: Colors.light.secondary,
-    marginTop: 8,
-    fontWeight: '500',
-  },
-  // Form
-  form: {
-    paddingHorizontal: 20,
-  },
-  inputGroup: {
-    marginBottom: 20,
-  },
-  inputLabel: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: Colors.light.text,
-    marginBottom: 8,
-  },
-  input: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    fontSize: 16,
-    color: Colors.light.text,
-    borderWidth: 1,
-    borderColor: '#E5E4E1',
-  },
-  bioInput: {
-    height: 100,
-    paddingTop: 14,
-  },
-  disabledInput: {
-    backgroundColor: '#EDECEA',
-    color: Colors.light.textSecondary,
-  },
-  characterCount: {
-    fontSize: 12,
-    color: Colors.light.textSecondary,
-    textAlign: 'right',
-    marginTop: 4,
-  },
-  helperText: {
-    fontSize: 12,
-    color: Colors.light.textSecondary,
-    marginTop: 4,
-  },
-});

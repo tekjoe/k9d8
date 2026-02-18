@@ -3,6 +3,8 @@ import { View, Text, Pressable, ScrollView, useWindowDimensions } from 'react-na
 import { useRouter } from 'expo-router';
 import { SEOHead } from '@/src/components/seo';
 import { blogPosts } from '@/content/blog';
+import NavBar from '@/src/components/web/NavBar';
+import Footer from '@/src/components/web/Footer';
 
 const MAX_WIDTH = 1200;
 
@@ -34,22 +36,7 @@ export default function BlogIndexPage() {
         url="/blog"
       />
       <ScrollView style={{ flex: 1, backgroundColor: '#F5F4F1' }} contentContainerStyle={{ minHeight: '100%' }}>
-        {/* Header */}
-        <View style={{ width: '100%', paddingVertical: 24 }}>
-          <Container>
-            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-              <Pressable onPress={() => router.push('/landing')}>
-                <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
-              </Pressable>
-              <Pressable
-                onPress={() => router.push('/(auth)/sign-up')}
-                style={{ backgroundColor: '#3D8A5A', paddingHorizontal: 24, paddingVertical: 12, borderRadius: 9999 }}
-              >
-                <Text style={{ color: '#fff', fontWeight: '600', fontSize: 15 }}>Sign Up Free</Text>
-              </Pressable>
-            </View>
-          </Container>
-        </View>
+        <NavBar />
 
         <View role="main">
           <View style={{ width: '100%', paddingVertical: isMobile ? 40 : 60 }}>
@@ -113,23 +100,8 @@ export default function BlogIndexPage() {
           </View>
         </View>
 
-        {/* Footer */}
         <View style={{ flex: 1 }} />
-        <View style={{ borderTopWidth: 1, borderTopColor: '#E5E4E1', backgroundColor: '#fff' }}>
-          <Container>
-            <View style={{ paddingVertical: 24, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Text style={{ fontSize: 14, color: '#878685' }}>© 2026 k9d8. All rights reserved.</Text>
-              <View style={{ flexDirection: 'row', gap: 24 }}>
-                <Pressable onPress={() => router.push('/landing')}>
-                  <Text style={{ fontSize: 14, color: '#878685' }}>Home</Text>
-                </Pressable>
-                <Pressable onPress={() => router.push('/download' as any)}>
-                  <Text style={{ fontSize: 14, color: '#878685' }}>Download</Text>
-                </Pressable>
-              </View>
-            </View>
-          </Container>
-        </View>
+        <Footer />
       </ScrollView>
     </>
   );

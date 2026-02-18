@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, Text, View, ScrollView } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
@@ -15,7 +14,6 @@ import { rsvpToPlayDate } from '@/src/services/playdates';
 
 export default function CreatePlaydateScreen() {
   const router = useRouter();
-  const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const { create } = usePlaydates();
   const { dogs } = useDogs(session?.user?.id);
@@ -61,7 +59,6 @@ export default function CreatePlaydateScreen() {
           max_dogs: data.max_dogs,
         });
 
-        // Auto-RSVP the organizer for each selected dog
         if (data.dog_ids.length > 0) {
           await Promise.all(
             data.dog_ids.map((dogId) =>
@@ -82,65 +79,46 @@ export default function CreatePlaydateScreen() {
 
   if (loadingParks) {
     return (
-      <View style={styles.centered}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F4F1' }}>
         <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Header */}
-      <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
-        <Pressable onPress={() => router.canGoBack() ? router.back() : router.replace('/')} style={styles.backButton}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          backgroundColor: '#FFFFFF',
+          paddingHorizontal: 16,
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
+        }}
+      >
+        <Pressable
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+          style={{ width: 40, height: 40, justifyContent: 'center', alignItems: 'center' }}
+        >
           <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
-        <Text style={styles.headerTitle}>Schedule a Play Date</Text>
-        <View style={styles.headerSpacer} />
+        <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginLeft: 12 }}>
+          Schedule a Play Date
+        </Text>
       </View>
 
-      <PlaydateForm
-        parks={parks}
-        dogs={dogs}
-        defaultValues={params.parkId ? { park_id: params.parkId } : undefined}
-        onSubmit={handleSubmit}
-        submitLabel="Schedule Play Date"
-      />
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 16 }}>
+        <PlaydateForm
+          parks={parks}
+          dogs={dogs}
+          defaultValues={params.parkId ? { park_id: params.parkId } : undefined}
+          onSubmit={handleSubmit}
+          submitLabel="Schedule Play Date"
+        />
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5E4E1',
-    backgroundColor: '#FFFFFF',
-  },
-  backButton: {
-    padding: 4,
-    marginRight: 12,
-  },
-  headerTitle: {
-    flex: 1,
-    fontSize: 17,
-    fontWeight: '600',
-    color: '#1A1918',
-  },
-  headerSpacer: {
-    width: 32,
-  },
-  centered: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-});

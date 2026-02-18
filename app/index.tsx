@@ -1,12 +1,10 @@
 import { Redirect } from 'expo-router';
 import { ActivityIndicator, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuth } from '@/src/hooks/useAuth';
 import { Colors } from '@/src/constants/colors';
 
-export default function Index() {
-  const insets = useSafeAreaInsets();
+export default function AppIndex() {
   const { session, isLoading } = useAuth();
 
   if (isLoading) {
@@ -17,8 +15,6 @@ export default function Index() {
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: Colors.light.surface,
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
         }}
       >
         <Text
@@ -45,9 +41,11 @@ export default function Index() {
     );
   }
 
+  // Authenticated users go to the app
   if (session) {
     return <Redirect href="/(tabs)" />;
   }
 
+  // Unauthenticated users go to sign in
   return <Redirect href="/(auth)/sign-in" />;
 }

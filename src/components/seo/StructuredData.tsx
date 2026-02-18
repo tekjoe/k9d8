@@ -80,3 +80,54 @@ export function faqPageSchema(
     })),
   };
 }
+
+/** schema.org Organization for the home/landing page. */
+export function organizationSchema() {
+  return {
+    '@type': 'Organization',
+    name: 'k9d8',
+    url: 'https://k9d8.com',
+    logo: 'https://k9d8.com/og-image.png',
+    sameAs: [],
+    description:
+      'Connect with dog owners, find nearby dog parks, and schedule playdates.',
+  };
+}
+
+/** schema.org BreadcrumbList for navigation breadcrumbs. */
+export function breadcrumbSchema(
+  items: Array<{ name: string; url: string }>
+) {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: `https://k9d8.com${item.url}`,
+    })),
+  };
+}
+
+/** schema.org BlogPosting for individual blog posts. */
+export function blogPostingSchema(post: {
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  slug: string;
+}) {
+  return {
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: { '@type': 'Organization', name: post.author },
+    publisher: {
+      '@type': 'Organization',
+      name: 'k9d8',
+      url: 'https://k9d8.com',
+    },
+    mainEntityOfPage: `https://k9d8.com/blog/${post.slug}`,
+  };
+}

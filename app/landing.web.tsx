@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, Pressable, Image, ScrollView, useWindowDimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { SEOHead, StructuredData, mobileAppSchema } from '@/src/components/seo';
+import { SEOHead, StructuredData, mobileAppSchema, organizationSchema } from '@/src/components/seo';
+import NavBar from '@/src/components/web/NavBar';
 
 const MAX_WIDTH = 1200;
 
@@ -29,119 +30,6 @@ function Container({ children, style }: ContainerProps) {
       ]}
     >
       {children}
-    </View>
-  );
-}
-
-// Header Component
-function Header() {
-  const router = useRouter();
-  const { width } = useWindowDimensions();
-  const isMobile = width < 768;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  return (
-    <View style={{ width: '100%', paddingVertical: 24, position: 'relative', zIndex: 100 }}>
-      <Container>
-        <View 
-          style={{ 
-            flexDirection: 'row', 
-            alignItems: 'center', 
-            justifyContent: 'space-between',
-          }}
-        >
-          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918' }}>k9d8</Text>
-          
-          {!isMobile && (
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 40 }}>
-              <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>Features</Text>
-              </Pressable>
-              <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>How it Works</Text>
-              </Pressable>
-              <Pressable>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>About</Text>
-              </Pressable>
-              <Pressable onPress={() => router.push('/(auth)/sign-in')}>
-                <Text style={{ fontSize: 15, fontWeight: '500', color: '#6D6C6A' }}>Log In</Text>
-              </Pressable>
-              <Pressable 
-                onPress={() => router.push('/(auth)/sign-up')}
-                style={{ 
-                  backgroundColor: '#3D8A5A', 
-                  paddingHorizontal: 24, 
-                  paddingVertical: 12, 
-                  borderRadius: 9999 
-                }}
-              >
-                <Text style={{ color: '#fff', fontWeight: '600', fontSize: 15 }}>Sign Up Free</Text>
-              </Pressable>
-            </View>
-          )}
-
-          {isMobile && (
-            <Pressable onPress={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              <Ionicons name={mobileMenuOpen ? 'close' : 'menu'} size={28} color="#1A1918" />
-            </Pressable>
-          )}
-        </View>
-
-        {/* Mobile Menu Dropdown */}
-        {isMobile && mobileMenuOpen && (
-          <View 
-            style={{ 
-              position: 'absolute',
-              top: 50.5,
-              left: 0,
-              right: 0,
-              backgroundColor: '#fff',
-              paddingHorizontal: 24,
-              paddingVertical: 24,
-              borderBottomWidth: 1,
-              borderBottomColor: '#E5E4E1',
-              shadowColor: '#000',
-              shadowOffset: { width: 0, height: 4 },
-              shadowOpacity: 0.1,
-              shadowRadius: 12,
-              gap: 20,
-            }}
-          >
-            <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>Features</Text>
-            </Pressable>
-            <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>How it Works</Text>
-            </Pressable>
-            <Pressable onPress={() => setMobileMenuOpen(false)}>
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#6D6C6A' }}>About</Text>
-            </Pressable>
-            <View style={{ height: 1, backgroundColor: '#E5E4E1', marginVertical: 4 }} />
-            <Pressable 
-              onPress={() => {
-                setMobileMenuOpen(false);
-                router.push('/(auth)/sign-in');
-              }}
-            >
-              <Text style={{ fontSize: 16, fontWeight: '500', color: '#1A1918' }}>Log In</Text>
-            </Pressable>
-            <Pressable 
-              onPress={() => {
-                setMobileMenuOpen(false);
-                router.push('/(auth)/sign-up');
-              }}
-              style={{ 
-                backgroundColor: '#3D8A5A', 
-                paddingVertical: 14, 
-                borderRadius: 12,
-                alignItems: 'center',
-              }}
-            >
-              <Text style={{ color: '#fff', fontWeight: '600', fontSize: 16 }}>Sign Up Free</Text>
-            </Pressable>
-          </View>
-        )}
-      </Container>
     </View>
   );
 }
@@ -639,20 +527,21 @@ function Footer() {
           <View style={{ flexDirection: 'row', gap: isMobile ? 40 : 64, flexWrap: 'wrap' }}>
             <View style={{ gap: 16 }}>
               <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Product</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Features</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Pricing</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Updates</Text>
+              <Pressable onPress={() => router.push('/features' as any)}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Features</Text>
+              </Pressable>
+              <Pressable onPress={() => router.push('/download' as any)}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Download</Text>
+              </Pressable>
             </View>
             <View style={{ gap: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Company</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>About</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Blog</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Careers</Text>
-            </View>
-            <View style={{ gap: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Resources</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Help Center</Text>
-              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Community</Text>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>Explore</Text>
+              <Pressable onPress={() => router.push('/dog-parks' as any)}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Dog Parks</Text>
+              </Pressable>
+              <Pressable onPress={() => router.push('/blog' as any)}>
+                <Text style={{ fontSize: 14, color: '#6D6C6A' }}>Blog</Text>
+              </Pressable>
             </View>
           </View>
         </View>
@@ -692,11 +581,12 @@ export default function LandingPage() {
         rawTitle
       />
       <StructuredData data={mobileAppSchema()} />
+      <StructuredData data={organizationSchema()} />
       <ScrollView
         style={{ flex: 1, backgroundColor: '#F5F4F1' }}
         contentContainerStyle={{ minHeight: '100%' }}
       >
-        <Header />
+        <NavBar />
         <View role="main">
           <HeroSection />
           <FeaturesSection />

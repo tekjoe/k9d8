@@ -1,0 +1,645 @@
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import {
+  ActivityIndicator,
+  Image,
+  Linking,
+  Modal,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
+import { useRouter } from 'expo-router';
+import { useFocusEffect } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+import { Colors } from '@/src/constants/colors';
+import { getParkById, getParkByShortId } from '@/src/services/parks';
+import { useAuth } from '@/src/hooks/useAuth';
+import { useCheckIn } from '@/src/hooks/useCheckIn';
+import { useDogs } from '@/src/hooks/useDogs';
+import { usePlaydates } from '@/src/hooks/usePlaydates';
+import { parseSlugOrId } from '@/src/utils/slug';
+import type { Park, Dog } from '@/src/types/database';
+import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
+
+const DURATIONS = [
+  { label: '30 mins', value: 30 },
+  { label: '1 hour', value: 60 },
+  { label: '1.5 hours', value: 90 },
+  { label: '2 hours', value: 120 },
+];
+
+function DogAvatar({ dog, onPress }: { dog: Dog; onPress?: () => void }) {
+  return (
+    <Pressable onPress={onPress} style={{ alignItems: 'center' }}>
+      <Image
+        source={{
+          uri:
+            dog.photo_url ||
+            'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+        }}
+        style={{
+          width: 56,
+          height: 56,
+          borderRadius: 28,
+          borderWidth: 2,
+          borderColor: '#E5E4E1',
+        }}
+        resizeMode="cover"
+      />
+      <Text
+        style={{
+          fontSize: 11,
+          fontWeight: '500',
+          color: '#6D6C6A',
+          marginTop: 4,
+          maxWidth: 64,
+        }}
+        numberOfLines={1}
+      >
+        {dog.name}
+      </Text>
+    </Pressable>
+  );
+}
+
+function FeatureTag({ icon, label }: { icon: keyof typeof Ionicons.glyphMap; label: string }) {
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#EDECEA',
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+        borderRadius: 9999,
+        gap: 8,
+      }}
+    >
+      <Ionicons name={icon} size={14} color="#6D6C6A" />
+      <Text style={{ fontSize: 12, fontWeight: '500', color: '#6D6C6A' }}>{label}</Text>
+    </View>
+  );
+}
+
+interface ParkDetailMobileProps {
+  slugOrId: string;
+}
+
+export default function ParkDetailMobile({ slugOrId }: ParkDetailMobileProps) {
+  const router = useRouter();
+  const { session } = useAuth();
+  const userId = session?.user?.id;
+
+  const [park, setPark] = useState<Park | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const parkId = park?.id || null;
+  const [checkInModalVisible, setCheckInModalVisible] = useState(false);
+  const [selectedDogIds, setSelectedDogIds] = useState<string[]>([]);
+  const [selectedDuration, setSelectedDuration] = useState<number>(60);
+
+  const {
+    activeCheckIns,
+    userCheckIn,
+    loading: checkInLoading,
+    checkIn,
+    checkOut,
+  } = useCheckIn(parkId || '');
+
+  const { dogs } = useDogs(userId);
+  const { playdates, loading: playdatesLoading, refresh: refreshPlaydates } = usePlaydates(parkId || '');
+
+  const isFirstMount = React.useRef(true);
+  useFocusEffect(
+    useCallback(() => {
+      if (isFirstMount.current) {
+        isFirstMount.current = false;
+        return;
+      }
+      refreshPlaydates();
+    }, [refreshPlaydates])
+  );
+
+  useEffect(() => {
+    if (!slugOrId) {
+      setError('No park ID provided');
+      setLoading(false);
+      return;
+    }
+
+    let isMounted = true;
+
+    async function fetchPark() {
+      const parsed = parseSlugOrId(slugOrId);
+
+      try {
+        let data: Park | null = null;
+
+        if (parsed.type === 'uuid') {
+          data = await getParkById(parsed.id);
+        } else if (parsed.type === 'slug') {
+          data = await getParkByShortId(parsed.shortId);
+        }
+
+        if (isMounted) {
+          if (data) {
+            setPark(data);
+          } else {
+            setError('Park not found');
+          }
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError('Failed to load park details');
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    }
+
+    fetchPark();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [slugOrId]);
+
+  useEffect(() => {
+    if (checkInModalVisible && dogs.length > 0) {
+      setSelectedDogIds(dogs.map((d) => d.id));
+    }
+  }, [checkInModalVisible, dogs]);
+
+  const handleBack = useCallback(() => {
+    router.canGoBack() ? router.back() : router.replace('/');
+  }, [router]);
+
+  const handleDirections = useCallback(() => {
+    if (park) {
+      const url = `https://maps.google.com/?q=${park.latitude},${park.longitude}`;
+      Linking.openURL(url);
+    }
+  }, [park]);
+
+  const handleSchedule = useCallback(() => {
+    router.push(`/playdates/create?parkId=${parkId}`);
+  }, [router, parkId]);
+
+  const handleOpenCheckIn = useCallback(() => {
+    if (userCheckIn) {
+      checkOut();
+    } else {
+      setCheckInModalVisible(true);
+    }
+  }, [userCheckIn, checkOut]);
+
+  const handleConfirmCheckIn = useCallback(() => {
+    if (selectedDogIds.length > 0) {
+      checkIn(selectedDogIds);
+      setCheckInModalVisible(false);
+    }
+  }, [selectedDogIds, checkIn]);
+
+  const toggleDog = useCallback((dogId: string) => {
+    setSelectedDogIds((prev) =>
+      prev.includes(dogId) ? prev.filter((id) => id !== dogId) : [...prev, dogId]
+    );
+  }, []);
+
+  const checkedInDogs = useMemo(() => {
+    const dogsList: Dog[] = [];
+    const seenIds = new Set<string>();
+
+    activeCheckIns.forEach((checkIn) => {
+      checkIn.dogs?.forEach((dog) => {
+        if (!seenIds.has(dog.id)) {
+          seenIds.add(dog.id);
+          dogsList.push(dog);
+        }
+      });
+    });
+
+    return dogsList.slice(0, 6);
+  }, [activeCheckIns]);
+
+  const features = useMemo(() => {
+    if (!park) return [];
+
+    const list: { icon: keyof typeof Ionicons.glyphMap; label: string }[] = [];
+    if (park.has_water) list.push({ icon: 'water', label: 'Water Fountain' });
+    if (park.is_fenced) list.push({ icon: 'shield-checkmark', label: 'Fenced Area' });
+    if (park.has_shade) list.push({ icon: 'leaf', label: 'Shaded Areas' });
+    if (park.amenities?.includes('Benches')) list.push({ icon: 'cube', label: 'Benches' });
+    if (park.amenities?.includes('Waste Stations')) list.push({ icon: 'trash', label: 'Waste Stations' });
+
+    if (list.length === 0) {
+      list.push(
+        { icon: 'water', label: 'Water Fountain' },
+        { icon: 'cube', label: 'Benches' },
+        { icon: 'shield-checkmark', label: 'Fenced Area' },
+        { icon: 'trash', label: 'Waste Stations' }
+      );
+    }
+
+    return list;
+  }, [park]);
+
+  if (loading) {
+    return (
+      <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+        <ScrollView style={{ flex: 1 }}>
+          <View style={{ padding: 20, gap: 6, marginBottom: 20 }}>
+            <Skeleton width={240} height={28} borderRadius={4} />
+            <Skeleton width={160} height={16} borderRadius={3} />
+          </View>
+          <View style={{ paddingHorizontal: 20 }}>
+            <Skeleton width="100%" height={200} borderRadius={12} style={{ marginBottom: 20 }} />
+            <SkeletonList count={4} type="card" />
+          </View>
+        </ScrollView>
+      </View>
+    );
+  }
+
+  if (error || !park) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, backgroundColor: '#F5F4F1' }}>
+        <View
+          style={{
+            width: 64,
+            height: 64,
+            borderRadius: 32,
+            backgroundColor: '#F5E8E3',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: 16,
+          }}
+        >
+          <Ionicons name="alert-circle" size={32} color="#B5725E" />
+        </View>
+        <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text, marginBottom: 8 }}>
+          {error ?? 'Park not found'}
+        </Text>
+        <Text style={{ fontSize: 14, color: '#6D6C6A', textAlign: 'center', marginBottom: 24 }}>
+          We couldn't load this park. It may have been removed or the link may be incorrect.
+        </Text>
+        <Pressable
+          onPress={handleBack}
+          style={{
+            backgroundColor: '#3D8A5A',
+            paddingHorizontal: 24,
+            paddingVertical: 12,
+            borderRadius: 12,
+          }}
+        >
+          <Text style={{ color: '#fff', fontSize: 15, fontWeight: '600' }}>Go Back</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
+  return (
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+      <ScrollView style={{ flex: 1 }}>
+        {/* Hero Image */}
+        <View style={{ position: 'relative' }}>
+          <Image
+            source={{
+              uri:
+                park.image_url || '/images/dog-park-placeholder.png',
+            }}
+            accessibilityLabel={`Photo of ${park.name} dog park`}
+            style={{ width: '100%', height: 240 }}
+            resizeMode="cover"
+          />
+          <Pressable
+            onPress={handleBack}
+            style={{
+              position: 'absolute',
+              top: 16,
+              left: 16,
+              width: 40,
+              height: 40,
+              borderRadius: 20,
+              backgroundColor: 'rgba(255,255,255,0.8)',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
+          </Pressable>
+        </View>
+
+        <View style={{ padding: 20 }}>
+          {/* Header */}
+          <View style={{ gap: 6, marginBottom: 20 }}>
+            <Text style={{ fontSize: 24, fontWeight: '700', color: Colors.light.text }}>
+              {park.name}
+            </Text>
+            <Text style={{ fontSize: 15, color: '#6D6C6A' }}>
+              {park.address || 'San Francisco, CA'}
+            </Text>
+          </View>
+
+          {/* Action Buttons */}
+          <View style={{ flexDirection: 'row', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+            <Pressable
+              onPress={handleDirections}
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 12,
+                borderRadius: 9999,
+                borderWidth: 1.5,
+                borderColor: '#E5E4E1',
+                backgroundColor: '#fff',
+              }}
+            >
+              <Text style={{ fontSize: 15, fontWeight: '600', color: Colors.light.text }}>Directions</Text>
+            </Pressable>
+            <Pressable
+              onPress={handleSchedule}
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 12,
+                borderRadius: 9999,
+                borderWidth: 1.5,
+                borderColor: '#E5E4E1',
+                backgroundColor: '#fff',
+              }}
+            >
+              <Text style={{ fontSize: 15, fontWeight: '600', color: Colors.light.text }}>Schedule Play Date</Text>
+            </Pressable>
+            <Pressable
+              onPress={handleOpenCheckIn}
+              disabled={checkInLoading}
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 12,
+                borderRadius: 9999,
+                backgroundColor: userCheckIn ? '#B5725E' : '#3D8A5A',
+              }}
+            >
+              {checkInLoading ? (
+                <ActivityIndicator size="small" color="#fff" />
+              ) : (
+                <Text style={{ fontSize: 15, fontWeight: '600', color: '#fff' }}>
+                  {userCheckIn ? 'Check-out' : 'Check-in'}
+                </Text>
+              )}
+            </Pressable>
+          </View>
+
+          {/* Park Features */}
+          <View style={{ gap: 14, marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+              Park Features
+            </Text>
+            <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
+              {features.map((feature, index) => (
+                <FeatureTag key={index} icon={feature.icon} label={feature.label} />
+              ))}
+            </View>
+          </View>
+
+          {/* Pups at the Park Now */}
+          <View style={{ gap: 14, marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+              Pups at the Park Now
+            </Text>
+            {checkedInDogs.length > 0 ? (
+              <View style={{ flexDirection: 'row', gap: 16, flexWrap: 'wrap' }}>
+                {checkedInDogs.map((dog) => (
+                  <DogAvatar
+                    key={dog.id}
+                    dog={dog}
+                    onPress={() => router.push(`/dogs/${dog.id}`)}
+                  />
+                ))}
+              </View>
+            ) : (
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
+            )}
+          </View>
+
+          {/* About This Park */}
+          <View style={{ gap: 12, marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+              About This Park
+            </Text>
+            <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
+              {park.description ||
+                'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
+            </Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Ionicons name="time-outline" size={14} color="#878685" />
+              <Text style={{ fontSize: 13, color: '#878685' }}>
+                Open daily: 6:00 AM - 10:00 PM
+              </Text>
+            </View>
+          </View>
+
+          {/* Upcoming Play Dates */}
+          <View style={{ gap: 14 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+              Upcoming Play Dates
+            </Text>
+            {playdatesLoading ? (
+              <ActivityIndicator size="small" color="#3D8A5A" />
+            ) : playdates.length > 0 ? (
+              playdates.map((playdate) => (
+                <Pressable
+                  key={playdate.id}
+                  onPress={() => router.push(`/playdates/${playdate.id}`)}
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 12,
+                    padding: 16,
+                    borderWidth: 1,
+                    borderColor: '#E5E4E1',
+                  }}
+                >
+                  <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+                    {playdate.title}
+                  </Text>
+                  <Text style={{ fontSize: 14, color: '#6D6C6A', marginTop: 4 }}>
+                    {new Date(playdate.starts_at).toLocaleDateString()}
+                  </Text>
+                </Pressable>
+              ))
+            ) : (
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No upcoming play dates</Text>
+            )}
+          </View>
+        </View>
+      </ScrollView>
+
+      {/* Check-in Modal */}
+      <Modal
+        visible={checkInModalVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setCheckInModalVisible(false)}
+      >
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 20,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: 24,
+              padding: 24,
+              width: '100%',
+              maxHeight: '80%',
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: 24,
+              }}
+            >
+              <Text style={{ fontSize: 22, fontWeight: '700', color: Colors.light.text }}>
+                Check-in at {park.name}
+              </Text>
+              <Pressable
+                onPress={() => setCheckInModalVisible(false)}
+                style={{
+                  width: 32,
+                  height: 32,
+                  borderRadius: 16,
+                  backgroundColor: '#EDECEA',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Ionicons name="close" size={20} color="#6D6C6A" />
+              </Pressable>
+            </View>
+
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <Text style={{ fontSize: 16, fontWeight: '600', color: Colors.light.text, marginBottom: 12 }}>
+                Which dogs are with you?
+              </Text>
+
+              {dogs.length === 0 ? (
+                <Text style={{ fontSize: 15, color: '#6D6C6A', textAlign: 'center', paddingVertical: 32 }}>
+                  You have not added any dogs yet. Add a dog from your profile first.
+                </Text>
+              ) : (
+                <>
+                  <View style={{ gap: 10, marginBottom: 24 }}>
+                    {dogs.map((dog) => {
+                      const isSelected = selectedDogIds.includes(dog.id);
+                      return (
+                        <Pressable
+                          key={dog.id}
+                          onPress={() => toggleDog(dog.id)}
+                          style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            padding: 12,
+                            borderRadius: 12,
+                            borderWidth: 2,
+                            borderColor: isSelected ? '#3D8A5A' : 'transparent',
+                            backgroundColor: isSelected ? '#E8F0E8' : '#F5F4F1',
+                          }}
+                        >
+                          <Image
+                            source={{
+                              uri:
+                                dog.photo_url ||
+                                'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+                            }}
+                            style={{ width: 44, height: 44, borderRadius: 22, marginRight: 12 }}
+                          />
+                          <Text style={{ flex: 1, fontSize: 16, fontWeight: '500', color: Colors.light.text }}>
+                            {dog.name}
+                          </Text>
+                          <View
+                            style={{
+                              width: 24,
+                              height: 24,
+                              borderRadius: 6,
+                              borderWidth: 2,
+                              borderColor: isSelected ? '#3D8A5A' : '#E5E4E1',
+                              backgroundColor: isSelected ? '#3D8A5A' : '#fff',
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                            }}
+                          >
+                            {isSelected && <Ionicons name="checkmark" size={16} color="#fff" />}
+                          </View>
+                        </Pressable>
+                      );
+                    })}
+                  </View>
+
+                  <Text style={{ fontSize: 16, fontWeight: '600', color: Colors.light.text, marginBottom: 12 }}>
+                    How long are you staying?
+                  </Text>
+
+                  <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 24 }}>
+                    {DURATIONS.map((duration) => (
+                      <Pressable
+                        key={duration.value}
+                        onPress={() => setSelectedDuration(duration.value)}
+                        style={{
+                          flex: 1,
+                          minWidth: '45%',
+                          paddingVertical: 14,
+                          paddingHorizontal: 16,
+                          borderRadius: 12,
+                          borderWidth: 2,
+                          borderColor: selectedDuration === duration.value ? '#3D8A5A' : '#E5E4E1',
+                          backgroundColor: selectedDuration === duration.value ? '#3D8A5A' : '#F5F4F1',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontSize: 15,
+                            fontWeight: selectedDuration === duration.value ? '600' : '500',
+                            color: selectedDuration === duration.value ? '#fff' : Colors.light.text,
+                          }}
+                        >
+                          {duration.label}
+                        </Text>
+                      </Pressable>
+                    ))}
+                  </View>
+
+                  <Pressable
+                    onPress={handleConfirmCheckIn}
+                    disabled={selectedDogIds.length === 0}
+                    style={{
+                      backgroundColor: selectedDogIds.length === 0 ? '#D1D0CD' : '#3D8A5A',
+                      paddingVertical: 16,
+                      borderRadius: 12,
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>
+                      Confirm Check-in
+                    </Text>
+                  </Pressable>
+                </>
+              )}
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
+    </View>
+  );
+}

@@ -1,19 +1,26 @@
-import { FlatList, Image, Pressable, Text, View } from 'react-native';
+import { Image, Pressable, Text, View, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useFriends } from '@/src/hooks/useFriends';
 import type { Profile } from '@/src/types/database';
 
-interface FriendItemProps {
+interface FriendCardProps {
   friend: Profile;
   onPress: () => void;
 }
 
-function FriendItem({ friend, onPress }: FriendItemProps) {
+function FriendCard({ friend, onPress }: FriendCardProps) {
   return (
     <Pressable
       onPress={onPress}
-      className="flex-row items-center bg-white p-3 rounded-xl mb-2"
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        padding: 12,
+        borderRadius: 12,
+        marginBottom: 12,
+      }}
     >
       <Image
         source={{
@@ -21,11 +28,11 @@ function FriendItem({ friend, onPress }: FriendItemProps) {
             friend.avatar_url ||
             'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
         }}
-        className="w-12 h-12 rounded-full mr-3"
+        style={{ width: 48, height: 48, borderRadius: 24, marginRight: 12 }}
         resizeMode="cover"
       />
-      <View className="flex-1">
-        <Text className="text-base font-semibold text-text">
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>
           {friend.display_name || 'User'}
         </Text>
       </View>
@@ -36,54 +43,84 @@ function FriendItem({ friend, onPress }: FriendItemProps) {
 
 export default function FriendsListScreen() {
   const router = useRouter();
-  const { friends, pendingCount, loading, refresh } = useFriends();
+  const { friends, pendingCount, loading } = useFriends();
 
   return (
-    <View className="flex-1 bg-background">
-      {pendingCount > 0 && (
-        <Pressable
-          onPress={() => router.push('/(tabs)/profile/friends/requests')}
-          className="flex-row items-center justify-between bg-white mx-4 mt-4 p-4 rounded-xl"
-        >
-          <View className="flex-row items-center">
-            <View className="bg-error w-8 h-8 rounded-full justify-center items-center mr-3">
-              <Text className="text-white text-sm font-bold">{pendingCount}</Text>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+      {/* Header */}
+      <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
+        <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918' }}>
+          Friends
+        </Text>
+      </View>
+
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 16 }}>
+        {/* Pending Requests Banner */}
+        {pendingCount > 0 && (
+          <Pressable
+            onPress={() => router.push('/(tabs)/profile/friends/requests')}
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              backgroundColor: '#FFFFFF',
+              padding: 16,
+              borderRadius: 12,
+              marginBottom: 16,
+            }}
+          >
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View
+                style={{
+                  backgroundColor: '#B5725E',
+                  width: 32,
+                  height: 32,
+                  borderRadius: 16,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginRight: 12,
+                }}
+              >
+                <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: '700' }}>
+                  {pendingCount}
+                </Text>
+              </View>
+              <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>
+                Pending Requests
+              </Text>
             </View>
-            <Text className="text-base font-semibold text-text">
-              Pending Requests
+            <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
+          </Pressable>
+        )}
+
+        {/* Friends List */}
+        {friends.length === 0 && !loading ? (
+          <View style={{ alignItems: 'center', paddingVertical: 64 }}>
+            <Ionicons name="people-outline" size={48} color="#878685" />
+            <Text style={{ fontSize: 15, color: '#6D6C6A', marginTop: 16, marginBottom: 8 }}>
+              No friends yet
+            </Text>
+            <Text
+              style={{
+                fontSize: 14,
+                color: '#6D6C6A',
+                textAlign: 'center',
+                maxWidth: 300,
+              }}
+            >
+              Visit a dog profile and tap "Add Friend" to connect with other dog owners.
             </Text>
           </View>
-          <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
-        </Pressable>
-      )}
-
-      <FlatList
-        data={friends}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <FriendItem
-            friend={item}
-            onPress={() => router.push(`/users/${item.id}`)}
-          />
+        ) : (
+          friends.map((friend) => (
+            <FriendCard
+              key={friend.id}
+              friend={friend}
+              onPress={() => router.push(`/users/${friend.id}`)}
+            />
+          ))
         )}
-        ListEmptyComponent={
-          loading ? null : (
-            <View className="items-center py-16">
-              <Ionicons name="people-outline" size={48} color="#878685" />
-              <Text className="text-base text-text-secondary mt-4 mb-2">
-                No friends yet
-              </Text>
-              <Text className="text-sm text-text-secondary text-center px-12">
-                Visit a dog profile and tap "Add Friend" to connect with other dog owners.
-              </Text>
-            </View>
-          )
-        }
-        contentContainerStyle={{ padding: 16, paddingBottom: 100 }}
-        showsVerticalScrollIndicator={false}
-        onRefresh={refresh}
-        refreshing={loading}
-      />
+      </ScrollView>
     </View>
   );
 }

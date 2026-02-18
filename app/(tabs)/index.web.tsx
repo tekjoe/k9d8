@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import ParkMap from '@/src/components/parks/ParkMap.web';
 import { useAuth } from '@/src/hooks/useAuth';
+import { useNotificationsData } from '@/src/hooks/useNotificationsData';
 import { useLocation } from '@/src/hooks/useLocation';
 import { useParks } from '@/src/hooks/useParks';
 import { usePlaydates } from '@/src/hooks/usePlaydates';
@@ -209,8 +210,7 @@ function ParkCard({ park, pupCount, distanceKm, onPress, compact }: ParkCardProp
     >
       <Image
         source={{
-          uri: park.image_url ||
-            'https://images.unsplash.com/photo-1601758124096-1fd661873b95?w=400&h=300&fit=crop',
+          uri: park.image_url || '/images/dog-park-placeholder.png',
         }}
         style={{ width: '100%', height: compact ? 100 : 128 }}
         resizeMode="cover"
@@ -256,6 +256,7 @@ export default function DesktopHomeScreen() {
 
   const router = useRouter();
   const { session } = useAuth();
+  const { unreadCount } = useNotificationsData({ limit: 1 });
   const { location } = useLocation();
   const { parks, checkInCounts, loading: parksLoading } = useParks();
   const { myPlaydates, loading: playdatesLoading } = usePlaydates();
@@ -268,7 +269,7 @@ export default function DesktopHomeScreen() {
   const handleParkPress = useCallback(
     (park: Park) => {
       const slug = generateParkSlug(park.name, park.id);
-      router.push(`/parks/${slug}`);
+      router.push(`/dog-parks/${slug}`);
     },
     [router]
   );
@@ -281,8 +282,8 @@ export default function DesktopHomeScreen() {
   );
 
   const handleNotificationPress = useCallback(() => {
-    // Navigate to notifications
-  }, []);
+    router.push('/notifications');
+  }, [router]);
 
   // Get top 2 upcoming playdates
   const upcomingPlaydates = myPlaydates.slice(0, 2);
@@ -354,7 +355,7 @@ export default function DesktopHomeScreen() {
             borderBottomWidth: 1, 
             borderBottomColor: '#E5E4E1',
             paddingHorizontal: isMobile ? 20 : 40,
-            paddingVertical: isMobile ? 16 : 32,
+            paddingVertical: isMobile ? 16 : 22,
             zIndex: 100,
           }}
         >
@@ -400,11 +401,13 @@ export default function DesktopHomeScreen() {
                     placeholderTextColor="#878685"
                     style={{ flex: 1, marginLeft: 8, fontSize: 15, color: '#1A1918', outlineWidth: 0 } as any}
                   />
-                  {searchQuery.length > 0 && (
-                    <Pressable onPress={() => setSearchQuery('')} style={{ padding: 4 }}>
-                      <Ionicons name="close-circle" size={18} color="#878685" />
-                    </Pressable>
-                  )}
+                  <View style={{ width: 18, marginLeft: 4, alignItems: 'center', justifyContent: 'center' }}>
+                    {searchQuery.length > 0 && (
+                      <Pressable onPress={() => setSearchQuery('')}>
+                        <Ionicons name="close-circle" size={18} color="#878685" />
+                      </Pressable>
+                    )}
+                  </View>
                 </View>
 
                 {/* Search Results Dropdown */}
@@ -498,7 +501,29 @@ export default function DesktopHomeScreen() {
                   backgroundColor: '#F5F4F1',
                 }}
               >
-                <Ionicons name="notifications-outline" size={24} color="#1A1918" />
+                <View style={{ position: 'relative' }}>
+                  <Ionicons name="notifications-outline" size={24} color="#1A1918" />
+                  {unreadCount > 0 && (
+                    <View
+                      style={{
+                        position: 'absolute',
+                        top: -4,
+                        right: -4,
+                        backgroundColor: '#B5725E',
+                        borderRadius: 8,
+                        minWidth: 16,
+                        height: 16,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        paddingHorizontal: 4,
+                      }}
+                    >
+                      <Text style={{ color: '#FFFFFF', fontSize: 10, fontWeight: '700' }}>
+                        {unreadCount > 99 ? '99+' : unreadCount}
+                      </Text>
+                    </View>
+                  )}
+                </View>
               </Pressable>
             </View>
           </View>

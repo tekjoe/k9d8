@@ -4,12 +4,11 @@ import {
   Alert,
   Image,
   Pressable,
-  ScrollView,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
@@ -43,16 +42,22 @@ function formatTemperament(temperaments: DogTemperament[]): string {
   return temperaments.map((t) => map[t]).join(', ');
 }
 
-interface InfoTagProps {
-  icon: keyof typeof Ionicons.glyphMap;
-  label: string;
-}
-
-function InfoTag({ icon, label }: InfoTagProps) {
+function InfoTag({ icon, label }: { icon: keyof typeof Ionicons.glyphMap; label: string }) {
   return (
-    <View className="flex-row items-center bg-white px-4 py-2.5 rounded-full border border-border">
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        paddingHorizontal: 16,
+        paddingVertical: 10,
+        borderRadius: 9999,
+        borderWidth: 1,
+        borderColor: '#E5E4E1',
+      }}
+    >
       <Ionicons name={icon} size={16} color="#6D6C6A" style={{ marginRight: 8 }} />
-      <Text className="text-sm text-text">{label}</Text>
+      <Text style={{ fontSize: 14, color: '#1A1918' }}>{label}</Text>
     </View>
   );
 }
@@ -60,7 +65,6 @@ function InfoTag({ icon, label }: InfoTagProps) {
 export default function DogProfileScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const userId = session?.user?.id;
 
@@ -81,7 +85,6 @@ export default function DogProfileScreen() {
         const data = await getDogWithOwner(id!);
         if (isMounted) {
           setDog(data);
-          // Check friendship status with the dog's owner
           if (userId && userId !== data.owner_id) {
             const fs = await getFriendshipStatus(userId, data.owner_id);
             if (isMounted) setFriendship(fs);
@@ -99,17 +102,12 @@ export default function DogProfileScreen() {
           setError(code === 'PGRST116' ? 'Dog not found' : msg);
         }
       } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        if (isMounted) setLoading(false);
       }
     }
 
     fetchDog();
-
-    return () => {
-      isMounted = false;
-    };
+    return () => { isMounted = false; };
   }, [id, userId]);
 
   const handleBack = useCallback(() => {
@@ -122,7 +120,7 @@ export default function DogProfileScreen() {
     try {
       const conversationId = await getOrCreateConversation(dog.owner_id);
       router.push(`/messages/${conversationId}`);
-    } catch (err) {
+    } catch {
       Alert.alert('Error', 'Could not start conversation. Please try again.');
     } finally {
       setMessageLoading(false);
@@ -145,7 +143,7 @@ export default function DogProfileScreen() {
 
   if (loading) {
     return (
-      <View className="flex-1 justify-center items-center bg-background">
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F4F1' }}>
         <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
@@ -153,10 +151,16 @@ export default function DogProfileScreen() {
 
   if (error || !dog) {
     return (
-      <View className="flex-1 justify-center items-center bg-background">
-        <Text className="text-base text-error text-center px-8">
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, backgroundColor: '#F5F4F1' }}>
+        <Text style={{ fontSize: 16, color: '#B5725E', textAlign: 'center', marginBottom: 16 }}>
           {error ?? 'Dog not found'}
         </Text>
+        <Pressable
+          onPress={() => router.replace('/')}
+          style={{ backgroundColor: '#3D8A5A', paddingHorizontal: 24, paddingVertical: 10, borderRadius: 12 }}
+        >
+          <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: '600' }}>Go Home</Text>
+        </Pressable>
       </View>
     );
   }
@@ -164,123 +168,191 @@ export default function DogProfileScreen() {
   const isOwnDog = userId === dog.owner_id;
 
   return (
-    <View className="flex-1 bg-background">
+    <ScrollView style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+      {/* Header */}
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          backgroundColor: '#FFFFFF',
+          paddingHorizontal: 16,
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
+        }}
+      >
+        <Pressable
+          onPress={handleBack}
+          style={{ width: 40, height: 40, justifyContent: 'center', alignItems: 'center' }}
+        >
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
+        </Pressable>
+        <Text
+          style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginLeft: 12, flex: 1 }}
+          numberOfLines={1}
+        >
+          {dog.name}
+        </Text>
+      </View>
+
       {/* Hero Photo */}
-      <View className="relative">
+      <View style={{ borderRadius: 16, overflow: 'hidden', margin: 16 }}>
         <Image
           source={{
             uri:
               dog.photo_url ||
               'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=400&fit=crop',
           }}
-          className="w-full h-[280px]"
+          style={{ width: '100%', height: 240 }}
           resizeMode="cover"
         />
-        {/* Back Button */}
-        <Pressable
-          onPress={handleBack}
-          className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
-          style={{ top: insets.top + 8 }}
-        >
-          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
-        </Pressable>
       </View>
 
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{ paddingBottom: 100 }}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Name & Breed */}
-        <View className="items-center px-8 pt-5 pb-4">
-          <Text className="text-2xl font-bold text-text text-center">
+      <View style={{ padding: 16 }}>
+        {/* Name & Breed Card */}
+        <View
+          style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: 16,
+            padding: 20,
+            marginBottom: 16,
+          }}
+        >
+          <Text style={{ fontSize: 24, fontWeight: '700', color: '#1A1918', marginBottom: 4 }}>
             {dog.name}
           </Text>
           {dog.breed && (
-            <Text className="text-[15px] text-text-secondary mt-1.5">
+            <Text style={{ fontSize: 16, color: '#6D6C6A', marginBottom: 20 }}>
               {dog.breed}
             </Text>
           )}
+
+          {/* Info Tags */}
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 10 }}>
+            <InfoTag icon="resize-outline" label={formatSize(dog.size)} />
+            <InfoTag icon="happy-outline" label={formatTemperament(dog.temperament)} />
+            {dog.age_years != null && (
+              <InfoTag
+                icon="calendar-outline"
+                label={`${dog.age_years} ${dog.age_years === 1 ? 'year' : 'years'}`}
+              />
+            )}
+          </View>
         </View>
 
-        {/* Info Tags */}
-        <View className="flex-row flex-wrap justify-center gap-3 px-5 mb-6">
-          <InfoTag icon="resize-outline" label={formatSize(dog.size)} />
-          <InfoTag icon="happy-outline" label={formatTemperament(dog.temperament)} />
-          {dog.age_years != null && (
-            <InfoTag
-              icon="calendar-outline"
-              label={`${dog.age_years} ${dog.age_years === 1 ? 'year' : 'years'}`}
-            />
-          )}
-        </View>
-
-        {/* Notes */}
+        {/* About */}
         {dog.notes && (
-          <View className="px-5 mb-6">
-            <Text className="text-lg font-bold text-text mb-2">About</Text>
-            <Text className="text-[15px] text-text-secondary leading-6">
+          <View
+            style={{
+              backgroundColor: '#FFFFFF',
+              borderRadius: 16,
+              padding: 20,
+              marginBottom: 16,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginBottom: 8 }}>
+              About
+            </Text>
+            <Text style={{ fontSize: 15, color: '#6D6C6A', lineHeight: 24 }}>
               {dog.notes}
             </Text>
           </View>
         )}
 
-        {/* Owner Section */}
-        <View className="px-5 mb-6">
-          <Text className="text-lg font-bold text-text mb-3">Owner</Text>
+        {/* Owner Card */}
+        <View
+          style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: 16,
+            padding: 20,
+            marginBottom: 16,
+          }}
+        >
+          <Text style={{ fontSize: 12, fontWeight: '600', color: '#878685', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 12 }}>
+            Owner
+          </Text>
           <Pressable
             onPress={() => router.push(`/users/${dog.owner_id}`)}
-            className="flex-row items-center bg-white p-4 rounded-2xl border border-border"
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}
           >
             <Image
               source={{
                 uri:
                   dog.owner.avatar_url ||
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
               }}
-              className="w-12 h-12 rounded-full mr-3"
+              style={{ width: 48, height: 48, borderRadius: 24, marginRight: 12 }}
               resizeMode="cover"
             />
-            <Text className="flex-1 text-base font-semibold text-text">
-              {dog.owner.display_name || 'Dog Owner'}
-            </Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+                {dog.owner.display_name || 'Dog Owner'}
+              </Text>
+            </View>
             <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
           </Pressable>
         </View>
 
-        {/* Message Owner Button */}
+        {/* Action Buttons */}
         {!isOwnDog && userId && (
-          <View className="px-5">
+          <View
+            style={{
+              backgroundColor: '#FFFFFF',
+              borderRadius: 16,
+              padding: 20,
+              gap: 12,
+            }}
+          >
             <Pressable
               onPress={handleMessageOwner}
               disabled={messageLoading}
-              className="flex-row items-center justify-center bg-secondary py-3.5 rounded-xl"
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#3D8A5A',
+                paddingVertical: 14,
+                borderRadius: 12,
+                gap: 8,
+              }}
             >
               {messageLoading ? (
                 <ActivityIndicator size="small" color="#fff" />
               ) : (
                 <>
                   <Ionicons name="chatbubble-outline" size={20} color="#fff" />
-                  <Text className="text-white text-[15px] font-semibold ml-2">
+                  <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>
                     Message Owner
                   </Text>
                 </>
               )}
             </Pressable>
 
-            {/* Add Friend Button */}
             {!friendship && (
               <Pressable
                 onPress={handleAddFriend}
                 disabled={friendLoading}
-                className="flex-row items-center justify-center bg-white border border-secondary py-3.5 rounded-xl mt-3"
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#FFFFFF',
+                  borderWidth: 1,
+                  borderColor: '#3D8A5A',
+                  paddingVertical: 14,
+                  borderRadius: 12,
+                  gap: 8,
+                }}
               >
                 {friendLoading ? (
                   <ActivityIndicator size="small" color="#3D8A5A" />
                 ) : (
                   <>
                     <Ionicons name="person-add-outline" size={20} color="#3D8A5A" />
-                    <Text className="text-secondary text-[15px] font-semibold ml-2">
+                    <Text style={{ color: '#3D8A5A', fontSize: 15, fontWeight: '600' }}>
                       Add Friend
                     </Text>
                   </>
@@ -289,25 +361,45 @@ export default function DogProfileScreen() {
             )}
 
             {friendship?.status === 'pending' && (
-              <View className="flex-row items-center justify-center bg-border py-3.5 rounded-xl mt-3">
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#EDECEA',
+                  paddingVertical: 14,
+                  borderRadius: 12,
+                  gap: 8,
+                }}
+              >
                 <Ionicons name="time-outline" size={20} color="#6D6C6A" />
-                <Text className="text-text-secondary text-[15px] font-semibold ml-2">
+                <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '600' }}>
                   {friendship.requester_id === userId ? 'Request Sent' : 'Request Pending'}
                 </Text>
               </View>
             )}
 
             {friendship?.status === 'accepted' && (
-              <View className="flex-row items-center justify-center bg-secondary/10 py-3.5 rounded-xl mt-3">
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgba(61, 138, 90, 0.1)',
+                  paddingVertical: 14,
+                  borderRadius: 12,
+                  gap: 8,
+                }}
+              >
                 <Ionicons name="checkmark-circle" size={20} color="#3D8A5A" />
-                <Text className="text-secondary text-[15px] font-semibold ml-2">
+                <Text style={{ color: '#3D8A5A', fontSize: 15, fontWeight: '600' }}>
                   Friends
                 </Text>
               </View>
             )}
           </View>
         )}
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 }

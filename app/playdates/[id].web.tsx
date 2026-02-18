@@ -13,6 +13,7 @@ import { Colors } from '@/src/constants/colors';
 import { usePlaydateDetail } from '@/src/hooks/usePlaydateDetail';
 import { useResponsiveLayout } from '@/src/hooks/useResponsiveLayout';
 import WebPageLayout from '@/src/components/ui/WebPageLayout';
+import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
 import type { PlayDateRSVP } from '@/src/types/database';
 
 function formatDateRange(startsAt: string, endsAt: string): string {
@@ -127,12 +128,18 @@ export default function PlayDateDetailWebScreen() {
       >
         <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
       </Pressable>
-      <Text
-        style={{ fontSize: isMobile ? 18 : 24, fontWeight: '600', color: '#1A1918', marginLeft: 12, flex: 1 }}
-        numberOfLines={1}
-      >
-        {playdate?.title || 'Play Date'}
-      </Text>
+      {loading ? (
+        <View style={{ marginLeft: 12, flex: 1 }}>
+          <Skeleton width={isMobile ? 180 : 240} height={isMobile ? 20 : 24} borderRadius={4} />
+        </View>
+      ) : (
+        <Text
+          style={{ fontSize: isMobile ? 18 : 24, fontWeight: '600', color: '#1A1918', marginLeft: 12, flex: 1 }}
+          numberOfLines={1}
+        >
+          {playdate?.title || 'Play Date'}
+        </Text>
+      )}
     </View>
   );
 
@@ -141,8 +148,28 @@ export default function PlayDateDetailWebScreen() {
       <>
       <SEOHead title="Playdate Details" description="View playdate details and RSVP on k9d8." url="/playdates" />
       <WebPageLayout header={header} maxWidth={1000}>
-        <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: 64 }}>
-          <ActivityIndicator size="large" color="#3D8A5A" />
+        <View style={{ padding: isMobile ? 20 : 28 }}>
+          {/* Title Skeleton */}
+          <Skeleton width={isMobile ? 240 : 320} height={isMobile ? 26 : 32} borderRadius={4} style={{ marginBottom: 8 }} />
+          <Skeleton width={isMobile ? 180 : 240} height={16} borderRadius={3} style={{ marginBottom: 24 }} />
+          
+          {/* Details Card Skeleton */}
+          <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: isMobile ? 20 : 28, marginBottom: 24 }}>
+            <Skeleton width="80%" height={isMobile ? 24 : 28} borderRadius={4} style={{ marginBottom: 12 }} />
+            <Skeleton width="100%" height={14} borderRadius={3} style={{ marginBottom: 8 }} />
+            <Skeleton width="90%" height={14} borderRadius={3} style={{ marginBottom: 24 }} />
+            
+            {/* Info Rows Skeleton */}
+            <Skeleton width="100%" height={60} borderRadius={8} style={{ marginBottom: 12 }} />
+            <Skeleton width="100%" height={60} borderRadius={8} style={{ marginBottom: 12 }} />
+            <Skeleton width="100%" height={60} borderRadius={8} />
+          </View>
+          
+          {/* RSVP Section Skeleton */}
+          <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: isMobile ? 20 : 28 }}>
+            <Skeleton width={120} height={18} borderRadius={3} style={{ marginBottom: 16 }} />
+            <SkeletonList count={3} type="card" />
+          </View>
         </View>
       </WebPageLayout>
       </>

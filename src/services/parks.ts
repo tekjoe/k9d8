@@ -88,7 +88,7 @@ export async function getParkById(id: string): Promise<Park> {
 
 /**
  * Fetches a single park by a partial ID (first 8 characters of UUID).
- * Used for SEO-friendly slug URLs like /parks/sunnyside-dog-park-9566f589
+ * Used for SEO-friendly slug URLs like /dog-parks/sunnyside-dog-park-9566f589
  * 
  * Since Supabase/PostgREST doesn't support LIKE on UUID columns directly,
  * we fetch all parks and filter client-side. This is acceptable because:
@@ -157,6 +157,111 @@ export async function getParksByCity(city: string): Promise<Park[]> {
     .select('*')
     .ilike('city', city)
     .order('name');
+
+  if (error) throw error;
+  return data as Park[];
+}
+
+/** Maps a 2-letter US state abbreviation to its full name. */
+const STATE_NAMES: Record<string, string> = {
+  AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California',
+  CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
+  HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa',
+  KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland',
+  MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri',
+  MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey',
+  NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio',
+  OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina',
+  SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont',
+  VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming',
+  DC: 'District of Columbia',
+};
+
+/**
+ * Extracts a 2-letter state abbreviation from a park row.
+ * Handles messy data: "WI 53711", zip-only with swapped city/state, or just "IL".
+ */
+function extractStateAbbrev(row: { city?: string | null; state?: string | null }): string | null {
+  const st = row.state?.trim() ?? '';
+  // "WI 53711" or "WI"
+  if (/^[A-Z]{2}(\s|$)/.test(st)) return st.slice(0, 2);
+  // Zip-only — city column might hold the state abbrev (data has city/state swapped)
+  const city = row.city?.trim() ?? '';
+  if (/^\d+$/.test(st) && /^[A-Z]{2}$/.test(city)) return city;
+  return null;
+}
+
+/** Returns the full state name for a 2-letter abbreviation. */
+export function stateAbbrevToName(abbrev: string): string {
+  return STATE_NAMES[abbrev.toUpperCase()] ?? abbrev;
+}
+
+/** Returns the 2-letter abbreviation for a full state name. */
+export function stateNameToAbbrev(name: string): string | null {
+  const entry = Object.entries(STATE_NAMES).find(
+    ([, v]) => v.toLowerCase() === name.toLowerCase()
+  );
+  return entry ? entry[0] : null;
+}
+
+/**
+ * Fetches distinct states with total park counts.
+ * Used for the dog parks directory "Browse by State" section.
+ */
+export async function getParkStateCounts(): Promise<
+  Array<{ state: string; count: number }>
+> {
+  const { data, error } = await supabase
+    .from('parks')
+    .select('city, state')
+    .not('state', 'is', null);
+
+  if (error) throw error;
+
+  const counts = new Map<string, number>();
+  for (const row of data ?? []) {
+    const abbrev = extractStateAbbrev(row);
+    if (!abbrev || !STATE_NAMES[abbrev]) continue;
+    const fullName = STATE_NAMES[abbrev];
+    counts.set(fullName, (counts.get(fullName) || 0) + 1);
+  }
+
+  return Array.from(counts.entries())
+    .map(([state, count]) => ({ state, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+/**
+ * Fetches parks for a specific state.
+ * Accepts a full state name (e.g. "Minnesota") and matches by abbreviation
+ * against both the state and city columns (handles swapped data).
+ */
+export async function getParksByState(stateName: string): Promise<Park[]> {
+  const abbrev = stateNameToAbbrev(stateName);
+  if (!abbrev) return [];
+
+  // Query parks where state starts with the abbreviation OR city equals the abbreviation
+  // (handles both "WI 53711" and swapped rows where city="MN", state="55008")
+  const { data, error } = await supabase
+    .from('parks')
+    .select('*')
+    .or(`state.ilike.${abbrev}%,city.eq.${abbrev}`)
+    .order('name');
+
+  if (error) throw error;
+  return data as Park[];
+}
+
+/**
+ * Fetches a few featured parks (highest activity or random selection).
+ * Used for the directory page "Featured Parks" section.
+ */
+export async function getFeaturedParks(limit = 3): Promise<Park[]> {
+  const { data, error } = await supabase
+    .from('parks')
+    .select('*')
+    .not('image_url', 'is', null)
+    .limit(limit);
 
   if (error) throw error;
   return data as Park[];

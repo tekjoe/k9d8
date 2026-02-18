@@ -70,7 +70,7 @@ export function useNotifications() {
       Notifications.addNotificationResponseReceivedListener((response) => {
         const data = response.notification.request.content.data;
         if (data?.type === 'friend_checkin' && data?.parkId) {
-          router.push(`/parks/${data.parkId}` as never);
+          router.push(`/dog-parks/${data.parkId}` as never);
         } else if (data?.conversationId) {
           router.push(`/messages/${data.conversationId}` as never);
         }

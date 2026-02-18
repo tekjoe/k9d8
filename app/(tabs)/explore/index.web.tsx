@@ -53,8 +53,7 @@ function ParkListItem({ park, pupCount, distanceKm, selected, onPress }: ParkLis
     >
       <Image
         source={{
-          uri: park.image_url ||
-            'https://images.unsplash.com/photo-1601758124096-1fd661873b95?w=112&h=112&fit=crop',
+          uri: park.image_url || '/images/dog-park-placeholder.png',
         }}
         className="w-14 h-14 rounded-lg"
         resizeMode="cover"
@@ -150,7 +149,7 @@ export default function DesktopExploreScreen() {
   const handleParkPress = useCallback(
     (park: Park) => {
       const slug = generateParkSlug(park.name, park.id);
-      router.push(`/parks/${slug}` as any);
+      router.push(`/dog-parks/${slug}` as any);
     },
     [router]
   );

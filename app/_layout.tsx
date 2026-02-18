@@ -17,7 +17,6 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{ headerShown: false, title: 'k9d8' }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false, title: 'k9d8' }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-          <Stack.Screen name="parks/[id]" options={{ headerShown: false }} />
           <Stack.Screen name="dogs/[id]" options={{ headerShown: false }} />
           <Stack.Screen name="playdates/create" options={{ headerShown: false }} />
           <Stack.Screen name="playdates/[id]" options={{ headerShown: false }} />
@@ -26,7 +25,10 @@ export default function RootLayout() {
           <Stack.Screen name="features" options={{ headerShown: false }} />
           <Stack.Screen name="download" options={{ headerShown: false }} />
           <Stack.Screen name="dog-parks/index" options={{ headerShown: false }} />
-          <Stack.Screen name="dog-parks/[city]" options={{ headerShown: false }} />
+          <Stack.Screen name="dog-parks/[slug]" options={{ headerShown: false }} />
+          <Stack.Screen name="blog/index" options={{ headerShown: false }} />
+          <Stack.Screen name="blog/[slug]" options={{ headerShown: false }} />
+          <Stack.Screen name="notifications" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" options={{ headerShown: false }} />
         </Stack>
         <StatusBar style="auto" />

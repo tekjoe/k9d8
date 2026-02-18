@@ -3,12 +3,11 @@ import {
   ActivityIndicator,
   Image,
   Pressable,
-  ScrollView,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
 import { useUserProfile } from '@/src/hooks/useUserProfile';
@@ -16,7 +15,6 @@ import { useUserProfile } from '@/src/hooks/useUserProfile';
 export default function UserProfileScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const insets = useSafeAreaInsets();
 
   const {
     profile,
@@ -36,7 +34,7 @@ export default function UserProfileScreen() {
 
   if (loading) {
     return (
-      <View className="flex-1 justify-center items-center bg-background">
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F4F1' }}>
         <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
@@ -44,164 +42,226 @@ export default function UserProfileScreen() {
 
   if (!profile) {
     return (
-      <View className="flex-1 justify-center items-center bg-background">
-        <Text className="text-base text-error text-center px-8">User not found</Text>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, backgroundColor: '#F5F4F1' }}>
+        <Text style={{ fontSize: 16, color: '#B5725E', textAlign: 'center' }}>User not found</Text>
       </View>
     );
   }
 
   return (
-    <View className="flex-1 bg-background">
-      {/* Hero */}
-      <View className="relative bg-secondary/20 h-[180px] justify-end items-center">
+    <ScrollView style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+      {/* Header */}
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          backgroundColor: '#FFFFFF',
+          paddingHorizontal: 16,
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
+        }}
+      >
         <Pressable
-          onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
-          className="absolute left-4 w-10 h-10 rounded-full bg-white/90 justify-center items-center shadow-sm"
-          style={{ top: insets.top + 8 }}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+          style={{ width: 40, height: 40, justifyContent: 'center', alignItems: 'center' }}
         >
           <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
         </Pressable>
-
-        <View className="w-24 h-24 rounded-full border-[3px] border-white bg-white mb-[-48px]">
-          <Image
-            source={{
-              uri:
-                profile.avatar_url ||
-                'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
-            }}
-            className="w-full h-full rounded-full"
-            resizeMode="cover"
-          />
-        </View>
+        <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginLeft: 12 }}>
+          {profile.display_name || 'Profile'}
+        </Text>
       </View>
 
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{ paddingBottom: 100 }}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Name */}
-        <View className="items-center px-8 pt-14 pb-4">
-          <Text className="text-2xl font-bold text-text text-center">
+      <View style={{ padding: 16 }}>
+        {/* Profile Header */}
+        <View
+          style={{
+            alignItems: 'center',
+            backgroundColor: '#FFFFFF',
+            borderRadius: 16,
+            padding: 24,
+            marginBottom: 16,
+          }}
+        >
+          <View
+            style={{
+              width: 96,
+              height: 96,
+              borderRadius: 48,
+              borderWidth: 3,
+              borderColor: '#E5E4E1',
+              overflow: 'hidden',
+              marginBottom: 16,
+            }}
+          >
+            <Image
+              source={{
+                uri:
+                  profile.avatar_url ||
+                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
+              }}
+              style={{ width: '100%', height: '100%' }}
+              resizeMode="cover"
+            />
+          </View>
+          <Text style={{ fontSize: 22, fontWeight: '700', color: '#1A1918' }}>
             {profile.display_name || 'Dog Owner'}
           </Text>
-        </View>
 
-        {/* Action Buttons */}
-        {!isOwnProfile && (
-          <View className="px-5 mb-6 gap-3">
-            {/* Friendship button */}
-            {!isPending && !isFriend && (
-              <Pressable
-                onPress={handleSendRequest}
-                disabled={actionLoading}
-                className="flex-row items-center justify-center bg-secondary py-3.5 rounded-xl"
-              >
-                <Ionicons name="person-add-outline" size={20} color="#fff" />
-                <Text className="text-white text-[15px] font-semibold ml-2">
-                  Add Friend
-                </Text>
-              </Pressable>
-            )}
-
-            {isSentByMe && (
-              <View className="flex-row items-center justify-center bg-border py-3.5 rounded-xl">
-                <Ionicons name="time-outline" size={20} color="#6D6C6A" />
-                <Text className="text-text-secondary text-[15px] font-semibold ml-2">
-                  Request Sent
-                </Text>
-              </View>
-            )}
-
-            {isSentToMe && (
-              <Pressable
-                onPress={handleAccept}
-                disabled={actionLoading}
-                className="flex-row items-center justify-center bg-secondary py-3.5 rounded-xl"
-              >
-                <Ionicons name="checkmark-circle-outline" size={20} color="#fff" />
-                <Text className="text-white text-[15px] font-semibold ml-2">
-                  Accept Friend Request
-                </Text>
-              </Pressable>
-            )}
-
-            {isFriend && (
-              <>
+          {/* Action Buttons */}
+          {!isOwnProfile && (
+            <View
+              style={{
+                flexDirection: 'column',
+                gap: 12,
+                marginTop: 20,
+                width: '100%',
+              }}
+            >
+              {!isPending && !isFriend && (
                 <Pressable
-                  onPress={handleMessage}
+                  onPress={handleSendRequest}
                   disabled={actionLoading}
-                  className="flex-row items-center justify-center bg-secondary py-3.5 rounded-xl"
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#3D8A5A',
+                    paddingVertical: 12,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
                 >
-                  <Ionicons name="chatbubble-outline" size={20} color="#fff" />
-                  <Text className="text-white text-[15px] font-semibold ml-2">
-                    Message
-                  </Text>
+                  <Ionicons name="person-add-outline" size={20} color="#fff" />
+                  <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Add Friend</Text>
                 </Pressable>
+              )}
+
+              {isSentByMe && (
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#EDECEA',
+                    paddingVertical: 12,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
+                >
+                  <Ionicons name="time-outline" size={20} color="#6D6C6A" />
+                  <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '600' }}>Request Sent</Text>
+                </View>
+              )}
+
+              {isSentToMe && (
+                <Pressable
+                  onPress={handleAccept}
+                  disabled={actionLoading}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#3D8A5A',
+                    paddingVertical: 12,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
+                >
+                  <Ionicons name="checkmark-circle-outline" size={20} color="#fff" />
+                  <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Accept Request</Text>
+                </Pressable>
+              )}
+
+              {isFriend && (
                 <Pressable
                   onPress={handleRemoveFriend}
                   disabled={actionLoading}
-                  className="flex-row items-center justify-center bg-white border border-border py-3.5 rounded-xl"
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#FFFFFF',
+                    borderWidth: 1,
+                    borderColor: '#E5E4E1',
+                    paddingVertical: 12,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
                 >
                   <Ionicons name="person-remove-outline" size={18} color="#6D6C6A" />
-                  <Text className="text-text-secondary text-[15px] font-medium ml-2">
-                    Remove Friend
-                  </Text>
+                  <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '500' }}>Remove Friend</Text>
                 </Pressable>
-              </>
-            )}
+              )}
 
-            {/* Message button when not yet friends */}
-            {!isFriend && (
               <Pressable
                 onPress={handleMessage}
                 disabled={actionLoading}
-                className="flex-row items-center justify-center bg-white border border-secondary py-3.5 rounded-xl"
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: isFriend ? '#3D8A5A' : '#FFFFFF',
+                  borderWidth: isFriend ? 0 : 1,
+                  borderColor: '#3D8A5A',
+                  paddingVertical: 12,
+                  borderRadius: 12,
+                  gap: 8,
+                }}
               >
-                <Ionicons name="chatbubble-outline" size={20} color="#3D8A5A" />
-                <Text className="text-secondary text-[15px] font-semibold ml-2">
+                <Ionicons name="chatbubble-outline" size={20} color={isFriend ? '#fff' : '#3D8A5A'} />
+                <Text style={{ color: isFriend ? '#FFFFFF' : '#3D8A5A', fontSize: 15, fontWeight: '600' }}>
                   Message
                 </Text>
               </Pressable>
-            )}
-          </View>
-        )}
+            </View>
+          )}
+        </View>
 
-        {/* Dogs */}
+        {/* Dogs Section */}
         {dogs.length > 0 && (
-          <View className="px-5">
-            <Text className="text-lg font-bold text-text mb-3">
+          <View>
+            <Text style={{ fontSize: 18, fontWeight: '700', color: '#1A1918', marginBottom: 16 }}>
               {isOwnProfile ? 'My Dogs' : 'Their Dogs'}
             </Text>
-            {dogs.map((dog) => (
-              <Pressable
-                key={dog.id}
-                onPress={() => router.push(`/dogs/${dog.id}`)}
-                className="flex-row items-center bg-white p-3 rounded-xl mb-2"
-              >
-                <Image
-                  source={{
-                    uri:
-                      dog.photo_url ||
-                      'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+            <View style={{ gap: 12 }}>
+              {dogs.map((dog) => (
+                <Pressable
+                  key={dog.id}
+                  onPress={() => router.push(`/dogs/${dog.id}`)}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    backgroundColor: '#FFFFFF',
+                    padding: 16,
+                    borderRadius: 12,
                   }}
-                  className="w-12 h-12 rounded-full mr-3"
-                  resizeMode="cover"
-                />
-                <View className="flex-1">
-                  <Text className="text-base font-semibold text-text">{dog.name}</Text>
-                  <Text className="text-sm text-text-secondary">
-                    {[dog.breed, dog.age_years ? `${dog.age_years} yrs` : '']
-                      .filter(Boolean)
-                      .join(', ') || 'Mixed breed'}
-                  </Text>
-                </View>
-                <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
-              </Pressable>
-            ))}
+                >
+                  <Image
+                    source={{
+                      uri:
+                        dog.photo_url ||
+                        'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+                    }}
+                    style={{ width: 56, height: 56, borderRadius: 28, marginRight: 12 }}
+                    resizeMode="cover"
+                  />
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>{dog.name}</Text>
+                    <Text style={{ fontSize: 14, color: '#6D6C6A', marginTop: 2 }}>
+                      {[dog.breed, dog.age_years ? `${dog.age_years} yrs` : '']
+                        .filter(Boolean)
+                        .join(', ') || 'Mixed breed'}
+                    </Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
+                </Pressable>
+              ))}
+            </View>
           </View>
         )}
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 }

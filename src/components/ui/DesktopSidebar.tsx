@@ -1,5 +1,5 @@
 import React, { useSyncExternalStore, useCallback } from 'react';
-import { View, Text, Pressable, Platform, Image } from 'react-native';
+import { View, Text, Pressable, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter, usePathname } from 'expo-router';
 
@@ -35,10 +35,11 @@ interface NavItemProps {
   label: string;
   active?: boolean;
   collapsed?: boolean;
+  badge?: number;
   onPress: () => void;
 }
 
-function NavItem({ icon, label, active, collapsed, onPress }: NavItemProps) {
+function NavItem({ icon, label, active, collapsed, badge, onPress }: NavItemProps) {
   return (
     <Pressable
       onPress={onPress}
@@ -53,11 +54,33 @@ function NavItem({ icon, label, active, collapsed, onPress }: NavItemProps) {
         backgroundColor: active ? 'rgba(61, 138, 90, 0.1)' : 'transparent',
       }}
     >
-      <Ionicons
-        name={icon}
-        size={20}
-        color={active ? '#3D8A5A' : '#6D6C6A'}
-      />
+      <View style={{ position: 'relative' }}>
+        <Ionicons
+          name={icon}
+          size={20}
+          color={active ? '#3D8A5A' : '#6D6C6A'}
+        />
+        {badge && badge > 0 && (
+          <View
+            style={{
+              position: 'absolute',
+              top: -6,
+              right: -6,
+              backgroundColor: '#B5725E',
+              borderRadius: 8,
+              minWidth: 16,
+              height: 16,
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingHorizontal: 4,
+            }}
+          >
+            <Text style={{ color: '#FFFFFF', fontSize: 10, fontWeight: '700' }}>
+              {badge > 99 ? '99+' : badge}
+            </Text>
+          </View>
+        )}
+      </View>
       {!collapsed && (
         <Text
           style={{
@@ -110,19 +133,22 @@ export default function DesktopSidebar() {
       }}
     >
       {/* Brand */}
-      <View
+      <Pressable
+        onPress={() => router.push('/')}
         style={{
-          alignItems: isCollapsed ? 'center' : 'flex-start',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: isCollapsed ? 'center' : 'flex-start',
+          gap: isCollapsed ? 0 : 10,
           paddingHorizontal: isCollapsed ? 12 : 24,
           paddingVertical: 20,
         }}
       >
-        <Image
-          source={require('@/assets/images/k9d8-logo.svg')}
-          style={{ width: isCollapsed ? 40 : 120, height: isCollapsed ? 29 : 87 }}
-          resizeMode="contain"
-        />
-      </View>
+        <Ionicons name="paw" size={22} color="#3D8A5A" />
+        {!isCollapsed && (
+          <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918', letterSpacing: 0.5 }}>k9d8</Text>
+        )}
+      </Pressable>
 
       {/* Navigation */}
       <View style={{ flex: 1, paddingHorizontal: isCollapsed ? 12 : 12, paddingVertical: 16 }}>
@@ -160,6 +186,13 @@ export default function DesktopSidebar() {
           active={isActive('/profile') && !pathname.startsWith('/profile/friends')}
           collapsed={isCollapsed}
           onPress={() => handleNavigate('/profile')}
+        />
+        <NavItem
+          icon="notifications"
+          label="Notifications"
+          active={isActive('/notifications')}
+          collapsed={isCollapsed}
+          onPress={() => handleNavigate('/notifications')}
         />
       </View>
 

@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
-  FlatList,
   Image,
   Pressable,
   ScrollView,
@@ -9,29 +9,34 @@ import {
   View,
 } from 'react-native';
 import { router } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '@/src/constants/colors';
-
 import { useAuth } from '@/src/hooks/useAuth';
 import { signOut } from '@/src/services/auth';
 import { useDogs } from '@/src/hooks/useDogs';
 import { useFriends } from '@/src/hooks/useFriends';
-import type { Dog } from '@/src/types/database';
+import type { Dog, Friendship, Profile } from '@/src/types/database';
 
-interface DogListItemProps {
+// Dog List Row Component
+interface DogListRowProps {
   dog: Dog;
   onPress: () => void;
 }
 
-function DogListItem({ dog, onPress }: DogListItemProps) {
+function DogListRow({ dog, onPress }: DogListRowProps) {
   const ageText = dog.age_years ? `${dog.age_years} ${dog.age_years === 1 ? 'yr' : 'yrs'}` : '';
   const subtitle = [dog.breed, ageText].filter(Boolean).join(', ');
 
   return (
     <Pressable 
       onPress={onPress}
-      className="flex-row items-center bg-white p-3 rounded-xl mb-px"
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#E5E4E1',
+      }}
     >
       <Image
         source={{
@@ -39,26 +44,157 @@ function DogListItem({ dog, onPress }: DogListItemProps) {
             dog.photo_url ||
             'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
         }}
-        className="w-12 h-12 rounded-full mr-3"
+        style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
         resizeMode="cover"
       />
-      <View className="flex-1">
-        <Text className="text-base font-semibold text-text">{dog.name}</Text>
-        <Text className="text-sm text-text-secondary">{subtitle || 'Mixed breed'}</Text>
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 2 }}>
+          {dog.name}
+        </Text>
+        <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
+          {subtitle || 'Mixed breed'}
+        </Text>
       </View>
-      <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
+      <Ionicons name="chevron-forward" size={20} color="#D1D0CD" />
     </Pressable>
   );
 }
 
-export default function ProfileTab() {
+// Friend Row Component
+function FriendRow({ friend, onPress }: { friend: Profile; onPress: () => void }) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#E5E4E1',
+      }}
+    >
+      <Image
+        source={{
+          uri:
+            friend.avatar_url ||
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+        }}
+        style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
+        resizeMode="cover"
+      />
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+          {friend.display_name || 'User'}
+        </Text>
+      </View>
+      <Ionicons name="chevron-forward" size={20} color="#D1D0CD" />
+    </Pressable>
+  );
+}
+
+// Pending Request Row Component
+function PendingRequestRow({
+  request,
+  variant,
+  onAccept,
+  onDecline,
+}: {
+  request: Friendship;
+  variant: 'received' | 'sent';
+  onAccept?: () => void;
+  onDecline?: () => void;
+}) {
+  const [acting, setActing] = useState(false);
+  const person = variant === 'received' ? request.requester : request.addressee;
+
+  async function handleAction(action: (() => void) | undefined) {
+    if (!action) return;
+    setActing(true);
+    try {
+      await action();
+    } catch {
+      setActing(false);
+    }
+  }
+
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#fff',
+        borderBottomWidth: 1,
+        borderBottomColor: '#E5E4E1',
+      }}
+    >
+      <Image
+        source={{
+          uri:
+            person?.avatar_url ||
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+        }}
+        style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
+        resizeMode="cover"
+      />
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
+          {person?.display_name || 'User'}
+        </Text>
+      </View>
+      {variant === 'received' ? (
+        <View style={{ flexDirection: 'row', gap: 8 }}>
+          <Pressable
+            onPress={() => handleAction(onAccept)}
+            disabled={acting}
+            style={{
+              backgroundColor: '#3D8A5A',
+              paddingHorizontal: 16,
+              paddingVertical: 8,
+              borderRadius: 9999,
+            }}
+          >
+            <Text style={{ color: '#FFFFFF', fontSize: 13, fontWeight: '600' }}>Accept</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => handleAction(onDecline)}
+            disabled={acting}
+            style={{
+              borderWidth: 1,
+              borderColor: '#E5E4E1',
+              paddingHorizontal: 16,
+              paddingVertical: 8,
+              borderRadius: 9999,
+            }}
+          >
+            <Text style={{ color: '#6D6C6A', fontSize: 13, fontWeight: '500' }}>Decline</Text>
+          </Pressable>
+        </View>
+      ) : (
+        <View
+          style={{
+            backgroundColor: '#F5EFE0',
+            paddingHorizontal: 12,
+            paddingVertical: 6,
+            borderRadius: 9999,
+          }}
+        >
+          <Text style={{ color: '#B8893D', fontSize: 12, fontWeight: '600' }}>Pending</Text>
+        </View>
+      )}
+    </View>
+  );
+}
+
+export default function ProfilePage() {
   const { session } = useAuth();
   const userId = session?.user?.id;
-  const { dogs, loading, error, loadDogs } = useDogs(userId);
-  const { friends, pendingCount } = useFriends();
-  const insets = useSafeAreaInsets();
+  const { dogs, loading } = useDogs(userId);
+  const { friends, pendingRequests, sentRequests, acceptFriendRequest, declineFriendRequest } = useFriends();
 
   const displayName = session?.user?.user_metadata?.display_name || 'Alex Johnson';
+  const handle = session?.user?.email?.split('@')[0] || 'alexjohnson';
   const bio = session?.user?.user_metadata?.bio || 
     'Lover of all things canine. You can find me and my pack at Central Park on weekends!';
   const avatarUrl = session?.user?.user_metadata?.avatar_url;
@@ -84,168 +220,265 @@ export default function ProfileTab() {
     router.push('/(tabs)/profile/edit');
   }
 
-  function handleBack() {
-    router.back();
-  }
+  const friendsCount = friends.length;
 
   return (
-    <View className="flex-1 bg-background" style={{ paddingTop: insets.top }}>
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Header */}
-      <View className="flex-row justify-between items-center px-4 py-3">
-        <Pressable onPress={handleBack} className="w-10 h-10 justify-center items-center">
-          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
-        </Pressable>
-        <Text className="text-lg font-semibold text-text">Profile</Text>
-        <Pressable onPress={handleEditProfile} className="w-10 h-10 justify-center items-center">
-          <Ionicons name="create-outline" size={24} color="#1A1918" />
+      <View 
+        style={{ 
+          flexDirection: 'row', 
+          alignItems: 'center', 
+          justifyContent: 'space-between',
+          backgroundColor: '#fff',
+          paddingHorizontal: 20,
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
+        }}
+      >
+        <Text style={{ fontSize: 20, fontWeight: '600', color: '#1A1918' }}>
+          Profile
+        </Text>
+        <Pressable 
+          onPress={handleEditProfile}
+          style={{ 
+            borderWidth: 1, 
+            borderColor: '#E5E4E1', 
+            paddingHorizontal: 16, 
+            paddingVertical: 8, 
+            borderRadius: 9999,
+          }}
+        >
+          <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918' }}>
+            Edit Profile
+          </Text>
         </Pressable>
       </View>
 
-      <FlatList
-        data={dogs}
-        keyExtractor={(item) => item.id}
-        ListHeaderComponent={
-          <>
-            {/* Profile Info */}
-            <View className="items-center px-8 pt-2 pb-6">
-              <View className="w-24 h-24 rounded-full border-[3px] border-secondary p-[3px] mb-4">
-                <Image
-                  source={{
-                    uri:
-                      avatarUrl ||
-                      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-                  }}
-                  className="w-full h-full rounded-full"
-                  resizeMode="cover"
-                />
-              </View>
-              <Text className="text-2xl font-bold text-text mb-2">{displayName}</Text>
-              <Text className="text-sm text-text-secondary text-center leading-5">{bio}</Text>
-            </View>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 20 }}>
+        {/* Profile Card */}
+        <View 
+          style={{ 
+            backgroundColor: '#fff',
+            borderRadius: 16,
+            padding: 24,
+            alignItems: 'center',
+            marginBottom: 24,
+          }}
+        >
+          {/* Avatar */}
+          <View 
+            style={{ 
+              width: 100, 
+              height: 100, 
+              borderRadius: 50, 
+              borderWidth: 3, 
+              borderColor: '#3D8A5A',
+              padding: 3,
+              marginBottom: 16,
+            }}
+          >
+            <Image
+              source={{
+                uri:
+                  avatarUrl ||
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
+              }}
+              style={{ width: '100%', height: '100%', borderRadius: 50 }}
+              resizeMode="cover"
+            />
+          </View>
 
-            {/* Friends Section */}
-            <View className="flex-row justify-between items-center mb-4 mt-2">
-              <Text className="text-xl font-bold text-text">
-                Friends{friends.length > 0 ? ` (${friends.length})` : ''}
-              </Text>
-              <View className="flex-row items-center gap-3">
-                {pendingCount > 0 && (
-                  <Pressable
-                    onPress={() => router.push('/(tabs)/profile/friends/requests')}
-                    className="flex-row items-center"
-                  >
-                    <View className="bg-error w-5 h-5 rounded-full justify-center items-center mr-1">
-                      <Text className="text-white text-xs font-bold">{pendingCount}</Text>
-                    </View>
-                    <Text className="text-sm text-secondary font-medium">Requests</Text>
-                  </Pressable>
-                )}
-                <Pressable
-                  onPress={() => router.push('/(tabs)/profile/friends')}
-                  className="w-10 h-10 rounded-full bg-secondary justify-center items-center"
-                >
-                  <Ionicons name="people" size={20} color="#fff" />
-                </Pressable>
-              </View>
-            </View>
+          {/* Name & Handle */}
+          <Text style={{ fontSize: 20, fontWeight: '600', color: '#1A1918', marginBottom: 4 }}>
+            {displayName}
+          </Text>
+          <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
+            @{handle}
+          </Text>
 
-            {friends.length > 0 ? (
-              <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                className="mb-6"
-              >
-                <View className="flex-row gap-4">
-                  {friends.slice(0, 10).map((friend) => (
-                    <Pressable
-                      key={friend.id}
-                      onPress={() => router.push(`/users/${friend.id}`)}
-                      className="items-center"
-                    >
-                      <Image
-                        source={{
-                          uri:
-                            friend.avatar_url ||
-                            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
-                        }}
-                        className="w-14 h-14 rounded-full mb-1"
-                        resizeMode="cover"
-                      />
-                      <Text
-                        className="text-xs text-text-secondary max-w-[56px]"
-                        numberOfLines={1}
-                      >
-                        {friend.display_name || 'User'}
-                      </Text>
-                    </Pressable>
-                  ))}
-                </View>
-              </ScrollView>
-            ) : (
-              <View className="items-center py-4 bg-white rounded-2xl mb-6">
-                <Text className="text-sm text-text-secondary mb-2">No friends yet</Text>
-                <Pressable
-                  onPress={() => router.push('/(tabs)/profile/friends')}
-                  className="bg-secondary px-5 py-2 rounded-full"
-                >
-                  <Text className="text-white text-sm font-semibold">Find Friends</Text>
-                </Pressable>
-              </View>
-            )}
+          {/* Bio */}
+          <Text 
+            style={{ 
+              fontSize: 14, 
+              color: '#6D6C6A', 
+              textAlign: 'center', 
+              lineHeight: 21,
+              marginBottom: 16,
+            }}
+          >
+            {bio}
+          </Text>
 
-            {/* My Dogs Section Header */}
-            <View className="flex-row justify-between items-center mb-4 mt-2">
-              <Text className="text-xl font-bold text-text">My Dogs</Text>
-              <Pressable 
-                onPress={handleAddDog}
-                className="w-10 h-10 rounded-full bg-secondary justify-center items-center"
-              >
-                <Ionicons name="add" size={24} color="#fff" />
-              </Pressable>
+          {/* Stats */}
+          <View style={{ flexDirection: 'row', gap: 24 }}>
+            <View style={{ alignItems: 'center' }}>
+              <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918' }}>{friendsCount}</Text>
+              <Text style={{ fontSize: 12, color: '#6D6C6A', marginTop: 2 }}>Friends</Text>
             </View>
-          </>
-        }
-        renderItem={({ item }) => (
-          <DogListItem dog={item} onPress={() => handleDogPress(item)} />
-        )}
-        ListEmptyComponent={
-          loading ? (
-            <ActivityIndicator size="small" color="#3D8A5A" style={{ paddingVertical: 24 }} />
-          ) : error ? (
-            <View className="items-center py-8 bg-white rounded-2xl">
-              <Text className="text-sm text-error text-center">{error}</Text>
-              <Pressable onPress={loadDogs}>
-                <Text className="text-sm text-secondary mt-2 font-medium">Tap to retry</Text>
-              </Pressable>
+          </View>
+        </View>
+
+        {/* My Dogs Section */}
+        <View style={{ marginBottom: 24 }}>
+          <View 
+            style={{ 
+              flexDirection: 'row', 
+              alignItems: 'center', 
+              justifyContent: 'space-between',
+              marginBottom: 12,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918' }}>
+              My Dogs
+            </Text>
+            <Pressable 
+              onPress={handleAddDog}
+              style={{ 
+                backgroundColor: '#3D8A5A', 
+                paddingHorizontal: 16, 
+                paddingVertical: 8, 
+                borderRadius: 9999,
+              }}
+            >
+              <Text style={{ color: '#fff', fontWeight: '600', fontSize: 14 }}>Add Dog</Text>
+            </Pressable>
+          </View>
+
+          {loading ? (
+            <View style={{ padding: 40, alignItems: 'center' }}>
+              <ActivityIndicator size="small" color="#3D8A5A" />
             </View>
+          ) : dogs.length > 0 ? (
+            dogs.map((dog) => (
+              <DogListRow 
+                key={dog.id} 
+                dog={dog} 
+                onPress={() => handleDogPress(dog)}
+              />
+            ))
           ) : (
-            <View className="items-center py-8 bg-white rounded-2xl">
-              <Text className="text-sm text-text-secondary mb-3">No dogs added yet</Text>
+            <View style={{ backgroundColor: '#fff', borderRadius: 16, padding: 32, alignItems: 'center' }}>
+              <Text style={{ fontSize: 14, color: '#6D6C6A', marginBottom: 16 }}>
+                No dogs added yet
+              </Text>
               <Pressable 
                 onPress={handleAddDog}
-                className="bg-secondary px-5 py-2.5 rounded-full"
+                style={{ 
+                  backgroundColor: '#3D8A5A', 
+                  paddingHorizontal: 20, 
+                  paddingVertical: 10, 
+                  borderRadius: 9999,
+                }}
               >
-                <Text className="text-white text-sm font-semibold">Add your first dog</Text>
+                <Text style={{ color: '#fff', fontWeight: '600', fontSize: 14 }}>
+                  Add your first dog
+                </Text>
               </Pressable>
             </View>
-          )
-        }
-        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 100 }}
-        showsVerticalScrollIndicator={false}
-      />
+          )}
+        </View>
 
-      {/* Sign Out Button */}
-      <View 
-        className="absolute bottom-0 left-0 right-0 bg-background px-5 pt-2"
-        style={{ paddingBottom: insets.bottom + 16 }}
-      >
+        {/* My Friends Section */}
+        <View style={{ marginBottom: 24 }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginBottom: 12,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918' }}>
+              My Friends
+            </Text>
+            <Pressable
+              onPress={() => router.push('/(tabs)/profile/friends')}
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                paddingHorizontal: 16,
+                paddingVertical: 8,
+                borderRadius: 9999,
+              }}
+            >
+              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1A1918' }}>View All</Text>
+            </Pressable>
+          </View>
+
+          {/* Pending Received Requests */}
+          {pendingRequests.length > 0 && (
+            <>
+              <View style={{ paddingHorizontal: 16, paddingVertical: 8, backgroundColor: '#fff', borderTopLeftRadius: 12, borderTopRightRadius: 12 }}>
+                <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase' }}>
+                  Requests Received
+                </Text>
+              </View>
+              {pendingRequests.map((request) => (
+                <PendingRequestRow
+                  key={request.id}
+                  request={request}
+                  variant="received"
+                  onAccept={() => acceptFriendRequest(request.id)}
+                  onDecline={() => declineFriendRequest(request.id)}
+                />
+              ))}
+            </>
+          )}
+
+          {/* Pending Sent Requests */}
+          {sentRequests.length > 0 && (
+            <>
+              <View style={{ paddingHorizontal: 16, paddingVertical: 8, backgroundColor: '#fff' }}>
+                <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase' }}>
+                  Requests Sent
+                </Text>
+              </View>
+              {sentRequests.map((request) => (
+                <PendingRequestRow
+                  key={request.id}
+                  request={request}
+                  variant="sent"
+                />
+              ))}
+            </>
+          )}
+
+          {/* Accepted Friends */}
+          {friends.length > 0 ? (
+            friends.slice(0, 5).map((friend) => (
+              <FriendRow
+                key={friend.id}
+                friend={friend}
+                onPress={() => router.push(`/users/${friend.id}`)}
+              />
+            ))
+          ) : pendingRequests.length === 0 && sentRequests.length === 0 ? (
+            <View style={{ backgroundColor: '#fff', borderRadius: 16, padding: 32, alignItems: 'center' }}>
+              <Ionicons name="people-outline" size={36} color="#878685" style={{ marginBottom: 12 }} />
+              <Text style={{ fontSize: 14, color: '#6D6C6A', textAlign: 'center' }}>
+                No friends yet. Visit a dog profile to connect with other owners.
+              </Text>
+            </View>
+          ) : null}
+        </View>
+
+        {/* Sign Out Button */}
         <Pressable 
           onPress={handleSignOut}
-          className="py-3.5 rounded-xl border border-error items-center bg-white"
+          style={{ 
+            paddingVertical: 14, 
+            borderRadius: 12, 
+            borderWidth: 1, 
+            borderColor: '#B5725E',
+            backgroundColor: '#fff',
+            alignItems: 'center',
+          }}
         >
-          <Text className="text-error text-base font-semibold">Sign Out</Text>
+          <Text style={{ color: '#B5725E', fontSize: 16, fontWeight: '600' }}>Sign Out</Text>
         </Pressable>
-      </View>
+      </ScrollView>
     </View>
   );
 }

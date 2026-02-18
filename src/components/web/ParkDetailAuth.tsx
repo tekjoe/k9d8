@@ -10,7 +10,7 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
@@ -24,6 +24,7 @@ import { PlaydateCard } from '@/src/components/playdates/PlaydateCard';
 import { SEOHead, StructuredData, placeSchema } from '@/src/components/seo';
 import { parseSlugOrId } from '@/src/utils/slug';
 import type { Park, Dog } from '@/src/types/database';
+import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
 
 const DURATIONS = [
   { label: '30 mins', value: 30 },
@@ -131,7 +132,7 @@ interface ButtonPrimaryProps {
 
 function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' }: ButtonPrimaryProps) {
   const bgColor = variant === 'danger' ? '#B5725E' : variant === 'active' ? '#3D8A5A' : '#3D8A5A';
-  
+
   return (
     <Pressable
       onPress={onPress}
@@ -152,13 +153,16 @@ function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' 
   );
 }
 
-export default function ParkDetailWebScreen() {
+interface ParkDetailAuthProps {
+  slugOrId: string;
+}
+
+export default function ParkDetailAuth({ slugOrId }: ParkDetailAuthProps) {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
   const isDesktop = width >= 1024;
   const showSidebar = width >= 768;
 
-  const { id: slugOrId } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { session } = useAuth();
   const userId = session?.user?.id;
@@ -303,14 +307,14 @@ export default function ParkDetailWebScreen() {
   // Build features list based on park data
   const features = useMemo(() => {
     if (!park) return [];
-    
+
     const list: { icon: keyof typeof Ionicons.glyphMap; label: string }[] = [];
     if (park.has_water) list.push({ icon: 'water', label: 'Water Fountain' });
     if (park.is_fenced) list.push({ icon: 'shield-checkmark', label: 'Fenced Area' });
     if (park.has_shade) list.push({ icon: 'leaf', label: 'Shaded Areas' });
     if (park.amenities?.includes('Benches')) list.push({ icon: 'cube', label: 'Benches' });
     if (park.amenities?.includes('Waste Stations')) list.push({ icon: 'trash', label: 'Waste Stations' });
-    
+
     if (list.length === 0) {
       list.push(
         { icon: 'water', label: 'Water Fountain' },
@@ -319,7 +323,7 @@ export default function ParkDetailWebScreen() {
         { icon: 'trash', label: 'Waste Stations' }
       );
     }
-    
+
     return list;
   }, [park]);
 
@@ -327,9 +331,19 @@ export default function ParkDetailWebScreen() {
     return (
       <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
         {showSidebar && <DesktopSidebar />}
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <ActivityIndicator size="large" color="#3D8A5A" />
-        </View>
+        <ScrollView style={{ flex: 1 }}>
+          {/* Header Skeleton */}
+          <View style={{ padding: isMobile ? 20 : 40, gap: 6, marginBottom: 20 }}>
+            <Skeleton width={isMobile ? 200 : 280} height={isMobile ? 28 : 32} borderRadius={4} />
+            <Skeleton width={160} height={16} borderRadius={3} />
+          </View>
+
+          {/* Content Skeleton */}
+          <View style={{ paddingHorizontal: isMobile ? 20 : 40 }}>
+            <Skeleton width="100%" height={isMobile ? 200 : 300} borderRadius={12} style={{ marginBottom: 20 }} />
+            <SkeletonList count={4} type="card" />
+          </View>
+        </ScrollView>
       </View>
     );
   }
@@ -372,7 +386,7 @@ export default function ParkDetailWebScreen() {
       <SEOHead
         title={`${park.name} - Dog Park`}
         description={parkDescription.slice(0, 160)}
-        url={`/parks/${slugOrId}`}
+        url={`/dog-parks/${slugOrId}`}
         image={park.image_url || undefined}
       />
       <StructuredData data={placeSchema(park)} />
@@ -388,8 +402,7 @@ export default function ParkDetailWebScreen() {
               <Image
                 source={{
                   uri:
-                    park.image_url ||
-                    'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&h=400&fit=crop',
+                    park.image_url || '/images/dog-park-placeholder.png',
                 }}
                 accessibilityLabel={`Photo of ${park.name} dog park`}
                 style={{ width: '100%', height: isMobile ? 240 : 300 }}

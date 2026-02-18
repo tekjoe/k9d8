@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
-  ActivityIndicator,
-  Alert,
-  Pressable,
-  StyleSheet,
-  Text,
   View,
+  Text,
+  TextInput,
+  Pressable,
+  Image,
+  ActivityIndicator,
+  ScrollView,
+  Alert,
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
-
+import { Ionicons } from '@expo/vector-icons';
+import * as ImagePicker from 'expo-image-picker';
 import { useAuth } from '@/src/hooks/useAuth';
 import {
   getDogById,
@@ -16,8 +19,48 @@ import {
   deleteDog,
   uploadDogPhoto,
 } from '@/src/services/dogs';
-import { DogForm, type DogFormData } from '@/src/components/dogs/DogForm';
-import type { Dog } from '@/src/types/database';
+import { Colors } from '@/src/constants/colors';
+import type { Dog, DogSize, DogTemperament } from '@/src/types/database';
+
+const DOG_SIZES: { value: DogSize; label: string }[] = [
+  { value: 'small', label: 'Small' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'large', label: 'Large' },
+];
+
+const DOG_TEMPERAMENTS: { value: DogTemperament; label: string }[] = [
+  { value: 'calm', label: 'Calm' },
+  { value: 'friendly', label: 'Friendly' },
+  { value: 'energetic', label: 'Energetic' },
+  { value: 'anxious', label: 'Anxious' },
+  { value: 'aggressive', label: 'Aggressive' },
+];
+
+interface FormData {
+  name: string;
+  breed: string;
+  age: string;
+  size: DogSize;
+  temperaments: DogTemperament[];
+  color: string;
+  weight: string;
+  bio: string;
+  photoUri: string | null;
+}
+
+interface FormFieldProps {
+  label: string;
+  children: React.ReactNode;
+}
+
+function FormField({ label, children }: FormFieldProps) {
+  return (
+    <View style={{ gap: 8 }}>
+      <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }}>{label}</Text>
+      {children}
+    </View>
+  );
+}
 
 export default function EditDogScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -26,6 +69,20 @@ export default function EditDogScreen() {
 
   const [dog, setDog] = useState<Dog | null>(null);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    breed: '',
+    age: '',
+    size: 'medium',
+    temperaments: ['friendly'],
+    color: '',
+    weight: '',
+    bio: '',
+    photoUri: null,
+  });
 
   useEffect(() => {
     async function load() {
@@ -33,9 +90,19 @@ export default function EditDogScreen() {
       try {
         const data = await getDogById(id);
         setDog(data);
+        setFormData({
+          name: data.name,
+          breed: data.breed ?? '',
+          age: data.age_years != null ? `${data.age_years} years` : '',
+          size: data.size,
+          temperaments: data.temperament,
+          color: data.color ?? '',
+          weight: data.weight_lbs != null ? `${data.weight_lbs} lbs` : '',
+          bio: data.notes ?? '',
+          photoUri: data.photo_url,
+        });
       } catch (error) {
-        const message =
-          error instanceof Error ? error.message : 'Failed to load dog';
+        const message = error instanceof Error ? error.message : 'Failed to load dog';
         Alert.alert('Error', message);
         router.back();
       } finally {
@@ -45,61 +112,105 @@ export default function EditDogScreen() {
     load();
   }, [id]);
 
-  async function handleSubmit(data: DogFormData) {
-    if (!id || !userId) return;
+  const updateField = useCallback(<K extends keyof FormData>(key: K, value: FormData[K]) => {
+    setFormData((prev) => ({ ...prev, [key]: value }));
+  }, []);
 
+  const toggleTemperament = useCallback((temp: DogTemperament) => {
+    setFormData((prev) => {
+      const current = prev.temperaments;
+      if (current.includes(temp)) {
+        if (current.length === 1) return prev;
+        return { ...prev, temperaments: current.filter((t) => t !== temp) };
+      }
+      return { ...prev, temperaments: [...current, temp] };
+    });
+  }, []);
+
+  const pickPhoto = useCallback(async () => {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.8,
+    });
+
+    if (!result.canceled && result.assets[0]) {
+      updateField('photoUri', result.assets[0].uri);
+    }
+  }, [updateField]);
+
+  const handleSave = useCallback(async () => {
+    if (!id || !userId || submitting) return;
+
+    setSubmitting(true);
     try {
       let photoUrl: string | null | undefined;
 
-      if (data.photoUri && data.photoUri !== dog?.photo_url) {
-        photoUrl = await uploadDogPhoto(userId, data.photoUri);
+      if (formData.photoUri && formData.photoUri !== dog?.photo_url) {
+        photoUrl = await uploadDogPhoto(userId, formData.photoUri);
       }
 
+      const ageMatch = formData.age.match(/(\d+)/);
+      const ageNum = ageMatch ? parseInt(ageMatch[1], 10) : null;
+
+      const weightMatch = formData.weight.match(/(\d+)/);
+      const weightNum = weightMatch ? parseInt(weightMatch[1], 10) : null;
+
       await updateDog(id, {
-        name: data.name,
-        breed: data.breed || null,
-        size: data.size,
-        temperament: data.temperament, // Now an array
-        age_years: data.age_years,
-        color: data.color,
-        weight_lbs: data.weight_lbs,
-        notes: data.notes || null,
+        name: formData.name,
+        breed: formData.breed || null,
+        size: formData.size,
+        temperament: formData.temperaments,
+        age_years: ageNum,
+        color: formData.color || null,
+        weight_lbs: weightNum,
+        notes: formData.bio || null,
         ...(photoUrl !== undefined ? { photo_url: photoUrl } : {}),
       });
 
       router.back();
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : 'Failed to update dog';
+      const message = error instanceof Error ? error.message : 'Failed to update dog';
       Alert.alert('Error', message);
+    } finally {
+      setSubmitting(false);
     }
-  }
+  }, [id, userId, formData, dog, submitting]);
 
-  async function handleDelete() {
-    if (!id) return;
+  const handleCancel = useCallback(() => {
+    router.back();
+  }, []);
 
-    Alert.alert('Delete Dog', 'Are you sure you want to remove this dog?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Delete',
-        style: 'destructive',
-        onPress: async () => {
-          try {
-            await deleteDog(id);
-            router.back();
-          } catch (error) {
-            const message =
-              error instanceof Error ? error.message : 'Failed to delete dog';
-            Alert.alert('Error', message);
-          }
+  const handleDelete = useCallback(() => {
+    if (!id || deleting) return;
+
+    Alert.alert(
+      'Delete Dog Profile',
+      'Are you sure you want to delete this dog profile? This action cannot be undone.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: () => {
+            setDeleting(true);
+            deleteDog(id)
+              .then(() => router.back())
+              .catch((error) => {
+                const message = error instanceof Error ? error.message : 'Failed to delete dog';
+                Alert.alert('Error', message);
+              })
+              .finally(() => setDeleting(false));
+          },
         },
-      },
-    ]);
-  }
+      ]
+    );
+  }, [id, deleting]);
 
   if (loading) {
     return (
-      <View style={styles.centered}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F4F1' }}>
         <ActivityIndicator size="large" color="#3D8A5A" />
       </View>
     );
@@ -107,63 +218,256 @@ export default function EditDogScreen() {
 
   if (!dog) {
     return (
-      <View style={styles.centered}>
-        <Text style={styles.errorText}>Dog not found</Text>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F5F4F1' }}>
+        <Text style={{ fontSize: 16, color: '#6D6C6A' }}>Dog not found</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
-      <DogForm
-        defaultValues={{
-          name: dog.name,
-          breed: dog.breed ?? '',
-          size: dog.size,
-          temperament: dog.temperament,
-          age_years: dog.age_years,
-          color: dog.color,
-          weight_lbs: dog.weight_lbs,
-          notes: dog.notes ?? '',
-          photoUri: dog.photo_url,
+    <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
+      {/* Header */}
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          backgroundColor: '#fff',
+          height: 56,
+          paddingHorizontal: 16,
+          borderBottomWidth: 1,
+          borderBottomColor: '#E5E4E1',
         }}
-        onSubmit={handleSubmit}
-        submitLabel="Save Changes"
-      />
-      <Pressable style={styles.deleteButton} onPress={handleDelete}>
-        <Text style={styles.deleteButtonText}>Delete Dog</Text>
-      </Pressable>
+      >
+        <Pressable onPress={handleCancel} style={{ width: 40, height: 40, justifyContent: 'center' }}>
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
+        </Pressable>
+        <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>Edit Dog Profile</Text>
+        <Pressable onPress={handleSave} disabled={submitting}>
+          <Text style={{ fontSize: 15, fontWeight: '600', color: '#3D8A5A' }}>
+            {submitting ? '...' : 'Save'}
+          </Text>
+        </Pressable>
+      </View>
+
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 24, gap: 32 }}>
+        {/* Avatar Section */}
+        <View style={{ alignItems: 'center', gap: 16 }}>
+          <Pressable onPress={pickPhoto}>
+            <Image
+              source={{
+                uri: formData.photoUri || 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop',
+              }}
+              style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E4E1' }}
+            />
+          </Pressable>
+          <Pressable
+            onPress={pickPhoto}
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              backgroundColor: '#EDECEA',
+              paddingHorizontal: 16,
+              paddingVertical: 8,
+              borderRadius: 8,
+              gap: 6,
+            }}
+          >
+            <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
+            <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
+          </Pressable>
+        </View>
+
+        {/* Form Fields */}
+        <View style={{ gap: 20 }}>
+          <FormField label="Name">
+            <TextInput
+              value={formData.name}
+              onChangeText={(v) => updateField('name', v)}
+              placeholder="Dog's name"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+              }}
+            />
+          </FormField>
+
+          <FormField label="Breed">
+            <TextInput
+              value={formData.breed}
+              onChangeText={(v) => updateField('breed', v)}
+              placeholder="e.g. Golden Retriever"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+              }}
+            />
+          </FormField>
+
+          <FormField label="Age">
+            <TextInput
+              value={formData.age}
+              onChangeText={(v) => updateField('age', v)}
+              placeholder="e.g. 3 years"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+              }}
+            />
+          </FormField>
+
+          <FormField label="Size">
+            <View style={{ flexDirection: 'row', gap: 8 }}>
+              {DOG_SIZES.map((option) => (
+                <Pressable
+                  key={option.value}
+                  onPress={() => updateField('size', option.value)}
+                  style={{
+                    flex: 1,
+                    height: 44,
+                    borderRadius: 8,
+                    borderWidth: formData.size === option.value ? 2 : 1,
+                    borderColor: formData.size === option.value ? '#3D8A5A' : '#E5E4E1',
+                    backgroundColor: formData.size === option.value ? 'rgba(45, 139, 87, 0.1)' : '#fff',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Text
+                    style={{
+                      fontSize: 14,
+                      fontWeight: formData.size === option.value ? '600' : '500',
+                      color: formData.size === option.value ? '#3D8A5A' : '#1A1918',
+                    }}
+                  >
+                    {option.label}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+          </FormField>
+
+          <FormField label="Temperament">
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>
+              {DOG_TEMPERAMENTS.map((option) => (
+                <Pressable
+                  key={option.value}
+                  onPress={() => toggleTemperament(option.value)}
+                  style={{
+                    height: 44,
+                    paddingHorizontal: 16,
+                    borderRadius: 8,
+                    borderWidth: formData.temperaments.includes(option.value) ? 2 : 1,
+                    borderColor: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#E5E4E1',
+                    backgroundColor: formData.temperaments.includes(option.value) ? 'rgba(45, 139, 87, 0.1)' : '#fff',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Text
+                    style={{
+                      fontSize: 14,
+                      fontWeight: formData.temperaments.includes(option.value) ? '600' : '500',
+                      color: formData.temperaments.includes(option.value) ? '#3D8A5A' : '#1A1918',
+                    }}
+                  >
+                    {option.label}
+                  </Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+          </FormField>
+
+          <FormField label="Color">
+            <TextInput
+              value={formData.color}
+              onChangeText={(v) => updateField('color', v)}
+              placeholder="e.g. Golden"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+              }}
+            />
+          </FormField>
+
+          <FormField label="Weight">
+            <TextInput
+              value={formData.weight}
+              onChangeText={(v) => updateField('weight', v)}
+              placeholder="e.g. 65 lbs"
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+              }}
+            />
+          </FormField>
+
+          <FormField label="Bio">
+            <TextInput
+              value={formData.bio}
+              onChangeText={(v) => updateField('bio', v)}
+              placeholder="Tell us about your dog..."
+              multiline
+              numberOfLines={4}
+              style={{
+                borderWidth: 1,
+                borderColor: '#E5E4E1',
+                borderRadius: 8,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
+                fontSize: 15,
+                minHeight: 100,
+                textAlignVertical: 'top',
+              }}
+            />
+          </FormField>
+        </View>
+
+        {/* Delete Button */}
+        <Pressable
+          onPress={handleDelete}
+          disabled={deleting}
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#B5725E',
+            borderRadius: 8,
+            height: 48,
+            gap: 8,
+            marginTop: 16,
+          }}
+        >
+          {deleting ? (
+            <ActivityIndicator size="small" color="#fff" />
+          ) : (
+            <>
+              <Ionicons name="trash-outline" size={18} color="#fff" />
+              <Text style={{ fontSize: 15, fontWeight: '600', color: '#fff' }}>Delete Dog Profile</Text>
+            </>
+          )}
+        </Pressable>
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  centered: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-  errorText: {
-    fontSize: 16,
-    color: '#6D6C6A',
-  },
-  deleteButton: {
-    marginHorizontal: 24,
-    marginBottom: 40,
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#B5725E',
-    alignItems: 'center',
-  },
-  deleteButtonText: {
-    color: '#B5725E',
-    fontSize: 16,
-    fontWeight: '600',
-  },
-});
