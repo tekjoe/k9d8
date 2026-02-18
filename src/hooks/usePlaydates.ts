@@ -3,6 +3,9 @@ import type { PlayDate, RSVPStatus, Database } from '../types/database';
 import {
   getPlayDates,
   getMyPlayDates,
+  getActivePlaydates,
+  getPastPlaydates,
+  getAllPlaydatesForUser,
   createPlayDate,
   cancelPlayDate,
   rsvpToPlayDate,
@@ -15,6 +18,8 @@ type PlayDateInsert = Database['public']['Tables']['play_dates']['Insert'];
 interface UsePlaydatesReturn {
   playdates: PlayDate[];
   myPlaydates: PlayDate[];
+  upcomingPlaydates: PlayDate[];
+  pastPlaydates: PlayDate[];
   loading: boolean;
   error: string | null;
   refresh: () => Promise<void>;
@@ -30,6 +35,8 @@ export function usePlaydates(parkId?: string): UsePlaydatesReturn {
 
   const [playdates, setPlaydates] = useState<PlayDate[]>([]);
   const [myPlaydates, setMyPlaydates] = useState<PlayDate[]>([]);
+  const [upcomingPlaydates, setUpcomingPlaydates] = useState<PlayDate[]>([]);
+  const [pastPlaydates, setPastPlaydates] = useState<PlayDate[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -37,12 +44,19 @@ export function usePlaydates(parkId?: string): UsePlaydatesReturn {
     setLoading(true);
     setError(null);
     try {
-      const upcoming = await getPlayDates(parkId);
+      // Get active/upcoming play dates
+      const upcoming = parkId 
+        ? await getActivePlaydates(parkId)
+        : await getPlayDates(parkId);
       setPlaydates(upcoming);
+      setUpcomingPlaydates(upcoming);
 
       if (userId) {
-        const mine = await getMyPlayDates(userId);
-        setMyPlaydates(mine);
+        // Get all playdates for user (both upcoming and past)
+        const allPlaydates = await getAllPlaydatesForUser(userId);
+        setMyPlaydates([...allPlaydates.upcoming, ...allPlaydates.past]);
+        setUpcomingPlaydates(allPlaydates.upcoming);
+        setPastPlaydates(allPlaydates.past);
       }
     } catch (err) {
       const message =
@@ -141,6 +155,8 @@ export function usePlaydates(parkId?: string): UsePlaydatesReturn {
   return {
     playdates,
     myPlaydates,
+    upcomingPlaydates,
+    pastPlaydates,
     loading,
     error,
     refresh: loadPlaydates,

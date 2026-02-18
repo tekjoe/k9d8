@@ -11,6 +11,7 @@ import { format, isSameDay } from 'date-fns';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
 import { usePlaydateDetail } from '@/src/hooks/usePlaydateDetail';
+import { usePlaydateExpiration } from '@/src/hooks/usePlaydateExpiration';
 import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
 import type { PlayDateRSVP } from '@/src/types/database';
 
@@ -96,6 +97,8 @@ export default function PlayDateDetailScreen() {
     userId,
     isOrganizer,
     isCancelled,
+    isExpired,
+    isActive,
     userRsvp,
     goingRsvps,
     maybeRsvps,
@@ -106,6 +109,13 @@ export default function PlayDateDetailScreen() {
     handleRsvp,
     handleCancelRsvp,
   } = usePlaydateDetail(id);
+
+  // Listen for real-time expiration events
+  usePlaydateExpiration((expiredId) => {
+    if (expiredId === id) {
+      loadPlaydate();
+    }
+  });
 
   if (loading) {
     return (
@@ -214,6 +224,15 @@ export default function PlayDateDetailScreen() {
           </View>
         )}
 
+        {/* Expired Banner */}
+        {isExpired && !isCancelled && (
+          <View style={{ backgroundColor: '#E8E8E6', padding: 12, borderRadius: 8, marginBottom: 16 }}>
+            <Text style={{ color: '#6D6C6A', fontWeight: '600', textAlign: 'center', fontSize: 14 }}>
+              This play date has ended
+            </Text>
+          </View>
+        )}
+
         {/* Details Card */}
         <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: 20, marginBottom: 16 }}>
           <Text style={{ fontSize: 22, fontWeight: '700', color: '#1A1918', marginBottom: 8 }}>
@@ -264,11 +283,11 @@ export default function PlayDateDetailScreen() {
         {/* RSVPs Card */}
         <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: 20, marginBottom: 16 }}>
           <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginBottom: 12 }}>
-            Who's Coming ({goingRsvps.length})
+            {isExpired ? `Who Attended (${goingRsvps.length})` : `Who's Coming (${goingRsvps.length})`}
           </Text>
           {goingRsvps.length === 0 ? (
             <Text style={{ fontSize: 14, color: '#878685', textAlign: 'center', paddingVertical: 20 }}>
-              No one has RSVP'd yet. Be the first!
+              {isExpired ? 'No one attended this play date.' : 'No one has RSVP\'d yet. Be the first!'}
             </Text>
           ) : (
             goingRsvps.map((rsvp) => (
@@ -276,7 +295,7 @@ export default function PlayDateDetailScreen() {
             ))
           )}
 
-          {maybeRsvps.length > 0 && (
+          {maybeRsvps.length > 0 && !isExpired && (
             <>
               <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', marginBottom: 12, marginTop: 20 }}>
                 Maybe ({maybeRsvps.length})
@@ -289,7 +308,7 @@ export default function PlayDateDetailScreen() {
         </View>
 
         {/* Actions */}
-        {!isCancelled && (
+        {!isCancelled && !isExpired && (
           <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: 20 }}>
             <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 16 }}>
               Actions
@@ -342,6 +361,24 @@ export default function PlayDateDetailScreen() {
               >
                 <Text style={{ color: '#FFFFFF', fontSize: 16, fontWeight: '600' }}>RSVP</Text>
               </Pressable>
+            )}
+          </View>
+        )}
+
+        {/* Expired Play Date - Show Attendance Info */}
+        {isExpired && (
+          <View style={{ backgroundColor: '#FFFFFF', borderRadius: 16, padding: 20 }}>
+            <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 12 }}>
+              Play Date Completed
+            </Text>
+            {userRsvp ? (
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
+                You attended this play date{userRsvp.dog ? ` with ${userRsvp.dog.name}` : ''}.
+              </Text>
+            ) : (
+              <Text style={{ fontSize: 14, color: '#6D6C6A' }}>
+                This play date has ended. {goingRsvps.length > 0 ? `${goingRsvps.length} dogs attended.` : ''}
+              </Text>
             )}
           </View>
         )}

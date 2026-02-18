@@ -3,11 +3,12 @@ import { Alert } from 'react-native';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useDogs } from '@/src/hooks/useDogs';
 import {
-  getPlayDateById,
+  getPlaydateWithExpirationCheck,
   cancelPlayDate,
   rsvpToPlayDate,
   cancelRSVP,
 } from '@/src/services/playdates';
+import { isPlaydateActive, isPlaydateExpired } from '@/src/utils/playdates';
 import type { PlayDate, PlayDateRSVP, Dog } from '@/src/types/database';
 
 export function usePlaydateDetail(id: string | undefined) {
@@ -26,7 +27,7 @@ export function usePlaydateDetail(id: string | undefined) {
     setLoading(true);
     setError(null);
     try {
-      const data = await getPlayDateById(id);
+      const data = await getPlaydateWithExpirationCheck(id);
       setPlaydate(data);
     } catch (err) {
       const message =
@@ -43,6 +44,8 @@ export function usePlaydateDetail(id: string | undefined) {
 
   const isOrganizer = playdate?.organizer_id === userId;
   const isCancelled = playdate?.status === 'cancelled';
+  const isExpired = playdate ? isPlaydateExpired(playdate) || playdate.status === 'completed' : false;
+  const isActive = playdate ? isPlaydateActive(playdate) : false;
 
   const userRsvp: PlayDateRSVP | undefined = (playdate?.rsvps ?? []).find(
     (r) => r.user_id === userId,
@@ -144,6 +147,8 @@ export function usePlaydateDetail(id: string | undefined) {
     userId,
     isOrganizer,
     isCancelled,
+    isExpired,
+    isActive,
     userRsvp,
     goingRsvps,
     maybeRsvps,
