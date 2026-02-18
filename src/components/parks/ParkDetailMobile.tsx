@@ -13,7 +13,7 @@ import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
-import { getParkById, getParkByShortId } from '@/src/services/parks';
+import { getParkById, getParkBySlug } from '@/src/services/parks';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useCheckIn } from '@/src/hooks/useCheckIn';
 import { useDogs } from '@/src/hooks/useDogs';
@@ -84,9 +84,10 @@ function FeatureTag({ icon, label }: { icon: keyof typeof Ionicons.glyphMap; lab
 
 interface ParkDetailMobileProps {
   slugOrId: string;
+  state?: string;
 }
 
-export default function ParkDetailMobile({ slugOrId }: ParkDetailMobileProps) {
+export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobileProps) {
   const router = useRouter();
   const { session } = useAuth();
   const userId = session?.user?.id;
@@ -140,7 +141,7 @@ export default function ParkDetailMobile({ slugOrId }: ParkDetailMobileProps) {
         if (parsed.type === 'uuid') {
           data = await getParkById(parsed.id);
         } else if (parsed.type === 'slug') {
-          data = await getParkByShortId(parsed.shortId);
+          data = await getParkBySlug(parsed.slug, state);
         }
 
         if (isMounted) {

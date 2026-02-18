@@ -1,0 +1,141 @@
+
+🚀 Scraping: WISCONSIN
+  📄 Loading state page...
+  ✅ Found 12 cities
+
+  [1/12] ‍ Appleton
+    📄 Loading: appleton
+    ✅ Found 1 parks
+      🔍 Outagamie County Dog Park
+
+  [2/12] Eau Claire
+    📄 Loading: eau-claire
+    ✅ Found 2 parks
+      🔍 Otter Creek Off-Leash Dog Park
+      🔍 Southwest Dog Park
+
+  [3/12] Green Bay
+    📄 Loading: green-bay
+    ✅ Found 14 parks
+      🔍 ‍ Bay Beach Wildlife Sanctuary
+      🔍 Bellevue Dog Park
+      🔍 Baird Creek Park
+      🔍 Kaukauna Dog Park
+      🔍 ‍ Meadowbrook Park
+      🔍 Baird Creek Preservation Found
+      🔍 Mossakowski Family Dog Park
+      🔍 Willow Creek Park
+      🔍 De Pere Dog Park
+      🔍 Optimist Park
+      🔍 Preble Park
+      🔍 ‍ Whitney Park
+      🔍 Howard Dog Park
+      🔍 Kennedy Park
+
+  [4/12] Janesville
+    📄 Loading: janesville
+    ✅ Found 1 parks
+      🔍 Paw Print Dog Park
+
+  [5/12] Kenosha
+    📄 Loading: kenosha
+    ✅ Found 6 parks
+      🔍 Petrifying Springs Park
+      🔍 Warren Close Bark Park
+      🔍 Wolfenbuttel Park
+      🔍 Harris Family Dog Park
+      🔍 K9 Korner Dog Park
+      🔍 ‍ Carlisle Family Dog Park
+
+  [6/12] ‍ La Crosse
+    📄 Loading: la-crosse
+    ✅ Found 14 parks
+      🔍 Springbrook Park
+      🔍 Grandad Bluff Park
+      🔍 Riverside Park
+      🔍 Viroqua Bark Park
+      🔍 Pettibone Park
+      🔍 Myrick Park
+      🔍 Nelson Park
+      🔍 Van Riper Park
+      🔍 Pammel Creek Park
+      🔍 Schuh Park
+      🔍 ‍ Red Cloud Park
+      🔍 Wittenberg Park
+      🔍 Houska Park
+
+  [7/12] Madison
+    📄 Loading: madison
+    ✅ Found 16 parks
+      🔍 Prairie Moraine Dog Park
+      🔍 My Dog and Me
+      🔍 Capital Springs Dog Park
+      🔍 Fly Dog Parks Park
+      🔍 Token Creek Dog Park
+      🔍 Good Dog Unleashed Private
+      🔍 ‍ DoggieLand Play Park
+      🔍 Viking dog park / dog beach
+      🔍 My Dog and Me Private Dog Park
+      🔍 ‍ Vilas (Henry) Park
+      🔍 Badger Prairie Dog Park
+      🔍 Badger Prairie County Park
+      🔍 The Boneyard
+      🔍 Viking County Park
+      🔍 Warner Park
+      🔍 ‍ Sunnyside Dog Park
+
+  [8/12] ‍ Milwaukee
+    📄 Loading: milwaukee
+    ✅ Found 16 parks
+      🔍 ‍ Speed Weenies on Howell
+      🔍 Grant Park
+      🔍 Lake Park
+      🔍 South Shore Park
+      🔍 Minooka Park
+      🔍 Estabrook Park
+      🔍 Humboldt Park
+      🔍 Hoyt Park
+      🔍 Bay View Park
+      🔍 The Hounds & Tap
+      🔍 Muttland Meadows
+      🔍 Warnimont Park
+      🔍 Homestead Howl Dog Park
+      🔍 Back Bay Park
+      🔍 ‍ Mitchell Park
+      🔍 Kilbourn Reservoir Park
+
+  [9/12] New Richmond
+    📄 Loading: new-richmond
+    ✅ Found 1 parks
+      🔍 New Richmond Area Off Leash
+
+  [10/12] Oshkosh
+    📄 Loading: oshkosh
+    ✅ Found 1 parks
+      🔍 Best Friends Dog Park
+
+  [11/12] Racine
+    📄 Loading: racine
+    ✅ Found 6 parks
+      🔍 Caledonia Dog Park
+      🔍 ‍ Karen A. Nelson Memorial Dog
+      🔍 Sturtevant Dog Park
+      🔍 Island Park
+      🔍 Quarry Lake Park
+      🔍 N. Owen Davies Park
+
+  [12/12] ‍ Waukesha
+    📄 Loading: waukesha
+    ✅ Found 9 parks
+      🔍 ‍ Retzer Nature Center
+      🔍 Mukwonago Dog Exercise Park
+      🔍 ‍ Mukwonago Park
+      🔍 Menomonee Park
+      🔍 Fox Brook Park
+      🔍 Menomonee Dog Park
+      🔍 Meadowview Park
+      🔍 Bethesda Park
+      🔍 Dopp Park
+
+  ✅ Total: 86 parks
+  💾 Saved: /Users/tekjoe/Dev/k9d8/scripts/data/wisconsin-parks.json

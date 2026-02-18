@@ -12,6 +12,7 @@ import { useParks } from '@/src/hooks/useParks';
 import { usePlaydates } from '@/src/hooks/usePlaydates';
 import { useNearbyPups } from '@/src/hooks/useNearbyPups';
 import { generateParkSlug } from '@/src/utils/slug';
+import { getParkStateSlug } from '@/src/services/parks';
 import { format } from 'date-fns';
 import type { Park, PlayDate } from '@/src/types/database';
 
@@ -268,7 +269,10 @@ export default function DesktopHomeScreen() {
 
   const handleParkPress = useCallback(
     (park: Park) => {
-      const slug = generateParkSlug(park.name, park.id);
+      const stateSlug = getParkStateSlug(park);
+      const slug = stateSlug 
+        ? `${stateSlug}/${generateParkSlug(park.name)}`
+        : generateParkSlug(park.name);
       router.push(`/dog-parks/${slug}`);
     },
     [router]

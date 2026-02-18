@@ -15,7 +15,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import { Colors } from '@/src/constants/colors';
-import { getParkById, getParkByShortId } from '@/src/services/parks';
+import { getParkById, getParkBySlug } from '@/src/services/parks';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useCheckIn } from '@/src/hooks/useCheckIn';
 import { useDogs } from '@/src/hooks/useDogs';
@@ -155,9 +155,10 @@ function ButtonPrimary({ label, onPress, loading, disabled, variant = 'primary' 
 
 interface ParkDetailAuthProps {
   slugOrId: string;
+  state?: string;
 }
 
-export default function ParkDetailAuth({ slugOrId }: ParkDetailAuthProps) {
+export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps) {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
   const isDesktop = width >= 1024;
@@ -217,7 +218,7 @@ export default function ParkDetailAuth({ slugOrId }: ParkDetailAuthProps) {
         if (parsed.type === 'uuid') {
           data = await getParkById(parsed.id);
         } else if (parsed.type === 'slug') {
-          data = await getParkByShortId(parsed.shortId);
+          data = await getParkBySlug(parsed.slug, state);
         }
 
         if (isMounted) {

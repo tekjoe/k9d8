@@ -4,7 +4,6 @@
 
 -- Custom enum for friendship status
 CREATE TYPE friendship_status AS ENUM ('pending', 'accepted', 'declined');
-
 -- ============================================================
 -- 1. CREATE TABLE
 -- ============================================================
@@ -19,16 +18,13 @@ CREATE TABLE friendships (
   CONSTRAINT no_self_friendship CHECK (requester_id != addressee_id),
   CONSTRAINT unique_friendship UNIQUE (requester_id, addressee_id)
 );
-
 CREATE INDEX idx_friendships_requester ON friendships(requester_id, status);
 CREATE INDEX idx_friendships_addressee ON friendships(addressee_id, status);
-
 -- ============================================================
 -- 2. ENABLE RLS
 -- ============================================================
 
 ALTER TABLE friendships ENABLE ROW LEVEL SECURITY;
-
 -- ============================================================
 -- 3. SECURITY DEFINER HELPERS
 -- ============================================================
@@ -45,7 +41,6 @@ RETURNS BOOLEAN AS $$
     )
   );
 $$ LANGUAGE sql SECURITY DEFINER STABLE;
-
 -- Get all accepted friend profile IDs for a user
 CREATE OR REPLACE FUNCTION get_friend_ids(uid UUID)
 RETURNS SETOF UUID AS $$
@@ -57,7 +52,6 @@ RETURNS SETOF UUID AS $$
   WHERE f.status = 'accepted'
   AND (f.requester_id = uid OR f.addressee_id = uid);
 $$ LANGUAGE sql SECURITY DEFINER STABLE;
-
 -- Get all accepted friend profiles for a user
 CREATE OR REPLACE FUNCTION get_friends(uid UUID)
 RETURNS SETOF profiles AS $$
@@ -69,7 +63,6 @@ RETURNS SETOF profiles AS $$
   WHERE f.status = 'accepted'
   ORDER BY p.display_name;
 $$ LANGUAGE sql SECURITY DEFINER STABLE;
-
 -- ============================================================
 -- 4. RLS POLICIES
 -- ============================================================
@@ -77,19 +70,15 @@ $$ LANGUAGE sql SECURITY DEFINER STABLE;
 CREATE POLICY "Users can view own friendships"
   ON friendships FOR SELECT
   USING (auth.uid() = requester_id OR auth.uid() = addressee_id);
-
 CREATE POLICY "Users can send friend requests"
   ON friendships FOR INSERT
   WITH CHECK (auth.uid() = requester_id AND status = 'pending');
-
 CREATE POLICY "Addressee can respond to friend requests"
   ON friendships FOR UPDATE
   USING (auth.uid() = addressee_id);
-
 CREATE POLICY "Participants can delete friendships"
   ON friendships FOR DELETE
   USING (auth.uid() = requester_id OR auth.uid() = addressee_id);
-
 -- ============================================================
 -- 5. UPDATED_AT TRIGGER
 -- ============================================================
@@ -97,7 +86,6 @@ CREATE POLICY "Participants can delete friendships"
 CREATE TRIGGER set_friendships_updated_at
   BEFORE UPDATE ON friendships
   FOR EACH ROW EXECUTE FUNCTION update_updated_at();
-
 -- ============================================================
 -- 6. REALTIME
 -- ============================================================

@@ -95,6 +95,8 @@ export async function getParkById(id: string): Promise<Park> {
  * 1. Parks list is typically small (hundreds, not thousands)
  * 2. This query is cached by useParks hook in most cases
  * 3. The alternative (RPC function) adds complexity
+ * 
+ * @deprecated Use getParkBySlug instead
  */
 export async function getParkByShortId(shortId: string): Promise<Park | null> {
   const normalizedShortId = shortId.toLowerCase();
@@ -108,10 +110,53 @@ export async function getParkByShortId(shortId: string): Promise<Park | null> {
     throw error;
   }
   
-  // Find the park whose ID starts with the short ID
   const park = data?.find(p => p.id.toLowerCase().startsWith(normalizedShortId));
   
   console.log('[getParkByShortId] Searching for:', normalizedShortId, 
+    'Found:', park ? `${park.name} (${park.id})` : 'none',
+    'Total parks:', data?.length ?? 0);
+  
+  return park ?? null;
+}
+
+/**
+ * Fetches a single park by its URL slug (slugified name) and optional state.
+ * Matches against a lowercase, hyphenated version of the park name.
+ * If state is provided, also filters by state abbreviation.
+ */
+export async function getParkBySlug(slug: string, state?: string): Promise<Park | null> {
+  const normalizedSlug = slug.toLowerCase();
+  
+  let query = supabase
+    .from('parks')
+    .select('*');
+  
+  if (state) {
+    const abbrev = stateNameToAbbrev(state);
+    if (abbrev) {
+      query = query.or(`state.ilike.${abbrev}%,city.eq.${abbrev}`);
+    }
+  }
+  
+  const { data, error } = await query.order('name').limit(1000);
+
+  if (error) {
+    console.error('[getParkBySlug] Supabase error:', error);
+    throw error;
+  }
+  
+  const park = data?.find(p => {
+    const parkSlug = p.name
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+    return parkSlug === normalizedSlug;
+  });
+  
+  console.log('[getParkBySlug] Searching for:', normalizedSlug, 'state:', state,
     'Found:', park ? `${park.name} (${park.id})` : 'none',
     'Total parks:', data?.length ?? 0);
   
@@ -202,6 +247,25 @@ export function stateNameToAbbrev(name: string): string | null {
     ([, v]) => v.toLowerCase() === name.toLowerCase()
   );
   return entry ? entry[0] : null;
+}
+
+/**
+ * Extracts a state slug from a park's state/city fields.
+ * Handles messy data like "WI 53711" or swapped city/state.
+ */
+export function getParkStateSlug(park: { city?: string | null; state?: string | null }): string | null {
+  const st = park.state?.trim() ?? '';
+  // "WI" or "WI 53711"
+  if (/^[A-Z]{2}(\s|$)/.test(st)) {
+    const abbrev = st.slice(0, 2);
+    return abbrev.toLowerCase();
+  }
+  // Zip-only: city might hold state abbrev (swapped data)
+  const city = park.city?.trim() ?? '';
+  if (/^\d+$/.test(st) && /^[A-Z]{2}$/.test(city)) {
+    return city.toLowerCase();
+  }
+  return null;
 }
 
 /**

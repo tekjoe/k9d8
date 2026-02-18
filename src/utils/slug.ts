@@ -1,25 +1,39 @@
 /**
- * Generate a URL-friendly slug from a park name and ID
- * Example: "Sunnyside Dog Park" + "9566f589-cdeb-4ea4-a6d2-d8e1c93c0d60"
- *          -> "sunnyside-dog-park-9566f589"
+ * Generate a URL-friendly slug from a park name
+ * Example: "Sunnyside Dog Park" -> "sunnyside-dog-park"
  */
-export function generateParkSlug(name: string, id: string): string {
-  // Take first 8 characters of UUID for uniqueness
-  const shortId = id.split('-')[0];
-  
-  // Convert name to lowercase and replace spaces/special chars with hyphens
-  const slug = name
+export function generateParkSlug(name: string): string {
+  return name
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-')      // Replace spaces with hyphens
-    .replace(/-+/g, '-')       // Replace multiple hyphens with single hyphen
-    .replace(/^-|-$/g, '');    // Remove leading/trailing hyphens
-  
-  return `${slug}-${shortId}`;
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 /**
+ * Generate a URL-friendly slug for a park with state
+ * Example: "Sunnyside Dog Park", "Minnesota" -> "minnesota/sunnyside-dog-park"
+ */
+export function generateParkSlugWithState(name: string, state: string): string {
+  const stateSlug = state
+    .toLowerCase()
+    .replace(/\s+/g, '-');
+  return `${stateSlug}/${generateParkSlug(name)}`;
+}
+
+/**
+ * Extract the slug from a park URL
+ * Example: "stoneridge-park" -> "stoneridge-park"
+ */
+export function extractSlugFromUrl(slug: string): string | null {
+  if (!slug || slug.length < 2) return null;
+  return slug.toLowerCase();
+}
+
+/**
+ * @deprecated Use extractSlugFromUrl instead
  * Extract the short ID (first 8 chars of UUID) from a slugified URL
  * Example: "sunnyside-dog-park-9566f589" -> "9566f589"
  * 
@@ -27,11 +41,9 @@ export function generateParkSlug(name: string, id: string): string {
  * and should be a valid hex string.
  */
 export function extractShortIdFromSlug(slug: string): string | null {
-  // The short ID is the last segment, which should be 8 hex characters
   const parts = slug.split('-');
   const lastPart = parts[parts.length - 1];
   
-  // Validate it looks like a short UUID (8 hex characters)
   if (lastPart && /^[a-f0-9]{8}$/i.test(lastPart)) {
     return lastPart.toLowerCase();
   }
@@ -49,26 +61,24 @@ export function isValidUUID(str: string): boolean {
 
 /**
  * Parse a URL parameter that could be either a full UUID or a slug
- * Returns: { type: 'uuid', id: string } | { type: 'slug', shortId: string } | { type: 'invalid' }
+ * Returns: { type: 'uuid', id: string } | { type: 'slug', slug: string } | { type: 'invalid' }
  */
 export function parseSlugOrId(slugOrId: string): 
   | { type: 'uuid'; id: string }
-  | { type: 'slug'; shortId: string }
+  | { type: 'slug'; slug: string }
   | { type: 'invalid' } {
   
   if (!slugOrId) {
     return { type: 'invalid' };
   }
   
-  // Check if it's a full UUID
   if (isValidUUID(slugOrId)) {
     return { type: 'uuid', id: slugOrId };
   }
   
-  // Try to extract short ID from slug
-  const shortId = extractShortIdFromSlug(slugOrId);
-  if (shortId) {
-    return { type: 'slug', shortId };
+  const slug = extractSlugFromUrl(slugOrId);
+  if (slug) {
+    return { type: 'slug', slug };
   }
   
   return { type: 'invalid' };

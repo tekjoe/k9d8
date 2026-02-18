@@ -1,0 +1,682 @@
+[
+  {
+    "name": "Stoneridge Park",
+    "street": "3501 Altruria Rd",
+    "city": "Bartlett",
+    "state": "TN",
+    "zip": "38135",
+    "latitude": 35.223246,
+    "longitude": -89.844869,
+    "description": "Located at 3501 Altruria Rd in Bartlett, Stoneridge Park earns strong marks from local dog owners—4.6 stars from 88 reviews. Open from 6am to 9pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Shelby Farms Dog Park (3.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "McCoy Farm & Gardens",
+    "street": "1604 Taft HwySignal Mountain",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37377",
+    "latitude": 35.1456435,
+    "longitude": -85.322423,
+    "description": "McCoy Farm & Gardens (4.8 stars from 85 reviews) is a popular destination for Chattanooga dog owners, located at 1604 Taft Hwy. Open from 7am to 8:30pm daily, the park accommodates early risers and evening visitors alike. The consistent ratings suggest dog owners know what to expect here."
+  },
+  {
+    "name": "Coolidge Park",
+    "street": "150 River St",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37405",
+    "latitude": 35.0605387,
+    "longitude": -85.3027221,
+    "description": "For Chattanooga dog owners, Coolidge Park at 150 River St needs no introduction—4.7 stars, 7,320 reviews. Open from 7am to 11pm daily, dog owners rarely have to rush—there's time to let pups fully enjoy the space. Dog owners in this area are lucky to have more great dog parks nearby: Riverview Park (0.9 miles) and Play Wash Pint (1.7 miles)."
+  },
+  {
+    "name": "Point Park",
+    "street": "110 Point Park RdLookout Mountain",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37350",
+    "latitude": 35.0097944,
+    "longitude": -85.3439828,
+    "description": "Local dog owners love Point Park at 110 Point Park Rd in Chattanooga—4.7 stars from an impressive 3,738 reviews. The strong community of dog owners here reflects how much the park is valued. Looking to mix things up? Milliken Park is a nearby dog park 1.7 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "‍ Greenway Farms Dog Park",
+    "street": "",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "",
+    "latitude": 35.1406267,
+    "longitude": -85.2327349,
+    "description": "With 4.7 stars from 853 reviews, Greenway Farms Dog Park has become a favorite among Chattanooga dog owners. Open from 7am to 9pm daily, the park offers flexibility for dog owners with varying routines. Dog owners exploring the neighborhood can also bring their furry friends to Greenway Farm Park (1.1 miles)."
+  },
+  {
+    "name": "Riverview Park",
+    "street": "1857 Riverview Rd",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37405",
+    "latitude": 35.066068,
+    "longitude": -85.287608,
+    "description": "Located at 1857 Riverview Rd in Chattanooga, Riverview Park earns strong marks from local dog owners—4.6 stars from 217 reviews. Open from 7am to 9pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Coolidge Park is another popular dog park just 0.9 miles away."
+  },
+  {
+    "name": "Play Wash Pint",
+    "street": "113 Johnson St",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37408",
+    "latitude": 35.0357495,
+    "longitude": -85.3038629,
+    "description": "Play Wash Pint at 113 Johnson St is well-regarded by Chattanooga dog owners, holding 4.6 stars across 339 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. For variety, the neighborhood offers more dog parks to explore: Chattanooga Chew Chew Canine (0.7 miles) and Tatum Park (1.3 miles)."
+  },
+  {
+    "name": "Don Eaves Heritage House Arts",
+    "street": "1428 Jenkins Rd",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37421",
+    "latitude": 35.0095338,
+    "longitude": -85.1520711,
+    "description": "Local dog owners love Don Eaves Heritage House Arts at 1428 Jenkins Rd in Chattanooga—4.6 stars from an impressive 1,210 reviews. Dog owners appreciate the reliable experience this park provides for their four-legged companions. The consistent praise from dog owners makes this an easy recommendation."
+  },
+  {
+    "name": "Greenway Farm Park",
+    "street": "3008 Hamill RdHixson",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37343",
+    "latitude": 35.1295784,
+    "longitude": -85.2184189,
+    "description": "Greenway Farm Park at 3008 Hamill Rd holds a 4.4-star rating from 29 Chattanooga dog owner visits. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Looking to explore more? Greenway Farms Dog Park is another dog-friendly park 1.1 miles from here."
+  },
+  {
+    "name": "Soddy-Daisy Dog Park",
+    "street": "9009 Dayton PikeSoddy-Daisy",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37379",
+    "latitude": 35.2287905,
+    "longitude": -85.2114659,
+    "description": "Dog owners in Chattanooga have rated Soddy-Daisy Dog Park (9009 Dayton Pike) 4.4 stars across 42 reviews. Open from 6am to 8pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Checking recent reviews can help dog owners decide if this park fits their needs."
+  },
+  {
+    "name": "East Ridge Dog Park",
+    "street": "1517 Tombras AveEast Ridge",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37412",
+    "latitude": 34.9943691,
+    "longitude": -85.2423888,
+    "description": "East Ridge Dog Park at 1517 Tombras Ave holds a 4.3-star rating from 29 Chattanooga dog owner visits. Dog owners looking for a local destination will find this park accessible. Looking to explore more? Tatum Park is another dog-friendly park 3.5 miles from here."
+  },
+  {
+    "name": "Milliken Park",
+    "street": "100 W 45th St",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37410",
+    "latitude": 35.000541,
+    "longitude": -85.315371,
+    "description": "Milliken Park at 100 W 45th St holds a 4.4-star rating from 63 Chattanooga dog owner visits. Open from 7am to 9pm daily, dog owners in the area can work a visit into their day. Dog owners might also enjoy Point Park, another dog park just 1.7 miles away."
+  },
+  {
+    "name": "Tatum Park",
+    "street": "1609 Union Ave",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37404",
+    "latitude": 35.0341265,
+    "longitude": -85.2803863,
+    "description": "At 1609 Union Ave in Chattanooga, Tatum Park carries 4.3 stars from 66 dog owner reviews. Local dog owners use this park as a spot to spend time with their furry companions. More dog parks in the area include Play Wash Pint (1.3 miles) and Chattanooga Chew Chew Canine (2.1 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Chattanooga Chew Chew Canine",
+    "street": "1801 Carter St",
+    "city": "Chattanooga",
+    "state": "TN",
+    "zip": "37408",
+    "latitude": 35.0366077,
+    "longitude": -85.3168227,
+    "description": "In Chattanooga, dog owners can find Chattanooga Chew Chew Canine at 1801 Carter St—a local park worth exploring with their furry companions. Open from 7am to 8pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy Play Wash Pint, another dog park just 0.7 miles away."
+  },
+  {
+    "name": "Heritage Park",
+    "street": "1241 Peachers Mill Rd",
+    "city": "Clarksville",
+    "state": "TN",
+    "zip": "37042",
+    "latitude": 36.5774744,
+    "longitude": -87.3901164,
+    "description": "Local dog owners love Heritage Park at 1241 Peachers Mill Rd in Clarksville—4.5 stars from an impressive 1,621 reviews. For dog owners seeking a tried-and-true destination, this park delivers consistently. For variety, many dog owners also bring their furry friends to Heritage Dog Park (3.8 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Heritage Dog Park",
+    "street": "",
+    "city": "Clarksville",
+    "state": "TN",
+    "zip": "",
+    "latitude": 36.5277607,
+    "longitude": -87.3588703,
+    "description": "For dog owners in the Clarksville area, Heritage Dog Park offers a 4.5-star experience based on 223 reviews. Open from 6:30am to 6:30pm daily, there's room in the day for dog owners to bring their furry friends. Looking for more places to take your pup? Heritage Park is another popular dog park just 3.8 miles away."
+  },
+  {
+    "name": "‍ Tinsley Park",
+    "street": "4031 Keith St NW",
+    "city": "Cleveland",
+    "state": "TN",
+    "zip": "37323",
+    "latitude": 35.1595182,
+    "longitude": -84.8766115,
+    "description": "Local dog owners love Tinsley Park at 4031 Keith St NW in Cleveland—4.5 stars from an impressive 1,128 reviews. Open from 8am to 8pm daily, the park is convenient for before work, after work, or weekend adventures. The community of dog owners has clearly embraced this as a trusted spot."
+  },
+  {
+    "name": "Pinkerton Park",
+    "street": "405 Murfreesboro Rd",
+    "city": "Franklin",
+    "state": "TN",
+    "zip": "37064",
+    "latitude": 35.9193689,
+    "longitude": -86.8631109,
+    "description": "At 405 Murfreesboro Rd in Franklin, Pinkerton Park stands out with 4.7 stars from 1,219 happy dog owners. Open from 6am to 9pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Other popular dog parks nearby include K-9 Korral Dog Park (1.0 miles) and The Park (1.0 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "The Park",
+    "street": "239 Franklin Rd",
+    "city": "Franklin",
+    "state": "TN",
+    "zip": "37064",
+    "latitude": 35.9340172,
+    "longitude": -86.8612192,
+    "description": "Dog owners in Franklin have made The Park at 239 Franklin Rd a go-to spot, rating it 4.7 stars across 738 reviews. Open from 6am to 8pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include K-9 Korral Dog Park (0.0 miles) and Pinkerton Park (1.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Judge Fulton Greer Park",
+    "street": "1120 Hillsboro Rd",
+    "city": "Franklin",
+    "state": "TN",
+    "zip": "37064",
+    "latitude": 35.9456678,
+    "longitude": -86.8812264,
+    "description": "Judge Fulton Greer Park at 1120 Hillsboro Rd is well-regarded by Franklin dog owners, holding 4.6 stars across 204 reviews. Open from 6am to 8pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, K-9 Korral Dog Park (1.4 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Liberty Park",
+    "street": "2080 Turning Wheel Ln",
+    "city": "Franklin",
+    "state": "TN",
+    "zip": "37067",
+    "latitude": 35.9286789,
+    "longitude": -86.8026967,
+    "description": "Dog owners in Franklin have made Liberty Park at 2080 Turning Wheel Ln a go-to spot, rating it 4.5 stars across 236 reviews. Open from 6am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Freedom Run Dog Park (0.0 miles) or K-9 Korral Dog Park (3.3 miles)."
+  },
+  {
+    "name": "Memorial Park",
+    "street": "151 E Main St",
+    "city": "Hendersonville",
+    "state": "TN",
+    "zip": "37075",
+    "latitude": 36.3067043,
+    "longitude": -86.6085772,
+    "description": "Hendersonville dog owners rate Memorial Park at 151 E Main St highly, with 4.7 stars from 882 visits. Open from 6am to 11pm daily, the park offers flexibility for dog owners with varying routines. Dog owners exploring the neighborhood can also bring their furry friends to Hendersonville Dog Park (0.5 miles)."
+  },
+  {
+    "name": "Dr. Vicki Schneider Lake Dog",
+    "street": "4 Fun Place",
+    "city": "Jackson",
+    "state": "TN",
+    "zip": "38305",
+    "latitude": 35.6762895,
+    "longitude": -88.7692304,
+    "description": "Located at 4 Fun Place in Jackson, Dr. Vicki Schneider Lake Dog earns strong marks from local dog owners—4.7 stars from 63 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Jackson Downtown Dog Walk",
+    "street": "133 Union Ave",
+    "city": "Jackson",
+    "state": "TN",
+    "zip": "38301",
+    "latitude": 35.6171861,
+    "longitude": -88.8220109,
+    "description": "Jackson Downtown Dog Walk at 133 Union Ave in Jackson has 4.3 stars from 95 dog owner reviews. Open from 7am to 7pm daily, the park is accessible for dog owners in the area. Reading what other dog owners have experienced here can help with planning a visit."
+  },
+  {
+    "name": "Off Leash Social - Eat. Drink.",
+    "street": "234 Denny Mill Rd",
+    "city": "Johnson City",
+    "state": "TN",
+    "zip": "37604",
+    "latitude": 36.3471832,
+    "longitude": -82.4045211,
+    "description": "With 4.8 stars from 241 reviews, Off Leash Social - Eat. Drink. at 234 Denny Mill Rd has become a favorite among Johnson City dog owners. The park serves dog owners well, providing a destination the community values. Nearby, Johnson City Dog Park (4.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Johnson City Dog Park",
+    "street": "1201 Huffine Rd",
+    "city": "Johnson City",
+    "state": "TN",
+    "zip": "37604",
+    "latitude": 36.2889907,
+    "longitude": -82.4055653,
+    "description": "For dog owners in Johnson City, Johnson City Dog Park at 1201 Huffine Rd has a 4.2-star rating (120 reviews). The neighborhood benefits from having this park as an option for dog owners and their pups. Looking to explore more? Off Leash Social - Eat. Drink. is another dog-friendly park 4.0 miles from here."
+  },
+  {
+    "name": "‍ Dog park",
+    "street": "3113 E Stone Dr",
+    "city": "Kingsport",
+    "state": "TN",
+    "zip": "37660",
+    "latitude": 36.5610972,
+    "longitude": -82.4670442,
+    "description": "For dog owners in Kingsport, Dog park at 3113 E Stone Dr has a 4.2-star rating (9 reviews). Dog owners in the area appreciate having a local spot to bring their pups. Checking recent reviews can help dog owners decide if this park fits their needs."
+  },
+  {
+    "name": "Kingsport Dog Park",
+    "street": "800 Granby Rd",
+    "city": "Kingsport",
+    "state": "TN",
+    "zip": "37660",
+    "latitude": 36.5632664,
+    "longitude": -82.5980347,
+    "description": "Dog owners in the Kingsport area will find Kingsport Dog Park at 800 Granby Rd—a local option for spending time with their pups. Dog owners in the area appreciate having a local spot to bring their pups. Reviews from other dog owners provide perspective on what to expect at this park."
+  },
+  {
+    "name": "Carden Farm Dog Park",
+    "street": "401 Riverview DrClinton",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37716",
+    "latitude": 36.0963806,
+    "longitude": -84.130098,
+    "description": "Carden Farm Dog Park (4.9 stars from 86 reviews) is a popular destination for Knoxville dog owners, located at 401 Riverview Dr. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Ijams Nature Center",
+    "street": "2915 Island Home Ave",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37920",
+    "latitude": 35.956482,
+    "longitude": -83.8668541,
+    "description": "With 4.8 stars across 2,243 reviews, Ijams Nature Center at 2915 Island Home Ave has clearly won over Knoxville dog owners. Dog owners appreciate the reliable experience this park provides for their four-legged companions. Want to give your pup even more adventure? Holston River Park is another beloved dog park just 1.3 miles away."
+  },
+  {
+    "name": "Lakeshore Park",
+    "street": "5930 Lyons View Pike",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37919",
+    "latitude": 35.9223887,
+    "longitude": -83.9930029,
+    "description": "Local dog owners love Lakeshore Park at 5930 Lyons View Pike in Knoxville—4.8 stars from an impressive 1,383 reviews. Open from 6am to 10pm daily, dog owners have room to work around busy schedules. Want to give your pup even more adventure? Concord Dog Park is another beloved dog park just 0.8 miles away."
+  },
+  {
+    "name": "Concord Dog Park",
+    "street": "10901 S Northshore Dr",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37922",
+    "latitude": 35.9320858,
+    "longitude": -84.0022395,
+    "description": "Located at 10901 S Northshore Dr in Knoxville, Concord Dog Park earns strong marks from local dog owners—4.8 stars from 574 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Concord Park is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "Angora Frog Farm and Dog Park",
+    "street": "7325 Brickyard Rd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37849",
+    "latitude": 36.0248134,
+    "longitude": -84.0255538,
+    "description": "At 7325 Brickyard Rd in Knoxville, Angora Frog Farm and Dog Park has built a loyal following—4.9 stars from 15 dog owner reviews. The steady stream of dog owner visits speaks to the park's appeal. Other dog parks in the area include Victor Ashe Park (3.5 miles) and Tommy Schumpert Park (3.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Plumb Creek Park",
+    "street": "1517 Hickey Rd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37932",
+    "latitude": 35.9485632,
+    "longitude": -84.0466135,
+    "description": "Plumb Creek Park at 1517 Hickey Rd is well-regarded by Knoxville dog owners, holding 4.7 stars across 595 reviews. Open from 6am to 7pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Concord Dog Park is another popular dog park just 2.7 miles away."
+  },
+  {
+    "name": "Sequoyah Park",
+    "street": "1400 Cherokee Blvd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37919",
+    "latitude": 35.931256,
+    "longitude": -83.9581455,
+    "description": "Sequoyah Park at 1400 Cherokee Blvd is well-regarded by Knoxville dog owners, holding 4.7 stars across 554 reviews. Open from 7am to 9pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include War Dog Memorial (1.4 miles) and John Tarleton Park (1.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "I.C. King Expansion",
+    "street": "2625 Maryville Pike",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37920",
+    "latitude": 35.9414981,
+    "longitude": -83.912283,
+    "description": "With 4.8 stars from 27 reviews, I.C. King Expansion at 2625 Maryville Pike has become a favorite among Knoxville dog owners. Local dog owners appreciate what this park offers their four-legged friends. Dog owners exploring the neighborhood can also bring their furry friends to Sam Duff Memorial Park (0.4 miles)."
+  },
+  {
+    "name": "Beal Park",
+    "street": "2324 Topside Rd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37777",
+    "latitude": 35.8397745,
+    "longitude": -84.0061852,
+    "description": "Located at 2324 Topside Rd in Knoxville, Beal Park earns strong marks from local dog owners—4.7 stars from 251 reviews. Open from 8am to 8pm daily, dog owners have plenty of flexibility to plan a visit. Looking for more places to take your pup? I.C. King Park is another popular dog park just 4.6 miles away."
+  },
+  {
+    "name": "The Bark",
+    "street": "601 Lamar St",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37917",
+    "latitude": 35.975178,
+    "longitude": -83.9219408,
+    "description": "With 4.7 stars from 132 reviews, The Bark at 601 Lamar St has become a favorite among Knoxville dog owners. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. More dog-friendly parks nearby include Petsafe Downtown Dog Park (0.5 miles) and First Creek Park (0.9 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Victor Ashe Park",
+    "street": "4901 Bradshaw Rd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37912",
+    "latitude": 35.9827467,
+    "longitude": -83.9915573,
+    "description": "At 4901 Bradshaw Rd in Knoxville, Victor Ashe Park stands out with 4.6 stars from 2,184 happy dog owners. The community of dog owners here is welcoming and the atmosphere consistently positive. For more dog park adventures, explore John Tarleton Park (2.7 miles) or Westwood Park (3.1 miles) with your furry companion."
+  },
+  {
+    "name": "Tommy Schumpert Park",
+    "street": "6400 Fountain City Rd",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37918",
+    "latitude": 36.039443,
+    "longitude": -83.95861,
+    "description": "Tommy Schumpert Park at 6400 Fountain City Rd is well-regarded by Knoxville dog owners, holding 4.6 stars across 783 reviews. Open from 7am to 8pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Angora Frog Farm and Dog Park is another popular dog park just 3.9 miles away."
+  },
+  {
+    "name": "Concord Park",
+    "street": "10909 S Northshore Dr",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37922",
+    "latitude": 35.9320858,
+    "longitude": -84.0022395,
+    "description": "Located at 10909 S Northshore Dr in Knoxville, Concord Park earns strong marks from local dog owners—4.6 stars from 141 reviews. Open from 7am to 9pm daily, dog owners can easily fit a visit into busy schedules. Other dog parks in the area include Concord Dog Park (0.0 miles) and Westwood Park (0.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Chilhowee Park",
+    "street": "3301 E Magnolia Ave",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37914",
+    "latitude": 35.996051,
+    "longitude": -83.884176,
+    "description": "Located at 3301 E Magnolia Ave in Knoxville, Chilhowee Park earns strong marks from local dog owners—4.6 stars from 43 reviews. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby First Creek Park (1.8 miles) or Holston River Park (1.9 miles)."
+  },
+  {
+    "name": "War Dog Memorial",
+    "street": "2407 River Dr",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37996",
+    "latitude": 35.9456381,
+    "longitude": -83.9399064,
+    "description": "Knoxville dog owners rate War Dog Memorial at 2407 River Dr highly, with 4.6 stars from 17 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Other dog parks in the area include John Tarleton Park (1.2 miles) and Sequoyah Park (1.4 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Holston-Chilhowee Dog Park",
+    "street": "6005 Holston Dr",
+    "city": "Knoxville",
+    "state": "TN",
+    "zip": "37924",
+    "latitude": 36.0121995,
+    "longitude": -83.8317421,
+    "description": "Located at 6005 Holston Dr, Holston-Chilhowee Dog Park in Knoxville is rated 4.4 stars by 8 dog owners. Local dog owners use this park as a spot to spend time with their furry companions. For pups who want more adventure, Holston River Park is a nearby dog park worth visiting (3.1 miles)."
+  },
+  {
+    "name": "Shelby Farms Park",
+    "street": "6903 Great View Dr N",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38134",
+    "latitude": 35.1385194,
+    "longitude": -89.8331763,
+    "description": "For Memphis dog owners, Shelby Farms Park at 6903 Great View Dr N needs no introduction—4.8 stars, 11,514 reviews. The park has achieved landmark status among dog owners for good reason. The neighborhood offers dog owners more places to bring their pups: Forgey Park (2.6 miles) and Shelby Farms Dog Park (3.5 miles)."
+  },
+  {
+    "name": "Suggs Dog Park",
+    "street": "163 E South StCollierville",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38017",
+    "latitude": 35.0388757,
+    "longitude": -89.6632004,
+    "description": "Dog owners in Memphis have made Suggs Dog Park at 163 E South St a go-to spot, rating it 4.7 stars across 60 reviews. Open from 6am to 8pm daily, the park works well for dog owners with different schedules. Local dog owners have clearly found this to be a worthwhile destination."
+  },
+  {
+    "name": "Martyrs Park",
+    "street": "Channel 3 Dr",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38103",
+    "latitude": 35.1260764,
+    "longitude": -90.069187,
+    "description": "Martyrs Park is well-regarded by Memphis dog owners, holding 4.7 stars across 543 reviews. Open from 6am to 6pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Central Bark (0.6 miles) and The Barking Lot Dog Park (1.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Tobey Park",
+    "street": "2599 Avery Ave",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38112",
+    "latitude": 35.1308527,
+    "longitude": -89.9766346,
+    "description": "Dog owners in Memphis have made Tobey Park at 2599 Avery Ave a go-to spot, rating it 4.5 stars across 369 reviews. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Tobey Dog Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Heroes Park",
+    "street": "4580 Riverdale Rd",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38141",
+    "latitude": 35.0231658,
+    "longitude": -89.8314515,
+    "description": "Heroes Park at 4580 Riverdale Rd holds a 4.1-star rating from 115 Memphis dog owner visits. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners in the neighborhood can also take their furry friends to Olive Branch City Park, 4.3 miles away."
+  },
+  {
+    "name": "Forgey Park",
+    "street": "1695 Riverdale RdGermantown",
+    "city": "‍ Memphis",
+    "state": "TN",
+    "zip": "38138",
+    "latitude": 35.1023519,
+    "longitude": -89.8242046,
+    "description": "In Memphis, dog owners can find Forgey Park at 1695 Riverdale Rd—a local park worth exploring with their furry companions. Open from 6am to 9pm daily, dog owners in the area can work a visit into their day. Dog owners in the neighborhood can also take their furry friends to Shelby Farms Park, 2.6 miles away."
+  },
+  {
+    "name": "Barfield Crescent Park",
+    "street": "697 Veterans Pkwy",
+    "city": "Murfreesboro",
+    "state": "TN",
+    "zip": "37128",
+    "latitude": 35.7868132,
+    "longitude": -86.4163833,
+    "description": "At 697 Veterans Pkwy in Murfreesboro, Barfield Crescent Park stands out with 4.7 stars from 2,079 happy dog owners. Open from 6am to 5pm daily, there's always time for dog owners to bring their pup for some quality time. Nearby, Murfreesboro Bark Park (4.4 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Warner Parks Park",
+    "street": "50 Vaughn Rd",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37221",
+    "latitude": 36.0518568,
+    "longitude": -86.9009324,
+    "description": "Warner Parks Park at 50 Vaughn Rd in Nashville is a community favorite, with 2,354 dog owners giving it 4.8 stars. Open from 6am to 8pm daily, it's easy for dog owners to stop by whenever works best. Reviews from fellow dog owners confirm this park is worth the visit."
+  },
+  {
+    "name": "Two Rivers Dog Park",
+    "street": "3150 McGavock Pk",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37214",
+    "latitude": 36.1864928,
+    "longitude": -86.6782614,
+    "description": "Two Rivers Dog Park at 3150 McGavock Pk is a favorite among Nashville dog owners, earning 4.8 stars from 1,274 reviews. Open from 6am to 8pm daily, dog owners can plan visits around their pup's favorite times to be active. Nearby, Stones River Dog Park (1.5 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Noble Park",
+    "street": "11th Ave S",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37203",
+    "latitude": 36.1394959,
+    "longitude": -86.7860373,
+    "description": "Noble Park at 11th Ave S is well-regarded by Nashville dog owners, holding 5.0 stars across 20 reviews. Open from 6am to 10pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners exploring the neighborhood can also bring their furry friends to Gulch Dog Park (0.9 miles)."
+  },
+  {
+    "name": "K-9 Korral Dog Park",
+    "street": "239 Franklin Rd",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37064",
+    "latitude": 35.9340172,
+    "longitude": -86.8612192,
+    "description": "For dog owners in the Nashville area, K-9 Korral Dog Park (239 Franklin Rd) offers a 4.7-star experience based on 182 reviews. Open from 6am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby The Park (0.0 miles) or Pinkerton Park (1.0 miles)."
+  },
+  {
+    "name": "Urban Dog Bar",
+    "street": "5700 Ohio Ave",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37209",
+    "latitude": 36.1665524,
+    "longitude": -86.857332,
+    "description": "Urban Dog Bar (4.6 stars from 34 reviews) is a popular destination for Nashville dog owners, located at 5700 Ohio Ave. Open from 10am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Looking for more places to take your pup? Centennial Dog Park is another popular dog park just 3.7 miles away."
+  },
+  {
+    "name": "Hendersonville Dog Park",
+    "street": "100 Maple Row Blvd",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37075",
+    "latitude": 36.308244,
+    "longitude": -86.600161,
+    "description": "Nashville dog owners rate Hendersonville Dog Park at 100 Maple Row Blvd highly, with 4.6 stars from 52 visits. The park serves dog owners well, providing a destination the community values. For a change of scenery, Memorial Park is another dog-friendly destination 0.5 miles from here."
+  },
+  {
+    "name": "Central Bark Dog Park",
+    "street": "311 2nd Ave W",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37172",
+    "latitude": 36.5159594,
+    "longitude": -86.8883628,
+    "description": "Located at 311 2nd Ave W in Nashville, Central Bark Dog Park earns strong marks from local dog owners—4.6 stars from 84 reviews. Open from 6:30am to 7pm, Monday through Saturday, dog owners can plan visits around work or their pup's energy level. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Rover's Ridge Dog Park",
+    "street": "",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "",
+    "latitude": 36.4682439,
+    "longitude": -86.6536503,
+    "description": "In Nashville, Rover's Ridge Dog Park has built a loyal following—4.6 stars from 121 dog owner reviews. Open from 6am to 11pm daily, dog owners can plan visits around work or their pup's energy level. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Pitts Dog Park",
+    "street": "299 Tusculum Rd",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37013",
+    "latitude": 36.059523,
+    "longitude": -86.706275,
+    "description": "Pitts Dog Park at 299 Tusculum Rd is well-regarded by Nashville dog owners, holding 4.6 stars across 361 reviews. Open from 7am to 6pm daily, the park works well for dog owners with different schedules. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "‍ Bark Springs Dog Park",
+    "street": "",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "",
+    "latitude": 35.9670985,
+    "longitude": -86.5245906,
+    "description": "Bark Springs Dog Park is well-regarded by Nashville dog owners, holding 4.6 stars across 420 reviews. Open from 8am to 6:30pm daily, the park offers flexibility for dog owners with varying routines. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Fair Park",
+    "street": "Bransford Ave",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37203",
+    "latitude": 36.1305949,
+    "longitude": -86.7680489,
+    "description": "In Nashville, Fair Park has built a loyal following—4.6 stars from 432 dog owner reviews. Open from 7am to 5pm daily, the park accommodates early risers and evening visitors alike. Nearby, Noble Park (1.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Stones River Dog Park",
+    "street": "Stones River Greenway",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37214",
+    "latitude": 36.1888602,
+    "longitude": -86.6508308,
+    "description": "Stones River Dog Park (4.6 stars from 740 reviews) is a popular destination for Nashville dog owners. Open from 6am to 8pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Two Rivers Dog Park is another popular dog park just 1.5 miles away."
+  },
+  {
+    "name": "Centennial Dog Park",
+    "street": "2500 West End Ave",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37203",
+    "latitude": 36.1542254,
+    "longitude": -86.7930645,
+    "description": "At 2500 West End Ave in Nashville, Centennial Dog Park draws dog owners from across the area—4.6 stars from 5,358 reviews. Open from 6am to 8pm daily, dog owners have generous hours to visit with their pups. Dog owners in the area also frequent Gulch Dog Park (0.4 miles)—another top dog park worth visiting with your pup."
+  },
+  {
+    "name": "‍ Freedom Run Dog Park",
+    "street": "2098 Turning Wheel Ln",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37067",
+    "latitude": 35.928971,
+    "longitude": -86.802997,
+    "description": "With 4.5 stars from 151 reviews, Freedom Run Dog Park at 2098 Turning Wheel Ln has become a favorite among Nashville dog owners. Open from 6am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. For variety, the neighborhood offers more dog parks to explore: Liberty Park (0.0 miles) and K-9 Korral Dog Park (3.3 miles)."
+  },
+  {
+    "name": "Nutro Dog Park",
+    "street": "4441 Columbia PikeThompson's Station",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37179",
+    "latitude": 35.8243324,
+    "longitude": -86.885821,
+    "description": "Nutro Dog Park at 4441 Columbia Pike is well-regarded by Nashville dog owners, holding 4.5 stars across 160 reviews. Open from 5:30am to 9pm daily, the park offers flexibility for dog owners with varying routines. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Fenway's Dog Park",
+    "street": "745 Caldwell DrGoodlettsville",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37072",
+    "latitude": 36.3249539,
+    "longitude": -86.6902348,
+    "description": "Fenway's Dog Park at 745 Caldwell Dr is well-regarded by Nashville dog owners, holding 4.5 stars across 236 reviews. Open from 7am to 10pm daily, the park accommodates early risers and evening visitors alike. Looking for more places to take your pup? Memorial Park is another popular dog park just 4.7 miles away."
+  },
+  {
+    "name": "Spring Hill Bark Park",
+    "street": "575 Maury Hill St",
+    "city": "Spring Hill",
+    "state": "TN",
+    "zip": "37174",
+    "latitude": 35.7520527,
+    "longitude": -86.9359194,
+    "description": "At 575 Maury Hill St, Spring Hill Bark Park has 4.4 stars based on 48 reviews from Spring Hill dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Reading what other dog owners have experienced here can help with planning a visit."
+  }
+]

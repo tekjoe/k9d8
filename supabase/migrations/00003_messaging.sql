@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS push_tokens CASCADE;
 DROP TABLE IF EXISTS messages CASCADE;
 DROP TABLE IF EXISTS conversation_participants CASCADE;
 DROP TABLE IF EXISTS conversations CASCADE;
-
 -- ============================================================
 -- 1. CREATE ALL TABLES FIRST
 -- ============================================================
@@ -18,7 +17,6 @@ CREATE TABLE conversations (
   last_message_preview TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
-
 CREATE TABLE conversation_participants (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   conversation_id UUID NOT NULL REFERENCES conversations(id) ON DELETE CASCADE,
@@ -27,7 +25,6 @@ CREATE TABLE conversation_participants (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   UNIQUE(conversation_id, user_id)
 );
-
 CREATE TABLE messages (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   conversation_id UUID NOT NULL REFERENCES conversations(id) ON DELETE CASCADE,
@@ -35,10 +32,8 @@ CREATE TABLE messages (
   content TEXT NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
-
 CREATE INDEX idx_messages_conversation_created
   ON messages(conversation_id, created_at DESC);
-
 CREATE TABLE push_tokens (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
@@ -47,7 +42,6 @@ CREATE TABLE push_tokens (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   UNIQUE(user_id, token)
 );
-
 -- ============================================================
 -- 2. ENABLE RLS ON ALL TABLES
 -- ============================================================
@@ -56,7 +50,6 @@ ALTER TABLE conversations ENABLE ROW LEVEL SECURITY;
 ALTER TABLE conversation_participants ENABLE ROW LEVEL SECURITY;
 ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
 ALTER TABLE push_tokens ENABLE ROW LEVEL SECURITY;
-
 -- ============================================================
 -- 3. RLS POLICIES (all tables exist now, safe to cross-reference)
 -- ============================================================
@@ -71,7 +64,6 @@ CREATE POLICY "Users can view own conversations"
       AND conversation_participants.user_id = auth.uid()
     )
   );
-
 -- conversation_participants: users can see participants of their conversations
 CREATE POLICY "Users can view participants of own conversations"
   ON conversation_participants FOR SELECT
@@ -82,11 +74,9 @@ CREATE POLICY "Users can view participants of own conversations"
       AND cp.user_id = auth.uid()
     )
   );
-
 CREATE POLICY "Users can update own participant record"
   ON conversation_participants FOR UPDATE
   USING (auth.uid() = user_id);
-
 -- messages: users can view messages in their conversations
 CREATE POLICY "Users can view messages in own conversations"
   ON messages FOR SELECT
@@ -97,7 +87,6 @@ CREATE POLICY "Users can view messages in own conversations"
       AND conversation_participants.user_id = auth.uid()
     )
   );
-
 CREATE POLICY "Users can send messages in own conversations"
   ON messages FOR INSERT
   WITH CHECK (
@@ -108,20 +97,16 @@ CREATE POLICY "Users can send messages in own conversations"
       AND conversation_participants.user_id = auth.uid()
     )
   );
-
 -- push_tokens: users can manage their own tokens
 CREATE POLICY "Users can view own push tokens"
   ON push_tokens FOR SELECT
   USING (auth.uid() = user_id);
-
 CREATE POLICY "Users can insert own push tokens"
   ON push_tokens FOR INSERT
   WITH CHECK (auth.uid() = user_id);
-
 CREATE POLICY "Users can delete own push tokens"
   ON push_tokens FOR DELETE
   USING (auth.uid() = user_id);
-
 -- ============================================================
 -- 4. FUNCTIONS & TRIGGERS
 -- ============================================================
@@ -154,7 +139,6 @@ BEGIN
   RETURN conv_id;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 -- Update conversation metadata when a new message is inserted
 CREATE OR REPLACE FUNCTION update_conversation_on_message()
 RETURNS TRIGGER AS $$
@@ -166,11 +150,9 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 CREATE TRIGGER on_new_message
   AFTER INSERT ON messages
   FOR EACH ROW EXECUTE FUNCTION update_conversation_on_message();
-
 -- ============================================================
 -- 5. REALTIME
 -- ============================================================

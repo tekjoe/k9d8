@@ -22,13 +22,11 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 CREATE TRIGGER friend_request_notification
   AFTER INSERT ON friendships
   FOR EACH ROW
   WHEN (NEW.status = 'pending')
   EXECUTE FUNCTION notify_friend_request();
-
 -- Trigger: Friend request accepted
 CREATE OR REPLACE FUNCTION notify_friend_accepted()
 RETURNS TRIGGER AS $$
@@ -56,12 +54,10 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 CREATE TRIGGER friend_accepted_notification
   AFTER UPDATE ON friendships
   FOR EACH ROW
   EXECUTE FUNCTION notify_friend_accepted();
-
 -- Trigger: New message received
 CREATE OR REPLACE FUNCTION notify_new_message()
 RETURNS TRIGGER AS $$
@@ -107,12 +103,10 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 CREATE TRIGGER new_message_notification
   AFTER INSERT ON messages
   FOR EACH ROW
   EXECUTE FUNCTION notify_new_message();
-
 -- Trigger: Playdate RSVP/invite
 CREATE OR REPLACE FUNCTION notify_playdate_invite()
 RETURNS TRIGGER AS $$
@@ -146,7 +140,6 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 -- Note: We only create playdate invites when explicitly invited, 
 -- not when a user RSVPs themselves. This trigger is for future use
 -- when we implement explicit playdate invitations.
@@ -199,7 +192,6 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 CREATE TRIGGER friend_checkin_notification
   AFTER INSERT ON check_ins
   FOR EACH ROW

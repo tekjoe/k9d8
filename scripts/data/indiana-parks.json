@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Canine Corral",
+    "street": "2108 W 8th St",
+    "city": "Anderson",
+    "state": "IN",
+    "zip": "46016",
+    "latitude": 40.108237,
+    "longitude": -85.7065869,
+    "description": "Canine Corral at 2108 W 8th St is well-regarded by Anderson dog owners, holding 4.6 stars across 18 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Lower Cascades Park",
+    "street": "2851 Old State Rd 37",
+    "city": "‍ Bloomington",
+    "state": "IN",
+    "zip": "47404",
+    "latitude": 39.1905127,
+    "longitude": -86.5353989,
+    "description": "With 4.7 stars from 762 reviews, Lower Cascades Park at 2851 Old State Rd 37 has become a favorite among Bloomington dog owners. Open from 6am to 11pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Switchyard Park (2.8 miles) or Park (2.9 miles)."
+  },
+  {
+    "name": "Switchyard Park",
+    "street": "1601 S Rogers St",
+    "city": "‍ Bloomington",
+    "state": "IN",
+    "zip": "47403",
+    "latitude": 39.14942,
+    "longitude": -86.538702,
+    "description": "Switchyard Park at 1601 S Rogers St is well-regarded by Bloomington dog owners, holding 4.7 stars across 736 reviews. Open from 5am to 11pm daily, the park works well for dog owners with different schedules. For a change of scenery, Broadview Park is another dog-friendly destination 0.7 miles from here."
+  },
+  {
+    "name": "Broadview Park",
+    "street": "704 W Graham Dr",
+    "city": "‍ Bloomington",
+    "state": "IN",
+    "zip": "47403",
+    "latitude": 39.1399585,
+    "longitude": -86.5411153,
+    "description": "Dog owners in Bloomington have made Broadview Park at 704 W Graham Dr a go-to spot, rating it 4.6 stars across 46 reviews. Open from 5am to 11pm daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Switchyard Park (0.7 miles) and Park (3.3 miles)."
+  },
+  {
+    "name": "Park",
+    "street": "3421 E Longview Ave",
+    "city": "‍ Bloomington",
+    "state": "IN",
+    "zip": "47408",
+    "latitude": 39.1677774,
+    "longitude": -86.4903293,
+    "description": "At 3421 E Longview Ave in Bloomington, Park has built a loyal following—4.5 stars from 52 dog owner reviews. Open from 5am to 11pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Lower Cascades Park (2.9 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Cicero Township Dog Park",
+    "street": "750 Development DrTipton",
+    "city": "Cicero",
+    "state": "IN",
+    "zip": "46072",
+    "latitude": 40.2932879,
+    "longitude": -86.050887,
+    "description": "Dog owners in Cicero have made Cicero Township Dog Park at 750 Development Dr a go-to spot, rating it 4.7 stars across 21 reviews. Open from 6am to 9pm daily, dog owners can plan visits around work or their pup's energy level. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Columbus Dog Park",
+    "street": "3515 Hollowell Street",
+    "city": "Columbus",
+    "state": "IN",
+    "zip": "47201",
+    "latitude": 39.1928286,
+    "longitude": -85.8836239,
+    "description": "Columbus Dog Park (3515 Hollowell Street) serves dog owners in the Columbus neighborhood looking for a place to visit with their pups. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Dog owners visiting for the first time may want to read recent reviews to learn what to expect."
+  },
+  {
+    "name": "Dr. Frank Booth Dog Park",
+    "street": "619 Baldwin St",
+    "city": "Elkhart",
+    "state": "IN",
+    "zip": "46514",
+    "latitude": 41.6968845,
+    "longitude": -85.9693989,
+    "description": "At 619 Baldwin St in Elkhart, Dr. Frank Booth Dog Park welcomes dog owners from the surrounding neighborhood. Open from 7am to 9pm daily, dog owners have a window to spend time with their pups. Checking recent reviews can help dog owners decide if this park fits their needs."
+  },
+  {
+    "name": "‍ Earthborn Holistic Dog Park",
+    "street": "324 NW 3rd St",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "47708",
+    "latitude": 37.9737582,
+    "longitude": -87.5745286,
+    "description": "Earthborn Holistic Dog Park at 324 NW 3rd St is well-regarded by Evansville dog owners, holding 5.0 stars across 12 reviews. The park serves dog owners well, providing a destination the community values. Other dog parks in the area include Roberts Park (0.3 miles) and Akin Park (0.3 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ James Price Park",
+    "street": "6229 Covert Ave",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "47715",
+    "latitude": 37.9555409,
+    "longitude": -87.5452184,
+    "description": "Dog owners in Evansville have rated James Price Park (6229 Covert Ave) 4.4 stars across 249 reviews. The park serves as a gathering spot for dog owners and their four-legged friends in the area. More dog parks in the area include Vann Park (1.4 miles) and Roberts Park (1.8 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Vann Park",
+    "street": "Bayard Park Dr",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "47714",
+    "latitude": 37.9662374,
+    "longitude": -87.5236815,
+    "description": "For dog owners in Evansville, Vann Park has a 4.4-star rating (150 reviews). Open from 6am to 11pm daily, dog owners in the area can work a visit into their day. Looking to explore more? James Price Park is another dog-friendly park 1.4 miles from here."
+  },
+  {
+    "name": "Eleventh Avenue Park",
+    "street": "511 N 11th Ave",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "47712",
+    "latitude": 37.9825932,
+    "longitude": -87.5971032,
+    "description": "Eleventh Avenue Park at 511 N 11th Ave in Evansville has 4.2 stars from 60 dog owner reviews. Open from 6am to 11pm, Tuesday through Sunday, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners looking for variety can also visit Earthborn Holistic Dog Park (1.4 miles) or Roberts Park (1.6 miles) with their four-legged friends."
+  },
+  {
+    "name": "Akin Park",
+    "street": "",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "",
+    "latitude": 37.970495,
+    "longitude": -87.5715641,
+    "description": "157 dog owners have reviewed Akin Park in Evansville, averaging 4.2 stars. Open from 5am to 11pm daily, the park is accessible for dog owners in the area. Dog owners looking for variety can also visit Roberts Park (0.0 miles) or Earthborn Holistic Dog Park (0.3 miles) with their four-legged friends."
+  },
+  {
+    "name": "Roberts Park",
+    "street": "",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "",
+    "latitude": 37.970495,
+    "longitude": -87.5715641,
+    "description": "Dog owners in Evansville have rated Roberts Park 4.1 stars across 22 reviews. Local dog owners use this park as a spot to spend time with their furry companions. Looking to explore more? Akin Park is another dog-friendly park 0.0 miles from here."
+  },
+  {
+    "name": "Diamond Valley Park",
+    "street": "1100 Fulton Pkwy",
+    "city": "Evansville",
+    "state": "IN",
+    "zip": "47710",
+    "latitude": 38.0045977,
+    "longitude": -87.5796952,
+    "description": "Dog owners in the Evansville area will find Diamond Valley Park at 1100 Fulton Pkwy—a local option for spending time with their pups. Open from 6:45am to 7:45pm daily, the park is accessible for dog owners in the area. Nearby dog parks worth exploring with your pup include Eleventh Avenue Park (1.8 miles) and Earthborn Holistic Dog Park (2.1 miles)."
+  },
+  {
+    "name": "Ritchey Woods Nature Preserve",
+    "street": "10410 Hague Rd",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46038",
+    "latitude": 39.9390045,
+    "longitude": -86.0327386,
+    "description": "Fishers dog owners rate Ritchey Woods Nature Preserve at 10410 Hague Rd highly, with 4.8 stars from 871 visits. Open from 7am to 8pm daily, dog owners can plan visits around work or their pup's energy level. For a change of scenery, Cheeney Creek Natural Area is another dog-friendly destination 1.1 miles from here."
+  },
+  {
+    "name": "Brookschool Park",
+    "street": "",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "",
+    "latitude": 39.9555928,
+    "longitude": -86.0138729,
+    "description": "In Fishers, Brookschool Park earns strong marks from local dog owners—4.8 stars from 103 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For variety, the neighborhood offers more dog parks to explore: Cheeney Creek Natural Area (0.4 miles) and Ritchey Woods Nature Preserve (1.5 miles)."
+  },
+  {
+    "name": "Beverly's Pet Resort",
+    "street": "14000 Promise Rd",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46038",
+    "latitude": 39.9928399,
+    "longitude": -85.9709958,
+    "description": "Beverly's Pet Resort (4.7 stars from 335 reviews) is a popular destination for Fishers dog owners, located at 14000 Promise Rd. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. More dog-friendly parks nearby include Cumberland Park (1.3 miles) and Cumberland Pointe Park (1.8 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Zimmer Park",
+    "street": "Dorster St",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46037",
+    "latitude": 39.9803539,
+    "longitude": -85.9256001,
+    "description": "Fishers dog owners rate Zimmer Park highly, with 4.6 stars from 38 visits. Open from 7am to 9pm daily, dog owners can plan visits around work or their pup's energy level. For a change of scenery, Witten Park is another dog-friendly destination 0.2 miles from here."
+  },
+  {
+    "name": "Cheeney Creek Natural Area",
+    "street": "11030 Fishers Pointe Blvd",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46038",
+    "latitude": 39.9514807,
+    "longitude": -86.0187438,
+    "description": "With 4.6 stars from 214 reviews, Cheeney Creek Natural Area at 11030 Fishers Pointe Blvd has become a favorite among Fishers dog owners. Open from 7am to 8pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Brookschool Park (0.4 miles) and Ritchey Woods Nature Preserve (1.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Cumberland Park",
+    "street": "10580 Cumberland Rd",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46037",
+    "latitude": 39.9863926,
+    "longitude": -85.9943031,
+    "description": "For dog owners in the Fishers area, Cumberland Park (10580 Cumberland Rd) offers a 4.5-star experience based on 148 reviews. Open from 7am to 8pm daily, the park works well for dog owners with different schedules. For a change of scenery, Beverly's Pet Resort is another dog-friendly destination 1.3 miles from here."
+  },
+  {
+    "name": "Witten Park",
+    "street": "13256 Saxony Blvd",
+    "city": "Fishers",
+    "state": "IN",
+    "zip": "46037",
+    "latitude": 39.9828818,
+    "longitude": -85.9229945,
+    "description": "At 13256 Saxony Blvd in Fishers, Witten Park carries 4.4 stars from 84 dog owner reviews. Open from 7am to 9pm daily, dog owners in the area can work a visit into their day. Dog owners looking for variety can also visit Zimmer Park (0.2 miles) or Beverly's Pet Resort (2.6 miles) with their four-legged friends."
+  },
+  {
+    "name": "Fido's Forest Dog Park",
+    "street": "4582 W Wallen Rd",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "zip": "46818",
+    "latitude": 41.1611303,
+    "longitude": -85.1727436,
+    "description": "For dog owners in the Fort Wayne area, Fido's Forest Dog Park (4582 W Wallen Rd) offers a 4.9-star experience based on 106 reviews. Open from 7:30am to 6:30pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Ruff House | Dog Boarding, (4.1 miles)."
+  },
+  {
+    "name": "Ruff House | Dog Boarding,",
+    "street": "3232 Hillegas Rd",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "zip": "46808",
+    "latitude": 41.1038903,
+    "longitude": -85.192083,
+    "description": "Ruff House | Dog Boarding, (4.8 stars from 153 reviews) is a popular destination for Fort Wayne dog owners, located at 3232 Hillegas Rd. The park serves dog owners well, providing a destination the community values. More dog-friendly parks nearby include Camp Canine: Members Only (3.9 miles) and Fido's Forest Dog Park (4.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Camp Canine: Members Only",
+    "street": "1502 N Harry Baals Dr",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "zip": "46805",
+    "latitude": 41.1128655,
+    "longitude": -85.1176773,
+    "description": "For dog owners in Fort Wayne, Camp Canine: Members Only at 1502 N Harry Baals Dr has a 4.3-star rating (53 reviews). Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. More dog parks in the area include Ruff House | Dog Boarding, (3.9 miles) and Fido's Forest Dog Park (4.4 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "‍ University Park",
+    "street": "200 Legacy Blvd",
+    "city": "Greenwood",
+    "state": "IN",
+    "zip": "46143",
+    "latitude": 39.61221,
+    "longitude": -86.051135,
+    "description": "At 200 Legacy Blvd in Greenwood, University Park carries 4.4 stars from 197 dog owner reviews. Open from 7am to 10pm daily, local dog owners have time to explore with their furry companions. For pups who want more adventure, Northeast Park is a nearby dog park worth visiting (3.1 miles)."
+  },
+  {
+    "name": "Woodmen Park",
+    "street": "720 Ashmore Dr",
+    "city": "Greenwood",
+    "state": "IN",
+    "zip": "46143",
+    "latitude": 39.605505,
+    "longitude": -86.111554,
+    "description": "Woodmen Park at 720 Ashmore Dr holds a 4.3-star rating from 71 Greenwood dog owner visits. Open from 8am to 10pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Freedom Park is a nearby dog park worth visiting (1.1 miles)."
+  },
+  {
+    "name": "‍ Summerfield Park",
+    "street": "275 West Worthsville Road",
+    "city": "Greenwood",
+    "state": "IN",
+    "zip": "46143",
+    "latitude": 39.5863282,
+    "longitude": -86.1110071,
+    "description": "Dog owners in Greenwood have rated Summerfield Park (275 West Worthsville Road) 4.3 stars across 143 reviews. Open from 7am to 11pm daily, dog owners can stop by when it fits their schedule. Nearby dog parks worth exploring with your pup include Freedom Park (1.0 miles) and Woodmen Park (1.3 miles)."
+  },
+  {
+    "name": "Northeast Park",
+    "street": "100 Crestview Dr",
+    "city": "Greenwood",
+    "state": "IN",
+    "zip": "46143",
+    "latitude": 39.631768,
+    "longitude": -86.1025399,
+    "description": "At 100 Crestview Dr in Greenwood, Northeast Park carries 4.3 stars from 228 dog owner reviews. Open from 8am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Nearby dog parks worth exploring with your pup include Smock Bark Park (0.9 miles) and Woodmen Park (1.9 miles)."
+  },
+  {
+    "name": "Hessville Park",
+    "street": "173rd St",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "46323",
+    "latitude": 41.5812009,
+    "longitude": -87.4915769,
+    "description": "For dog owners in the Hammond area, Hessville Park (173rd St) offers a 4.5-star experience based on 579 reviews. Open from 8am to 8pm daily, dog owners can plan visits around work or their pup's energy level. Dog owners can also take their pups to nearby Optimist Park (0.8 miles) or Riverside Park (0.8 miles)."
+  },
+  {
+    "name": "Amy Park",
+    "street": "3915 173rd St",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "46323",
+    "latitude": 41.5809206,
+    "longitude": -87.4348099,
+    "description": "Dog owners in Hammond have made Amy Park at 3915 173rd St a go-to spot, rating it 4.5 stars across 50 reviews. Open from 8am to 7pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Wicker Park (2.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Centennial Park",
+    "street": "",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "",
+    "latitude": 41.5644798,
+    "longitude": -87.5125412,
+    "description": "Centennial Park holds a 4.4-star rating from 98 Hammond dog owner visits. Open from 6am to 8pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners looking for variety can also visit Optimist Park (0.9 miles) or Riverside Park (0.9 miles) with their four-legged friends."
+  },
+  {
+    "name": "Riverside Park",
+    "street": "1245 River Dr",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "46324",
+    "latitude": 41.5710013,
+    "longitude": -87.4976553,
+    "description": "At 1245 River Dr in Hammond, Riverside Park carries 4.2 stars from 354 dog owner reviews. Open from 7am to 8pm daily, the park is accessible for dog owners in the area. Dog owners in the neighborhood can also take their furry friends to Optimist Park, 0.0 miles away."
+  },
+  {
+    "name": "Optimist Park",
+    "street": "1245 River Dr",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "46323",
+    "latitude": 41.5710013,
+    "longitude": -87.4976553,
+    "description": "At 1245 River Dr, Optimist Park has 4.1 stars based on 342 reviews from Hammond dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include Riverside Park (0.0 miles) and Hessville Park (0.8 miles)."
+  },
+  {
+    "name": "Wicker Park",
+    "street": "",
+    "city": "Hammond",
+    "state": "IN",
+    "zip": "",
+    "latitude": 41.5536529,
+    "longitude": -87.4520484,
+    "description": "Dog owners in the Hammond area will find Wicker Park—a local option for spending time with their pups. Open from 6am to 9:30pm daily, the park gives dog owners in the neighborhood time to bring their pups. Looking to explore more? Amy Park is another dog-friendly park 2.1 miles from here."
+  },
+  {
+    "name": "Puppy Playground",
+    "street": "5266 E 65th St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46220",
+    "latitude": 39.8777034,
+    "longitude": -86.0804744,
+    "description": "Dog owners in Indianapolis have made Puppy Playground at 5266 E 65th St a go-to spot, rating it 4.9 stars across 307 reviews. Open from 7am to 7pm weekdays, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Veteran's Memorial Park is another dog-friendly destination 0.7 miles from here."
+  },
+  {
+    "name": "Holliday Park",
+    "street": "6363 Spring Mill Rd",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46260",
+    "latitude": 39.8708447,
+    "longitude": -86.1649074,
+    "description": "Local dog owners love Holliday Park at 6363 Spring Mill Rd in Indianapolis—4.8 stars from an impressive 3,777 reviews. For dog owners seeking a tried-and-true destination, this park delivers consistently. Dog owners in the area also love bringing their pups to Friedman Park (0.9 miles) and Opti- Park (1.1 miles)."
+  },
+  {
+    "name": "Southeastway Park",
+    "street": "5624 S Carroll Rd",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46239",
+    "latitude": 39.6887046,
+    "longitude": -85.9519664,
+    "description": "With 4.8 stars across 1,684 reviews, Southeastway Park at 5624 S Carroll Rd has clearly won over Indianapolis dog owners. Open from 6am to 9pm daily, there's always time for dog owners to bring their pup for some quality time. For more dog park adventures, explore Wolf Run Park (2.1 miles) or Paul Ruster Park (4.7 miles) with your furry companion."
+  },
+  {
+    "name": "Eagle Creek Park",
+    "street": "7840 W 56th St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46254",
+    "latitude": 39.8526947,
+    "longitude": -86.2986828,
+    "description": "For Indianapolis dog owners, Eagle Creek Park at 7840 W 56th St needs no introduction—4.7 stars, 5,658 reviews. Open from 7am to 6:30pm daily, dog owners can find the perfect time for their furry friend. Dog owners exploring the area should also bring their pups to Robey Park (3.2 miles) and Bowman Park (3.7 miles)."
+  },
+  {
+    "name": "White River State Park",
+    "street": "801 W Washington St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46204",
+    "latitude": 39.7659219,
+    "longitude": -86.1717075,
+    "description": "White River State Park at 801 W Washington St in Indianapolis has earned its reputation with 4.7 stars from 5,416 dog owner reviews. Open from 5am to 11pm daily, dog owners have maximum flexibility to plan their visit. While you're in the area, dog owners also recommend taking your pup to Indianapolis Colts Canal Plays, another excellent dog park 1.1 miles away."
+  },
+  {
+    "name": "Fort Harrison State Park",
+    "street": "6000 N Post Rd",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46216",
+    "latitude": 39.8305421,
+    "longitude": -86.010092,
+    "description": "For Indianapolis dog owners, Fort Harrison State Park at 6000 N Post Rd needs no introduction—4.7 stars, 5,160 reviews. Open from 8am to 6pm daily, dog owners have maximum flexibility to plan their visit. Dog owners exploring the area should also bring their pups to Bellamy Park (0.7 miles) and Grassy Creek Regional Park (2.0 miles)."
+  },
+  {
+    "name": "Indianapolis Canal Walk",
+    "street": "701 Canal Walk",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46202",
+    "latitude": 39.7817898,
+    "longitude": -86.1662689,
+    "description": "Indianapolis Canal Walk at 701 Canal Walk in Indianapolis is a community favorite, with 2,529 dog owners giving it 4.7 stars. Open from 7am to 8pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Looking to mix things up? Indianapolis Colts Canal Plays is a nearby dog park 0.0 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "‍ Marott Woods Nature Preserve",
+    "street": "7350 N College Ave",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46240",
+    "latitude": 39.8810445,
+    "longitude": -86.1456146,
+    "description": "With 4.7 stars from 635 reviews, Marott Woods Nature Preserve at 7350 N College Ave has become a favorite among Indianapolis dog owners. Open from 8am to 9pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Opti- Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Indianapolis Colts Canal Plays",
+    "street": "701 Canal Walk",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46202",
+    "latitude": 39.7817898,
+    "longitude": -86.1662689,
+    "description": "For dog owners in the Indianapolis area, Indianapolis Colts Canal Plays (701 Canal Walk) offers a 4.7-star experience based on 552 reviews. Open from 6:30am to 8pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Indianapolis Canal Walk (0.0 miles)."
+  },
+  {
+    "name": "Wolf Run Park",
+    "street": "9900 Thompson Rd",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46239",
+    "latitude": 39.69664,
+    "longitude": -85.99023,
+    "description": "Wolf Run Park at 9900 Thompson Rd is well-regarded by Indianapolis dog owners, holding 4.7 stars across 482 reviews. Open from 8am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Southeastway Park (2.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Crate Escapes Dog Park",
+    "street": "18595 Carousel LnWestfield",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0564615,
+    "longitude": -86.1421051,
+    "description": "Crate Escapes Dog Park (4.8 stars from 17 reviews) is a popular destination for Indianapolis dog owners, located at 18595 Carousel Ln. Local dog owners appreciate what this park offers their four-legged friends. Other dog parks in the area include Grand Park (0.7 miles) and Asa Bales Park (1.0 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Commons Park",
+    "street": "2204 E New York St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46201",
+    "latitude": 39.7713531,
+    "longitude": -86.1240592,
+    "description": "At 2204 E New York St in Indianapolis, Commons Park has built a loyal following—4.6 stars from 45 dog owner reviews. Open from 8am to 6pm daily, dog owners can easily fit a visit into busy schedules. Nearby, Highland Park (0.8 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Opti- Park",
+    "street": "780 E 66th St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46220",
+    "latitude": 39.876042,
+    "longitude": -86.1450562,
+    "description": "Opti- Park (4.6 stars from 118 reviews) is a popular destination for Indianapolis dog owners, located at 780 E 66th St. Open from 6am to 6pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include Marott Woods Nature Preserve (0.3 miles) and Broad Ripple Park (0.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Veteran's Memorial Park",
+    "street": "12150 E 62nd St",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46235",
+    "latitude": 39.8687721,
+    "longitude": -86.075337,
+    "description": "At 12150 E 62nd St in Indianapolis, Veteran's Memorial Park has built a loyal following—4.6 stars from 243 dog owner reviews. Dog owners looking for a solid destination will find this park delivers. Dog owners exploring the neighborhood can also bring their furry friends to Puppy Playground (0.7 miles)."
+  },
+  {
+    "name": "Beckenholdt Park",
+    "street": "2770 N Franklin StGreenfield",
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46140",
+    "latitude": 39.7913208,
+    "longitude": -85.7841683,
+    "description": "Dog owners in Indianapolis have made Beckenholdt Park at 2770 N Franklin St a go-to spot, rating it 4.6 stars across 430 reviews. Open from 6:30am to 9pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Indianapolis KOA Holiday is another dog-friendly destination 1.7 miles from here."
+  },
+  {
+    "name": "Highland Dog Park",
+    "street": "1300 Spruce Dr",
+    "city": "Jeffersonville",
+    "state": "IN",
+    "zip": "47130",
+    "latitude": 38.29931,
+    "longitude": -85.7299734,
+    "description": "At 1300 Spruce Dr in Jeffersonville, Highland Dog Park welcomes dog owners from the surrounding neighborhood. Open from 8am to 7pm daily, dog owners in the area can work a visit into their day. Dog owners might also enjoy Champions Dog Run (Members, another dog park just 2.2 miles away."
+  },
+  {
+    "name": "‍ Mehlig Dog Park",
+    "street": "1701 W Carter St",
+    "city": "Kokomo",
+    "state": "IN",
+    "zip": "46901",
+    "latitude": 40.483451,
+    "longitude": -86.152135,
+    "description": "Mehlig Dog Park at 1701 W Carter St holds a 4.3-star rating from 214 Kokomo dog owner visits. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Nearby dog parks worth exploring with your pup include Downtown Dog Park (1.0 miles) and Mohr Dog Park (2.9 miles)."
+  },
+  {
+    "name": "Downtown Dog Park",
+    "street": "",
+    "city": "Kokomo",
+    "state": "IN",
+    "zip": "",
+    "latitude": 40.4864444,
+    "longitude": -86.1336351,
+    "description": "Downtown Dog Park in Kokomo is rated 4.3 stars by 49 dog owners. Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. For pups who want more adventure, Mehlig Dog Park is a nearby dog park worth visiting (1.0 miles)."
+  },
+  {
+    "name": "Mohr Dog Park",
+    "street": "2302 Saratoga Ave",
+    "city": "Kokomo",
+    "state": "IN",
+    "zip": "46902",
+    "latitude": 40.4653103,
+    "longitude": -86.1019004,
+    "description": "Located at 2302 Saratoga Ave, Mohr Dog Park offers Kokomo dog owners a neighborhood destination for their four-legged friends. Open from 8am to 11pm daily, the park is accessible for dog owners in the area. Looking to explore more? Downtown Dog Park is another dog-friendly park 2.2 miles from here."
+  },
+  {
+    "name": "Happy Hollow Park",
+    "street": "1301 Happy Hollow Rd",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47906",
+    "latitude": 40.438779,
+    "longitude": -86.8994035,
+    "description": "With 4.8 stars across 1,732 reviews, Happy Hollow Park at 1301 Happy Hollow Rd has clearly won over Lafayette dog owners. Open from 8am to 8:40pm daily, the park accommodates a variety of dog owner schedules and routines. Nearby, University Farm Park (1.6 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Celery Bog Nature Area",
+    "street": "1620 Lindberg Rd",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47906",
+    "latitude": 40.4460867,
+    "longitude": -86.9351761,
+    "description": "For dog owners in the Lafayette area, Celery Bog Nature Area (1620 Lindberg Rd) offers a 4.8-star experience based on 576 reviews. Open from 6am to 8:30pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners exploring the neighborhood can also bring their furry friends to Cumberland Park (1.5 miles)."
+  },
+  {
+    "name": "University Farm Park",
+    "street": "Hamilton St",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47906",
+    "latitude": 40.4616136,
+    "longitude": -86.9046908,
+    "description": "In Lafayette, University Farm Park has built a loyal following—4.7 stars from 42 dog owner reviews. The steady stream of dog owner visits speaks to the park's appeal. Dog owners can also take their pups to nearby Cumberland Park (0.6 miles) or Happy Hollow Park (1.6 miles)."
+  },
+  {
+    "name": "McCaw Park",
+    "street": "McCaw Park",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47905",
+    "latitude": 40.4232995,
+    "longitude": -86.8425003,
+    "description": "McCaw Park is well-regarded by Lafayette dog owners, holding 4.6 stars across 144 reviews. Open from 7am to 9pm daily, the park offers flexibility for dog owners with varying routines. Nearby, McCaw Baseball Park (0.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Armstrong Park",
+    "street": "851 Beck Ln",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47909",
+    "latitude": 40.3880586,
+    "longitude": -86.8868545,
+    "description": "Dog owners in Lafayette have made Armstrong Park at 851 Beck Ln a go-to spot, rating it 4.6 stars across 834 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Looking for more places to take your pup? Dog Park is another popular dog park just 1.7 miles away."
+  },
+  {
+    "name": "‍ McCaw Baseball Park",
+    "street": "3745 Union St",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47905",
+    "latitude": 40.424867,
+    "longitude": -86.8419842,
+    "description": "For dog owners in the Lafayette area, McCaw Baseball Park (3745 Union St) offers a 4.5-star experience based on 160 reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include McCaw Park (0.1 miles) and Happy Hollow Park (3.2 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Dog Park",
+    "street": "115 Sanford St",
+    "city": "Lafayette",
+    "state": "IN",
+    "zip": "47905",
+    "latitude": 40.4091235,
+    "longitude": -86.9029353,
+    "description": "At 115 Sanford St in Lafayette, Dog Park welcomes dog owners from the surrounding neighborhood. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Dog owners looking for variety can also visit Armstrong Park (1.7 miles) or Happy Hollow Park (2.1 miles) with their four-legged friends."
+  },
+  {
+    "name": "Emerson Dog Park",
+    "street": "900 W Ashland Ave",
+    "city": "Muncie",
+    "state": "IN",
+    "zip": "47303",
+    "latitude": 40.1988253,
+    "longitude": -85.3963229,
+    "description": "At 900 W Ashland Ave in Muncie, Emerson Dog Park has built a loyal following—4.6 stars from 148 dog owner reviews. Open from 6am to 9pm daily, dog owners can easily fit a visit into busy schedules. Nearby, Muncie Fireman's Park (1.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Heekin Park",
+    "street": "1797 S Hackley St",
+    "city": "Muncie",
+    "state": "IN",
+    "zip": "47302",
+    "latitude": 40.179383,
+    "longitude": -85.3772496,
+    "description": "At 1797 S Hackley St, Heekin Park has 4.4 stars based on 191 reviews from Muncie dog owners. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners might also enjoy Muncie Fireman's Park, another dog park just 0.9 miles away."
+  },
+  {
+    "name": "Muncie Fireman's Park",
+    "street": "1112 S Hoyt Ave",
+    "city": "Muncie",
+    "state": "IN",
+    "zip": "47302",
+    "latitude": 40.1853994,
+    "longitude": -85.3915971,
+    "description": "Muncie Fireman's Park at 1112 S Hoyt Ave in Muncie has 4.3 stars from 29 dog owner reviews. Dog owners in the area appreciate having a local spot to bring their pups. Looking to explore more? Heekin Park is another dog-friendly park 0.9 miles from here."
+  },
+  {
+    "name": "Noblesville Parks & Recreation",
+    "street": "701 Cicero Rd",
+    "city": "Noblesville",
+    "state": "IN",
+    "zip": "46060",
+    "latitude": 40.0577866,
+    "longitude": -86.0171428,
+    "description": "Noblesville Parks & Recreation at 701 Cicero Rd is well-regarded by Noblesville dog owners, holding 4.7 stars across 274 reviews. Open from 6am to 11pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Hamilton Town Center Dog Park is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Cumberland Pointe Park",
+    "street": "10034 Golden Dr",
+    "city": "Noblesville",
+    "state": "IN",
+    "zip": "46060",
+    "latitude": 40.0144617,
+    "longitude": -85.9891279,
+    "description": "Cumberland Pointe Park at 10034 Golden Dr in Noblesville has 4.3 stars from 24 dog owner reviews. Open from 6am to 9:30pm daily, the park is accessible for dog owners in the area. Looking to explore more? Beverly's Pet Resort is another dog-friendly park 1.8 miles from here."
+  },
+  {
+    "name": "Rum Village Dog Park",
+    "street": "",
+    "city": "South Bend",
+    "state": "IN",
+    "zip": "",
+    "latitude": 41.6833813,
+    "longitude": -86.2500066,
+    "description": "With 4.6 stars from 277 reviews, Rum Village Dog Park has become a favorite among South Bend dog owners. Open from 6am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to Niles Ave Dog Park (0.3 miles)."
+  },
+  {
+    "name": "Niles Ave Dog Park",
+    "street": "721 N Niles Ave",
+    "city": "South Bend",
+    "state": "IN",
+    "zip": "46617",
+    "latitude": 41.6841886,
+    "longitude": -86.2450029,
+    "description": "South Bend dog owners rate Niles Ave Dog Park at 721 N Niles Ave highly, with 4.5 stars from 348 visits. Dog owners looking for a solid destination will find this park delivers. Dog owners exploring the neighborhood can also bring their furry friends to Rum Village Dog Park (0.3 miles)."
+  },
+  {
+    "name": "Castle Point Dog Park",
+    "street": "18011 Cleveland Rd",
+    "city": "South Bend",
+    "state": "IN",
+    "zip": "46637",
+    "latitude": 41.7231161,
+    "longitude": -86.267195,
+    "description": "Castle Point Dog Park (18011 Cleveland Rd) serves dog owners in the South Bend neighborhood looking for a place to visit with their pups. Dog owners in the area appreciate having a local spot to bring their pups. Looking to explore more? Rum Village Dog Park is another dog-friendly park 2.9 miles from here."
+  },
+  {
+    "name": "Cool Creek Park",
+    "street": "2000 E 151st St",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46033",
+    "latitude": 40.0093899,
+    "longitude": -86.121408,
+    "description": "Cool Creek Park (4.7 stars from 519 reviews) is a popular destination for Westfield dog owners, located at 2000 E 151st St. Dog owners looking for a solid destination will find this park delivers. Dog owners exploring the neighborhood can also bring their furry friends to Liberty Park (0.8 miles)."
+  },
+  {
+    "name": "Quaker Park",
+    "street": "17501 Dartown Rd",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.041561,
+    "longitude": -86.15123,
+    "description": "Westfield dog owners rate Quaker Park at 17501 Dartown Rd highly, with 4.7 stars from 508 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Other dog parks in the area include Grand Park (0.4 miles) and Crate Escapes Dog Park (1.1 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Freedom Trail Park",
+    "street": "500 Deer Walk Trce",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0498047,
+    "longitude": -86.1219049,
+    "description": "Westfield dog owners rate Freedom Trail Park at 500 Deer Walk Trce highly, with 4.7 stars from 166 visits. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Asa Bales Park (0.2 miles) and Centennial Playground (0.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Grand Junction Plaza",
+    "street": "225 S Union St",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0308496,
+    "longitude": -86.1276754,
+    "description": "Grand Junction Plaza (4.7 stars from 87 reviews) is a popular destination for Westfield dog owners, located at 225 S Union St. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners exploring the neighborhood can also bring their furry friends to Old Friends Cemetery Park (0.0 miles)."
+  },
+  {
+    "name": "Old Friends Cemetery Park",
+    "street": "302 S Union St",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0308496,
+    "longitude": -86.1276754,
+    "description": "Old Friends Cemetery Park at 302 S Union St is well-regarded by Westfield dog owners, holding 4.7 stars across 19 reviews. Open from 7am to 9pm daily, the park works well for dog owners with different schedules. For a change of scenery, Grand Junction Plaza is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "Asa Bales Park",
+    "street": "205 W Hoover St",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0501106,
+    "longitude": -86.1255581,
+    "description": "Asa Bales Park at 205 W Hoover St is well-regarded by Westfield dog owners, holding 4.6 stars across 297 reviews. Dog owners looking for a solid destination will find this park delivers. For variety, the neighborhood offers more dog parks to explore: Freedom Trail Park (0.2 miles) and Centennial Playground (0.5 miles)."
+  },
+  {
+    "name": "Grand Park",
+    "street": "19000 Grand Park Blvd",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.0462597,
+    "longitude": -86.1464914,
+    "description": "Local dog owners love Grand Park at 19000 Grand Park Blvd in Westfield—4.6 stars from an impressive 1,694 reviews. This park has clearly won over local dog owners who return again and again with their furry friends. Looking to mix things up? Quaker Park is a nearby dog park 0.4 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Rohrer Meadows Community Park",
+    "street": "",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "",
+    "latitude": 39.9784186,
+    "longitude": -86.1283681,
+    "description": "Dog owners in Westfield have rated Rohrer Meadows Community Park 4.4 stars across 11 reviews. Open from 6:30am to 10pm daily, the park is accessible for dog owners in the area. For dog owners who like to explore, Dog Park (1.3 miles) and Central Dog Park (1.5 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Centennial Playground",
+    "street": "",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "",
+    "latitude": 40.0428151,
+    "longitude": -86.1274888,
+    "description": "Centennial Playground in Westfield has 4.3 stars based on 9 reviews from dog owners. This park provides dog owners in the community with a place to visit with their dogs. Dog owners in the neighborhood can also take their furry friends to Asa Bales Park, 0.5 miles away."
+  },
+  {
+    "name": "Liberty Park",
+    "street": "16001 Westfield Blvd",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.019552,
+    "longitude": -86.127363,
+    "description": "For dog owners near 16001 Westfield Blvd in Westfield, Liberty Park provides a convenient spot to take their dogs. Open from 7am to 9pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy Cool Creek Park, another dog park just 0.8 miles away."
+  },
+  {
+    "name": "Osborne Park",
+    "street": "17001 Ditch Rd",
+    "city": "Westfield",
+    "state": "IN",
+    "zip": "46074",
+    "latitude": 40.033242,
+    "longitude": -86.1834517,
+    "description": "At 17001 Ditch Rd in Westfield, Osborne Park welcomes dog owners from the surrounding neighborhood. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include Quaker Park (1.8 miles) and Grand Park (2.2 miles)."
+  }
+]

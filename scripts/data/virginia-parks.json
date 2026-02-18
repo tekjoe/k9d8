@@ -1,0 +1,862 @@
+[
+  {
+    "name": "Glencarlyn Dog Park",
+    "street": "301 S Harrison St",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22204",
+    "latitude": 38.8639816,
+    "longitude": -77.1190848,
+    "description": "Dog owners in Alexandria have made Glencarlyn Dog Park at 301 S Harrison St a go-to spot, rating it 4.8 stars across 382 reviews. Open from 8am to 8pm daily, dog owners have plenty of flexibility to plan a visit. More dog-friendly parks nearby include Fort Barnard Dog Park (1.7 miles) and Shirlington Dog Park (2.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Founders Park",
+    "street": "351 N Union St",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22314",
+    "latitude": 38.8079792,
+    "longitude": -77.039361,
+    "description": "With 4.7 stars across 1,735 reviews, Founders Park at 351 N Union St has clearly won over Alexandria dog owners. Open from 5am to 10pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. For variety, many dog owners also bring their furry friends to Blackjack Dog Park (0.5 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Jones Point Park",
+    "street": "Jones Point Dr",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "23242",
+    "latitude": 38.7935446,
+    "longitude": -77.0429536,
+    "description": "For Alexandria dog owners, Jones Point Park has become a reliable favorite—4.7 stars from 1,305 reviews. Open from 6am to 10pm daily, there's always time for dog owners to bring their pup for some quality time. Dog owners in the area also love bringing their pups to Blackjack Dog Park (0.8 miles) and Goat Hill Park (0.8 miles)."
+  },
+  {
+    "name": "Shirlington Dog Park",
+    "street": "2710 S Oakland St",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22206",
+    "latitude": 38.844255,
+    "longitude": -77.089867,
+    "description": "With 4.7 stars across 1,223 reviews, Shirlington Dog Park at 2710 S Oakland St has clearly won over Alexandria dog owners. Open from 7:30am to 4:30pm, every day except Thursday, the park accommodates a variety of dog owner schedules and routines. Nearby, Fort Barnard Dog Park (0.5 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "‍ Dora Kelley Nature Park",
+    "street": "5750 Sanger Ave",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22311",
+    "latitude": 38.8282812,
+    "longitude": -77.1309208,
+    "description": "Located at 5750 Sanger Ave in Alexandria, Dora Kelley Nature Park earns strong marks from local dog owners—4.7 stars from 510 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Looking for more places to take your pup? Duke Street Dog Park is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Westgrove Dog Park",
+    "street": "6801 Fort Hunt Rd",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22307",
+    "latitude": 38.7700012,
+    "longitude": -77.0633978,
+    "description": "At 6801 Fort Hunt Rd in Alexandria, Westgrove Dog Park has built a loyal following—4.7 stars from 183 dog owner reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. More dog-friendly parks nearby include Jones Point Park (2.0 miles) and Blackjack Dog Park (2.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Ben Brenman Dog Park",
+    "street": "4800 Brenman Park Dr",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22304",
+    "latitude": 38.8090453,
+    "longitude": -77.1162506,
+    "description": "Ben Brenman Dog Park (4.7 stars from 174 reviews) is a popular destination for Alexandria dog owners, located at 4800 Brenman Park Dr. Open from 6am to 10pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Duke Street Dog Park is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Fort Ward Park",
+    "street": "4301 W Braddock Rd",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22304",
+    "latitude": 38.82926,
+    "longitude": -77.1018548,
+    "description": "Dog owners in Alexandria have made Fort Ward Park at 4301 W Braddock Rd a go-to spot, rating it 4.6 stars across 445 reviews. Open from 6am to 8pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Utah Dog Park (1.0 miles) and Shirlington Dog Park (1.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Eugene Simpson Stadium Park",
+    "street": "609 E Monroe Ave",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22301",
+    "latitude": 38.8214185,
+    "longitude": -77.0520047,
+    "description": "Located at 609 E Monroe Ave in Alexandria, Eugene Simpson Stadium Park earns strong marks from local dog owners—4.5 stars from 13 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Other dog parks in the area include Monroe Ave Dog Park (0.5 miles) and Eugene Simpson Stadium Park (0.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Goat Hill Park",
+    "street": "",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "",
+    "latitude": 38.8051095,
+    "longitude": -77.0470229,
+    "description": "In Alexandria, Goat Hill Park has built a loyal following—4.5 stars from 13 dog owner reviews. Open from 6am to 9pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Blackjack Dog Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Creighton West Park",
+    "street": "Creighton RdBrambleton",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "20148",
+    "latitude": 38.9678078,
+    "longitude": -77.5173696,
+    "description": "With 4.5 stars from 32 reviews, Creighton West Park has become a favorite among Alexandria dog owners. Open from 6am to 8pm daily, the park accommodates early risers and evening visitors alike. Local dog owners have clearly found this to be a worthwhile destination."
+  },
+  {
+    "name": "Monticello Park",
+    "street": "320 Beverley Dr",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22305",
+    "latitude": 38.8345003,
+    "longitude": -77.0679032,
+    "description": "With 4.5 stars from 60 reviews, Monticello Park at 320 Beverley Dr has become a favorite among Alexandria dog owners. Open from 8am to 8pm daily, dog owners can easily fit a visit into busy schedules. Looking for more places to take your pup? Four Mile Run Park is another popular dog park just 0.5 miles away."
+  },
+  {
+    "name": "Benjamin Banneker Dog Park",
+    "street": "1700 N Sycamore St",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22205",
+    "latitude": 38.882465,
+    "longitude": -77.15503,
+    "description": "Benjamin Banneker Dog Park at 1700 N Sycamore St is well-regarded by Alexandria dog owners, holding 4.5 stars across 230 reviews. Open from 8am to 8pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Glencarlyn Dog Park is another popular dog park just 2.3 miles away."
+  },
+  {
+    "name": "Four Mile Run Park",
+    "street": "3700 Commonwealth Ave",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22305",
+    "latitude": 38.8349661,
+    "longitude": -77.0579228,
+    "description": "Dog owners in Alexandria have made Four Mile Run Park at 3700 Commonwealth Ave a go-to spot, rating it 4.5 stars across 452 reviews. Open from 8am to 8pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Monticello Park (0.5 miles) and Eugene Simpson Stadium Park (1.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Utah Dog Park",
+    "street": "3191 S Utah St",
+    "city": "Alexandria",
+    "state": "VA",
+    "zip": "22206",
+    "latitude": 38.8379733,
+    "longitude": -77.0859202,
+    "description": "Utah Dog Park at 3191 S Utah St in Alexandria has 4.4 stars from 86 dog owner reviews. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. Dog owners in the neighborhood can also take their furry friends to Shirlington Dog Park, 0.5 miles away."
+  },
+  {
+    "name": "Chesapeake City Park",
+    "street": "900 City Park Dr",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23320",
+    "latitude": 36.7506143,
+    "longitude": -76.2261242,
+    "description": "With 4.7 stars across 3,106 reviews, Chesapeake City Park at 900 City Park Dr has clearly won over Chesapeake dog owners. Dog owners appreciate the reliable experience this park provides for their four-legged companions. Nearby, City Park (0.2 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "‍ Oak Grove Lake Park",
+    "street": "409 Byron St",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23320",
+    "latitude": 36.7583919,
+    "longitude": -76.2590623,
+    "description": "Oak Grove Lake Park at 409 Byron St is a favorite among Chesapeake dog owners, earning 4.7 stars from 2,597 reviews. The community of dog owners here is welcoming and the atmosphere consistently positive. Dog owners in the area also love bringing their pups to Chesapeake City Park (1.9 miles) and City Park (1.9 miles)."
+  },
+  {
+    "name": "City Park",
+    "street": "900 Greenbrier Pkwy",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23320",
+    "latitude": 36.75321,
+    "longitude": -76.224983,
+    "description": "City Park at 900 Greenbrier Pkwy is well-regarded by Chesapeake dog owners, holding 4.6 stars across 86 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Other dog parks in the area include Chesapeake City Park (0.2 miles) and Oak Grove Lake Park (1.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Deep Creek Park",
+    "street": "437 George Washington Hwy S",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23323",
+    "latitude": 36.7933135,
+    "longitude": -76.3286052,
+    "description": "With 4.6 stars from 815 reviews, Deep Creek Park at 437 George Washington Hwy S has become a favorite among Chesapeake dog owners. Open from 6am to 6pm daily, there's room in the day for dog owners to bring their furry friends. Other dog parks in the area include Churchland Park (3.2 miles) and Downtown Dog Park (4.4 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Western Branch Community Cente",
+    "street": "4437 Portsmouth Blvd",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23321",
+    "latitude": 36.8203685,
+    "longitude": -76.4229705,
+    "description": "Western Branch Community Cente (4.5 stars from 276 reviews) is a popular destination for Chesapeake dog owners, located at 4437 Portsmouth Blvd. Open from 7am to 8pm daily, the park accommodates early risers and evening visitors alike. Looking for more places to take your pup? Dunedin Park is another popular dog park just 2.7 miles away."
+  },
+  {
+    "name": "Great Bridge Lock Park",
+    "street": "100 Locks Rd",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "23320",
+    "latitude": 36.7238003,
+    "longitude": -76.2475156,
+    "description": "Great Bridge Lock Park (4.5 stars from 778 reviews) is a popular destination for Chesapeake dog owners, located at 100 Locks Rd. Open from 8am to 7pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Western Branch Dog Park (0.5 miles) or Chesapeake City Park (2.2 miles)."
+  },
+  {
+    "name": "‍ Western Branch Dog Park",
+    "street": "",
+    "city": "Chesapeake",
+    "state": "VA",
+    "zip": "",
+    "latitude": 36.7168315,
+    "longitude": -76.2494453,
+    "description": "Western Branch Dog Park in Chesapeake is rated 4.1 stars by 70 dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include Great Bridge Lock Park (0.5 miles) and Chesapeake City Park (2.7 miles)."
+  },
+  {
+    "name": "Grandview Nature Preserve",
+    "street": "State Park Dr",
+    "city": "‍ Hampton",
+    "state": "VA",
+    "zip": "23664",
+    "latitude": 37.0768104,
+    "longitude": -76.2780221,
+    "description": "Dog owners in Hampton have made Grandview Nature Preserve a go-to spot, rating it 4.8 stars across 878 reviews. Open from 6:30am to 5:30pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Ridgway Bark Park (4.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Dog Park",
+    "street": "1255 Big Bethel Rd",
+    "city": "‍ Hampton",
+    "state": "VA",
+    "zip": "23666",
+    "latitude": 37.064131,
+    "longitude": -76.4316949,
+    "description": "At 1255 Big Bethel Rd in Hampton, Dog Park welcomes dog owners from the surrounding neighborhood. Open from 7am to 5:30pm daily, dog owners can stop by when it fits their schedule. Looking to explore more? Sandy Bottom Nature Park is another dog-friendly park 0.0 miles from here."
+  },
+  {
+    "name": "The Noland Trail",
+    "street": "The Noland Trail",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23601",
+    "latitude": 37.0466965,
+    "longitude": -76.4858279,
+    "description": "The Noland Trail is well-regarded by Newport News dog owners, holding 4.9 stars across 322 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. For variety, the neighborhood offers more dog parks to explore: Noland Trail Head Parking Park (0.5 miles) and Mariners' Lake Natural Area (0.8 miles)."
+  },
+  {
+    "name": "Newport News Park",
+    "street": "",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "",
+    "latitude": 36.9775016,
+    "longitude": -76.42977,
+    "description": "Newport News Park is well-regarded by Newport News dog owners, holding 4.9 stars across 67 reviews. Open from 7am to 7pm daily, the park accommodates early risers and evening visitors alike. Looking for more places to take your pup? Fort Fun Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "‍ Windsor Castle Park",
+    "street": "705 Cedar StSmithfield",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23430",
+    "latitude": 36.975813,
+    "longitude": -76.6386382,
+    "description": "Windsor Castle Park at 705 Cedar St is a favorite among Newport News dog owners, earning 4.8 stars from 1,025 reviews. The community of dog owners here is welcoming and the atmosphere consistently positive. Thousands of dog owners have found this to be a reliable destination for their pups."
+  },
+  {
+    "name": "‍ Noland Trail Head Parking Park",
+    "street": "83-99 Museum Dr",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23601",
+    "latitude": 37.0391742,
+    "longitude": -76.4838697,
+    "description": "Noland Trail Head Parking Park (4.8 stars from 624 reviews) is a popular destination for Newport News dog owners, located at 83-99 Museum Dr. Open from 6am to 6pm daily, dog owners have plenty of flexibility to plan a visit. Looking for more places to take your pup? The Noland Trail is another popular dog park just 0.5 miles away."
+  },
+  {
+    "name": "Matteson Trail",
+    "street": "",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "",
+    "latitude": 37.0264414,
+    "longitude": -76.3442846,
+    "description": "With 4.8 stars from 121 reviews, Matteson Trail has become a favorite among Newport News dog owners. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Mill Point Park (0.2 miles) or Ridgway Bark Park (1.2 miles)."
+  },
+  {
+    "name": "‍ Riverview Farm Park",
+    "street": "Riverview Pkwy",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23602",
+    "latitude": 37.093497,
+    "longitude": -76.5274274,
+    "description": "Riverview Farm Park in Newport News is a community favorite, with 1,454 dog owners giving it 4.7 stars. The park has earned genuine loyalty from dog owners who value what it offers. Keep the adventure going at other nearby dog parks like Fido Field (0.7 miles) or Nicewood Park (0.8 miles)."
+  },
+  {
+    "name": "Newport News Paved Trailhead",
+    "street": "",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "",
+    "latitude": 37.2378875,
+    "longitude": -76.5080633,
+    "description": "Newport News dog owners rate Newport News Paved Trailhead highly, with 4.7 stars from 177 visits. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Newport News Park (4.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Deer Park",
+    "street": "648 J Clyde Morris Blvd",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23601",
+    "latitude": 37.0749366,
+    "longitude": -76.4710462,
+    "description": "Deer Park (4.7 stars from 156 reviews) is a popular destination for Newport News dog owners, located at 648 J Clyde Morris Blvd. Open from 7am to 12pm weekdays, dog owners have plenty of flexibility to plan a visit. Other dog parks in the area include Peninsula SPCA (0.5 miles) and Robinson-Bruton Park (0.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Sandy Bottom Nature Park",
+    "street": "1255 Big Bethel Rd",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23669",
+    "latitude": 37.064131,
+    "longitude": -76.4316949,
+    "description": "At 1255 Big Bethel Rd in Newport News, Sandy Bottom Nature Park stands out with 4.6 stars from 2,056 happy dog owners. Open from 9am to 4:30pm daily, the park is convenient for before work, after work, or weekend adventures. Keep the adventure going at other nearby dog parks like Sandy Bottom Park (0.0 miles) or Dog Park (0.0 miles)."
+  },
+  {
+    "name": "Kiln Creek Park",
+    "street": "2901 Kiln Creek PkwyTabb",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23693",
+    "latitude": 37.120857,
+    "longitude": -76.465301,
+    "description": "At 2901 Kiln Creek Pkwy in Newport News, Kiln Creek Park has built a loyal following—4.6 stars from 442 dog owner reviews. Local dog owners appreciate what this park offers their four-legged friends. Looking for more places to take your pup? Grand Lake Townhomes is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Victory Landing Park",
+    "street": "50 26th St",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23607",
+    "latitude": 36.977333,
+    "longitude": -76.43317,
+    "description": "Dog owners in Newport News have made Victory Landing Park at 50 26th St a go-to spot, rating it 4.6 stars across 420 reviews. Open from 6am to 8pm daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Fort Fun Park (0.2 miles) and Newport News Park (0.2 miles)."
+  },
+  {
+    "name": "Sandy Bottom Park",
+    "street": "1255 Big Bethel Rd",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23666",
+    "latitude": 37.064131,
+    "longitude": -76.4316949,
+    "description": "Sandy Bottom Park (4.6 stars from 335 reviews) is a popular destination for Newport News dog owners, located at 1255 Big Bethel Rd. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Dog owners can also take their pups to nearby Sandy Bottom Nature Park (0.0 miles) or Dog Park (0.0 miles)."
+  },
+  {
+    "name": "Chatham Trail",
+    "street": "401 Chatham Dr",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23602",
+    "latitude": 37.1231327,
+    "longitude": -76.512576,
+    "description": "With 4.6 stars from 104 reviews, Chatham Trail at 401 Chatham Dr has become a favorite among Newport News dog owners. Open from 6am to 6pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Nicewood Park (1.6 miles) and The Point at Tech Center (1.7 miles)."
+  },
+  {
+    "name": "‍ Newport News Parks Campsite",
+    "street": "13564 Jefferson Ave",
+    "city": "Newport News",
+    "state": "VA",
+    "zip": "23603",
+    "latitude": 37.1899534,
+    "longitude": -76.557594,
+    "description": "Newport News Parks Campsite at 13564 Jefferson Ave is well-regarded by Newport News dog owners, holding 4.6 stars across 95 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. More dog-friendly parks nearby include Newport News Park (0.8 miles) and Newport News Park (1.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Weyanoke Bird and Wildflower",
+    "street": "1509 Armistead Bridge Rd",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23507",
+    "latitude": 36.8746979,
+    "longitude": -76.3058798,
+    "description": "For dog owners in the Norfolk area, Weyanoke Bird and Wildflower (1509 Armistead Bridge Rd) offers a 4.7-star experience based on 84 reviews. Open from 9am to 6pm weekends, there's room in the day for dog owners to bring their furry friends. Dog owners can also take their pups to nearby Ghent Dog Park (0.9 miles) or Whitehurst Beach Park (1.0 miles)."
+  },
+  {
+    "name": "Whitehurst Beach Park",
+    "street": "1799 W 48th St",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23508",
+    "latitude": 36.88644,
+    "longitude": -76.316481,
+    "description": "For dog owners in the Norfolk area, Whitehurst Beach Park (1799 W 48th St) offers a 4.6-star experience based on 133 reviews. Open from 7am to 9pm daily, dog owners can easily fit a visit into busy schedules. For variety, the neighborhood offers more dog parks to explore: Virginia Park (0.8 miles) and Weyanoke Bird and Wildflower (1.0 miles)."
+  },
+  {
+    "name": "Ocean View Beach Park",
+    "street": "100 W Ocean View Ave",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23503",
+    "latitude": 36.955462,
+    "longitude": -76.252512,
+    "description": "Ocean View Beach Park at 100 W Ocean View Ave in Norfolk is a community favorite, with 2,930 dog owners giving it 4.5 stars. Open from 6am to 7pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Other popular dog parks nearby include Monkey Bottom Park (0.3 miles) and Sarah Constant Beach Park (0.5 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "‍ Sarah Constant Beach Park",
+    "street": "300 W Ocean View Ave",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23510",
+    "latitude": 36.959258,
+    "longitude": -76.259955,
+    "description": "At 300 W Ocean View Ave in Norfolk, Sarah Constant Beach Park stands out with 4.5 stars from 1,124 happy dog owners. Open from 6am to 6pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Other popular dog parks nearby include Monkey Bottom Park (0.2 miles) and Ocean View Beach Park (0.5 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "‍ Colonial Place Dog Park",
+    "street": "405 Delaware Ave",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23508",
+    "latitude": 36.8834465,
+    "longitude": -76.2846483,
+    "description": "Dog owners in Norfolk have made Colonial Place Dog Park at 405 Delaware Ave a go-to spot, rating it 4.5 stars across 145 reviews. Open from 6am to 7:30pm daily, dog owners have plenty of flexibility to plan a visit. More dog-friendly parks nearby include Weyanoke Bird and Wildflower (1.3 miles) and Virginia Park (1.4 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Meadowbrook Dog Park",
+    "street": "1625 W Little Creek Rd",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23505",
+    "latitude": 36.9160808,
+    "longitude": -76.3061036,
+    "description": "For dog owners in the Norfolk area, Meadowbrook Dog Park (1625 W Little Creek Rd) offers a 4.5-star experience based on 108 reviews. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. More dog-friendly parks nearby include Glenwood Park (0.8 miles) and Virginia Park (1.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Downtown Dog Park",
+    "street": "",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "",
+    "latitude": 36.8493695,
+    "longitude": -76.2899539,
+    "description": "For dog owners in Norfolk, Downtown Dog Park has a 4.4-star rating (9 reviews). The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners might also enjoy Bea Arthur Dog Park, another dog park just 0.6 miles away."
+  },
+  {
+    "name": "Tait Terrace Dog Park",
+    "street": "2717 Tait Terrace",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23509",
+    "latitude": 36.866217,
+    "longitude": -76.2606488,
+    "description": "Dog owners in Norfolk have rated Tait Terrace Dog Park (2717 Tait Terrace) 4.4 stars across 169 reviews. Open from 7am to 8pm daily, the park is accessible for dog owners in the area. More dog parks in the area include Colonial Place Dog Park (1.8 miles) and Ghent Dog Park (1.9 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Ghent Dog Park",
+    "street": "1310 Stockley Gardens",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23517",
+    "latitude": 36.8651156,
+    "longitude": -76.295083,
+    "description": "Ghent Dog Park at 1310 Stockley Gardens in Norfolk has 4.4 stars from 215 dog owner reviews. Open from 7am to 7:30pm daily, dog owners can stop by when it fits their schedule. Looking to explore more? Bea Arthur Dog Park is another dog-friendly park 0.8 miles from here."
+  },
+  {
+    "name": "Monkey Bottom Park",
+    "street": "276 W Ocean View Ave",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23503",
+    "latitude": 36.9579641,
+    "longitude": -76.2560567,
+    "description": "At 276 W Ocean View Ave, Monkey Bottom Park has 4.3 stars based on 118 reviews from Norfolk dog owners. Dog owners in the area appreciate having a local spot to bring their pups. For dog owners who like to explore, Sarah Constant Beach Park (0.2 miles) and Ocean View Beach Park (0.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Maple Park",
+    "street": "138-158 Maple Ave",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23503",
+    "latitude": 36.9479587,
+    "longitude": -76.2595436,
+    "description": "Maple Park at 138-158 Maple Ave provides Norfolk dog owners with a local spot to visit with their pups. Open from 6am to 8pm daily, dog owners in the area can work a visit into their day. Dog owners in the neighborhood can also take their furry friends to Ocean View Dog Park, 0.0 miles away."
+  },
+  {
+    "name": "Monticello Village Park",
+    "street": "8075 W Glen Rd",
+    "city": "Norfolk",
+    "state": "VA",
+    "zip": "23505",
+    "latitude": 36.9232157,
+    "longitude": -76.2632707,
+    "description": "Located at 8075 W Glen Rd, Monticello Village Park offers Norfolk dog owners a neighborhood destination for their four-legged friends. Open from 6am to 6pm daily, the park fits conveniently into different routines. More dog parks in the area include Maple Park (1.7 miles) and Ocean View Dog Park (1.8 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Jim Barnett Park",
+    "street": "1001 E Cork StWinchester",
+    "city": "Portsmouth",
+    "state": "VA",
+    "zip": "22601",
+    "latitude": 39.1811122,
+    "longitude": -78.1615789,
+    "description": "For Portsmouth dog owners, Jim Barnett Park at 1001 E Cork St has become a reliable favorite—4.6 stars from 1,666 reviews. Open from 5:30am to 9:30pm daily, there's always time for dog owners to bring their pup for some quality time. Thousands of dog owners have found this to be a reliable destination for their pups."
+  },
+  {
+    "name": "Maymont",
+    "street": "1700 Hampton St",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23220",
+    "latitude": 37.5341504,
+    "longitude": -77.4745305,
+    "description": "9,494 dog owners can't be wrong: Maymont (1700 Hampton St) is a Richmond institution with 4.8 stars. Open from 10am to 5pm daily, dog owners rarely have to rush—there's time to let pups fully enjoy the space. Dog owners in the area also frequent Barker Field (0.7 miles)—another top dog park worth visiting with your pup."
+  },
+  {
+    "name": "Libby Hill Park",
+    "street": "2801 E Franklin St",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23223",
+    "latitude": 37.5280477,
+    "longitude": -77.4179393,
+    "description": "Dog owners in Richmond have embraced Libby Hill Park (2801 E Franklin St) as a top destination—4.7 stars from 1,819 visits. Open from 6am to 9pm daily, the park is convenient for before work, after work, or weekend adventures. For variety, many dog owners also bring their furry friends to Great Shiplock Park (0.2 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Short Pump Park",
+    "street": "3329 Pump RdRidge",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23233",
+    "latitude": 39.5390976,
+    "longitude": -76.3839791,
+    "description": "At 3329 Pump Rd in Richmond, Short Pump Park stands out with 4.7 stars from 1,233 happy dog owners. The park has earned genuine loyalty from dog owners who value what it offers. Looking to mix things up? Ma & Pa Dog Park is a nearby dog park 1.9 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Dorey Dog Park",
+    "street": "7399 Dorey Park Dr",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23231",
+    "latitude": 37.4605317,
+    "longitude": -77.3392197,
+    "description": "For dog owners in the Richmond area, Dorey Dog Park (7399 Dorey Park Dr) offers a 4.7-star experience based on 71 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Pole Green Dog Park",
+    "street": "",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "",
+    "latitude": 37.6039694,
+    "longitude": -77.3717321,
+    "description": "Richmond dog owners rate Pole Green Dog Park highly, with 4.6 stars from 55 visits. Open from 6am to 6pm daily, dog owners have plenty of flexibility to plan a visit. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Great Shiplock Park",
+    "street": "2803 Dock St",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23223",
+    "latitude": 37.5248783,
+    "longitude": -77.4190336,
+    "description": "Located at 2803 Dock St in Richmond, Great Shiplock Park earns strong marks from local dog owners—4.6 stars from 851 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Dog owners can also take their pups to nearby Libby Hill Park (0.2 miles) or Ancarrow's Landing (0.3 miles)."
+  },
+  {
+    "name": "William Byrd Park",
+    "street": "600 S Arthur Ashe Blvd",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23220",
+    "latitude": 37.548175,
+    "longitude": -77.47827,
+    "description": "Local dog owners love William Byrd Park at 600 S Arthur Ashe Blvd in Richmond—4.6 stars from an impressive 1,057 reviews. Dog owners have embraced this park as a top choice for spending time with their pups. For more dog park adventures, explore Barker Field (0.6 miles) or Maymont (1.0 miles) with your furry companion."
+  },
+  {
+    "name": "Stony Point Dog Park",
+    "street": "9200 Stony Point Pkwy",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23235",
+    "latitude": 37.5503586,
+    "longitude": -77.5718286,
+    "description": "At 9200 Stony Point Pkwy, Stony Point Dog Park has 4.3 stars based on 18 reviews from Richmond dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include Phideaux Dog Park (2.2 miles) and Barker Field (4.9 miles)."
+  },
+  {
+    "name": "Bryan Park",
+    "street": "4308 Hermitage Rd",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23227",
+    "latitude": 37.5949075,
+    "longitude": -77.4660017,
+    "description": "2,333 dog owners have made Bryan Park (4308 Hermitage Rd) one of Richmond's most trusted parks (4.5 stars). Open from 7am to 7pm daily, it's easy for dog owners to stop by whenever works best. For more dog park adventures, explore Ruff Canine Club (1.4 miles) or William Byrd Park (3.3 miles) with your furry companion."
+  },
+  {
+    "name": "Ruff Canine Club",
+    "street": "1924 Ellen Rd",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23230",
+    "latitude": 37.5748646,
+    "longitude": -77.4686854,
+    "description": "Ruff Canine Club at 1924 Ellen Rd holds a 4.4-star rating from 119 Richmond dog owner visits. The park gives neighborhood dog owners a destination for outings with their four-legged friends. For pups who want more adventure, Bryan Park is a nearby dog park worth visiting (1.4 miles)."
+  },
+  {
+    "name": "Barker Field",
+    "street": "1300 Blanton Ave",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23221",
+    "latitude": 37.540854,
+    "longitude": -77.4834668,
+    "description": "Located at 1300 Blanton Ave, Barker Field in Richmond is rated 4.4 stars by 410 dog owners. Open from 6:30am to 8pm daily, dog owners in the area can work a visit into their day. Looking to explore more? William Byrd Park is another dog-friendly park 0.6 miles from here."
+  },
+  {
+    "name": "Ancarrow's Landing",
+    "street": "1200 Brander St",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23224",
+    "latitude": 37.52292,
+    "longitude": -77.423625,
+    "description": "430 dog owners have reviewed Ancarrow's Landing at 1200 Brander St in Richmond, averaging 4.4 stars. Open from 7am to 6pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Great Shiplock Park (0.3 miles) or Libby Hill Park (0.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "Phideaux Dog Park",
+    "street": "4401 Forest Hill Ave",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23225",
+    "latitude": 37.5363988,
+    "longitude": -77.5349577,
+    "description": "Dog owners in Richmond have rated Phideaux Dog Park (4401 Forest Hill Ave) 4.3 stars across 70 reviews. Dog owners in the area appreciate having a local spot to bring their pups. For pups who want more adventure, Stony Point Dog Park is a nearby dog park worth visiting (2.2 miles)."
+  },
+  {
+    "name": "Church Hill Dog Park",
+    "street": "3600 E Grace St",
+    "city": "Richmond",
+    "state": "VA",
+    "zip": "23223",
+    "latitude": 37.5349136,
+    "longitude": -77.4264298,
+    "description": "Located at 3600 E Grace St, Church Hill Dog Park in Richmond is rated 4.2 stars by 223 dog owners. Open from 6am to 9pm daily, the park fits conveniently into different routines. For dog owners who like to explore, Libby Hill Park (0.7 miles) and Great Shiplock Park (0.8 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Highland Park",
+    "street": "502 Washington Avenue",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24016",
+    "latitude": 37.2642138,
+    "longitude": -79.9511883,
+    "description": "Highland Park (4.6 stars from 448 reviews) is a popular destination for Roanoke dog owners, located at 502 Washington Avenue Southwest. Open from 6am to 11pm daily, the park offers flexibility for dog owners with varying routines. Looking for more places to take your pup? Highland Dog Park is another popular dog park just 0.3 miles away."
+  },
+  {
+    "name": "Wasena Park",
+    "street": "1001 Winchester Ave SW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24015",
+    "latitude": 37.26618,
+    "longitude": -79.960133,
+    "description": "Wasena Park at 1001 Winchester Ave SW in Roanoke is a community favorite, with 1,181 dog owners giving it 4.5 stars. Open from 6am to 11pm daily, dog owners can plan visits around their pup's favorite times to be active. Other popular dog parks nearby include Highland Park (0.5 miles) and Highland Dog Park (0.6 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Fishburn Park",
+    "street": "2304 Brambleton Ave SW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24015",
+    "latitude": 37.2498805,
+    "longitude": -79.9775845,
+    "description": "Fishburn Park at 2304 Brambleton Ave SW is well-regarded by Roanoke dog owners, holding 4.5 stars across 432 reviews. Open from 6am to 11pm daily, there's plenty of opportunity for dog owners to find a time that works. Nearby, Wasena Park (1.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Salem Rotary Dog Park",
+    "street": "1301 Indiana St",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24153",
+    "latitude": 37.278802,
+    "longitude": -80.0452094,
+    "description": "Roanoke dog owners rate Salem Rotary Dog Park at 1301 Indiana St highly, with 4.5 stars from 317 visits. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. Dog owners exploring the neighborhood can also bring their furry friends to Fishburn Park (4.2 miles)."
+  },
+  {
+    "name": "Smith Park",
+    "street": "1618 Wiley Dr SW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24016",
+    "latitude": 37.2556716,
+    "longitude": -79.9509683,
+    "description": "Smith Park at 1618 Wiley Dr SW is well-regarded by Roanoke dog owners, holding 4.5 stars across 272 reviews. Open from 6am to 11pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: Highland Dog Park (0.3 miles) and River's Edge Park (0.5 miles)."
+  },
+  {
+    "name": "Vinyard Park",
+    "street": "150 Berkley Rd NE",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24012",
+    "latitude": 37.291226,
+    "longitude": -79.8917464,
+    "description": "227 dog owners have reviewed Vinyard Park at 150 Berkley Rd NE in Roanoke, averaging 4.4 stars. Open from 8am to 9pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Thrasher Park (0.9 miles) or Highland Park (3.8 miles) with their four-legged friends."
+  },
+  {
+    "name": "‍ River's Edge Park",
+    "street": "302 Wiley Dr SW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24014",
+    "latitude": 37.252026,
+    "longitude": -79.9431882,
+    "description": "Dog owners in Roanoke have made River's Edge Park at 302 Wiley Dr SW a go-to spot, rating it 4.4 stars across 645 reviews. Open from 6am to 11pm daily, there's room in the day for dog owners to bring their furry friends. For a change of scenery, Smith Park is another dog-friendly destination 0.5 miles from here."
+  },
+  {
+    "name": "Huff Lane Park",
+    "street": "4412 Huff Ln NW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24012",
+    "latitude": 37.3062821,
+    "longitude": -79.9594793,
+    "description": "Huff Lane Park at 4412 Huff Ln NW holds a 4.3-star rating from 286 Roanoke dog owner visits. Open from 6am to 10pm daily, dog owners in the area can work a visit into their day. For dog owners who like to explore, Wasena Park (2.8 miles) and Highland Park (2.9 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Highland Dog Park",
+    "street": "5th St SW",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24016",
+    "latitude": 37.260545,
+    "longitude": -79.9510533,
+    "description": "Dog owners in Roanoke have rated Highland Dog Park (5th St SW) 4.2 stars across 253 reviews. Open from 6am to 10pm daily, the park is accessible for dog owners in the area. Dog owners might also enjoy Highland Park, another dog park just 0.3 miles away."
+  },
+  {
+    "name": "Thrasher Park",
+    "street": "930 Old Vinton Mill Rd NE",
+    "city": "Roanoke",
+    "state": "VA",
+    "zip": "24012",
+    "latitude": 37.2859767,
+    "longitude": -79.905781,
+    "description": "Located at 930 Old Vinton Mill Rd NE, Thrasher Park in Roanoke is rated 4.1 stars by 377 dog owners. Open from 6am to 11pm daily, local dog owners have time to explore with their furry companions. Dog owners in the neighborhood can also take their furry friends to Vinyard Park, 0.9 miles away."
+  },
+  {
+    "name": "Lake Meade Dog Park",
+    "street": "",
+    "city": "Suffolk",
+    "state": "VA",
+    "zip": "",
+    "latitude": 36.7281341,
+    "longitude": -76.5834683,
+    "description": "With 4.7 stars from 155 reviews, Lake Meade Dog Park has become a favorite among Suffolk dog owners. For dog owners in the area, this park has become a trusted spot for time with their pups. Local dog owners have clearly found this to be a worthwhile destination."
+  },
+  {
+    "name": "Blacksburg Dog Park",
+    "street": "2100 Toms Creek Rd",
+    "city": "Suffolk",
+    "state": "VA",
+    "zip": "24060",
+    "latitude": 37.2524158,
+    "longitude": -80.436545,
+    "description": "With 4.5 stars from 173 reviews, Blacksburg Dog Park at 2100 Toms Creek Rd has become a favorite among Suffolk dog owners. Open from 7am to 8pm daily, the park offers flexibility for dog owners with varying routines. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "‍ Bayville Farms Park",
+    "street": "4132 First Ct Rd",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23455",
+    "latitude": 36.9034521,
+    "longitude": -76.1176676,
+    "description": "With 4.7 stars across 1,572 reviews, Bayville Farms Park at 4132 First Ct Rd has clearly won over Virginia Beach dog owners. Open from 6:30am to 6pm daily, dog owners can plan visits around their pup's favorite times to be active. Thousands of dog owners have found this to be a reliable destination for their pups."
+  },
+  {
+    "name": "Woodstock Park",
+    "street": "5709 Providence Rd",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23464",
+    "latitude": 36.8138728,
+    "longitude": -76.1908426,
+    "description": "At 5709 Providence Rd in Virginia Beach, Woodstock Park has built a loyal following—4.6 stars from 737 dog owner reviews. Open from 6:30am to 6pm daily, there's plenty of opportunity for dog owners to find a time that works. Looking for more places to take your pup? Rosemont Forest West Park is another popular dog park just 3.1 miles away."
+  },
+  {
+    "name": "Pups and Pints",
+    "street": "2413 London Bridge Rd",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23456",
+    "latitude": 36.7709621,
+    "longitude": -76.0218079,
+    "description": "Pups and Pints (4.6 stars from 224 reviews) is a popular destination for Virginia Beach dog owners, located at 2413 London Bridge Rd. The park serves dog owners well, providing a destination the community values. Looking for more places to take your pup? West Neck Creek Natural Area is another popular dog park just 4.4 miles away."
+  },
+  {
+    "name": "West Neck Creek Natural Area",
+    "street": "2249 N Landing Rd",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23456",
+    "latitude": 36.7407918,
+    "longitude": -76.0923923,
+    "description": "West Neck Creek Natural Area (4.6 stars from 216 reviews) is a popular destination for Virginia Beach dog owners, located at 2249 N Landing Rd. Open from 7:30am to 7pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Salem Woods Park (4.0 miles) and Rosemont Forest West Park (4.3 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Marshview Dog Park",
+    "street": "",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "",
+    "latitude": 36.8496579,
+    "longitude": -75.9760751,
+    "description": "Marshview Dog Park is well-regarded by Virginia Beach dog owners, holding 4.6 stars across 88 reviews. The steady stream of dog owner visits speaks to the park's appeal. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Rosemont Forest West Park",
+    "street": "1841 Gravenhurst Dr",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23464",
+    "latitude": 36.7806424,
+    "longitude": -76.1521168,
+    "description": "Located at 1841 Gravenhurst Dr in Virginia Beach, Rosemont Forest West Park earns strong marks from local dog owners—4.6 stars from 22 reviews. Open from 5am to 11pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include Salem Woods Park (1.7 miles) and Woodstock Park (3.1 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Salem Woods Park",
+    "street": "1525 Salem Rd",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23456",
+    "latitude": 36.7923199,
+    "longitude": -76.1257541,
+    "description": "At 1525 Salem Rd, Salem Woods Park has 4.4 stars based on 256 reviews from Virginia Beach dog owners. Open from 8am to 6pm daily, dog owners can stop by when it fits their schedule. Nearby dog parks worth exploring with your pup include Rosemont Forest West Park (1.7 miles) and Woodstock Park (3.9 miles)."
+  },
+  {
+    "name": "Bea Arthur Dog Park",
+    "street": "501 Front St",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23510",
+    "latitude": 36.8538994,
+    "longitude": -76.2994369,
+    "description": "Bea Arthur Dog Park at 501 Front St holds a 4.4-star rating from 348 Virginia Beach dog owner visits. Open from 8am to 7:30pm daily, the park fits conveniently into different routines. Dog owners might also enjoy Downtown Dog Park, another dog park just 0.6 miles away."
+  },
+  {
+    "name": "Ocean View Dog Park",
+    "street": "176 Maple Ave",
+    "city": "Virginia Beach",
+    "state": "VA",
+    "zip": "23503",
+    "latitude": 36.9485322,
+    "longitude": -76.2591351,
+    "description": "At 176 Maple Ave, Ocean View Dog Park has 4.2 stars based on 269 reviews from Virginia Beach dog owners. Open from 7am to 6pm daily, local dog owners have time to explore with their furry companions. For dog owners who like to explore, Maple Park (0.0 miles) and Ocean View Beach Park (0.6 miles) are both nearby parks to try with your dog."
+  }
+]

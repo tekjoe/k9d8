@@ -1,0 +1,532 @@
+[
+  {
+    "name": "Cromwell Valley Park",
+    "street": "2002 Cromwell Bridge RdParkville",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21234",
+    "latitude": 39.4027922,
+    "longitude": -76.5670593,
+    "description": "Cromwell Valley Park (4.8 stars from 493 reviews) is a popular destination for Baltimore dog owners, located at 2002 Cromwell Bridge Rd. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. More dog-friendly parks nearby include Double Rock Park (3.1 miles) and Burdick Park (3.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Federal Hill Park",
+    "street": "300 Warren Ave",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21230",
+    "latitude": 39.2795692,
+    "longitude": -76.6091251,
+    "description": "For Baltimore dog owners, Federal Hill Park at 300 Warren Ave has become a reliable favorite—4.7 stars from 2,906 reviews. Open from 6am to 11pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Want to give your pup even more adventure? West Shore Park is another beloved dog park just 0.4 miles away."
+  },
+  {
+    "name": "Cylburn Arboretum",
+    "street": "4915 Greenspring Ave",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21209",
+    "latitude": 39.3531897,
+    "longitude": -76.6541946,
+    "description": "Dog owners in Baltimore have embraced Cylburn Arboretum (4915 Greenspring Ave) as a top destination—4.7 stars from 1,364 visits. Open from 8am to 5pm, Tuesday through Sunday, dog owners have plenty of flexibility to visit when it suits their schedule. Keep the adventure going at other nearby dog parks like Cold Spring Park (0.7 miles) or Bonnie Ridge Dog Park (0.7 miles)."
+  },
+  {
+    "name": "‍ Lake Roland Nature Council",
+    "street": "1000 Lakeside Dr",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21210",
+    "latitude": 39.3786789,
+    "longitude": -76.6447209,
+    "description": "Lake Roland Nature Council at 1000 Lakeside Dr is well-regarded by Baltimore dog owners, holding 4.7 stars across 790 reviews. Open from 9am to 5pm, Tuesday through Sunday, the park offers flexibility for dog owners with varying routines. Nearby, Bonnie Ridge Dog Park (1.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Wyman Park",
+    "street": "",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "",
+    "latitude": 39.2908816,
+    "longitude": -76.610759,
+    "description": "Dog owners in Baltimore have made Wyman Park a go-to spot, rating it 4.8 stars across 15 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. More dog-friendly parks nearby include Patterson Dog Park (0.0 miles) and Howard Street Dog Park (0.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Patterson Park",
+    "street": "2601 E Baltimore St",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21224",
+    "latitude": 39.291259,
+    "longitude": -76.5802683,
+    "description": "With 4.6 stars across 4,649 reviews, Patterson Park at 2601 E Baltimore St has clearly won over Baltimore dog owners. Open from 7am to 9pm daily, it's easy for dog owners to stop by whenever works best. Other popular dog parks nearby include Dypski Park (1.0 miles) and Canton Dog Park (1.0 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Canton Waterfront Park",
+    "street": "3001 Boston St",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21224",
+    "latitude": 39.276827,
+    "longitude": -76.5699968,
+    "description": "With 4.6 stars across 2,702 reviews, Canton Waterfront Park at 3001 Boston St has clearly won over Baltimore dog owners. Open from 6am to 8pm daily, the park accommodates a variety of dog owner schedules and routines. For more dog park adventures, explore Canton Dog Park (0.1 miles) or Dypski Park (0.2 miles) with your furry companion."
+  },
+  {
+    "name": "Double Rock Park",
+    "street": "8211 Glen RdParkville",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21234",
+    "latitude": 39.3717841,
+    "longitude": -76.5263364,
+    "description": "With 4.6 stars across 1,163 reviews, Double Rock Park at 8211 Glen Rd has clearly won over Baltimore dog owners. The park has earned genuine loyalty from dog owners who value what it offers. Looking to mix things up? Burdick Park is a nearby dog park 1.5 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Latrobe Park",
+    "street": "1627 E Fort Ave",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21230",
+    "latitude": 39.2680623,
+    "longitude": -76.5917014,
+    "description": "Latrobe Park (4.6 stars from 800 reviews) is a popular destination for Baltimore dog owners, located at 1627 E Fort Ave. Open from 6am to 9pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Riverside Park (1.0 miles) and Federal Hill Park (1.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "McAllister Park",
+    "street": "1811 Townsend Ct",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21202",
+    "latitude": 39.3104491,
+    "longitude": -76.6118889,
+    "description": "Dog owners in Baltimore have made McAllister Park at 1811 Townsend Ct a go-to spot, rating it 4.7 stars across 13 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For a change of scenery, Barclay Park is another dog-friendly destination 0.1 miles from here."
+  },
+  {
+    "name": "Worthington Off Leash Dog Park",
+    "street": "8170 Hillsborough RdEllicott City",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21043",
+    "latitude": 39.2508189,
+    "longitude": -76.7968048,
+    "description": "Located at 8170 Hillsborough Rd in Baltimore, Worthington Off Leash Dog Park earns strong marks from local dog owners—4.6 stars from 321 reviews. Open from 7am to 7pm daily, dog owners can easily fit a visit into busy schedules. The consistent ratings suggest dog owners know what to expect here."
+  },
+  {
+    "name": "Stony Run Park",
+    "street": "4435 Meadow Ln",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21210",
+    "latitude": 39.3442478,
+    "longitude": -76.6264063,
+    "description": "Dog owners in Baltimore have made Stony Run Park at 4435 Meadow Ln a go-to spot, rating it 4.6 stars across 217 reviews. Open from 7am to 7pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Buena Vista Park is another dog-friendly destination 1.0 miles from here."
+  },
+  {
+    "name": "Dypski Park",
+    "street": "1213 S Ellwood Ave",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21224",
+    "latitude": 39.2787354,
+    "longitude": -76.5722538,
+    "description": "Dypski Park at 1213 S Ellwood Ave is well-regarded by Baltimore dog owners, holding 4.5 stars across 47 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Nearby, Canton Dog Park (0.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "West Shore Park",
+    "street": "401 Light St",
+    "city": "Baltimore",
+    "state": "MD",
+    "zip": "21202",
+    "latitude": 39.2846453,
+    "longitude": -76.6129596,
+    "description": "Baltimore dog owners rate West Shore Park at 401 Light St highly, with 4.5 stars from 355 visits. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby Federal Hill Park (0.4 miles) or Patterson Dog Park (0.4 miles)."
+  },
+  {
+    "name": "Bowie Dog Park",
+    "street": "3600 Northview Dr",
+    "city": "Bowie",
+    "state": "MD",
+    "zip": "20716",
+    "latitude": 38.936545,
+    "longitude": -76.740014,
+    "description": "Bowie Dog Park at 3600 Northview Dr holds a 4.3-star rating from 258 Bowie dog owner visits. Open from 8am to 9pm daily, dog owners have a window to spend time with their pups. Checking recent reviews can help dog owners decide if this park fits their needs."
+  },
+  {
+    "name": "‍ Carroll Creek Park",
+    "street": "424 E Patrick St",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21701",
+    "latitude": 39.413531,
+    "longitude": -77.401916,
+    "description": "With 4.9 stars from 39 reviews, Carroll Creek Park at 424 E Patrick St has become a favorite among Frederick dog owners. The park serves dog owners well, providing a destination the community values. Other dog parks in the area include City of Frederick Dog Park (0.6 miles) and Baker Park (0.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Baker Park",
+    "street": "121 N Bentz St",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21701",
+    "latitude": 39.4158537,
+    "longitude": -77.4145306,
+    "description": "Baker Park at 121 N Bentz St is a favorite among Frederick dog owners, earning 4.7 stars from 1,889 reviews. The park has earned genuine loyalty from dog owners who value what it offers. Dog owners in the area also love bringing their pups to City of Frederick Dog Park (0.1 miles) and Carroll Creek Park (0.7 miles)."
+  },
+  {
+    "name": "Urbana District Park",
+    "street": "3805 Urbana Pike",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21704",
+    "latitude": 39.3377202,
+    "longitude": -77.3698532,
+    "description": "Frederick dog owners rate Urbana District Park at 3805 Urbana Pike highly, with 4.7 stars from 666 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For a change of scenery, Pinecliff Park is another dog-friendly destination 3.4 miles from here."
+  },
+  {
+    "name": "Wiles Branch Dog Park",
+    "street": "",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "",
+    "latitude": 39.4437567,
+    "longitude": -77.5454038,
+    "description": "Frederick dog owners rate Wiles Branch Dog Park highly, with 4.6 stars from 87 visits. Dog owners frequent this park for its consistent quality and welcoming atmosphere. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Othello Regional Park",
+    "street": "1901A Jefferson Pike",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21758",
+    "latitude": 39.3302501,
+    "longitude": -77.6715033,
+    "description": "Othello Regional Park (4.6 stars from 88 reviews) is a popular destination for Frederick dog owners, located at 1901A Jefferson Pike. Open from 8am to 10:30pm daily, there's room in the day for dog owners to bring their furry friends. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Pinecliff Park",
+    "street": "8350 Pinecliff Park Rd",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21704",
+    "latitude": 39.3863722,
+    "longitude": -77.3774493,
+    "description": "Located at 8350 Pinecliff Park Rd in Frederick, Pinecliff Park earns strong marks from local dog owners—4.6 stars from 582 reviews. Open from 8am to 10:30pm daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Carroll Creek Park (2.3 miles)."
+  },
+  {
+    "name": "Ballenger Creek Park",
+    "street": "5420 Ballenger Creek Pike",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21703",
+    "latitude": 39.3840135,
+    "longitude": -77.4449617,
+    "description": "Local dog owners love Ballenger Creek Park at 5420 Ballenger Creek Pike in Frederick—4.6 stars from an impressive 1,039 reviews. Open from 8am to 10:30pm daily, it's easy for dog owners to stop by whenever works best. Other popular dog parks nearby include Baker Park (2.7 miles) and City of Frederick Dog Park (2.8 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Grays Road Dog Park",
+    "street": "2695 Grays RdPrince",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "20678",
+    "latitude": 38.4868568,
+    "longitude": -76.5834576,
+    "description": "With 4.5 stars from 79 reviews, Grays Road Dog Park at 2695 Grays Rd has become a favorite among Frederick dog owners. Open from 8:30am to 11pm daily, there's room in the day for dog owners to bring their furry friends. The consistent ratings suggest dog owners know what to expect here."
+  },
+  {
+    "name": "‍ City of Frederick Dog Park",
+    "street": "",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "",
+    "latitude": 39.415779,
+    "longitude": -77.4127562,
+    "description": "City of Frederick Dog Park holds a 4.4-star rating from 79 Frederick dog owner visits. Dog owners in the area appreciate having a local spot to bring their pups. Nearby dog parks worth exploring with your pup include Baker Park (0.1 miles) and Carroll Creek Park (0.6 miles)."
+  },
+  {
+    "name": "Ridge Road Recreational Park",
+    "street": "21155 Frederick RdGermantown",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "20876",
+    "latitude": 39.2040823,
+    "longitude": -77.2461313,
+    "description": "461 dog owners have reviewed Ridge Road Recreational Park at 21155 Frederick Rd in Frederick, averaging 4.4 stars. Open from 6:30am to 5:30pm daily, dog owners in the area can work a visit into their day. Looking to explore more? Piedmont Woods Dog Park is another dog-friendly park 1.8 miles from here."
+  },
+  {
+    "name": "Poolesville Dog Park",
+    "street": "Wootton AvePoolesville",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20837",
+    "latitude": 39.141018,
+    "longitude": -77.4003857,
+    "description": "For dog owners in the Gaithersburg area, Poolesville Dog Park offers a 4.9-star experience based on 13 reviews. Open from 7am to 9pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Rock Creek Regional Park",
+    "street": "6700 Needwood RdDerwood",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20855",
+    "latitude": 39.1220338,
+    "longitude": -77.1345672,
+    "description": "Local dog owners love Rock Creek Regional Park at 6700 Needwood Rd in Gaithersburg—4.7 stars from an impressive 2,151 reviews. Open from 7am to 7pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Keep the adventure going at other nearby dog parks like King Farm Park (1.9 miles) or Red Gate Park (2.1 miles)."
+  },
+  {
+    "name": "Olney Manor Recreational Park",
+    "street": "16601 Georgia AveOlney",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20832",
+    "latitude": 39.1275222,
+    "longitude": -77.0711541,
+    "description": "At 16601 Georgia Ave in Gaithersburg, Olney Manor Recreational Park has built a loyal following—4.7 stars from 78 dog owner reviews. Open from 7am to 8pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include Olney Manor Recreational Park (0.0 miles) and Rock Creek Regional Park (3.4 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Green Park",
+    "street": "151 Bickerstaff Way",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20878",
+    "latitude": 39.1132363,
+    "longitude": -77.2126562,
+    "description": "Green Park at 151 Bickerstaff Way is well-regarded by Gaithersburg dog owners, holding 4.7 stars across 62 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Other dog parks in the area include Discovery Park (1.1 miles) and Bohrer Park (1.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Great Seneca Park",
+    "street": "Frederick RdGermantown",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20876",
+    "latitude": 39.1721118,
+    "longitude": -77.2361594,
+    "description": "Dog owners in Gaithersburg have made Great Seneca Park a go-to spot, rating it 4.7 stars across 50 reviews. The steady stream of dog owner visits speaks to the park's appeal. More dog-friendly parks nearby include Montgomery Village Dog Park (2.0 miles) and Ridge Road Recreational Park (2.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Montgomery Village Dog Park",
+    "street": "9701 Stewartown RdMontgomery Village",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20886",
+    "latitude": 39.1785743,
+    "longitude": -77.199962,
+    "description": "With 4.7 stars from 29 reviews, Montgomery Village Dog Park at 9701 Stewartown Rd has become a favorite among Gaithersburg dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Looking for more places to take your pup? Nike Missile Local Park is another popular dog park just 1.8 miles away."
+  },
+  {
+    "name": "Piedmont Woods Dog Park",
+    "street": "12825 Snowden Farm PkwyClarksburg",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20871",
+    "latitude": 39.2290807,
+    "longitude": -77.2513951,
+    "description": "For dog owners in the Gaithersburg area, Piedmont Woods Dog Park (12825 Snowden Farm Pkwy) offers a 4.6-star experience based on 36 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Other dog parks in the area include Ridge Road Recreational Park (1.8 miles) and Great Seneca Park (4.0 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Cabin John Regional Dog Park",
+    "street": "",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "",
+    "latitude": 38.9846816,
+    "longitude": -77.0942447,
+    "description": "Dog owners in Gaithersburg have made Cabin John Regional Dog Park a go-to spot, rating it 4.6 stars across 278 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. For a change of scenery, Cabin John Regional Park is another dog-friendly destination 3.2 miles from here."
+  },
+  {
+    "name": "Woodley Gardens Park",
+    "street": "900 Nelson St",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20850",
+    "latitude": 39.0904505,
+    "longitude": -77.1740054,
+    "description": "Gaithersburg dog owners rate Woodley Gardens Park at 900 Nelson St highly, with 4.6 stars from 308 visits. Open from 5am to 6pm daily, there's plenty of opportunity for dog owners to find a time that works. More dog-friendly parks nearby include First Street Park (1.0 miles) and King Farm Park (1.4 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Mattie J.T. Stepanek Park",
+    "street": "1800 Piccard Dr",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20850",
+    "latitude": 39.1161384,
+    "longitude": -77.1772173,
+    "description": "For dog owners in the Gaithersburg area, Mattie J.T. Stepanek Park (1800 Piccard Dr) offers a 4.6-star experience based on 603 reviews. Open from 6am to 8pm daily, there's room in the day for dog owners to bring their furry friends. Looking for more places to take your pup? King Farm Park is another popular dog park just 0.7 miles away."
+  },
+  {
+    "name": "‍ Bohrer Park",
+    "street": "506 S Frederick Ave",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20877",
+    "latitude": 39.1332495,
+    "longitude": -77.1947911,
+    "description": "At 506 S Frederick Ave in Gaithersburg, Bohrer Park stands out with 4.6 stars from 1,176 happy dog owners. Dog owners in the area know they can count on this park for quality time with their pups. Other popular dog parks nearby include Duvall Park (0.4 miles) and Johnson’s Local Park (0.9 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Nike Missile Local Park",
+    "street": "8500 Snouffer School Rd",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20879",
+    "latitude": 39.1612895,
+    "longitude": -77.1759402,
+    "description": "Gaithersburg dog owners rate Nike Missile Local Park at 8500 Snouffer School Rd highly, with 4.5 stars from 117 visits. Open from 7am to 7pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: Johnson’s Local Park (1.5 miles) and Montgomery Village Dog Park (1.8 miles)."
+  },
+  {
+    "name": "Duvall Park",
+    "street": "14 Holly Dr",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20877",
+    "latitude": 39.1362741,
+    "longitude": -77.187593,
+    "description": "Dog owners in Gaithersburg have rated Duvall Park (14 Holly Dr) 4.4 stars across 31 reviews. The park serves as a gathering spot for dog owners and their four-legged friends in the area. More dog parks in the area include Bohrer Park (0.4 miles) and Johnson’s Local Park (0.5 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "‍ Ellsworth Park",
+    "street": "621 Ellsworth Dr",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20910",
+    "latitude": 39.0012807,
+    "longitude": -77.0243001,
+    "description": "Ellsworth Park at 621 Ellsworth Dr is well-regarded by Gaithersburg dog owners, holding 4.5 stars across 460 reviews. Open from 7am to 7pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners exploring the neighborhood can also bring their furry friends to Takoma Park (1.4 miles)."
+  },
+  {
+    "name": "Johnson’s Local Park",
+    "street": "18000 Washington Grove Ln",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20877",
+    "latitude": 39.1392645,
+    "longitude": -77.1799566,
+    "description": "At 18000 Washington Grove Ln, Johnson’s Local Park has 4.4 stars based on 138 reviews from Gaithersburg dog owners. Open from 7am to 7pm daily, dog owners have a window to spend time with their pups. Dog owners in the neighborhood can also take their furry friends to Duvall Park, 0.5 miles away."
+  },
+  {
+    "name": "‍ Discovery Park",
+    "street": "Orchard Ridge Dr",
+    "city": "Gaithersburg",
+    "state": "MD",
+    "zip": "20878",
+    "latitude": 39.1242879,
+    "longitude": -77.2265485,
+    "description": "Discovery Park provides Gaithersburg dog owners with a local spot to visit with their pups. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Dog owners in the neighborhood can also take their furry friends to Green Park, 1.1 miles away."
+  },
+  {
+    "name": "Cabin John Regional Park",
+    "street": "7400 Tuckerman Ln",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20817",
+    "latitude": 39.0305212,
+    "longitude": -77.1059394,
+    "description": "With 4.7 stars across 1,040 reviews, Cabin John Regional Park at 7400 Tuckerman Ln has clearly won over Rockville dog owners. Open from 7am to 7pm daily, the park accommodates a variety of dog owner schedules and routines. Nearby, Parklawn Local Park (2.2 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Parklawn Local Park",
+    "street": "13000 Veirs Mill RdWheaton-Glenmont",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20853",
+    "latitude": 39.0561886,
+    "longitude": -77.0825114,
+    "description": "Rockville dog owners rate Parklawn Local Park at 13000 Veirs Mill Rd highly, with 4.7 stars from 96 visits. Open from 6am to 8pm daily, dog owners can plan visits around work or their pup's energy level. Dog owners exploring the neighborhood can also bring their furry friends to Cabin John Regional Park (2.2 miles)."
+  },
+  {
+    "name": "‍ King Farm Park",
+    "street": "401 Watkins Pond Blvd",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20850",
+    "latitude": 39.10999,
+    "longitude": -77.165965,
+    "description": "With 4.6 stars from 273 reviews, King Farm Park at 401 Watkins Pond Blvd has become a favorite among Rockville dog owners. The steady stream of dog owner visits speaks to the park's appeal. Looking for more places to take your pup? Mattie J.T. Stepanek Park is another popular dog park just 0.7 miles away."
+  },
+  {
+    "name": "Dogwood Park",
+    "street": "800 Monroe St",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20852",
+    "latitude": 39.072443,
+    "longitude": -77.154645,
+    "description": "Dogwood Park at 800 Monroe St is well-regarded by Rockville dog owners, holding 4.6 stars across 257 reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include Elwood Smith Community Center (0.3 miles) and Dawson Farm Park (0.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Red Gate Park",
+    "street": "14500 Avery Rd",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20853",
+    "latitude": 39.093442,
+    "longitude": -77.123167,
+    "description": "At 14500 Avery Rd in Rockville, Red Gate Park has built a loyal following—4.6 stars from 90 dog owner reviews. Open from 7am to 7pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: Dawson Farm Park (1.7 miles) and Elwood Smith Community Center (1.9 miles)."
+  },
+  {
+    "name": "‍ Elwood Smith Community Center",
+    "street": "601 Harrington Rd",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20852",
+    "latitude": 39.075195,
+    "longitude": -77.149375,
+    "description": "With 4.6 stars from 73 reviews, Elwood Smith Community Center at 601 Harrington Rd has become a favorite among Rockville dog owners. Open from 6am to 8pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Dawson Farm Park (0.3 miles) and Dogwood Park (0.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Heurich Dog Park",
+    "street": "6001 Ager RdHyattsville",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20782",
+    "latitude": 38.9542534,
+    "longitude": -76.965287,
+    "description": "At 6001 Ager Rd in Rockville, Heurich Dog Park has built a loyal following—4.5 stars from 247 dog owner reviews. Open from 7am to 8pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Waggertail Dog Park (2.3 miles) and Takoma Park (3.2 miles)."
+  },
+  {
+    "name": "‍ Waggertail Dog Park",
+    "street": "6599 51st AveRiverdale",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20737",
+    "latitude": 38.966142,
+    "longitude": -76.926058,
+    "description": "At 6599 51st Ave, Waggertail Dog Park has 4.4 stars based on 179 reviews from Rockville dog owners. Open from 8am to 8pm daily, the park is accessible for dog owners in the area. Nearby dog parks worth exploring with your pup include Heurich Dog Park (2.3 miles) and Takoma Park (4.8 miles)."
+  },
+  {
+    "name": "Dawson Farm Park",
+    "street": "312 Ritchie Pkwy",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20852",
+    "latitude": 39.0747613,
+    "longitude": -77.1437941,
+    "description": "Dog owners in Rockville have rated Dawson Farm Park (312 Ritchie Pkwy) 4.3 stars across 81 reviews. This park provides dog owners in the community with a place to visit with their dogs. Dog owners in the neighborhood can also take their furry friends to Elwood Smith Community Center, 0.3 miles away."
+  },
+  {
+    "name": "First Street Park",
+    "street": "102 MD-28",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20850",
+    "latitude": 39.0842315,
+    "longitude": -77.1575689,
+    "description": "At 102 MD-28 in Rockville, First Street Park welcomes dog owners from the surrounding neighborhood. For dog owners in the neighborhood, this park offers a place to take their pups. Nearby dog parks worth exploring with your pup include Elwood Smith Community Center (0.8 miles) and Dogwood Park (0.8 miles)."
+  },
+  {
+    "name": "Dog Park",
+    "street": "11710 Orebaugh AveWheaton",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20902",
+    "latitude": 39.0474268,
+    "longitude": -77.0367735,
+    "description": "204 dog owners have reviewed Dog Park at 11710 Orebaugh Ave in Rockville, averaging 4.2 stars. Open from 7am to 7pm daily, local dog owners have time to explore with their furry companions. Nearby dog parks worth exploring with your pup include Parklawn Local Park (2.5 miles) and Ellsworth Park (3.3 miles)."
+  },
+  {
+    "name": "Takoma Park",
+    "street": "198 Darwin AveTakoma Park",
+    "city": "Rockville",
+    "state": "MD",
+    "zip": "20912",
+    "latitude": 38.983755,
+    "longitude": -77.012,
+    "description": "Takoma Park at 198 Darwin Ave provides Rockville dog owners with a local spot to visit with their pups. For dog owners in the neighborhood, this park offers a place to take their pups. For dog owners who like to explore, Ellsworth Park (1.4 miles) and Heurich Dog Park (3.2 miles) are both nearby parks to try with your dog."
+  }
+]

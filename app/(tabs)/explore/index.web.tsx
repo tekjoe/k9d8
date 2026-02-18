@@ -8,6 +8,7 @@ import ParkMap from '@/src/components/parks/ParkMap.web';
 import { useLocation } from '@/src/hooks/useLocation';
 import { useParks } from '@/src/hooks/useParks';
 import { generateParkSlug } from '@/src/utils/slug';
+import { getParkStateSlug } from '@/src/services/parks';
 import type { Park } from '@/src/types/database';
 
 function getDistanceKm(
@@ -148,7 +149,10 @@ export default function DesktopExploreScreen() {
 
   const handleParkPress = useCallback(
     (park: Park) => {
-      const slug = generateParkSlug(park.name, park.id);
+      const stateSlug = getParkStateSlug(park);
+      const slug = stateSlug 
+        ? `${stateSlug}/${generateParkSlug(park.name)}`
+        : generateParkSlug(park.name);
       router.push(`/dog-parks/${slug}` as any);
     },
     [router]

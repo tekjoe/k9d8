@@ -13,12 +13,10 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
 -- Create trigger on auth.users updates
 CREATE TRIGGER on_auth_user_updated
   AFTER UPDATE ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_user_update();
-
 -- Backfill existing users' avatar_url from auth metadata
 UPDATE public.profiles
 SET avatar_url = u.raw_user_meta_data->>'avatar_url'

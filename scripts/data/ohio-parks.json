@@ -1,0 +1,1632 @@
+[
+  {
+    "name": "Plain Township Veterans Park",
+    "street": "1714 Schneider St NE",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "44721",
+    "latitude": 40.863497,
+    "longitude": -81.3512766,
+    "description": "With 4.7 stars from 819 reviews, Plain Township Veterans Park at 1714 Schneider St NE has become a favorite among Canton dog owners. Open from 8am to 8pm daily, there's room in the day for dog owners to bring their furry friends. Nearby, Martindale Park (1.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Ariss Park",
+    "street": "",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 40.7985464,
+    "longitude": -81.3749508,
+    "description": "Ariss Park is well-regarded by Canton dog owners, holding 4.7 stars across 241 reviews. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Harvard Park (0.0 miles) and Vassar Park (0.0 miles)."
+  },
+  {
+    "name": "Vassar Park",
+    "street": "",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 40.7985464,
+    "longitude": -81.3749508,
+    "description": "Dog owners in Canton have made Vassar Park a go-to spot, rating it 4.8 stars across 10 reviews. The park serves dog owners well, providing a destination the community values. More dog-friendly parks nearby include Ariss Park (0.0 miles) and Harvard Park (0.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Dogwood Park",
+    "street": "241 7th St NE",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "44720",
+    "latitude": 40.8831914,
+    "longitude": -81.4006689,
+    "description": "Canton dog owners rate Dogwood Park at 241 7th St NE highly, with 4.6 stars from 645 visits. Open from 6am to 8pm daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Plain Township Veterans Park (2.9 miles)."
+  },
+  {
+    "name": "Martindale Park",
+    "street": "4053 Martindale Rd NE",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "44705",
+    "latitude": 40.8419378,
+    "longitude": -81.3510832,
+    "description": "Martindale Park at 4053 Martindale Rd NE is well-regarded by Canton dog owners, holding 4.5 stars across 278 reviews. Local dog owners appreciate what this park offers their four-legged friends. Dog owners can also take their pups to nearby Plain Township Veterans Park (1.5 miles) or Ariss Park (3.2 miles)."
+  },
+  {
+    "name": "Harvard Park",
+    "street": "",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 40.7985464,
+    "longitude": -81.3749508,
+    "description": "In Canton, Harvard Park carries 4.3 stars from 214 dog owner reviews. Open from 8am to 8pm daily, dog owners have a window to spend time with their pups. Dog owners looking for variety can also visit Ariss Park (0.0 miles) or Vassar Park (0.0 miles) with their four-legged friends."
+  },
+  {
+    "name": "West Park",
+    "street": "1022 9th St SW",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "44707",
+    "latitude": 40.7932983,
+    "longitude": -81.3850814,
+    "description": "Located at 1022 9th St SW, West Park offers Canton dog owners a neighborhood destination for their four-legged friends. Dog owners in the area appreciate having a local spot to bring their pups. For pups who want more adventure, Mother Gooseland is a nearby dog park worth visiting (0.4 miles)."
+  },
+  {
+    "name": "Mother Gooseland",
+    "street": "423 Schroyer Ave SW",
+    "city": "Canton",
+    "state": "OH",
+    "zip": "44702",
+    "latitude": 40.7981806,
+    "longitude": -81.3889753,
+    "description": "Dog owners in the Canton area will find Mother Gooseland at 423 Schroyer Ave SW—a local option for spending time with their pups. Open from 6am to 9pm daily, the park fits conveniently into different routines. Dog owners might also enjoy West Park, another dog park just 0.4 miles away."
+  },
+  {
+    "name": "Summit Park",
+    "street": "4335 Glendale Milford RdBlue Ash",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45242",
+    "latitude": 39.2523498,
+    "longitude": -84.3909085,
+    "description": "Summit Park at 4335 Glendale Milford Rd in Cincinnati is a community favorite, with 4,670 dog owners giving it 4.8 stars. Open from 6am to 12am daily, dog owners have plenty of flexibility to visit when it suits their schedule. Dog owners in the area also love bringing their pups to Swaim Park (2.4 miles) and French Park (4.4 miles)."
+  },
+  {
+    "name": "Ohio River Trail",
+    "street": "6318 Kellogg Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45226",
+    "latitude": 39.0942306,
+    "longitude": -84.5143253,
+    "description": "At 6318 Kellogg Rd in Cincinnati, Ohio River Trail stands out with 4.8 stars from 4,151 happy dog owners. Open from 6am to 11pm daily, the park accommodates a variety of dog owner schedules and routines. Want to give your pup even more adventure? Smale Riverfront Park is another beloved dog park just 0.0 miles away."
+  },
+  {
+    "name": "Ault Park",
+    "street": "5090 Observatory Cir",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45208",
+    "latitude": 39.1323108,
+    "longitude": -84.4107372,
+    "description": "Ault Park at 5090 Observatory Cir in Cincinnati is a community favorite, with 3,135 dog owners giving it 4.8 stars. Open from 6am to 10pm daily, the park is convenient for before work, after work, or weekend adventures. For variety, many dog owners also bring their furry friends to Armleder Loop Trailhead (0.8 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Smale Riverfront Park",
+    "street": "166 W Mehring Way",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45202",
+    "latitude": 39.0945391,
+    "longitude": -84.5137259,
+    "description": "Smale Riverfront Park at 166 W Mehring Way is a favorite among Cincinnati dog owners, earning 4.8 stars from 1,853 reviews. Open from 6am to 11pm daily, dog owners have room to work around busy schedules. Other popular dog parks nearby include Ohio River Trail (0.0 miles) and Sawyer Point Park (0.9 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Armleder Loop Trailhead",
+    "street": "Dog Park Trail",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45226",
+    "latitude": 39.1206757,
+    "longitude": -84.4060444,
+    "description": "Dog owners in Cincinnati have made Armleder Loop Trailhead a go-to spot, rating it 5.0 stars across 18 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners exploring the neighborhood can also bring their furry friends to Ault Park (0.8 miles)."
+  },
+  {
+    "name": "Simmonds Family Dog Park",
+    "street": "8715 Hamilton Cleves Pike RdCleves",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45002",
+    "latitude": 39.2276094,
+    "longitude": -84.7075792,
+    "description": "At 8715 Hamilton Cleves Pike Rd in Cincinnati, Simmonds Family Dog Park has built a loyal following—4.8 stars from 410 dog owner reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Washington Park",
+    "street": "1230 Elm St",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45202",
+    "latitude": 39.1080654,
+    "longitude": -84.5179528,
+    "description": "Washington Park at 1230 Elm St is one of the most beloved dog parks in Cincinnati—4.7 stars from an incredible 6,409 reviews. Open from 6am to 11pm daily, dog owners have generous hours to visit with their pups. While you're in the area, dog owners also recommend taking your pup to Ziegler Park, another excellent dog park 0.4 miles away."
+  },
+  {
+    "name": "Eden Park",
+    "street": "950 Eden Park Dr",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45202",
+    "latitude": 39.1153007,
+    "longitude": -84.4958704,
+    "description": "For Cincinnati dog owners, Eden Park at 950 Eden Park Dr has become a reliable favorite—4.7 stars from 4,398 reviews. Open from 6am to 10pm daily, it's easy for dog owners to stop by whenever works best. Dog owners in the area also love bringing their pups to T. M. Berry International (0.6 miles) and Green Man Park (0.8 miles)."
+  },
+  {
+    "name": "‍ Fernbank Park",
+    "street": "50 Thornton Ave",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45233",
+    "latitude": 39.1256564,
+    "longitude": -84.7058691,
+    "description": "With 4.7 stars across 1,377 reviews, Fernbank Park at 50 Thornton Ave has clearly won over Cincinnati dog owners. Open from 7am to 6pm daily, there's always time for dog owners to bring their pup for some quality time. The community of dog owners has clearly embraced this as a trusted spot."
+  },
+  {
+    "name": "‍ French Park",
+    "street": "3012 Section Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45237",
+    "latitude": 39.1957207,
+    "longitude": -84.4292712,
+    "description": "With 4.7 stars across 1,068 reviews, French Park at 3012 Section Rd has clearly won over Cincinnati dog owners. Open from 6am to 10pm daily, it's easy for dog owners to stop by whenever works best. Want to give your pup even more adventure? Kennedy Heights Park is another beloved dog park just 1.3 miles away."
+  },
+  {
+    "name": "Glenwood Gardens",
+    "street": "10397 Springfield PikeWyoming",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45215",
+    "latitude": 39.2382839,
+    "longitude": -84.4716049,
+    "description": "Glenwood Gardens at 10397 Springfield Pike is well-regarded by Cincinnati dog owners, holding 4.7 stars across 908 reviews. Open from 7am to 6pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Hillside Park (2.4 miles) and Winton Woods (2.9 miles)."
+  },
+  {
+    "name": "Red Dog Pet Resort & Spa Cinci",
+    "street": "5081 Madison Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45227",
+    "latitude": 39.1613841,
+    "longitude": -84.4052575,
+    "description": "With 4.7 stars from 812 reviews, Red Dog Pet Resort & Spa Cinci at 5081 Madison Rd has become a favorite among Cincinnati dog owners. The steady stream of dog owner visits speaks to the park's appeal. For a change of scenery, Oakley Station Dog Park is another dog-friendly destination 1.1 miles from here."
+  },
+  {
+    "name": "Beech Acres Park",
+    "street": "6910 Salem Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45230",
+    "latitude": 39.0830533,
+    "longitude": -84.4197312,
+    "description": "Cincinnati dog owners rate Beech Acres Park at 6910 Salem Rd highly, with 4.7 stars from 654 visits. Open from 6:30am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. More dog-friendly parks nearby include Kellogg Park (0.1 miles) and CRC Kellogg Avenue Park (0.8 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Furfield Dog Park",
+    "street": "6611 River Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45014",
+    "latitude": 39.3244022,
+    "longitude": -84.5979281,
+    "description": "For dog owners in the Cincinnati area, Furfield Dog Park (6611 River Rd) offers a 4.7-star experience based on 577 reviews. The steady stream of dog owner visits speaks to the park's appeal. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Symmes Township Park",
+    "street": "11600 N Lebanon RdLoveland",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45140",
+    "latitude": 39.2748679,
+    "longitude": -84.28399,
+    "description": "At 11600 N Lebanon Rd in Cincinnati, Symmes Township Park has built a loyal following—4.7 stars from 516 dog owner reviews. Open from 8am to 8:30pm daily, the park works well for dog owners with different schedules. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Green Man Park",
+    "street": "770 E McMillan St",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45206",
+    "latitude": 39.1261063,
+    "longitude": -84.4917843,
+    "description": "With 4.6 stars from 16 reviews, Green Man Park at 770 E McMillan St has become a favorite among Cincinnati dog owners. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Nearby, Eden Park (0.8 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "‍ Rocky River Nature Center",
+    "street": "24000 Valley PkwyNorth Olmsted",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44070",
+    "latitude": 41.4090632,
+    "longitude": -81.8841424,
+    "description": "At 24000 Valley Pkwy in Cleveland, Rocky River Nature Center stands out with 4.9 stars from 2,177 happy dog owners. Open from 9:30am to 5pm daily, dog owners can plan visits around their pup's favorite times to be active. Nearby, Rocky River Reservation (0.2 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Rocky River Reservation",
+    "street": "4500 Valley Pkwy",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44070",
+    "latitude": 41.4061472,
+    "longitude": -81.886149,
+    "description": "7,439 dog owners can't be wrong: Rocky River Reservation (4500 Valley Pkwy) is a Cleveland institution with 4.8 stars. Open from 6am to 11pm daily, dog owners can visit during quieter hours or join the regular crowd. The neighborhood offers dog owners more places to bring their pups: Rocky River Nature Center (0.2 miles) and Tri-City Bark Park (3.1 miles)."
+  },
+  {
+    "name": "Lakewood Park",
+    "street": "14532 Lake Ave",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44107",
+    "latitude": 41.4931155,
+    "longitude": -81.7961973,
+    "description": "At 14532 Lake Ave in Cleveland, Lakewood Park draws dog owners from across the area—4.8 stars from 6,109 reviews. Open from 6am to 11pm daily, there's plenty of opportunity for dog owners to experience what makes this park special. Dog owners exploring the area should also bring their pups to Cove Park (1.2 miles) and Tuland Park (2.1 miles)."
+  },
+  {
+    "name": "Carolyn Ludwig Mugrage Park",
+    "street": "4985 Windfall RdMedina",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44256",
+    "latitude": 41.1391858,
+    "longitude": -81.7850658,
+    "description": "Dog owners in Cleveland have made Carolyn Ludwig Mugrage Park at 4985 Windfall Rd a go-to spot, rating it 4.8 stars across 767 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "‍ Rockcliff Springs Rocky River",
+    "street": "18833 Rockcliff Dr",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44116",
+    "latitude": 41.470693,
+    "longitude": -81.8346051,
+    "description": "With 4.8 stars from 208 reviews, Rockcliff Springs Rocky River at 18833 Rockcliff Dr has become a favorite among Cleveland dog owners. Open from 6am to 11pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Lakewood Dog Park (0.7 miles) and Cleveland Metroparks (1.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Euclid Creek Park",
+    "street": "",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.5931049,
+    "longitude": -81.5267873,
+    "description": "Dog owners in Cleveland have made Euclid Creek Park a go-to spot, rating it 4.8 stars across 119 reviews. Open from 6am to 11pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Euclid Park is another dog-friendly destination 1.2 miles from here."
+  },
+  {
+    "name": "Canning Family K-9 Park",
+    "street": "3701 Veterans Memorial PkwyAvon",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44011",
+    "latitude": 41.4318245,
+    "longitude": -82.0544601,
+    "description": "For dog owners in the Cleveland area, Canning Family K-9 Park (3701 Veterans Memorial Pkwy) offers a 4.8-star experience based on 69 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. More dog-friendly parks nearby include Finwood Forest Park (2.1 miles) and Black River Reservation (2.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Cleveland Metroparks",
+    "street": "4811 Valley Pkwy",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44126",
+    "latitude": 41.4482519,
+    "longitude": -81.8394935,
+    "description": "Cleveland Metroparks (4.8 stars from 26 reviews) is a popular destination for Cleveland dog owners, located at 4811 Valley Pkwy. Open from 6am to 10:30pm daily, the park accommodates early risers and evening visitors alike. Dog owners can also take their pups to nearby Cleveland Metroparks (1.2 miles) or Lakewood Dog Park (1.5 miles)."
+  },
+  {
+    "name": "Edgewater Park",
+    "street": "6500 Cleveland Memorial Shoreway",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44102",
+    "latitude": 41.4996574,
+    "longitude": -81.6936772,
+    "description": "For Cleveland dog owners, Edgewater Park at 6500 Cleveland Memorial Shoreway needs no introduction—4.7 stars, 11,029 reviews. Open from 6am to 11pm daily, the park accommodates everything from early morning walks to evening adventures. For dog owners wanting to explore more with their furry friends, Clark Field is another great dog park just 0.0 miles away."
+  },
+  {
+    "name": "Bow Wow Beach",
+    "street": "5027 Stow RdStow",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44224",
+    "latitude": 41.1958482,
+    "longitude": -81.4182529,
+    "description": "At 5027 Stow Rd in Cleveland, Bow Wow Beach has built a loyal following—4.7 stars from 940 dog owner reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Acacia Reservation",
+    "street": "Cedar RdLyndhur",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44124",
+    "latitude": 41.5012223,
+    "longitude": -81.480534,
+    "description": "With 4.7 stars from 888 reviews, Acacia Reservation has become a favorite among Cleveland dog owners. Open from 6am to 11pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Quarry Park (3.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "‍ Canine Meadow - Dog Park",
+    "street": "9038 Euclid Chardon RdKirtland",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44094",
+    "latitude": 41.578976,
+    "longitude": -81.3182911,
+    "description": "For dog owners in the Cleveland area, Canine Meadow - Dog Park (9038 Euclid Chardon Rd) offers a 4.7-star experience based on 503 reviews. Open from 6am to 9pm daily, there's plenty of opportunity for dog owners to find a time that works. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Cleveland Lakefront Nature",
+    "street": "8701 Lakeshore Blvd",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44108",
+    "latitude": 41.5420718,
+    "longitude": -81.6290387,
+    "description": "Cleveland dog owners rate Cleveland Lakefront Nature at 8701 Lakeshore Blvd highly, with 4.7 stars from 494 visits. Open from 6am to 11pm daily, there's plenty of opportunity for dog owners to find a time that works. Other dog parks in the area include Tony Brush Park (2.8 miles) and Edgewater Park (4.4 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Wildwood Park",
+    "street": "",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.4996574,
+    "longitude": -81.6936772,
+    "description": "Wildwood Park (4.7 stars from 430 reviews) is a popular destination for Cleveland dog owners. Open from 5am to 12am daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Edgewater Park (0.0 miles)."
+  },
+  {
+    "name": "Taps & Tails",
+    "street": "1901 Train Ave",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44113",
+    "latitude": 41.4803408,
+    "longitude": -81.6974862,
+    "description": "Cleveland dog owners rate Taps & Tails at 1901 Train Ave highly, with 4.7 stars from 290 visits. For dog owners in the area, this park has become a trusted spot for time with their pups. Other dog parks in the area include Downtown Cleveland Dog Park (1.0 miles) and Edgewater Park (1.3 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Wolf Creek Waterfall",
+    "street": "4931 Parkway DrGarfield Heights",
+    "city": "Cleveland",
+    "state": "OH",
+    "zip": "44125",
+    "latitude": 41.4261341,
+    "longitude": -81.6002286,
+    "description": "With 4.6 stars from 13 reviews, Wolf Creek Waterfall at 4931 Parkway Dr has become a favorite among Cleveland dog owners. The steady stream of dog owner visits speaks to the park's appeal. Other dog parks in the area include Garfield Park (0.6 miles) and Valley View Woods Park (3.0 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Rocky Fork Dog Park",
+    "street": "Walnut St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43081",
+    "latitude": 40.1200643,
+    "longitude": -82.9034425,
+    "description": "For dog owners in the Columbus area, Rocky Fork Dog Park offers a 4.8-star experience based on 225 reviews. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Rocky Fork Metro Park (0.0 miles)."
+  },
+  {
+    "name": "Frank Fetch Park",
+    "street": "228 E Beck St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43206",
+    "latitude": 39.950752,
+    "longitude": -82.9919011,
+    "description": "For dog owners in the Columbus area, Frank Fetch Park (228 E Beck St) offers a 4.8-star experience based on 164 reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include Schiller Park (0.6 miles) and Scioto Audubon Metro Park (0.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Schneider Dog Park",
+    "street": "",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.9692378,
+    "longitude": -82.936864,
+    "description": "With 4.9 stars from 16 reviews, Schneider Dog Park has become a favorite among Columbus dog owners. Dog owners looking for a solid destination will find this park delivers. More dog-friendly parks nearby include Central Bark Dog Park (2.1 miles) and Frank Fetch Park (3.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Schiller Park",
+    "street": "1069 Jaeger St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43206",
+    "latitude": 39.9416859,
+    "longitude": -82.9917605,
+    "description": "For Columbus dog owners, Schiller Park at 1069 Jaeger St has become a reliable favorite—4.7 stars from 3,777 reviews. Open from 7am to 11pm daily, it's easy for dog owners to stop by whenever works best. Want to give your pup even more adventure? Frank Fetch Park is another beloved dog park just 0.6 miles away."
+  },
+  {
+    "name": "Sharon Woods",
+    "street": "6911 Cleveland Ave",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43081",
+    "latitude": 40.145774,
+    "longitude": -82.9466743,
+    "description": "With 4.7 stars across 3,498 reviews, Sharon Woods at 6911 Cleveland Ave has clearly won over Columbus dog owners. Open from 6:30am to 8pm daily, dog owners can easily fit a visit into their day, whether morning or evening. Dog owners in the area also love bringing their pups to Brooksedge Park (2.7 miles) and Rocky Fork Metro Park (2.9 miles)."
+  },
+  {
+    "name": "Blendon Woods Metro Park",
+    "street": "4265 E Dublin Granville Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43230",
+    "latitude": 40.0799538,
+    "longitude": -82.884727,
+    "description": "At 4265 E Dublin Granville Rd in Columbus, Blendon Woods Metro Park stands out with 4.7 stars from 3,228 happy dog owners. Open from 6:30am to 8pm daily, there's always time for dog owners to bring their pup for some quality time. Other popular dog parks nearby include Rocky Fork Metro Park (2.9 miles) and Rocky Fork Dog Park (2.9 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Scioto Audubon Metro Park",
+    "street": "400 W Whittier St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43215",
+    "latitude": 39.9445256,
+    "longitude": -83.0046093,
+    "description": "Local dog owners love Scioto Audubon Metro Park at 400 W Whittier St in Columbus—4.7 stars from an impressive 2,899 reviews. Open from 6:30am to 8pm daily, dog owners can plan visits around their pup's favorite times to be active. For more dog park adventures, explore Schiller Park (0.7 miles) or Frank Fetch Park (0.8 miles) with your furry companion."
+  },
+  {
+    "name": "Antrim Park",
+    "street": "5800 Olentangy River Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43085",
+    "latitude": 40.0792816,
+    "longitude": -83.038955,
+    "description": "Dog owners in Columbus have embraced Antrim Park (5800 Olentangy River Rd) as a top destination—4.7 stars from 2,069 visits. Open from 7am to 11pm daily, it's easy for dog owners to stop by whenever works best. Looking to mix things up? Godown Park is a nearby dog park 0.7 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Rocky Fork Metro Park",
+    "street": "7180 Walnut St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43081",
+    "latitude": 40.1200643,
+    "longitude": -82.9034425,
+    "description": "For dog owners in the Columbus area, Rocky Fork Metro Park (7180 Walnut St) offers a 4.7-star experience based on 404 reviews. Open from 6:30am to 9pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners exploring the neighborhood can also bring their furry friends to Rocky Fork Dog Park (0.0 miles)."
+  },
+  {
+    "name": "‍ Walnut Woods Dog Park",
+    "street": "",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.8522449,
+    "longitude": -82.8868636,
+    "description": "Walnut Woods Dog Park is well-regarded by Columbus dog owners, holding 4.7 stars across 176 reviews. Open from 6:30am to 9:30pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners exploring the neighborhood can also bring their furry friends to Three Creeks Metro Park (1.7 miles)."
+  },
+  {
+    "name": "Bumble's Backyard",
+    "street": "1280 Brown Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43223",
+    "latitude": 39.9311298,
+    "longitude": -83.0379475,
+    "description": "For dog owners in the Columbus area, Bumble's Backyard (1280 Brown Rd) offers a 4.7-star experience based on 33 reviews. The park serves dog owners well, providing a destination the community values. Dog owners can also take their pups to nearby Scioto Audubon Metro Park (2.0 miles) or Schiller Park (2.6 miles)."
+  },
+  {
+    "name": "Heritage Trail Park",
+    "street": "7262 Hayden Run Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43026",
+    "latitude": 40.0550686,
+    "longitude": -83.1605949,
+    "description": "At 7262 Hayden Run Rd in Columbus, Heritage Trail Park has built a loyal following—4.6 stars from 369 dog owner reviews. Open from 6:30am to 8pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners exploring the neighborhood can also bring their furry friends to Darree Fields (3.4 miles)."
+  },
+  {
+    "name": "Godown Park",
+    "street": "6099 Godown Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43235",
+    "latitude": 40.0825,
+    "longitude": -83.052383,
+    "description": "Godown Park at 6099 Godown Rd is a favorite among Columbus dog owners, earning 4.6 stars from 1,070 reviews. Open from 7am to 9pm daily, dog owners have room to work around busy schedules. Looking to mix things up? Antrim Park is a nearby dog park 0.7 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Three Creeks Metro Park",
+    "street": "3860 Bixby RdGrove",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43125",
+    "latitude": 39.8693791,
+    "longitude": -82.9088402,
+    "description": "Local dog owners love Three Creeks Metro Park at 3860 Bixby Rd in Columbus—4.6 stars from an impressive 2,476 reviews. Open from 6:30am to 10pm daily, the park is convenient for before work, after work, or weekend adventures. Want to give your pup even more adventure? Walnut Woods Dog Park is another beloved dog park just 1.7 miles away."
+  },
+  {
+    "name": "Goodale Park",
+    "street": "120 W Goodale St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43215",
+    "latitude": 39.9737058,
+    "longitude": -83.0052908,
+    "description": "At 120 W Goodale St in Columbus, Goodale Park stands out with 4.6 stars from 4,106 happy dog owners. Open from 7am to 11pm daily, it's easy for dog owners to stop by whenever works best. For more dog park adventures, explore Frank Fetch Park (1.7 miles) or Scioto Audubon Metro Park (2.0 miles) with your furry companion."
+  },
+  {
+    "name": "Sycamore Creek Park",
+    "street": "2748 Spangler Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43207",
+    "latitude": 39.9015937,
+    "longitude": -82.9211437,
+    "description": "At 2748 Spangler Rd in Columbus, Sycamore Creek Park has built a loyal following—4.5 stars from 26 dog owner reviews. The park serves dog owners well, providing a destination the community values. Nearby, Three Creeks Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Keyser Park",
+    "street": "851 W Bath Rd",
+    "city": "Cuyahoga Falls",
+    "state": "OH",
+    "zip": "44223",
+    "latitude": 41.1665335,
+    "longitude": -81.535879,
+    "description": "Dog owners in Cuyahoga Falls have made Keyser Park at 851 W Bath Rd a go-to spot, rating it 4.5 stars across 240 reviews. Open from 8am to 9pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? BARC - Akron Dog Park is another popular dog park just 4.3 miles away."
+  },
+  {
+    "name": "‍ Paw Paw Pavilion",
+    "street": "2471 Deep Hollow RdKettering",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45419",
+    "latitude": 39.7082442,
+    "longitude": -84.1793515,
+    "description": "With 4.8 stars from 121 reviews, Paw Paw Pavilion at 2471 Deep Hollow Rd has become a favorite among Dayton dog owners. Open from 8am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners exploring the neighborhood can also bring their furry friends to Paw Paw Camp (0.0 miles)."
+  },
+  {
+    "name": "Oak Grove Park",
+    "street": "1790 E Social Row RdWashington Township",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45458",
+    "latitude": 39.5872856,
+    "longitude": -84.130753,
+    "description": "With 4.7 stars from 657 reviews, Oak Grove Park at 1790 E Social Row Rd has become a favorite among Dayton dog owners. Open from 7am to 8pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Cloverbrook Park is another popular dog park just 3.4 miles away."
+  },
+  {
+    "name": "Sandhill Dog Park",
+    "street": "229 Sandhill RdFairborn",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45324",
+    "latitude": 39.8411067,
+    "longitude": -84.0172301,
+    "description": "Dayton dog owners rate Sandhill Dog Park at 229 Sandhill Rd highly, with 4.7 stars from 46 visits. Open from 7am to 9pm daily, the park accommodates early risers and evening visitors alike. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Deeds Point Dog Park",
+    "street": "2600 Ridge Ave",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45414",
+    "latitude": 39.7829262,
+    "longitude": -84.2018714,
+    "description": "At 2600 Ridge Ave in Dayton, Deeds Point Dog Park has built a loyal following—4.6 stars from 373 dog owner reviews. Open from 5am to 10pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Carillon Historical Park (3.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Splash Your Pup",
+    "street": "4792-3 S Dixie DrMoraine",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45439",
+    "latitude": 39.6990889,
+    "longitude": -84.206456,
+    "description": "Dayton dog owners rate Splash Your Pup at 4792-3 S Dixie Dr highly, with 4.6 stars from 109 visits. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include White Oak Camp (1.4 miles) and Hills & Dales MetroPark Park (1.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Kitty Hawk/Menlo Dog Park",
+    "street": "",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.8590241,
+    "longitude": -84.1112699,
+    "description": "With 4.5 stars from 152 reviews, Kitty Hawk/Menlo Dog Park has become a favorite among Dayton dog owners. Open from 7am to 9pm daily, there's plenty of opportunity for dog owners to find a time that works. Looking for more places to take your pup? Montgomery County Bark Park is another popular dog park just 3.8 miles away."
+  },
+  {
+    "name": "Montgomery County Bark Park",
+    "street": "6790 Webster St",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45414",
+    "latitude": 39.8423282,
+    "longitude": -84.1795261,
+    "description": "Dayton dog owners rate Montgomery County Bark Park at 6790 Webster St highly, with 4.5 stars from 253 visits. Open from 6am to 8pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Kitty Hawk/Menlo Dog Park (3.8 miles)."
+  },
+  {
+    "name": "Scout Dog Park",
+    "street": "",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.6847822,
+    "longitude": -83.9296526,
+    "description": "Dog owners in Dayton have made Scout Dog Park a go-to spot, rating it 4.5 stars across 315 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Properties at Wright Field",
+    "street": "",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.7793976,
+    "longitude": -84.1246358,
+    "description": "25 dog owners have reviewed Properties at Wright Field in Dayton, averaging 4.2 stars. Open from 6am to 9pm daily, dog owners have a window to spend time with their pups. Looking to explore more? Shellabarger Park is another dog-friendly park 1.7 miles from here."
+  },
+  {
+    "name": "Highland Dog Park",
+    "street": "Linden Heights",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45410",
+    "latitude": 39.7429541,
+    "longitude": -84.145268,
+    "description": "Dog owners in Dayton have rated Highland Dog Park 4.2 stars across 27 reviews. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Looking to explore more? Greenmont Park is another dog-friendly park 2.0 miles from here."
+  },
+  {
+    "name": "Canal Run Dog Park",
+    "street": "550 S Main StMiamisburg",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45342",
+    "latitude": 39.633787,
+    "longitude": -84.2914876,
+    "description": "Dog owners in the Dayton area will find Canal Run Dog Park at 550 S Main St—a local option for spending time with their pups. Open from 6am to 10pm daily, dog owners have a window to spend time with their pups. Dog owners in the neighborhood can also take their furry friends to Cox Arboretum MetroPark Park, 3.6 miles away."
+  },
+  {
+    "name": "Sandy Ridge Reservation",
+    "street": "6195 Otten RdNorth Ridgeville",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44039",
+    "latitude": 41.3984685,
+    "longitude": -82.0493856,
+    "description": "For dog owners in the Elyria area, Sandy Ridge Reservation (6195 Otten Rd) offers a 4.8-star experience based on 869 reviews. Open from 8am to 6pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Finwood Forest Park is another popular dog park just 1.5 miles away."
+  },
+  {
+    "name": "Western Falls of Cascade",
+    "street": "8 Chestnut St",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3708749,
+    "longitude": -82.1116689,
+    "description": "Elyria dog owners rate Western Falls of Cascade at 8 Chestnut St highly, with 4.7 stars from 276 visits. Dog owners frequent this park for its consistent quality and welcoming atmosphere. More dog-friendly parks nearby include Cascade Park (0.4 miles) and The North Coast Inland Trail (0.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "The North Coast Inland Trail",
+    "street": "6302 Gateway Blvd S",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3630584,
+    "longitude": -82.1182723,
+    "description": "The North Coast Inland Trail at 6302 Gateway Blvd S is well-regarded by Elyria dog owners, holding 4.7 stars across 83 reviews. Open from 8am to 5pm daily, the park works well for dog owners with different schedules. For a change of scenery, Western Falls of Cascade is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "Bradley Woods Reservation",
+    "street": "4538 Bradley RdWestlake",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44145",
+    "latitude": 41.4237608,
+    "longitude": -81.9618852,
+    "description": "Dog owners in Elyria have made Bradley Woods Reservation at 4538 Bradley Rd a go-to spot, rating it 4.6 stars across 374 reviews. Open from 6am to 11pm daily, the park works well for dog owners with different schedules. Nearby, Rocky River Reservation (4.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "East Park",
+    "street": "804 Prospect St",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3611238,
+    "longitude": -82.0885578,
+    "description": "Elyria dog owners rate East Park at 804 Prospect St highly, with 4.7 stars from 6 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. More dog-friendly parks nearby include South Park (1.3 miles) and Western Falls of Cascade (1.4 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Finwood Forest Park",
+    "street": "790 Abbe Rd N",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.4058776,
+    "longitude": -82.0772944,
+    "description": "Dog owners in Elyria have rated Finwood Forest Park (790 Abbe Rd N) 4.4 stars across 80 reviews. Open from 6am to 9pm daily, the park fits conveniently into different routines. Looking to explore more? Black River Reservation is another dog-friendly park 0.7 miles from here."
+  },
+  {
+    "name": "West Recreation Field",
+    "street": "1200 Foster Ave",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.378447,
+    "longitude": -82.1320325,
+    "description": "West Recreation Field at 1200 Foster Ave in Elyria has 4.3 stars from 263 dog owner reviews. Dog owners looking for a local destination will find this park accessible. For dog owners who like to explore, Rowland Nature Preserve (1.0 miles) and Cascade Park (1.1 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "South Park",
+    "street": "1864 Middle Ave",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3484558,
+    "longitude": -82.107419,
+    "description": "At 1864 Middle Ave, South Park has 4.1 stars based on 185 reviews from Elyria dog owners. Open from 7am to 8:30pm daily, the park gives dog owners in the neighborhood time to bring their pups. Nearby dog parks worth exploring with your pup include The North Coast Inland Trail (1.2 miles) and East Park (1.3 miles)."
+  },
+  {
+    "name": "Pikewood Manor",
+    "street": "1780 Lorain Blvd",
+    "city": "Elyria",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3945465,
+    "longitude": -82.1163317,
+    "description": "Dog owners in the Elyria area will find Pikewood Manor at 1780 Lorain Blvd—a local option for spending time with their pups. Open from 8am to 5pm weekdays, dog owners can stop by when it fits their schedule. For dog owners who like to explore, Cascade Park (1.2 miles) and Black River Reservation High (1.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Veterans Park",
+    "street": "10 New London Rd",
+    "city": "Hamilton",
+    "state": "OH",
+    "zip": "45013",
+    "latitude": 39.3950047,
+    "longitude": -84.5732927,
+    "description": "For dog owners in the Hamilton area, Veterans Park (10 New London Rd) offers a 4.6-star experience based on 42 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. For variety, the neighborhood offers more dog parks to explore: Bark Park (0.0 miles) and Rotary Park (0.7 miles)."
+  },
+  {
+    "name": "Bark Park",
+    "street": "20 New London Rd",
+    "city": "Hamilton",
+    "state": "OH",
+    "zip": "45013",
+    "latitude": 39.3954174,
+    "longitude": -84.5735376,
+    "description": "Bark Park (4.5 stars from 346 reviews) is a popular destination for Hamilton dog owners, located at 20 New London Rd. Open from 7am to 9pm daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Veterans Park (0.0 miles) or Rotary Park (0.7 miles)."
+  },
+  {
+    "name": "‍ Rotary Park",
+    "street": "208 High St",
+    "city": "Hamilton",
+    "state": "OH",
+    "zip": "45011",
+    "latitude": 39.3998005,
+    "longitude": -84.5614271,
+    "description": "With 4.5 stars from 83 reviews, Rotary Park at 208 High St has become a favorite among Hamilton dog owners. The steady stream of dog owner visits speaks to the park's appeal. For variety, the neighborhood offers more dog parks to explore: Bark Park (0.7 miles) and Veterans Park (0.7 miles)."
+  },
+  {
+    "name": "Holly's Dog Park",
+    "street": "6485 Vonnie Vale Ct",
+    "city": "Hamilton",
+    "state": "OH",
+    "zip": "45011",
+    "latitude": 39.3937379,
+    "longitude": -84.5169766,
+    "description": "Holly's Dog Park at 6485 Vonnie Vale Ct in Hamilton has 4.3 stars from 67 dog owner reviews. Open from 6am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. More dog parks in the area include Rotary Park (2.4 miles) and Veterans Park (3.0 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Carillon Historical Park",
+    "street": "1000 Carillon Blvd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45409",
+    "latitude": 39.728858,
+    "longitude": -84.1981936,
+    "description": "Carillon Historical Park at 1000 Carillon Blvd is a favorite among Kettering dog owners, earning 4.8 stars from 4,208 reviews. The strong community of dog owners here reflects how much the park is valued. Looking to mix things up? White Oak Camp is a nearby dog park 0.9 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Cox Arboretum MetroPark Park",
+    "street": "6733 N Springboro Pike",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45449",
+    "latitude": 39.6401544,
+    "longitude": -84.2249914,
+    "description": "For Kettering dog owners, Cox Arboretum MetroPark Park at 6733 N Springboro Pike has become a reliable favorite—4.8 stars from 3,119 reviews. Open from 8am to 10pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. For variety, many dog owners also bring their furry friends to Canal Run Dog Park (3.6 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Hills & Dales MetroPark Park",
+    "street": "2655 S Patterson Blvd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45409",
+    "latitude": 39.7166898,
+    "longitude": -84.1903421,
+    "description": "For Kettering dog owners, Hills & Dales MetroPark Park at 2655 S Patterson Blvd has become a reliable favorite—4.8 stars from 1,185 reviews. Open from 8am to 8pm daily, the park accommodates a variety of dog owner schedules and routines. For variety, many dog owners also bring their furry friends to White Oak Camp (0.2 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Paw Paw Camp",
+    "street": "2471 Deep Hollow Rd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45419",
+    "latitude": 39.7082442,
+    "longitude": -84.1793515,
+    "description": "Kettering dog owners rate Paw Paw Camp at 2471 Deep Hollow Rd highly, with 4.8 stars from 21 visits. Open from 6:30am to 9pm daily, there's room in the day for dog owners to bring their furry friends. For a change of scenery, Paw Paw Pavilion is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "Dogwood Pond",
+    "street": "2740 S Patterson Blvd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45409",
+    "latitude": 39.7132372,
+    "longitude": -84.1823508,
+    "description": "With 4.7 stars from 27 reviews, Dogwood Pond at 2740 S Patterson Blvd has become a favorite among Kettering dog owners. Open from 8am to 10pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Paw Paw Pavilion (0.4 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Lincoln Park",
+    "street": "675 Lincoln Park Blvd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "latitude": 39.6967375,
+    "longitude": -84.1590154,
+    "description": "For dog owners in the Kettering area, Lincoln Park (675 Lincoln Park Blvd) offers a 4.7-star experience based on 108 reviews. Open from 8am to 8pm daily, the park works well for dog owners with different schedules. Nearby, Wenzler Park (0.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "White Oak Camp",
+    "street": "2606 Hilton Dr",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45409",
+    "latitude": 39.7163715,
+    "longitude": -84.1943179,
+    "description": "Located at 2606 Hilton Dr in Kettering, White Oak Camp earns strong marks from local dog owners—4.7 stars from 115 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. More dog-friendly parks nearby include Hills & Dales MetroPark Park (0.2 miles) and Dogwood Pond (0.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "J.F. Kennedy Park",
+    "street": "5073 Bigger Rd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45440",
+    "latitude": 39.669241,
+    "longitude": -84.1261868,
+    "description": "Located at 5073 Bigger Rd in Kettering, J.F. Kennedy Park earns strong marks from local dog owners—4.7 stars from 607 reviews. Open from 9am to 8pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Pondview Park (0.9 miles) and Indian Riffle Park (1.4 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Cloverbrook Park",
+    "street": "7566 Cloverbrook Park DrCenterville",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45459",
+    "latitude": 39.6352832,
+    "longitude": -84.119181,
+    "description": "Kettering dog owners rate Cloverbrook Park at 7566 Cloverbrook Park Dr highly, with 4.6 stars from 38 visits. Dog owners frequent this park for its consistent quality and welcoming atmosphere. For variety, the neighborhood offers more dog parks to explore: Pondview Park (1.6 miles) and J.F. Kennedy Park (2.4 miles)."
+  },
+  {
+    "name": "Wenzler Park",
+    "street": "3535 Sharewood Ct",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "latitude": 39.6937677,
+    "longitude": -84.1511466,
+    "description": "Wenzler Park at 3535 Sharewood Ct is well-regarded by Kettering dog owners, holding 4.6 stars across 41 reviews. Open from 8am to 10pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Lincoln Park (0.5 miles) and Berwin Park (0.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Berwin Park",
+    "street": "1400 Berwin Ave",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "latitude": 39.691268,
+    "longitude": -84.141049,
+    "description": "Dog owners in Kettering have made Berwin Park at 1400 Berwin Ave a go-to spot, rating it 4.6 stars across 48 reviews. Open from 7am to 9pm daily, there's room in the day for dog owners to bring their furry friends. For a change of scenery, Glaser Park is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "Glaser Park",
+    "street": "1851 Doris Dr",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "latitude": 39.6921098,
+    "longitude": -84.130758,
+    "description": "Glaser Park (4.5 stars from 17 reviews) is a popular destination for Kettering dog owners, located at 1851 Doris Dr. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. Dog owners can also take their pups to nearby Berwin Park (0.6 miles) or Indian Riffle Park (0.9 miles)."
+  },
+  {
+    "name": "Ernst Park",
+    "street": "1030 E David Rd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "latitude": 39.6811019,
+    "longitude": -84.1495239,
+    "description": "Located at 1030 E David Rd in Kettering, Ernst Park earns strong marks from local dog owners—4.6 stars from 148 reviews. Open from 6am to 7pm daily, the park accommodates early risers and evening visitors alike. Other dog parks in the area include Berwin Park (0.8 miles) and Wenzler Park (0.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Blackhawk Park",
+    "street": "3005 E Blackhawk Rd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45420",
+    "latitude": 39.6993713,
+    "longitude": -84.1095892,
+    "description": "At 3005 E Blackhawk Rd, Blackhawk Park has 4.4 stars based on 16 reviews from Kettering dog owners. Open from 7am to 8pm daily, dog owners can stop by when it fits their schedule. Nearby dog parks worth exploring with your pup include Indian Riffle Park (0.8 miles) and Glaser Park (1.2 miles)."
+  },
+  {
+    "name": "‍ Indian Riffle Park",
+    "street": "2801 E Stroop Rd",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45420",
+    "latitude": 39.6880501,
+    "longitude": -84.1145568,
+    "description": "Dog owners in Kettering have made Indian Riffle Park at 2801 E Stroop Rd a go-to spot, rating it 4.6 stars across 587 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Other dog parks in the area include Blackhawk Park (0.8 miles) and Glaser Park (0.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Southern Hills Park",
+    "street": "",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.6895036,
+    "longitude": -84.1688274,
+    "description": "Southern Hills Park (4.5 stars from 68 reviews) is a popular destination for Kettering dog owners. Dog owners looking for a solid destination will find this park delivers. More dog-friendly parks nearby include Oak Creek Park (0.0 miles) and Lincoln Park (0.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Vermilion River Reservation:",
+    "street": "51211 N Ridge RdVermilion",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44089",
+    "latitude": 41.3890973,
+    "longitude": -82.281268,
+    "description": "With 4.8 stars across 1,451 reviews, Vermilion River Reservation: at 51211 N Ridge Rd has clearly won over Lorain dog owners. Open from 8am to 6pm daily, the park is convenient for before work, after work, or weekend adventures. Looking to mix things up? Amherst Beaver Creek Reservati is a nearby dog park 2.6 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Royal Oaks, Lorain County",
+    "street": "38637 Parsons RdGrafton",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44044",
+    "latitude": 41.274747,
+    "longitude": -82.073163,
+    "description": "Located at 38637 Parsons Rd in Lorain, Royal Oaks, Lorain County earns strong marks from local dog owners—4.8 stars from 108 reviews. Open from 8am to 8:30pm daily, there's plenty of opportunity for dog owners to find a time that works. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Days Dam Waterfall",
+    "street": "3625 Tacoma Ave",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44055",
+    "latitude": 41.4385329,
+    "longitude": -82.1100197,
+    "description": "Days Dam Waterfall at 3625 Tacoma Ave is well-regarded by Lorain dog owners, holding 4.8 stars across 58 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Dog owners exploring the neighborhood can also bring their furry friends to Black River Reservation Days (0.3 miles)."
+  },
+  {
+    "name": "Beaver Creek Trail End",
+    "street": "46900 Cooper Foster Park RdAmher",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44001",
+    "latitude": 41.416725,
+    "longitude": -82.225857,
+    "description": "Located at 46900 Cooper Foster Park Rd in Lorain, Beaver Creek Trail End earns strong marks from local dog owners—4.9 stars from 18 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Nearby, Amherst Beaver Creek Reservati (0.9 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Black River Reservation Days",
+    "street": "2720 E 31st St",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44055",
+    "latitude": 41.4425621,
+    "longitude": -82.1090819,
+    "description": "Lorain dog owners rate Black River Reservation Days at 2720 E 31st St highly, with 4.7 stars from 726 visits. Open from 8am to 6pm daily, dog owners can plan visits around work or their pup's energy level. For variety, the neighborhood offers more dog parks to explore: Days Dam Waterfall (0.3 miles) and French Creek Reservation (0.7 miles)."
+  },
+  {
+    "name": "French Creek Reservation",
+    "street": "4540 French Creek RdSheffield",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44054",
+    "latitude": 41.4499418,
+    "longitude": -82.1009042,
+    "description": "Lorain dog owners rate French Creek Reservation at 4540 French Creek Rd highly, with 4.7 stars from 435 visits. Open from 8am to 6pm daily, dog owners have plenty of flexibility to plan a visit. Looking for more places to take your pup? Black River Reservation Days is another popular dog park just 0.7 miles away."
+  },
+  {
+    "name": "Black River Reservation Bur",
+    "street": "6150 Ford RdElyria",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.4063084,
+    "longitude": -82.0966871,
+    "description": "Located at 6150 Ford Rd in Lorain, Black River Reservation Bur earns strong marks from local dog owners—4.7 stars from 331 reviews. Open from 8am to 6pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Black River Reservation High (0.0 miles) and Black River Reservation (0.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Lakeview Rose Garden",
+    "street": "1615 W Erie Ave",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44052",
+    "latitude": 41.4631924,
+    "longitude": -82.1926816,
+    "description": "Located at 1615 W Erie Ave in Lorain, Lakeview Rose Garden earns strong marks from local dog owners—4.8 stars from 31 reviews. Open from 8am to 11pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Lakeview Park is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "‍ Shell Cove Park",
+    "street": "4851 E Lake RdSheffield Lake",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44054",
+    "latitude": 41.4950768,
+    "longitude": -82.0884994,
+    "description": "At 4851 E Lake Rd in Lorain, Shell Cove Park has built a loyal following—4.7 stars from 144 dog owner reviews. The park serves dog owners well, providing a destination the community values. For a change of scenery, Sheffield Lake Dog Park is another dog-friendly destination 1.9 miles from here."
+  },
+  {
+    "name": "Black River Reservation",
+    "street": "1495 Gulf RdElyria",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.4121178,
+    "longitude": -82.0868088,
+    "description": "With 4.7 stars from 37 reviews, Black River Reservation at 1495 Gulf Rd has become a favorite among Lorain dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Looking for more places to take your pup? Black River Reservation High is another popular dog park just 0.7 miles away."
+  },
+  {
+    "name": "Cassell Reservation",
+    "street": "815 High Bridge RdVermilion",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44089",
+    "latitude": 41.4178891,
+    "longitude": -82.3263907,
+    "description": "Cassell Reservation (4.7 stars from 16 reviews) is a popular destination for Lorain dog owners, located at 815 High Bridge Rd. For dog owners in the area, this park has become a trusted spot for time with their pups. For variety, the neighborhood offers more dog parks to explore: Vermilion River Reservation: (3.1 miles) and Amherst Beaver Creek Reservati (4.6 miles)."
+  },
+  {
+    "name": "Lakeview Park",
+    "street": "1800 W Erie Ave",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44052",
+    "latitude": 41.4635682,
+    "longitude": -82.1927479,
+    "description": "3,388 dog owners have made Lakeview Park (1800 W Erie Ave) one of Lorain's most trusted parks (4.6 stars). Open from 8am to 6pm daily, the park accommodates a variety of dog owner schedules and routines. Looking to mix things up? Lakeview Rose Garden is a nearby dog park 0.0 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Cascade Park",
+    "street": "387 Furnace StElyria",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.3770553,
+    "longitude": -82.1114331,
+    "description": "Dog owners in Lorain have embraced Cascade Park (387 Furnace St) as a top destination—4.6 stars from 2,061 visits. Open from 8am to 6pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Other popular dog parks nearby include Western Falls of Cascade (0.4 miles) and The North Coast Inland Trail (1.0 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Amherst Beaver Creek Reservati",
+    "street": "913 N Lake StAmher",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44001",
+    "latitude": 41.4084741,
+    "longitude": -82.2389121,
+    "description": "With 4.6 stars from 518 reviews, Amherst Beaver Creek Reservati at 913 N Lake St has become a favorite among Lorain dog owners. Open from 8am to 6pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Beaver Creek Trail End (0.9 miles) and Vermilion River Reservation: (2.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Black River Reservation High",
+    "street": "1750 Ford RdElyria",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44035",
+    "latitude": 41.4063084,
+    "longitude": -82.0966871,
+    "description": "Located at 1750 Ford Rd in Lorain, Black River Reservation High earns strong marks from local dog owners—4.6 stars from 383 reviews. Open from 8am to 6pm daily, dog owners have plenty of flexibility to plan a visit. More dog-friendly parks nearby include Black River Reservation Bur (0.0 miles) and Black River Reservation (0.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Weiss Field",
+    "street": "33401 Webber RdAvon Lake",
+    "city": "Lorain",
+    "state": "OH",
+    "zip": "44012",
+    "latitude": 41.4862628,
+    "longitude": -82.0408077,
+    "description": "Lorain dog owners rate Weiss Field at 33401 Webber Rd highly, with 4.6 stars from 355 visits. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Avon Lake Dog Park (0.0 miles) and Kopf Family Reservation (2.2 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Ida Juris Bennett Dog Park",
+    "street": "204 Cook Rd",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45036",
+    "latitude": 39.4195734,
+    "longitude": -84.2035747,
+    "description": "With 4.6 stars from 135 reviews, Ida Juris Bennett Dog Park at 204 Cook Rd has become a favorite among Middletown dog owners. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Voice of America MetroPark",
+    "street": "7850 VOA Park DrWest Chester Township",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45069",
+    "latitude": 39.3619058,
+    "longitude": -84.3635937,
+    "description": "At 7850 VOA Park Dr in Middletown, Voice of America MetroPark stands out with 4.5 stars from 1,654 happy dog owners. Open from 6am to 10pm daily, dog owners have room to work around busy schedules. Nearby, Winning Bigly USA Dog Park (0.0 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Pawmyra Dog Park",
+    "street": "3400 Mason Morrow Millgrove Rd",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45040",
+    "latitude": 39.3759248,
+    "longitude": -84.2777226,
+    "description": "Pawmyra Dog Park at 3400 Mason Morrow Millgrove Rd is well-regarded by Middletown dog owners, holding 4.6 stars across 10 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners can also take their pups to nearby Winning Bigly USA Dog Park (4.7 miles) or Voice of America MetroPark (4.7 miles)."
+  },
+  {
+    "name": "‍ Hazel Woods Park",
+    "street": "3789 W Lower Springboro Rd",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45066",
+    "latitude": 39.5495434,
+    "longitude": -84.2257152,
+    "description": "Hazel Woods Park (4.5 stars from 84 reviews) is a popular destination for Middletown dog owners, located at 3789 W Lower Springboro Rd. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Rosemont Park",
+    "street": "6388 Hamilton Middletown Rd",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45044",
+    "latitude": 39.5456732,
+    "longitude": -84.3227086,
+    "description": "Rosemont Park at 6388 Hamilton Middletown Rd holds a 4.4-star rating from 59 Middletown dog owner visits. Open from 9am to 8pm daily, dog owners have a window to spend time with their pups. Dog owners in the neighborhood can also take their furry friends to Jacot Park, 3.3 miles away."
+  },
+  {
+    "name": "Jacot Park",
+    "street": "4501 Grand Ave",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45044",
+    "latitude": 39.503458,
+    "longitude": -84.350845,
+    "description": "Dog owners in Middletown have rated Jacot Park (4501 Grand Ave) 4.4 stars across 476 reviews. Open from 6am to 10pm daily, dog owners can stop by when it fits their schedule. Looking to explore more? Sunset Park is another dog-friendly park 1.8 miles from here."
+  },
+  {
+    "name": "MonRover",
+    "street": "401 Old St",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45050",
+    "latitude": 39.4389848,
+    "longitude": -84.3621123,
+    "description": "MonRover at 401 Old St holds a 4.2-star rating from 10 Middletown dog owner visits. Local dog owners use this park as a spot to spend time with their furry companions. For pups who want more adventure, Jacot Park is a nearby dog park worth visiting (4.5 miles)."
+  },
+  {
+    "name": "Sunset Park",
+    "street": "2698 Milton Rd",
+    "city": "Middletown",
+    "state": "OH",
+    "zip": "45042",
+    "latitude": 39.516576,
+    "longitude": -84.379022,
+    "description": "At 2698 Milton Rd in Middletown, Sunset Park carries 4.2 stars from 279 dog owner reviews. This park provides dog owners in the community with a place to visit with their dogs. Nearby dog parks worth exploring with your pup include Jacot Park (1.8 miles) and Rosemont Park (3.6 miles)."
+  },
+  {
+    "name": "Infirmary Mound Park",
+    "street": "4351 Lancaster RdGranville",
+    "city": "Newark",
+    "state": "OH",
+    "zip": "43023",
+    "latitude": 40.0259824,
+    "longitude": -82.5238967,
+    "description": "Dog owners in Newark have made Infirmary Mound Park at 4351 Lancaster Rd a go-to spot, rating it 4.8 stars across 108 reviews. Open from 7:30am to 8:30pm daily, dog owners can easily fit a visit into busy schedules. Looking for more places to take your pup? Paws 2 Play Dog Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "‍ Paws 2 Play Dog Park",
+    "street": "4309 Lancaster RdGranville",
+    "city": "Newark",
+    "state": "OH",
+    "zip": "43023",
+    "latitude": 40.0265255,
+    "longitude": -82.5238565,
+    "description": "With 4.7 stars from 42 reviews, Paws 2 Play Dog Park at 4309 Lancaster Rd has become a favorite among Newark dog owners. Open from 7am to 8pm daily, the park accommodates early risers and evening visitors alike. Looking for more places to take your pup? Infirmary Mound Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Everett Field Park",
+    "street": "170 Everett Ave",
+    "city": "Newark",
+    "state": "OH",
+    "zip": "43055",
+    "latitude": 40.0620755,
+    "longitude": -82.3952464,
+    "description": "Dog owners in Newark have rated Everett Field Park (170 Everett Ave) 4.3 stars across 292 reviews. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners might also enjoy North Street Park, another dog park just 0.9 miles away."
+  },
+  {
+    "name": "North Street Park",
+    "street": "16 W North St",
+    "city": "Newark",
+    "state": "OH",
+    "zip": "43055",
+    "latitude": 40.0689643,
+    "longitude": -82.4089415,
+    "description": "In Newark, dog owners can find North Street Park at 16 W North St—a local park worth exploring with their furry companions. Open from 6:30am to 10pm daily, dog owners have a window to spend time with their pups. For pups who want more adventure, Everett Field Park is a nearby dog park worth visiting (0.9 miles)."
+  },
+  {
+    "name": "West Creek Reservation",
+    "street": "2277 W Ridgewood Dr",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44134",
+    "latitude": 41.3897162,
+    "longitude": -81.6953829,
+    "description": "Local dog owners love West Creek Reservation at 2277 W Ridgewood Dr in Parma—4.8 stars from an impressive 1,488 reviews. Open from 6am to 11pm daily, the park is convenient for before work, after work, or weekend adventures. Looking to mix things up? Skyline Overlook Trailhead is a nearby dog park 0.2 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "James Day Park",
+    "street": "",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.3822398,
+    "longitude": -81.7355692,
+    "description": "For dog owners in the Parma area, James Day Park offers a 4.8-star experience based on 46 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. More dog-friendly parks nearby include Veterans Memorial Park (0.0 miles) and Jerry Stano Park (0.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Big Creek Parkway Park",
+    "street": "Big Creek Pkwy",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44129",
+    "latitude": 41.3977944,
+    "longitude": -81.7623764,
+    "description": "With 4.7 stars from 482 reviews, Big Creek Parkway Park has become a favorite among Parma dog owners. Open from 6am to 9:30pm daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Radlick Park (0.5 miles) or Colombo Park (0.5 miles)."
+  },
+  {
+    "name": "Creekside Shelter at Big Creek",
+    "street": "Big Creek PkwyParma Heights",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44130",
+    "latitude": 41.3813408,
+    "longitude": -81.791203,
+    "description": "Creekside Shelter at Big Creek is well-regarded by Parma dog owners, holding 4.7 stars across 151 reviews. The steady stream of dog owner visits speaks to the park's appeal. Dog owners exploring the neighborhood can also bring their furry friends to Radlick Park (1.8 miles)."
+  },
+  {
+    "name": "Sheffield Lake Dog Park",
+    "street": "938 East DrSheffield Lake",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44054",
+    "latitude": 41.4804251,
+    "longitude": -82.1186959,
+    "description": "With 4.7 stars from 20 reviews, Sheffield Lake Dog Park at 938 East Dr has become a favorite among Parma dog owners. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners exploring the neighborhood can also bring their furry friends to Lakewood Beach Park (0.5 miles)."
+  },
+  {
+    "name": "Skyline Overlook Trailhead",
+    "street": "1969 W Ridgewood Dr",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44134",
+    "latitude": 41.391745,
+    "longitude": -81.6942652,
+    "description": "Parma dog owners rate Skyline Overlook Trailhead at 1969 W Ridgewood Dr highly, with 4.7 stars from 15 visits. The park serves dog owners well, providing a destination the community values. Nearby, West Creek Reservation (0.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Jerry Stano Park",
+    "street": "",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.3822398,
+    "longitude": -81.7355692,
+    "description": "Jerry Stano Park (4.7 stars from 13 reviews) is a popular destination for Parma dog owners. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby James Day Park (0.0 miles) or Veterans Memorial Park (0.0 miles)."
+  },
+  {
+    "name": "Veterans Memorial Park",
+    "street": "",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.3822398,
+    "longitude": -81.7355692,
+    "description": "In Parma, Veterans Memorial Park has built a loyal following—4.6 stars from 764 dog owner reviews. Open from 6am to 9pm daily, dog owners can plan visits around work or their pup's energy level. For variety, the neighborhood offers more dog parks to explore: James Day Park (0.0 miles) and Jerry Stano Park (0.0 miles)."
+  },
+  {
+    "name": "Nike Site Park",
+    "street": "11828 W Pleasant Valley Rd",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44130",
+    "latitude": 41.3639627,
+    "longitude": -81.7578838,
+    "description": "With 4.6 stars from 712 reviews, Nike Site Park at 11828 W Pleasant Valley Rd has become a favorite among Parma dog owners. For dog owners in the area, this park has become a trusted spot for time with their pups. Nearby, James Day Park (1.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Lower Fern Hill Picnic Area",
+    "street": "5363 Big Creek Pkwy",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44129",
+    "latitude": 41.4128116,
+    "longitude": -81.7524591,
+    "description": "Dog owners in Parma have made Lower Fern Hill Picnic Area at 5363 Big Creek Pkwy a go-to spot, rating it 4.6 stars across 118 reviews. Open from 6am to 9:30pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to John Petruska Park (0.5 miles)."
+  },
+  {
+    "name": "‍ Cleveland Metroparks",
+    "street": "100 Valley Pkwy",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44130",
+    "latitude": 41.4602004,
+    "longitude": -81.8219923,
+    "description": "At 100 Valley Pkwy in Parma, Cleveland Metroparks has built a loyal following—4.6 stars from 48 dog owner reviews. Open from 5am to 11pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: Lakewood Dog Park (0.4 miles) and Rockcliff Springs Rocky River (1.0 miles)."
+  },
+  {
+    "name": "Brighton Park",
+    "street": "Henninger Rd",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44109",
+    "latitude": 41.4423728,
+    "longitude": -81.7027171,
+    "description": "Brighton Park is well-regarded by Parma dog owners, holding 4.5 stars across 21 reviews. Local dog owners appreciate what this park offers their four-legged friends. Dog owners can also take their pups to nearby Harmody Park (0.6 miles) or Cleveland Metroparks Meadow (1.0 miles)."
+  },
+  {
+    "name": "Big Creek Park",
+    "street": "",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.439754,
+    "longitude": -81.7405559,
+    "description": "Parma dog owners rate Big Creek Park highly, with 4.5 stars from 60 visits. The park serves dog owners well, providing a destination the community values. Looking for more places to take your pup? Marquardt Park is another popular dog park just 0.9 miles away."
+  },
+  {
+    "name": "Olmsted Township Dog Park",
+    "street": "27180 Schady RdOlmsted Township",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44138",
+    "latitude": 41.3639306,
+    "longitude": -81.9521811,
+    "description": "7 dog owners have reviewed Olmsted Township Dog Park at 27180 Schady Rd in Parma, averaging 4.3 stars. Dog owners in the area appreciate having a local spot to bring their pups. Dog owners looking for variety can also visit Bradley Woods Reservation (4.2 miles) or Rocky River Reservation (4.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "Colombo Park",
+    "street": "",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.3914132,
+    "longitude": -81.7598257,
+    "description": "Colombo Park holds a 4.1-star rating from 8 Parma dog owner visits. Dog owners in the area appreciate having a local spot to bring their pups. Dog owners in the neighborhood can also take their furry friends to Radlick Park, 0.0 miles away."
+  },
+  {
+    "name": "‍ Aukerman Park",
+    "street": "15561 York RdNorth Royalton",
+    "city": "Parma",
+    "state": "OH",
+    "zip": "44133",
+    "latitude": 41.3045278,
+    "longitude": -81.7540699,
+    "description": "Located at 15561 York Rd, Aukerman Park in Parma is rated 4.4 stars by 127 dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Looking to explore more? Nike Site Park is another dog-friendly park 4.1 miles from here."
+  },
+  {
+    "name": "Spock Memorial Dog Park",
+    "street": "740 2nd St",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662",
+    "latitude": 38.7312222,
+    "longitude": -82.9971473,
+    "description": "Portsmouth dog owners rate Spock Memorial Dog Park at 740 2nd St highly, with 4.7 stars from 39 visits. For dog owners in the area, this park has become a trusted spot for time with their pups. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Central Bark Dog Park",
+    "street": "Park St",
+    "city": "‍ Springfield",
+    "state": "OH",
+    "zip": "45504",
+    "latitude": 39.9331674,
+    "longitude": -83.8387506,
+    "description": "Dog owners in Springfield have rated Central Bark Dog Park 4.4 stars across 162 reviews. Open from 8am to 6pm daily, dog owners have a window to spend time with their pups. For pups who want more adventure, Wiggley Field Dog Park is a nearby dog park worth visiting (1.7 miles)."
+  },
+  {
+    "name": "Dog Park",
+    "street": "1876 Ridge Rd",
+    "city": "‍ Springfield",
+    "state": "OH",
+    "zip": "45502",
+    "latitude": 39.8921361,
+    "longitude": -83.7219299,
+    "description": "At 1876 Ridge Rd in Springfield, Dog Park has built a loyal following—4.5 stars from 6 dog owner reviews. The park serves dog owners well, providing a destination the community values. The reviews indicate this is a trusted destination for dog owners in the area."
+  },
+  {
+    "name": "Wiggley Field Dog Park",
+    "street": "",
+    "city": "‍ Springfield",
+    "state": "OH",
+    "zip": "",
+    "latitude": 39.9234046,
+    "longitude": -83.810138,
+    "description": "Wiggley Field Dog Park in Springfield has 4.3 stars based on 95 reviews from dog owners. Dog owners in the area appreciate having a local spot to bring their pups. Dog owners might also enjoy Central Bark Dog Park, another dog park just 1.7 miles away."
+  },
+  {
+    "name": "‍ Wildwood Preserve Metropark",
+    "street": "5100 Central Ave",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43615",
+    "latitude": 41.6777808,
+    "longitude": -83.597293,
+    "description": "With 4.8 stars across 4,497 reviews, Wildwood Preserve Metropark at 5100 Central Ave has clearly won over Toledo dog owners. Dog owners appreciate the reliable experience this park provides for their four-legged companions. For more dog park adventures, explore The Bark Park (0.8 miles) or Liberty Park (1.4 miles) with your furry companion."
+  },
+  {
+    "name": "Side Cut Metropark",
+    "street": "1025 W River RdMaumee",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43537",
+    "latitude": 41.5721371,
+    "longitude": -83.6387311,
+    "description": "Side Cut Metropark at 1025 W River Rd is a favorite among Toledo dog owners, earning 4.8 stars from 2,786 reviews. Open from 7am to 6pm daily, it's easy for dog owners to stop by whenever works best. Keep the adventure going at other nearby dog parks like Swan Creek Metropark (2.8 miles) or Swan Creek Preserve Metropark (3.3 miles)."
+  },
+  {
+    "name": "‍ Swan Creek Metropark",
+    "street": "4094 Glendale Ave",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43614",
+    "latitude": 41.6123347,
+    "longitude": -83.6381255,
+    "description": "Swan Creek Metropark at 4094 Glendale Ave is well-regarded by Toledo dog owners, holding 4.8 stars across 148 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Swan Creek Preserve Metropark (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Middlegrounds Dog Park",
+    "street": "321 Morris St",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43604",
+    "latitude": 41.6409469,
+    "longitude": -83.5389162,
+    "description": "Toledo dog owners rate Middlegrounds Dog Park at 321 Morris St highly, with 4.9 stars from 7 visits. The steady stream of dog owner visits speaks to the park's appeal. More dog-friendly parks nearby include Middlegrounds Metropark (0.3 miles) and Cass Ryan Eastgate Park (0.8 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Liberty Park",
+    "street": "1292 Hillcrest Ave",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43612",
+    "latitude": 41.6853746,
+    "longitude": -83.5711928,
+    "description": "At 1292 Hillcrest Ave in Toledo, Liberty Park has built a loyal following—4.7 stars from 35 dog owner reviews. Open from 7am to 9pm daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Wildwood Preserve Metropark (1.4 miles) and Bennett Park (1.7 miles)."
+  },
+  {
+    "name": "Manhattan Marsh Preserve Metro",
+    "street": "510 Clifford St",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43611",
+    "latitude": 41.6845907,
+    "longitude": -83.493723,
+    "description": "At 510 Clifford St in Toledo, Manhattan Marsh Preserve Metro has built a loyal following—4.7 stars from 139 dog owner reviews. Open from 7am to 7pm daily, there's plenty of opportunity for dog owners to find a time that works. For variety, the neighborhood offers more dog parks to explore: Cass Ryan Eastgate Park (3.2 miles) and Bay View Park (3.2 miles)."
+  },
+  {
+    "name": "Middlegrounds Metropark",
+    "street": "111 Ottawa St",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43604",
+    "latitude": 41.6452743,
+    "longitude": -83.5371748,
+    "description": "With 4.7 stars from 889 reviews, Middlegrounds Metropark at 111 Ottawa St has become a favorite among Toledo dog owners. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. More dog-friendly parks nearby include Middlegrounds Dog Park (0.3 miles) and Cass Ryan Eastgate Park (0.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Swan Creek Preserve Metropark",
+    "street": "4659 Airport Hwy",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43615",
+    "latitude": 41.61916,
+    "longitude": -83.6467516,
+    "description": "Swan Creek Preserve Metropark at 4659 Airport Hwy in Toledo is a community favorite, with 2,093 dog owners giving it 4.7 stars. This park has clearly won over local dog owners who return again and again with their furry friends. Looking to mix things up? Swan Creek Metropark is a nearby dog park 0.6 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Bay View Park",
+    "street": "",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.6529143,
+    "longitude": -83.5378173,
+    "description": "Bay View Park (4.6 stars from 206 reviews) is a popular destination for Toledo dog owners. Open from 7am to 5pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Cass Ryan Eastgate Park (0.0 miles) and Middlegrounds Metropark (0.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Cass Ryan Eastgate Park",
+    "street": "",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "",
+    "latitude": 41.6529143,
+    "longitude": -83.5378173,
+    "description": "For dog owners in Toledo, Cass Ryan Eastgate Park has a 4.4-star rating (14 reviews). Open from 6am to 9:30pm daily, dog owners have a window to spend time with their pups. For pups who want more adventure, Bay View Park is a nearby dog park worth visiting (0.0 miles)."
+  },
+  {
+    "name": "Strawberry Acres Park",
+    "street": "950 S McCord Rd",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43528",
+    "latitude": 41.6239103,
+    "longitude": -83.7034334,
+    "description": "Strawberry Acres Park (4.6 stars from 681 reviews) is a popular destination for Toledo dog owners, located at 950 S McCord Rd. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby Swan Creek Preserve Metropark (2.9 miles) or Swan Creek Metropark (3.5 miles)."
+  },
+  {
+    "name": "Glass City Dog Park",
+    "street": "1171 Woodsdale Ave",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43614",
+    "latitude": 41.619891,
+    "longitude": -83.586862,
+    "description": "For dog owners in Toledo, Glass City Dog Park at 1171 Woodsdale Ave has a 4.4-star rating (187 reviews). Open from 6am to 9pm daily, the park fits conveniently into different routines. Dog owners might also enjoy Woodsdale Park, another dog park just 0.2 miles away."
+  },
+  {
+    "name": "Jake & Cooper's Bark Park",
+    "street": "2960 Pickle RdOregon",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43616",
+    "latitude": 41.626292,
+    "longitude": -83.4758366,
+    "description": "Located at 2960 Pickle Rd, Jake & Cooper's Bark Park offers Toledo dog owners a neighborhood destination for their four-legged friends. Open from 6am to 9pm daily, dog owners have a window to spend time with their pups. Looking to explore more? Middlegrounds Dog Park is another dog-friendly park 3.4 miles from here."
+  },
+  {
+    "name": "Woodsdale Park",
+    "street": "1226 Woodsdale Ave",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43614",
+    "latitude": 41.6171528,
+    "longitude": -83.5870004,
+    "description": "At 1226 Woodsdale Ave in Toledo, Woodsdale Park carries 4.1 stars from 108 dog owner reviews. Open from 7am to 8:30pm daily, the park is accessible for dog owners in the area. Dog owners looking for variety can also visit Glass City Dog Park (0.2 miles) or Swan Creek Metropark (2.7 miles) with their four-legged friends."
+  },
+  {
+    "name": "‍ Trilby Park",
+    "street": "3125 Shawnee Rd",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43613",
+    "latitude": 41.7152581,
+    "longitude": -83.6214729,
+    "description": "Trilby Park at 3125 Shawnee Rd in Toledo has 4.1 stars from 402 dog owner reviews. Open from 7am to 8pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Wildwood Preserve Metropark (2.9 miles) or The Bark Park (3.1 miles) with their four-legged friends."
+  },
+  {
+    "name": "The Bark Park",
+    "street": "2644 Alisdale Dr",
+    "city": "‍ Toledo",
+    "state": "OH",
+    "zip": "43606",
+    "latitude": 41.6716405,
+    "longitude": -83.6105307,
+    "description": "Dog owners in the Toledo area will find The Bark Park at 2644 Alisdale Dr—a local option for spending time with their pups. Dog owners looking for a local destination will find this park accessible. For pups who want more adventure, Wildwood Preserve Metropark is a nearby dog park worth visiting (0.8 miles)."
+  },
+  {
+    "name": "‍ Boardman Park",
+    "street": "375 Boardman Poland RdBoardman",
+    "city": "Youngstown",
+    "state": "OH",
+    "zip": "44512",
+    "latitude": 41.024236,
+    "longitude": -80.6501927,
+    "description": "2,485 dog owners have made Boardman Park (375 Boardman Poland Rd) one of Youngstown's most trusted parks (4.7 stars). For dog owners seeking a tried-and-true destination, this park delivers consistently. Reviews from fellow dog owners confirm this park is worth the visit."
+  },
+  {
+    "name": "‍ Hubbard's Scentral Dog Park",
+    "street": "6068 W Liberty StHubbard",
+    "city": "Youngstown",
+    "state": "OH",
+    "zip": "44425",
+    "latitude": 41.1570579,
+    "longitude": -80.6006235,
+    "description": "Hubbard's Scentral Dog Park at 6068 W Liberty St in Youngstown has 4.2 stars from 13 dog owner reviews. Local dog owners use this park as a spot to spend time with their furry companions. Reviews from other dog owners provide perspective on what to expect at this park."
+  }
+]

@@ -95,19 +95,37 @@ function ParkCard({ park, onPress }: { park: Park; onPress: () => void }) {
   );
 }
 
+const STATE_SLUGS = ['alabama', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york', 'north-carolina', 'north-dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode-island', 'south-carolina', 'south-dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west-virginia', 'wisconsin', 'wyoming'];
+
 /** Router: detects park slug vs state slug and renders the right component */
 export default function DogParkSlugPage() {
-  const { slug } = useLocalSearchParams<{ slug: string }>();
+  const { slug } = useLocalSearchParams<{ slug: string | string[] }>();
   const { session } = useAuth();
+  
+  // Handle both array (catch-all) and string formats
+  const slugParts = Array.isArray(slug) ? slug : slug ? [slug] : [];
 
-  // Park detail: slug ends with 8-char hex (e.g. "anderson-farm-county-park-19bc8687")
-  if (extractShortIdFromSlug(slug || '')) {
-    if (!session) return <PublicParkDetail slugOrId={slug!} />;
-    return <ParkDetailAuth slugOrId={slug!} />;
+  // Debug logging
+  if (typeof window !== 'undefined') {
+    console.log('[DogParkSlugPage] slug:', slug, 'slugParts:', slugParts);
   }
 
-  // State listing: slug is a state name (e.g. "minnesota", "new-york")
-  return <StateDogParksPage stateSlug={slug || ''} />;
+  // Park detail: slug is ["state", "park-slug"] (e.g. ["minnesota", "stoneridge-park"])
+  if (slugParts.length >= 2) {
+    const stateSlug = slugParts[0];
+    const parkSlug = slugParts.slice(1).join('/'); // Handle nested slugs
+    if (STATE_SLUGS.includes(stateSlug)) {
+      if (typeof window !== 'undefined') {
+        console.log('[DogParkSlugPage] Rendering park detail:', { stateSlug, parkSlug });
+      }
+      if (!session) return <PublicParkDetail slugOrId={parkSlug} state={stateSlug} />;
+      return <ParkDetailAuth slugOrId={parkSlug} state={stateSlug} />;
+    }
+  }
+
+  // State listing: slug is a state name (e.g. ["minnesota"], ["new-york"])
+  const stateSlug = slugParts.length > 0 ? slugParts[0] : '';
+  return <StateDogParksPage stateSlug={stateSlug} />;
 }
 
 /** State listing page component with its own hooks */
@@ -442,7 +460,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
                       <ParkCard
                         key={park.id}
                         park={park}
-                        onPress={() => router.push(`/dog-parks/${generateParkSlug(park.name, park.id)}` as any)}
+                        onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(park.name)}` as any)}
                       />
                     ))}
                   </View>
@@ -451,7 +469,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
                       <ParkCard
                         key={park.id}
                         park={park}
-                        onPress={() => router.push(`/dog-parks/${generateParkSlug(park.name, park.id)}` as any)}
+                        onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(park.name)}` as any)}
                       />
                     ))}
                   </View>

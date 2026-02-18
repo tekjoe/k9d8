@@ -17,26 +17,21 @@ RETURNS BOOLEAN AS $$
     AND user_id = uid
   );
 $$ LANGUAGE sql SECURITY DEFINER STABLE;
-
 -- Drop old recursive policies
 DROP POLICY IF EXISTS "Users can view own conversations" ON conversations;
 DROP POLICY IF EXISTS "Users can view participants of own conversations" ON conversation_participants;
 DROP POLICY IF EXISTS "Users can view messages in own conversations" ON messages;
 DROP POLICY IF EXISTS "Users can send messages in own conversations" ON messages;
-
 -- Recreate policies using the helper function (no more recursion)
 CREATE POLICY "Users can view own conversations"
   ON conversations FOR SELECT
   USING (is_conversation_member(id, auth.uid()));
-
 CREATE POLICY "Users can view participants of own conversations"
   ON conversation_participants FOR SELECT
   USING (is_conversation_member(conversation_id, auth.uid()));
-
 CREATE POLICY "Users can view messages in own conversations"
   ON messages FOR SELECT
   USING (is_conversation_member(conversation_id, auth.uid()));
-
 CREATE POLICY "Users can send messages in own conversations"
   ON messages FOR INSERT
   WITH CHECK (

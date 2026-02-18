@@ -1,14 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, StyleSheet, Platform, Animated } from 'react-native';
 
-// Native-only import
 let SkeletonPlaceholder: any = null;
-if (Platform.OS !== 'web') {
+let placeholderLoaded = false;
+
+function loadSkeletonPlaceholder() {
+  if (placeholderLoaded) return SkeletonPlaceholder;
+  if (Platform.OS === 'web') {
+    placeholderLoaded = true;
+    return null;
+  }
   try {
     SkeletonPlaceholder = require('react-native-skeleton-placeholder').default;
-  } catch (e) {
-    // Fallback if native module not available
+  } catch {
+    SkeletonPlaceholder = null;
   }
+  placeholderLoaded = true;
+  return SkeletonPlaceholder;
 }
 
 interface SkeletonProps {
@@ -63,20 +71,27 @@ function PulseSkeleton({ width = '100%', height = 20, borderRadius = 4, style }:
  * Animated skeleton shimmer component
  */
 export function Skeleton({ width = '100%', height = 20, borderRadius = 4, style }: SkeletonProps) {
-  // Use pulse animation for web, native shimmer for mobile
-  if (Platform.OS === 'web' || !SkeletonPlaceholder) {
+  const [placeholder, setPlaceholder] = useState<any>(null);
+  
+  useEffect(() => {
+    setPlaceholder(loadSkeletonPlaceholder());
+  }, []);
+  
+  if (Platform.OS === 'web' || !placeholder) {
     return <PulseSkeleton width={width} height={height} borderRadius={borderRadius} style={style} />;
   }
 
+  const Placeholder = placeholder;
+
   return (
-    <SkeletonPlaceholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
-      <SkeletonPlaceholder.Item
+    <Placeholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
+      <Placeholder.Item
         width={width}
         height={height}
         borderRadius={borderRadius}
         {...style}
       />
-    </SkeletonPlaceholder>
+    </Placeholder>
   );
 }
 
@@ -111,29 +126,37 @@ function PulseSkeletonCard({ lines = 2, hasImage = true, style }: SkeletonCardPr
  * A skeleton card layout for list items or cards
  */
 export function SkeletonCard({ lines = 2, hasImage = true, style }: SkeletonCardProps) {
-  if (Platform.OS === 'web' || !SkeletonPlaceholder) {
+  const [placeholder, setPlaceholder] = useState<any>(null);
+  
+  useEffect(() => {
+    setPlaceholder(loadSkeletonPlaceholder());
+  }, []);
+
+  if (Platform.OS === 'web' || !placeholder) {
     return <PulseSkeletonCard lines={lines} hasImage={hasImage} style={style} />;
   }
 
+  const Placeholder = placeholder;
+
   return (
-    <SkeletonPlaceholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
-      <SkeletonPlaceholder.Item 
+    <Placeholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
+      <Placeholder.Item 
         flexDirection="row" 
         padding={16}
         {...style}
       >
         {hasImage && (
-          <SkeletonPlaceholder.Item 
+          <Placeholder.Item 
             width={48} 
             height={48} 
             borderRadius={24} 
             marginRight={12} 
           />
         )}
-        <SkeletonPlaceholder.Item flex={1} justifyContent="center">
-          <SkeletonPlaceholder.Item width="60%" height={16} marginBottom={6} />
+        <Placeholder.Item flex={1} justifyContent="center">
+          <Placeholder.Item width="60%" height={16} marginBottom={6} />
           {Array.from({ length: lines - 1 }).map((_, i) => (
-            <SkeletonPlaceholder.Item 
+            <Placeholder.Item 
               key={i} 
               width="40%" 
               height={14} 
@@ -141,9 +164,9 @@ export function SkeletonCard({ lines = 2, hasImage = true, style }: SkeletonCard
               marginBottom={4}
             />
           ))}
-        </SkeletonPlaceholder.Item>
-      </SkeletonPlaceholder.Item>
-    </SkeletonPlaceholder>
+        </Placeholder.Item>
+      </Placeholder.Item>
+    </Placeholder>
   );
 }
 
@@ -170,30 +193,38 @@ function PulseSkeletonPlaydateCard() {
  * A skeleton layout for playdate cards
  */
 export function SkeletonPlaydateCard() {
-  if (Platform.OS === 'web' || !SkeletonPlaceholder) {
+  const [placeholder, setPlaceholder] = useState<any>(null);
+  
+  useEffect(() => {
+    setPlaceholder(loadSkeletonPlaceholder());
+  }, []);
+
+  if (Platform.OS === 'web' || !placeholder) {
     return <PulseSkeletonPlaydateCard />;
   }
 
+  const Placeholder = placeholder;
+
   return (
-    <SkeletonPlaceholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
-      <SkeletonPlaceholder.Item flexDirection="row" marginBottom={12}>
-        <SkeletonPlaceholder.Item width={4} height={70} />
-        <SkeletonPlaceholder.Item 
+    <Placeholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
+      <Placeholder.Item flexDirection="row" marginBottom={12}>
+        <Placeholder.Item width={4} height={70} />
+        <Placeholder.Item 
           flex={1} 
           flexDirection="row" 
           alignItems="center" 
           paddingVertical={14}
           paddingHorizontal={16}
         >
-          <SkeletonPlaceholder.Item width={40} height={32} borderRadius={4} marginRight={14} />
-          <SkeletonPlaceholder.Item width={1} height={36} marginRight={14} />
-          <SkeletonPlaceholder.Item flex={1}>
-            <SkeletonPlaceholder.Item width="80%" height={16} marginBottom={4} />
-            <SkeletonPlaceholder.Item width="50%" height={14} borderRadius={3} />
-          </SkeletonPlaceholder.Item>
-        </SkeletonPlaceholder.Item>
-      </SkeletonPlaceholder.Item>
-    </SkeletonPlaceholder>
+          <Placeholder.Item width={40} height={32} borderRadius={4} marginRight={14} />
+          <Placeholder.Item width={1} height={36} marginRight={14} />
+          <Placeholder.Item flex={1}>
+            <Placeholder.Item width="80%" height={16} marginBottom={4} />
+            <Placeholder.Item width="50%" height={14} borderRadius={3} />
+          </Placeholder.Item>
+        </Placeholder.Item>
+      </Placeholder.Item>
+    </Placeholder>
   );
 }
 
@@ -223,27 +254,35 @@ function PulseSkeletonParkCard() {
  * A skeleton layout for park cards
  */
 export function SkeletonParkCard() {
-  if (Platform.OS === 'web' || !SkeletonPlaceholder) {
+  const [placeholder, setPlaceholder] = useState<any>(null);
+  
+  useEffect(() => {
+    setPlaceholder(loadSkeletonPlaceholder());
+  }, []);
+
+  if (Platform.OS === 'web' || !placeholder) {
     return <PulseSkeletonParkCard />;
   }
 
+  const Placeholder = placeholder;
+
   return (
-    <SkeletonPlaceholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
-      <SkeletonPlaceholder.Item marginBottom={16}>
-        <SkeletonPlaceholder.Item width="100%" height={128} />
-        <SkeletonPlaceholder.Item padding={16}>
-          <SkeletonPlaceholder.Item flexDirection="row" justifyContent="space-between" marginBottom={4}>
-            <SkeletonPlaceholder.Item width="70%" height={16} />
-            <SkeletonPlaceholder.Item width={50} height={14} />
-          </SkeletonPlaceholder.Item>
-          <SkeletonPlaceholder.Item width="50%" height={12} borderRadius={3} marginBottom={8} />
-          <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-            <SkeletonPlaceholder.Item width={14} height={14} borderRadius={7} marginRight={6} />
-            <SkeletonPlaceholder.Item width={80} height={14} borderRadius={3} />
-          </SkeletonPlaceholder.Item>
-        </SkeletonPlaceholder.Item>
-      </SkeletonPlaceholder.Item>
-    </SkeletonPlaceholder>
+    <Placeholder backgroundColor="#E5E4E1" highlightColor="#F5F4F1">
+      <Placeholder.Item marginBottom={16}>
+        <Placeholder.Item width="100%" height={128} />
+        <Placeholder.Item padding={16}>
+          <Placeholder.Item flexDirection="row" justifyContent="space-between" marginBottom={4}>
+            <Placeholder.Item width="70%" height={16} />
+            <Placeholder.Item width={50} height={14} />
+          </Placeholder.Item>
+          <Placeholder.Item width="50%" height={12} borderRadius={3} marginBottom={8} />
+          <Placeholder.Item flexDirection="row" alignItems="center">
+            <Placeholder.Item width={14} height={14} borderRadius={7} marginRight={6} />
+            <Placeholder.Item width={80} height={14} borderRadius={3} />
+          </Placeholder.Item>
+        </Placeholder.Item>
+      </Placeholder.Item>
+    </Placeholder>
   );
 }
 

@@ -1,0 +1,2612 @@
+[
+  {
+    "name": "Game Farm Park",
+    "street": "3030 R St SE",
+    "city": "Auburn",
+    "state": "WA",
+    "zip": "98002",
+    "latitude": 47.280294,
+    "longitude": -122.2078281,
+    "description": "At 3030 R St SE in Auburn, Game Farm Park has built a loyal following—4.4 stars from 1,843 dog owner reviews. Open from 6am to 10:30pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Off-leash park (1.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Roegner Park",
+    "street": "601 Oravetz Rd SE",
+    "city": "Auburn",
+    "state": "WA",
+    "zip": "98092",
+    "latitude": 47.2670473,
+    "longitude": -122.221863,
+    "description": "With 4.4 stars from 684 reviews, Roegner Park at 601 Oravetz Rd SE has become a favorite among Auburn dog owners. Open from 5am to 10pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Off-leash park (0.4 miles) or Game Farm Park (1.1 miles)."
+  },
+  {
+    "name": "Off-leash park",
+    "street": "870 41st St SE",
+    "city": "Auburn",
+    "state": "WA",
+    "zip": "98092",
+    "latitude": 47.2719399,
+    "longitude": -122.2243297,
+    "description": "At 870 41st St SE in Auburn, Off-leash park carries 4.3 stars from 159 dog owner reviews. Open from 7am to 9pm daily, dog owners in the area can work a visit into their day. For pups who want more adventure, Roegner Park is a nearby dog park worth visiting (0.4 miles)."
+  },
+  {
+    "name": "Bellevue Downtown Park",
+    "street": "10201 NE 4th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98004",
+    "latitude": 47.6135825,
+    "longitude": -122.2042487,
+    "description": "For Bellevue dog owners, Bellevue Downtown Park at 10201 NE 4th St needs no introduction—4.8 stars, 8,293 reviews. Dog owners seeking a premier experience understand why this park stands apart. For more dog park adventures, explore Meydenbauer Bay Park (0.3 miles) or Wildwood Dog Park (0.4 miles) with your furry companion."
+  },
+  {
+    "name": "North Robinswood Park",
+    "street": "1998 150th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98007",
+    "latitude": 47.592801,
+    "longitude": -122.139809,
+    "description": "Bellevue dog owners rate North Robinswood Park at 1998 150th Ave SE highly, with 4.8 stars from 31 visits. Open from 6:30am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Robinswood Off-Leash Area (0.3 miles) or Robinswood Community Park (0.3 miles)."
+  },
+  {
+    "name": "Meydenbauer Bay Park",
+    "street": "419 98th Ave NE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98004",
+    "latitude": 47.6124569,
+    "longitude": -122.2109857,
+    "description": "Meydenbauer Bay Park at 419 98th Ave NE in Bellevue is a community favorite, with 1,690 dog owners giving it 4.7 stars. Open from 7am to 11pm daily, dog owners can plan visits around their pup's favorite times to be active. Other popular dog parks nearby include Bellevue Downtown Park (0.3 miles) and Clyde Beach Park (0.3 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Kelsey Creek Park",
+    "street": "410 130th Pl SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98005",
+    "latitude": 47.6040183,
+    "longitude": -122.1637775,
+    "description": "For Bellevue dog owners, Kelsey Creek Park at 410 130th Pl SE has become a reliable favorite—4.7 stars from 1,025 reviews. Open from 6am to 9pm daily, dog owners can plan visits around their pup's favorite times to be active. Other popular dog parks nearby include Wilburton Hill Park (0.7 miles) and Surrey Downs Park (1.3 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Surrey Downs Park",
+    "street": "11177 SE 4th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98004",
+    "latitude": 47.6049529,
+    "longitude": -122.191716,
+    "description": "At 11177 SE 4th St in Bellevue, Surrey Downs Park has built a loyal following—4.7 stars from 378 dog owner reviews. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Bellevue Parks Park (0.6 miles) and Wildwood Dog Park (0.7 miles)."
+  },
+  {
+    "name": "Lake Hills Community Park",
+    "street": "1200 164th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98008",
+    "latitude": 47.599682,
+    "longitude": -122.120845,
+    "description": "At 1200 164th Ave SE in Bellevue, Lake Hills Community Park has built a loyal following—4.7 stars from 328 dog owner reviews. The steady stream of dog owner visits speaks to the park's appeal. For a change of scenery, Robinsglen Nature Park is another dog-friendly destination 0.2 miles from here."
+  },
+  {
+    "name": "Crossroads Pop-up Dog Park",
+    "street": "16000 NE 10th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98008",
+    "latitude": 47.6193715,
+    "longitude": -122.127787,
+    "description": "Crossroads Pop-up Dog Park (4.7 stars from 21 reviews) is a popular destination for Bellevue dog owners, located at 16000 NE 10th St. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Other dog parks in the area include Hillaire Park (0.3 miles) and Ivanhoe Park (0.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Ardmore Park",
+    "street": "16833 NE 30th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98008",
+    "latitude": 47.6367454,
+    "longitude": -122.1157392,
+    "description": "Ardmore Park (4.6 stars from 123 reviews) is a popular destination for Bellevue dog owners, located at 16833 NE 30th St. Local dog owners appreciate what this park offers their four-legged friends. Dog owners exploring the neighborhood can also bring their furry friends to Idylwood Park (0.7 miles)."
+  },
+  {
+    "name": "Killarney Glen Park",
+    "street": "1933 104th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98004",
+    "latitude": 47.5934637,
+    "longitude": -122.2011683,
+    "description": "Bellevue dog owners rate Killarney Glen Park at 1933 104th Ave SE highly, with 4.6 stars from 143 visits. Local dog owners appreciate what this park offers their four-legged friends. Looking for more places to take your pup? Surrey Downs Park is another popular dog park just 0.9 miles away."
+  },
+  {
+    "name": "‍ Lattawood Park",
+    "street": "4530 155th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98006",
+    "latitude": 47.5651959,
+    "longitude": -122.133218,
+    "description": "At 4530 155th Ave SE in Bellevue, Lattawood Park has built a loyal following—4.6 stars from 147 dog owner reviews. The park serves dog owners well, providing a destination the community values. Looking for more places to take your pup? Bellevue Airfield Park is another popular dog park just 1.4 miles away."
+  },
+  {
+    "name": "Robinswood Off-Leash Area",
+    "street": "148th Ave SE &SE 24th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98007",
+    "latitude": 47.5891029,
+    "longitude": -122.1435822,
+    "description": "Robinswood Off-Leash Area (4.6 stars from 422 reviews) is a popular destination for Bellevue dog owners, located at 148th Ave SE &. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. Dog owners can also take their pups to nearby Robinswood Community Park (0.0 miles) or North Robinswood Park (0.3 miles)."
+  },
+  {
+    "name": "Weowna Park",
+    "street": "1420 168th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98008",
+    "latitude": 47.5972717,
+    "longitude": -122.1158577,
+    "description": "For dog owners in the Bellevue area, Weowna Park (1420 168th Ave SE) offers a 4.6-star experience based on 439 reviews. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. Other dog parks in the area include Robinsglen Nature Park (0.2 miles) and Lake Hills Community Park (0.3 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Clyde Beach Park",
+    "street": "2 92nd Ave NE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98004",
+    "latitude": 47.6146555,
+    "longitude": -122.2174775,
+    "description": "Bellevue dog owners rate Clyde Beach Park at 2 92nd Ave NE highly, with 4.6 stars from 549 visits. Open from 6am to 11pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Meydenbauer Bay Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Lake Hills Greenbelt",
+    "street": "15416 SE 16th St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98007",
+    "latitude": 47.5966093,
+    "longitude": -122.1341369,
+    "description": "Located at 15416 SE 16th St in Bellevue, Lake Hills Greenbelt earns strong marks from local dog owners—4.6 stars from 695 reviews. Open every day except Monday and Sunday, the park works well for dog owners with different schedules. More dog-friendly parks nearby include North Robinswood Park (0.4 miles) and Robinsglen Nature Park (0.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Wilburton Hill Park",
+    "street": "12400 Main St",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98005",
+    "latitude": 47.6100911,
+    "longitude": -122.174486,
+    "description": "1,683 dog owners have made Wilburton Hill Park (12400 Main St) one of Bellevue's most trusted parks (4.6 stars). Open from 6:30am to 8:30pm daily, it's easy for dog owners to stop by whenever works best. Want to give your pup even more adventure? Kelsey Creek Park is another beloved dog park just 0.7 miles away."
+  },
+  {
+    "name": "Robinswood Community Park",
+    "street": "2432 148th Ave SE",
+    "city": "Bellevue",
+    "state": "WA",
+    "zip": "98007",
+    "latitude": 47.5887091,
+    "longitude": -122.1428599,
+    "description": "Robinswood Community Park at 2432 148th Ave SE is a favorite among Bellevue dog owners, earning 4.6 stars from 1,831 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Nearby, Robinswood Off-Leash Area (0.0 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Whatcom Falls Park",
+    "street": "1401 Electric Ave",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98229",
+    "latitude": 48.7495901,
+    "longitude": -122.4259686,
+    "description": "Local dog owners love Whatcom Falls Park at 1401 Electric Ave in Bellingham—4.8 stars from an impressive 4,181 reviews. Open from 6am to 10pm daily, dog owners can plan visits around their pup's favorite times to be active. Dog owners in the area also love bringing their pups to Bloedel Donovan Park (0.0 miles) and Roosevelt Park (1.2 miles)."
+  },
+  {
+    "name": "Bellingham Boardwalk",
+    "street": "Bayview Dr",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7291724,
+    "longitude": -122.5040613,
+    "description": "With 4.8 stars from 786 reviews, Bellingham Boardwalk has become a favorite among Bellingham dog owners. The park serves dog owners well, providing a destination the community values. Nearby, Boulevard Park (0.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Boulevard Park",
+    "street": "470 Bayview Dr",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7312368,
+    "longitude": -122.5030785,
+    "description": "At 470 Bayview Dr in Bellingham, Boulevard Park has built a loyal following—4.8 stars from 464 dog owner reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Bellingham Boardwalk (0.1 miles) and Paws For A Beer (0.8 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Paws For A Beer",
+    "street": "501 Harris Ave",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7204522,
+    "longitude": -122.5101264,
+    "description": "Bellingham dog owners rate Paws For A Beer at 501 Harris Ave highly, with 4.8 stars from 431 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For variety, the neighborhood offers more dog parks to explore: Marine Park (0.1 miles) and Fairhaven Park (0.5 miles)."
+  },
+  {
+    "name": "Lake Padden",
+    "street": "",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "",
+    "latitude": 48.702477,
+    "longitude": -122.4536341,
+    "description": "In Bellingham, Lake Padden has built a loyal following—4.8 stars from 187 dog owner reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Dog owners can also take their pups to nearby Lake Padden East Entrance (0.3 miles) or Arroyo Park (1.5 miles)."
+  },
+  {
+    "name": "Cornwall Park",
+    "street": "3216 Vallette St",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7721896,
+    "longitude": -122.4830228,
+    "description": "Cornwall Park at 3216 Vallette St is well-regarded by Bellingham dog owners, holding 4.8 stars across 119 reviews. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Nearby, Cornwall Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Scramble Nature Playpark",
+    "street": "2915 Cinema Pl",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98226",
+    "latitude": 48.7688283,
+    "longitude": -122.4483624,
+    "description": "Dog owners in Bellingham have made Scramble Nature Playpark at 2915 Cinema Pl a go-to spot, rating it 4.9 stars across 27 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Nearby, Roosevelt Park (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Lake Padden East Entrance",
+    "street": "4882 Samish Way",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98229",
+    "latitude": 48.7064747,
+    "longitude": -122.456804,
+    "description": "At 4882 Samish Way in Bellingham, Lake Padden East Entrance has built a loyal following—5.0 stars from 8 dog owner reviews. The park serves dog owners well, providing a destination the community values. For a change of scenery, Lake Padden is another dog-friendly destination 0.3 miles from here."
+  },
+  {
+    "name": "Larrabee State Park",
+    "street": "245 Chuckanut Dr",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98229",
+    "latitude": 48.6524528,
+    "longitude": -122.4890121,
+    "description": "At 245 Chuckanut Dr in Bellingham, Larrabee State Park stands out with 4.7 stars from 2,505 happy dog owners. Dog owners have embraced this park as a top choice for spending time with their pups. Other popular dog parks nearby include Teddy Bear Cove - Chuckanut (2.8 miles) and Arroyo Park (3.5 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Zuanich Point Park",
+    "street": "2600 N Harbor Loop Dr",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.757366,
+    "longitude": -122.5024194,
+    "description": "Zuanich Point Park at 2600 N Harbor Loop Dr in Bellingham is a community favorite, with 1,375 dog owners giving it 4.7 stars. Open from 6am to 10pm daily, the park is convenient for before work, after work, or weekend adventures. Looking to mix things up? Squalicum Beach is a nearby dog park 0.5 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Marine Park",
+    "street": "100 Harris Ave",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.720041,
+    "longitude": -122.512282,
+    "description": "Dog owners in Bellingham have embraced Marine Park (100 Harris Ave) as a top destination—4.7 stars from 1,129 visits. Open from 6am to 8pm daily, the park is convenient for before work, after work, or weekend adventures. Keep the adventure going at other nearby dog parks like Paws For A Beer (0.1 miles) or Fairhaven Park (0.6 miles)."
+  },
+  {
+    "name": "Fairhaven Park",
+    "street": "107 Chuckanut Dr N",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7158749,
+    "longitude": -122.5018091,
+    "description": "Dog owners in Bellingham have made Fairhaven Park at 107 Chuckanut Dr N a go-to spot, rating it 4.7 stars across 673 reviews. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. For variety, the neighborhood offers more dog parks to explore: Paws For A Beer (0.5 miles) and Marine Park (0.6 miles)."
+  },
+  {
+    "name": "Teddy Bear Cove - Chuckanut",
+    "street": "1467 Chuckanut Dr",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98229",
+    "latitude": 48.6926931,
+    "longitude": -122.4930778,
+    "description": "Bellingham dog owners rate Teddy Bear Cove - Chuckanut at 1467 Chuckanut Dr highly, with 4.7 stars from 480 visits. The park serves dog owners well, providing a destination the community values. Dog owners can also take their pups to nearby Chuckanut Pocket Estuary (0.7 miles) or Arroyo Park (0.7 miles)."
+  },
+  {
+    "name": "Cordata Park",
+    "street": "4510 Cordata Pkwy",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98226",
+    "latitude": 48.8045765,
+    "longitude": -122.4955876,
+    "description": "At 4510 Cordata Pkwy in Bellingham, Cordata Park has built a loyal following—4.7 stars from 450 dog owner reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Julianna Park is another dog-friendly destination 0.2 miles from here."
+  },
+  {
+    "name": "Elizabeth Park",
+    "street": "2205 Elizabeth St",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98225",
+    "latitude": 48.7595178,
+    "longitude": -122.4896818,
+    "description": "For dog owners in the Bellingham area, Elizabeth Park (2205 Elizabeth St) offers a 4.7-star experience based on 374 reviews. Open from 6am to 10pm daily, dog owners can plan visits around work or their pup's energy level. For a change of scenery, Maritime Heritage Park is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "‍ Arroyo Park",
+    "street": "1700 Old Samish Rd",
+    "city": "Bellingham",
+    "state": "WA",
+    "zip": "98229",
+    "latitude": 48.702342,
+    "longitude": -122.485565,
+    "description": "Arroyo Park at 1700 Old Samish Rd is well-regarded by Bellingham dog owners, holding 4.7 stars across 188 reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Nearby, Arroyo Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Skallman Dog Park",
+    "street": "1190 Yew Ave",
+    "city": "Blaine",
+    "state": "WA",
+    "zip": "98230",
+    "latitude": 48.987334,
+    "longitude": -122.732119,
+    "description": "For dog owners in Blaine, Skallman Dog Park at 1190 Yew Ave has a 4.2-star rating (62 reviews). The park serves as a gathering spot for dog owners and their four-legged friends in the area. Reading what other dog owners have experienced here can help with planning a visit."
+  },
+  {
+    "name": "Hounds Hollow Dog Park",
+    "street": "",
+    "city": "Bonney Lake",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.1870191,
+    "longitude": -122.1702293,
+    "description": "In Bonney Lake, Hounds Hollow Dog Park has built a loyal following—4.6 stars from 249 dog owner reviews. Open from 8am to 7pm daily, the park accommodates early risers and evening visitors alike. The reviews indicate this is a trusted destination for dog owners in the area."
+  },
+  {
+    "name": "Tambark Creek Off-Leash Dog",
+    "street": "17111 35th Ave SE",
+    "city": "Bothell",
+    "state": "WA",
+    "zip": "98012",
+    "latitude": 47.8028005,
+    "longitude": -122.1862086,
+    "description": "Located at 17111 35th Ave SE in Bothell, Tambark Creek Off-Leash Dog earns strong marks from local dog owners—4.5 stars from 51 reviews. The park serves dog owners well, providing a destination the community values. Looking for more places to take your pup? Love Park is another popular dog park just 4.5 miles away."
+  },
+  {
+    "name": "Lucky Memorial Dog Park",
+    "street": "10100 NE 149th St",
+    "city": "Brush Prairie",
+    "state": "WA",
+    "zip": "98606",
+    "latitude": 45.72966,
+    "longitude": -122.56966,
+    "description": "At 10100 NE 149th St in Brush Prairie, Lucky Memorial Dog Park has built a loyal following—4.7 stars from 632 dog owner reviews. Open from 7am to 7pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? DogPaw is another popular dog park just 3.5 miles away."
+  },
+  {
+    "name": "Burien Off Leash Dog Park",
+    "street": "15810 5th Ave SW",
+    "city": "Burien",
+    "state": "WA",
+    "zip": "98166",
+    "latitude": 47.461096,
+    "longitude": -122.3402145,
+    "description": "For dog owners in Burien, Burien Off Leash Dog Park at 15810 5th Ave SW has a 4.3-star rating (439 reviews). Open from 7am to 9pm daily, dog owners can stop by when it fits their schedule. More dog parks in the area include Crestview Park (2.9 miles) and Westcrest Park (4.3 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Friendship Park",
+    "street": "15808 SE 254th Pl",
+    "city": "Covington",
+    "state": "WA",
+    "zip": "98042",
+    "latitude": 47.3739285,
+    "longitude": -122.1308572,
+    "description": "At 15808 SE 254th Pl, Friendship Park has 4.1 stars based on 66 reviews from Covington dog owners. Open from 8am to 9pm daily, the park fits conveniently into different routines. Dog owners looking for variety can also visit Lake Meridian Park (1.2 miles) or Clark Lake Park (2.2 miles) with their four-legged friends."
+  },
+  {
+    "name": "Duvall Dog Park",
+    "street": "26524 NE Cherry Valley Rd",
+    "city": "Duvall",
+    "state": "WA",
+    "zip": "98019",
+    "latitude": 47.7478143,
+    "longitude": -121.983924,
+    "description": "At 26524 NE Cherry Valley Rd in Duvall, Duvall Dog Park carries 4.3 stars from 78 dog owner reviews. Open from 5am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners might also enjoy Redmond Watershed Preserve, another dog park just 4.8 miles away."
+  },
+  {
+    "name": "‍ Marina Beach Park",
+    "street": "470 Admiral Way",
+    "city": "Edmonds",
+    "state": "WA",
+    "zip": "98020",
+    "latitude": 47.8072828,
+    "longitude": -122.390789,
+    "description": "With 4.7 stars across 3,039 reviews, Marina Beach Park at 470 Admiral Way has clearly won over Edmonds dog owners. Open from 7am to 9:30pm daily, dog owners can plan visits around their pup's favorite times to be active. For variety, many dog owners also bring their furry friends to Off Leash Area Edmonds (0.3 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Off Leash Area Edmonds",
+    "street": "498 Admiral Way",
+    "city": "Edmonds",
+    "state": "WA",
+    "zip": "98020",
+    "latitude": 47.8039778,
+    "longitude": -122.394251,
+    "description": "At 498 Admiral Way in Edmonds, Off Leash Area Edmonds stands out with 4.7 stars from 1,743 happy dog owners. Open from 5am to 9pm daily, the park accommodates a variety of dog owner schedules and routines. Looking to mix things up? Marina Beach Park is a nearby dog park 0.3 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Esperance Park",
+    "street": "7830 222nd Street SW",
+    "city": "Edmonds",
+    "state": "WA",
+    "zip": "98026",
+    "latitude": 47.7969332,
+    "longitude": -122.339632,
+    "description": "At 7830 222nd Street SW, Esperance Park has 4.4 stars based on 291 reviews from Edmonds dog owners. Open from 7am to 8pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Mountlake Terrace Off-Leash is a nearby dog park worth visiting (1.6 miles)."
+  },
+  {
+    "name": "Lynndale Off-leash Dog Area",
+    "street": "7512 Olympic View Dr",
+    "city": "Edmonds",
+    "state": "WA",
+    "zip": "98026",
+    "latitude": 47.8350649,
+    "longitude": -122.3556306,
+    "description": "Lynndale Off-leash Dog Area at 7512 Olympic View Dr holds a 4.3-star rating from 304 Edmonds dog owner visits. Open from 6am to 9pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners looking for variety can also visit Marina Beach Park (2.5 miles) or Esperance Park (2.7 miles) with their four-legged friends."
+  },
+  {
+    "name": "Pints and Pups",
+    "street": "6923 Evergreen Wy # A",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9347684,
+    "longitude": -122.21895,
+    "description": "For dog owners in the Everett area, Pints and Pups (6923 Evergreen Wy # A) offers a 4.8-star experience based on 86 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Looking for more places to take your pup? Lions Park is another popular dog park just 0.4 miles away."
+  },
+  {
+    "name": "Harborview Park",
+    "street": "1621 W Mukilteo Blvd",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9568784,
+    "longitude": -122.2495448,
+    "description": "1,330 dog owners have made Harborview Park (1621 W Mukilteo Blvd) one of Everett's most trusted parks (4.6 stars). Open from 6am to 10pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. For variety, many dog owners also bring their furry friends to Howarth Park (0.6 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Pawsome Park",
+    "street": "2820 Rucker Ave",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 47.9800527,
+    "longitude": -122.2115709,
+    "description": "Everett dog owners rate Pawsome Park at 2820 Rucker Ave highly, with 5.0 stars from 10 visits. Dog owners in the area consistently choose this park as a go-to destination for their pups. For variety, the neighborhood offers more dog parks to explore: Lowell Riverfront Trail (0.1 miles) and Doyle Park (0.5 miles)."
+  },
+  {
+    "name": "Drew Nielsen Neighborhood Park",
+    "street": "Colby Ave & 13th St",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 48.0005507,
+    "longitude": -122.207961,
+    "description": "Drew Nielsen Neighborhood Park is well-regarded by Everett dog owners, holding 4.6 stars across 122 reviews. Open from 6am to 8pm daily, the park accommodates early risers and evening visitors alike. Other dog parks in the area include Senator Henry M. Jackson Park (0.5 miles) and Wiggums Hollow Park (0.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Howarth Park",
+    "street": "1127 Olympic Blvd",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9612265,
+    "longitude": -122.2387058,
+    "description": "With 4.5 stars across 1,497 reviews, Howarth Park at 1127 Olympic Blvd has clearly won over Everett dog owners. Open from 6am to 9pm daily, the park is convenient for before work, after work, or weekend adventures. Keep the adventure going at other nearby dog parks like Harborview Park (0.6 miles) or Doyle Park (1.4 miles)."
+  },
+  {
+    "name": "Lowell Riverfront Trail",
+    "street": "",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.9793437,
+    "longitude": -122.2127011,
+    "description": "In Everett, Lowell Riverfront Trail earns strong marks from local dog owners—4.5 stars from 766 reviews. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Pawsome Park (0.1 miles) and Doyle Park (0.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Loganberry Lane Dog Park",
+    "street": "9200 18th Ave W",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98204",
+    "latitude": 47.9148214,
+    "longitude": -122.2582795,
+    "description": "For dog owners in the Everett area, Loganberry Lane Dog Park (9200 18th Ave W) offers a 4.5-star experience based on 304 reviews. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Loganberry Lane Park (0.0 miles) or Lions Park (2.3 miles)."
+  },
+  {
+    "name": "Loganberry Lane Park",
+    "street": "9201 18th Ave W",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98204",
+    "latitude": 47.914547,
+    "longitude": -122.257838,
+    "description": "At 9201 18th Ave W in Everett, Loganberry Lane Park has built a loyal following—4.5 stars from 283 dog owner reviews. Open from 7am to 6pm daily, dog owners can easily fit a visit into busy schedules. Nearby, Loganberry Lane Dog Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Lowell Riverfront Dog Park",
+    "street": "2901 Lowell Snohomish River Rd",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9427632,
+    "longitude": -122.1744861,
+    "description": "For dog owners in Everett, Lowell Riverfront Dog Park at 2901 Lowell Snohomish River Rd has a 4.4-star rating (82 reviews). Open from 6am to 9pm daily, dog owners have a window to spend time with their pups. More dog parks in the area include Lowell Park (1.4 miles) and Lions Park (2.1 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Langus Riverfront Park",
+    "street": "400 Smith Island Rd",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 48.0008724,
+    "longitude": -122.1761976,
+    "description": "Dog owners in Everett have made Langus Riverfront Park at 400 Smith Island Rd a go-to spot, rating it 4.4 stars across 860 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Wiggums Hollow Park is another dog-friendly destination 0.8 miles from here."
+  },
+  {
+    "name": "Summit Park",
+    "street": "Summit Ave",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 47.9855121,
+    "longitude": -122.1838395,
+    "description": "In Everett, Summit Park carries 4.3 stars from 176 dog owner reviews. Open from 6am to 10pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Langus Riverfront Park is a nearby dog park worth visiting (1.1 miles)."
+  },
+  {
+    "name": "Lions Park",
+    "street": "7530 Cascade Dr",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9298336,
+    "longitude": -122.2147355,
+    "description": "At 7530 Cascade Dr in Everett, Lions Park carries 4.3 stars from 490 dog owner reviews. For dog owners in the neighborhood, this park offers a place to take their pups. Looking to explore more? Pints and Pups is another dog-friendly park 0.4 miles from here."
+  },
+  {
+    "name": "Senator Henry M. Jackson Park",
+    "street": "3302 18th St",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 47.9937778,
+    "longitude": -122.2068957,
+    "description": "Senator Henry M. Jackson Park at 3302 18th St is well-regarded by Everett dog owners, holding 4.3 stars across 530 reviews. Open from 6am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. More dog-friendly parks nearby include Drew Nielsen Neighborhood Park (0.5 miles) and Wiggums Hollow Park (1.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Doyle Park",
+    "street": "3420 Grand Ave",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 47.9721481,
+    "longitude": -122.2127546,
+    "description": "Dog owners in Everett have rated Doyle Park (3420 Grand Ave) 4.2 stars across 141 reviews. Open from 6am to 10pm daily, the park fits conveniently into different routines. For dog owners who like to explore, Lowell Riverfront Trail (0.5 miles) and Pawsome Park (0.5 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Lowell Park",
+    "street": "4605 S 3rd Ave",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98203",
+    "latitude": 47.9565754,
+    "longitude": -122.1967033,
+    "description": "At 4605 S 3rd Ave in Everett, Lowell Park has built a loyal following—4.2 stars from 709 dog owner reviews. Open from 6am to 5pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Doyle Park (1.3 miles) or Lowell Riverfront Dog Park (1.4 miles)."
+  },
+  {
+    "name": "Wiggums Hollow Park",
+    "street": "2808 10th St",
+    "city": "Everett",
+    "state": "WA",
+    "zip": "98201",
+    "latitude": 48.0040198,
+    "longitude": -122.1925845,
+    "description": "At 2808 10th St in Everett, Wiggums Hollow Park welcomes dog owners from the surrounding neighborhood. Open from 6am to 8pm daily, dog owners have a window to spend time with their pups. For pups who want more adventure, Drew Nielsen Neighborhood Park is a nearby dog park worth visiting (0.8 miles)."
+  },
+  {
+    "name": "French Lake Off-Leash Dog Park",
+    "street": "31531 1st Ave S",
+    "city": "Federal Way",
+    "state": "WA",
+    "zip": "98003",
+    "latitude": 47.3193328,
+    "longitude": -122.3360461,
+    "description": "At 31531 1st Ave S in Federal Way, French Lake Off-Leash Dog Park has built a loyal following—4.5 stars from 943 dog owner reviews. Open from 7am to 7pm daily, there's plenty of opportunity for dog owners to find a time that works. Looking for more places to take your pup? Steel Lake Park is another popular dog park just 1.6 miles away."
+  },
+  {
+    "name": "Steel Lake Park",
+    "street": "2410 S 312th St",
+    "city": "Federal Way",
+    "state": "WA",
+    "zip": "98003",
+    "latitude": 47.3223952,
+    "longitude": -122.3025121,
+    "description": "For Federal Way dog owners, Steel Lake Park at 2410 S 312th St has become a reliable favorite—4.5 stars from 2,684 reviews. Open from 6:30am to 9pm daily, the park accommodates a variety of dog owner schedules and routines. Other popular dog parks nearby include French Lake Off-Leash Dog Park (1.6 miles) and West Fenwick Park (3.4 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Off-leash Dog Park",
+    "street": "",
+    "city": "Ferndale",
+    "state": "WA",
+    "zip": "",
+    "latitude": 48.8466698,
+    "longitude": -122.589723,
+    "description": "Off-leash Dog Park (4.8 stars from 14 reviews) is a popular destination for Ferndale dog owners. The park serves dog owners well, providing a destination the community values. Nearby, Hovander Homestead Park (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Hovander Homestead Park",
+    "street": "5299 Nielsen Ave",
+    "city": "Ferndale",
+    "state": "WA",
+    "zip": "98248",
+    "latitude": 48.8385912,
+    "longitude": -122.5847754,
+    "description": "For Ferndale dog owners, Hovander Homestead Park at 5299 Nielsen Ave has become a reliable favorite—4.7 stars from 1,299 reviews. Open from 8am to 9pm daily, it's easy for dog owners to stop by whenever works best. Want to give your pup even more adventure? Off-leash Dog Park is another beloved dog park just 0.6 miles away."
+  },
+  {
+    "name": "Rotary Bark Park",
+    "street": "10100 Bujacich RdGig Harbor",
+    "city": "‍ Gig Harbor",
+    "state": "WA",
+    "zip": "98332",
+    "latitude": 47.3490773,
+    "longitude": -122.621897,
+    "description": "Rotary Bark Park (4.9 stars from 148 reviews) is a popular destination for Gig Harbor dog owners, located at 10100 Bujacich Rd. Open from 6am to 9pm daily, dog owners can easily fit a visit into busy schedules. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Confluence Park",
+    "street": "655 Rainier Blvd N",
+    "city": "Issaquah",
+    "state": "WA",
+    "zip": "98027",
+    "latitude": 47.5366691,
+    "longitude": -122.0380174,
+    "description": "Issaquah dog owners rate Confluence Park at 655 Rainier Blvd N highly, with 4.6 stars from 538 visits. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Dog Park is another dog-friendly destination 0.3 miles from here."
+  },
+  {
+    "name": "Dog Park",
+    "street": "",
+    "city": "Issaquah",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.5348778,
+    "longitude": -122.043297,
+    "description": "In Issaquah, Dog Park earns strong marks from local dog owners—4.6 stars from 78 reviews. Open from 7am to 7pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Confluence Park (0.3 miles) or Beaver Lake Park (3.8 miles)."
+  },
+  {
+    "name": "Moorlands Park",
+    "street": "15221 84th Ave NE",
+    "city": "Kenmore",
+    "state": "WA",
+    "zip": "98028",
+    "latitude": 47.7390801,
+    "longitude": -122.2290685,
+    "description": "With 4.5 stars from 74 reviews, Moorlands Park at 15221 84th Ave NE has become a favorite among Kenmore dog owners. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Edith Moulton Off Leash Area (1.9 miles)."
+  },
+  {
+    "name": "Highlands Grange Park",
+    "street": "1600 S Union St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.1924978,
+    "longitude": -119.1804307,
+    "description": "With 4.7 stars from 264 reviews, Highlands Grange Park at 1600 S Union St has become a favorite among Kennewick dog owners. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Southridge Sports and Events (0.8 miles) and Freedom Trail (1.1 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Columbia Park",
+    "street": "2222 Columbia Park Trail",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2177277,
+    "longitude": -119.1258323,
+    "description": "At 2222 Columbia Park Trail in Kennewick, Columbia Park has built a loyal following—4.8 stars from 32 dog owner reviews. The steady stream of dog owner visits speaks to the park's appeal. Looking for more places to take your pup? Playground Of Dreams is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Columbia Park",
+    "street": "1876 Paul Parish Drive",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2222202,
+    "longitude": -119.1470219,
+    "description": "With 4.6 stars from 897 reviews, Columbia Park at 1876 Paul Parish Drive has become a favorite among Kennewick dog owners. Open from 7am to 9:30pm daily, dog owners can easily fit a visit into busy schedules. For variety, the neighborhood offers more dog parks to explore: Hawthorne Park (0.6 miles) and Columbia Park (1.1 miles)."
+  },
+  {
+    "name": "‍ Playground Of Dreams",
+    "street": "Columbia Park Trail",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2177277,
+    "longitude": -119.1258323,
+    "description": "With 4.6 stars from 681 reviews, Playground Of Dreams has become a favorite among Kennewick dog owners. Open from 7:30am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Nearby, Columbia Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Rose Garden Picnic Shelter",
+    "street": "",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "",
+    "latitude": 46.2087066,
+    "longitude": -119.119919,
+    "description": "In Kennewick, Rose Garden Picnic Shelter earns strong marks from local dog owners—4.8 stars from 13 reviews. Local dog owners appreciate what this park offers their four-legged friends. For a change of scenery, Keewaydin Park is another dog-friendly destination 0.2 miles from here."
+  },
+  {
+    "name": "Southridge Sports and Events",
+    "street": "2901 Southridge Blvd",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99338",
+    "latitude": 46.181358,
+    "longitude": -119.187758,
+    "description": "Located at 2901 Southridge Blvd in Kennewick, Southridge Sports and Events earns strong marks from local dog owners—4.5 stars from 917 reviews. Local dog owners appreciate what this park offers their four-legged friends. Dog owners exploring the neighborhood can also bring their furry friends to Highlands Grange Park (0.8 miles)."
+  },
+  {
+    "name": "Horse Heaven Hills Park",
+    "street": "3106 S Yelm St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99337",
+    "latitude": 46.1805877,
+    "longitude": -119.1512949,
+    "description": "Horse Heaven Hills Park at 3106 S Yelm St is well-regarded by Kennewick dog owners, holding 4.5 stars across 136 reviews. Open from 7am to 8:30pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Freedom Trail (0.6 miles) and Kenwood Park (1.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Lawrence Scott Park",
+    "street": "6020 W Quinault Ave",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2233701,
+    "longitude": -119.20126,
+    "description": "With 4.4 stars from 583 reviews, Lawrence Scott Park at 6020 W Quinault Ave has become a favorite among Kennewick dog owners. Open from 5am to 10pm daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Penn Park (1.9 miles) or Hawthorne Park (2.2 miles)."
+  },
+  {
+    "name": "Freedom Trail",
+    "street": "2312 S Ely St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99337",
+    "latitude": 46.1869985,
+    "longitude": -119.1596874,
+    "description": "For dog owners in Kennewick, Freedom Trail at 2312 S Ely St has a 4.3-star rating (139 reviews). Dog owners looking for a local destination will find this park accessible. Dog owners in the neighborhood can also take their furry friends to Horse Heaven Hills Park, 0.6 miles away."
+  },
+  {
+    "name": "Zintel Canyon Greenway",
+    "street": "704 S Vancouver St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2020125,
+    "longitude": -119.1485051,
+    "description": "Zintel Canyon Greenway at 704 S Vancouver St in Kennewick has 4.3 stars from 386 dog owner reviews. Dog owners looking for a local destination will find this park accessible. Looking to explore more? Underwood Park is another dog-friendly park 0.1 miles from here."
+  },
+  {
+    "name": "Kenwood Park",
+    "street": "2013 S Garfield St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99337",
+    "latitude": 46.1901722,
+    "longitude": -119.1274224,
+    "description": "At 2013 S Garfield St, Kenwood Park has 4.2 stars based on 43 reviews from Kennewick dog owners. Open from 6am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Nearby dog parks worth exploring with your pup include Civic Athletic Complex (0.9 miles) and Keewaydin Park (1.1 miles)."
+  },
+  {
+    "name": "Hawthorne Park",
+    "street": "609 N Ely Pl",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2169721,
+    "longitude": -119.1565175,
+    "description": "For dog owners in Kennewick, Hawthorne Park at 609 N Ely Pl has a 4.2-star rating (78 reviews). Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners in the neighborhood can also take their furry friends to Columbia Park, 0.6 miles away."
+  },
+  {
+    "name": "Civic Athletic Complex",
+    "street": "209 W 6th Ave",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2025707,
+    "longitude": -119.1201786,
+    "description": "Located at 209 W 6th Ave, Civic Athletic Complex in Kennewick is rated 4.2 stars by 156 dog owners. Dog owners in the area appreciate having a local spot to bring their pups. For pups who want more adventure, Keewaydin Park is a nearby dog park worth visiting (0.2 miles)."
+  },
+  {
+    "name": "Duffy's Pond Park",
+    "street": "217 E Columbia Dr",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.21196,
+    "longitude": -119.112766,
+    "description": "Duffy's Pond Park (217 E Columbia Dr) serves dog owners in the Kennewick neighborhood looking for a place to visit with their pups. Open from 6am to 10pm daily, the park is accessible for dog owners in the area. More dog parks in the area include Rose Garden Picnic Shelter (0.4 miles) and Keewaydin Park (0.6 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Penn Park",
+    "street": "1301 S Penn St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99338",
+    "latitude": 46.196629,
+    "longitude": -119.207062,
+    "description": "At 1301 S Penn St in Kennewick, Penn Park welcomes dog owners from the surrounding neighborhood. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Looking to explore more? Highlands Grange Park is another dog-friendly park 1.3 miles from here."
+  },
+  {
+    "name": "Fruitland Park",
+    "street": "407 N Fruitland St",
+    "city": "‍ Kennewick",
+    "state": "WA",
+    "zip": "99336",
+    "latitude": 46.2132803,
+    "longitude": -119.1263215,
+    "description": "In Kennewick, dog owners can find Fruitland Park at 407 N Fruitland St—a local park worth exploring with their furry companions. For dog owners in the neighborhood, this park offers a place to take their pups. Looking to explore more? Columbia Park is another dog-friendly park 0.3 miles from here."
+  },
+  {
+    "name": "Reber Ranch",
+    "street": "28606 132nd Ave SE",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98042",
+    "latitude": 47.3449423,
+    "longitude": -122.1644416,
+    "description": "Local dog owners love Reber Ranch at 28606 132nd Ave SE in Kent—4.7 stars from an impressive 2,334 reviews. For dog owners seeking a tried-and-true destination, this park delivers consistently. For more dog park adventures, explore Sun Meadows Park (0.3 miles) or Green View Park (0.9 miles) with your furry companion."
+  },
+  {
+    "name": "Soos Creek Trail",
+    "street": "148th Ave SE and SE 266th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98042",
+    "latitude": 47.3826903,
+    "longitude": -122.2270272,
+    "description": "For Kent dog owners, Soos Creek Trail at 148th Ave SE and SE 266th St has become a reliable favorite—4.6 stars from 1,015 reviews. This park has clearly won over local dog owners who return again and again with their furry friends. Looking to mix things up? Mill Creek Canyon Earthworks is a nearby dog park 0.1 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "West Fenwick Park",
+    "street": "3808 S Reith Rd",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "latitude": 47.370293,
+    "longitude": -122.2841672,
+    "description": "Dog owners in Kent have made West Fenwick Park at 3808 S Reith Rd a go-to spot, rating it 4.6 stars across 730 reviews. Open from 7am to 9pm daily, dog owners can easily fit a visit into busy schedules. Other dog parks in the area include Lake Fenwick Park (0.5 miles) and Eagle View Park (1.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Gary Grant Park",
+    "street": "13524 SE 208th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98042",
+    "latitude": 47.4165065,
+    "longitude": -122.1603123,
+    "description": "Located at 13524 SE 208th St in Kent, Gary Grant Park earns strong marks from local dog owners—4.6 stars from 45 reviews. Dog owners looking for a solid destination will find this park delivers. Looking for more places to take your pup? Clark Lake Park is another popular dog park just 2.1 miles away."
+  },
+  {
+    "name": "Green View Park",
+    "street": "12033 SE 277th Pl",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.3523774,
+    "longitude": -122.1801095,
+    "description": "Green View Park at 12033 SE 277th Pl is well-regarded by Kent dog owners, holding 4.6 stars across 38 reviews. Open from 7am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Sun Meadows Park is another dog-friendly destination 0.7 miles from here."
+  },
+  {
+    "name": "‍ Clark Lake Park",
+    "street": "12520 SE 240th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98031",
+    "latitude": 47.3880214,
+    "longitude": -122.173877,
+    "description": "Dog owners in Kent have made Clark Lake Park at 12520 SE 240th St a go-to spot, rating it 4.5 stars across 770 reviews. The steady stream of dog owner visits speaks to the park's appeal. More dog-friendly parks nearby include Park (1.1 miles) and Morrill Meadows Dog Park (1.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ Lake Meridian Park",
+    "street": "14800 SE 272nd St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.3586909,
+    "longitude": -122.1450122,
+    "description": "At 14800 SE 272nd St in Kent, Lake Meridian Park stands out with 4.5 stars from 2,517 happy dog owners. Open from 7am to 8:30pm daily, dog owners can easily fit a visit into their day, whether morning or evening. Keep the adventure going at other nearby dog parks like Sun Meadows Park (1.2 miles) or Friendship Park (1.2 miles)."
+  },
+  {
+    "name": "Morrill Meadows Dog Park",
+    "street": "10822 SE 248th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.379793,
+    "longitude": -122.1961686,
+    "description": "Located at 10822 SE 248th St, Morrill Meadows Dog Park in Kent is rated 4.4 stars by 19 dog owners. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners looking for variety can also visit Morrill Meadows Park (0.1 miles) or Park (1.1 miles) with their four-legged friends."
+  },
+  {
+    "name": "‍ Chestnut Ridge Park",
+    "street": "9901 S 203rd St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98031",
+    "latitude": 47.4201013,
+    "longitude": -122.2090351,
+    "description": "At 9901 S 203rd St in Kent, Chestnut Ridge Park carries 4.4 stars from 253 dog owner reviews. Open from 8am to 5pm weekdays, dog owners have flexibility to plan a visit with their four-legged friends. For dog owners who like to explore, Park (1.8 miles) and Gary Grant Park (2.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Lake Fenwick Park",
+    "street": "25828 Lake Fenwick Rd",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "latitude": 47.3692605,
+    "longitude": -122.2731792,
+    "description": "With 4.4 stars from 1,481 reviews, Lake Fenwick Park at 25828 Lake Fenwick Rd has become a favorite among Kent dog owners. Open from 6am to 10pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: West Fenwick Park (0.5 miles) and Eagle View Park (1.4 miles)."
+  },
+  {
+    "name": "Eagle View Park",
+    "street": "53rd Pl S",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "latitude": 47.3898182,
+    "longitude": -122.2672003,
+    "description": "For dog owners in Kent, Eagle View Park at 53rd Pl S has a 4.3-star rating (32 reviews). Open from 7am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. Nearby dog parks worth exploring with your pup include Grandview Off-Leash Dog Park (1.1 miles) and Lake Fenwick Park (1.4 miles)."
+  },
+  {
+    "name": "Tudor Square Park",
+    "street": "26755 112th Ave SE",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.3618107,
+    "longitude": -122.1920109,
+    "description": "Located at 26755 112th Ave SE, Tudor Square Park in Kent is rated 4.3 stars by 82 dog owners. Open from 8am to 8pm daily, dog owners have a window to spend time with their pups. For dog owners who like to explore, Green View Park (0.9 miles) and Morrill Meadows Dog Park (1.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Sun Meadows Park",
+    "street": "13120 SE 282nd Way",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.3493506,
+    "longitude": -122.1661203,
+    "description": "At 13120 SE 282nd Way in Kent, Sun Meadows Park welcomes dog owners from the surrounding neighborhood. Local dog owners use this park as a spot to spend time with their furry companions. More dog parks in the area include Reber Ranch (0.3 miles) and Green View Park (0.7 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Morrill Meadows Park",
+    "street": "10600 SE 248th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98030",
+    "latitude": 47.3801576,
+    "longitude": -122.1991059,
+    "description": "For dog owners in the Kent area, Morrill Meadows Park (10600 SE 248th St) offers a 4.3-star experience based on 694 reviews. Open from 8am to 8pm daily, dog owners can easily fit a visit into busy schedules. For variety, the neighborhood offers more dog parks to explore: Morrill Meadows Dog Park (0.1 miles) and Park (1.1 miles)."
+  },
+  {
+    "name": "Briscoe Park",
+    "street": "6000 S 190th St",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "latitude": 47.431788,
+    "longitude": -122.256894,
+    "description": "Dog owners in Kent have rated Briscoe Park (6000 S 190th St) 4.2 stars across 103 reviews. Open from 8am to 8pm daily, the park fits conveniently into different routines. Dog owners in the neighborhood can also take their furry friends to Crestview Park, 2.1 miles away."
+  },
+  {
+    "name": "Russell Woods Park",
+    "street": "Green River Trail",
+    "city": "Kent",
+    "state": "WA",
+    "zip": "98032",
+    "latitude": 47.3665367,
+    "longitude": -122.2362584,
+    "description": "Russell Woods Park in Kent has 4.2 stars based on 105 reviews from dog owners. Open from 6:30am to 9pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Soos Creek Trail is a nearby dog park worth visiting (1.2 miles)."
+  },
+  {
+    "name": "Waverly Park",
+    "street": "725 Waverly Park Way",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6879845,
+    "longitude": -122.2172685,
+    "description": "Dog owners in Kirkland have made Waverly Park at 725 Waverly Park Way a go-to spot, rating it 4.9 stars across 108 reviews. Open from 8am to 5pm weekdays, dog owners can plan visits around work or their pup's energy level. Other dog parks in the area include Waverly Beach Park (0.1 miles) and Reservoir Park (0.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Waverly Beach Park",
+    "street": "633 Waverly Park Way",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6869147,
+    "longitude": -122.2164558,
+    "description": "With 4.7 stars across 1,034 reviews, Waverly Beach Park at 633 Waverly Park Way has clearly won over Kirkland dog owners. Open from 8am to 10pm daily, it's easy for dog owners to stop by whenever works best. For more dog park adventures, explore Waverly Park (0.1 miles) or Reservoir Park (0.6 miles) with your furry companion."
+  },
+  {
+    "name": "Bridle Trails State Park",
+    "street": "5300 116th Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6571012,
+    "longitude": -122.1854854,
+    "description": "For Kirkland dog owners, Bridle Trails State Park at 5300 116th Ave NE has become a reliable favorite—4.7 stars from 1,023 reviews. For dog owners seeking a tried-and-true destination, this park delivers consistently. For more dog park adventures, explore Watershed Park (0.6 miles) or Snyder's Corner Park (1.2 miles) with your furry companion."
+  },
+  {
+    "name": "Edith Moulton Off Leash Area",
+    "street": "13634 108th Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98034",
+    "latitude": 47.7229195,
+    "longitude": -122.1969578,
+    "description": "At 13634 108th Ave NE in Kirkland, Edith Moulton Off Leash Area has built a loyal following—4.7 stars from 341 dog owner reviews. Open from 6am to 9pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Jasper's Dog Park (1.2 miles) and Juanita Beach Park (1.5 miles)."
+  },
+  {
+    "name": "‍ Heritage Park",
+    "street": "111 Waverly Way",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6782106,
+    "longitude": -122.2100002,
+    "description": "For dog owners in the Kirkland area, Heritage Park (111 Waverly Way) offers a 4.6-star experience based on 586 reviews. Open from 6am to 11pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Waverly Beach Park (0.7 miles) and Reservoir Park (0.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Juanita Beach Park",
+    "street": "9703 NE Juanita Dr",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98034",
+    "latitude": 47.7049897,
+    "longitude": -122.2159722,
+    "description": "For Kirkland dog owners, Juanita Beach Park at 9703 NE Juanita Dr needs no introduction—4.6 stars, 5,264 reviews. The sheer volume of dog owner visits speaks to what makes this park exceptional. For more dog park adventures, explore Jasper's Dog Park (1.2 miles) or Waverly Park (1.2 miles) with your furry companion."
+  },
+  {
+    "name": "Watershed Park",
+    "street": "4500 110th Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.650882,
+    "longitude": -122.193507,
+    "description": "Located at 4500 110th Ave NE in Kirkland, Watershed Park earns strong marks from local dog owners—4.5 stars from 196 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Other dog parks in the area include Bridle Trails State Park (0.6 miles) and Snyder's Corner Park (1.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Snyder's Corner Park",
+    "street": "6720 132nd Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6660631,
+    "longitude": -122.1638752,
+    "description": "Dog owners in Kirkland have rated Snyder's Corner Park (6720 132nd Ave NE) 4.4 stars across 41 reviews. The park gives neighborhood dog owners a destination for outings with their four-legged friends. For dog owners who like to explore, Rose Hill Meadows Park (1.0 miles) and Bridle Trails State Park (1.2 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Rose Hill Meadows Park",
+    "street": "8200 124th Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6775518,
+    "longitude": -122.1758342,
+    "description": "At 8200 124th Ave NE, Rose Hill Meadows Park has 4.4 stars based on 58 reviews from Kirkland dog owners. This park provides dog owners in the community with a place to visit with their dogs. Nearby dog parks worth exploring with your pup include Snyder's Corner Park (1.0 miles) and Mark Twain Park (1.3 miles)."
+  },
+  {
+    "name": "‍ Mark Twain Park",
+    "street": "10625 132nd Ave NE",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6955543,
+    "longitude": -122.1662087,
+    "description": "At 10625 132nd Ave NE in Kirkland, Mark Twain Park carries 4.4 stars from 88 dog owner reviews. Local dog owners use this park as a spot to spend time with their furry companions. Dog owners might also enjoy Rose Hill Meadows Park, another dog park just 1.3 miles away."
+  },
+  {
+    "name": "Reservoir Park",
+    "street": "1501 3rd St",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98033",
+    "latitude": 47.6873094,
+    "longitude": -122.2044025,
+    "description": "Reservoir Park at 1501 3rd St holds a 4.1-star rating from 24 Kirkland dog owner visits. Open from 7am to 9pm daily, dog owners have a window to spend time with their pups. More dog parks in the area include Waverly Beach Park (0.6 miles) and Waverly Park (0.6 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Jasper's Dog Park",
+    "street": "11225 NE 120th St",
+    "city": "Kirkland",
+    "state": "WA",
+    "zip": "98034",
+    "latitude": 47.706602,
+    "longitude": -122.1910585,
+    "description": "At 11225 NE 120th St in Kirkland, Jasper's Dog Park carries 4.3 stars from 410 dog owner reviews. Open from 6am to 10pm daily, dog owners can stop by when it fits their schedule. For pups who want more adventure, Edith Moulton Off Leash Area is a nearby dog park worth visiting (1.2 miles)."
+  },
+  {
+    "name": "‍ Brooks Park",
+    "street": "1313 College St SE",
+    "city": "Lacey",
+    "state": "WA",
+    "zip": "98503",
+    "latitude": 47.0348216,
+    "longitude": -122.8251712,
+    "description": "At 1313 College St SE, Brooks Park has 4.4 stars based on 59 reviews from Lacey dog owners. The park serves as a gathering spot for dog owners and their four-legged friends in the area. More dog parks in the area include Olympia Dog Park (3.3 miles) and Thurston County Off-Leash Dog (4.5 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Thurston County Off-Leash Dog",
+    "street": "2420 Hogum Bay Rd NE",
+    "city": "Lacey",
+    "state": "WA",
+    "zip": "98516",
+    "latitude": 47.0854533,
+    "longitude": -122.7648787,
+    "description": "With 4.3 stars from 846 reviews, Thurston County Off-Leash Dog at 2420 Hogum Bay Rd NE has become a favorite among Lacey dog owners. Open from 6am to 9pm daily, the park works well for dog owners with different schedules. For a change of scenery, Brooks Park is another dog-friendly destination 4.5 miles from here."
+  },
+  {
+    "name": "Love Park",
+    "street": "NE 196th St",
+    "city": "Lake Forest Park",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7710554,
+    "longitude": -122.2702844,
+    "description": "Love Park holds a 4.4-star rating from 40 Lake Forest Park dog owner visits. Open from 6am to 9pm daily, the park is accessible for dog owners in the area. More dog parks in the area include Mountlake Terrace Off-Leash (2.2 miles) and North City Park (2.3 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Cavalero Hill Dog Park",
+    "street": "7708 20th St SE",
+    "city": "Lake Stevens",
+    "state": "WA",
+    "zip": "98258",
+    "latitude": 47.9779659,
+    "longitude": -122.1275234,
+    "description": "Cavalero Hill Dog Park at 7708 20th St SE holds a 4.4-star rating from 417 Lake Stevens dog owner visits. Open from 7am to 10pm daily, the park fits conveniently into different routines. Looking to explore more? Summit Park is another dog-friendly park 2.7 miles from here."
+  },
+  {
+    "name": "‍ Fort Steilacoom Park",
+    "street": "8714 87th Ave SW",
+    "city": "Lakewood",
+    "state": "WA",
+    "zip": "98498",
+    "latitude": 47.1640334,
+    "longitude": -122.5525032,
+    "description": "Local dog owners love Fort Steilacoom Park at 8714 87th Ave SW in Lakewood—4.7 stars from an impressive 1,965 reviews. The community of dog owners here is welcoming and the atmosphere consistently positive. Nearby, Fort Steilacoom Dog Park (0.3 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Fort Steilacoom Dog Park",
+    "street": "8804 Dresden Ln SW",
+    "city": "Lakewood",
+    "state": "WA",
+    "zip": "98498",
+    "latitude": 47.1776499,
+    "longitude": -122.5535677,
+    "description": "With 4.7 stars from 979 reviews, Fort Steilacoom Dog Park at 8804 Dresden Ln SW has become a favorite among Lakewood dog owners. Open from 7am to 9pm daily, the park accommodates early risers and evening visitors alike. Dog owners can also take their pups to nearby Fort Steilacoom Dog Park (0.6 miles) or Fort Steilacoom Park (0.9 miles)."
+  },
+  {
+    "name": "‍ Fort Steilacoom Dog Park",
+    "street": "9806 Angle Ln SW",
+    "city": "Lakewood",
+    "state": "WA",
+    "zip": "98498",
+    "latitude": 47.168294,
+    "longitude": -122.552669,
+    "description": "Dog owners in Lakewood have made Fort Steilacoom Dog Park at 9806 Angle Ln SW a go-to spot, rating it 4.6 stars across 22 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Nearby, Fort Steilacoom Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Springbrook Park",
+    "street": "12601 Addison St SW",
+    "city": "Lakewood",
+    "state": "WA",
+    "zip": "98499",
+    "latitude": 47.142302,
+    "longitude": -122.5002478,
+    "description": "For dog owners near 12601 Addison St SW in Lakewood, Springbrook Park provides a convenient spot to take their dogs. Open from 6am to 6pm daily, dog owners can stop by when it fits their schedule. For pups who want more adventure, Fort Steilacoom Park is a nearby dog park worth visiting (2.9 miles)."
+  },
+  {
+    "name": "Strawberry Fields Off-Leash",
+    "street": "6100 152nd St NE",
+    "city": "Marysville",
+    "state": "WA",
+    "zip": "98271",
+    "latitude": 48.1336239,
+    "longitude": -122.147591,
+    "description": "At 6100 152nd St NE, Strawberry Fields Off-Leash has 4.3 stars based on 390 reviews from Marysville dog owners. Open from 8am to 11pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners might also enjoy Doleshel Park, another dog park just 3.9 miles away."
+  },
+  {
+    "name": "Doleshel Park",
+    "street": "9028 67th Ave NE",
+    "city": "Marysville",
+    "state": "WA",
+    "zip": "98270",
+    "latitude": 48.0769342,
+    "longitude": -122.1403217,
+    "description": "Located at 9028 67th Ave NE, Doleshel Park in Marysville is rated 4.3 stars by 196 dog owners. Open from 7am to 9pm daily, the park is accessible for dog owners in the area. Looking to explore more? Strawberry Fields Off-Leash is another dog-friendly park 3.9 miles from here."
+  },
+  {
+    "name": "Medina Park",
+    "street": "7789 NE 12th St",
+    "city": "Medina",
+    "state": "WA",
+    "zip": "98039",
+    "latitude": 47.6210481,
+    "longitude": -122.2355536,
+    "description": "For dog owners in the Medina area, Medina Park (7789 NE 12th St) offers a 4.7-star experience based on 375 reviews. Open from 8am to 4pm weekdays, there's room in the day for dog owners to bring their furry friends. Nearby, Clyde Beach Park (1.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Luther Burbank Park",
+    "street": "2040 84th Ave SE",
+    "city": "Mercer Island",
+    "state": "WA",
+    "zip": "98040",
+    "latitude": 47.5915111,
+    "longitude": -122.225312,
+    "description": "With 4.7 stars across 2,188 reviews, Luther Burbank Park at 2040 84th Ave SE has clearly won over Mercer Island dog owners. Open from 6am to 10pm daily, dog owners can plan visits around their pup's favorite times to be active. For variety, many dog owners also bring their furry friends to Killarney Glen Park (1.1 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Wildwood Park",
+    "street": "7265 87th Ave SE",
+    "city": "Mercer Island",
+    "state": "WA",
+    "zip": "98040",
+    "latitude": 47.5370544,
+    "longitude": -122.2229715,
+    "description": "18 dog owners have reviewed Wildwood Park at 7265 87th Ave SE in Mercer Island, averaging 4.2 stars. Open from 6am to 10pm daily, the park fits conveniently into different routines. For pups who want more adventure, Seward Park is a nearby dog park worth visiting (1.8 miles)."
+  },
+  {
+    "name": "Mountlake Terrace Off-Leash",
+    "street": "5303 228th St SW",
+    "city": "Mountlake Terrace",
+    "state": "WA",
+    "zip": "98043",
+    "latitude": 47.7924827,
+    "longitude": -122.3053274,
+    "description": "For dog owners in Mountlake Terrace, Mountlake Terrace Off-Leash at 5303 228th St SW has a 4.2-star rating (360 reviews). Open from 6am to 8pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy Esperance Park, another dog park just 1.6 miles away."
+  },
+  {
+    "name": "Tails and Trails Dog Park",
+    "street": "1301 5th St",
+    "city": "Mukilteo",
+    "state": "WA",
+    "zip": "98275",
+    "latitude": 47.9464589,
+    "longitude": -122.2938288,
+    "description": "Tails and Trails Dog Park at 1301 5th St holds a 4.2-star rating from 485 Mukilteo dog owner visits. Open from 6am to 10pm daily, the park fits conveniently into different routines. For pups who want more adventure, Harborview Park is a nearby dog park worth visiting (2.2 miles)."
+  },
+  {
+    "name": "Olympia Dog Park",
+    "street": "2008 Yelm Hwy SE",
+    "city": "Olympia",
+    "state": "WA",
+    "zip": "98501",
+    "latitude": 47.0035624,
+    "longitude": -122.8780489,
+    "description": "Dog owners in Olympia have rated Olympia Dog Park (2008 Yelm Hwy SE) 4.4 stars across 202 reviews. Open from 7:31am to 6:23pm daily, dog owners can stop by when it fits their schedule. Dog owners looking for variety can also visit Evergreen Park (2.6 miles) or Brooks Park (3.3 miles) with their four-legged friends."
+  },
+  {
+    "name": "Evergreen Park",
+    "street": "1445 Evergreen Park Dr SW",
+    "city": "Olympia",
+    "state": "WA",
+    "zip": "98502",
+    "latitude": 47.0283488,
+    "longitude": -122.9203789,
+    "description": "At 1445 Evergreen Park Dr SW in Olympia, Evergreen Park carries 4.2 stars from 43 dog owner reviews. This park provides dog owners in the community with a place to visit with their dogs. Looking to explore more? Sunrise Park is another dog-friendly park 1.5 miles from here."
+  },
+  {
+    "name": "Sunrise Park",
+    "street": "505 Bing St NW",
+    "city": "Olympia",
+    "state": "WA",
+    "zip": "98502",
+    "latitude": 47.0497862,
+    "longitude": -122.9291402,
+    "description": "Dog owners in Olympia have rated Sunrise Park (505 Bing St NW) 4.2 stars across 216 reviews. Open from 9am to 6:30pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Evergreen Park is a nearby dog park worth visiting (1.5 miles)."
+  },
+  {
+    "name": "Palomino Park",
+    "street": "5801 Chapel Hill Blvd",
+    "city": "Pasco",
+    "state": "WA",
+    "zip": "99301",
+    "latitude": 46.2592133,
+    "longitude": -119.1664275,
+    "description": "With 4.5 stars from 8 reviews, Palomino Park at 5801 Chapel Hill Blvd has become a favorite among Pasco dog owners. Dog owners looking for a solid destination will find this park delivers. For variety, the neighborhood offers more dog parks to explore: Casa Del Sol Park (1.3 miles) and Columbia Park (2.7 miles)."
+  },
+  {
+    "name": "Casa Del Sol Park",
+    "street": "4802 Laredo Dr",
+    "city": "Pasco",
+    "state": "WA",
+    "zip": "99301",
+    "latitude": 46.275866,
+    "longitude": -119.1529812,
+    "description": "78 dog owners have reviewed Casa Del Sol Park at 4802 Laredo Dr in Pasco, averaging 4.3 stars. Open from 6am to 10pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Palomino Park (1.3 miles) or Lucas Park (3.0 miles) with their four-legged friends."
+  },
+  {
+    "name": "Lucas Park",
+    "street": "2114 N 14th Ave",
+    "city": "Pasco",
+    "state": "WA",
+    "zip": "99301",
+    "latitude": 46.2469,
+    "longitude": -119.1071582,
+    "description": "For dog owners in Pasco, Lucas Park at 2114 N 14th Ave has a 4.2-star rating (66 reviews). Open from 6am to 10pm daily, dog owners have a window to spend time with their pups. Dog owners in the neighborhood can also take their furry friends to Columbia Park, 2.2 miles away."
+  },
+  {
+    "name": "Clarks Creek Off-Leash Dog",
+    "street": "926 18th St SW",
+    "city": "Puyallup",
+    "state": "WA",
+    "zip": "98371",
+    "latitude": 47.1839186,
+    "longitude": -122.3178592,
+    "description": "Clarks Creek Off-Leash Dog at 926 18th St SW in Puyallup has 4.3 stars from 407 dog owner reviews. Open from 6am to 10pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Swan Creek Dog Park (4.4 miles) or Habitat Dog Park (4.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "Farrel-McWhirter Park",
+    "street": "19545 NE Redmond Rd",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6924685,
+    "longitude": -122.0788085,
+    "description": "Located at 19545 NE Redmond Rd in Redmond, Farrel-McWhirter Park earns strong marks from local dog owners—4.8 stars from 895 reviews. Open from 9am to 4pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Bear Creek Park (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Bear Creek Park",
+    "street": "Evans Creek Trail",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6852422,
+    "longitude": -122.0869103,
+    "description": "Redmond dog owners rate Bear Creek Park highly, with 4.8 stars from 13 visits. Dog owners in the area consistently choose this park as a go-to destination for their pups. For a change of scenery, Farrel-McWhirter Park is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "‍ Marymoor Park",
+    "street": "6046 West Lake Sammamish Pkwy NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.6624374,
+    "longitude": -122.1214569,
+    "description": "For Redmond dog owners, Marymoor Park at 6046 West Lake Sammamish Pkwy NE needs no introduction—4.7 stars, 5,560 reviews. Tens of thousands of dog owners have discovered what makes this park special. Dog owners in the area also frequent Woodbridge Private Park (0.5 miles)—another top dog park worth visiting with your pup."
+  },
+  {
+    "name": "Perrigo Park",
+    "street": "9011 196th Ave NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6747349,
+    "longitude": -122.078969,
+    "description": "1,177 dog owners have made Perrigo Park (9011 196th Ave NE) one of Redmond's most trusted parks (4.7 stars). Open from 7am to 9pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. For more dog park adventures, explore Evans Creek Natural Area (0.0 miles) or Arthur Johnson Park (0.0 miles) with your furry companion."
+  },
+  {
+    "name": "Redmond Watershed Preserve",
+    "street": "21760 NE Novelty Hill Rd",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6959964,
+    "longitude": -122.051433,
+    "description": "With 4.7 stars from 691 reviews, Redmond Watershed Preserve at 21760 NE Novelty Hill Rd has become a favorite among Redmond dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Looking for more places to take your pup? Evans Creek Preserve is another popular dog park just 0.6 miles away."
+  },
+  {
+    "name": "Evans Creek Preserve",
+    "street": "4001 224th Ave NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6892991,
+    "longitude": -122.0416826,
+    "description": "At 4001 224th Ave NE in Redmond, Evans Creek Preserve has built a loyal following—4.7 stars from 608 dog owner reviews. Open from 7am to 6pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Redmond Watershed Preserve (0.6 miles) and Farrel-McWhirter Park (1.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Downtown Park",
+    "street": "16101 Redmond Way",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.6749168,
+    "longitude": -122.1253452,
+    "description": "Downtown Park at 16101 Redmond Way is well-regarded by Redmond dog owners, holding 4.6 stars across 511 reviews. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby Dudley Carter Park (0.3 miles) or Luke McRedmond Park (0.4 miles)."
+  },
+  {
+    "name": "Sixty Acres Park",
+    "street": "15200 NE 116th St",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.7043175,
+    "longitude": -122.1366042,
+    "description": "For dog owners in the Redmond area, Sixty Acres Park (15200 NE 116th St) offers a 4.6-star experience based on 754 reviews. Local dog owners appreciate what this park offers their four-legged friends. Other dog parks in the area include Mark Twain Park (1.5 miles) and Juel Park (2.1 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Idylwood Park",
+    "street": "3650 West Lake Sammamish Pkwy NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.6420016,
+    "longitude": -122.1034166,
+    "description": "For Redmond dog owners, Idylwood Park at 3650 West Lake Sammamish Pkwy NE has become a reliable favorite—4.6 stars from 2,362 reviews. This park has clearly won over local dog owners who return again and again with their furry friends. For more dog park adventures, explore Ardmore Park (0.7 miles) or Ivanhoe Park (1.4 miles) with your furry companion."
+  },
+  {
+    "name": "Redmond Ridge East Recreationa",
+    "street": "",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.6694141,
+    "longitude": -122.1238767,
+    "description": "With 4.5 stars from 35 reviews, Redmond Ridge East Recreationa has become a favorite among Redmond dog owners. Open from 7am to 9:30pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Woodbridge Private Park (0.0 miles) or Dudley Carter Park (0.2 miles)."
+  },
+  {
+    "name": "Luke McRedmond Park",
+    "street": "15644 Redmond Way",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.6736123,
+    "longitude": -122.1328392,
+    "description": "Located at 15644 Redmond Way in Redmond, Luke McRedmond Park earns strong marks from local dog owners—4.5 stars from 46 reviews. Open from 6am to 8:30pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Dudley Carter Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Dudley Carter Park",
+    "street": "7447 159th Pl NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.671437,
+    "longitude": -122.127668,
+    "description": "At 7447 159th Pl NE in Redmond, Dudley Carter Park has built a loyal following—4.5 stars from 126 dog owner reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. For variety, the neighborhood offers more dog parks to explore: Woodbridge Private Park (0.2 miles) and Redmond Ridge East Recreationa (0.2 miles)."
+  },
+  {
+    "name": "Evans Creek Natural Area",
+    "street": "196th Ave NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6747349,
+    "longitude": -122.078969,
+    "description": "For dog owners in Redmond, Evans Creek Natural Area at 196th Ave NE has a 4.3-star rating (18 reviews). Open from 6am to 9:30pm daily, dog owners have flexibility to plan a visit with their four-legged friends. More dog parks in the area include Perrigo Park (0.0 miles) and Arthur Johnson Park (0.0 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Arthur Johnson Park",
+    "street": "7901 196th Ave NE",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98053",
+    "latitude": 47.6741326,
+    "longitude": -122.079114,
+    "description": "22 dog owners have reviewed Arthur Johnson Park at 7901 196th Ave NE in Redmond, averaging 4.3 stars. Open from 5am to 11pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners might also enjoy Perrigo Park, another dog park just 0.0 miles away."
+  },
+  {
+    "name": "Woodbridge Private Park",
+    "street": "",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.6694141,
+    "longitude": -122.1238767,
+    "description": "Woodbridge Private Park in Redmond is rated 4.4 stars by 102 dog owners. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Looking to explore more? Redmond Ridge East Recreationa is another dog-friendly park 0.0 miles from here."
+  },
+  {
+    "name": "Redmond West Wetlands",
+    "street": "NE 60th St",
+    "city": "Redmond",
+    "state": "WA",
+    "zip": "98052",
+    "latitude": 47.6604623,
+    "longitude": -122.0874951,
+    "description": "Dog owners in Redmond have rated Redmond West Wetlands 4.3 stars across 39 reviews. Dog owners in the area appreciate having a local spot to bring their pups. For pups who want more adventure, Arthur Johnson Park is a nearby dog park worth visiting (1.0 miles)."
+  },
+  {
+    "name": "Cedar River Trail Park",
+    "street": "1060 Nishiwaki Ln",
+    "city": "Renton",
+    "state": "WA",
+    "zip": "98057",
+    "latitude": 47.500874,
+    "longitude": -122.2145227,
+    "description": "Cedar River Trail Park at 1060 Nishiwaki Ln is well-regarded by Renton dog owners, holding 4.5 stars across 622 reviews. Open from 7am to 7pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Cedar River Dog Park (1.5 miles) and Wildwood Park (2.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Maplewood Park",
+    "street": "Lyons Ave NE",
+    "city": "Renton",
+    "state": "WA",
+    "zip": "98059",
+    "latitude": 47.5164889,
+    "longitude": -122.1463736,
+    "description": "110 dog owners have reviewed Maplewood Park in Renton, averaging 4.4 stars. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. Dog owners in the neighborhood can also take their furry friends to Meadow Wood Park, 2.3 miles away."
+  },
+  {
+    "name": "Cedar River Dog Park",
+    "street": "1500 Houser Way S",
+    "city": "Renton",
+    "state": "WA",
+    "zip": "98057",
+    "latitude": 47.480245,
+    "longitude": -122.2023473,
+    "description": "Cedar River Dog Park at 1500 Houser Way S holds a 4.1-star rating from 148 Renton dog owner visits. Open from 7am to 9pm daily, dog owners in the area can work a visit into their day. For dog owners who like to explore, Cedar River Trail Park (1.5 miles) and Maplewood Park (3.6 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Paws-abilities Place",
+    "street": "",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "",
+    "latitude": 46.2804298,
+    "longitude": -119.275205,
+    "description": "Dog owners in Richland have made Paws-abilities Place a go-to spot, rating it 4.7 stars across 219 reviews. Open from 5am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, W.E. Johnson Park is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "Badger Mountain Community Park",
+    "street": "350 Keene Rd",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2357253,
+    "longitude": -119.2821034,
+    "description": "Dog owners in Richland have made Badger Mountain Community Park at 350 Keene Rd a go-to spot, rating it 4.6 stars across 459 reviews. Open from 5am to 11pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: DOG PARK (0.7 miles) and Chaparral Park (1.0 miles)."
+  },
+  {
+    "name": "Claybell Park",
+    "street": "425 Broadmoor St",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2170878,
+    "longitude": -119.2549506,
+    "description": "Claybell Park (4.6 stars from 242 reviews) is a popular destination for Richland dog owners, located at 425 Broadmoor St. Open from 7am to 8pm daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Overlook Park (0.5 miles) or Meadows East Park (0.5 miles)."
+  },
+  {
+    "name": "Meadows East Park",
+    "street": "610 Muriel St",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2232785,
+    "longitude": -119.2488642,
+    "description": "Richland dog owners rate Meadows East Park at 610 Muriel St highly, with 4.6 stars from 23 visits. Open from 5am to 11pm daily, dog owners have plenty of flexibility to plan a visit. Other dog parks in the area include Claybell Park (0.5 miles) and Overlook Park (0.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Overlook Park",
+    "street": "130 Fairwood Ct",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2208221,
+    "longitude": -119.2637679,
+    "description": "Overlook Park at 130 Fairwood Ct holds a 4.4-star rating from 39 Richland dog owner visits. Open from 6am to 10pm daily, dog owners have a window to spend time with their pups. Looking to explore more? Claybell Park is another dog-friendly park 0.5 miles from here."
+  },
+  {
+    "name": "Riverview Natural Preserve",
+    "street": "800 Columbia Point Dr",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2628308,
+    "longitude": -119.2524295,
+    "description": "Dog owners in Richland have rated Riverview Natural Preserve (800 Columbia Point Dr) 4.4 stars across 80 reviews. This park provides dog owners in the community with a place to visit with their dogs. Nearby dog parks worth exploring with your pup include W.E. Johnson Park (1.6 miles) and Paws-abilities Place (1.6 miles)."
+  },
+  {
+    "name": "W.E. Johnson Park",
+    "street": "",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "",
+    "latitude": 46.2804298,
+    "longitude": -119.275205,
+    "description": "Dog owners in Richland have rated W.E. Johnson Park 4.3 stars across 99 reviews. Open from 6am to 10pm daily, dog owners have a window to spend time with their pups. More dog parks in the area include Paws-abilities Place (0.0 miles) and Riverview Natural Preserve (1.6 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Chaparral Park",
+    "street": "130 Timmerman Dr",
+    "city": "‍ Richland",
+    "state": "WA",
+    "zip": "99352",
+    "latitude": 46.2305507,
+    "longitude": -119.2624878,
+    "description": "Chaparral Park at 130 Timmerman Dr holds a 4.1-star rating from 29 Richland dog owner visits. Open from 5:30am to 11pm daily, local dog owners have time to explore with their furry companions. More dog parks in the area include DOG PARK (0.6 miles) and Overlook Park (0.7 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Beaver Lake Park",
+    "street": "2600 244th Ave SE",
+    "city": "Sammamish",
+    "state": "WA",
+    "zip": "98075",
+    "latitude": 47.5862706,
+    "longitude": -122.013938,
+    "description": "Beaver Lake Park at 2600 244th Ave SE in Sammamish is a community favorite, with 1,052 dog owners giving it 4.7 stars. Open from 6:30am to 9pm daily, dog owners can plan visits around their pup's favorite times to be active. For more dog park adventures, explore Beaver Lake Off-Leash Dog Park (0.9 miles) or Confluence Park (3.6 miles) with your furry companion."
+  },
+  {
+    "name": "Beaver Lake Off-Leash Dog Park",
+    "street": "Beaver Lake Park",
+    "city": "Sammamish",
+    "state": "WA",
+    "zip": "98075",
+    "latitude": 47.5828936,
+    "longitude": -121.9955379,
+    "description": "Dog owners in Sammamish have made Beaver Lake Off-Leash Dog Park a go-to spot, rating it 4.6 stars across 146 reviews. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. Other dog parks in the area include Beaver Lake Park (0.9 miles) and Confluence Park (3.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Grandview Off-Leash Dog Park",
+    "street": "3507 S 228th StSeaTac",
+    "city": "Seatac",
+    "state": "WA",
+    "zip": "98198",
+    "latitude": 47.397097,
+    "longitude": -122.2883715,
+    "description": "Dog owners in SeaTac have embraced Grandview Off-Leash Dog Park (3507 S 228th St) as a top destination—4.8 stars from 1,515 visits. The community of dog owners here is welcoming and the atmosphere consistently positive. For more dog park adventures, explore Eagle View Park (1.1 miles) or West Fenwick Park (1.9 miles) with your furry companion."
+  },
+  {
+    "name": "‍ Discovery Park",
+    "street": "3801 Discovery Park Blvd",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98199",
+    "latitude": 47.6038321,
+    "longitude": -122.330062,
+    "description": "With 7,756 reviews and a 4.8-star rating, Discovery Park (3801 Discovery Park Blvd) has become a landmark for Seattle dog owners. Open from 4am to 11:30pm daily, dog owners have maximum flexibility to plan their visit. Dog owners exploring the area should also bring their pups to Magnuson Park (0.0 miles) and Fairmount Park (0.0 miles)."
+  },
+  {
+    "name": "Lincoln Park",
+    "street": "8011 Fauntleroy Wy SW",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98136",
+    "latitude": 47.5311632,
+    "longitude": -122.3931989,
+    "description": "For Seattle dog owners, Lincoln Park at 8011 Fauntleroy Wy SW has become a reliable favorite—4.8 stars from 4,856 reviews. Open from 4am to 11:30pm daily, it's easy for dog owners to stop by whenever works best. For variety, many dog owners also bring their furry friends to Westcrest Dog Park (1.7 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Seward Park",
+    "street": "5900 Lake Washington Blvd S",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98118",
+    "latitude": 47.5519457,
+    "longitude": -122.2553282,
+    "description": "Seward Park at 5900 Lake Washington Blvd S is well-regarded by Seattle dog owners, holding 4.8 stars across 945 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Growlerz Seattle is another dog-friendly destination 1.2 miles from here."
+  },
+  {
+    "name": "Dogwood Play Park",
+    "street": "12568 33rd Ave NE",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98125",
+    "latitude": 47.7211505,
+    "longitude": -122.2918553,
+    "description": "Located at 12568 33rd Ave NE in Seattle, Dogwood Play Park earns strong marks from local dog owners—4.8 stars from 632 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Paramount Open Space (1.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Schmitz Preserve Park",
+    "street": "5551 SW Admiral Wy",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98116",
+    "latitude": 47.5773072,
+    "longitude": -122.40263,
+    "description": "Schmitz Preserve Park (4.8 stars from 431 reviews) is a popular destination for Seattle dog owners, located at 5551 SW Admiral Wy. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Lincoln Park (3.2 miles) and Regrade Park (3.7 miles)."
+  },
+  {
+    "name": "Growlerz Seattle",
+    "street": "5269 Rainier Ave S",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98118",
+    "latitude": 47.5540155,
+    "longitude": -122.2813911,
+    "description": "For dog owners in the Seattle area, Growlerz Seattle (5269 Rainier Ave S) offers a 4.8-star experience based on 157 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Genesee Park (0.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Gas Works Park",
+    "street": "2101 N Northlake Way",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98103",
+    "latitude": 47.64755,
+    "longitude": -122.332749,
+    "description": "Gas Works Park at 2101 N Northlake Way has become essential for Seattle dog owners, earning 4.7 stars from 10,629 visitors. Open from 6am to 10pm daily, the park accommodates everything from early morning walks to evening adventures. Dog owners in this area are lucky to have more great dog parks nearby: Mayfair Park (1.0 miles) and Woodland Park (1.4 miles)."
+  },
+  {
+    "name": "Golden Gardens Park",
+    "street": "8498 Seaview Pl NW",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98117",
+    "latitude": 47.6917803,
+    "longitude": -122.4039684,
+    "description": "8,384 dog owners can't be wrong: Golden Gardens Park (8498 Seaview Pl NW) is a Seattle institution with 4.7 stars. Open from 4am to 10:30pm daily, dog owners can visit during quieter hours or join the regular crowd. For dog owners wanting to explore more with their furry friends, Gemenskap Park is another great dog park just 2.0 miles away."
+  },
+  {
+    "name": "Volunteer Park",
+    "street": "1247 15th Ave E",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98112",
+    "latitude": 47.6309901,
+    "longitude": -122.3126472,
+    "description": "For Seattle dog owners, Volunteer Park at 1247 15th Ave E needs no introduction—4.7 stars, 5,199 reviews. Open from 6am to 10pm daily, dog owners have maximum flexibility to plan their visit. Nearby, Homer Harris Park (1.1 miles) gives dog owners even more space to explore with their four-legged companions."
+  },
+  {
+    "name": "Warren G. Magnuson Park",
+    "street": "7400 Sand Point Way NE",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98115",
+    "latitude": 47.6828717,
+    "longitude": -122.258467,
+    "description": "Dog owners in Seattle have embraced Warren G. Magnuson Park (7400 Sand Point Way NE) as a top destination—4.7 stars from 4,703 visits. Open from 4am to 11:30pm daily, dog owners can easily fit a visit into their day, whether morning or evening. Looking to mix things up? Waverly Park is a nearby dog park 1.9 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Centennial Park",
+    "street": "2711 Alaskan Way W",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98119",
+    "latitude": 47.6324787,
+    "longitude": -122.3777944,
+    "description": "At 2711 Alaskan Way W in Seattle, Centennial Park stands out with 4.7 stars from 1,644 happy dog owners. Open from 6am to 11pm daily, dog owners have room to work around busy schedules. For variety, many dog owners also bring their furry friends to Kinnear Park (0.5 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Dog Yard Bar",
+    "street": "1546 Leary Wy NW",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98107",
+    "latitude": 47.6639547,
+    "longitude": -122.3781636,
+    "description": "Dog Yard Bar (4.7 stars from 344 reviews) is a popular destination for Seattle dog owners, located at 1546 Leary Wy NW. For dog owners in the area, this park has become a trusted spot for time with their pups. Dog owners can also take their pups to nearby Gemenskap Park (0.6 miles) or Magnolia Manor Park (1.1 miles)."
+  },
+  {
+    "name": "‍ Magnuson Park",
+    "street": "",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.6038321,
+    "longitude": -122.330062,
+    "description": "With 4.7 stars from 219 reviews, Magnuson Park has become a favorite among Seattle dog owners. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Discovery Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Powell Barnett Park",
+    "street": "352 Martin Luther King Jr Way",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98122",
+    "latitude": 47.6050848,
+    "longitude": -122.2969152,
+    "description": "Seattle dog owners rate Powell Barnett Park at 352 Martin Luther King Jr Way highly, with 4.6 stars from 423 visits. Open from 4am to 11:30pm daily, dog owners can easily fit a visit into busy schedules. Looking for more places to take your pup? Dog Park is another popular dog park just 0.4 miles away."
+  },
+  {
+    "name": "Westcrest Dog Park",
+    "street": "SW Henderson St",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98106",
+    "latitude": 47.5228692,
+    "longitude": -122.3582671,
+    "description": "Dog owners in Seattle have made Westcrest Dog Park a go-to spot, rating it 4.6 stars across 645 reviews. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Westcrest Park (0.6 miles) and Cesar Chavez Park (1.6 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Woodland Park",
+    "street": "1000 N 50th St",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98103",
+    "latitude": 47.665125,
+    "longitude": -122.345879,
+    "description": "Woodland Park at 1000 N 50th St is a favorite among Seattle dog owners, earning 4.6 stars from 2,764 reviews. Open from 4am to 11:30pm daily, dog owners have room to work around busy schedules. Keep the adventure going at other nearby dog parks like Gas Works Park (1.4 miles) or Gemenskap Park (1.4 miles)."
+  },
+  {
+    "name": "Richmond Beach Saltwater Park",
+    "street": "2021 NW 190th St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98177",
+    "latitude": 47.7654566,
+    "longitude": -122.3832632,
+    "description": "Richmond Beach Saltwater Park at 2021 NW 190th St is a favorite among Shoreline dog owners, earning 4.7 stars from 2,960 reviews. Open from 6am to 10pm daily, dog owners have room to work around busy schedules. Want to give your pup even more adventure? Innis Arden Reserve Park is another beloved dog park just 0.6 miles away."
+  },
+  {
+    "name": "Hamlin Park",
+    "street": "16006 15th Ave NE",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7449545,
+    "longitude": -122.3104334,
+    "description": "For dog owners in the Shoreline area, Hamlin Park (16006 15th Ave NE) offers a 4.7-star experience based on 979 reviews. Open from 6:30am to 9pm daily, dog owners can plan visits around work or their pup's energy level. Other dog parks in the area include Northcrest Park (0.7 miles) and Paramount Open Space (0.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Boeing Creek Park",
+    "street": "",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.7564667,
+    "longitude": -122.3437497,
+    "description": "Dog owners in Shoreline have made Boeing Creek Park a go-to spot, rating it 4.7 stars across 51 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For a change of scenery, Upper Hamlin Park is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "Upper Hamlin Park",
+    "street": "",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.7564667,
+    "longitude": -122.3437497,
+    "description": "With 4.7 stars from 18 reviews, Upper Hamlin Park has become a favorite among Shoreline dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Nearby, Boeing Creek Park (0.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Shoreview Park",
+    "street": "17229 3rd Ave NW",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98133",
+    "latitude": 47.7546766,
+    "longitude": -122.3618043,
+    "description": "Located at 17229 3rd Ave NW in Shoreline, Shoreview Park earns strong marks from local dog owners—4.6 stars from 813 reviews. Open from 6am to 6pm daily, dog owners can plan visits around work or their pup's energy level. For variety, the neighborhood offers more dog parks to explore: Innis Arden Reserve Park (0.8 miles) and Hillwood Park (0.8 miles)."
+  },
+  {
+    "name": "Innis Arden Reserve Park",
+    "street": "17701 15th Ave NW",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98177",
+    "latitude": 47.75874,
+    "longitude": -122.376824,
+    "description": "Shoreline dog owners rate Innis Arden Reserve Park at 17701 15th Ave NW highly, with 4.5 stars from 154 visits. Open from 8am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Looking for more places to take your pup? Richmond Beach Saltwater Park is another popular dog park just 0.6 miles away."
+  },
+  {
+    "name": "Cromwell Park",
+    "street": "18030 Meridian Ave N",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98133",
+    "latitude": 47.7599963,
+    "longitude": -122.3345486,
+    "description": "Located at 18030 Meridian Ave N in Shoreline, Cromwell Park earns strong marks from local dog owners—4.5 stars from 371 reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Ronald Bog Park (0.3 miles)."
+  },
+  {
+    "name": "Paramount Open Space",
+    "street": "946 NE 147th St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7358836,
+    "longitude": -122.3185087,
+    "description": "86 dog owners have reviewed Paramount Open Space at 946 NE 147th St in Shoreline, averaging 4.4 stars. Open from 6am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Nearby dog parks worth exploring with your pup include Hamlin Park (0.7 miles) and Ridgecrest Park (0.8 miles)."
+  },
+  {
+    "name": "Northcrest Park",
+    "street": "827 NE 170th St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7521086,
+    "longitude": -122.3205345,
+    "description": "64 dog owners have reviewed Northcrest Park at 827 NE 170th St in Shoreline, averaging 4.3 stars. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include James Keough Park (0.5 miles) and Ronald Bog Park (0.6 miles)."
+  },
+  {
+    "name": "North City Park",
+    "street": "19201 10th Ave NE",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7681229,
+    "longitude": -122.319002,
+    "description": "Dog owners in Shoreline have rated North City Park (19201 10th Ave NE) 4.3 stars across 99 reviews. Open from 6am to 9pm daily, the park fits conveniently into different routines. Dog owners in the neighborhood can also take their furry friends to Cromwell Park, 0.9 miles away."
+  },
+  {
+    "name": "‍ Hillwood Park",
+    "street": "19001 3rd Ave NW",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98177",
+    "latitude": 47.7667799,
+    "longitude": -122.3613293,
+    "description": "At 19001 3rd Ave NW, Hillwood Park has 4.3 stars based on 127 reviews from Shoreline dog owners. Open from 6:30am to 9pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy Shoreview Park, another dog park just 0.8 miles away."
+  },
+  {
+    "name": "James Keough Park",
+    "street": "2350 N 167th St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98133",
+    "latitude": 47.7510701,
+    "longitude": -122.3310017,
+    "description": "Dog owners in the Shoreline area will find James Keough Park at 2350 N 167th St—a local option for spending time with their pups. Open from 6:30am to 9pm daily, dog owners can stop by when it fits their schedule. For dog owners who like to explore, Ronald Bog Park (0.3 miles) and Ridgecrest Park (0.4 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Ronald Bog Park",
+    "street": "2301 N 175th St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98133",
+    "latitude": 47.755875,
+    "longitude": -122.331277,
+    "description": "Ronald Bog Park at 2301 N 175th St holds a 4.2-star rating from 160 Shoreline dog owner visits. This park provides dog owners in the community with a place to visit with their dogs. For dog owners who like to explore, Cromwell Park (0.3 miles) and James Keough Park (0.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "‍ Ridgecrest Park",
+    "street": "108 NE 161st St",
+    "city": "Shoreline",
+    "state": "WA",
+    "zip": "98155",
+    "latitude": 47.7455554,
+    "longitude": -122.3285491,
+    "description": "Located at 108 NE 161st St, Ridgecrest Park offers Shoreline dog owners a neighborhood destination for their four-legged friends. Open from 6:30am to 9pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners in the neighborhood can also take their furry friends to James Keough Park, 0.4 miles away."
+  },
+  {
+    "name": "Willis D. Tucker Community",
+    "street": "6705 Puget Park Dr",
+    "city": "Snohomish",
+    "state": "WA",
+    "zip": "98296",
+    "latitude": 47.8615496,
+    "longitude": -122.1325392,
+    "description": "With 4.7 stars across 1,775 reviews, Willis D. Tucker Community at 6705 Puget Park Dr has clearly won over Snohomish dog owners. Dog owners appreciate the reliable experience this park provides for their four-legged companions. Nearby, Tambark Creek Off-Leash Dog (4.8 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Three Forks Off-Leash Dog Park",
+    "street": "",
+    "city": "Snoqualmie",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.5289527,
+    "longitude": -121.827093,
+    "description": "Snoqualmie dog owners rate Three Forks Off-Leash Dog Park highly, with 4.6 stars from 342 visits. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Habitat Dog Park",
+    "street": "",
+    "city": "South Hill",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.1210893,
+    "longitude": -122.290702,
+    "description": "In South Hill, Habitat Dog Park has built a loyal following—4.6 stars from 235 dog owner reviews. Open from 7am to 7pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Clarks Creek Off-Leash Dog (4.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Manito Park",
+    "street": "1702 S Grand Blvd",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99203",
+    "latitude": 47.6397822,
+    "longitude": -117.4076274,
+    "description": "For Spokane dog owners, Manito Park at 1702 S Grand Blvd needs no introduction—4.8 stars, 8,154 reviews. Dog owners know this is a destination that consistently delivers for their pups. For more dog park adventures, explore Grant Park (0.7 miles) or Upper Lincoln Park (1.1 miles) with your furry companion."
+  },
+  {
+    "name": "Riverfront Park",
+    "street": "507 N Howard St",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99201",
+    "latitude": 47.6606905,
+    "longitude": -117.4225863,
+    "description": "With 10,537 reviews and a 4.7-star rating, Riverfront Park (507 N Howard St) has become a landmark for Spokane dog owners. Open from 6am to 12am daily, dog owners can visit during quieter hours or join the regular crowd. For more dog park adventures, explore Downtown Spokane Dog Park (0.4 miles) or Bark, A Rescue Pub (0.4 miles) with your furry companion."
+  },
+  {
+    "name": "Riverside State Park",
+    "street": "4427 N Aubrey L White Pkwy",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99205",
+    "latitude": 47.6964758,
+    "longitude": -117.4930931,
+    "description": "At 4427 N Aubrey L White Pkwy in Spokane, Riverside State Park stands out with 4.7 stars from 1,602 happy dog owners. Dog owners in the area know they can count on this park for quality time with their pups. Other popular dog parks nearby include Carson Park (1.1 miles) and Audubon Park (2.0 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "‍ Palouse Pooch Playground",
+    "street": "7028 S Waneta Rd",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99223",
+    "latitude": 47.5906938,
+    "longitude": -117.3544146,
+    "description": "Palouse Pooch Playground at 7028 S Waneta Rd is well-regarded by Spokane dog owners, holding 5.0 stars across 9 reviews. Open from 7am to 7pm weekdays, dog owners can plan visits around work or their pup's energy level. Dog owners can also take their pups to nearby Prairie View Community Park (0.5 miles) or Hamblen Park (2.4 miles)."
+  },
+  {
+    "name": "Carson Park",
+    "street": "5225 N Assembly St",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99205",
+    "latitude": 47.707028,
+    "longitude": -117.4761643,
+    "description": "Carson Park (4.7 stars from 57 reviews) is a popular destination for Spokane dog owners, located at 5225 N Assembly St. Open from 6am to 8pm, Monday through Saturday, the park offers flexibility for dog owners with varying routines. Looking for more places to take your pup? Riverside State Park is another popular dog park just 1.1 miles away."
+  },
+  {
+    "name": "Audubon Park",
+    "street": "3405 N Milton St",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99205",
+    "latitude": 47.6890991,
+    "longitude": -117.4525855,
+    "description": "1,131 dog owners have made Audubon Park (3405 N Milton St) one of Spokane's most trusted parks (4.6 stars). Open from 6am to 9pm daily, dog owners have room to work around busy schedules. Want to give your pup even more adventure? Emerson Park is another beloved dog park just 1.1 miles away."
+  },
+  {
+    "name": "High Drive Bluff Park",
+    "street": "3418 S Jefferson Dr",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99203",
+    "latitude": 47.6217148,
+    "longitude": -117.4248803,
+    "description": "High Drive Bluff Park (4.6 stars from 381 reviews) is a popular destination for Spokane dog owners, located at 3418 S Jefferson Dr. Open from 5am to 11pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners exploring the neighborhood can also bring their furry friends to Wentel Grant Park (1.4 miles)."
+  },
+  {
+    "name": "Sky Prairie Park",
+    "street": "8501 N Nettleton Ct",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99208",
+    "latitude": 47.7363744,
+    "longitude": -117.444821,
+    "description": "At 8501 N Nettleton Ct in Spokane, Sky Prairie Park has built a loyal following—4.6 stars from 338 dog owner reviews. Open from 5am to 11pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Holmberg Park is another dog-friendly destination 1.2 miles from here."
+  },
+  {
+    "name": "Upper Lincoln Park",
+    "street": "2221 E Southeast Blvd",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99223",
+    "latitude": 47.6383311,
+    "longitude": -117.3833906,
+    "description": "Located at 2221 E Southeast Blvd in Spokane, Upper Lincoln Park earns strong marks from local dog owners—4.6 stars from 304 reviews. Open from 5am to 11pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Grant Park (0.8 miles) or Thornton Murphy Park (1.0 miles)."
+  },
+  {
+    "name": "Polly Judd Park",
+    "street": "W Cannon Pl Ln",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99204",
+    "latitude": 47.6441089,
+    "longitude": -117.4396846,
+    "description": "With 4.6 stars from 290 reviews, Polly Judd Park has become a favorite among Spokane dog owners. Open from 5am to 11pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Wentel Grant Park (0.3 miles)."
+  },
+  {
+    "name": "Prairie View Community Park",
+    "street": "3724 E 61st Ave",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99223",
+    "latitude": 47.5979224,
+    "longitude": -117.3552806,
+    "description": "Dog owners in Spokane have made Prairie View Community Park at 3724 E 61st Ave a go-to spot, rating it 4.6 stars across 219 reviews. Open from 5am to 11pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Palouse Pooch Playground (0.5 miles) or Hamblen Park (2.0 miles)."
+  },
+  {
+    "name": "Haynes Estate Conservation",
+    "street": "1712 E Leona Dr",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99208",
+    "latitude": 47.7910215,
+    "longitude": -117.3841309,
+    "description": "Haynes Estate Conservation at 1712 E Leona Dr is well-regarded by Spokane dog owners, holding 4.6 stars across 157 reviews. The park serves dog owners well, providing a destination the community values. For a change of scenery, Camelot Park is another dog-friendly destination 2.0 miles from here."
+  },
+  {
+    "name": "‍ Pacific Park",
+    "street": "5211 W Lowell Ave",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99208",
+    "latitude": 47.7371122,
+    "longitude": -117.4865445,
+    "description": "With 4.6 stars from 136 reviews, Pacific Park at 5211 W Lowell Ave has become a favorite among Spokane dog owners. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Sky Prairie Park (1.9 miles)."
+  },
+  {
+    "name": "Millwood Park",
+    "street": "9241 E Frederick Ave",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99206",
+    "latitude": 47.6851529,
+    "longitude": -117.2794249,
+    "description": "At 9241 E Frederick Ave in Spokane, Millwood Park has built a loyal following—4.6 stars from 116 dog owner reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Valley Mission Park is another dog-friendly destination 1.5 miles from here."
+  },
+  {
+    "name": "Hamblen Park",
+    "street": "2103 E 37th Ave",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99203",
+    "latitude": 47.621001,
+    "longitude": -117.3806079,
+    "description": "Spokane dog owners rate Hamblen Park at 2103 E 37th Ave highly, with 4.5 stars from 79 visits. Open from 5am to 11pm daily, there's room in the day for dog owners to bring their furry friends. For a change of scenery, Thornton Murphy Park is another dog-friendly destination 1.0 miles from here."
+  },
+  {
+    "name": "Holmberg Park",
+    "street": "720 W Holland Ave",
+    "city": "Spokane",
+    "state": "WA",
+    "zip": "99218",
+    "latitude": 47.7440954,
+    "longitude": -117.4220808,
+    "description": "Holmberg Park (4.5 stars from 456 reviews) is a popular destination for Spokane dog owners, located at 720 W Holland Ave. Open from 6am to 10pm daily, dog owners can plan visits around work or their pup's energy level. More dog-friendly parks nearby include Sky Prairie Park (1.2 miles) and Northwoods Park (1.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Mirabeau Point Park",
+    "street": "13500 E Mirabeau Pkwy",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99216",
+    "latitude": 47.6862032,
+    "longitude": -117.2337131,
+    "description": "Mirabeau Point Park at 13500 E Mirabeau Pkwy is well-regarded by Spokane Valley dog owners, holding 4.7 stars across 755 reviews. Open from 7am to 9pm daily, dog owners can plan visits around work or their pup's energy level. Dog owners can also take their pups to nearby Valley Mission Dog Park (1.3 miles) or Valley Mission Park (1.4 miles)."
+  },
+  {
+    "name": "Dishman Hills Natural Area",
+    "street": "625 S Sargent Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99212",
+    "latitude": 47.6533007,
+    "longitude": -117.2891408,
+    "description": "Dog owners in Spokane Valley have embraced Dishman Hills Natural Area (625 S Sargent Rd) as a top destination—4.6 stars from 1,087 visits. Open from 6am to 8pm daily, it's easy for dog owners to stop by whenever works best. Looking to mix things up? Balfour Park is a nearby dog park 1.1 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Greenacres Park",
+    "street": "1311 N Long Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99016",
+    "latitude": 47.6689738,
+    "longitude": -117.1650736,
+    "description": "Greenacres Park at 1311 N Long Rd is well-regarded by Spokane Valley dog owners, holding 4.6 stars across 513 reviews. Open from 6am to 7pm daily, the park works well for dog owners with different schedules. For a change of scenery, Sullivan Park is another dog-friendly destination 1.5 miles from here."
+  },
+  {
+    "name": "Terrace View Park",
+    "street": "13525 E 24th Ave",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99216",
+    "latitude": 47.635234,
+    "longitude": -117.2227964,
+    "description": "Dog owners in Spokane Valley have made Terrace View Park at 13525 E 24th Ave a go-to spot, rating it 4.5 stars across 562 reviews. Open from 6am to 9pm daily, there's plenty of opportunity for dog owners to find a time that works. More dog-friendly parks nearby include Castle Park (1.9 miles) and Balfour Park (2.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Valley Mission Dog Park",
+    "street": "1521 N Bowdish Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99206",
+    "latitude": 47.6710315,
+    "longitude": -117.2506251,
+    "description": "Dog owners in Spokane Valley have made Valley Mission Dog Park at 1521 N Bowdish Rd a go-to spot, rating it 4.5 stars across 66 reviews. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Dog owners exploring the neighborhood can also bring their furry friends to Valley Mission Park (0.2 miles)."
+  },
+  {
+    "name": "Sullivan Park",
+    "street": "1901 N Sullivan Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99216",
+    "latitude": 47.6748829,
+    "longitude": -117.196682,
+    "description": "Located at 1901 N Sullivan Rd, Sullivan Park in Spokane Valley is rated 4.4 stars by 390 dog owners. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. Nearby dog parks worth exploring with your pup include Greenacres Park (1.5 miles) and Mirabeau Point Park (1.9 miles)."
+  },
+  {
+    "name": "Valley Mission Park",
+    "street": "11123 E Mission Ave",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99206",
+    "latitude": 47.6717248,
+    "longitude": -117.2554735,
+    "description": "Located at 11123 E Mission Ave in Spokane Valley, Valley Mission Park earns strong marks from local dog owners—4.4 stars from 874 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: Valley Mission Dog Park (0.2 miles) and Balfour Park (1.1 miles)."
+  },
+  {
+    "name": "Castle Park",
+    "street": "3415 S University Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99206",
+    "latitude": 47.6261581,
+    "longitude": -117.2612547,
+    "description": "In Spokane Valley, dog owners can find Castle Park at 3415 S University Rd—a local park worth exploring with their furry companions. Open from 6am to 9pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Terrace View Park is a nearby dog park worth visiting (1.9 miles)."
+  },
+  {
+    "name": "Balfour Park",
+    "street": "105 N Balfour Rd",
+    "city": "Spokane Valley",
+    "state": "WA",
+    "zip": "99206",
+    "latitude": 47.6579777,
+    "longitude": -117.2654978,
+    "description": "In Spokane Valley, dog owners can find Balfour Park at 105 N Balfour Rd—a local park worth exploring with their furry companions. Open from 6am to 9pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy Valley Mission Park, another dog park just 1.1 miles away."
+  },
+  {
+    "name": "‍ Swan Creek Dog Park",
+    "street": "2106 E 44th St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98404",
+    "latitude": 47.2166878,
+    "longitude": -122.3990464,
+    "description": "Swan Creek Dog Park (4.8 stars from 80 reviews) is a popular destination for Tacoma dog owners, located at 2106 E 44th St. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Dog owners exploring the neighborhood can also bring their furry friends to Swan Creek Park (0.3 miles)."
+  },
+  {
+    "name": "Point Defiance Park",
+    "street": "5400 N Pearl St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98407",
+    "latitude": 47.3065786,
+    "longitude": -122.5207984,
+    "description": "Point Defiance Park at 5400 N Pearl St is one of the most beloved dog parks in Tacoma—4.7 stars from an incredible 15,922 reviews. Open from 7:30am to 5pm daily, dog owners can visit during quieter hours or join the regular crowd. The neighborhood offers dog owners more places to bring their pups: Point Defiance Dog Park (0.5 miles) and Baltimore Park (1.1 miles)."
+  },
+  {
+    "name": "Cummings Park",
+    "street": "3939 Ruston Way",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98402",
+    "latitude": 47.28507,
+    "longitude": -122.4863065,
+    "description": "Cummings Park (4.7 stars from 420 reviews) is a popular destination for Tacoma dog owners, located at 3939 Ruston Way. Open from 6am to 10pm daily, dog owners can plan visits around work or their pup's energy level. More dog-friendly parks nearby include Jane Clark Park (0.8 miles) and Baltimore Park (1.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Hidden Beach",
+    "street": "646 N Wilton Rd",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98465",
+    "latitude": 47.2492418,
+    "longitude": -122.5515578,
+    "description": "Hidden Beach (4.7 stars from 41 reviews) is a popular destination for Tacoma dog owners, located at 646 N Wilton Rd. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Titlow Park (0.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Wright Park",
+    "street": "501 S I St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98405",
+    "latitude": 47.258372,
+    "longitude": -122.450114,
+    "description": "Local dog owners love Wright Park at 501 S I St in Tacoma—4.6 stars from an impressive 3,850 reviews. Open from 7am to 9pm daily, the park accommodates a variety of dog owner schedules and routines. Keep the adventure going at other nearby dog parks like Wet Noses Dry Paws (0.2 miles) or Ferry Park (0.7 miles)."
+  },
+  {
+    "name": "Titlow Park",
+    "street": "8425 6th Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98465",
+    "latitude": 47.2472068,
+    "longitude": -122.5512268,
+    "description": "For Tacoma dog owners, Titlow Park at 8425 6th Ave has become a reliable favorite—4.6 stars from 3,681 reviews. Open from 7am to 8:45pm daily, the park is convenient for before work, after work, or weekend adventures. Want to give your pup even more adventure? Hidden Beach is another beloved dog park just 0.1 miles away."
+  },
+  {
+    "name": "Jefferson Park",
+    "street": "801 N Mason Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98406",
+    "latitude": 47.2573571,
+    "longitude": -122.4921529,
+    "description": "Dog owners in Tacoma have made Jefferson Park at 801 N Mason Ave a go-to spot, rating it 4.5 stars across 659 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: Delong Park (0.7 miles) and Ferry Park (1.8 miles)."
+  },
+  {
+    "name": "Wapato Park",
+    "street": "6802 S Sheridan Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98408",
+    "latitude": 47.1970612,
+    "longitude": -122.4541807,
+    "description": "For Tacoma dog owners, Wapato Park at 6802 S Sheridan Ave has become a reliable favorite—4.5 stars from 1,716 reviews. Open from 7am to 9pm daily, the park is convenient for before work, after work, or weekend adventures. Dog owners in the area also love bringing their pups to Wapato Park (0.1 miles) and Wapato Hills Park (0.7 miles)."
+  },
+  {
+    "name": "Garfield Park",
+    "street": "400 N Borough Rd",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98403",
+    "latitude": 47.26926,
+    "longitude": -122.45692,
+    "description": "At 400 N Borough Rd in Tacoma, Garfield Park carries 4.4 stars from 111 dog owner reviews. Open from 8am to 6pm daily, dog owners in the area can work a visit into their day. More dog parks in the area include Wright Park (0.8 miles) and Wet Noses Dry Paws (0.8 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Ferry Park",
+    "street": "1400 S Sheridan Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98405",
+    "latitude": 47.24832,
+    "longitude": -122.455399,
+    "description": "For dog owners in Tacoma, Ferry Park at 1400 S Sheridan Ave has a 4.4-star rating (156 reviews). Open from 5am to 9pm daily, local dog owners have time to explore with their furry companions. Dog owners looking for variety can also visit Wright Park (0.7 miles) or Wet Noses Dry Paws (0.9 miles) with their four-legged friends."
+  },
+  {
+    "name": "Point Defiance Dog Park",
+    "street": "Five mile Rd",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98407",
+    "latitude": 47.308656,
+    "longitude": -122.5307087,
+    "description": "Point Defiance Dog Park in Tacoma has 4.4 stars from 374 dog owner reviews. For dog owners in the neighborhood, this park offers a place to take their pups. For pups who want more adventure, Point Defiance Park is a nearby dog park worth visiting (0.5 miles)."
+  },
+  {
+    "name": "Wet Noses Dry Paws",
+    "street": "411 Fawcett Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98402",
+    "latitude": 47.259884,
+    "longitude": -122.4456258,
+    "description": "Tacoma dog owners rate Wet Noses Dry Paws at 411 Fawcett Ave highly, with 4.4 stars from 606 visits. Local dog owners appreciate what this park offers their four-legged friends. Nearby, Wright Park (0.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Swan Creek Park",
+    "street": "3997 E Roosevelt Ave",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98404",
+    "latitude": 47.2211915,
+    "longitude": -122.3982959,
+    "description": "Swan Creek Park (4.4 stars from 808 reviews) is a popular destination for Tacoma dog owners, located at 3997 E Roosevelt Ave. Open from 6am to 6pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Swan Creek Dog Park (0.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Baltimore Park",
+    "street": "4716 N Baltimore St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98407",
+    "latitude": 47.2923778,
+    "longitude": -122.5080882,
+    "description": "At 4716 N Baltimore St in Tacoma, Baltimore Park carries 4.3 stars from 60 dog owner reviews. Open from 6:45am to 7:55pm daily, the park gives dog owners in the neighborhood time to bring their pups. For dog owners who like to explore, Jane Clark Park (0.5 miles) and Cummings Park (1.1 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Jane Clark Park",
+    "street": "4825 N 39th St",
+    "city": "Tacoma",
+    "state": "WA",
+    "zip": "98407",
+    "latitude": 47.2851709,
+    "longitude": -122.5035531,
+    "description": "At 4825 N 39th St in Tacoma, Jane Clark Park carries 4.3 stars from 219 dog owner reviews. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. Dog owners in the neighborhood can also take their furry friends to Baltimore Park, 0.5 miles away."
+  },
+  {
+    "name": "Crestview Park",
+    "street": "16200 42nd Ave S",
+    "city": "Tukwila",
+    "state": "WA",
+    "zip": "98188",
+    "latitude": 47.458472,
+    "longitude": -122.2793264,
+    "description": "At 16200 42nd Ave S, Crestview Park has 4.3 stars based on 318 reviews from Tukwila dog owners. Open from 7am to 9pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, Briscoe Park is a nearby dog park worth visiting (2.1 miles)."
+  },
+  {
+    "name": "Chambers Creek Regional Park",
+    "street": "6320 Grandview Dr W",
+    "city": "University Place",
+    "state": "WA",
+    "zip": "98467",
+    "latitude": 47.2057006,
+    "longitude": -122.5750529,
+    "description": "With 4.8 stars from 657 reviews, Chambers Creek Regional Park at 6320 Grandview Dr W has become a favorite among University Place dog owners. Open from 7am to 9pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Fort Steilacoom Dog Park (2.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Chambers Bay Off Leash Dog",
+    "street": "",
+    "city": "University Place",
+    "state": "WA",
+    "zip": "",
+    "latitude": 47.2258172,
+    "longitude": -122.5371325,
+    "description": "Chambers Bay Off Leash Dog in University Place welcomes dog owners from the surrounding neighborhood. For dog owners in the neighborhood, this park offers a place to take their pups. Dog owners looking for variety can also visit Titlow Park (1.6 miles) or Hidden Beach (1.8 miles) with their four-legged friends."
+  },
+  {
+    "name": "Happy Puppy Park",
+    "street": "4217 SE 171st Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98683",
+    "latitude": 45.5898915,
+    "longitude": -122.4953113,
+    "description": "Located at 4217 SE 171st Ave in Vancouver, Happy Puppy Park earns strong marks from local dog owners—5.0 stars from 28 reviews. Open from 7am to 6pm weekdays, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Heritage Park (0.7 miles) or Homestead Neighborhood Park (1.9 miles)."
+  },
+  {
+    "name": "Vancouver Waterfront",
+    "street": "695 Waterfront Wy",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98660",
+    "latitude": 45.6252206,
+    "longitude": -122.6813189,
+    "description": "With 5,913 reviews and a 4.7-star rating, Vancouver Waterfront (695 Waterfront Wy) has become a landmark for Vancouver dog owners. Open from 5am to 10pm daily, the park accommodates everything from early morning walks to evening adventures. Dog owners exploring the area should also bring their pups to Wintler Community Park (0.5 miles) and Vydra Park (0.5 miles)."
+  },
+  {
+    "name": "Dakota Dog Park",
+    "street": "NE 172nd Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98684",
+    "latitude": 45.6321281,
+    "longitude": -122.4957195,
+    "description": "Dog owners in Vancouver have embraced Dakota Dog Park as a top destination—4.7 stars from 1,316 visits. Open from 7am to 5pm daily, dog owners can plan visits around their pup's favorite times to be active. Dog owners in the area also love bringing their pups to Vandervort Neighborhood Park (0.0 miles) and Pacific Community Park (0.6 miles)."
+  },
+  {
+    "name": "Salmon Creek Greenway Trail",
+    "street": "",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "",
+    "latitude": 45.6306954,
+    "longitude": -122.6744557,
+    "description": "In Vancouver, Salmon Creek Greenway Trail earns strong marks from local dog owners—4.7 stars from 630 reviews. Open from 7am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Wintler Community Park (0.0 miles) or Vydra Park (0.0 miles)."
+  },
+  {
+    "name": "Waterfront Renaissance Trail",
+    "street": "115 SE Columbia Way",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98661",
+    "latitude": 45.6214582,
+    "longitude": -122.6719475,
+    "description": "With 4.7 stars from 618 reviews, Waterfront Renaissance Trail at 115 SE Columbia Way has become a favorite among Vancouver dog owners. Open from 8am to 5pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Vancouver Waterfront (0.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Hockinson Meadows Community",
+    "street": "10910 NE 172nd Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98682",
+    "latitude": 45.6802454,
+    "longitude": -122.4955589,
+    "description": "At 10910 NE 172nd Ave in Vancouver, Hockinson Meadows Community has built a loyal following—4.7 stars from 589 dog owner reviews. Open from 7am to 7pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Oak Grove Neighborhood Park (0.9 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Columbia Springs",
+    "street": "12208 SE Evergreen Hwy",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98683",
+    "latitude": 45.5999597,
+    "longitude": -122.5453875,
+    "description": "Columbia Springs (4.7 stars from 216 reviews) is a popular destination for Vancouver dog owners, located at 12208 SE Evergreen Hwy. Open from 5am to 8pm daily, there's room in the day for dog owners to bring their furry friends. Other dog parks in the area include Biddlewood Park (0.6 miles) and Hearthwood Park (2.0 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Summer's Walk Park",
+    "street": "",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "",
+    "latitude": 45.6306954,
+    "longitude": -122.6744557,
+    "description": "Dog owners in Vancouver have made Summer's Walk Park a go-to spot, rating it 4.8 stars across 12 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. For a change of scenery, Wintler Community Park is another dog-friendly destination 0.0 miles from here."
+  },
+  {
+    "name": "‍ Shumway Park",
+    "street": "3014 F St",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98663",
+    "latitude": 45.6431674,
+    "longitude": -122.6663871,
+    "description": "Located at 3014 F St in Vancouver, Shumway Park earns strong marks from local dog owners—4.8 stars from 9 reviews. Open from 5am to 10pm daily, there's room in the day for dog owners to bring their furry friends. For a change of scenery, Leverich Park is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "Ike Memorial Park",
+    "street": "5117 NE 15th Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98663",
+    "latitude": 45.6586494,
+    "longitude": -122.6566121,
+    "description": "Dog owners in Vancouver have embraced Ike Memorial Park (5117 NE 15th Ave) as a top destination—4.6 stars from 1,001 visits. Open from 7am to 7pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Other popular dog parks nearby include Leverich Park (0.6 miles) and Shumway Park (1.2 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Pacific Community Park",
+    "street": "1515 NE 164th Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98684",
+    "latitude": 45.6263381,
+    "longitude": -122.5058562,
+    "description": "With 4.6 stars from 920 reviews, Pacific Community Park at 1515 NE 164th Ave has become a favorite among Vancouver dog owners. Open from 7am to 8pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: Dakota Dog Park (0.6 miles) and Vandervort Neighborhood Park (0.6 miles)."
+  },
+  {
+    "name": "LeRoy Haagen Memorial Communit",
+    "street": "NE 9th St",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98684",
+    "latitude": 45.6284044,
+    "longitude": -122.528691,
+    "description": "Dog owners in Vancouver have made LeRoy Haagen Memorial Communit a go-to spot, rating it 4.6 stars across 837 reviews. Open from 5am to 10pm daily, dog owners can plan visits around work or their pup's energy level. Dog owners can also take their pups to nearby Hearthwood Park (0.2 miles) or Pacific Community Park (1.1 miles)."
+  },
+  {
+    "name": "Oak Grove Neighborhood Park",
+    "street": "7200 NE 159th Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98682",
+    "latitude": 45.6708474,
+    "longitude": -122.5085419,
+    "description": "For dog owners in the Vancouver area, Oak Grove Neighborhood Park (7200 NE 159th Ave) offers a 4.6-star experience based on 57 reviews. Open from 7am to 10pm daily, the park works well for dog owners with different schedules. For variety, the neighborhood offers more dog parks to explore: Hockinson Meadows Community (0.9 miles) and Dakota Dog Park (2.7 miles)."
+  },
+  {
+    "name": "Pet Drinking Fountain",
+    "street": "NE 47th Ct",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98686",
+    "latitude": 45.6457399,
+    "longitude": -122.6225,
+    "description": "For dog owners in the Vancouver area, Pet Drinking Fountain offers a 4.6-star experience based on 18 reviews. Open from 7am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Looking for more places to take your pup? Burnt Bridge Creek Trail is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Vandervort Neighborhood Park",
+    "street": "398 NE 172nd Ave",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98684",
+    "latitude": 45.6321281,
+    "longitude": -122.4957195,
+    "description": "Vandervort Neighborhood Park at 398 NE 172nd Ave is well-regarded by Vancouver dog owners, holding 4.5 stars across 43 reviews. Open from 8am to 8pm daily, the park works well for dog owners with different schedules. Looking for more places to take your pup? Dakota Dog Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Fort Walla Walla Dog Park",
+    "street": "1898 Dalles Military Rd",
+    "city": "Walla Walla",
+    "state": "WA",
+    "zip": "99362",
+    "latitude": 46.043373,
+    "longitude": -118.364282,
+    "description": "Walla Walla dog owners rate Fort Walla Walla Dog Park at 1898 Dalles Military Rd highly, with 4.6 stars from 217 visits. Open from 5am to 11pm daily, the park accommodates early risers and evening visitors alike. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Randall Park",
+    "street": "1399 S 48th Ave",
+    "city": "Yakima",
+    "state": "WA",
+    "zip": "98908",
+    "latitude": 46.579261,
+    "longitude": -120.572275,
+    "description": "At 1399 S 48th Ave in Yakima, Randall Park stands out with 4.5 stars from 1,062 happy dog owners. Open from 6am to 10pm daily, the park accommodates a variety of dog owner schedules and routines. Want to give your pup even more adventure? Sherman Park is another beloved dog park just 4.8 miles away."
+  },
+  {
+    "name": "‍ Norman & Nellie Dog Park",
+    "street": "Noel Pathway",
+    "city": "Yakima",
+    "state": "WA",
+    "zip": "98901",
+    "latitude": 46.5878537,
+    "longitude": -120.4695686,
+    "description": "Norman & Nellie Dog Park in Yakima has 4.4 stars from 24 dog owner reviews. For dog owners in the neighborhood, this park offers a place to take their pups. Dog owners might also enjoy Sherman Park, another dog park just 0.2 miles away."
+  },
+  {
+    "name": "‍ Sherman Park",
+    "street": "1401 Arboretum Dr",
+    "city": "Yakima",
+    "state": "WA",
+    "zip": "98901",
+    "latitude": 46.5860826,
+    "longitude": -120.471699,
+    "description": "Dog owners in Yakima have rated Sherman Park (1401 Arboretum Dr) 4.3 stars across 58 reviews. For dog owners in the neighborhood, this park offers a place to take their pups. Looking to explore more? Norman & Nellie Dog Park is another dog-friendly park 0.2 miles from here."
+  }
+]

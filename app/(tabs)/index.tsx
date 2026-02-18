@@ -16,6 +16,7 @@ import { useParks } from '@/src/hooks/useParks';
 import { usePlaydates } from '@/src/hooks/usePlaydates';
 import { format } from 'date-fns';
 import { generateParkSlug } from '@/src/utils/slug';
+import { getParkStateSlug } from '@/src/services/parks';
 import type { Park, PlayDate } from '@/src/types/database';
 
 function getDistanceKm(
@@ -159,7 +160,10 @@ export default function HomeScreen() {
 
   const handleParkPress = useCallback(
     (park: Park) => {
-      const slug = generateParkSlug(park.name, park.id);
+      const stateSlug = getParkStateSlug(park);
+      const slug = stateSlug 
+        ? `${stateSlug}/${generateParkSlug(park.name)}`
+        : generateParkSlug(park.name);
       router.push(`/dog-parks/${slug}`);
     },
     [router]

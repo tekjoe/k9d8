@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { SEOHead, StructuredData, placeSchema, breadcrumbSchema } from '@/src/components/seo';
-import { getParkByShortId, getParkById, getParksNearby, stateAbbrevToName } from '@/src/services/parks';
+import { getParkById, getParkBySlug, getParksNearby, stateAbbrevToName } from '@/src/services/parks';
 import { getActiveCheckIns } from '@/src/services/checkins';
 import type { CheckIn } from '@/src/types/database';
 import { parseSlugOrId, generateParkSlug } from '@/src/utils/slug';
@@ -57,7 +57,7 @@ function FeatureTag({ label, icon }: { label: string; icon: string }) {
   );
 }
 
-export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
+export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string; state?: string }) {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
@@ -76,7 +76,7 @@ export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
         if (parsed.type === 'uuid') {
           result = await getParkById(parsed.id);
         } else if (parsed.type === 'slug') {
-          result = await getParkByShortId(parsed.shortId);
+          result = await getParkBySlug(parsed.slug, state);
         }
         setPark(result);
 
@@ -152,7 +152,7 @@ export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: isMobile ? 4 : 6 }}>
           <Ionicons name="resize-outline" size={isMobile ? 14 : 16} color={isMobile ? '#3D8A5A' : '#9C9B99'} />
           <Text style={{ fontSize: isMobile ? 12 : 13, fontWeight: '500', color: '#6D6C6A' }}>
-            {park.acres ? `${park.acres} acres` : 'Free admission'}
+            Free admission
           </Text>
         </View>
       </View>
@@ -229,7 +229,7 @@ export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
           park.description ||
           `Visit ${park.name}${park.city ? ` in ${park.city}` : ''}. Find directions, park features, and nearby dog parks.`
         }
-        url={`/dog-parks/${generateParkSlug(park.name, park.id)}`}
+        url={`/dog-parks/${stateSlug}/${generateParkSlug(park.name)}`}
       />
       <StructuredData data={placeSchema(park)} />
       <StructuredData
@@ -237,6 +237,7 @@ export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
           { name: 'Home', url: '/' },
           { name: 'Dog Parks', url: '/dog-parks' },
           ...(stateName ? [{ name: stateName, url: `/dog-parks/${stateSlug}` }] : []),
+          ...(stateName ? [{ name: park.name, url: `/dog-parks/${stateSlug}/${generateParkSlug(park.name)}` }] : []),
         ])}
       />
 
@@ -589,7 +590,7 @@ export default function PublicParkDetail({ slugOrId }: { slugOrId: string }) {
                     {nearbyParks.map((np, i) => (
                       <Pressable
                         key={np.id}
-                        onPress={() => router.push(`/dog-parks/${generateParkSlug(np.name, np.id)}` as any)}
+                        onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(np.name)}` as any)}
                         style={{
                           flexDirection: 'row',
                           alignItems: 'center',
