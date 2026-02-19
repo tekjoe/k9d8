@@ -50,6 +50,7 @@ Deno.serve(async (req) => {
       body: message.content.substring(0, 100),
       data: { conversationId: message.conversation_id },
       sound: 'default',
+      channelId: 'default',
     }));
 
     await fetch('https://exp.host/--/api/v2/push/send', {

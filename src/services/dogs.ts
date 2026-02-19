@@ -1,6 +1,5 @@
-import { Platform } from 'react-native';
-import { File } from 'expo-file-system';
 import { supabase } from '../lib/supabase';
+import { readFileForUpload } from '../utils/fileUpload';
 import type { Dog, Profile, Database } from '../types/database';
 
 export interface DogWithOwner extends Dog {
@@ -74,16 +73,6 @@ export async function deleteDog(id: string): Promise<void> {
     .eq('id', id);
 
   if (error) throw error;
-}
-
-async function readFileForUpload(uri: string): Promise<ArrayBuffer | Blob> {
-  if (Platform.OS === 'web') {
-    const response = await fetch(uri);
-    return response.blob();
-  }
-  // expo-file-system v19: File.arrayBuffer() reads actual file bytes
-  const file = new File(uri);
-  return file.arrayBuffer();
 }
 
 export async function uploadDogPhoto(

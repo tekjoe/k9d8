@@ -4,7 +4,6 @@ import {
   Image,
   Linking,
   Modal,
-  Platform,
   Pressable,
   ScrollView,
   Text,
@@ -27,6 +26,9 @@ import { SEOHead, StructuredData, placeSchema } from '@/src/components/seo';
 import { parseSlugOrId } from '@/src/utils/slug';
 import type { Park, Dog } from '@/src/types/database';
 import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
+import { useParkPhotos } from '@/src/hooks/useParkPhotos';
+import ParkPhotoGrid from '@/src/components/parks/ParkPhotoGrid';
+import ParkReviewList from '@/src/components/parks/ParkReviewList';
 
 const DURATIONS = [
   { label: '30 mins', value: 30 },
@@ -190,6 +192,7 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
 
   const { dogs } = useDogs(userId);
   const { playdates, loading: playdatesLoading, refresh: refreshPlaydates } = usePlaydates(parkId || '');
+  const { featuredPhoto } = useParkPhotos(parkId || undefined);
 
   // Re-fetch play dates when returning to this screen
   const isFirstMount = React.useRef(true);
@@ -391,7 +394,7 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
         title={`${park.name} - Dog Park`}
         description={parkDescription.slice(0, 160)}
         url={`/dog-parks/${slugOrId}`}
-        image={park.image_url || undefined}
+        image={featuredPhoto?.photo_url || park.image_url || undefined}
       />
       <StructuredData data={placeSchema(park)} />
       <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#F5F4F1' }}>
@@ -403,18 +406,18 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
           <ScrollView style={{ flex: 1 }}>
             {/* Hero Image */}
             <View style={{ position: 'relative' }}>
-              <Image
-                source={
-                  park.image_url
-                    ? { uri: park.image_url }
-                    : Platform.OS === 'web'
-                      ? { uri: '/images/dog-park-placeholder.png' }
-                      : require('@/assets/images/dog-park-placeholder.png')
-                }
-                accessibilityLabel={`Photo of ${park.name} dog park`}
-                style={{ width: '100%', height: isMobile ? 240 : 300 }}
-                resizeMode="cover"
-              />
+              {(featuredPhoto?.photo_url || park.image_url) ? (
+                <Image
+                  source={{ uri: featuredPhoto?.photo_url || park.image_url }}
+                  accessibilityLabel={`Photo of ${park.name} dog park`}
+                  style={{ width: '100%', height: isMobile ? 240 : 300 }}
+                  resizeMode="cover"
+                />
+              ) : (
+                <View style={{ width: '100%', height: isMobile ? 240 : 300, backgroundColor: '#EDECEA', justifyContent: 'center', alignItems: 'center' }}>
+                  <Ionicons name="leaf-outline" size={48} color="#878685" />
+                </View>
+              )}
             {/* Back Button */}
             <Pressable
               onPress={handleBack}
@@ -474,6 +477,23 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
               {/* Divider */}
               <View style={{ height: 1, backgroundColor: '#E5E4E1' }} />
 
+              {/* About This Park */}
+              <View style={{ gap: 12 }}>
+                <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+                  About This Park
+                </Text>
+                <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
+                  {park.description ||
+                    'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
+                </Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <Ionicons name="time-outline" size={14} color="#878685" />
+                  <Text style={{ fontSize: 13, color: '#878685' }}>
+                    Open daily: 6:00 AM - 10:00 PM
+                  </Text>
+                </View>
+              </View>
+
               {/* Park Features */}
               <View style={{ gap: 14 }}>
                 <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
@@ -484,6 +504,26 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
                     <FeatureTag key={index} icon={feature.icon} label={feature.label} />
                   ))}
                 </View>
+              </View>
+
+              {/* Pups at the Park Now */}
+              <View style={{ gap: 14 }}>
+                <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+                  Pups at the Park Now
+                </Text>
+                {checkedInDogs.length > 0 ? (
+                  <View style={{ flexDirection: 'row', gap: 16, flexWrap: 'wrap' }}>
+                    {checkedInDogs.map((dog) => (
+                      <DogAvatar
+                        key={dog.id}
+                        dog={dog}
+                        onPress={() => router.push(`/dogs/${dog.id}`)}
+                      />
+                    ))}
+                  </View>
+                ) : (
+                  <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
+                )}
               </View>
 
               {/* Upcoming Play Dates - Show on mobile/tablet, desktop shows in right column */}
@@ -525,70 +565,29 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
                   </Pressable>
                 </View>
               )}
+
+              {/* Photos */}
+              {parkId && (
+                <ParkPhotoGrid
+                  parkId={parkId}
+                  isAuthenticated={!!session}
+                  userId={userId}
+                />
+              )}
+
+              {/* Reviews */}
+              {parkId && (
+                <ParkReviewList
+                  parkId={parkId}
+                  isAuthenticated={!!session}
+                  userId={userId}
+                />
+              )}
             </View>
 
             {/* Right Column - Cards (Desktop only) */}
             {isDesktop && (
               <View style={{ width: 360, gap: 24 }}>
-                {/* Pups at the Park Now */}
-                <View
-                  style={{
-                    backgroundColor: '#fff',
-                    borderRadius: 16,
-                    padding: 24,
-                    shadowColor: '#1A1918',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.03,
-                    shadowRadius: 12,
-                    gap: 16,
-                  }}
-                >
-                  <Text style={{ fontSize: 16, fontWeight: '600', color: Colors.light.text }}>
-                    Pups at the Park Now
-                  </Text>
-                  {checkedInDogs.length > 0 ? (
-                    <View style={{ flexDirection: 'row', gap: 16, flexWrap: 'wrap' }}>
-                      {checkedInDogs.map((dog) => (
-                        <DogAvatar
-                          key={dog.id}
-                          dog={dog}
-                          onPress={() => router.push(`/dogs/${dog.id}`)}
-                        />
-                      ))}
-                    </View>
-                  ) : (
-                    <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
-                  )}
-                </View>
-
-                {/* About This Park */}
-                <View
-                  style={{
-                    backgroundColor: '#fff',
-                    borderRadius: 16,
-                    padding: 24,
-                    shadowColor: '#1A1918',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.03,
-                    shadowRadius: 12,
-                    gap: 12,
-                  }}
-                >
-                  <Text style={{ fontSize: 16, fontWeight: '600', color: Colors.light.text }}>
-                    About This Park
-                  </Text>
-                  <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
-                    {park.description ||
-                      'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
-                  </Text>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                    <Ionicons name="time-outline" size={14} color="#878685" />
-                    <Text style={{ fontSize: 13, color: '#878685' }}>
-                      Open daily: 6:00 AM - 10:00 PM
-                    </Text>
-                  </View>
-                </View>
-
                 {/* Upcoming Play Dates */}
                 <View
                   style={{
@@ -642,47 +641,6 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
             )}
           </View>
 
-          {/* Mobile/Tablet: Pups at the Park & About sections */}
-          {!isDesktop && (
-            <View style={{ paddingHorizontal: 20, paddingBottom: 100, gap: 24 }}>
-              {/* Pups at the Park Now */}
-              <View style={{ gap: 14 }}>
-                <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
-                  Pups at the Park Now
-                </Text>
-                {checkedInDogs.length > 0 ? (
-                  <View style={{ flexDirection: 'row', gap: 16, flexWrap: 'wrap' }}>
-                    {checkedInDogs.map((dog) => (
-                      <DogAvatar
-                        key={dog.id}
-                        dog={dog}
-                        onPress={() => router.push(`/dogs/${dog.id}`)}
-                      />
-                    ))}
-                  </View>
-                ) : (
-                  <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No pups here right now</Text>
-                )}
-              </View>
-
-              {/* About This Park */}
-              <View style={{ gap: 12 }}>
-                <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
-                  About This Park
-                </Text>
-                <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
-                  {park.description ||
-                    'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
-                </Text>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                  <Ionicons name="time-outline" size={14} color="#878685" />
-                  <Text style={{ fontSize: 13, color: '#878685' }}>
-                    Open daily: 6:00 AM - 10:00 PM
-                  </Text>
-                </View>
-              </View>
-            </View>
-          )}
         </ScrollView>
 
         {/* Mobile: Fixed Bottom Check-in Button */}

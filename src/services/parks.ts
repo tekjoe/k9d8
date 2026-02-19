@@ -1,6 +1,50 @@
 import { supabase } from '../lib/supabase';
 import type { Park } from '../types/database';
 
+export interface BoundingBox {
+  minLat: number;
+  maxLat: number;
+  minLng: number;
+  maxLng: number;
+}
+
+/**
+ * Converts a center point + mile radius into a bounding box.
+ * Adjusts longitude degrees for latitude to produce a correct box.
+ */
+export function boundingBoxFromCenter(
+  lat: number,
+  lng: number,
+  radiusMiles: number
+): BoundingBox {
+  const radiusKm = radiusMiles * 1.60934;
+  const latDelta = radiusKm / 111.32;
+  const lngDelta = radiusKm / (111.32 * Math.cos((lat * Math.PI) / 180));
+  return {
+    minLat: lat - latDelta,
+    maxLat: lat + latDelta,
+    minLng: lng - lngDelta,
+    maxLng: lng + lngDelta,
+  };
+}
+
+/**
+ * Fetches parks within a bounding box.
+ */
+export async function getParksInBounds(bounds: BoundingBox): Promise<Park[]> {
+  const { data, error } = await supabase
+    .from('parks')
+    .select('*')
+    .gte('latitude', bounds.minLat)
+    .lte('latitude', bounds.maxLat)
+    .gte('longitude', bounds.minLng)
+    .lte('longitude', bounds.maxLng)
+    .order('name');
+
+  if (error) throw error;
+  return data as Park[];
+}
+
 /**
  * Fetches all parks from the database.
  */
@@ -335,6 +379,32 @@ export async function getParksByState(stateName: string): Promise<Park[]> {
 
   if (error) throw error;
   return data as Park[];
+}
+
+/**
+ * Fetches a page of parks for a specific state with total count.
+ * Returns only the requested page to reduce payload size.
+ */
+export async function getParksByStatePaginated(
+  stateName: string,
+  page: number,
+  perPage: number,
+): Promise<{ parks: Park[]; totalCount: number }> {
+  const abbrev = stateNameToAbbrev(stateName);
+  if (!abbrev) return { parks: [], totalCount: 0 };
+
+  const from = (page - 1) * perPage;
+  const to = from + perPage - 1;
+
+  const { data, error, count } = await supabase
+    .from('parks')
+    .select('*', { count: 'exact' })
+    .or(`state.ilike.${abbrev}%,city.eq.${abbrev}`)
+    .order('name')
+    .range(from, to);
+
+  if (error) throw error;
+  return { parks: (data as Park[]) ?? [], totalCount: count ?? 0 };
 }
 
 /**

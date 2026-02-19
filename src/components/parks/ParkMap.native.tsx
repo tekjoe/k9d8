@@ -1,14 +1,30 @@
 import { Ionicons } from '@expo/vector-icons';
-import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Park } from '../../types/database';
 
-let MapboxGL: typeof import('@rnmapbox/maps') | null = null;
-try {
-  MapboxGL = require('@rnmapbox/maps').default;
-  MapboxGL?.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_TOKEN ?? '');
-} catch {
-  // Native map not linked (e.g. running in Expo Go). Fallback UI is shown.
+function useMapbox() {
+  const [mapbox, setMapbox] = useState<typeof import('@rnmapbox/maps') | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    // Defer the heavy require to after the first render
+    const timer = setTimeout(() => {
+      try {
+        const mod = require('@rnmapbox/maps').default;
+        mod?.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_TOKEN ?? '');
+        if (!cancelled) setMapbox(mod);
+      } catch {
+        // Native map not linked (e.g. running in Expo Go)
+      }
+    }, 0);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, []);
+
+  return mapbox;
 }
 
 export interface ParkMapProps {
@@ -17,6 +33,12 @@ export interface ParkMapProps {
   userLocation: { latitude: number; longitude: number } | null;
   onParkSelect: (park: Park) => void;
   onMapPress?: () => void;
+  onBoundsChange?: (bounds: {
+    minLat: number;
+    maxLat: number;
+    minLng: number;
+    maxLng: number;
+  }) => void;
 }
 
 function ParkMarker({ count }: { count: number }) {
@@ -82,10 +104,47 @@ export default function ParkMap({
   userLocation,
   onParkSelect,
   onMapPress,
+  onBoundsChange,
 }: ParkMapProps) {
+  const MapboxGL = useMapbox();
+  const mapRef = useRef<any>(null);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    };
+  }, []);
+
+  const handleCameraChanged = useCallback(() => {
+    if (!onBoundsChange || !mapRef.current) return;
+
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+
+    debounceTimer.current = setTimeout(async () => {
+      try {
+        const visibleBounds = await mapRef.current.getVisibleBounds();
+        if (visibleBounds) {
+          // visibleBounds = [[neLng, neLat], [swLng, swLat]]
+          onBoundsChange({
+            maxLat: visibleBounds[0][1],
+            maxLng: visibleBounds[0][0],
+            minLat: visibleBounds[1][1],
+            minLng: visibleBounds[1][0],
+          });
+        }
+      } catch {
+        // Ignore errors from getVisibleBounds
+      }
+    }, 500);
+  }, [onBoundsChange]);
+
   if (!MapboxGL) {
     return (
-      <MapFallback parks={parks} checkInCounts={checkInCounts} onParkSelect={onParkSelect} />
+      <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
+        <ActivityIndicator size="large" color="#3D8A5A" />
+        <Text style={{ marginTop: 12, fontSize: 14, color: '#6D6C6A' }}>Loading map...</Text>
+      </View>
     );
   }
 
@@ -96,12 +155,14 @@ export default function ParkMap({
   return (
     <View style={styles.container}>
       <MapboxGL.MapView
+        ref={mapRef}
         style={styles.map}
         styleURL={MapboxGL.StyleURL.Outdoors}
         scaleBarEnabled={false}
         attributionEnabled={false}
         logoEnabled={false}
         onPress={onMapPress}
+        onCameraChanged={handleCameraChanged}
       >
         <MapboxGL.Camera
           zoomLevel={9}

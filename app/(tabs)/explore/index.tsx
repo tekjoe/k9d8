@@ -1,11 +1,11 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, lazy, Suspense } from 'react';
 import { View, Text, TextInput, Pressable, Image, ActivityIndicator, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import ParkMap from '@/src/components/parks/ParkMap';
+const ParkMap = lazy(() => import('@/src/components/parks/ParkMap'));
 import { useLocation } from '@/src/hooks/useLocation';
-import { useParks } from '@/src/hooks/useParks';
+import { useNearbyParks } from '@/src/hooks/useNearbyParks';
 import { generateParkSlug } from '@/src/utils/slug';
 import { getParkStateSlug } from '@/src/services/parks';
 import type { Park } from '@/src/types/database';
@@ -55,11 +55,17 @@ function ParkListItem({ park, pupCount, distanceKm, onPress }: ParkListItemProps
         marginBottom: 12,
       }}
     >
-      <Image
-        source={park.image_url ? { uri: park.image_url } : require('@/assets/images/dog-park-placeholder.png')}
-        style={{ width: 56, height: 56, borderRadius: 8 }}
-        resizeMode="cover"
-      />
+      {park.image_url ? (
+        <Image
+          source={{ uri: park.image_url }}
+          style={{ width: 56, height: 56, borderRadius: 8 }}
+          resizeMode="cover"
+        />
+      ) : (
+        <View style={{ width: 56, height: 56, borderRadius: 8, backgroundColor: '#EDECEA', justifyContent: 'center', alignItems: 'center' }}>
+          <Ionicons name="leaf-outline" size={24} color="#878685" />
+        </View>
+      )}
       <View style={{ flex: 1, marginLeft: 12 }}>
         <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918', marginBottom: 2 }} numberOfLines={1}>
           {park.name}
@@ -87,8 +93,8 @@ const LOAD_MORE_INCREMENT = 10;
 export default function ExploreScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { location } = useLocation();
-  const { parks, checkInCounts, loading: parksLoading } = useParks();
+  const { location, isLoading: locationLoading } = useLocation();
+  const { parks, checkInCounts, loading: parksLoading, loadingMore, loadBounds } = useNearbyParks(location, !locationLoading);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPark, setSelectedPark] = useState<Park | null>(null);
@@ -228,105 +234,115 @@ export default function ExploreScreen() {
         </View>
       </View>
 
-      {/* Content */}
-      {showMap ? (
-        <View style={{ flex: 1, position: 'relative' }}>
-          {parksLoading ? (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#EDECEA' }}>
-              <ActivityIndicator size="large" color="#3D8A5A" />
-            </View>
-          ) : (
-            <ParkMap
-              parks={parks}
-              checkInCounts={checkInCounts}
-              userLocation={location}
-              onParkSelect={handleParkSelect}
-            />
-          )}
+      {/* Map View — kept mounted, hidden via display */}
+      <View style={{ flex: 1, position: 'relative', display: showMap ? 'flex' : 'none' }}>
+        {parksLoading ? (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#EDECEA' }}>
+            <ActivityIndicator size="large" color="#3D8A5A" />
+          </View>
+        ) : (
+          <>
+            <Suspense fallback={<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}><ActivityIndicator size="large" color="#3D8A5A" /></View>}>
+              <ParkMap
+                parks={searchQuery.trim() ? allFilteredParks.map(({ park }) => park) : parks}
+                checkInCounts={checkInCounts}
+                userLocation={location}
+                onParkSelect={handleParkSelect}
+                onBoundsChange={loadBounds}
+              />
+            </Suspense>
+            {loadingMore && (
+              <ActivityIndicator
+                style={{ position: 'absolute', top: 16, alignSelf: 'center' }}
+                color="#3D8A5A"
+              />
+            )}
+          </>
+        )}
 
-          {/* Selected park card */}
-          {selectedPark && (
-            <View
-              style={{
-                position: 'absolute',
-                bottom: 16 + insets.bottom,
-                left: 16,
-                right: 16,
-                backgroundColor: '#fff',
-                borderRadius: 12,
-                padding: 16,
-                shadowColor: '#000',
-                shadowOpacity: 0.15,
-                shadowRadius: 8,
-                shadowOffset: { width: 0, height: 2 },
-                elevation: 8,
-              }}
-            >
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                <Text style={{ fontSize: 16, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }}>
-                  {selectedPark.name}
-                </Text>
-                <Pressable onPress={() => setSelectedPark(null)}>
-                  <Ionicons name="close" size={20} color="#6D6C6A" />
-                </Pressable>
-              </View>
-              <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
-                <Ionicons name="paw" size={14} color="#3D8A5A" />
-                <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>
-                  {checkInCounts[selectedPark.id] || 0} pups here now
-                </Text>
-              </View>
-              <Pressable
-                onPress={() => handleParkPress(selectedPark)}
-                style={{ backgroundColor: '#3D8A5A', borderRadius: 8, paddingVertical: 12, alignItems: 'center' }}
-              >
-                <Text style={{ color: '#fff', fontWeight: '600' }}>View Details</Text>
+        {/* Selected park card */}
+        {selectedPark && (
+          <View
+            style={{
+              position: 'absolute',
+              bottom: 16 + insets.bottom,
+              left: 16,
+              right: 16,
+              backgroundColor: '#fff',
+              borderRadius: 12,
+              padding: 16,
+              shadowColor: '#000',
+              shadowOpacity: 0.15,
+              shadowRadius: 8,
+              shadowOffset: { width: 0, height: 2 },
+              elevation: 8,
+            }}
+          >
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+              <Text style={{ fontSize: 16, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }}>
+                {selectedPark.name}
+              </Text>
+              <Pressable onPress={() => setSelectedPark(null)}>
+                <Ionicons name="close" size={20} color="#6D6C6A" />
               </Pressable>
             </View>
-          )}
-        </View>
-      ) : (
-        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 16, paddingBottom: 100 }}>
-          {parksLoading ? (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 40 }}>
-              <ActivityIndicator size="large" color="#3D8A5A" />
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
+              <Ionicons name="paw" size={14} color="#3D8A5A" />
+              <Text style={{ fontSize: 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>
+                {checkInCounts[selectedPark.id] || 0} pups here now
+              </Text>
             </View>
-          ) : (
-            <>
-              {filteredParks.map(({ park, distanceKm }) => (
-                <ParkListItem
-                  key={park.id}
-                  park={park}
-                  pupCount={checkInCounts[park.id] || 0}
-                  distanceKm={distanceKm}
-                  onPress={() => handleParkPress(park)}
-                />
-              ))}
-              {hasMore && (
-                <Pressable
-                  onPress={handleLoadMore}
-                  style={{
-                    backgroundColor: '#EDECEA',
-                    borderRadius: 8,
-                    padding: 12,
-                    marginTop: 8,
-                    alignItems: 'center',
-                  }}
-                >
-                  <Text style={{ color: '#3D8A5A', fontWeight: '600', fontSize: 14 }}>
-                    Load More ({allFilteredParks.length - displayLimit} remaining)
-                  </Text>
-                </Pressable>
-              )}
-              {filteredParks.length === 0 && (
-                <Text style={{ color: '#6D6C6A', textAlign: 'center', paddingVertical: 40 }}>
-                  No parks found
+            <Pressable
+              onPress={() => handleParkPress(selectedPark)}
+              style={{ backgroundColor: '#3D8A5A', borderRadius: 8, paddingVertical: 12, alignItems: 'center' }}
+            >
+              <Text style={{ color: '#fff', fontWeight: '600' }}>View Details</Text>
+            </Pressable>
+          </View>
+        )}
+      </View>
+
+      {/* List View — kept mounted, hidden via display */}
+      <ScrollView style={{ flex: 1, display: showMap ? 'none' : 'flex' }} contentContainerStyle={{ padding: 16, paddingBottom: 100 }}>
+        {parksLoading ? (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 40 }}>
+            <ActivityIndicator size="large" color="#3D8A5A" />
+          </View>
+        ) : (
+          <>
+            {filteredParks.map(({ park, distanceKm }) => (
+              <ParkListItem
+                key={park.id}
+                park={park}
+                pupCount={checkInCounts[park.id] || 0}
+                distanceKm={distanceKm}
+                onPress={() => handleParkPress(park)}
+              />
+            ))}
+            {hasMore && (
+              <Pressable
+                onPress={handleLoadMore}
+                style={{
+                  backgroundColor: '#EDECEA',
+                  borderRadius: 8,
+                  padding: 12,
+                  marginTop: 8,
+                  alignItems: 'center',
+                }}
+              >
+                <Text style={{ color: '#3D8A5A', fontWeight: '600', fontSize: 14 }}>
+                  Load More ({allFilteredParks.length - displayLimit} remaining)
                 </Text>
-              )}
-            </>
-          )}
-        </ScrollView>
-      )}
+              </Pressable>
+            )}
+            {filteredParks.length === 0 && (
+              <Text style={{ color: '#6D6C6A', textAlign: 'center', paddingVertical: 40 }}>
+                No parks found
+              </Text>
+            )}
+          </>
+        )}
+      </ScrollView>
     </View>
   );
 }

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
+  Alert,
   FlatList,
   Image,
   KeyboardAvoidingView,
@@ -18,6 +19,8 @@ import { useAuth } from '@/src/hooks/useAuth';
 import { useMessages } from '@/src/hooks/useMessages';
 import { useConversations } from '@/src/hooks/useConversations';
 import { getBlockStatus } from '@/src/services/blocks';
+import { reportMessage } from '@/src/services/reports';
+import type { ReportReason } from '@/src/types/database';
 import MessageBubble from '@/src/components/messages/MessageBubble';
 
 export default function ChatScreen() {
@@ -71,7 +74,7 @@ export default function ChatScreen() {
     } catch (err: any) {
       const code = err?.code || '';
       const msg = err?.message || err?.error_description || '';
-      if (code === '42501' || msg.includes('Cannot message') || msg.includes('blocked') || msg.includes('row-level security')) {
+      if (code === '42501' || msg.includes('Cannot message') || msg.includes('blocked') || msg.includes('must be friends') || msg.includes('row-level security')) {
         setIsBlocked(true);
       } else {
         console.error('Failed to send message:', err);
@@ -85,6 +88,37 @@ export default function ChatScreen() {
   const handleBack = useCallback(() => {
     router.back();
   }, [router]);
+
+  const handleReportMessage = useCallback((messageId: string) => {
+    Alert.alert('Report Message', 'Why are you reporting this message?', [
+      { text: 'Spam', onPress: () => submitReport(messageId, 'spam') },
+      {
+        text: 'Harassment',
+        onPress: () => submitReport(messageId, 'harassment'),
+      },
+      {
+        text: 'Hate Speech',
+        onPress: () => submitReport(messageId, 'hate_speech'),
+      },
+      {
+        text: 'Inappropriate',
+        onPress: () => submitReport(messageId, 'inappropriate'),
+      },
+      { text: 'Cancel', style: 'cancel' },
+    ]);
+  }, []);
+
+  const submitReport = useCallback(
+    async (messageId: string, reason: ReportReason) => {
+      try {
+        await reportMessage(messageId, reason);
+        Alert.alert('Reported', 'Thank you. We will review this message.');
+      } catch (err: any) {
+        Alert.alert('Error', err.message || 'Could not submit report.');
+      }
+    },
+    [],
+  );
 
   if (loading) {
     return (
@@ -134,6 +168,7 @@ export default function ChatScreen() {
             <MessageBubble
               message={item}
               isOwn={item.sender_id === userId}
+              onReport={handleReportMessage}
             />
           )}
           contentContainerStyle={{ paddingVertical: 16 }}
@@ -162,7 +197,7 @@ export default function ChatScreen() {
         >
           <TextInput
             className="flex-1 bg-[#EDECEA] rounded-2xl px-4 py-2.5 text-[15px] text-text mr-2 max-h-[100px]"
-            placeholder={isBlocked ? 'This user has blocked you' : 'Message...'}
+            placeholder={isBlocked ? 'Messaging unavailable' : 'Message...'}
             placeholderTextColor={isBlocked ? '#B5725E' : '#878685'}
             value={text}
             onChangeText={setText}

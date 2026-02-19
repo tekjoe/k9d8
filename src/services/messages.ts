@@ -1,5 +1,6 @@
 import { supabase } from '../lib/supabase';
 import type { Conversation, Message } from '../types/database';
+import { filterMessage } from './wordFilter';
 
 const CONVERSATION_SELECT = `
   *,
@@ -36,6 +37,9 @@ export async function getOrCreateConversation(
   if (error) {
     if (error.message?.includes('Cannot message this user')) {
       throw new Error('You cannot message this user.');
+    }
+    if (error.message?.includes('must be friends')) {
+      throw new Error('You must be friends to start a conversation.');
     }
     throw error;
   }
@@ -76,6 +80,13 @@ export async function sendMessage(
   senderId: string,
   content: string,
 ): Promise<Message> {
+  const filterResult = filterMessage(content);
+  if (!filterResult.isClean) {
+    throw new Error(
+      'Your message contains inappropriate language. Please revise and try again.',
+    );
+  }
+
   const { data, error } = await supabase
     .from('messages')
     .insert({

@@ -26,7 +26,7 @@ interface ImagePickerWithModerationProps {
   selectedImage?: string | null;
   placeholder?: string;
   moderationEnabled?: boolean;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'carousel';
   shape?: 'square' | 'circle';
   aspectRatio?: [number, number];
 }
@@ -35,6 +35,7 @@ const SIZE_MAP = {
   small: 80,
   medium: 120,
   large: 200,
+  carousel: 160,
 };
 
 /**

@@ -70,9 +70,26 @@ export async function updateProfile(updates: { display_name?: string; bio?: stri
 }
 
 export async function deleteAccount(): Promise<void> {
-  const { error } = await supabase.rpc('delete_user');
-  if (error) throw error;
-  await supabase.auth.signOut();
+  // Refresh session to ensure we have a valid JWT
+  const { data: sessionData, error: sessionError } =
+    await supabase.auth.refreshSession();
+  if (sessionError || !sessionData.session) {
+    throw new Error('Session expired. Please sign in again.');
+  }
+
+  const { data, error } = await supabase.functions.invoke('delete-account', {
+    headers: {
+      Authorization: `Bearer ${sessionData.session.access_token}`,
+    },
+  });
+
+  if (error) {
+    const message = data?.error || error.message || 'Failed to delete account';
+    throw new Error(message);
+  }
+
+  // Sign out locally (the auth user is already deleted server-side)
+  await supabase.auth.signOut({ scope: 'local' });
 }
 
 // --- GOOGLE SIGN-IN ---

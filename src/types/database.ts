@@ -147,6 +147,71 @@ export interface UserBlock {
   blocked?: Profile;
 }
 
+export type ReportReason = 'spam' | 'harassment' | 'hate_speech' | 'inappropriate' | 'other';
+export type ReportStatus = 'pending' | 'reviewed' | 'dismissed' | 'actioned';
+
+export interface MessageReport {
+  id: string;
+  reporter_id: string;
+  message_id: string;
+  reason: ReportReason;
+  details: string | null;
+  status: ReportStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+// Park Photos
+export interface ParkPhoto {
+  id: string;
+  park_id: string;
+  user_id: string;
+  photo_url: string;
+  created_at: string;
+  user?: Profile;
+  vote_count?: number;
+  user_has_voted?: boolean;
+}
+
+export type PhotoReportReason = 'spam' | 'inappropriate' | 'offensive' | 'other';
+
+export interface ParkPhotoReport {
+  id: string;
+  reporter_id: string;
+  photo_id: string;
+  reason: PhotoReportReason;
+  details: string | null;
+  status: ReportStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+// Park Reviews
+export interface ParkReview {
+  id: string;
+  park_id: string;
+  user_id: string;
+  parent_id: string | null;
+  content: string;
+  created_at: string;
+  updated_at: string;
+  user?: Profile;
+  vote_count?: number;
+  user_has_voted?: boolean;
+  replies?: ParkReview[];
+}
+
+export interface ParkReviewReport {
+  id: string;
+  reporter_id: string;
+  review_id: string;
+  reason: ReportReason;
+  details: string | null;
+  status: ReportStatus;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Database {
   public: {
     Tables: {

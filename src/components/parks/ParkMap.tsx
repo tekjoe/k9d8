@@ -8,6 +8,12 @@ export interface ParkMapProps {
   userLocation: { latitude: number; longitude: number } | null;
   onParkSelect: (park: Park) => void;
   onMapPress?: () => void;
+  onBoundsChange?: (bounds: {
+    minLat: number;
+    maxLat: number;
+    minLng: number;
+    maxLng: number;
+  }) => void;
 }
 
 export default function ParkMap({

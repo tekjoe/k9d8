@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo } from 'react';
+import React, { useCallback, useState, useMemo, lazy, Suspense } from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,7 @@ import {
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import ParkMap from '@/src/components/parks/ParkMap';
+const ParkMap = lazy(() => import('@/src/components/parks/ParkMap'));
 import { useAuth } from '@/src/hooks/useAuth';
 import { useNotificationsData } from '@/src/hooks/useNotificationsData';
 import { useLocation } from '@/src/hooks/useLocation';
@@ -116,11 +116,17 @@ function ParkCard({ park, pupCount, distanceKm, onPress }: ParkCardProps) {
         borderColor: '#E5E4E1',
       }}
     >
-      <Image
-        source={park.image_url ? { uri: park.image_url } : require('@/assets/images/dog-park-placeholder.png')}
-        style={{ width: '100%', height: 100 }}
-        resizeMode="cover"
-      />
+      {park.image_url ? (
+        <Image
+          source={{ uri: park.image_url }}
+          style={{ width: '100%', height: 100 }}
+          resizeMode="cover"
+        />
+      ) : (
+        <View style={{ width: '100%', height: 100, backgroundColor: '#EDECEA', justifyContent: 'center', alignItems: 'center' }}>
+          <Ionicons name="leaf-outline" size={32} color="#878685" />
+        </View>
+      )}
       <View style={{ padding: 12 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4 }}>
           <Text style={{ fontSize: 15, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }} numberOfLines={1}>
@@ -560,12 +566,14 @@ export default function HomeScreen() {
                   shadowRadius: 12,
                 }}
               >
-                <ParkMap
-                  parks={parks}
-                  checkInCounts={checkInCounts}
-                  userLocation={location}
-                  onParkSelect={handleParkPress}
-                />
+                <Suspense fallback={<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><ActivityIndicator size="large" color="#3D8A5A" /></View>}>
+                  <ParkMap
+                    parks={parks}
+                    checkInCounts={checkInCounts}
+                    userLocation={location}
+                    onParkSelect={handleParkPress}
+                  />
+                </Suspense>
               </View>
 
               {/* Parks Near You Bar */}

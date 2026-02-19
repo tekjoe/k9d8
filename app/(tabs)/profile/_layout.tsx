@@ -18,12 +18,13 @@ export default function ProfileLayout() {
       />
       <Stack.Screen
         name="dogs/[id]"
-        options={{ 
-          title: 'Edit Dog', 
+        options={{
+          title: 'Edit Dog',
           headerBackTitle: 'Profile',
-          headerShown: !isWeb,
+          headerShown: false,
         }}
       />
+      <Stack.Screen name="delete" options={{ headerShown: false }} />
       <Stack.Screen
         name="friends/index"
         options={{ 

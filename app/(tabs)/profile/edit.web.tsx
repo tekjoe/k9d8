@@ -12,10 +12,9 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
-import ConfirmModal from '@/src/components/ui/ConfirmModal';
 import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
-import { updateProfile, uploadUserAvatar, deleteUserAvatar, deleteAccount } from '@/src/services/auth';
+import { updateProfile, uploadUserAvatar, deleteUserAvatar } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
 import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
 
@@ -27,8 +26,6 @@ export default function EditProfileWebScreen() {
 
   const { session, refreshSession } = useAuth();
   const [isSaving, setIsSaving] = useState(false);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
@@ -112,18 +109,6 @@ export default function EditProfileWebScreen() {
       }
     }
   }, [session?.user?.id, avatarUrl]);
-
-  const handleDeleteAccount = useCallback(async () => {
-    setShowDeleteModal(false);
-    setIsDeleting(true);
-    try {
-      await deleteAccount();
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to delete account';
-      setError(message);
-      setIsDeleting(false);
-    }
-  }, []);
 
   const avatarSize = isMobile ? 120 : 160;
 
@@ -352,8 +337,7 @@ export default function EditProfileWebScreen() {
 
               {/* Delete Account */}
               <Pressable
-                onPress={() => setShowDeleteModal(true)}
-                disabled={isDeleting}
+                onPress={() => router.push('/(tabs)/profile/delete')}
                 style={{
                   marginTop: 16,
                   paddingVertical: 14,
@@ -361,17 +345,12 @@ export default function EditProfileWebScreen() {
                   borderWidth: 1,
                   borderColor: '#D1D0CD',
                   alignItems: 'center',
-                  opacity: isDeleting ? 0.5 : 1,
                   cursor: 'pointer',
                 }}
               >
-                {isDeleting ? (
-                  <ActivityIndicator size="small" color="#878685" />
-                ) : (
-                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
-                    Delete Account
-                  </Text>
-                )}
+                <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
+                  Delete Account
+                </Text>
               </Pressable>
             </View>
           </View>
@@ -379,16 +358,6 @@ export default function EditProfileWebScreen() {
       </View>
     </View>
 
-    <ConfirmModal
-      visible={showDeleteModal}
-      title="Delete Account"
-      message="This will permanently delete your account and all your data. This action cannot be undone."
-      confirmLabel="Delete My Account"
-      cancelLabel="Cancel"
-      destructive
-      onConfirm={handleDeleteAccount}
-      onCancel={() => setShowDeleteModal(false)}
-    />
     </>
   );
 }

@@ -179,38 +179,44 @@ function ProfileCard({
           marginBottom: isMobile ? 16 : 24,
         }}
       >
-        <Image
-          source={{
-            uri:
-              avatarUrl ||
-              'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-          }}
-          style={{ width: '100%', height: '100%', borderRadius: avatarSize / 2 }}
-          contentFit="cover"
-        />
+        {avatarUrl ? (
+          <Image
+            source={{ uri: avatarUrl }}
+            style={{ width: '100%', height: '100%', borderRadius: avatarSize / 2 }}
+            contentFit="cover"
+          />
+        ) : (
+          <View style={{ width: '100%', height: '100%', borderRadius: avatarSize / 2, backgroundColor: '#E5E4E1', justifyContent: 'center', alignItems: 'center' }}>
+            <Ionicons name="person" size={avatarSize * 0.4} color="#878685" />
+          </View>
+        )}
       </View>
 
       {/* Name & Handle */}
       <Text style={{ fontSize: isMobile ? 20 : 24, fontWeight: '600', color: '#1A1918', marginBottom: 4 }}>
-        {displayName}
+        {displayName || 'New User'}
       </Text>
-      <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
-        @{handle}
-      </Text>
+      {handle ? (
+        <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
+          @{handle}
+        </Text>
+      ) : null}
 
       {/* Bio */}
-      <Text 
-        style={{ 
-          fontSize: 14, 
-          color: '#6D6C6A', 
-          textAlign: 'center', 
-          lineHeight: 21,
-          marginBottom: isMobile ? 16 : 24,
-          maxWidth: 280,
-        }}
-      >
-        {bio}
-      </Text>
+      {bio ? (
+        <Text
+          style={{
+            fontSize: 14,
+            color: '#6D6C6A',
+            textAlign: 'center',
+            lineHeight: 21,
+            marginBottom: isMobile ? 16 : 24,
+            maxWidth: 280,
+          }}
+        >
+          {bio}
+        </Text>
+      ) : null}
 
       {/* Stats */}
       <View style={{ flexDirection: 'row', gap: isMobile ? 16 : 24, width: '100%', justifyContent: 'center' }}>
@@ -367,10 +373,9 @@ export default function DesktopProfilePage() {
   const { friends, pendingRequests, sentRequests, acceptFriendRequest, declineFriendRequest } = useFriends();
   const { activities, loading: activitiesLoading } = useRecentActivity(userId);
 
-  const displayName = session?.user?.user_metadata?.display_name || 'Alex Johnson';
-  const handle = session?.user?.email?.split('@')[0] || 'alexjohnson';
-  const bio = session?.user?.user_metadata?.bio || 
-    'Lover of all things canine. You can find me and my pack at Central Park on weekends!';
+  const displayName = session?.user?.user_metadata?.display_name || '';
+  const handle = session?.user?.email?.split('@')[0] || '';
+  const bio = session?.user?.user_metadata?.bio || '';
   const avatarUrl = session?.user?.user_metadata?.avatar_url;
 
   async function handleSignOut() {
@@ -395,8 +400,8 @@ export default function DesktopProfilePage() {
   }
 
   // Stats - use real data where available
-  const parksVisited = 12; // TODO: Track unique parks visited
-  const playdatesCount = 8; // TODO: Track total playdates attended
+  const parksVisited = 0; // TODO: Track unique parks visited
+  const playdatesCount = 0; // TODO: Track total playdates attended
   const friendsCount = friends.length;
 
   return (

@@ -9,6 +9,9 @@ import { getParkById, getParkBySlug, getParksNearby, stateAbbrevToName } from '@
 import { getActiveCheckIns } from '@/src/services/checkins';
 import type { CheckIn } from '@/src/types/database';
 import { parseSlugOrId, generateParkSlug } from '@/src/utils/slug';
+import { useParkPhotos } from '@/src/hooks/useParkPhotos';
+import ParkPhotoGrid from '@/src/components/parks/ParkPhotoGrid';
+import ParkReviewList from '@/src/components/parks/ParkReviewList';
 
 function extractStateAbbrev(row: { city?: string | null; state?: string | null }): string | null {
   const st = row.state?.trim() ?? '';
@@ -65,6 +68,8 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
   const [nearbyParks, setNearbyParks] = useState<Park[]>([]);
   const [activeCheckIns, setActiveCheckIns] = useState<CheckIn[]>([]);
   const [loading, setLoading] = useState(true);
+  const [parkId, setParkId] = useState<string | undefined>(undefined);
+  const { featuredPhoto } = useParkPhotos(parkId);
 
   useEffect(() => {
     if (!slugOrId) return;
@@ -79,6 +84,7 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
           result = await getParkBySlug(parsed.slug, state);
         }
         setPark(result);
+        if (result) setParkId(result.id);
 
         if (result) {
           const [nearby, checkIns] = await Promise.all([
@@ -253,11 +259,17 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
             overflow: 'hidden',
           }}
         >
-          <Image
-            source={{ uri: park.image_url || '/images/dog-park-placeholder.png' }}
-            style={{ width: '100%', height: '100%' }}
-            resizeMode="cover"
-          />
+          {featuredPhoto?.photo_url || park.image_url ? (
+            <Image
+              source={{ uri: featuredPhoto?.photo_url || park.image_url }}
+              style={{ width: '100%', height: '100%' }}
+              resizeMode="cover"
+            />
+          ) : (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+              <Ionicons name="leaf-outline" size={48} color="#878685" />
+            </View>
+          )}
         </View>
 
         {/* Park Info Bar */}
@@ -378,6 +390,57 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
               {featuresSection}
               {featuresSection && divider}
 
+              {/* Pups at the Park */}
+              <View
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 16,
+                  padding: 20,
+                  gap: 14,
+                  shadowColor: '#1A1918',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.03,
+                  shadowRadius: 12,
+                }}
+              >
+                <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Pups at the Park Now</Text>
+                {activeDogs.length === 0 ? (
+                  <View style={{ alignItems: 'center', gap: 8, paddingVertical: 14 }}>
+                    <Ionicons name="paw" size={28} color="#9C9B99" />
+                    <Text style={{ fontSize: 12, color: '#9C9B99', textAlign: 'center' }}>
+                      Sign up to see who's here!
+                    </Text>
+                  </View>
+                ) : (
+                  <View style={{ gap: 12 }}>
+                    {activeDogs.map((dog) => (
+                      <View key={dog.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                        <Image
+                          source={{
+                            uri:
+                              dog.photo_url ||
+                              'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+                          }}
+                          style={{
+                            width: 36,
+                            height: 36,
+                            borderRadius: 18,
+                            borderWidth: 2,
+                            borderColor: '#E5E4E1',
+                          }}
+                          resizeMode="cover"
+                        />
+                        <View style={{ flex: 1, gap: 1 }}>
+                          <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{dog.name}</Text>
+                          <Text style={{ fontSize: 11, color: '#9C9B99' }}>{dog.breed || 'Dog'}</Text>
+                        </View>
+                      </View>
+                    ))}
+                  </View>
+                )}
+              </View>
+              {divider}
+
               {/* Location / Map */}
               <View style={{ gap: 14 }}>
                 <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918', letterSpacing: -0.3 }}>
@@ -444,59 +507,27 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                 </Pressable>
               </View>
 
+              {/* Photos */}
+              {parkId && (
+                <ParkPhotoGrid
+                  parkId={parkId}
+                  isAuthenticated={false}
+                />
+              )}
+
+              {divider}
+
+              {/* Reviews */}
+              {parkId && (
+                <ParkReviewList
+                  parkId={parkId}
+                  isAuthenticated={false}
+                />
+              )}
+
               {divider}
               {ctaCard}
               {divider}
-
-              {/* Pups at the Park */}
-              <View
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: 16,
-                  padding: 20,
-                  gap: 14,
-                  shadowColor: '#1A1918',
-                  shadowOffset: { width: 0, height: 2 },
-                  shadowOpacity: 0.03,
-                  shadowRadius: 12,
-                }}
-              >
-                <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Pups at the Park Now</Text>
-                {activeDogs.length === 0 ? (
-                  <View style={{ alignItems: 'center', gap: 8, paddingVertical: 14 }}>
-                    <Ionicons name="paw" size={28} color="#9C9B99" />
-                    <Text style={{ fontSize: 12, color: '#9C9B99', textAlign: 'center' }}>
-                      Sign up to see who's here!
-                    </Text>
-                  </View>
-                ) : (
-                  <View style={{ gap: 12 }}>
-                    {activeDogs.map((dog) => (
-                      <View key={dog.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                        <Image
-                          source={{
-                            uri:
-                              dog.photo_url ||
-                              'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
-                          }}
-                          style={{
-                            width: 36,
-                            height: 36,
-                            borderRadius: 18,
-                            borderWidth: 2,
-                            borderColor: '#E5E4E1',
-                          }}
-                          resizeMode="cover"
-                        />
-                        <View style={{ flex: 1, gap: 1 }}>
-                          <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{dog.name}</Text>
-                          <Text style={{ fontSize: 11, color: '#9C9B99' }}>{dog.breed || 'Dog'}</Text>
-                        </View>
-                      </View>
-                    ))}
-                  </View>
-                )}
-              </View>
 
               {/* Nearby Parks */}
               {nearbyParks.length > 0 && (
@@ -572,6 +603,57 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                 {featuresSection}
                 {featuresSection && divider}
 
+                {/* Pups at the Park */}
+                <View
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 16,
+                    padding: 20,
+                    gap: 14,
+                    shadowColor: '#1A1918',
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.03,
+                    shadowRadius: 12,
+                  }}
+                >
+                  <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Pups at the Park Now</Text>
+                  {activeDogs.length === 0 ? (
+                    <View style={{ alignItems: 'center', gap: 8, paddingVertical: 14 }}>
+                      <Ionicons name="paw" size={28} color="#9C9B99" />
+                      <Text style={{ fontSize: 12, color: '#9C9B99', textAlign: 'center' }}>
+                        Sign up to see who's here!
+                      </Text>
+                    </View>
+                  ) : (
+                    <View style={{ gap: 12 }}>
+                      {activeDogs.map((dog) => (
+                        <View key={dog.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                          <Image
+                            source={{
+                              uri:
+                                dog.photo_url ||
+                                'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
+                            }}
+                            style={{
+                              width: 36,
+                              height: 36,
+                              borderRadius: 18,
+                              borderWidth: 2,
+                              borderColor: '#E5E4E1',
+                            }}
+                            resizeMode="cover"
+                          />
+                          <View style={{ flex: 1, gap: 1 }}>
+                            <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{dog.name}</Text>
+                            <Text style={{ fontSize: 11, color: '#9C9B99' }}>{dog.breed || 'Dog'}</Text>
+                          </View>
+                        </View>
+                      ))}
+                    </View>
+                  )}
+                </View>
+                {divider}
+
                 {/* Location / Map */}
                 <View style={{ gap: 14 }}>
                   <Text style={{ fontSize: 20, fontWeight: '600', color: '#1A1918', letterSpacing: -0.3 }}>
@@ -637,61 +719,28 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                     </View>
                   </Pressable>
                 </View>
+
+                {/* Photos */}
+                {parkId && (
+                  <ParkPhotoGrid
+                    parkId={parkId}
+                    isAuthenticated={false}
+                  />
+                )}
+
+                {/* Reviews */}
+                {parkId && (
+                  <ParkReviewList
+                    parkId={parkId}
+                    isAuthenticated={false}
+                  />
+                )}
+
               </View>
 
               {/* Right Column */}
               <View style={{ width: 280, gap: 20 }}>
                 {ctaCard}
-
-                {/* Pups at the Park */}
-                <View
-                  style={{
-                    backgroundColor: '#FFFFFF',
-                    borderRadius: 16,
-                    padding: 20,
-                    gap: 14,
-                    shadowColor: '#1A1918',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.03,
-                    shadowRadius: 12,
-                  }}
-                >
-                  <Text style={{ fontSize: 15, fontWeight: '600', color: '#1A1918' }}>Pups at the Park Now</Text>
-                  {activeDogs.length === 0 ? (
-                    <View style={{ alignItems: 'center', gap: 8, paddingVertical: 14 }}>
-                      <Ionicons name="paw" size={28} color="#9C9B99" />
-                      <Text style={{ fontSize: 12, color: '#9C9B99', textAlign: 'center' }}>
-                        Sign up to see who's here!
-                      </Text>
-                    </View>
-                  ) : (
-                    <View style={{ gap: 12 }}>
-                      {activeDogs.map((dog) => (
-                        <View key={dog.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                          <Image
-                            source={{
-                              uri:
-                                dog.photo_url ||
-                                'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
-                            }}
-                            style={{
-                              width: 36,
-                              height: 36,
-                              borderRadius: 18,
-                              borderWidth: 2,
-                              borderColor: '#E5E4E1',
-                            }}
-                            resizeMode="cover"
-                          />
-                          <View style={{ flex: 1, gap: 1 }}>
-                            <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{dog.name}</Text>
-                            <Text style={{ fontSize: 11, color: '#9C9B99' }}>{dog.breed || 'Dog'}</Text>
-                          </View>
-                        </View>
-                      ))}
-                    </View>
-                  )}
-                </View>
 
                 {/* Nearby Parks */}
                 {nearbyParks.length > 0 && (

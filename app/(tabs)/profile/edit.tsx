@@ -11,17 +11,13 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '@/src/hooks/useAuth';
-import { updateProfile, uploadUserAvatar, deleteUserAvatar, deleteAccount } from '@/src/services/auth';
+import { updateProfile, uploadUserAvatar, deleteUserAvatar } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
 import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
-import ConfirmModal from '@/src/components/ui/ConfirmModal';
-
 export default function EditProfileScreen() {
   const insets = useSafeAreaInsets();
   const { session, refreshSession } = useAuth();
   const [isSaving, setIsSaving] = useState(false);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [displayName, setDisplayName] = useState(
@@ -99,17 +95,6 @@ export default function EditProfileScreen() {
     }
   }, [session?.user?.id, avatarUrl]);
 
-  const handleDeleteAccount = useCallback(async () => {
-    setShowDeleteModal(false);
-    setIsDeleting(true);
-    try {
-      await deleteAccount();
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to delete account';
-      setError(message);
-      setIsDeleting(false);
-    }
-  }, []);
 
   return (
     <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
@@ -265,8 +250,7 @@ export default function EditProfileScreen() {
 
         {/* Delete Account */}
         <Pressable
-          onPress={() => setShowDeleteModal(true)}
-          disabled={isDeleting}
+          onPress={() => router.push('/(tabs)/profile/delete')}
           style={{
             marginTop: 32,
             paddingVertical: 14,
@@ -274,29 +258,14 @@ export default function EditProfileScreen() {
             borderWidth: 1,
             borderColor: '#D1D0CD',
             alignItems: 'center',
-            opacity: isDeleting ? 0.5 : 1,
           }}
         >
-          {isDeleting ? (
-            <ActivityIndicator size="small" color="#878685" />
-          ) : (
-            <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
-              Delete Account
-            </Text>
-          )}
+          <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
+            Delete Account
+          </Text>
         </Pressable>
       </ScrollView>
 
-      <ConfirmModal
-        visible={showDeleteModal}
-        title="Delete Account"
-        message="This will permanently delete your account and all your data. This action cannot be undone."
-        confirmLabel="Delete My Account"
-        cancelLabel="Cancel"
-        destructive
-        onConfirm={handleDeleteAccount}
-        onCancel={() => setShowDeleteModal(false)}
-      />
     </View>
   );
 }

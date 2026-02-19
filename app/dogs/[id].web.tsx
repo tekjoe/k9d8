@@ -333,30 +333,32 @@ export default function DogProfileWebScreen() {
                 gap: 12,
               }}
             >
-              <Pressable
-                onPress={handleMessageOwner}
-                disabled={messageLoading}
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#3D8A5A',
-                  paddingVertical: 14,
-                  borderRadius: 12,
-                  gap: 8,
-                }}
-              >
-                {messageLoading ? (
-                  <ActivityIndicator size="small" color="#fff" />
-                ) : (
-                  <>
-                    <Ionicons name="chatbubble-outline" size={20} color="#fff" />
-                    <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>
-                      Message Owner
-                    </Text>
-                  </>
-                )}
-              </Pressable>
+              {friendship?.status === 'accepted' && (
+                <Pressable
+                  onPress={handleMessageOwner}
+                  disabled={messageLoading}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#3D8A5A',
+                    paddingVertical: 14,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
+                >
+                  {messageLoading ? (
+                    <ActivityIndicator size="small" color="#fff" />
+                  ) : (
+                    <>
+                      <Ionicons name="chatbubble-outline" size={20} color="#fff" />
+                      <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>
+                        Message Owner
+                      </Text>
+                    </>
+                  )}
+                </Pressable>
+              )}
 
               {!friendship && (
                 <Pressable

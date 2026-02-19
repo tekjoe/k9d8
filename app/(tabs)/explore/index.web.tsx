@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import ParkMap from '@/src/components/parks/ParkMap.web';
 import { useLocation } from '@/src/hooks/useLocation';
-import { useParks } from '@/src/hooks/useParks';
+import { useNearbyParks } from '@/src/hooks/useNearbyParks';
 import { generateParkSlug } from '@/src/utils/slug';
 import { getParkStateSlug } from '@/src/services/parks';
 import type { Park } from '@/src/types/database';
@@ -52,13 +52,17 @@ function ParkListItem({ park, pupCount, distanceKm, selected, onPress }: ParkLis
         selected ? 'bg-secondary/10' : 'hover:bg-gray-50'
       }`}
     >
-      <Image
-        source={{
-          uri: park.image_url || '/images/dog-park-placeholder.png',
-        }}
-        className="w-14 h-14 rounded-lg"
-        resizeMode="cover"
-      />
+      {park.image_url ? (
+        <Image
+          source={{ uri: park.image_url }}
+          className="w-14 h-14 rounded-lg"
+          resizeMode="cover"
+        />
+      ) : (
+        <View style={{ width: 56, height: 56, borderRadius: 8, backgroundColor: '#EDECEA', justifyContent: 'center', alignItems: 'center' }}>
+          <Ionicons name="leaf-outline" size={24} color="#878685" />
+        </View>
+      )}
       <View className="flex-1 ml-3">
         <Text className="text-sm font-semibold text-text mb-1" numberOfLines={1}>
           {park.name}
@@ -88,8 +92,8 @@ export default function DesktopExploreScreen() {
   const showSidebar = width >= 768;
   
   const router = useRouter();
-  const { location } = useLocation();
-  const { parks, checkInCounts, loading: parksLoading } = useParks();
+  const { location, isLoading: locationLoading } = useLocation();
+  const { parks, checkInCounts, loading: parksLoading, loadingMore, loadBounds } = useNearbyParks(location, !locationLoading);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPark, setSelectedPark] = useState<Park | null>(null);
@@ -225,7 +229,13 @@ export default function DesktopExploreScreen() {
                   checkInCounts={checkInCounts}
                   userLocation={location}
                   onParkSelect={handleParkSelect}
+                  onBoundsChange={loadBounds}
                 />
+              )}
+              {loadingMore && (
+                <View style={{ position: 'absolute', top: 16, alignSelf: 'center', zIndex: 10 }}>
+                  <ActivityIndicator color="#3D8A5A" />
+                </View>
               )}
               {/* Selected park card */}
               {selectedPark && !searchQuery.trim() && (
@@ -440,7 +450,13 @@ export default function DesktopExploreScreen() {
             checkInCounts={checkInCounts}
             userLocation={location}
             onParkSelect={handleParkSelect}
+            onBoundsChange={loadBounds}
           />
+        )}
+        {loadingMore && (
+          <View style={{ position: 'absolute', top: 16, alignSelf: 'center', zIndex: 10 }}>
+            <ActivityIndicator color="#3D8A5A" />
+          </View>
         )}
 
         {/* Park Info Card (when park is selected) */}

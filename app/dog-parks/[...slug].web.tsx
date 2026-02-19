@@ -3,7 +3,8 @@ import { View, Text, Pressable, ScrollView, TextInput, ActivityIndicator, Image,
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { SEOHead, StructuredData, breadcrumbSchema } from '@/src/components/seo';
-import { getParksByState } from '@/src/services/parks';
+import { getParksByStatePaginated } from '@/src/services/parks';
+import { getFeaturedPhotosForParks } from '@/src/services/parkPhotos';
 import { generateParkSlug, extractShortIdFromSlug } from '@/src/utils/slug';
 import NavBar from '@/src/components/web/NavBar';
 import Footer from '@/src/components/web/Footer';
@@ -37,7 +38,7 @@ const FILTER_TAGS = [
   { key: 'shade', label: 'Shaded Areas', icon: 'leaf-outline' as const },
 ];
 
-function ParkCard({ park, onPress }: { park: Park; onPress: () => void }) {
+function ParkCard({ park, onPress, featuredPhotoUrl }: { park: Park; onPress: () => void; featuredPhotoUrl?: string }) {
   return (
     <Pressable
       onPress={onPress}
@@ -53,11 +54,17 @@ function ParkCard({ park, onPress }: { park: Park; onPress: () => void }) {
     >
       {/* Park Image */}
       <View style={{ width: '100%', height: 200, backgroundColor: '#EDECEA' }}>
-        <Image
-          source={{ uri: park.image_url || '/images/dog-park-placeholder.png' }}
-          style={{ width: '100%', height: '100%' }}
-          resizeMode="cover"
-        />
+        {featuredPhotoUrl || park.image_url ? (
+          <Image
+            source={{ uri: featuredPhotoUrl || park.image_url }}
+            style={{ width: '100%', height: '100%' }}
+            resizeMode="cover"
+          />
+        ) : (
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Ionicons name="leaf-outline" size={48} color="#878685" />
+          </View>
+        )}
         {/* City badge */}
         {park.city && (
           <View
@@ -147,13 +154,16 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
   const router = useRouter();
 
   const [parks, setParks] = useState<Park[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState('');
   const [activeFilter, setActiveFilter] = useState('all');
-  const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState<SortKey>('name-asc');
   const [sortMenuOpen, setSortMenuOpen] = useState(false);
   const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
+  const [featuredPhotos, setFeaturedPhotos] = useState<Record<string, string>>({});
 
   // Convert slug to state name: "minnesota" → "Minnesota", "new-york" → "New York"
   const stateName = (stateSlug || '')
@@ -161,13 +171,43 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 
+  // Load first page on mount
   useEffect(() => {
     if (!stateName) return;
-    getParksByState(stateName)
-      .then(setParks)
+    setLoading(true);
+    getParksByStatePaginated(stateName, 1, PARKS_PER_PAGE)
+      .then(({ parks: data, totalCount: count }) => {
+        setParks(data);
+        setTotalCount(count);
+        setCurrentPage(1);
+        const parkIds = data.map((p) => p.id);
+        if (parkIds.length > 0) {
+          getFeaturedPhotosForParks(parkIds)
+            .then((photos) => setFeaturedPhotos((prev) => ({ ...prev, ...photos })))
+            .catch(() => {});
+        }
+      })
       .catch(() => {})
       .finally(() => setLoading(false));
   }, [stateName]);
+
+  function handleLoadMore() {
+    const nextPage = currentPage + 1;
+    setLoadingMore(true);
+    getParksByStatePaginated(stateName, nextPage, PARKS_PER_PAGE)
+      .then(({ parks: data }) => {
+        setParks((prev) => [...prev, ...data]);
+        setCurrentPage(nextPage);
+        const parkIds = data.map((p) => p.id);
+        if (parkIds.length > 0) {
+          getFeaturedPhotosForParks(parkIds)
+            .then((photos) => setFeaturedPhotos((prev) => ({ ...prev, ...photos })))
+            .catch(() => {});
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoadingMore(false));
+  }
 
   // Request geolocation when user picks "nearest"
   useEffect(() => {
@@ -185,7 +225,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
     }
   }, [sortBy, userLocation]);
 
-  // Filter and sort parks
+  // Filter and sort loaded parks
   const filteredParks = useMemo(() => {
     let result = parks;
     if (search) {
@@ -213,15 +253,11 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
     return sorted;
   }, [parks, search, activeFilter, sortBy, userLocation]);
 
-  // Pagination
-  const totalPages = Math.ceil(filteredParks.length / PARKS_PER_PAGE);
-  const paginatedParks = filteredParks.slice((currentPage - 1) * PARKS_PER_PAGE, currentPage * PARKS_PER_PAGE);
-  const startIdx = (currentPage - 1) * PARKS_PER_PAGE + 1;
-  const endIdx = Math.min(currentPage * PARKS_PER_PAGE, filteredParks.length);
+  const hasMore = parks.length < totalCount;
 
   // Split into 2 columns
-  const leftCol = paginatedParks.filter((_, i) => i % 2 === 0);
-  const rightCol = paginatedParks.filter((_, i) => i % 2 === 1);
+  const leftCol = filteredParks.filter((_, i) => i % 2 === 0);
+  const rightCol = filteredParks.filter((_, i) => i % 2 === 1);
 
   const pageTitle = `Dog Parks in ${stateName}`;
 
@@ -229,7 +265,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
     <>
       <SEOHead
         title={pageTitle}
-        description={`Find ${parks.length || ''} dog parks in ${stateName}. Browse off-leash areas, fenced parks, and dog-friendly spots. Schedule a playdate with k9d8.`}
+        description={`Find ${totalCount || ''} dog parks in ${stateName}. Browse off-leash areas, fenced parks, and dog-friendly spots. Schedule a playdate with k9d8.`}
         url={`/dog-parks/${stateSlug}`}
       />
       <StructuredData
@@ -446,7 +482,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
             ) : (
               <>
                 <Text style={{ fontSize: 13, fontWeight: '500', color: '#9C9B99' }}>
-                  Showing {startIdx}–{endIdx} of {filteredParks.length} parks
+                  Showing {filteredParks.length} of {totalCount} parks
                 </Text>
 
                 {/* 2-column park grid */}
@@ -456,6 +492,7 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
                       <ParkCard
                         key={park.id}
                         park={park}
+                        featuredPhotoUrl={featuredPhotos[park.id]}
                         onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(park.name)}` as any)}
                       />
                     ))}
@@ -465,87 +502,30 @@ function StateDogParksPage({ stateSlug }: { stateSlug: string }) {
                       <ParkCard
                         key={park.id}
                         park={park}
+                        featuredPhotoUrl={featuredPhotos[park.id]}
                         onPress={() => router.push(`/dog-parks/${stateSlug}/${generateParkSlug(park.name)}` as any)}
                       />
                     ))}
                   </View>
                 </View>
 
-                {/* Pagination */}
-                {totalPages > 1 && (
-                  <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 4, width: '100%' }}>
+                {/* Load More */}
+                {hasMore && (
+                  <View style={{ alignItems: 'center', width: '100%' }}>
                     <Pressable
-                      onPress={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                      disabled={currentPage === 1}
+                      onPress={handleLoadMore}
+                      disabled={loadingMore}
                       style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: 6,
-                        paddingVertical: 10,
-                        paddingHorizontal: 14,
-                        borderRadius: 8,
-                        borderWidth: 1,
-                        borderColor: '#E5E4E1',
-                        opacity: currentPage === 1 ? 0.4 : 1,
+                        backgroundColor: '#3D8A5A',
+                        paddingVertical: 14,
+                        paddingHorizontal: 32,
+                        borderRadius: 12,
+                        opacity: loadingMore ? 0.7 : 1,
                       }}
                     >
-                      <Ionicons name="chevron-back" size={16} color="#9C9B99" />
-                      <Text style={{ fontSize: 13, fontWeight: '500', color: '#6D6C6A' }}>Previous</Text>
-                    </Pressable>
-
-                    {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
-                      let pageNum: number;
-                      if (totalPages <= 5) {
-                        pageNum = i + 1;
-                      } else if (currentPage <= 3) {
-                        pageNum = i + 1;
-                      } else if (currentPage >= totalPages - 2) {
-                        pageNum = totalPages - 4 + i;
-                      } else {
-                        pageNum = currentPage - 2 + i;
-                      }
-                      const isActive = pageNum === currentPage;
-                      return (
-                        <Pressable
-                          key={pageNum}
-                          onPress={() => setCurrentPage(pageNum)}
-                          style={{
-                            paddingVertical: 10,
-                            paddingHorizontal: 14,
-                            borderRadius: 8,
-                            backgroundColor: isActive ? '#3D8A5A' : 'transparent',
-                          }}
-                        >
-                          <Text
-                            style={{
-                              fontSize: 13,
-                              fontWeight: isActive ? '600' : '500',
-                              color: isActive ? '#FFFFFF' : '#6D6C6A',
-                            }}
-                          >
-                            {pageNum}
-                          </Text>
-                        </Pressable>
-                      );
-                    })}
-
-                    <Pressable
-                      onPress={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                      disabled={currentPage === totalPages}
-                      style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: 6,
-                        paddingVertical: 10,
-                        paddingHorizontal: 14,
-                        borderRadius: 8,
-                        borderWidth: 1,
-                        borderColor: '#E5E4E1',
-                        opacity: currentPage === totalPages ? 0.4 : 1,
-                      }}
-                    >
-                      <Text style={{ fontSize: 13, fontWeight: '500', color: '#6D6C6A' }}>Next</Text>
-                      <Ionicons name="chevron-forward" size={16} color="#9C9B99" />
+                      <Text style={{ fontSize: 15, fontWeight: '600', color: '#FFFFFF' }}>
+                        {loadingMore ? 'Loading...' : 'Load More Parks'}
+                      </Text>
                     </Pressable>
                   </View>
                 )}

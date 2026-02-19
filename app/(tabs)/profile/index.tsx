@@ -189,10 +189,9 @@ export default function ProfilePage() {
   const { dogs, loading } = useDogs(userId);
   const { friends, pendingRequests, sentRequests, acceptFriendRequest, declineFriendRequest } = useFriends();
 
-  const displayName = session?.user?.user_metadata?.display_name || 'Alex Johnson';
-  const handle = session?.user?.email?.split('@')[0] || 'alexjohnson';
-  const bio = session?.user?.user_metadata?.bio || 
-    'Lover of all things canine. You can find me and my pack at Central Park on weekends!';
+  const displayName = session?.user?.user_metadata?.display_name || '';
+  const handle = session?.user?.email?.split('@')[0] || '';
+  const bio = session?.user?.user_metadata?.bio || '';
   const avatarUrl = session?.user?.user_metadata?.avatar_url;
 
   async function handleSignOut() {
@@ -276,37 +275,43 @@ export default function ProfilePage() {
               marginBottom: 16,
             }}
           >
-            <Image
-              source={{
-                uri:
-                  avatarUrl ||
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-              }}
-              style={{ width: '100%', height: '100%', borderRadius: 50 }}
-              resizeMode="cover"
-            />
+            {avatarUrl ? (
+              <Image
+                source={{ uri: avatarUrl }}
+                style={{ width: '100%', height: '100%', borderRadius: 50 }}
+                resizeMode="cover"
+              />
+            ) : (
+              <View style={{ width: '100%', height: '100%', borderRadius: 50, backgroundColor: '#E5E4E1', justifyContent: 'center', alignItems: 'center' }}>
+                <Ionicons name="person" size={40} color="#878685" />
+              </View>
+            )}
           </View>
 
           {/* Name & Handle */}
           <Text style={{ fontSize: 20, fontWeight: '600', color: '#1A1918', marginBottom: 4 }}>
-            {displayName}
+            {displayName || 'New User'}
           </Text>
-          <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
-            @{handle}
-          </Text>
+          {handle ? (
+            <Text style={{ fontSize: 14, color: '#878685', marginBottom: 12 }}>
+              @{handle}
+            </Text>
+          ) : null}
 
           {/* Bio */}
-          <Text 
-            style={{ 
-              fontSize: 14, 
-              color: '#6D6C6A', 
-              textAlign: 'center', 
-              lineHeight: 21,
-              marginBottom: 16,
-            }}
-          >
-            {bio}
-          </Text>
+          {bio ? (
+            <Text
+              style={{
+                fontSize: 14,
+                color: '#6D6C6A',
+                textAlign: 'center',
+                lineHeight: 21,
+                marginBottom: 16,
+              }}
+            >
+              {bio}
+            </Text>
+          ) : null}
 
           {/* Stats */}
           <View style={{ flexDirection: 'row', gap: 24 }}>

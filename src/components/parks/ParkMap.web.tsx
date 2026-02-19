@@ -18,6 +18,12 @@ export interface ParkMapProps {
   userLocation: { latitude: number; longitude: number } | null;
   onParkSelect: (park: Park) => void;
   onMapPress?: () => void;
+  onBoundsChange?: (bounds: {
+    minLat: number;
+    maxLat: number;
+    minLng: number;
+    maxLng: number;
+  }) => void;
 }
 
 export default function ParkMap({
@@ -26,9 +32,17 @@ export default function ParkMap({
   userLocation,
   onParkSelect,
   onMapPress,
+  onBoundsChange,
 }: ParkMapProps) {
   const mapRef = useRef<MapRef>(null);
   const hasFlownToUser = useRef(false);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    };
+  }, []);
 
   // Fly to user location when it becomes available
   useEffect(() => {
@@ -41,6 +55,26 @@ export default function ParkMap({
       hasFlownToUser.current = true;
     }
   }, [userLocation]);
+
+  const handleMoveEnd = useCallback(() => {
+    if (!onBoundsChange || !mapRef.current) return;
+
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+
+    debounceTimer.current = setTimeout(() => {
+      const map = mapRef.current?.getMap();
+      if (!map) return;
+      const bounds = map.getBounds();
+      if (bounds) {
+        onBoundsChange({
+          minLat: bounds.getSouth(),
+          maxLat: bounds.getNorth(),
+          minLng: bounds.getWest(),
+          maxLng: bounds.getEast(),
+        });
+      }
+    }, 500);
+  }, [onBoundsChange]);
 
   const handleMarkerClick = useCallback(
     (park: Park) => {
@@ -64,6 +98,7 @@ export default function ParkMap({
         style={{ width: '100%', height: '100%' }}
         mapStyle="mapbox://styles/mapbox/outdoors-v12"
         mapboxAccessToken={MAPBOX_TOKEN}
+        onMoveEnd={handleMoveEnd}
       >
         {userLocation && (
           <Marker

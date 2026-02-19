@@ -21,6 +21,9 @@ import { usePlaydates } from '@/src/hooks/usePlaydates';
 import { parseSlugOrId } from '@/src/utils/slug';
 import type { Park, Dog } from '@/src/types/database';
 import { Skeleton, SkeletonList } from '@/src/components/ui/Skeleton';
+import { useParkPhotos } from '@/src/hooks/useParkPhotos';
+import ParkPhotoGrid from '@/src/components/parks/ParkPhotoGrid';
+import ParkReviewList from '@/src/components/parks/ParkReviewList';
 
 const DURATIONS = [
   { label: '30 mins', value: 30 },
@@ -111,6 +114,7 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
 
   const { dogs } = useDogs(userId);
   const { playdates, loading: playdatesLoading, refresh: refreshPlaydates } = usePlaydates(parkId || '');
+  const { featuredPhoto } = useParkPhotos(parkId || undefined);
 
   const isFirstMount = React.useRef(true);
   useFocusEffect(
@@ -311,7 +315,7 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
           <Image
             source={{
               uri:
-                park.image_url || '/images/dog-park-placeholder.png',
+                featuredPhoto?.photo_url || park.image_url || '/images/dog-park-placeholder.png',
             }}
             accessibilityLabel={`Photo of ${park.name} dog park`}
             style={{ width: '100%', height: 240 }}
@@ -394,6 +398,23 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
             </Pressable>
           </View>
 
+          {/* About This Park */}
+          <View style={{ gap: 12, marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
+              About This Park
+            </Text>
+            <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
+              {park.description ||
+                'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
+            </Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Ionicons name="time-outline" size={14} color="#878685" />
+              <Text style={{ fontSize: 13, color: '#878685' }}>
+                Open daily: 6:00 AM - 10:00 PM
+              </Text>
+            </View>
+          </View>
+
           {/* Park Features */}
           <View style={{ gap: 14, marginBottom: 24 }}>
             <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
@@ -426,25 +447,8 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
             )}
           </View>
 
-          {/* About This Park */}
-          <View style={{ gap: 12, marginBottom: 24 }}>
-            <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
-              About This Park
-            </Text>
-            <Text style={{ fontSize: 14, color: '#6D6C6A', lineHeight: 21 }}>
-              {park.description ||
-                'A spacious off-leash dog park with separate sections for large and small dogs, featuring plenty of shade and water access.'}
-            </Text>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-              <Ionicons name="time-outline" size={14} color="#878685" />
-              <Text style={{ fontSize: 13, color: '#878685' }}>
-                Open daily: 6:00 AM - 10:00 PM
-              </Text>
-            </View>
-          </View>
-
           {/* Upcoming Play Dates */}
-          <View style={{ gap: 14 }}>
+          <View style={{ gap: 14, marginBottom: 24 }}>
             <Text style={{ fontSize: 18, fontWeight: '600', color: Colors.light.text }}>
               Upcoming Play Dates
             </Text>
@@ -475,6 +479,24 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
               <Text style={{ fontSize: 14, color: '#6D6C6A' }}>No upcoming play dates</Text>
             )}
           </View>
+
+          {/* Photos */}
+          {parkId && (
+            <ParkPhotoGrid
+              parkId={parkId}
+              isAuthenticated={!!userId}
+              userId={userId}
+            />
+          )}
+
+          {/* Reviews */}
+          {parkId && (
+            <ParkReviewList
+              parkId={parkId}
+              isAuthenticated={!!userId}
+              userId={userId}
+            />
+          )}
         </View>
       </ScrollView>
 
