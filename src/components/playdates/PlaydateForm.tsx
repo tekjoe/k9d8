@@ -562,7 +562,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 14,
     fontSize: 16,
-    backgroundColor: '#F5F4F1',
+    backgroundColor: '#FFFFFF',
     color: '#1A1918',
   },
   inputError: {

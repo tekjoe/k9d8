@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -8,7 +8,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '@/src/hooks/useAuth';
@@ -186,7 +186,13 @@ export default function ProfilePage() {
   const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const userId = session?.user?.id;
-  const { dogs, loading } = useDogs(userId);
+  const { dogs, loading, loadDogs } = useDogs(userId);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadDogs();
+    }, [loadDogs])
+  );
   const { friends, pendingRequests, sentRequests, acceptFriendRequest, declineFriendRequest } = useFriends();
 
   const displayName = session?.user?.user_metadata?.display_name || '';
