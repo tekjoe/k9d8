@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { SEOHead } from '@/src/components/seo';
 import {
   View,
@@ -17,6 +17,7 @@ import { useAuth } from '@/src/hooks/useAuth';
 import { useConversations } from '@/src/hooks/useConversations';
 import { useMessages } from '@/src/hooks/useMessages';
 import { Colors } from '@/src/constants/colors';
+import { getBlockStatus } from '@/src/services/blocks';
 import type { Conversation, Message } from '@/src/types/database';
 
 function formatRelativeTime(dateStr: string): string {
@@ -210,13 +211,25 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
   );
   const [text, setText] = useState('');
   const [sending, setSending] = useState(false);
+  const [isBlocked, setIsBlocked] = useState(false);
   const flatListRef = useRef<FlatList>(null);
 
   const otherParticipant = conversation?.participants?.find(
     (p) => p.user_id !== currentUserId
   );
+  const otherUserId = otherParticipant?.user_id;
   const displayName = otherParticipant?.profile?.display_name || 'Select a conversation';
   const avatarUrl = otherParticipant?.profile?.avatar_url;
+
+  useEffect(() => {
+    setIsBlocked(false);
+    if (!otherUserId) return;
+    getBlockStatus(otherUserId).then((status) => {
+      if (status === 'blocked' || status === 'blocked_by') {
+        setIsBlocked(true);
+      }
+    });
+  }, [otherUserId]);
 
   const handleSend = useCallback(async () => {
     const trimmed = text.trim();
@@ -229,9 +242,14 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
       setTimeout(() => {
         flatListRef.current?.scrollToEnd({ animated: true });
       }, 100);
-    } catch (err) {
-      console.error('Failed to send message:', err);
-      setText(trimmed);
+    } catch (err: any) {
+      const code = err?.code || '';
+      if (code === '42501' || err?.message?.includes('Cannot message') || err?.message?.includes('row-level security')) {
+        setIsBlocked(true);
+      } else {
+        console.error('Failed to send message:', err);
+        setText(trimmed);
+      }
     } finally {
       setSending(false);
     }
@@ -347,31 +365,33 @@ function ThreadPanel({ conversation, currentUserId, hideHeader = false }: Thread
             gap: 12,
           }}
         >
-          <Ionicons name="happy-outline" size={20} color="#878685" />
+          {!isBlocked && <Ionicons name="happy-outline" size={20} color="#878685" />}
           <TextInput
             value={text}
             onChangeText={setText}
-            placeholder="Type a message..."
-            placeholderTextColor="#878685"
+            placeholder={isBlocked ? 'This user has blocked you' : 'Type a message...'}
+            placeholderTextColor={isBlocked ? '#B5725E' : '#878685'}
+            editable={!isBlocked}
             style={{
               flex: 1,
               fontSize: 15,
               color: '#1A1918',
               outlineWidth: 0,
             } as any}
-            onSubmitEditing={handleSend}
+            onSubmitEditing={isBlocked ? undefined : handleSend}
           />
         </View>
         <Pressable
           onPress={handleSend}
-          disabled={!text.trim() || sending}
+          disabled={isBlocked || !text.trim() || sending}
           style={{
             width: 48,
             height: 48,
             borderRadius: 24,
-            backgroundColor: text.trim() ? '#3D8A5A' : '#E5E4E1',
+            backgroundColor: !isBlocked && text.trim() ? '#3D8A5A' : '#E5E4E1',
             alignItems: 'center',
             justifyContent: 'center',
+            cursor: isBlocked ? 'not-allowed' : 'pointer',
           }}
         >
           {sending ? (

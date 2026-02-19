@@ -5,11 +5,11 @@ import {
   Pressable,
   ScrollView,
   Image,
-  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { SEOHead } from '@/src/components/seo';
+import { Colors } from '@/src/constants/colors';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import { useNotificationsData } from '@/src/hooks/useNotificationsData';
 import { useResponsiveLayout } from '@/src/hooks/useResponsiveLayout';
@@ -230,28 +230,15 @@ export default function NotificationsWebScreen() {
     }
   };
 
-  const handleClearAll = () => {
-    Alert.alert(
-      'Clear All Notifications',
-      'Are you sure you want to delete all notifications?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Clear',
-          style: 'destructive',
-          onPress: async () => {
-            try {
-              // Delete all notifications one by one
-              await Promise.all(
-                notifications.map((n) => removeNotification(n.id))
-              );
-            } catch (err) {
-              Alert.alert('Error', 'Failed to clear notifications');
-            }
-          },
-        },
-      ]
-    );
+  const handleClearAll = async () => {
+    if (!window.confirm('Are you sure you want to delete all notifications?')) return;
+    try {
+      await Promise.all(
+        notifications.map((n) => removeNotification(n.id))
+      );
+    } catch (err) {
+      window.alert('Failed to clear notifications');
+    }
   };
 
   const header = (
@@ -268,6 +255,12 @@ export default function NotificationsWebScreen() {
       }}
     >
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <Pressable
+          onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
+          style={{ width: 40, height: 40, justifyContent: 'center', alignItems: 'center', marginRight: 8 }}
+        >
+          <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
+        </Pressable>
         <Text style={{ fontSize: isMobile ? 18 : 24, fontWeight: '600', color: '#1A1918' }}>
           Notifications
         </Text>

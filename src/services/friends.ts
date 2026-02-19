@@ -128,6 +128,18 @@ export async function removeFriend(friendshipId: string): Promise<void> {
 }
 
 /**
+ * Removes a friendship by the other user's ID. Looks up the friendship first.
+ */
+export async function removeFriendByUserId(
+  currentUserId: string,
+  friendUserId: string,
+): Promise<void> {
+  const friendship = await getFriendshipStatus(currentUserId, friendUserId);
+  if (!friendship) throw new Error('Friendship not found');
+  await removeFriend(friendship.id);
+}
+
+/**
  * Gets recent accepted friendships for a user (for activity feed).
  */
 export async function getRecentFriendships(

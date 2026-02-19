@@ -69,8 +69,8 @@ export function useNotifications() {
     const subscription =
       Notifications.addNotificationResponseReceivedListener((response) => {
         const data = response.notification.request.content.data;
-        if (data?.type === 'friend_checkin' && data?.parkId) {
-          router.push(`/dog-parks/${data.parkId}` as never);
+        if (data?.type === 'friend_checkin' && (data?.parkPath || data?.parkId)) {
+          router.push(`/dog-parks/${data.parkPath || data.parkId}` as never);
         } else if (data?.conversationId) {
           router.push(`/messages/${data.conversationId}` as never);
         }

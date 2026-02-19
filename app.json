@@ -10,7 +10,8 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.k9d8"
+      "bundleIdentifier": "com.k9d8.app",
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +22,8 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.k9d8"
+      "package": "com.k9d8.app",
+      "versionCode": 1
     },
     "web": {
       "output": "static",
@@ -45,12 +47,19 @@
       [
         "@rnmapbox/maps",
         {
-          "RNMapboxMapsDownloadToken": "YOUR_MAPBOX_SECRET_TOKEN"
+          "RNMapboxMapsDownloadToken": "${MAPBOX_DOWNLOAD_TOKEN}"
         }
       ],
       "@react-native-community/datetimepicker",
-      "expo-notifications"
+      "expo-notifications",
+      "expo-apple-authentication",
+      "@react-native-google-signin/google-signin"
     ],
+    "extra": {
+      "eas": {
+        "projectId": "d5d825ff-af22-4cc6-b5cc-d57d930eb292"
+      }
+    },
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SEOHead } from '@/src/components/seo';
 import { Image, Pressable, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -10,12 +11,17 @@ import type { Profile } from '@/src/types/database';
 interface FriendCardProps {
   friend: Profile;
   onPress: () => void;
+  onRemove: () => void;
 }
 
-function FriendCard({ friend, onPress }: FriendCardProps) {
+function FriendCard({ friend, onPress, onRemove }: FriendCardProps) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <Pressable
       onPress={onPress}
+      onHoverIn={() => setHovered(true)}
+      onHoverOut={() => setHovered(false)}
       style={{
         flexDirection: 'row',
         alignItems: 'center',
@@ -38,6 +44,17 @@ function FriendCard({ friend, onPress }: FriendCardProps) {
           {friend.display_name || 'User'}
         </Text>
       </View>
+      {hovered && (
+        <Pressable
+          onPress={(e) => {
+            e.stopPropagation();
+            onRemove();
+          }}
+          style={{ padding: 4, marginRight: 4 }}
+        >
+          <Ionicons name="person-remove-outline" size={18} color="#B5725E" />
+        </Pressable>
+      )}
       <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
     </Pressable>
   );
@@ -45,7 +62,20 @@ function FriendCard({ friend, onPress }: FriendCardProps) {
 
 export default function FriendsListWebScreen() {
   const router = useRouter();
-  const { friends, pendingCount, loading, refresh } = useFriends();
+  const { friends, pendingCount, loading, refresh, removeFriendByUserId } = useFriends();
+
+  const handleRemoveFriend = async (friend: Profile) => {
+    const confirmed = window.confirm(
+      `Are you sure you want to remove ${friend.display_name || 'this person'} as a friend?`
+    );
+    if (!confirmed) return;
+    try {
+      await removeFriendByUserId(friend.id);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to remove friend';
+      window.alert(message);
+    }
+  };
   const { isMobile, isDesktop } = useResponsiveLayout();
 
   const columns = isDesktop ? 3 : isMobile ? 1 : 2;
@@ -135,6 +165,7 @@ export default function FriendsListWebScreen() {
               <FriendCard
                 friend={friend}
                 onPress={() => router.push(`/users/${friend.id}`)}
+                onRemove={() => handleRemoveFriend(friend)}
               />
             </View>
           ))}

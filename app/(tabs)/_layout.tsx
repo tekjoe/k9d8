@@ -7,6 +7,7 @@ import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useConversations } from '@/src/hooks/useConversations';
+import { useNotifications } from '@/src/hooks/useNotifications';
 import { Colors } from '@/src/constants/colors';
 
 export default function TabLayout() {
@@ -15,7 +16,8 @@ export default function TabLayout() {
   const { width } = useWindowDimensions();
   const { session, isLoading } = useAuth();
   const { unreadCount } = useConversations();
-  
+  useNotifications();
+
   // Show bottom tab bar on mobile (native + web when width < 768)
   const isMobileWeb = Platform.OS === 'web' && width < 768;
   const showTabBar = Platform.OS !== 'web' || isMobileWeb;

@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
         <BulletPoint>Export your data</BulletPoint>
         <BulletPoint>Object to certain processing</BulletPoint>
         <Paragraph style={{ marginTop: 8 }}>
-          Contact privacy@k9d8.app to exercise your rights. We respond within 30 days.
+          Contact privacy@k9d8.com to exercise your rights. We respond within 30 days.
         </Paragraph>
 
         <SectionTitle>6. Security</SectionTitle>
@@ -181,8 +181,8 @@ export default function PrivacyPolicyPage() {
         </Paragraph>
 
         <SectionTitle>8. Contact Us</SectionTitle>
-        <BulletPoint>Email: privacy@k9d8.app</BulletPoint>
-        <BulletPoint>DPO (EU): dpo@k9d8.app</BulletPoint>
+        <BulletPoint>Email: privacy@k9d8.com</BulletPoint>
+        <BulletPoint>DPO (EU): dpo@k9d8.com</BulletPoint>
 
         <Text
           style={{

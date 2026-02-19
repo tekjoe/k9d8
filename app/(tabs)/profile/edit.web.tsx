@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
-  Image,
   Pressable,
   ScrollView,
   Text,
@@ -11,13 +10,14 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
 
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
+import ConfirmModal from '@/src/components/ui/ConfirmModal';
 import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
-import { updateProfile, uploadUserAvatar } from '@/src/services/auth';
+import { updateProfile, uploadUserAvatar, deleteUserAvatar, deleteAccount } from '@/src/services/auth';
 import { Colors } from '@/src/constants/colors';
+import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
 
 export default function EditProfileWebScreen() {
   const { width } = useWindowDimensions();
@@ -27,6 +27,8 @@ export default function EditProfileWebScreen() {
 
   const { session, refreshSession } = useAuth();
   const [isSaving, setIsSaving] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
@@ -80,7 +82,7 @@ export default function EditProfileWebScreen() {
       
       setSuccess(true);
       setTimeout(() => {
-        router.back();
+        router.replace('/(tabs)/profile');
       }, 1000);
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to update profile';
@@ -91,19 +93,35 @@ export default function EditProfileWebScreen() {
   }, [displayName, bio, avatarUrl, localAvatarUri, session?.user?.id, refreshSession]);
 
   const handleBack = useCallback(() => {
-    router.back();
+    router.replace('/(tabs)/profile');
   }, []);
 
-  const handleChangePhoto = useCallback(async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.8,
-    });
+  const handlePhotoSelect = useCallback((uri: string) => {
+    setLocalAvatarUri(uri);
+  }, []);
 
-    if (!result.canceled && result.assets[0]) {
-      setLocalAvatarUri(result.assets[0].uri);
+  const handlePhotoRemove = useCallback(async () => {
+    const userId = session?.user?.id;
+    setLocalAvatarUri(null);
+    setAvatarUrl('');
+    if (userId && avatarUrl) {
+      try {
+        await deleteUserAvatar(userId);
+      } catch (err) {
+        console.error('Failed to delete avatar:', err);
+      }
+    }
+  }, [session?.user?.id, avatarUrl]);
+
+  const handleDeleteAccount = useCallback(async () => {
+    setShowDeleteModal(false);
+    setIsDeleting(true);
+    try {
+      await deleteAccount();
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to delete account';
+      setError(message);
+      setIsDeleting(false);
     }
   }, []);
 
@@ -227,72 +245,22 @@ export default function EditProfileWebScreen() {
               maxWidth: 900,
             }}
           >
-            {/* Left Column - Avatar */}
+            {/* Left Column - Avatar with Moderation */}
             <View 
               style={{ 
                 alignItems: 'center',
                 width: isMobile ? '100%' : 200,
               }}
             >
-              <View style={{ position: 'relative' }}>
-                <View 
-                  style={{ 
-                    width: avatarSize, 
-                    height: avatarSize, 
-                    borderRadius: avatarSize / 2, 
-                    borderWidth: 3, 
-                    borderColor: '#E5E4E1',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <Image
-                    source={{
-                      uri:
-                        localAvatarUri ||
-                        avatarUrl ||
-                        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-                    }}
-                    style={{ width: '100%', height: '100%' }}
-                    resizeMode="cover"
-                  />
-                </View>
-                {isUploadingAvatar && (
-                  <View 
-                    style={{ 
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      backgroundColor: 'rgba(0,0,0,0.5)',
-                      borderRadius: avatarSize / 2,
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <ActivityIndicator size="large" color="#fff" />
-                  </View>
-                )}
-              </View>
-
-              <Pressable 
-                onPress={handleChangePhoto}
-                style={{ 
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  gap: 6,
-                  backgroundColor: '#EDECEA',
-                  paddingHorizontal: 16,
-                  paddingVertical: 8,
-                  borderRadius: 9999,
-                  marginTop: 16,
-                }}
-              >
-                <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
-                <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>
-                  Change Photo
-                </Text>
-              </Pressable>
+              <ImagePickerWithModeration
+                selectedImage={localAvatarUri || avatarUrl || null}
+                onImageSelect={handlePhotoSelect}
+                onImageRemove={(localAvatarUri || avatarUrl) ? handlePhotoRemove : undefined}
+                placeholder="Add Photo"
+                size={isMobile ? 'large' : 'medium'}
+                shape="circle"
+                moderationEnabled={true}
+              />
 
               {localAvatarUri && (
                 <Text style={{ fontSize: 12, color: '#3D8A5A', marginTop: 8, textAlign: 'center' }}>
@@ -381,11 +349,46 @@ export default function EditProfileWebScreen() {
                   Email cannot be changed
                 </Text>
               </View>
+
+              {/* Delete Account */}
+              <Pressable
+                onPress={() => setShowDeleteModal(true)}
+                disabled={isDeleting}
+                style={{
+                  marginTop: 16,
+                  paddingVertical: 14,
+                  borderRadius: 12,
+                  borderWidth: 1,
+                  borderColor: '#D1D0CD',
+                  alignItems: 'center',
+                  opacity: isDeleting ? 0.5 : 1,
+                  cursor: 'pointer',
+                }}
+              >
+                {isDeleting ? (
+                  <ActivityIndicator size="small" color="#878685" />
+                ) : (
+                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#878685' }}>
+                    Delete Account
+                  </Text>
+                )}
+              </Pressable>
             </View>
           </View>
         </ScrollView>
       </View>
     </View>
+
+    <ConfirmModal
+      visible={showDeleteModal}
+      title="Delete Account"
+      message="This will permanently delete your account and all your data. This action cannot be undone."
+      confirmLabel="Delete My Account"
+      cancelLabel="Cancel"
+      destructive
+      onConfirm={handleDeleteAccount}
+      onCancel={() => setShowDeleteModal(false)}
+    />
     </>
   );
 }

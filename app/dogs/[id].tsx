@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { getDogWithOwner } from '@/src/services/dogs';
@@ -65,6 +66,7 @@ function InfoTag({ icon, label }: { icon: keyof typeof Ionicons.glyphMap; label:
 export default function DogProfileScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const userId = session?.user?.id;
 
@@ -176,7 +178,8 @@ export default function DogProfileScreen() {
           alignItems: 'center',
           backgroundColor: '#FFFFFF',
           paddingHorizontal: 16,
-          paddingVertical: 16,
+          paddingTop: insets.top + 8,
+          paddingBottom: 12,
           borderBottomWidth: 1,
           borderBottomColor: '#E5E4E1',
         }}

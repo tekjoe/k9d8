@@ -26,6 +26,8 @@ function Container({ children, style }: { children: React.ReactNode; style?: any
 function FeaturedCard({ post, onPress }: { post: typeof blogPosts[0]; onPress: () => void }) {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const isTablet = width >= 768 && width < 1024;
+  const isStacked = isMobile || isTablet;
 
   return (
     <Pressable onPress={onPress} style={{ width: '100%' }}>
@@ -38,17 +40,17 @@ function FeaturedCard({ post, onPress }: { post: typeof blogPosts[0]; onPress: (
           shadowOffset: { width: 0, height: 4 },
           shadowOpacity: 0.08,
           shadowRadius: 16,
-          flexDirection: isMobile ? 'column' : 'row',
+          flexDirection: isStacked ? 'column' : 'row',
         }}
       >
-        <View style={{ width: isMobile ? '100%' : 560, height: isMobile ? 200 : 360 }}>
+        <View style={{ width: isStacked ? '100%' : 560, height: isMobile ? 200 : isTablet ? 280 : 360 }}>
           <Image
             source={{ uri: post.image_url || 'https://images.unsplash.com/photo-1728881830211-84d2f5a05038?w=1080' }}
             style={{ width: '100%', height: '100%' }}
             resizeMode="cover"
           />
         </View>
-        <View style={{ flex: 1, padding: isMobile ? 20 : 40, justifyContent: 'center', gap: 16 }}>
+        <View style={{ flex: 1, padding: isMobile ? 20 : 32, justifyContent: 'center', gap: 16 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
             <View
               style={{
@@ -134,6 +136,8 @@ export default function BlogIndexPage() {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const isTablet = width >= 768 && width < 1024;
+  const columns = isMobile ? 1 : isTablet ? 2 : 3;
 
   const featuredPost = blogPosts[0];
   const otherPosts = blogPosts.slice(1);
@@ -194,12 +198,20 @@ export default function BlogIndexPage() {
                 <View
                   style={{
                     flexDirection: 'row',
+                    flexWrap: 'wrap',
                     gap: 24,
                     width: '100%',
                   }}
                 >
                   {otherPosts.map((post) => (
-                    <View key={post.slug} style={{ flex: 1 }}>
+                    <View
+                      key={post.slug}
+                      style={{
+                        flexBasis: isMobile ? '100%' : isTablet ? '47%' : '31%',
+                        flexGrow: 0,
+                        flexShrink: 0,
+                      }}
+                    >
                       <PostCard
                         post={post}
                         onPress={() => router.push(`/blog/${post.slug}` as any)}

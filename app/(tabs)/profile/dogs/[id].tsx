@@ -4,14 +4,13 @@ import {
   Text,
   TextInput,
   Pressable,
-  Image,
   ActivityIndicator,
   ScrollView,
   Alert,
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '@/src/hooks/useAuth';
 import {
   getDogById,
@@ -20,6 +19,7 @@ import {
   uploadDogPhoto,
 } from '@/src/services/dogs';
 import { Colors } from '@/src/constants/colors';
+import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
 import type { Dog, DogSize, DogTemperament } from '@/src/types/database';
 
 const DOG_SIZES: { value: DogSize; label: string }[] = [
@@ -63,6 +63,7 @@ function FormField({ label, children }: FormFieldProps) {
 }
 
 export default function EditDogScreen() {
+  const insets = useSafeAreaInsets();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { session } = useAuth();
   const userId = session?.user?.id;
@@ -127,17 +128,12 @@ export default function EditDogScreen() {
     });
   }, []);
 
-  const pickPhoto = useCallback(async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.8,
-    });
+  const handlePhotoSelect = useCallback((uri: string) => {
+    updateField('photoUri', uri);
+  }, [updateField]);
 
-    if (!result.canceled && result.assets[0]) {
-      updateField('photoUri', result.assets[0].uri);
-    }
+  const handlePhotoRemove = useCallback(() => {
+    updateField('photoUri', null);
   }, [updateField]);
 
   const handleSave = useCallback(async () => {
@@ -233,7 +229,8 @@ export default function EditDogScreen() {
           alignItems: 'center',
           justifyContent: 'space-between',
           backgroundColor: '#fff',
-          height: 56,
+          paddingTop: insets.top + 8,
+          paddingBottom: 8,
           paddingHorizontal: 16,
           borderBottomWidth: 1,
           borderBottomColor: '#E5E4E1',
@@ -251,31 +248,17 @@ export default function EditDogScreen() {
       </View>
 
       <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 24, gap: 32 }}>
-        {/* Avatar Section */}
+        {/* Avatar Section with Moderation */}
         <View style={{ alignItems: 'center', gap: 16 }}>
-          <Pressable onPress={pickPhoto}>
-            <Image
-              source={{
-                uri: formData.photoUri || 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop',
-              }}
-              style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E4E1' }}
-            />
-          </Pressable>
-          <Pressable
-            onPress={pickPhoto}
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: '#EDECEA',
-              paddingHorizontal: 16,
-              paddingVertical: 8,
-              borderRadius: 8,
-              gap: 6,
-            }}
-          >
-            <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
-            <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
-          </Pressable>
+          <ImagePickerWithModeration
+            selectedImage={formData.photoUri}
+            onImageSelect={handlePhotoSelect}
+            onImageRemove={handlePhotoRemove}
+            placeholder="Add Dog Photo"
+            size="large"
+            shape="circle"
+            moderationEnabled={true}
+          />
         </View>
 
         {/* Form Fields */}

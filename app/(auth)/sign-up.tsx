@@ -15,6 +15,7 @@ import { Link, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 import { signUpWithEmail } from '@/src/services/auth';
+import { SocialAuthButtons } from '@/src/components/auth/SocialAuthButtons';
 
 // Mobile Web Header Component
 function MobileWebHeader() {
@@ -243,6 +244,8 @@ export default function SignUp() {
             Join the pack today
           </Text>
 
+          <SocialAuthButtons mode="sign-up" />
+
           {/* Error Message */}
           {error && (
             <View 
@@ -438,13 +441,15 @@ export default function SignUp() {
             </Text>
           </View>
 
+        <SocialAuthButtons mode="sign-up" />
+
         {/* Error Message */}
         {error && (
-          <View 
-            style={{ 
-              backgroundColor: '#F5E8E3', 
-              padding: 16, 
-              borderRadius: 12, 
+          <View
+            style={{
+              backgroundColor: '#F5E8E3',
+              padding: 16,
+              borderRadius: 12,
               marginBottom: 24,
             }}
           >

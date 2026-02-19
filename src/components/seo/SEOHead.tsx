@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import Head from 'expo-router/head';
 
 const SITE_NAME = 'k9d8';
@@ -27,6 +28,8 @@ export default function SEOHead({
   type = 'website',
   rawTitle = false,
 }: SEOHeadProps) {
+  if (Platform.OS !== 'web') return null;
+
   const fullTitle = rawTitle ? title : `${title} | ${SITE_NAME}`;
   const canonicalUrl = url ? `${BASE_URL}${url}` : undefined;
   const ogImage = image || DEFAULT_OG_IMAGE;

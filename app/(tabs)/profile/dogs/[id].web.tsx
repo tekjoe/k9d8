@@ -4,7 +4,6 @@ import {
   Text,
   TextInput,
   Pressable,
-  Image,
   ActivityIndicator,
   ScrollView,
   useWindowDimensions,
@@ -12,7 +11,6 @@ import {
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import { SEOHead } from '@/src/components/seo';
 import { useAuth } from '@/src/hooks/useAuth';
@@ -23,6 +21,7 @@ import {
   uploadDogPhoto,
 } from '@/src/services/dogs';
 import { Colors } from '@/src/constants/colors';
+import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
 import type { Dog, DogSize, DogTemperament } from '@/src/types/database';
 
 const DOG_SIZES: { value: DogSize; label: string }[] = [
@@ -209,17 +208,12 @@ export default function EditDogScreenWeb() {
     });
   }, []);
 
-  const pickPhoto = useCallback(async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.8,
-    });
+  const handlePhotoSelect = useCallback((uri: string) => {
+    updateField('photoUri', uri);
+  }, [updateField]);
 
-    if (!result.canceled && result.assets[0]) {
-      updateField('photoUri', result.assets[0].uri);
-    }
+  const handlePhotoRemove = useCallback(() => {
+    updateField('photoUri', null);
   }, [updateField]);
 
   const handleSave = useCallback(async () => {
@@ -340,31 +334,17 @@ export default function EditDogScreenWeb() {
         </View>
 
         <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 24, gap: 32 }}>
-          {/* Avatar Section */}
+          {/* Avatar Section with Moderation */}
           <View style={{ alignItems: 'center', gap: 16 }}>
-            <Pressable onPress={pickPhoto}>
-              <Image
-                source={{
-                  uri: formData.photoUri || 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop',
-                }}
-                style={{ width: 120, height: 120, borderRadius: 60, borderWidth: 3, borderColor: '#E5E4E1' }}
-              />
-            </Pressable>
-            <Pressable
-              onPress={pickPhoto}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                backgroundColor: '#EDECEA',
-                paddingHorizontal: 16,
-                paddingVertical: 8,
-                borderRadius: 8,
-                gap: 6,
-              }}
-            >
-              <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
-            </Pressable>
+            <ImagePickerWithModeration
+              selectedImage={formData.photoUri}
+              onImageSelect={handlePhotoSelect}
+              onImageRemove={handlePhotoRemove}
+              placeholder="Add Dog Photo"
+              size="large"
+              shape="circle"
+              moderationEnabled={true}
+            />
           </View>
 
           {/* Form Fields */}
@@ -553,7 +533,7 @@ export default function EditDogScreenWeb() {
         {/* Content */}
         <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: 40 }}>
           <View style={{ flexDirection: 'row', gap: 40 }}>
-            {/* Left Column - Avatar */}
+            {/* Left Column - Avatar with Moderation */}
             <View style={{ width: 400 }}>
               <View
                 style={{
@@ -566,35 +546,15 @@ export default function EditDogScreenWeb() {
                   gap: 20,
                 }}
               >
-                <Pressable onPress={pickPhoto}>
-                  <Image
-                    source={{
-                      uri: formData.photoUri || 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop',
-                    }}
-                    style={{
-                      width: 160,
-                      height: 160,
-                      borderRadius: 80,
-                      borderWidth: 4,
-                      borderColor: '#E5E4E1',
-                    }}
-                  />
-                </Pressable>
-                <Pressable
-                  onPress={pickPhoto}
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    backgroundColor: '#EDECEA',
-                    paddingHorizontal: 20,
-                    paddingVertical: 10,
-                    borderRadius: 8,
-                    gap: 8,
-                  }}
-                >
-                  <Ionicons name="camera-outline" size={16} color="#6D6C6A" />
-                  <Text style={{ fontSize: 14, fontWeight: '500', color: '#6D6C6A' }}>Change Photo</Text>
-                </Pressable>
+                <ImagePickerWithModeration
+                  selectedImage={formData.photoUri}
+                  onImageSelect={handlePhotoSelect}
+                  onImageRemove={handlePhotoRemove}
+                  placeholder="Add Dog Photo"
+                  size="large"
+                  shape="circle"
+                  moderationEnabled={true}
+                />
               </View>
             </View>
 

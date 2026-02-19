@@ -21,10 +21,10 @@ Deno.serve(async (req) => {
       .eq('id', user_id)
       .single();
 
-    // Get the park name
+    // Get the park name and state
     const { data: park } = await supabase
       .from('parks')
-      .select('name')
+      .select('name, state')
       .eq('id', park_id)
       .single();
 
@@ -50,12 +50,26 @@ Deno.serve(async (req) => {
     const userName = user?.display_name || 'Your friend';
     const parkName = park?.name || 'a dog park';
 
+    // Build slugified park path for deep linking
+    let parkPath = park_id;
+    if (park?.name && park?.state) {
+      const stateSlug = park.state.toLowerCase().replace(/\s+/g, '-');
+      const nameSlug = park.name
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      parkPath = `${stateSlug}/${nameSlug}`;
+    }
+
     // Send via Expo Push API
     const notifications = tokens.map((t: { token: string }) => ({
       to: t.token,
       title: `${userName} just checked in!`,
       body: `${userName} is at ${parkName} right now.`,
-      data: { type: 'friend_checkin', parkId: park_id, userId: user_id },
+      data: { type: 'friend_checkin', parkPath, parkId: park_id, userId: user_id },
       sound: 'default',
     }));
 

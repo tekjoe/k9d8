@@ -41,8 +41,16 @@ export default function AppIndex() {
     );
   }
 
-  // Authenticated users go to the app
+  // Authenticated users: check if they need onboarding
   if (session) {
+    const meta = session.user?.user_metadata;
+    const isSocialAuth = session.user?.app_metadata?.provider !== 'email';
+    const needsOnboarding = isSocialAuth && !meta?.onboarded;
+
+    if (needsOnboarding) {
+      return <Redirect href="/(auth)/onboard" />;
+    }
+
     return <Redirect href="/(tabs)" />;
   }
 

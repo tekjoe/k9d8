@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+import { File } from 'expo-file-system';
 import { supabase } from '../lib/supabase';
 import type { Dog, Profile, Database } from '../types/database';
 
@@ -74,6 +76,16 @@ export async function deleteDog(id: string): Promise<void> {
   if (error) throw error;
 }
 
+async function readFileForUpload(uri: string): Promise<ArrayBuffer | Blob> {
+  if (Platform.OS === 'web') {
+    const response = await fetch(uri);
+    return response.blob();
+  }
+  // expo-file-system v19: File.arrayBuffer() reads actual file bytes
+  const file = new File(uri);
+  return file.arrayBuffer();
+}
+
 export async function uploadDogPhoto(
   userId: string,
   uri: string,
@@ -81,12 +93,11 @@ export async function uploadDogPhoto(
   const timestamp = Date.now();
   const filePath = `${userId}/${timestamp}.jpg`;
 
-  const response = await fetch(uri);
-  const blob = await response.blob();
+  const fileData = await readFileForUpload(uri);
 
   const { error: uploadError } = await supabase.storage
     .from('dog-photos')
-    .upload(filePath, blob, {
+    .upload(filePath, fileData, {
       contentType: 'image/jpeg',
       upsert: false,
     });

@@ -5,6 +5,7 @@ import {
   useState,
   type PropsWithChildren,
 } from 'react';
+import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 import type { Session } from '@supabase/supabase-js';
 
@@ -25,8 +26,8 @@ export function AuthProvider({ children }: PropsWithChildren) {
   const [isLoading, setIsLoading] = useState(true);
 
   const refreshSession = useCallback(async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    setSession(session);
+    const { data } = await supabase.auth.refreshSession();
+    setSession(data.session);
   }, []);
 
   useEffect(() => {
@@ -43,6 +44,18 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
     return () => subscription.unsubscribe();
   }, []);
+
+  // Clean up OAuth tokens from URL hash on web
+  useEffect(() => {
+    if (
+      Platform.OS === 'web' &&
+      typeof window !== 'undefined' &&
+      session &&
+      window.location.hash.includes('access_token')
+    ) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [session]);
 
   return (
     <AuthContext.Provider value={{ session, isLoading, refreshSession }}>

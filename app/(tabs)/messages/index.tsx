@@ -10,6 +10,8 @@ import {
   FlatList,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useConversations } from '@/src/hooks/useConversations';
 import { useMessages } from '@/src/hooks/useMessages';
@@ -365,13 +367,12 @@ function ThreadPanel({ conversation, currentUserId }: ThreadPanelProps) {
 
 export default function MessagesScreen() {
   const { session } = useAuth();
+  const router = useRouter();
+  const insets = useSafeAreaInsets();
   const userId = session?.user?.id || '';
   const { conversations, loading } = useConversations();
 
-  const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const selectedConversation = conversations.find((c) => c.id === selectedConversationId) || null;
 
   // Filter conversations by search
   const filteredConversations = conversations.filter((conv) => {
@@ -388,7 +389,9 @@ export default function MessagesScreen() {
         {/* List Header */}
         <View
           style={{
-            padding: 16,
+            paddingHorizontal: 16,
+            paddingTop: insets.top + 12,
+            paddingBottom: 16,
             backgroundColor: '#fff',
             borderBottomWidth: 1,
             borderBottomColor: '#E5E4E1',
@@ -430,8 +433,8 @@ export default function MessagesScreen() {
                 key={conv.id}
                 conversation={conv}
                 currentUserId={userId}
-                isSelected={conv.id === selectedConversationId}
-                onPress={() => setSelectedConversationId(conv.id)}
+                isSelected={false}
+                onPress={() => router.push(`/messages/${conv.id}`)}
               />
             ))}
             {filteredConversations.length === 0 && (

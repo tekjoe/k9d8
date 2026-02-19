@@ -102,6 +102,9 @@ export default function DesktopSidebar() {
   const pathname = usePathname();
   const isCollapsed = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 
+  // Desktop sidebar is only relevant on web
+  if (Platform.OS !== 'web') return null;
+
   const toggle = useCallback(() => {
     setCollapsed(!isCollapsed);
   }, [isCollapsed]);

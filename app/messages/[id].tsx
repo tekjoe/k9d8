@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -17,6 +17,7 @@ import { Colors } from '@/src/constants/colors';
 import { useAuth } from '@/src/hooks/useAuth';
 import { useMessages } from '@/src/hooks/useMessages';
 import { useConversations } from '@/src/hooks/useConversations';
+import { getBlockStatus } from '@/src/services/blocks';
 import MessageBubble from '@/src/components/messages/MessageBubble';
 
 export default function ChatScreen() {
@@ -33,6 +34,7 @@ export default function ChatScreen() {
 
   const [text, setText] = useState('');
   const [sending, setSending] = useState(false);
+  const [isBlocked, setIsBlocked] = useState(false);
   const flatListRef = useRef<FlatList>(null);
 
   // Find the other participant's name
@@ -40,9 +42,20 @@ export default function ChatScreen() {
   const otherParticipant = conversation?.participants?.find(
     (p) => p.user_id !== userId,
   );
+  const otherUserId = otherParticipant?.user_id;
   const displayName =
     otherParticipant?.profile?.display_name || 'Conversation';
   const avatarUrl = otherParticipant?.profile?.avatar_url;
+
+  // Check if blocked
+  useEffect(() => {
+    if (!otherUserId) return;
+    getBlockStatus(otherUserId).then((status) => {
+      if (status === 'blocked' || status === 'blocked_by') {
+        setIsBlocked(true);
+      }
+    });
+  }, [otherUserId]);
 
   const handleSend = useCallback(async () => {
     const trimmed = text.trim();
@@ -55,9 +68,15 @@ export default function ChatScreen() {
       setTimeout(() => {
         flatListRef.current?.scrollToEnd({ animated: true });
       }, 100);
-    } catch (err) {
-      console.error('Failed to send message:', err);
-      setText(trimmed);
+    } catch (err: any) {
+      const code = err?.code || '';
+      const msg = err?.message || err?.error_description || '';
+      if (code === '42501' || msg.includes('Cannot message') || msg.includes('blocked') || msg.includes('row-level security')) {
+        setIsBlocked(true);
+      } else {
+        console.error('Failed to send message:', err);
+        setText(trimmed);
+      }
     } finally {
       setSending(false);
     }
@@ -143,19 +162,20 @@ export default function ChatScreen() {
         >
           <TextInput
             className="flex-1 bg-[#EDECEA] rounded-2xl px-4 py-2.5 text-[15px] text-text mr-2 max-h-[100px]"
-            placeholder="Message..."
-            placeholderTextColor="#878685"
+            placeholder={isBlocked ? 'This user has blocked you' : 'Message...'}
+            placeholderTextColor={isBlocked ? '#B5725E' : '#878685'}
             value={text}
             onChangeText={setText}
             multiline
             returnKeyType="send"
             blurOnSubmit={false}
+            editable={!isBlocked}
           />
           <Pressable
             onPress={handleSend}
-            disabled={!text.trim() || sending}
+            disabled={isBlocked || !text.trim() || sending}
             className={`w-10 h-10 rounded-full justify-center items-center mb-0.5 ${
-              text.trim() ? 'bg-secondary' : 'bg-[#E5E4E1]'
+              !isBlocked && text.trim() ? 'bg-secondary' : 'bg-[#E5E4E1]'
             }`}
           >
             {sending ? (

@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import Head from 'expo-router/head';
 
 interface StructuredDataProps {
@@ -6,6 +7,8 @@ interface StructuredDataProps {
 
 /** Renders JSON-LD structured data inside <Head>. */
 export default function StructuredData({ data }: StructuredDataProps) {
+  if (Platform.OS !== 'web') return null;
+
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     ...data,

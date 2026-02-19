@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ActivityIndicator,
-  Image,
   Pressable,
   Text,
   View,
 } from 'react-native';
+import { Image } from 'expo-image';
 import { SEOHead } from '@/src/components/seo';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,11 +13,19 @@ import { Colors } from '@/src/constants/colors';
 import { useUserProfile } from '@/src/hooks/useUserProfile';
 import { useResponsiveLayout } from '@/src/hooks/useResponsiveLayout';
 import WebPageLayout from '@/src/components/ui/WebPageLayout';
+import ConfirmModal from '@/src/components/ui/ConfirmModal';
 
 export default function UserProfileWebScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { isMobile, isDesktop } = useResponsiveLayout();
+
+  const [confirmModal, setConfirmModal] = useState<{
+    title: string;
+    message: string;
+    confirmLabel: string;
+    onConfirm: () => void;
+  } | null>(null);
 
   const {
     profile,
@@ -29,11 +37,39 @@ export default function UserProfileWebScreen() {
     isPending,
     isSentByMe,
     isSentToMe,
+    isBlocked,
+    isBlockedByThem,
     handleSendRequest,
     handleAccept,
-    handleRemoveFriend,
     handleMessage,
+    handleUnblockUser,
+    doBlockUser,
+    doRemoveFriend,
   } = useUserProfile(id);
+
+  const showBlockConfirm = () => {
+    setConfirmModal({
+      title: 'Block User',
+      message: 'Are you sure you want to block this user? This will also remove any friendship.',
+      confirmLabel: 'Block',
+      onConfirm: async () => {
+        setConfirmModal(null);
+        await doBlockUser();
+      },
+    });
+  };
+
+  const showRemoveFriendConfirm = () => {
+    setConfirmModal({
+      title: 'Remove Friend',
+      message: 'Are you sure you want to unfriend this person?',
+      confirmLabel: 'Remove',
+      onConfirm: async () => {
+        setConfirmModal(null);
+        await doRemoveFriend();
+      },
+    });
+  };
 
   const header = (
     <View
@@ -119,7 +155,7 @@ export default function UserProfileWebScreen() {
                 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
             }}
             style={{ width: '100%', height: '100%' }}
-            resizeMode="cover"
+            contentFit="cover"
           />
         </View>
         <Text style={{ fontSize: isMobile ? 22 : 28, fontWeight: '700', color: '#1A1918' }}>
@@ -130,114 +166,164 @@ export default function UserProfileWebScreen() {
         {!isOwnProfile && (
           <View
             style={{
-              flexDirection: isMobile ? 'column' : 'row',
+              flexDirection: 'column',
               gap: 12,
               marginTop: 20,
               width: '100%',
               maxWidth: 400,
             }}
           >
-            {!isPending && !isFriend && (
-              <Pressable
-                onPress={handleSendRequest}
-                disabled={actionLoading}
-                style={{
-                  flex: isMobile ? undefined : 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#3D8A5A',
-                  paddingVertical: 12,
-                  borderRadius: 12,
-                  gap: 8,
-                }}
-              >
-                <Ionicons name="person-add-outline" size={20} color="#fff" />
-                <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Add Friend</Text>
-              </Pressable>
-            )}
-
-            {isSentByMe && (
-              <View
-                style={{
-                  flex: isMobile ? undefined : 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#EDECEA',
-                  paddingVertical: 12,
-                  borderRadius: 12,
-                  gap: 8,
-                }}
-              >
-                <Ionicons name="time-outline" size={20} color="#6D6C6A" />
-                <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '600' }}>Request Sent</Text>
+            {isBlocked ? (
+              <>
+                <View style={{ alignItems: 'center', paddingVertical: 8 }}>
+                  <Text style={{ fontSize: 14, color: '#878685' }}>You have blocked this user</Text>
+                </View>
+                <Pressable
+                  onPress={handleUnblockUser}
+                  disabled={actionLoading}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderWidth: 1,
+                    borderColor: '#D1D0CD',
+                    paddingVertical: 12,
+                    borderRadius: 12,
+                    gap: 8,
+                  }}
+                >
+                  <Text style={{ color: '#878685', fontSize: 15, fontWeight: '500' }}>Unblock</Text>
+                </Pressable>
+              </>
+            ) : isBlockedByThem ? (
+              <View style={{ alignItems: 'center', paddingVertical: 12 }}>
+                <Text style={{ fontSize: 14, color: '#878685' }}>This user is not available</Text>
               </View>
-            )}
+            ) : (
+              <>
+                <View
+                  style={{
+                    flexDirection: isMobile ? 'column' : 'row',
+                    gap: 12,
+                  }}
+                >
+                  {!isPending && !isFriend && (
+                    <Pressable
+                      onPress={handleSendRequest}
+                      disabled={actionLoading}
+                      style={{
+                        flex: isMobile ? undefined : 1,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#3D8A5A',
+                        paddingVertical: 12,
+                        borderRadius: 12,
+                        gap: 8,
+                      }}
+                    >
+                      <Ionicons name="person-add-outline" size={20} color="#fff" />
+                      <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Add Friend</Text>
+                    </Pressable>
+                  )}
 
-            {isSentToMe && (
-              <Pressable
-                onPress={handleAccept}
-                disabled={actionLoading}
-                style={{
-                  flex: isMobile ? undefined : 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#3D8A5A',
-                  paddingVertical: 12,
-                  borderRadius: 12,
-                  gap: 8,
-                }}
-              >
-                <Ionicons name="checkmark-circle-outline" size={20} color="#fff" />
-                <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Accept Request</Text>
-              </Pressable>
-            )}
+                  {isSentByMe && (
+                    <View
+                      style={{
+                        flex: isMobile ? undefined : 1,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#EDECEA',
+                        paddingVertical: 12,
+                        borderRadius: 12,
+                        gap: 8,
+                      }}
+                    >
+                      <Ionicons name="time-outline" size={20} color="#6D6C6A" />
+                      <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '600' }}>Request Sent</Text>
+                    </View>
+                  )}
 
-            {isFriend && (
-              <Pressable
-                onPress={handleRemoveFriend}
-                disabled={actionLoading}
-                style={{
-                  flex: isMobile ? undefined : 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#FFFFFF',
-                  borderWidth: 1,
-                  borderColor: '#E5E4E1',
-                  paddingVertical: 12,
-                  borderRadius: 12,
-                  gap: 8,
-                }}
-              >
-                <Ionicons name="person-remove-outline" size={18} color="#6D6C6A" />
-                <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '500' }}>Remove Friend</Text>
-              </Pressable>
-            )}
+                  {isSentToMe && (
+                    <Pressable
+                      onPress={handleAccept}
+                      disabled={actionLoading}
+                      style={{
+                        flex: isMobile ? undefined : 1,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#3D8A5A',
+                        paddingVertical: 12,
+                        borderRadius: 12,
+                        gap: 8,
+                      }}
+                    >
+                      <Ionicons name="checkmark-circle-outline" size={20} color="#fff" />
+                      <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '600' }}>Accept Request</Text>
+                    </Pressable>
+                  )}
 
-            <Pressable
-              onPress={handleMessage}
-              disabled={actionLoading}
-              style={{
-                flex: isMobile ? undefined : 1,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: isFriend ? '#3D8A5A' : '#FFFFFF',
-                borderWidth: isFriend ? 0 : 1,
-                borderColor: '#3D8A5A',
-                paddingVertical: 12,
-                borderRadius: 12,
-                gap: 8,
-              }}
-            >
-              <Ionicons name="chatbubble-outline" size={20} color={isFriend ? '#fff' : '#3D8A5A'} />
-              <Text style={{ color: isFriend ? '#FFFFFF' : '#3D8A5A', fontSize: 15, fontWeight: '600' }}>
-                Message
-              </Text>
-            </Pressable>
+                  {isFriend && (
+                    <Pressable
+                      onPress={showRemoveFriendConfirm}
+                      disabled={actionLoading}
+                      style={{
+                        flex: isMobile ? undefined : 1,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#FFFFFF',
+                        borderWidth: 1,
+                        borderColor: '#E5E4E1',
+                        paddingVertical: 12,
+                        borderRadius: 12,
+                        gap: 8,
+                      }}
+                    >
+                      <Ionicons name="person-remove-outline" size={18} color="#6D6C6A" />
+                      <Text style={{ color: '#6D6C6A', fontSize: 15, fontWeight: '500' }}>Remove Friend</Text>
+                    </Pressable>
+                  )}
+
+                  <Pressable
+                    onPress={handleMessage}
+                    disabled={actionLoading}
+                    style={{
+                      flex: isMobile ? undefined : 1,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      backgroundColor: isFriend ? '#3D8A5A' : '#FFFFFF',
+                      borderWidth: isFriend ? 0 : 1,
+                      borderColor: '#3D8A5A',
+                      paddingVertical: 12,
+                      borderRadius: 12,
+                      gap: 8,
+                    }}
+                  >
+                    <Ionicons name="chatbubble-outline" size={20} color={isFriend ? '#fff' : '#3D8A5A'} />
+                    <Text style={{ color: isFriend ? '#FFFFFF' : '#3D8A5A', fontSize: 15, fontWeight: '600' }}>
+                      Message
+                    </Text>
+                  </Pressable>
+                </View>
+
+                {/* Block User */}
+                <Pressable
+                  onPress={showBlockConfirm}
+                  disabled={actionLoading}
+                  style={{
+                    alignItems: 'center',
+                    paddingVertical: 8,
+                    marginTop: 4,
+                  }}
+                >
+                  <Text style={{ color: '#878685', fontSize: 13, fontWeight: '500' }}>Block User</Text>
+                </Pressable>
+              </>
+            )}
           </View>
         )}
       </View>
@@ -275,7 +361,7 @@ export default function UserProfileWebScreen() {
                       'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
                   }}
                   style={{ width: 56, height: 56, borderRadius: 28, marginRight: 12 }}
-                  resizeMode="cover"
+                  contentFit="cover"
                 />
                 <View style={{ flex: 1 }}>
                   <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>{dog.name}</Text>
@@ -292,6 +378,15 @@ export default function UserProfileWebScreen() {
         </View>
       )}
     </WebPageLayout>
+    <ConfirmModal
+      visible={!!confirmModal}
+      title={confirmModal?.title ?? ''}
+      message={confirmModal?.message ?? ''}
+      confirmLabel={confirmModal?.confirmLabel ?? 'Confirm'}
+      destructive
+      onConfirm={confirmModal?.onConfirm ?? (() => {})}
+      onCancel={() => setConfirmModal(null)}
+    />
     </>
   );
 }

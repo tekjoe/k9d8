@@ -4,6 +4,7 @@ import {
   Image,
   Linking,
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   Text,
@@ -13,6 +14,7 @@ import {
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import DesktopSidebar from '@/src/components/ui/DesktopSidebar';
 import { Colors } from '@/src/constants/colors';
 import { getParkById, getParkBySlug } from '@/src/services/parks';
@@ -160,6 +162,7 @@ interface ParkDetailAuthProps {
 
 export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps) {
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isMobile = width < 768;
   const isDesktop = width >= 1024;
   const showSidebar = width >= 768;
@@ -401,10 +404,13 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
             {/* Hero Image */}
             <View style={{ position: 'relative' }}>
               <Image
-                source={{
-                  uri:
-                    park.image_url || '/images/dog-park-placeholder.png',
-                }}
+                source={
+                  park.image_url
+                    ? { uri: park.image_url }
+                    : Platform.OS === 'web'
+                      ? { uri: '/images/dog-park-placeholder.png' }
+                      : require('@/assets/images/dog-park-placeholder.png')
+                }
                 accessibilityLabel={`Photo of ${park.name} dog park`}
                 style={{ width: '100%', height: isMobile ? 240 : 300 }}
                 resizeMode="cover"
@@ -414,8 +420,8 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
               onPress={handleBack}
               style={{
                 position: 'absolute',
-                top: 24,
-                left: 24,
+                top: insets.top + 8,
+                left: 16,
                 width: 40,
                 height: 40,
                 borderRadius: 20,

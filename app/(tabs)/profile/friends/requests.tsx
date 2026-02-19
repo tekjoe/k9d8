@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Alert, Image, Pressable, Text, View, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFriends } from '@/src/hooks/useFriends';
 import type { Friendship } from '@/src/types/database';
 
@@ -89,6 +90,7 @@ function RequestCard({ request, onAccept, onDecline }: RequestCardProps) {
 }
 
 export default function FriendRequestsScreen() {
+  const insets = useSafeAreaInsets();
   const { pendingRequests, acceptFriendRequest, declineFriendRequest, loading } = useFriends();
 
   async function handleAccept(friendshipId: string) {
@@ -112,7 +114,7 @@ export default function FriendRequestsScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Header */}
-      <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
+      <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingTop: insets.top + 12, paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
         <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918' }}>
           Friend Requests
         </Text>

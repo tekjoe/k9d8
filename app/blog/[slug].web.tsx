@@ -30,6 +30,7 @@ export default function BlogPostPage() {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const isTablet = width >= 768 && width < 1024;
 
   const post = blogPosts.find((p) => p.slug === slug);
   const markdown = slug ? blogContent[slug] : undefined;
@@ -130,7 +131,7 @@ export default function BlogPostPage() {
             <View
               style={{
                 width: '100%',
-                height: 420,
+                height: isMobile ? 240 : isTablet ? 320 : 420,
                 borderRadius: 20,
                 overflow: 'hidden',
               }}
@@ -145,14 +146,14 @@ export default function BlogPostPage() {
 
           {/* Content Area */}
           <Container style={{ paddingBottom: 60 }}>
-            <View style={{ flexDirection: isMobile ? 'column' : 'row', gap: 48 }}>
+            <View style={{ flexDirection: isMobile || isTablet ? 'column' : 'row', gap: 48 }}>
               {/* Article Column */}
               <View style={{ flex: 1, gap: 32 }}>
                 <View
                   style={{
                     backgroundColor: '#FFFFFF',
                     borderRadius: 20,
-                    padding: isMobile ? 24 : 40,
+                    padding: isMobile ? 24 : 32,
                     shadowColor: '#1A1918',
                     shadowOffset: { width: 0, height: 2 },
                     shadowOpacity: 0.06,
@@ -167,7 +168,7 @@ export default function BlogPostPage() {
 
               {/* Sidebar */}
               {!isMobile && (
-                <View style={{ width: 340, gap: 24 }}>
+                <View style={{ width: isTablet ? '100%' : 340, gap: 24, flexDirection: isTablet ? 'row' : 'column' }}>
                   {/* CTA Card */}
                   <View
                     style={{
@@ -175,6 +176,7 @@ export default function BlogPostPage() {
                       borderRadius: 16,
                       padding: 24,
                       gap: 16,
+                      flex: isTablet ? 1 : undefined,
                     }}
                   >
                     <View style={{ alignItems: 'center', gap: 16 }}>
@@ -219,6 +221,7 @@ export default function BlogPostPage() {
                         shadowOffset: { width: 0, height: 2 },
                         shadowOpacity: 0.06,
                         shadowRadius: 12,
+                        flex: isTablet ? 1 : undefined,
                       }}
                     >
                       <View

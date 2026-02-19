@@ -1,15 +1,17 @@
-import { Image, Pressable, Text, View, ScrollView } from 'react-native';
+import { Alert, Image, Pressable, Text, View, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useFriends } from '@/src/hooks/useFriends';
 import type { Profile } from '@/src/types/database';
 
 interface FriendCardProps {
   friend: Profile;
   onPress: () => void;
+  onRemove: () => void;
 }
 
-function FriendCard({ friend, onPress }: FriendCardProps) {
+function FriendCard({ friend, onPress, onRemove }: FriendCardProps) {
   return (
     <Pressable
       onPress={onPress}
@@ -36,19 +38,52 @@ function FriendCard({ friend, onPress }: FriendCardProps) {
           {friend.display_name || 'User'}
         </Text>
       </View>
+      <Pressable
+        onPress={(e) => {
+          e.stopPropagation();
+          onRemove();
+        }}
+        hitSlop={8}
+        style={{ padding: 4, marginRight: 4 }}
+      >
+        <Ionicons name="person-remove-outline" size={18} color="#B5725E" />
+      </Pressable>
       <Ionicons name="chevron-forward" size={20} color="#6D6C6A" />
     </Pressable>
   );
 }
 
 export default function FriendsListScreen() {
+  const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { friends, pendingCount, loading } = useFriends();
+  const { friends, pendingCount, loading, removeFriendByUserId } = useFriends();
+
+  const handleRemoveFriend = (friend: Profile) => {
+    Alert.alert(
+      'Remove Friend',
+      `Are you sure you want to remove ${friend.display_name || 'this person'} as a friend?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Remove',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await removeFriendByUserId(friend.id);
+            } catch (err) {
+              const message = err instanceof Error ? err.message : 'Failed to remove friend';
+              Alert.alert('Error', message);
+            }
+          },
+        },
+      ],
+    );
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: '#F5F4F1' }}>
       {/* Header */}
-      <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
+      <View style={{ backgroundColor: '#fff', paddingHorizontal: 16, paddingTop: insets.top + 12, paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: '#E5E4E1' }}>
         <Text style={{ fontSize: 20, fontWeight: '700', color: '#1A1918' }}>
           Friends
         </Text>
@@ -117,6 +152,7 @@ export default function FriendsListScreen() {
               key={friend.id}
               friend={friend}
               onPress={() => router.push(`/users/${friend.id}`)}
+              onRemove={() => handleRemoveFriend(friend)}
             />
           ))
         )}

@@ -33,7 +33,12 @@ export async function getOrCreateConversation(
     other_user_id: otherUserId,
   });
 
-  if (error) throw error;
+  if (error) {
+    if (error.message?.includes('Cannot message this user')) {
+      throw new Error('You cannot message this user.');
+    }
+    throw error;
+  }
   return data as string;
 }
 

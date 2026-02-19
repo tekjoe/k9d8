@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAuth } from '@/src/hooks/useAuth';
 import { signOut } from '@/src/services/auth';
 import { useDogs } from '@/src/hooks/useDogs';
@@ -27,15 +28,13 @@ function DogListRow({ dog, onPress }: DogListRowProps) {
   const subtitle = [dog.breed, ageText].filter(Boolean).join(', ');
 
   return (
-    <Pressable 
+    <Pressable
       onPress={onPress}
       style={{
         flexDirection: 'row',
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#fff',
-        borderBottomWidth: 1,
-        borderBottomColor: '#E5E4E1',
       }}
     >
       <Image
@@ -70,8 +69,6 @@ function FriendRow({ friend, onPress }: { friend: Profile; onPress: () => void }
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#fff',
-        borderBottomWidth: 1,
-        borderBottomColor: '#E5E4E1',
       }}
     >
       <Image
@@ -125,8 +122,6 @@ function PendingRequestRow({
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#fff',
-        borderBottomWidth: 1,
-        borderBottomColor: '#E5E4E1',
       }}
     >
       <Image
@@ -188,6 +183,7 @@ function PendingRequestRow({
 }
 
 export default function ProfilePage() {
+  const insets = useSafeAreaInsets();
   const { session } = useAuth();
   const userId = session?.user?.id;
   const { dogs, loading } = useDogs(userId);
@@ -232,7 +228,8 @@ export default function ProfilePage() {
           justifyContent: 'space-between',
           backgroundColor: '#fff',
           paddingHorizontal: 20,
-          paddingVertical: 16,
+          paddingTop: insets.top + 12,
+          paddingBottom: 16,
           borderBottomWidth: 1,
           borderBottomColor: '#E5E4E1',
         }}
@@ -351,13 +348,17 @@ export default function ProfilePage() {
               <ActivityIndicator size="small" color="#3D8A5A" />
             </View>
           ) : dogs.length > 0 ? (
-            dogs.map((dog) => (
-              <DogListRow 
-                key={dog.id} 
-                dog={dog} 
-                onPress={() => handleDogPress(dog)}
-              />
-            ))
+            <View style={{ borderRadius: 12, overflow: 'hidden' }}>
+              {dogs.map((dog, index) => (
+                <View key={dog.id}>
+                  {index > 0 && <View style={{ height: 1, backgroundColor: '#E5E4E1', marginLeft: 80 }} />}
+                  <DogListRow
+                    dog={dog}
+                    onPress={() => handleDogPress(dog)}
+                  />
+                </View>
+              ))}
+            </View>
           ) : (
             <View style={{ backgroundColor: '#fff', borderRadius: 16, padding: 32, alignItems: 'center' }}>
               <Text style={{ fontSize: 14, color: '#6D6C6A', marginBottom: 16 }}>
@@ -409,51 +410,59 @@ export default function ProfilePage() {
 
           {/* Pending Received Requests */}
           {pendingRequests.length > 0 && (
-            <>
-              <View style={{ paddingHorizontal: 16, paddingVertical: 8, backgroundColor: '#fff', borderTopLeftRadius: 12, borderTopRightRadius: 12 }}>
+            <View style={{ borderRadius: 12, overflow: 'hidden', marginBottom: 12 }}>
+              <View style={{ paddingHorizontal: 16, paddingVertical: 8, backgroundColor: '#fff' }}>
                 <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase' }}>
                   Requests Received
                 </Text>
               </View>
-              {pendingRequests.map((request) => (
-                <PendingRequestRow
-                  key={request.id}
-                  request={request}
-                  variant="received"
-                  onAccept={() => acceptFriendRequest(request.id)}
-                  onDecline={() => declineFriendRequest(request.id)}
-                />
+              {pendingRequests.map((request, index) => (
+                <View key={request.id}>
+                  <View style={{ height: 1, backgroundColor: '#E5E4E1', marginLeft: 80 }} />
+                  <PendingRequestRow
+                    request={request}
+                    variant="received"
+                    onAccept={() => acceptFriendRequest(request.id)}
+                    onDecline={() => declineFriendRequest(request.id)}
+                  />
+                </View>
               ))}
-            </>
+            </View>
           )}
 
           {/* Pending Sent Requests */}
           {sentRequests.length > 0 && (
-            <>
+            <View style={{ borderRadius: 12, overflow: 'hidden', marginBottom: 12 }}>
               <View style={{ paddingHorizontal: 16, paddingVertical: 8, backgroundColor: '#fff' }}>
                 <Text style={{ fontSize: 13, fontWeight: '600', color: '#878685', textTransform: 'uppercase' }}>
                   Requests Sent
                 </Text>
               </View>
-              {sentRequests.map((request) => (
-                <PendingRequestRow
-                  key={request.id}
-                  request={request}
-                  variant="sent"
-                />
+              {sentRequests.map((request, index) => (
+                <View key={request.id}>
+                  <View style={{ height: 1, backgroundColor: '#E5E4E1', marginLeft: 80 }} />
+                  <PendingRequestRow
+                    request={request}
+                    variant="sent"
+                  />
+                </View>
               ))}
-            </>
+            </View>
           )}
 
           {/* Accepted Friends */}
           {friends.length > 0 ? (
-            friends.slice(0, 5).map((friend) => (
-              <FriendRow
-                key={friend.id}
-                friend={friend}
-                onPress={() => router.push(`/users/${friend.id}`)}
-              />
-            ))
+            <View style={{ borderRadius: 12, overflow: 'hidden' }}>
+              {friends.slice(0, 5).map((friend, index) => (
+                <View key={friend.id}>
+                  {index > 0 && <View style={{ height: 1, backgroundColor: '#E5E4E1', marginLeft: 80 }} />}
+                  <FriendRow
+                    friend={friend}
+                    onPress={() => router.push(`/users/${friend.id}`)}
+                  />
+                </View>
+              ))}
+            </View>
           ) : pendingRequests.length === 0 && sentRequests.length === 0 ? (
             <View style={{ backgroundColor: '#fff', borderRadius: 16, padding: 32, alignItems: 'center' }}>
               <Ionicons name="people-outline" size={36} color="#878685" style={{ marginBottom: 12 }} />

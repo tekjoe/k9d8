@@ -3,15 +3,13 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
   TextInput,
   View,
 } from 'react-native';
-import { Image } from 'expo-image';
-import * as ImagePicker from 'expo-image-picker';
+import { ImagePickerWithModeration } from '@/src/components/ImagePickerWithModeration';
 import type { DogSize, DogTemperament } from '@/src/types/database';
 
 const DOG_SIZES: { value: DogSize; label: string }[] = [
@@ -91,17 +89,12 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
     });
   }, []);
 
-  const pickPhoto = useCallback(async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.8,
-    });
+  const handlePhotoSelect = useCallback((uri: string) => {
+    updateField('photoUri', uri);
+  }, [updateField]);
 
-    if (!result.canceled && result.assets[0]) {
-      updateField('photoUri', result.assets[0].uri);
-    }
+  const handlePhotoRemove = useCallback(() => {
+    updateField('photoUri', null);
   }, [updateField]);
 
   const handleSubmit = useCallback(async () => {
@@ -145,21 +138,18 @@ export function DogForm({ defaultValues, onSubmit, submitLabel = 'Save' }: DogFo
         contentContainerStyle={styles.scrollContent}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Photo Picker */}
-        <Pressable style={styles.photoPicker} onPress={pickPhoto}>
-          {formState.photoUri ? (
-            <Image
-              source={{ uri: formState.photoUri }}
-              style={styles.photoPreview}
-              contentFit="cover"
-            />
-          ) : (
-            <View style={styles.photoPlaceholder}>
-              <Text style={styles.photoPlaceholderIcon}>+</Text>
-              <Text style={styles.photoPlaceholderText}>Add Photo</Text>
-            </View>
-          )}
-        </Pressable>
+        {/* Photo Picker with Moderation */}
+        <View style={styles.photoContainer}>
+          <ImagePickerWithModeration
+            selectedImage={formState.photoUri}
+            onImageSelect={handlePhotoSelect}
+            onImageRemove={handlePhotoRemove}
+            placeholder="Add Dog Photo"
+            size="large"
+            shape="circle"
+            moderationEnabled={true}
+          />
+        </View>
 
         {/* Error Message */}
         {error && (
@@ -335,6 +325,10 @@ const styles = StyleSheet.create({
   scrollContent: {
     padding: 24,
     paddingBottom: 48,
+  },
+  photoContainer: {
+    alignSelf: 'center',
+    marginBottom: 24,
   },
   photoPicker: {
     alignSelf: 'center',

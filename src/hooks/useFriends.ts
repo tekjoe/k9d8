@@ -8,6 +8,7 @@ import {
   acceptFriendRequest as acceptService,
   declineFriendRequest as declineService,
   removeFriend as removeService,
+  removeFriendByUserId as removeByUserIdService,
 } from '../services/friends';
 import { useAuth } from './useAuth';
 import type { Profile, Friendship } from '../types/database';
@@ -23,6 +24,7 @@ interface UseFriendsReturn {
   acceptFriendRequest: (friendshipId: string) => Promise<void>;
   declineFriendRequest: (friendshipId: string) => Promise<void>;
   removeFriend: (friendshipId: string) => Promise<void>;
+  removeFriendByUserId: (friendUserId: string) => Promise<void>;
   refresh: () => Promise<void>;
 }
 
@@ -123,6 +125,14 @@ export function useFriends(): UseFriendsReturn {
     await removeService(friendshipId);
   }, []);
 
+  const removeFriendByUserId = useCallback(
+    async (friendUserId: string) => {
+      if (!userId) throw new Error('Must be logged in');
+      await removeByUserIdService(userId, friendUserId);
+    },
+    [userId],
+  );
+
   return {
     friends,
     pendingRequests,
@@ -133,6 +143,7 @@ export function useFriends(): UseFriendsReturn {
     acceptFriendRequest,
     declineFriendRequest,
     removeFriend,
+    removeFriendByUserId,
     refresh: loadFriends,
   };
 }

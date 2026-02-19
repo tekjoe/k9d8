@@ -3,13 +3,13 @@ import { SEOHead } from '@/src/components/seo';
 import {
   ActivityIndicator,
   Alert,
-  Image,
   Pressable,
   ScrollView,
   Text,
   View,
   useWindowDimensions,
 } from 'react-native';
+import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -49,7 +49,7 @@ function DogListRow({ dog, onPress, showDivider = true }: DogListRowProps) {
               'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop',
           }}
           style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
-          resizeMode="cover"
+          contentFit="cover"
         />
         <View style={{ flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918', marginBottom: 2 }}>
@@ -153,8 +153,8 @@ function ProfileCard({
   const compact = isMobile || isTablet;
 
   return (
-    <View 
-      style={{ 
+    <View
+      style={{
         width: isMobile ? '100%' : isTablet ? 280 : 320,
         backgroundColor: '#fff',
         borderRadius: 16,
@@ -168,12 +168,12 @@ function ProfileCard({
       }}
     >
       {/* Avatar */}
-      <View 
-        style={{ 
-          width: avatarSize, 
-          height: avatarSize, 
-          borderRadius: avatarSize / 2, 
-          borderWidth: 3, 
+      <View
+        style={{
+          width: avatarSize,
+          height: avatarSize,
+          borderRadius: avatarSize / 2,
+          borderWidth: 3,
           borderColor: '#3D8A5A',
           padding: 3,
           marginBottom: isMobile ? 16 : 24,
@@ -186,7 +186,7 @@ function ProfileCard({
               'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
           }}
           style={{ width: '100%', height: '100%', borderRadius: avatarSize / 2 }}
-          resizeMode="cover"
+          contentFit="cover"
         />
       </View>
 
@@ -241,7 +241,7 @@ function FriendRow({ friend, onPress, showDivider = true }: { friend: Profile; o
               'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
           }}
           style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
-          resizeMode="cover"
+          contentFit="cover"
         />
         <View style={{ flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>
@@ -300,7 +300,7 @@ function PendingRequestRow({
               'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
           }}
           style={{ width: 48, height: 48, borderRadius: 24, marginRight: 16 }}
-          resizeMode="cover"
+          contentFit="cover"
         />
         <View style={{ flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: '600', color: '#1A1918' }}>

@@ -138,6 +138,15 @@ export interface Friendship {
   addressee?: Profile;
 }
 
+export interface UserBlock {
+  id: string;
+  blocker_id: string;
+  blocked_id: string;
+  created_at: string;
+  blocker?: Profile;
+  blocked?: Profile;
+}
+
 export interface Database {
   public: {
     Tables: {

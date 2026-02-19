@@ -10,6 +10,7 @@ import {
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/src/constants/colors';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNotificationsData } from '@/src/hooks/useNotificationsData';
 import type { Notification } from '@/src/services/notifications';
 import { SkeletonList } from '@/src/components/ui/Skeleton';
@@ -67,6 +68,7 @@ function getNotificationColor(type: Notification['type']): string {
 
 export default function NotificationsScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const [filter, setFilter] = useState<'all' | 'unread'>('all');
   
   const {
@@ -155,12 +157,19 @@ export default function NotificationsScreen() {
           justifyContent: 'space-between',
           backgroundColor: '#FFFFFF',
           paddingHorizontal: 16,
-          paddingVertical: 16,
+          paddingTop: insets.top + 8,
+          paddingBottom: 12,
           borderBottomWidth: 1,
           borderBottomColor: '#E5E4E1',
         }}
       >
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Pressable
+            onPress={() => router.canGoBack() ? router.back() : router.replace('/')}
+            style={{ width: 40, height: 40, justifyContent: 'center', alignItems: 'center', marginRight: 8 }}
+          >
+            <Ionicons name="arrow-back" size={24} color={Colors.light.text} />
+          </Pressable>
           <Text style={{ fontSize: 18, fontWeight: '600', color: '#1A1918' }}>
             Notifications
           </Text>
@@ -246,10 +255,8 @@ export default function NotificationsScreen() {
 
       {/* Notifications List */}
       {loading && notifications.length === 0 ? (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <View style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
-            <SkeletonList count={6} type="notification" />
-          </View>
+        <View style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
+          <SkeletonList count={6} type="notification" />
         </View>
       ) : notifications.length === 0 ? (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 }}>

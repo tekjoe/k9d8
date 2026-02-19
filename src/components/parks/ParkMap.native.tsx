@@ -1,7 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { Park } from '../../types/database';
 
 let MapboxGL: typeof import('@rnmapbox/maps') | null = null;
@@ -40,55 +39,39 @@ function ParkMarker({ count }: { count: number }) {
   );
 }
 
-// Matches Explore screen search bar: insets.top + 8 + 52px height + 8px gap
-const SEARCH_BAR_TOP_OFFSET = 8 + 52 + 8;
-
 function MapFallback({
   parks,
   checkInCounts,
   onParkSelect,
 }: Pick<ParkMapProps, 'parks' | 'checkInCounts' | 'onParkSelect'>) {
-  const insets = useSafeAreaInsets();
-  const listPaddingTop = insets.top + SEARCH_BAR_TOP_OFFSET;
-
-  const renderPark = ({ item: park }: { item: Park }) => {
-    const pupCount = checkInCounts[park.id] || 0;
-    return (
-      <Pressable
-        style={styles.parkRow}
-        onPress={() => onParkSelect(park)}
-      >
-        <View style={styles.parkRowContent}>
-          <Text style={styles.parkName} numberOfLines={1}>{park.name}</Text>
-          {park.address ? (
-            <Text style={styles.parkAddress} numberOfLines={1}>{park.address}</Text>
-          ) : null}
-          <View style={styles.parkRowMeta}>
-            <Ionicons name="paw" size={12} color="#3D8A5A" />
-            <Text style={styles.parkPupCount}>{pupCount} {pupCount === 1 ? 'pup' : 'pups'} here</Text>
-          </View>
-        </View>
-        <Ionicons name="chevron-forward" size={20} color="#878685" />
-      </Pressable>
-    );
-  };
-
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={parks}
-        keyExtractor={(p) => p.id}
-        renderItem={renderPark}
-        style={styles.fallbackList}
-        contentContainerStyle={[styles.fallbackListContent, { paddingTop: listPaddingTop }]}
-        ListHeaderComponent={
-          <View style={styles.fallbackHeader}>
-            <Text style={styles.fallbackTitle}>Map unavailable in Expo Go</Text>
-            <Text style={styles.fallbackText}>Run a development build to see the map. Browse parks below:</Text>
-          </View>
-        }
-        showsVerticalScrollIndicator={false}
-      />
+    <View style={[styles.container, styles.fallbackList]}>
+      <View style={styles.fallbackHeader}>
+        <Text style={styles.fallbackTitle}>Map unavailable in Expo Go</Text>
+        <Text style={styles.fallbackText}>Run a development build to see the map. Browse parks below:</Text>
+      </View>
+      {parks.map((park) => {
+        const pupCount = checkInCounts[park.id] || 0;
+        return (
+          <Pressable
+            key={park.id}
+            style={styles.parkRow}
+            onPress={() => onParkSelect(park)}
+          >
+            <View style={styles.parkRowContent}>
+              <Text style={styles.parkName} numberOfLines={1}>{park.name}</Text>
+              {park.address ? (
+                <Text style={styles.parkAddress} numberOfLines={1}>{park.address}</Text>
+              ) : null}
+              <View style={styles.parkRowMeta}>
+                <Ionicons name="paw" size={12} color="#3D8A5A" />
+                <Text style={styles.parkPupCount}>{pupCount} {pupCount === 1 ? 'pup' : 'pups'} here</Text>
+              </View>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color="#878685" />
+          </Pressable>
+        );
+      })}
     </View>
   );
 }
@@ -172,11 +155,7 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   fallbackList: {
-    flex: 1,
     backgroundColor: '#FFF',
-  },
-  fallbackListContent: {
-    paddingBottom: 24,
   },
   parkRow: {
     flexDirection: 'row',

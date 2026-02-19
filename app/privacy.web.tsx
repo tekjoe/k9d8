@@ -228,7 +228,7 @@ export default function PrivacyPolicyPage() {
           
           <SubSectionTitle>How to Exercise Your Rights</SubSectionTitle>
           <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>In-App:</Text> Settings &gt; Profile to update info; Settings &gt; Account &gt; Delete Account</BulletPoint>
-          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Email:</Text> Send requests to <Text style={{ color: '#3D8A5A' }}>privacy@k9d8.app</Text></BulletPoint>
+          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Email:</Text> Send requests to <Text style={{ color: '#3D8A5A' }}>privacy@k9d8.com</Text></BulletPoint>
           <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Response Time:</Text> We respond to all requests within 30 days</BulletPoint>
 
           <SectionTitle>6. Security Measures</SectionTitle>
@@ -243,7 +243,7 @@ export default function PrivacyPolicyPage() {
 
           <SectionTitle>7. Children&apos;s Privacy</SectionTitle>
           <Paragraph>
-            k9d8 is not intended for use by children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children under these ages. If you believe a child has provided personal information, contact us immediately at privacy@k9d8.app.
+            k9d8 is not intended for use by children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children under these ages. If you believe a child has provided personal information, contact us immediately at privacy@k9d8.com.
           </Paragraph>
 
           <SectionTitle>8. Third-Party Services</SectionTitle>
@@ -268,8 +268,8 @@ export default function PrivacyPolicyPage() {
           <Paragraph>
             If you have any questions about this Privacy Policy, please contact us:
           </Paragraph>
-          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Email:</Text> privacy@k9d8.app</BulletPoint>
-          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>DPO (EU):</Text> dpo@k9d8.app</BulletPoint>
+          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Email:</Text> privacy@k9d8.com</BulletPoint>
+          <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>DPO (EU):</Text> dpo@k9d8.com</BulletPoint>
           <BulletPoint><Text style={{ color: '#1A1918', fontWeight: '500' }}>Response Time:</Text> We aim to respond within 48 hours</BulletPoint>
 
           {/* California Residents Section */}
