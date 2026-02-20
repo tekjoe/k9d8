@@ -121,10 +121,11 @@ async function signInWithGoogleNative() {
 }
 
 async function signInWithGoogleWeb() {
+  const siteUrl = process.env.EXPO_PUBLIC_SITE_URL || window.location.origin;
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: window.location.origin,
+      redirectTo: siteUrl,
     },
   });
   if (error) throw error;
@@ -190,10 +191,11 @@ async function signInWithAppleNative() {
 
 async function signInWithAppleWeb() {
   if (Platform.OS === 'web') {
+    const siteUrl = process.env.EXPO_PUBLIC_SITE_URL || window.location.origin;
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'apple',
       options: {
-        redirectTo: window.location.origin,
+        redirectTo: siteUrl,
       },
     });
     if (error) throw error;
