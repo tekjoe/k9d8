@@ -36,6 +36,19 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="twitter:image" content="https://k9d8.com/og-image.png" />
 
         <ScrollViewStyleReset />
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Q6H4SHDJS" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2Q6H4SHDJS');
+            `,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

@@ -3,11 +3,13 @@ import {
   useCallback,
   useEffect,
   useState,
+  useRef,
   type PropsWithChildren,
 } from 'react';
 import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 import type { Session } from '@supabase/supabase-js';
+import { Analytics } from '../lib/analytics';
 
 interface AuthContextType {
   session: Session | null;
@@ -24,6 +26,7 @@ export const AuthContext = createContext<AuthContextType>({
 export function AuthProvider({ children }: PropsWithChildren) {
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const prevSessionRef = useRef<Session | null>(null);
 
   const refreshSession = useCallback(async () => {
     const { data } = await supabase.auth.refreshSession();
@@ -34,12 +37,29 @@ export function AuthProvider({ children }: PropsWithChildren) {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setIsLoading(false);
+      prevSessionRef.current = session;
+      
+      if (session?.user) {
+        Analytics.setUserId(session.user.id);
+        Analytics.logAppOpen();
+      }
     });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      const previousSession = prevSessionRef.current;
+      
+      if (previousSession === null && session !== null) {
+        Analytics.logLogin('email');
+      }
+      
       setSession(session);
+      prevSessionRef.current = session;
+      
+      if (session?.user) {
+        Analytics.setUserId(session.user.id);
+      }
     });
 
     return () => subscription.unsubscribe();

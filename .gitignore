@@ -35,6 +35,10 @@ yarn-error.*
 .env.local
 .env.*.local
 
+# Firebase / Google Services
+google-services.json
+GoogleService-Info.plist
+
 # typescript
 *.tsbuildinfo
 
@@ -43,3 +47,5 @@ app-example
 # generated native folders
 /ios
 /android
+
+.opencode/
