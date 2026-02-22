@@ -1,0 +1,812 @@
+[
+  {
+    "name": "‍ Thornberry Dog Park",
+    "street": "1867 Foster Rd",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6799769,
+    "longitude": -91.5472255,
+    "description": "At 1867 Foster Rd in Cedar Rapids, Thornberry Dog Park has built a loyal following—4.8 stars from 486 dog owner reviews. Open from 6am to 8pm daily, there's room in the day for dog owners to bring their furry friends. Looking for more places to take your pup? Peninsula Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Morgan Creek Park",
+    "street": "7212 E Ave NW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52405",
+    "latitude": 41.9787698,
+    "longitude": -91.7653631,
+    "description": "Dog owners in Cedar Rapids have made Morgan Creek Park at 7212 E Ave NW a go-to spot, rating it 4.7 stars across 877 reviews. Open from 4am to 10:30pm daily, the park works well for dog owners with different schedules. More dog-friendly parks nearby include Elmer T. Delaney Memorial Park (2.0 miles) and Cherokee Park (2.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "K9 Acres Off-Leash Area",
+    "street": "5200 Golf Course Rd",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52302",
+    "latitude": 42.0143001,
+    "longitude": -91.5545889,
+    "description": "Cedar Rapids dog owners rate K9 Acres Off-Leash Area at 5200 Golf Course Rd highly, with 4.7 stars from 338 visits. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Other dog parks in the area include Willow Park (3.8 miles) and Papoose Park (3.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "‍ Noelridge Park",
+    "street": "4900 Council St NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52402",
+    "latitude": 42.027741,
+    "longitude": -91.658174,
+    "description": "Dog owners in Cedar Rapids have embraced Noelridge Park (4900 Council St NE) as a top destination—4.6 stars from 1,315 visits. Open from 6am to 10pm daily, there's always time for dog owners to bring their pup for some quality time. Keep the adventure going at other nearby dog parks like Kenwood Park (1.1 miles) or Pierce Park (1.2 miles)."
+  },
+  {
+    "name": "Bever Park",
+    "street": "2700 Bever Ave SE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52403",
+    "latitude": 41.984279,
+    "longitude": -91.628149,
+    "description": "Bever Park at 2700 Bever Ave SE is well-regarded by Cedar Rapids dog owners, holding 4.6 stars across 989 reviews. Open from 10am to 6pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Huston Park (1.2 miles) or Papoose Park (1.6 miles)."
+  },
+  {
+    "name": "Guthridge Park",
+    "street": "704 Emmons St",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52233",
+    "latitude": 42.0388471,
+    "longitude": -91.6796817,
+    "description": "Guthridge Park at 704 Emmons St is well-regarded by Cedar Rapids dog owners, holding 4.6 stars across 678 reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Pierce Park (1.2 miles) and Noelridge Park (1.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Huntington Ridge Park",
+    "street": "7625 C Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52402",
+    "latitude": 42.0509309,
+    "longitude": -91.6384466,
+    "description": "Dog owners in Cedar Rapids have made Huntington Ridge Park at 7625 C Ave NE a go-to spot, rating it 4.6 stars across 86 reviews. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Nearby, Fox Trail Park (1.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "‍ Kenwood Park",
+    "street": "900 35th St NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52402",
+    "latitude": 42.013789,
+    "longitude": -91.6483314,
+    "description": "With 4.5 stars from 27 reviews, Kenwood Park at 900 35th St NE has become a favorite among Cedar Rapids dog owners. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Other dog parks in the area include Noelridge Park (1.1 miles) and Papoose Park (1.1 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Shawnee Park",
+    "street": "1101 19th St NW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52405",
+    "latitude": 41.9831621,
+    "longitude": -91.6990646,
+    "description": "With 4.5 stars from 66 reviews, Shawnee Park at 1101 19th St NW has become a favorite among Cedar Rapids dog owners. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Apache Park (0.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Willow Park",
+    "street": "W 8th Ave",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52302",
+    "latitude": 42.0351094,
+    "longitude": -91.6224115,
+    "description": "Dog owners in Cedar Rapids have made Willow Park a go-to spot, rating it 4.5 stars across 77 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Huntington Ridge Park (1.4 miles) or Noelridge Park (1.9 miles)."
+  },
+  {
+    "name": "Cedar Falls Paw Park",
+    "street": "3200 S Main St",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "50613",
+    "latitude": 42.5338241,
+    "longitude": -92.4454897,
+    "description": "Cedar Rapids dog owners rate Cedar Falls Paw Park at 3200 S Main St highly, with 4.5 stars from 129 visits. Open from 6am to 10:30pm daily, the park offers flexibility for dog owners with varying routines. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Seminole Valley Park",
+    "street": "5925 Seminole Valley Trail NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52411",
+    "latitude": 42.0070858,
+    "longitude": -91.7205525,
+    "description": "Seminole Valley Park (4.5 stars from 239 reviews) is a popular destination for Cedar Rapids dog owners, located at 5925 Seminole Valley Trail NE. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: Shawnee Park (2.0 miles) and Apache Park (2.2 miles)."
+  },
+  {
+    "name": "Apache Park",
+    "street": "2705 D Ave NW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52405",
+    "latitude": 41.9763526,
+    "longitude": -91.7080462,
+    "description": "At 2705 D Ave NW in Cedar Rapids, Apache Park carries 4.4 stars from 31 dog owner reviews. Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. For pups who want more adventure, Shawnee Park is a nearby dog park worth visiting (0.7 miles)."
+  },
+  {
+    "name": "Hoover Park",
+    "street": "Cedar River Trail",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52404",
+    "latitude": 41.9773211,
+    "longitude": -91.6699449,
+    "description": "Hoover Park in Cedar Rapids has 4.4 stars based on 38 reviews from dog owners. Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. For dog owners who like to explore, McLoud Run Park (0.1 miles) and Greene Square Park (0.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Rita's Ranch Dog Park",
+    "street": "S Scott Blvd",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6551635,
+    "longitude": -91.4810642,
+    "description": "Dog owners in Cedar Rapids have rated Rita's Ranch Dog Park 4.4 stars across 135 reviews. Open from 6am to 10pm daily, dog owners have a window to spend time with their pups. Nearby dog parks worth exploring with your pup include Scott Park (0.0 miles) and Court Hill Park (0.6 miles)."
+  },
+  {
+    "name": "Haskell Park",
+    "street": "204 Johnson Ave NW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "zip": "52405",
+    "latitude": 41.971973,
+    "longitude": -91.6936242,
+    "description": "Located at 204 Johnson Ave NW, Haskell Park in Cedar Rapids is rated 4.1 stars by 11 dog owners. Open from 6am to 10pm daily, dog owners in the area can work a visit into their day. Dog owners might also enjoy Apache Park, another dog park just 0.8 miles away."
+  },
+  {
+    "name": "Kirn Park",
+    "street": "",
+    "city": "Council Bluffs",
+    "state": "IA",
+    "zip": "",
+    "latitude": 41.258841,
+    "longitude": -95.8519484,
+    "description": "With 4.5 stars from 205 reviews, Kirn Park has become a favorite among Council Bluffs dog owners. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Big Lake Park is another dog-friendly destination 0.9 miles from here."
+  },
+  {
+    "name": "Big Lake Park",
+    "street": "2600 N 8th St",
+    "city": "Council Bluffs",
+    "state": "IA",
+    "zip": "51503",
+    "latitude": 41.2715787,
+    "longitude": -95.8569624,
+    "description": "Big Lake Park at 2600 N 8th St is well-regarded by Council Bluffs dog owners, holding 4.3 stars across 697 reviews. Dog owners looking for a solid destination will find this park delivers. For variety, the neighborhood offers more dog parks to explore: Bahnsen Park (0.6 miles) and Kirn Park (0.9 miles)."
+  },
+  {
+    "name": "Peterson Park",
+    "street": "2500 S 8th St",
+    "city": "Council Bluffs",
+    "state": "IA",
+    "zip": "51501",
+    "latitude": 41.237042,
+    "longitude": -95.856291,
+    "description": "Peterson Park at 2500 S 8th St in Council Bluffs has 4.1 stars from 122 dog owner reviews. Open from 6:30am to 10pm daily, dog owners have a window to spend time with their pups. Dog owners in the neighborhood can also take their furry friends to Kirn Park, 1.5 miles away."
+  },
+  {
+    "name": "Bahnsen Park",
+    "street": "1720 Ave L",
+    "city": "Council Bluffs",
+    "state": "IA",
+    "zip": "51501",
+    "latitude": 41.2726202,
+    "longitude": -95.8693017,
+    "description": "In Council Bluffs, dog owners can find Bahnsen Park at 1720 Ave L—a local park worth exploring with their furry companions. Open from 8am to 10pm daily, the park is accessible for dog owners in the area. For dog owners who like to explore, Big Lake Park (0.6 miles) and Kirn Park (1.3 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "‍ Crow Creek Dog Park",
+    "street": "4800 Devils Glen Rd",
+    "city": "Davenport",
+    "state": "IA",
+    "zip": "52722",
+    "latitude": 41.5723025,
+    "longitude": -90.4835764,
+    "description": "Crow Creek Dog Park at 4800 Devils Glen Rd is well-regarded by Davenport dog owners, holding 4.5 stars across 782 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "N. Marquette Dog Park",
+    "street": "4411 N Marquette St",
+    "city": "Davenport",
+    "state": "IA",
+    "zip": "52806",
+    "latitude": 41.5428849,
+    "longitude": -90.5913134,
+    "description": "Dog owners in Davenport have rated N. Marquette Dog Park (4411 N Marquette St) 4.4 stars across 49 reviews. Local dog owners use this park as a spot to spend time with their furry companions. For dog owners who like to explore, Marquette Park (0.0 miles) and Jefferson Park (0.8 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Marquette Park",
+    "street": "3200 N Marquette St",
+    "city": "Davenport",
+    "state": "IA",
+    "zip": "52804",
+    "latitude": 41.5428849,
+    "longitude": -90.5913134,
+    "description": "At 3200 N Marquette St in Davenport, Marquette Park carries 4.4 stars from 240 dog owner reviews. Open from 6am to 9pm daily, the park is accessible for dog owners in the area. For pups who want more adventure, N. Marquette Dog Park is a nearby dog park worth visiting (0.0 miles)."
+  },
+  {
+    "name": "Centennial Park",
+    "street": "315 S Marquette St",
+    "city": "Davenport",
+    "state": "IA",
+    "zip": "52802",
+    "latitude": 41.5188568,
+    "longitude": -90.591005,
+    "description": "Located at 315 S Marquette St in Davenport, Centennial Park earns strong marks from local dog owners—4.4 stars from 822 reviews. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. For a change of scenery, Jefferson Park is another dog-friendly destination 0.9 miles from here."
+  },
+  {
+    "name": "Jefferson Park",
+    "street": "1012 W 12th St",
+    "city": "Davenport",
+    "state": "IA",
+    "zip": "52804",
+    "latitude": 41.5317346,
+    "longitude": -90.5876327,
+    "description": "Dog owners in Davenport have rated Jefferson Park (1012 W 12th St) 4.2 stars across 17 reviews. Open from 6am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. Looking to explore more? N. Marquette Dog Park is another dog-friendly park 0.8 miles from here."
+  },
+  {
+    "name": "Raccoon River Park",
+    "street": "2500 Grand Ave",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50265",
+    "latitude": 41.5428424,
+    "longitude": -93.7516363,
+    "description": "With 4.7 stars across 2,435 reviews, Raccoon River Park at 2500 Grand Ave has clearly won over Des Moines dog owners. Open from 7am to 10pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Dog owners in the area also love bringing their pups to Raccoon River Park (0.0 miles) and Scenic Valley Park (0.9 miles)."
+  },
+  {
+    "name": "Colby Park",
+    "street": "6900 School St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50324",
+    "latitude": 41.5948929,
+    "longitude": -93.7115523,
+    "description": "Colby Park at 6900 School St is well-regarded by Des Moines dog owners, holding 4.6 stars across 386 reviews. Open from 5am to 11pm daily, dog owners can plan visits around work or their pup's energy level. Dog owners exploring the neighborhood can also bring their furry friends to Windsor Heights Dog Park (0.1 miles)."
+  },
+  {
+    "name": "Stylin Paws Play Place",
+    "street": "3901 121st St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50323",
+    "latitude": 41.6316762,
+    "longitude": -93.7829921,
+    "description": "At 3901 121st St in Des Moines, Stylin Paws Play Place has built a loyal following—4.5 stars from 107 dog owner reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. Nearby, Days Run Park (0.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Riley Park",
+    "street": "5300 Urbandale Ave",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50310",
+    "latitude": 41.622023,
+    "longitude": -93.691606,
+    "description": "At 5300 Urbandale Ave in Des Moines, Riley Park has built a loyal following—4.5 stars from 166 dog owner reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Dog owners can also take their pups to nearby Beaverdale Park (1.5 miles) or Woodlawn Park (2.0 miles)."
+  },
+  {
+    "name": "Ewing Dog Park",
+    "street": "4660 Indianola Ave",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50320",
+    "latitude": 41.5424688,
+    "longitude": -93.583841,
+    "description": "For dog owners in the Des Moines area, Ewing Dog Park (4660 Indianola Ave) offers a 4.5-star experience based on 196 reviews. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. Dog owners exploring the neighborhood can also bring their furry friends to Ewing Park (0.6 miles)."
+  },
+  {
+    "name": "Ankeny Dog Park",
+    "street": "1155 SW Ankeny Rd",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50023",
+    "latitude": 41.6964059,
+    "longitude": -93.6146448,
+    "description": "Ankeny Dog Park at 1155 SW Ankeny Rd is well-regarded by Des Moines dog owners, holding 4.5 stars across 305 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. For a change of scenery, Woodlawn Park is another dog-friendly destination 4.6 miles from here."
+  },
+  {
+    "name": "Paws & Pints",
+    "street": "6218 Willowmere Dr",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50321",
+    "latitude": 41.5564052,
+    "longitude": -93.7021814,
+    "description": "With 4.5 stars from 522 reviews, Paws & Pints at 6218 Willowmere Dr has become a favorite among Des Moines dog owners. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For a change of scenery, Brown's Woods is another dog-friendly destination 1.1 miles from here."
+  },
+  {
+    "name": "EASTTOWN PARK",
+    "street": "Easton Blvd",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50317",
+    "latitude": 41.6088156,
+    "longitude": -93.5660226,
+    "description": "For dog owners in Des Moines, EASTTOWN PARK has a 4.4-star rating (116 reviews). Open from 8am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. Looking to explore more? Riverwalk Dog Park is another dog-friendly park 2.7 miles from here."
+  },
+  {
+    "name": "Dog Park",
+    "street": "851 17th Ave SWAltoona",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50009",
+    "latitude": 41.6451542,
+    "longitude": -93.4836055,
+    "description": "Located at 851 17th Ave SW, Dog Park in Des Moines is rated 4.4 stars by 188 dog owners. Open from 6am to 8pm daily, dog owners can stop by when it fits their schedule. Dog owners might also enjoy EASTTOWN PARK, another dog park just 4.9 miles away."
+  },
+  {
+    "name": "Reno Memorial Dog Park",
+    "street": "",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "",
+    "latitude": 41.5868654,
+    "longitude": -93.6249494,
+    "description": "In Des Moines, Reno Memorial Dog Park carries 4.3 stars from 57 dog owner reviews. Open from 6am to 10pm daily, the park is accessible for dog owners in the area. Looking to explore more? Westchester Park is another dog-friendly park 0.0 miles from here."
+  },
+  {
+    "name": "Windsor Heights Dog Park",
+    "street": "Colby Park",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50324",
+    "latitude": 41.5944242,
+    "longitude": -93.7130587,
+    "description": "Windsor Heights Dog Park in Des Moines has 4.3 stars based on 292 reviews from dog owners. This park provides dog owners in the community with a place to visit with their dogs. More dog parks in the area include Colby Park (0.1 miles) and Pearson Park (1.0 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Urbandale Dog Park",
+    "street": "4905 68th St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50322",
+    "latitude": 41.6508015,
+    "longitude": -93.7098031,
+    "description": "Dog owners in the Des Moines area will find Urbandale Dog Park at 4905 68th St—a local option for spending time with their pups. Dog owners looking for a local destination will find this park accessible. Looking to explore more? Riley Park is another dog-friendly park 2.2 miles from here."
+  },
+  {
+    "name": "Riverwalk Dog Park",
+    "street": "1111 Illinois St",
+    "city": "Des Moines",
+    "state": "IA",
+    "zip": "50314",
+    "latitude": 41.5978075,
+    "longitude": -93.6170648,
+    "description": "207 dog owners have reviewed Riverwalk Dog Park at 1111 Illinois St in Des Moines, averaging 4.1 stars. Open from 6am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners in the neighborhood can also take their furry friends to Reno Memorial Dog Park, 0.9 miles away."
+  },
+  {
+    "name": "Pet Park",
+    "street": "N Grandview Ave",
+    "city": "Dubuque",
+    "state": "IA",
+    "zip": "52001",
+    "latitude": 42.5162575,
+    "longitude": -90.6929712,
+    "description": "Pet Park in Dubuque has 4.2 stars based on 143 reviews from dog owners. Open from 8am to 8pm daily, dog owners in the area can work a visit into their day. Dog owners visiting for the first time may want to read recent reviews to learn what to expect."
+  },
+  {
+    "name": "Hickory Hill Park",
+    "street": "1439 E Bloomington St",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52240",
+    "latitude": 41.6648228,
+    "longitude": -91.5141726,
+    "description": "Hickory Hill Park at 1439 E Bloomington St is well-regarded by Iowa City dog owners, holding 4.7 stars across 379 reviews. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. For variety, the neighborhood offers more dog parks to explore: Glendale Park (0.2 miles) and Reno Street Neighborhood Park (0.3 miles)."
+  },
+  {
+    "name": "Riverfront Crossings Park",
+    "street": "1001 S Clinton St",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52240",
+    "latitude": 41.6502642,
+    "longitude": -91.5348381,
+    "description": "For dog owners in the Iowa City area, Riverfront Crossings Park (1001 S Clinton St) offers a 4.7-star experience based on 147 reviews. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Dog owners can also take their pups to nearby Oak Grove Park (0.4 miles) or Brookland Park (0.6 miles)."
+  },
+  {
+    "name": "Pheasant Hill Park",
+    "street": "9 Green Mountain Dr",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6617222,
+    "longitude": -91.495498,
+    "description": "With 4.7 stars from 32 reviews, Pheasant Hill Park at 9 Green Mountain Dr has become a favorite among Iowa City dog owners. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Dog owners exploring the neighborhood can also bring their furry friends to Court Hill Park (0.5 miles)."
+  },
+  {
+    "name": "Cardigan Park",
+    "street": "500 Huntington Dr",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6565919,
+    "longitude": -91.4654643,
+    "description": "Dog owners in Iowa City have made Cardigan Park at 500 Huntington Dr a go-to spot, rating it 4.9 stars across 7 reviews. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. More dog-friendly parks nearby include Rita's Ranch Dog Park (0.8 miles) and Scott Park (0.8 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Reno Street Neighborhood Park",
+    "street": "516 Reno St",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.667036,
+    "longitude": -91.5186404,
+    "description": "With 4.7 stars from 26 reviews, Reno Street Neighborhood Park at 516 Reno St has become a favorite among Iowa City dog owners. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Hickory Hill Park (0.3 miles) or Happy Hollow Park (0.4 miles)."
+  },
+  {
+    "name": "City Park",
+    "street": "200 Park Rd",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52246",
+    "latitude": 41.671459,
+    "longitude": -91.542187,
+    "description": "Iowa City dog owners rate City Park at 200 Park Rd highly, with 4.6 stars from 527 visits. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Thornberry Dog Park is another dog-friendly destination 0.6 miles from here."
+  },
+  {
+    "name": "Willow Creek Park",
+    "street": "1117 Teg Dr",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52246",
+    "latitude": 41.6481871,
+    "longitude": -91.5688616,
+    "description": "At 1117 Teg Dr in Iowa City, Willow Creek Park has built a loyal following—4.6 stars from 234 dog owner reviews. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners can also take their pups to nearby Hunter's Run Park (1.1 miles) or Benton Hill Park (1.1 miles)."
+  },
+  {
+    "name": "Court Hill Park",
+    "street": "2825 Friendship St",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6550392,
+    "longitude": -91.4926959,
+    "description": "Court Hill Park at 2825 Friendship St is well-regarded by Iowa City dog owners, holding 4.6 stars across 64 reviews. Open from 6am to 10pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include Pheasant Hill Park (0.5 miles) and Rita's Ranch Dog Park (0.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Calder Park",
+    "street": "2831 Hickory Trail",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.671277,
+    "longitude": -91.493467,
+    "description": "With 4.7 stars from 6 reviews, Calder Park at 2831 Hickory Trail has become a favorite among Iowa City dog owners. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Pheasant Hill Park (0.7 miles) and Court Hill Park (1.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Scott Park",
+    "street": "640 S Scott Blvd",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6544879,
+    "longitude": -91.4809571,
+    "description": "For dog owners in the Iowa City area, Scott Park (640 S Scott Blvd) offers a 4.5-star experience based on 13 reviews. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners exploring the neighborhood can also bring their furry friends to Rita's Ranch Dog Park (0.0 miles)."
+  },
+  {
+    "name": "Hunter's Run Park",
+    "street": "1050 Duck Creek Dr",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52246",
+    "latitude": 41.6489168,
+    "longitude": -91.5904893,
+    "description": "Iowa City dog owners rate Hunter's Run Park at 1050 Duck Creek Dr highly, with 4.5 stars from 67 visits. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Nearby, Willow Creek Park (1.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "‍ Peninsula Park",
+    "street": "1867 Foster Rd",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6799769,
+    "longitude": -91.5472255,
+    "description": "Dog owners in Iowa City have made Peninsula Park at 1867 Foster Rd a go-to spot, rating it 4.5 stars across 113 reviews. Open from 6am to 10pm daily, dog owners have plenty of flexibility to plan a visit. Looking for more places to take your pup? Thornberry Dog Park is another popular dog park just 0.0 miles away."
+  },
+  {
+    "name": "Waterworks Prairie Park",
+    "street": "2875 Dubuque St NEIowa City",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52240",
+    "latitude": 41.6909641,
+    "longitude": -91.5464885,
+    "description": "Located at 2875 Dubuque St NE in Iowa City, Waterworks Prairie Park earns strong marks from local dog owners—4.5 stars from 162 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to Thornberry Dog Park (0.8 miles)."
+  },
+  {
+    "name": "Glendale Park",
+    "street": "1250 E Jefferson St",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52245",
+    "latitude": 41.6619378,
+    "longitude": -91.5154926,
+    "description": "Located at 1250 E Jefferson St, Glendale Park in Iowa City is rated 4.4 stars by 19 dog owners. Open from 6am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners might also enjoy Hickory Hill Park, another dog park just 0.2 miles away."
+  },
+  {
+    "name": "Brookland Park",
+    "street": "550 Greenwood Dr",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52246",
+    "latitude": 41.6533579,
+    "longitude": -91.5457078,
+    "description": "Located at 550 Greenwood Dr, Brookland Park in Iowa City is rated 4.4 stars by 30 dog owners. Open from 6am to 10pm daily, the park fits conveniently into different routines. For pups who want more adventure, Benton Hill Park is a nearby dog park worth visiting (0.2 miles)."
+  },
+  {
+    "name": "Highland Park",
+    "street": "750 Highland Ave",
+    "city": "‍ Iowa City",
+    "state": "IA",
+    "zip": "52240",
+    "latitude": 41.6458993,
+    "longitude": -91.5246812,
+    "description": "Dog owners in Iowa City have rated Highland Park (750 Highland Ave) 4.4 stars across 47 reviews. Open from 6am to 10pm daily, the park is accessible for dog owners in the area. Dog owners might also enjoy Oak Grove Park, another dog park just 0.4 miles away."
+  },
+  {
+    "name": "Bacon Creek Park",
+    "street": "5015 Correctionville Rd",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51106",
+    "latitude": 42.4908609,
+    "longitude": -96.3429966,
+    "description": "Bacon Creek Park (4.7 stars from 973 reviews) is a popular destination for Sioux City dog owners, located at 5015 Correctionville Rd. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to Grandma Moos Park (1.3 miles)."
+  },
+  {
+    "name": "Chris Larsen City Park",
+    "street": "1280 Larsen Park Rd",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51103",
+    "latitude": 42.4890558,
+    "longitude": -96.4080094,
+    "description": "Sioux City dog owners rate Chris Larsen City Park at 1280 Larsen Park Rd highly, with 4.6 stars from 215 visits. Open from 7am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Hi-View Park (0.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Grandview Park",
+    "street": "",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "",
+    "latitude": 42.4966815,
+    "longitude": -96.4058782,
+    "description": "Grandview Park (4.6 stars from 417 reviews) is a popular destination for Sioux City dog owners. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. Other dog parks in the area include Hi-View Park (0.0 miles) and Chris Larsen City Park (0.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Riverside Park",
+    "street": "1301 Riverside Blvd",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51109",
+    "latitude": 42.5020707,
+    "longitude": -96.4710692,
+    "description": "Located at 1301 Riverside Blvd in Sioux City, Riverside Park earns strong marks from local dog owners—4.6 stars from 926 reviews. Open from 7am to 11pm daily, there's room in the day for dog owners to bring their furry friends. Dog owners exploring the neighborhood can also bring their furry friends to Goldie Beck Park (1.4 miles)."
+  },
+  {
+    "name": "Cecelia Park",
+    "street": "901 Morningside Ave",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51106",
+    "latitude": 42.482627,
+    "longitude": -96.36686,
+    "description": "Located at 901 Morningside Ave, Cecelia Park in Sioux City is rated 4.4 stars by 12 dog owners. For dog owners in the neighborhood, this park offers a place to take their pups. For pups who want more adventure, Grandma Moos Park is a nearby dog park worth visiting (0.6 miles)."
+  },
+  {
+    "name": "‍ Hi-View Park",
+    "street": "",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "",
+    "latitude": 42.4966815,
+    "longitude": -96.4058782,
+    "description": "Hi-View Park in Sioux City has 4.4 stars based on 26 reviews from dog owners. Open from 6am to 10:30pm daily, the park fits conveniently into different routines. More dog parks in the area include Grandview Park (0.0 miles) and Chris Larsen City Park (0.5 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Sertoma Park",
+    "street": "3233 Singing Hills Blvd",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51106",
+    "latitude": 42.4355419,
+    "longitude": -96.3672482,
+    "description": "At 3233 Singing Hills Blvd in Sioux City, Sertoma Park has built a loyal following—4.5 stars from 272 dog owner reviews. Open from 7am to 9pm daily, the park works well for dog owners with different schedules. For a change of scenery, Prairie Park is another dog-friendly destination 0.9 miles from here."
+  },
+  {
+    "name": "‍ Prairie Park",
+    "street": "3500 S Lewis Blvd",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51106",
+    "latitude": 42.4485661,
+    "longitude": -96.3722574,
+    "description": "At 3500 S Lewis Blvd in Sioux City, Prairie Park carries 4.3 stars from 20 dog owner reviews. Open from 7am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners looking for variety can also visit Sertoma Park (0.9 miles) or Siouxland Freedom Park (1.8 miles) with their four-legged friends."
+  },
+  {
+    "name": "Goldie Beck Park",
+    "street": "1600 Goldie Ave",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51109",
+    "latitude": 42.51766,
+    "longitude": -96.48743,
+    "description": "Goldie Beck Park at 1600 Goldie Ave in Sioux City has 4.3 stars from 22 dog owner reviews. Open from 7am to 11pm daily, dog owners have a window to spend time with their pups. Dog owners looking for variety can also visit Riverside Park (1.4 miles) or Hi-View Park (4.4 miles) with their four-legged friends."
+  },
+  {
+    "name": "Grandma Moos Park",
+    "street": "221 S Cecelia St",
+    "city": "‍ Sioux City",
+    "state": "IA",
+    "zip": "51105",
+    "latitude": 42.4919889,
+    "longitude": -96.367711,
+    "description": "26 dog owners have reviewed Grandma Moos Park at 221 S Cecelia St in Sioux City, averaging 4.3 stars. The neighborhood benefits from having this park as an option for dog owners and their pups. Dog owners might also enjoy Cecelia Park, another dog park just 0.6 miles away."
+  },
+  {
+    "name": "Pat Bowlsby Off-Leash Dog Park",
+    "street": "1320 Campbell Ave",
+    "city": "Waterloo",
+    "state": "IA",
+    "zip": "50701",
+    "latitude": 42.4839389,
+    "longitude": -92.3573625,
+    "description": "At 1320 Campbell Ave in Waterloo, Pat Bowlsby Off-Leash Dog Park has built a loyal following—4.6 stars from 193 dog owner reviews. Dog owners looking for a solid destination will find this park delivers. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Greenbelt Trail",
+    "street": "Maddox Pkwy",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50325",
+    "latitude": 41.6099442,
+    "longitude": -93.7580393,
+    "description": "In West Des Moines, Greenbelt Trail has built a loyal following—4.8 stars from 80 dog owner reviews. The park serves dog owners well, providing a destination the community values. For variety, the neighborhood offers more dog parks to explore: Walnut Ridge Park (0.7 miles) and Lions Park (0.9 miles)."
+  },
+  {
+    "name": "Gray's Lake Park",
+    "street": "2101 Fleur Dr",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50315",
+    "latitude": 41.5675412,
+    "longitude": -93.6447782,
+    "description": "With 4.7 stars across 2,203 reviews, Gray's Lake Park at 2101 Fleur Dr has clearly won over West Des Moines dog owners. Open from 5am to 10pm daily, the park is convenient for before work, after work, or weekend adventures. For variety, many dog owners also bring their furry friends to Des Moines Water Works Park (0.2 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Greenwood - Ashworth Park",
+    "street": "4500 Grand Ave",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50312",
+    "latitude": 41.5844923,
+    "longitude": -93.6620703,
+    "description": "At 4500 Grand Ave in West Des Moines, Greenwood - Ashworth Park has built a loyal following—4.7 stars from 539 dog owner reviews. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Des Moines Water Works Park (1.3 miles) and Gray's Lake Park (1.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Brown's Woods",
+    "street": "465 Brown's Woods Dr",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50265",
+    "latitude": 41.5411573,
+    "longitude": -93.7090882,
+    "description": "With 4.7 stars from 498 reviews, Brown's Woods at 465 Brown's Woods Dr has become a favorite among West Des Moines dog owners. Open from 6:30am to 10:30pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Walnut Woods State Park is another dog-friendly destination 1.0 miles from here."
+  },
+  {
+    "name": "Winterset Dog Park",
+    "street": "",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "",
+    "latitude": 41.3347631,
+    "longitude": -94.0135687,
+    "description": "In West Des Moines, Winterset Dog Park has built a loyal following—4.8 stars from 26 dog owner reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Cumming City Park",
+    "street": "649 N 44th St",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50061",
+    "latitude": 41.4887013,
+    "longitude": -93.7620729,
+    "description": "Dog owners in West Des Moines have made Cumming City Park at 649 N 44th St a go-to spot, rating it 4.8 stars across 12 reviews. The steady stream of dog owner visits speaks to the park's appeal. Looking for more places to take your pup? Raccoon River Park is another popular dog park just 3.8 miles away."
+  },
+  {
+    "name": "Lions Park",
+    "street": "",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "",
+    "latitude": 41.6096559,
+    "longitude": -93.7754644,
+    "description": "With 4.8 stars from 10 reviews, Lions Park has become a favorite among West Des Moines dog owners. Dog owners looking for a solid destination will find this park delivers. For variety, the neighborhood offers more dog parks to explore: Walnut Ridge Park (0.7 miles) and Greenbelt Trail (0.9 miles)."
+  },
+  {
+    "name": "Whisper Point Park",
+    "street": "",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "",
+    "latitude": 41.5644476,
+    "longitude": -93.7594059,
+    "description": "Dog owners in West Des Moines have made Whisper Point Park a go-to spot, rating it 4.7 stars across 14 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to Ashawa Park (0.2 miles)."
+  },
+  {
+    "name": "Unleashed Pets",
+    "street": "970 SE Brick Dr",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50263",
+    "latitude": 41.6127138,
+    "longitude": -93.848116,
+    "description": "Unleashed Pets at 970 SE Brick Dr is well-regarded by West Des Moines dog owners, holding 4.7 stars across 12 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. More dog-friendly parks nearby include Trailside Dog Park (0.2 miles) and Brookview Park (3.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Smash Park",
+    "street": "6625 Coachlight Dr",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50266",
+    "latitude": 41.5655847,
+    "longitude": -93.7970302,
+    "description": "With 4.6 stars across 2,752 reviews, Smash Park at 6625 Coachlight Dr has clearly won over West Des Moines dog owners. Dog owners have embraced this park as a top choice for spending time with their pups. Dog owners in the area also love bringing their pups to Wild Rose Park (0.8 miles) and Brookview Park (1.1 miles)."
+  },
+  {
+    "name": "Des Moines Water Works Park",
+    "street": "2201 George Flagg Pkwy",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50321",
+    "latitude": 41.5683234,
+    "longitude": -93.647632,
+    "description": "Dog owners in West Des Moines have embraced Des Moines Water Works Park (2201 George Flagg Pkwy) as a top destination—4.6 stars from 1,514 visits. Open from 6am to 10pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. Want to give your pup even more adventure? Gray's Lake Park is another beloved dog park just 0.2 miles away."
+  },
+  {
+    "name": "Ewing Park",
+    "street": "5300 Indianola Ave",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50320",
+    "latitude": 41.5357566,
+    "longitude": -93.5778672,
+    "description": "Located at 5300 Indianola Ave in West Des Moines, Ewing Park earns strong marks from local dog owners—4.6 stars from 798 reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Nearby, Ewing Dog Park (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Walnut Woods State Park",
+    "street": "3155 Walnut Woods Dr",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50265",
+    "latitude": 41.5376031,
+    "longitude": -93.726957,
+    "description": "At 3155 Walnut Woods Dr in West Des Moines, Walnut Woods State Park has built a loyal following—4.6 stars from 697 dog owner reviews. Open from 4am to 10:30pm daily, dog owners have plenty of flexibility to plan a visit. Nearby, Brown's Woods (1.0 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Fort Des Moines Park",
+    "street": "7200 SE 5th St",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50315",
+    "latitude": 41.5202524,
+    "longitude": -93.60653,
+    "description": "Located at 7200 SE 5th St in West Des Moines, Fort Des Moines Park earns strong marks from local dog owners—4.6 stars from 535 reviews. Open from 6:30am to 10:30pm daily, dog owners can plan visits around work or their pup's energy level. Nearby, Ewing Park (1.8 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "American Legion Park",
+    "street": "301 Vine St",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50265",
+    "latitude": 41.5782367,
+    "longitude": -93.7054598,
+    "description": "Located at 301 Vine St in West Des Moines, American Legion Park earns strong marks from local dog owners—4.6 stars from 449 reviews. Open from 6am to 10pm daily, the park accommodates early risers and evening visitors alike. Nearby, Frisbie Park (0.4 miles) offers dog owners another great spot to explore with their pups."
+  }
+]

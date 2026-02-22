@@ -561,7 +561,7 @@
   },
   {
     "name": "Tony Grampsas Dog Park",
-    "street": "4471 Salvia StGolden",
+    "street": "4471 Salvia St",
     "city": "Denver",
     "state": "CO",
     "zip": "80403",
@@ -711,7 +711,7 @@
   },
   {
     "name": "Severance Dog Park",
-    "street": "599 1st StSeverance",
+    "street": "599 1st St",
     "city": "Fort Collins",
     "state": "CO",
     "zip": "80550",
@@ -841,7 +841,7 @@
   },
   {
     "name": "Freedom Park",
-    "street": "2095 42nd StEvans",
+    "street": "2095 42nd St",
     "city": "Greeley",
     "state": "CO",
     "zip": "80620",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "Fruitdale Park",
-    "street": "4700 Miller StWheat Ridge",
+    "street": "4700 Miller St",
     "city": "Lakewood",
     "state": "CO",
     "zip": "80033",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Berthoud Dog Park",
-    "street": "202 10th StBerthoud",
+    "street": "202 10th St",
     "city": "Loveland",
     "state": "CO",
     "zip": "80513",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "Alvin B. Thomas Park",
-    "street": "1800 Leroy DrNorthglenn",
+    "street": "1800 Leroy Dr",
     "city": "Thornton",
     "state": "CO",
     "zip": "80233",

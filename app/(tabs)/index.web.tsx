@@ -219,7 +219,7 @@ function ParkCard({ park, pupCount, distanceKm, onPress, compact }: ParkCardProp
       <View style={{ padding: compact ? 12 : 16 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 4 }}>
           <Text style={{ fontSize: compact ? 15 : 16, fontWeight: '700', color: '#1A1918', flex: 1, marginRight: 8 }} numberOfLines={1}>
-            {park.name}
+            {park.name.replace(/^[\s\u200d]+/, '')}
           </Text>
           {distanceKm !== undefined && (
             <Text style={{ fontSize: compact ? 12 : 14, color: '#6D6C6A' }}>
@@ -227,7 +227,11 @@ function ParkCard({ park, pupCount, distanceKm, onPress, compact }: ParkCardProp
             </Text>
           )}
         </View>
-        {/* Address hidden pending data remediation */}
+        {park.address && (
+          <Text style={{ fontSize: compact ? 12 : 13, color: '#6D6C6A', marginBottom: 4 }} numberOfLines={1}>
+            {park.address}
+          </Text>
+        )}
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Ionicons name="paw" size={14} color="#3D8A5A" />
           <Text style={{ fontSize: compact ? 13 : 14, color: '#3D8A5A', fontWeight: '600', marginLeft: 6 }}>
@@ -464,9 +468,13 @@ export default function DesktopHomeScreen() {
                           </View>
                           <View style={{ flex: 1 }}>
                             <Text style={{ fontSize: 14, fontWeight: '600', color: '#1A1918' }} numberOfLines={1}>
-                              {park.name}
+                              {park.name.replace(/^[\s\u200d]+/, '')}
                             </Text>
-                            {/* Address hidden pending data remediation */}
+                            {park.address && (
+                              <Text style={{ fontSize: 12, color: '#6D6C6A' }} numberOfLines={1}>
+                                {park.address}
+                              </Text>
+                            )}
                           </View>
                           {distanceKm !== undefined && (
                             <Text style={{ fontSize: 12, color: '#6D6C6A', marginLeft: 8 }}>

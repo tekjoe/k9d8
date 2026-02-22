@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Manchester Dog Park",
+    "street": "",
+    "city": "‍ Manchester",
+    "state": "NH",
+    "zip": "",
+    "latitude": 42.9956397,
+    "longitude": -71.4547891,
+    "description": "Dog owners in the Manchester area will find Manchester Dog Park—a local option for spending time with their pups. Dog owners looking for a local destination will find this park accessible. Dog owners new to the area may find the visitor reviews useful for learning about this park."
+  },
+  {
+    "name": "Royal Crest Drive Dog Park",
+    "street": "",
+    "city": "Nashua",
+    "state": "NH",
+    "zip": "",
+    "latitude": 42.7656251,
+    "longitude": -71.4677032,
+    "description": "Nashua dog owners have access to Royal Crest Drive Dog Park for outings with their four-legged friends. For dog owners in the neighborhood, this park offers a place to take their pups. Dog owners might also enjoy Nashua Dog Park, another dog park just 4.9 miles away."
+  },
+  {
+    "name": "Nashua Dog Park",
+    "street": "1 Groton Rd",
+    "city": "Nashua",
+    "state": "NH",
+    "zip": "03062",
+    "latitude": 42.70554,
+    "longitude": -71.517729,
+    "description": "Nashua dog owners have access to Nashua Dog Park at 1 Groton Rd for outings with their four-legged friends. Open from 7am to 6pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Looking to explore more? Royal Crest Drive Dog Park is another dog-friendly park 4.9 miles from here."
+  }
+]

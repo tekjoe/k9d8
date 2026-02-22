@@ -621,7 +621,7 @@
   },
   {
     "name": "McCandless Park",
-    "street": "1576 McCandless Dr",
+    "street": "1576 Mc",
     "city": "Fremont",
     "state": "CA",
     "zip": "95035",
@@ -741,7 +741,7 @@
   },
   {
     "name": "Drigon Dog Park",
-    "street": "34666 7th StUnion City",
+    "street": "34666 7th St",
     "city": "Fremont",
     "state": "CA",
     "zip": "94587",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Laguna Beach Dog Park",
-    "street": "20672 Laguna Canyon RdLaguna Beach",
+    "street": "20672 Laguna Canyon Rd",
     "city": "Irvine",
     "state": "CA",
     "zip": "92651",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Riverview Park",
-    "street": "10510 Somerset BlvdBellflower",
+    "street": "10510 Somerset Blvd",
     "city": "Long Beach",
     "state": "CA",
     "zip": "90706",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Signal Hill Dog Park",
-    "street": "3100 California AveSignal Hill",
+    "street": "3100 California Ave",
     "city": "Long Beach",
     "state": "CA",
     "zip": "90755",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "Garvey Paws Dog Park",
-    "street": "7933 Emerson PlRosemead",
+    "street": "7933 Emerson Pl",
     "city": "Los Angeles",
     "state": "CA",
     "zip": "91770",
@@ -1391,7 +1391,7 @@
   },
   {
     "name": "Longwood Dog Park",
-    "street": "13077 Villosa PlPlaya Vista",
+    "street": "13077 Villosa Pl",
     "city": "Los Angeles",
     "state": "CA",
     "zip": "90094",
@@ -1451,7 +1451,7 @@
   },
   {
     "name": "Neel Park",
-    "street": "2000 Boothe RdCeres",
+    "street": "2000 Boothe Rd",
     "city": "Modesto",
     "state": "CA",
     "zip": "95307",
@@ -1461,7 +1461,7 @@
   },
   {
     "name": "‍ Quaile Rand Norton Dog Park",
-    "street": "500 S Berkeley AveTurlock",
+    "street": "500 S Berkeley Ave",
     "city": "Modesto",
     "state": "CA",
     "zip": "95380",
@@ -1531,7 +1531,7 @@
   },
   {
     "name": "Ridge Crest Park",
-    "street": "28506 John F Kennedy DrMoreno Valley",
+    "street": "28506 John F Kennedy Dr",
     "city": "‍ Moreno Valley",
     "state": "CA",
     "zip": "92555",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "‍ Patriot Park",
-    "street": "15310 Perris BlvdMoreno Valley",
+    "street": "15310 Perris Blvd",
     "city": "‍ Moreno Valley",
     "state": "CA",
     "zip": "92551",
@@ -1631,7 +1631,7 @@
   },
   {
     "name": "Piedmont Park",
-    "street": "356 Highland AvePiedmont",
+    "street": "356 Highland Ave",
     "city": "Oakland",
     "state": "CA",
     "zip": "94611",
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "City Of Upland Dog Park",
-    "street": "W 11th StUpland",
+    "street": "W 11th St",
     "city": "Ontario",
     "state": "CA",
     "zip": "91786",
@@ -1791,7 +1791,7 @@
   },
   {
     "name": "‍ Port Hueneme Naval Base Dog",
-    "street": "1080 Bard LnPort Hueneme",
+    "street": "1080 Bard Ln",
     "city": "Oxnard",
     "state": "CA",
     "zip": "93041",
@@ -1831,7 +1831,7 @@
   },
   {
     "name": "Hound Town",
-    "street": "11150 Redlands BlvdMoreno Valley",
+    "street": "11150 Redlands Blvd",
     "city": "Riverside",
     "state": "CA",
     "zip": "92555",
@@ -1841,7 +1841,7 @@
   },
   {
     "name": "Shadow Rock Park",
-    "street": "6598 20th StJurupa Valley",
+    "street": "6598 20th St",
     "city": "Riverside",
     "state": "CA",
     "zip": "92509",
@@ -1851,7 +1851,7 @@
   },
   {
     "name": "Grand Terrace Dog Park",
-    "street": "22720 Vista Grande WayGrand Terrace",
+    "street": "22720 Vista Grande Way",
     "city": "Riverside",
     "state": "CA",
     "zip": "92313",
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "Redlands Dog Park",
-    "street": "Roosevelt RdRedlands",
+    "street": "Roosevelt Rd",
     "city": "Riverside",
     "state": "CA",
     "zip": "92374",
@@ -1901,7 +1901,7 @@
   },
   {
     "name": "Aldergate Dog Park",
-    "street": "28680 Aldergate DrMenifee",
+    "street": "28680 Aldergate Dr",
     "city": "Riverside",
     "state": "CA",
     "zip": "92584",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "Baldy View Dog Park",
-    "street": "W 11th StUpland",
+    "street": "W 11th St",
     "city": "Riverside",
     "state": "CA",
     "zip": "91786",
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "Paws Dog Park",
-    "street": "1266 Blazingstar DrPerris",
+    "street": "1266 Blazingstar Dr",
     "city": "Riverside",
     "state": "CA",
     "zip": "92571",
@@ -2131,7 +2131,7 @@
   },
   {
     "name": "Lake Gregory Dog Park",
-    "street": "24442 San Moritz DrCrestline",
+    "street": "24442 San Moritz Dr",
     "city": "San Bernardino",
     "state": "CA",
     "zip": "92325",
@@ -2161,7 +2161,7 @@
   },
   {
     "name": "‍ MacKay Park",
-    "street": "687 CA-173Lake Arrowhead",
+    "street": "687 CA-173",
     "city": "San Bernardino",
     "state": "CA",
     "zip": "92352",
@@ -2171,7 +2171,7 @@
   },
   {
     "name": "Frisbee Dog Park",
-    "street": "42 E Easton StRialto",
+    "street": "42 E Easton St",
     "city": "San Bernardino",
     "state": "CA",
     "zip": "92376",
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "Loma Linda Small Dog Park",
-    "street": "25765 Beaumont AveLoma Linda",
+    "street": "25765 Beaumont Ave",
     "city": "San Bernardino",
     "state": "CA",
     "zip": "92354",
@@ -2221,7 +2221,7 @@
   },
   {
     "name": "Loma Linda Large Dog Park",
-    "street": "11800 Mountain View AveLoma Linda",
+    "street": "11800 Mountain View Ave",
     "city": "San Bernardino",
     "state": "CA",
     "zip": "92354",
@@ -2301,7 +2301,7 @@
   },
   {
     "name": "Encinitas Dog Park",
-    "street": "335 Santa Fe DrCardiff",
+    "street": "335 Santa Fe Dr",
     "city": "San Diego",
     "state": "CA",
     "zip": "92007",
@@ -2321,7 +2321,7 @@
   },
   {
     "name": "Dog Beach",
-    "street": "3902 29th StDel Mar",
+    "street": "3902 29th St",
     "city": "San Diego",
     "state": "CA",
     "zip": "92014",
@@ -2341,7 +2341,7 @@
   },
   {
     "name": "Coronado Dog Beach",
-    "street": "100 Ocean BlvdCoronado",
+    "street": "100 Ocean Blvd",
     "city": "San Diego",
     "state": "CA",
     "zip": "92118",
@@ -2351,7 +2351,7 @@
   },
   {
     "name": "Sunset Park",
-    "street": "3337 La Mirada DrSan Marcos",
+    "street": "3337 La Mirada Dr",
     "city": "San Diego",
     "state": "CA",
     "zip": "92078",
@@ -2371,7 +2371,7 @@
   },
   {
     "name": "Poway Dog Park",
-    "street": "13094 Civic Center DrPoway",
+    "street": "13094 Civic Center Dr",
     "city": "San Diego",
     "state": "CA",
     "zip": "92064",
@@ -2391,7 +2391,7 @@
   },
   {
     "name": "McLaren Park",
-    "street": "McLaren Park",
+    "street": "Mc",
     "city": "San Francisco",
     "state": "CA",
     "zip": "94134",
@@ -2551,7 +2551,7 @@
   },
   {
     "name": "Morgan Hill Dog Park",
-    "street": "271 W Edmundson AveMorgan Hill",
+    "street": "271 W Edmundson Ave",
     "city": "San Jose",
     "state": "CA",
     "zip": "95037",
@@ -2601,7 +2601,7 @@
   },
   {
     "name": "Los Gatos Creek County Park",
-    "street": "1250 Dell AveCampbell",
+    "street": "1250 Dell Ave",
     "city": "San Jose",
     "state": "CA",
     "zip": "95008",
@@ -2611,7 +2611,7 @@
   },
   {
     "name": "Reed Street Dog Park",
-    "street": "888 Reed StSanta Clara",
+    "street": "888 Reed St",
     "city": "San Jose",
     "state": "CA",
     "zip": "95050",
@@ -2621,7 +2621,7 @@
   },
   {
     "name": "Fenced Dog Park",
-    "street": "2000 California StMountain View",
+    "street": "2000 California St",
     "city": "San Jose",
     "state": "CA",
     "zip": "94040",
@@ -2641,7 +2641,7 @@
   },
   {
     "name": "Newbark Dog Park",
-    "street": "35501 Cedar BlvdNewark",
+    "street": "35501 Cedar Blvd",
     "city": "San Jose",
     "state": "CA",
     "zip": "94560",
@@ -2691,7 +2691,7 @@
   },
   {
     "name": "Mile Square Regional Park",
-    "street": "16801 Euclid StFountain Valley",
+    "street": "16801 Euclid St",
     "city": "Santa Ana",
     "state": "CA",
     "zip": "92708",

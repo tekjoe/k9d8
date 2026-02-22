@@ -271,7 +271,7 @@
   },
   {
     "name": "Bark West Dog Park",
-    "street": "990 W 101st StJenks",
+    "street": "990 W 101st St",
     "city": "Tulsa",
     "state": "OK",
     "zip": "74037",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Rose West Dog Park",
-    "street": "4751 W New Orleans StBroken Arrow",
+    "street": "4751 W New Orleans St",
     "city": "Tulsa",
     "state": "OK",
     "zip": "74011",
@@ -291,7 +291,7 @@
   },
   {
     "name": "Waggin Trail Dog Park",
-    "street": "8200 N 91st E AveOwasso",
+    "street": "8200 N 91st E Ave",
     "city": "Tulsa",
     "state": "OK",
     "zip": "74055",

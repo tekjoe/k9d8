@@ -457,9 +457,13 @@ export default function ParkDetailAuth({ slugOrId, state }: ParkDetailAuthProps)
                     letterSpacing: -0.5,
                   }}
                 >
-                  {park.name}
+                  {park.name.replace(/^[\s\u200d]+/, '')}
                 </Text>
-                {/* Address hidden pending data remediation */}
+                {park.address && (
+                  <Text style={{ fontSize: isMobile ? 14 : 16, color: '#6D6C6A' }} numberOfLines={1}>
+                    {park.address}
+                  </Text>
+                )}
               </View>
 
               {/* Action Buttons */}

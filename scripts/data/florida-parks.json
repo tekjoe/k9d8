@@ -51,7 +51,7 @@
   },
   {
     "name": "Estero Community Park",
-    "street": "9200 Corkscrew Palms BlvdEstero",
+    "street": "9200 Corkscrew Palms Blvd",
     "city": "Cape Coral",
     "state": "FL",
     "zip": "33928",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Bonita Springs Dog Park",
-    "street": "11071 E Terry StBonita Springs",
+    "street": "11071 E Terry St",
     "city": "Cape Coral",
     "state": "FL",
     "zip": "34135",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Matlacha Pass Aquatic Preserve",
-    "street": "12301 Burnt Store RdPunta Gorda",
+    "street": "12301 Burnt Store Rd",
     "city": "Cape Coral",
     "state": "FL",
     "zip": "33955",
@@ -191,7 +191,7 @@
   },
   {
     "name": "‍ Largo Central Park",
-    "street": "101 Central Park DrLargo",
+    "street": "101 Central Park Dr",
     "city": "Clearwater",
     "state": "FL",
     "zip": "33771",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Hammock Park",
-    "street": "1900 San Mateo DrDunedin",
+    "street": "1900 San Mateo Dr",
     "city": "Clearwater",
     "state": "FL",
     "zip": "34698",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Honeymoon Island State Park",
-    "street": "Honeymoon IslandDunedin",
+    "street": "Honeymoon Island",
     "city": "Clearwater",
     "state": "FL",
     "zip": "34698",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Achieva Paw Park",
-    "street": "1659 Achieva WayDunedin",
+    "street": "1659 Achieva Way",
     "city": "Clearwater",
     "state": "FL",
     "zip": "34698",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Barkland Dog Park",
-    "street": "9245 Ranch RdParkland",
+    "street": "9245 Ranch Rd",
     "city": "Coral Springs",
     "state": "FL",
     "zip": "33067",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Peace Mound Park",
-    "street": "1300 Three Village RdWeston",
+    "street": "1300 Three Village Rd",
     "city": "Davie",
     "state": "FL",
     "zip": "33326",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Welleby Park",
-    "street": "11100 NW 44th StSunrise",
+    "street": "11100 NW 44th St",
     "city": "Davie",
     "state": "FL",
     "zip": "33351",
@@ -431,7 +431,7 @@
   },
   {
     "name": "Joseph Scavo Park",
-    "street": "900 Three Islands BoulevardHallandale Beach",
+    "street": "900 Three Islands Boulevard",
     "city": "Fort Lauderdale",
     "state": "FL",
     "zip": "33009",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Gary B Jones Park",
-    "street": "8101 Southgate BlvdTamarac",
+    "street": "8101 Southgate Blvd",
     "city": "Fort Lauderdale",
     "state": "FL",
     "zip": "33321",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Performance Pups",
-    "street": "590 Anglers AveDania Beach",
+    "street": "590 Anglers Ave",
     "city": "Fort Lauderdale",
     "state": "FL",
     "zip": "33004",
@@ -521,7 +521,7 @@
   },
   {
     "name": "Richardson Historic Park",
-    "street": "1937 Wilton DrWilton Manors",
+    "street": "1937 Wilton Dr",
     "city": "Fort Lauderdale",
     "state": "FL",
     "zip": "33305",
@@ -701,7 +701,7 @@
   },
   {
     "name": "Happy Tails Dog Park",
-    "street": "6600 SW 16th StPlantation",
+    "street": "6600 SW 16th St",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33317",
@@ -711,7 +711,7 @@
   },
   {
     "name": "Veteran's Park",
-    "street": "15151 NW 82nd AveMiami Lakes",
+    "street": "15151 NW 82nd Ave",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33016",
@@ -751,7 +751,7 @@
   },
   {
     "name": "Venetia Park",
-    "street": "1035 Venetia AveCoral Gables",
+    "street": "1035 Venetia Ave",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33134",
@@ -761,7 +761,7 @@
   },
   {
     "name": "Golden Eagle Park",
-    "street": "9829 NW 129th TerraceHialeah Gardens",
+    "street": "9829 NW 129th Terrace",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33018",
@@ -821,7 +821,7 @@
   },
   {
     "name": "Pembroke Pines Craig Rupp K-9",
-    "street": "9751 Johnson StPembroke Pines",
+    "street": "9751 Johnson St",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33026",
@@ -831,7 +831,7 @@
   },
   {
     "name": "Stafford Park",
-    "street": "501 East DrMiami Springs",
+    "street": "501 East Dr",
     "city": "Hialeah",
     "state": "FL",
     "zip": "33166",
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Eagle Landing Dog Park",
-    "street": "1496 Autumn Pines DriveOrange Park",
+    "street": "1496 Autumn Pines Drive",
     "city": "Jacksonville",
     "state": "FL",
     "zip": "32065",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "Ed Austin Regional Park",
-    "street": "11751 McCormick Rd",
+    "street": "11751 Mc",
     "city": "Jacksonville",
     "state": "FL",
     "zip": "32225",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Bartow Dog Park",
-    "street": "2015 Shumate DrBartow",
+    "street": "2015 Shumate Dr",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33830",
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Ruff Ridge Dog Park",
-    "street": "1702 N Park RdPlant City",
+    "street": "1702 N Park Rd",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33563",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Auburndale Dog Park",
-    "street": "318 Denton AveAuburndale",
+    "street": "318 Denton Ave",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33823",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "Loyce E. Harpe Park",
-    "street": "300 W Carter RdMulberry",
+    "street": "300 W Carter Rd",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33860",
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "‍ Gunner paw park",
-    "street": "39536 Alston AveZephyrhills",
+    "street": "39536 Alston Ave",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33542",
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "Plant City Dog Park",
-    "street": "904 N Pennsylvania AvePlant City",
+    "street": "904 N Pennsylvania Ave",
     "city": "Lakeland",
     "state": "FL",
     "zip": "33563",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Haulover Dog Beach",
-    "street": "10801 Collins AveBal Harbour",
+    "street": "10801 Collins Ave",
     "city": "Miami",
     "state": "FL",
     "zip": "33154",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Trails & Tails Park",
-    "street": "11645 NW 50th StDoral",
+    "street": "11645 NW 50th St",
     "city": "Miami",
     "state": "FL",
     "zip": "33178",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Lummus Park",
-    "street": "1130 Ocean DrMiami Beach",
+    "street": "1130 Ocean Dr",
     "city": "Miami",
     "state": "FL",
     "zip": "33139",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "Haulover Park",
-    "street": "10800 Collins AveMiami Beach",
+    "street": "10800 Collins Ave",
     "city": "Miami",
     "state": "FL",
     "zip": "33154",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Flamingo Park",
-    "street": "999 11th StMiami Beach",
+    "street": "999 11th St",
     "city": "Miami",
     "state": "FL",
     "zip": "33139",
@@ -1311,7 +1311,7 @@
   },
   {
     "name": "Amelia Earhart Dog Park",
-    "street": "13105 NW 47th AveOpa-locka",
+    "street": "13105 NW 47th Ave",
     "city": "Miami",
     "state": "FL",
     "zip": "33054",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "Oleta River State Park",
-    "street": "3400 NE 163rd StNorth Miami Beach",
+    "street": "3400 NE 163rd St",
     "city": "Miami Gardens",
     "state": "FL",
     "zip": "33160",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "Sauls Park",
-    "street": "NE 13th AveNorth Miami Beach",
+    "street": "NE 13th Ave",
     "city": "Miami Gardens",
     "state": "FL",
     "zip": "33162",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "Pembroke Park",
-    "street": "3115 SW 52nd AvePembroke Park",
+    "street": "3115 SW 52nd Ave",
     "city": "Miami Gardens",
     "state": "FL",
     "zip": "33023",
@@ -1481,7 +1481,7 @@
   },
   {
     "name": "Magnolia Park",
-    "street": "2123 Ali Baba AveOpa-locka",
+    "street": "2123 Ali Baba Ave",
     "city": "Miami Gardens",
     "state": "FL",
     "zip": "33054",
@@ -1521,7 +1521,7 @@
   },
   {
     "name": "Lake Baldwin Park",
-    "street": "2000 S Lakemont AveWinter Park",
+    "street": "2000 S Lakemont Ave",
     "city": "Orlando",
     "state": "FL",
     "zip": "32789",
@@ -1531,7 +1531,7 @@
   },
   {
     "name": "‍ Blanchard Park",
-    "street": "2451 Dean RdUnion Park",
+    "street": "2451 Dean Rd",
     "city": "Orlando",
     "state": "FL",
     "zip": "32817",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "Shane Kelly Bark Park",
-    "street": "499 Waggin TrlOviedo",
+    "street": "499 Waggin Trl",
     "city": "Orlando",
     "state": "FL",
     "zip": "32765",
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "‍ Montgomery Park",
-    "street": "694 Montgomery AveOcoee",
+    "street": "694 Montgomery Ave",
     "city": "Orlando",
     "state": "FL",
     "zip": "34761",
@@ -1661,7 +1661,7 @@
   },
   {
     "name": "Pieloch Dog Park",
-    "street": "400 W Florida AveMelbourne",
+    "street": "400 W Florida Ave",
     "city": "Palm Bay",
     "state": "FL",
     "zip": "32901",
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "‍ Wickham Park",
-    "street": "2500 Parkway DrMelbourne",
+    "street": "2500 Parkway Dr",
     "city": "Palm Bay",
     "state": "FL",
     "zip": "32935",
@@ -1701,7 +1701,7 @@
   },
   {
     "name": "Sebastian Florida Bark Park",
-    "street": "245 Keen TerraceSebastian",
+    "street": "245 Keen Terrace",
     "city": "Palm Bay",
     "state": "FL",
     "zip": "32958",
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "‍ Satellite Beach Dog Park",
-    "street": "750 Jamaica BlvdSatellite Beach",
+    "street": "750 Jamaica Blvd",
     "city": "Palm Bay",
     "state": "FL",
     "zip": "32937",
@@ -1731,7 +1731,7 @@
   },
   {
     "name": "Wadsworth Park",
-    "street": "2200 Moody BlvdFlagler Beach",
+    "street": "2200 Moody Blvd",
     "city": "Palm Coast",
     "state": "FL",
     "zip": "32136",
@@ -1751,7 +1751,7 @@
   },
   {
     "name": "Wadsworth Dog Park",
-    "street": "428 Beach Village DrFlagler Beach",
+    "street": "428 Beach Village Dr",
     "city": "Palm Coast",
     "state": "FL",
     "zip": "32136",
@@ -1781,7 +1781,7 @@
   },
   {
     "name": "Sandsprit Park",
-    "street": "3443 SE St Lucie BlvdStuart",
+    "street": "3443 SE St Lucie Blvd",
     "city": "‍ Port St. Lucie",
     "state": "FL",
     "zip": "34997",
@@ -1861,7 +1861,7 @@
   },
   {
     "name": "Poppleton Creek Dog Park",
-    "street": "47 51 SE Central PkwyStuart",
+    "street": "47 51 SE Central Pkwy",
     "city": "‍ Port St. Lucie",
     "state": "FL",
     "zip": "34994",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "‍ Eagle Lake Park",
-    "street": "1800 Keene RdLargo",
+    "street": "1800 Keene Rd",
     "city": "‍ St. Petersburg",
     "state": "FL",
     "zip": "33771",
@@ -1941,7 +1941,7 @@
   },
   {
     "name": "Crest Lake Dog Park",
-    "street": "332 S Glenwood AveClearwater",
+    "street": "332 S Glenwood Ave",
     "city": "‍ St. Petersburg",
     "state": "FL",
     "zip": "33755",
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "Vina Del Mar Park",
-    "street": "302 S Isle DrSt Pete Beach",
+    "street": "302 S Isle Dr",
     "city": "‍ St. Petersburg",
     "state": "FL",
     "zip": "33706",
@@ -2011,7 +2011,7 @@
   },
   {
     "name": "Walsingham Park",
-    "street": "12615 102nd AveSeminole",
+    "street": "12615 102nd Ave",
     "city": "‍ St. Petersburg",
     "state": "FL",
     "zip": "33778",
@@ -2351,7 +2351,7 @@
   },
   {
     "name": "Saladino Dog Park",
-    "street": "Bryan RdBrandon",
+    "street": "Bryan Rd",
     "city": "Tampa",
     "state": "FL",
     "zip": "33511",
@@ -2371,7 +2371,7 @@
   },
   {
     "name": "John D. MacArthur Beach State",
-    "street": "10900 Jack Nicklaus DrNorth Palm Beach",
+    "street": "10900 Jack Nicklaus Dr",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33408",
@@ -2381,7 +2381,7 @@
   },
   {
     "name": "Commons Park",
-    "street": "11600 Poinciana BlvdRoyal Palm Beach",
+    "street": "11600 Poinciana Blvd",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33411",
@@ -2401,7 +2401,7 @@
   },
   {
     "name": "Palm Beach Lake Trail",
-    "street": "S Lake TrailPalm Beach",
+    "street": "S Lake Trail",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33480",
@@ -2411,7 +2411,7 @@
   },
   {
     "name": "Dog Beach",
-    "street": "2188 Marcinski RdJupiter",
+    "street": "2188 Marcinski Rd",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33477",
@@ -2431,7 +2431,7 @@
   },
   {
     "name": "Greenacres Freedom Park",
-    "street": "2400 Pinehurst DrGreenacres",
+    "street": "2400 Pinehurst Dr",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33413",
@@ -2441,7 +2441,7 @@
   },
   {
     "name": "Wellington Dog Park",
-    "street": "2965 Greenbriar BlvdWellington",
+    "street": "2965 Greenbriar Blvd",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33414",
@@ -2451,7 +2451,7 @@
   },
   {
     "name": "Cinquez Park",
-    "street": "2183 W Indiantown RdJupiter",
+    "street": "2183 W Indiantown Rd",
     "city": "West Palm Beach",
     "state": "FL",
     "zip": "33458",

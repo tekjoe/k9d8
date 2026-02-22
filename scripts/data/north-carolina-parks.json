@@ -11,7 +11,7 @@
   },
   {
     "name": "Bill Moore Community Park",
-    "street": "85 Howard Gap RdFletcher",
+    "street": "85 Howard Gap Rd",
     "city": "Asheville",
     "state": "NC",
     "zip": "28732",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Lake Louise Park",
-    "street": "Lake Louise DrWeaverville",
+    "street": "Lake Louise Dr",
     "city": "Asheville",
     "state": "NC",
     "zip": "28787",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Mills River Dog Park",
-    "street": "124 Town Center DrMills River",
+    "street": "124 Town Center Dr",
     "city": "Asheville",
     "state": "NC",
     "zip": "28759",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Wagbar",
-    "street": "320 Merrimon AveWeaverville",
+    "street": "320 Merrimon Ave",
     "city": "Asheville",
     "state": "NC",
     "zip": "28787",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Elon Dog Park",
-    "street": "522 Cook RdElon",
+    "street": "522 Cook Rd",
     "city": "Burlington",
     "state": "NC",
     "zip": "27244",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Crooked Creek Park",
-    "street": "5900 Oakwood LnIndian Trail",
+    "street": "5900 Oakwood Ln",
     "city": "‍ Charlotte",
     "state": "NC",
     "zip": "28079",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Town of Cramerton Goat Island",
-    "street": "141 8th AveCramerton",
+    "street": "141 8th Ave",
     "city": "‍ Charlotte",
     "state": "NC",
     "zip": "28032",
@@ -341,7 +341,7 @@
   },
   {
     "name": "The Preserve Dog Park",
-    "street": "330 O'Henry AveDavidson",
+    "street": "330 O'Henry Ave",
     "city": "‍ Charlotte",
     "state": "NC",
     "zip": "28036",
@@ -361,7 +361,7 @@
   },
   {
     "name": "‍ Canine Commons Dog Park",
-    "street": "181 Lake DrPineville",
+    "street": "181 Lake Dr",
     "city": "‍ Charlotte",
     "state": "NC",
     "zip": "28134",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Oak Ridge Town Park",
-    "street": "6231 Lisa DrOak Ridge",
+    "street": "6231 Lisa Dr",
     "city": "Greensboro",
     "state": "NC",
     "zip": "27310",
@@ -591,7 +591,7 @@
   },
   {
     "name": "Barkdale Dog Park",
-    "street": "5932 Mose DrArchdale",
+    "street": "5932 Mose Dr",
     "city": "Greensboro",
     "state": "NC",
     "zip": "27263",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Pleasant Garden K-9 Dog Park",
-    "street": "4920 Alliance Church RdPleasant Garden",
+    "street": "4920 Alliance Church Rd",
     "city": "Greensboro",
     "state": "NC",
     "zip": "27313",
@@ -681,7 +681,7 @@
   },
   {
     "name": "Archdale Recreation Center at",
-    "street": "214 Park DrArchdale",
+    "street": "214 Park Dr",
     "city": "High Point",
     "state": "NC",
     "zip": "27263",
@@ -791,7 +791,7 @@
   },
   {
     "name": "Myers Park",
-    "street": "401 Mason WayThomasville",
+    "street": "401 Mason Way",
     "city": "High Point",
     "state": "NC",
     "zip": "27360",
@@ -831,7 +831,7 @@
   },
   {
     "name": "Fort Macon State Park",
-    "street": "2303 E Fort Macon RdAtlantic Beach",
+    "street": "2303 E Fort Macon Rd",
     "city": "Jacksonville",
     "state": "NC",
     "zip": "28512",
@@ -911,7 +911,7 @@
   },
   {
     "name": "‍ Liberty Pointe Dog Park",
-    "street": "Prince Edward DrMidway Park",
+    "street": "Prince Edward Dr",
     "city": "Jacksonville",
     "state": "NC",
     "zip": "28544",
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "Wendell Paws Dog Park",
-    "street": "1441 Big Falls DrWendell",
+    "street": "1441 Big Falls Dr",
     "city": "Raleigh",
     "state": "NC",
     "zip": "27591",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Barkyard Dog Park",
-    "street": "700 Park Offices DrResearch Triangle Park",
+    "street": "700 Park Offices Dr",
     "city": "Raleigh",
     "state": "NC",
     "zip": "27709",

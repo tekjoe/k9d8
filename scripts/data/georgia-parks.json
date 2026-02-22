@@ -41,7 +41,7 @@
   },
   {
     "name": "Birmingham Park",
-    "street": "750 Hickory Flat RdMilton",
+    "street": "750 Hickory Flat Rd",
     "city": "Alpharetta",
     "state": "GA",
     "zip": "30004",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Pinckneyville Park",
-    "street": "4758 S Old Peachtree RdPeachtree Corners",
+    "street": "4758 S Old Peachtree Rd",
     "city": "Alpharetta",
     "state": "GA",
     "zip": "30071",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Newtown Dream Dog Park",
-    "street": "3150 Old Alabama RdJohns Creek",
+    "street": "3150 Old Alabama Rd",
     "city": "Atlanta",
     "state": "GA",
     "zip": "30022",
@@ -391,7 +391,7 @@
   },
   {
     "name": "Evans Towne Center Park",
-    "street": "7016 Evans Town Center BlvdEvans",
+    "street": "7016 Evans Town Center Blvd",
     "city": "Augusta",
     "state": "GA",
     "zip": "30809",
@@ -421,7 +421,7 @@
   },
   {
     "name": "Goodale Dog Park",
-    "street": "601 Goodale LnGrovetown",
+    "street": "601 Goodale Ln",
     "city": "Augusta",
     "state": "GA",
     "zip": "30813",
@@ -541,7 +541,7 @@
   },
   {
     "name": "Ashford Forest Preserve",
-    "street": "3890 Clairmont RdChamblee",
+    "street": "3890 Clairmont Rd",
     "city": "Brookhaven",
     "state": "GA",
     "zip": "30341",
@@ -551,7 +551,7 @@
   },
   {
     "name": "Henderson Park",
-    "street": "4000 Henderson Park RdTucker",
+    "street": "4000 Henderson Park Rd",
     "city": "Brookhaven",
     "state": "GA",
     "zip": "30084",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Clairmont Park",
-    "street": "Clairmont RdChamblee",
+    "street": "Clairmont Rd",
     "city": "Brookhaven",
     "state": "GA",
     "zip": "30341",
@@ -721,7 +721,7 @@
   },
   {
     "name": "‍ Newtown Park",
-    "street": "3150 Old Alabama RdJohns Creek",
+    "street": "3150 Old Alabama Rd",
     "city": "Roswell",
     "state": "GA",
     "zip": "30022",
@@ -731,7 +731,7 @@
   },
   {
     "name": "‍ Island Ford Unit, Chattahooche",
-    "street": "8800 Roberts DrSandy Springs",
+    "street": "8800 Roberts Dr",
     "city": "Roswell",
     "state": "GA",
     "zip": "30350",
@@ -861,7 +861,7 @@
   },
   {
     "name": "‍ Easthaven dog park",
-    "street": "83 Gateway DrPooler",
+    "street": "83 Gateway Dr",
     "city": "Savannah",
     "state": "GA",
     "zip": "31322",
@@ -921,7 +921,7 @@
   },
   {
     "name": "Peachtree City Dog Park",
-    "street": "193 McIntosh TrailPeachtree City",
+    "street": "193 McIntosh Trail",
     "city": "South Fulton",
     "state": "GA",
     "zip": "30269",
@@ -981,7 +981,7 @@
   },
   {
     "name": "Milam Park",
-    "street": "3867 Norman RdClarkston",
+    "street": "3867 Norman Rd",
     "city": "Stonecrest",
     "state": "GA",
     "zip": "30021",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Lenora Park",
-    "street": "4515 Lenora Church RdSnellville",
+    "street": "4515 Lenora Church Rd",
     "city": "Stonecrest",
     "state": "GA",
     "zip": "30039",
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Lorraine Park",
-    "street": "3465 GA-138Stockbridge",
+    "street": "3465 GA-138",
     "city": "Stonecrest",
     "state": "GA",
     "zip": "30281",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Leila Mason Park",
-    "street": "5510 Stillhouse RdStone Mountain",
+    "street": "5510 Stillhouse Rd",
     "city": "Stonecrest",
     "state": "GA",
     "zip": "30083",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Lucious Sanders Recreation",
-    "street": "2484 Bruce StLithonia",
+    "street": "2484 Bruce St",
     "city": "Stonecrest",
     "state": "GA",
     "zip": "30058",

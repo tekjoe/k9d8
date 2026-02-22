@@ -1,7 +1,7 @@
 [
   {
     "name": "Charleston Dog Walker",
-    "street": "2856 Ortega DriveJohns Island",
+    "street": "2856 Ortega Drive",
     "city": "Charleston",
     "state": "SC",
     "zip": "29455",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Folly Beach County Park",
-    "street": "1100 W Ashley AveFolly Beach",
+    "street": "1100 W Ashley Ave",
     "city": "Charleston",
     "state": "SC",
     "zip": "29439",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Palmetto Islands County Park",
-    "street": "444 Needlerush PkwyMt Pleasant",
+    "street": "444 Needlerush Pkwy",
     "city": "Charleston",
     "state": "SC",
     "zip": "29464",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Pickett Park",
-    "street": "998 Pitt StMt Pleasant",
+    "street": "998 Pitt St",
     "city": "Charleston",
     "state": "SC",
     "zip": "29464",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Isle of Palms County Park",
-    "street": "1 14th AveIsle of Palms",
+    "street": "1 14th Ave",
     "city": "Charleston",
     "state": "SC",
     "zip": "29451",
@@ -351,7 +351,7 @@
   },
   {
     "name": "‍ Pavilion Dog Park",
-    "street": "400 Scottswood RdTaylors",
+    "street": "400 Scottswood Rd",
     "city": "Greenville",
     "state": "SC",
     "zip": "29687",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Pelham Mill Dog Park",
-    "street": "2770 E Phillips RdGreer",
+    "street": "2770 E Phillips Rd",
     "city": "Greenville",
     "state": "SC",
     "zip": "29650",
@@ -401,7 +401,7 @@
   },
   {
     "name": "‍ Shem Creek Park",
-    "street": "Shrimp Boat LnMt Pleasant",
+    "street": "Shrimp Boat Ln",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29464",
@@ -411,7 +411,7 @@
   },
   {
     "name": "Isle of Palms Recreation Depar",
-    "street": "24 28th AveIsle of Palms",
+    "street": "24 28th Ave",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29451",
@@ -431,7 +431,7 @@
   },
   {
     "name": "Thomson Park",
-    "street": "3217 Middle StSullivan's Island",
+    "street": "3217 Middle St",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29482",
@@ -451,7 +451,7 @@
   },
   {
     "name": "Hamlin Park",
-    "street": "2364 Rifle Range RdMt Pleasant",
+    "street": "2364 Rifle Range Rd",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29466",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Kearns Park",
-    "street": "100 Wando Park BlvdMt Pleasant",
+    "street": "100 Wando Park Blvd",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29464",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Fort Palmetto Park",
-    "street": "2213 N Palmetto Fort DrMt Pleasant",
+    "street": "2213 N Palmetto Fort Dr",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29466",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Mount Pleasant / Charleston",
-    "street": "3157 N Hwy 17Mt Pleasant",
+    "street": "3157 N Hwy 17",
     "city": "Mount Pleasant",
     "state": "SC",
     "zip": "29466",
@@ -631,7 +631,7 @@
   },
   {
     "name": "‍ Mary Warner Mack Dog Park",
-    "street": "148 Adventure RoadFort Mill",
+    "street": "148 Adventure Road",
     "city": "Rock Hill",
     "state": "SC",
     "zip": "29715",

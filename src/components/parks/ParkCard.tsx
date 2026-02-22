@@ -34,7 +34,7 @@ export default function ParkCard({ park, distanceKm, onPress }: ParkCardProps) {
     >
       <View style={styles.header}>
         <Text style={styles.name} numberOfLines={1}>
-          {park.name}
+          {park.name.replace(/^[\s\u200d]+/, '')}
         </Text>
         {distanceKm !== undefined && (
           <Text style={styles.distance}>

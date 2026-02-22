@@ -61,7 +61,7 @@
   },
   {
     "name": "Mans Best Field Dog Park",
-    "street": "610 W Broad StMansfield",
+    "street": "610 W Broad St",
     "city": "Arlington",
     "state": "TX",
     "zip": "76063",
@@ -251,7 +251,7 @@
   },
   {
     "name": "Harlingen Rotary Bark Park",
-    "street": "1601 S M StHarlingen",
+    "street": "1601 S M St",
     "city": "Brownsville",
     "state": "TX",
     "zip": "78550",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Harvest Bark Park",
-    "street": "1750 Old Justin RdArgyle",
+    "street": "1750 Old Justin Rd",
     "city": "‍ Denton",
     "state": "TX",
     "zip": "76226",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Canyon Falls Dog Park",
-    "street": "555 Westbridge DrNorthlake",
+    "street": "555 Westbridge Dr",
     "city": "‍ Denton",
     "state": "TX",
     "zip": "76262",
@@ -791,7 +791,7 @@
   },
   {
     "name": "Bulldog Championship Park",
-    "street": "316 Buford RdSocorro",
+    "street": "316 Buford Rd",
     "city": "El Paso",
     "state": "TX",
     "zip": "79927",
@@ -891,7 +891,7 @@
   },
   {
     "name": "Hurst Dog Park",
-    "street": "900 TCC RdHur",
+    "street": "900 TCC Rd",
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76054",
@@ -931,7 +931,7 @@
   },
   {
     "name": "Lake Worth Dog Park",
-    "street": "3209 Dakota TrailLake Worth",
+    "street": "3209 Dakota Trail",
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76135",
@@ -951,7 +951,7 @@
   },
   {
     "name": "Villages of Bear Creek Park",
-    "street": "1951 Bear Creek PkwyEuless",
+    "street": "1951 Bear Creek Pkwy",
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76039",
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Deputy Darren Goforth Park",
-    "street": "9402 Barker Cypress RdCypress",
+    "street": "9402 Barker Cypress Rd",
     "city": "Houston",
     "state": "TX",
     "zip": "77433",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Beverly Kaufman Dog Park",
-    "street": "9114 Katy Hockley RdKaty",
+    "street": "9114 Katy Hockley Rd",
     "city": "Houston",
     "state": "TX",
     "zip": "77493",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Purser Family Park",
-    "street": "100 Mountain Lion RdHarker Heights",
+    "street": "100 Mountain Lion Rd",
     "city": "Killeen",
     "state": "TX",
     "zip": "76548",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Prairie Dog Town",
-    "street": "MacKenzie Park Rd",
+    "street": "Mac",
     "city": "Lubbock",
     "state": "TX",
     "zip": "79401",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "Preston Manor Private Dog Park",
-    "street": "711 N 7th StWolfforth",
+    "street": "711 N 7th St",
     "city": "Lubbock",
     "state": "TX",
     "zip": "79382",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Baybrook Park",
-    "street": "4221 Todville RdSeabrook",
+    "street": "4221 Todville Rd",
     "city": "‍ Pasadena",
     "state": "TX",
     "zip": "77586",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "Little Cedar Bayou Park",
-    "street": "600 Little Cedar Bayou DrLa Porte",
+    "street": "600 Little Cedar Bayou Dr",
     "city": "‍ Pasadena",
     "state": "TX",
     "zip": "77571",
@@ -1781,7 +1781,7 @@
   },
   {
     "name": "Puppy Playland Dog Park",
-    "street": "1240 Landa StNew Braunfels",
+    "street": "1240 Landa St",
     "city": "San Antonio",
     "state": "TX",
     "zip": "78132",

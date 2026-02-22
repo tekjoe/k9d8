@@ -1,0 +1,652 @@
+[
+  {
+    "name": "Fuji Park",
+    "street": "601 Old Clear Crk Rd",
+    "city": "Carson City",
+    "state": "NV",
+    "zip": "89705",
+    "latitude": 39.116405,
+    "longitude": -119.775218,
+    "description": "40 dog owners have reviewed Fuji Park at 601 Old Clear Crk Rd in Carson City, averaging 4.4 stars. The park serves as a gathering spot for dog owners and their four-legged friends in the area. Dog owners can find more details about this park in the reviews from other visitors."
+  },
+  {
+    "name": "‍ Whitney Mesa Park",
+    "street": "1550 W Galleria Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89014",
+    "latitude": 36.0712121,
+    "longitude": -115.0408425,
+    "description": "Located at 1550 W Galleria Dr in Henderson, Whitney Mesa Park earns strong marks from local dog owners—4.7 stars from 537 reviews. Open from 6am to 12am daily, dog owners can plan visits around work or their pup's energy level. Dog owners can also take their pups to nearby Union Village Park (0.5 miles) or Tuscany Park (1.3 miles)."
+  },
+  {
+    "name": "Solista Park",
+    "street": "1890 Via Firenze",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89052",
+    "latitude": 35.9576748,
+    "longitude": -115.1256928,
+    "description": "Solista Park at 1890 Via Firenze is well-regarded by Henderson dog owners, holding 4.7 stars across 292 reviews. Open from 6am to 12am daily, dog owners can easily fit a visit into busy schedules. Dog owners can also take their pups to nearby Aventura Park (0.0 miles) or Sonata Park (1.1 miles)."
+  },
+  {
+    "name": "Harmony Park",
+    "street": "1319 Cadence St",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89052",
+    "latitude": 35.9790795,
+    "longitude": -115.090671,
+    "description": "For dog owners in the Henderson area, Harmony Park (1319 Cadence St) offers a 4.7-star experience based on 70 reviews. Open from 6am to 11pm daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Sonata Park (1.8 miles)."
+  },
+  {
+    "name": "Arroyo Grande Sports Complex",
+    "street": "298 N Arroyo Grande Blvd",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89014",
+    "latitude": 36.048816,
+    "longitude": -115.055207,
+    "description": "With 4.6 stars across 1,518 reviews, Arroyo Grande Sports Complex at 298 N Arroyo Grande Blvd has clearly won over Henderson dog owners. Open from 6am to 12am daily, dog owners can plan visits around their pup's favorite times to be active. Nearby, Trail Canyon Park (0.8 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Acacia Park",
+    "street": "50 Casa Del Fuego St",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89012",
+    "latitude": 36.0310739,
+    "longitude": -115.0181859,
+    "description": "Dog owners in Henderson have made Acacia Park at 50 Casa Del Fuego St a go-to spot, rating it 4.6 stars across 861 reviews. Open from 6am to 12am daily, dog owners have plenty of flexibility to plan a visit. Other dog parks in the area include Reunion Trails Park (1.4 miles) and Trail Canyon Park (1.7 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Reunion Trails Park",
+    "street": "44 Chapata Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89012",
+    "latitude": 36.027407,
+    "longitude": -115.0431931,
+    "description": "Located at 44 Chapata Dr in Henderson, Reunion Trails Park earns strong marks from local dog owners—4.6 stars from 808 reviews. Open from 6am to 12am daily, there's plenty of opportunity for dog owners to find a time that works. Looking for more places to take your pup? Amador Vista Park is another popular dog park just 1.0 miles away."
+  },
+  {
+    "name": "Paseo Vista Park",
+    "street": "2505 Paseo Verde Pkwy",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89052",
+    "latitude": 36.01955,
+    "longitude": -115.097165,
+    "description": "With 4.6 stars from 792 reviews, Paseo Vista Park at 2505 Paseo Verde Pkwy has become a favorite among Henderson dog owners. Open from 6am to 12am daily, dog owners can plan visits around work or their pup's energy level. More dog-friendly parks nearby include Cactus Wren Park (1.0 miles) and Dos Escuelas Park (1.3 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "‍ O Callaghan Park",
+    "street": "601 Skyline Rd",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89002",
+    "latitude": 36.012433,
+    "longitude": -114.980995,
+    "description": "Henderson dog owners rate O Callaghan Park at 601 Skyline Rd highly, with 4.6 stars from 743 visits. Open from 6am to 12am daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Hidden Falls Park (0.6 miles) or McCullough Vista Park (1.0 miles)."
+  },
+  {
+    "name": "Hidden Falls Park",
+    "street": "281 W Horizon Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89002",
+    "latitude": 36.0109056,
+    "longitude": -114.9920686,
+    "description": "Dog owners in Henderson have made Hidden Falls Park at 281 W Horizon Dr a go-to spot, rating it 4.6 stars across 708 reviews. Open from 6am to 12am daily, there's plenty of opportunity for dog owners to find a time that works. Nearby, O Callaghan Park (0.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Aventura Park",
+    "street": "2525 Via Firenze",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89044",
+    "latitude": 35.9582174,
+    "longitude": -115.1258991,
+    "description": "Aventura Park (4.6 stars from 563 reviews) is a popular destination for Henderson dog owners, located at 2525 Via Firenze. Open from 6am to 12am daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Solista Park (0.0 miles) and Sonata Park (1.1 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Trail Canyon Park",
+    "street": "1065 Trail Canyon Rd",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89074",
+    "latitude": 36.0456126,
+    "longitude": -115.0421249,
+    "description": "Henderson dog owners rate Trail Canyon Park at 1065 Trail Canyon Rd highly, with 4.6 stars from 425 visits. Open from 6am to 12am daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners can also take their pups to nearby Arroyo Grande Sports Complex (0.8 miles) or Reunion Trails Park (1.3 miles)."
+  },
+  {
+    "name": "Sonata Park",
+    "street": "1550 Seven Hills Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89052",
+    "latitude": 35.973582,
+    "longitude": -115.12238,
+    "description": "For dog owners in the Henderson area, Sonata Park (1550 Seven Hills Dr) offers a 4.6-star experience based on 347 reviews. Open from 6am to 12am daily, the park accommodates early risers and evening visitors alike. For variety, the neighborhood offers more dog parks to explore: Aventura Park (1.1 miles) and Solista Park (1.1 miles)."
+  },
+  {
+    "name": "Silver Springs Park",
+    "street": "1950 Silver Springs Pkwy",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89074",
+    "latitude": 36.0459589,
+    "longitude": -115.0738866,
+    "description": "Silver Springs Park (4.6 stars from 339 reviews) is a popular destination for Henderson dog owners, located at 1950 Silver Springs Pkwy. Open from 6am to 12am daily, the park accommodates early risers and evening visitors alike. Dog owners can also take their pups to nearby Arroyo Grande Sports Complex (1.1 miles) or Dos Escuelas Park (1.5 miles)."
+  },
+  {
+    "name": "Esselmont Park",
+    "street": "2725 Anthem Highlands Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89044",
+    "latitude": 35.9329181,
+    "longitude": -115.1079618,
+    "description": "Esselmont Park (4.6 stars from 227 reviews) is a popular destination for Henderson dog owners, located at 2725 Anthem Highlands Dr. Open from 6am to 12am daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, Attesa Park is another dog-friendly destination 1.7 miles from here."
+  },
+  {
+    "name": "‍ Tuscany Park",
+    "street": "1550 E Galleria Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89014",
+    "latitude": 36.0710428,
+    "longitude": -115.0173027,
+    "description": "Located at 1550 E Galleria Dr in Henderson, Tuscany Park earns strong marks from local dog owners—4.6 stars from 185 reviews. Open from 6am to 12am daily, the park accommodates early risers and evening visitors alike. Dog owners exploring the neighborhood can also bring their furry friends to Union Village Park (1.0 miles)."
+  },
+  {
+    "name": "Friendship Park",
+    "street": "Mountain Ridge Dr",
+    "city": "Henderson",
+    "state": "NV",
+    "zip": "89012",
+    "latitude": 36.0152553,
+    "longitude": -115.0700282,
+    "description": "With 4.6 stars from 83 reviews, Friendship Park has become a favorite among Henderson dog owners. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Discovery Park (0.2 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Fox Hill Park",
+    "street": "Antelope Ridge Dr",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89138",
+    "latitude": 36.1745104,
+    "longitude": -115.3557819,
+    "description": "In Las Vegas, Fox Hill Park stands out with 4.8 stars from 1,536 happy dog owners. Open from 6am to 10:30pm daily, dog owners have room to work around busy schedules. Nearby, Police Memorial Park (4.0 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Floyd Lamb Park",
+    "street": "9200 Tule Springs Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89131",
+    "latitude": 36.326033,
+    "longitude": -115.264995,
+    "description": "Floyd Lamb Park at 9200 Tule Springs Rd in Las Vegas is a community favorite, with 4,303 dog owners giving it 4.7 stars. Open from 8am to 5pm daily, dog owners have room to work around busy schedules. For variety, many dog owners also bring their furry friends to Centennial Hills Park (2.6 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Clark County Wetlands Park",
+    "street": "7050 Wetlands Park Ln",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89122",
+    "latitude": 36.0974743,
+    "longitude": -115.0058733,
+    "description": "Clark County Wetlands Park at 7050 Wetlands Park Ln is a favorite among Las Vegas dog owners, earning 4.7 stars from 4,281 reviews. This park has clearly won over local dog owners who return again and again with their furry friends. For more dog park adventures, explore Tuscany Park (1.9 miles) or Russell Road Recreation Comple (2.0 miles) with your furry companion."
+  },
+  {
+    "name": "Lone Mountain Park",
+    "street": "4445 N Jensen St",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89129",
+    "latitude": 36.2414563,
+    "longitude": -115.3086098,
+    "description": "Local dog owners love Lone Mountain Park at 4445 N Jensen St in Las Vegas—4.7 stars from an impressive 1,637 reviews. Open from 7am to 11pm daily, dog owners can plan visits around their pup's favorite times to be active. For variety, many dog owners also bring their furry friends to Lone Mountain Regional Park (0.5 miles)—another great dog park in the area."
+  },
+  {
+    "name": "Lone Mountain Regional Park",
+    "street": "9825 W Lone Mountain Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89129",
+    "latitude": 36.247875,
+    "longitude": -115.3106202,
+    "description": "At 9825 W Lone Mountain Rd in Las Vegas, Lone Mountain Regional Park stands out with 4.7 stars from 1,106 happy dog owners. Open from 7am to 10pm daily, dog owners can easily fit a visit into their day, whether morning or evening. Dog owners in the area also love bringing their pups to Lone Mountain Park (0.5 miles) and Police Memorial Park (2.0 miles)."
+  },
+  {
+    "name": "Bark Park",
+    "street": "901 Burkholder Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89015",
+    "latitude": 36.034707,
+    "longitude": -114.954109,
+    "description": "Bark Park (4.7 stars from 177 reviews) is a popular destination for Las Vegas dog owners, located at 901 Burkholder Blvd. Open from 6am to 10pm daily, there's room in the day for dog owners to bring their furry friends. For variety, the neighborhood offers more dog parks to explore: Heritage Park (0.6 miles) and Dog Park (1.6 miles)."
+  },
+  {
+    "name": "Craig Ranch Regional Park",
+    "street": "628 W Craig Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89032",
+    "latitude": 36.2390121,
+    "longitude": -115.2027599,
+    "description": "Craig Ranch Regional Park at 628 W Craig Rd is one of the most beloved dog parks in Las Vegas—4.6 stars from an incredible 6,740 reviews. Open from 5am to 11pm daily, dog owners rarely have to rush—there's time to let pups fully enjoy the space. For dog owners wanting to explore more with their furry friends, Goynes Park is another great dog park just 1.2 miles away."
+  },
+  {
+    "name": "Centennial Hills Park",
+    "street": "7101 N Buffalo Dr",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89131",
+    "latitude": 36.2890079,
+    "longitude": -115.2603731,
+    "description": "Centennial Hills Park at 7101 N Buffalo Dr in Las Vegas is a community favorite, with 2,267 dog owners giving it 4.6 stars. Open from 7am to 11pm daily, dog owners can easily fit a visit into their day, whether morning or evening. Want to give your pup even more adventure? Winding Trails Park is another beloved dog park just 2.0 miles away."
+  },
+  {
+    "name": "Heritage Park",
+    "street": "350 S Racetrack Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89015",
+    "latitude": 36.0270297,
+    "longitude": -114.9499226,
+    "description": "For Las Vegas dog owners, Heritage Park at 350 S Racetrack Rd has become a reliable favorite—4.6 stars from 2,135 reviews. Open from 6am to 12am daily, dog owners can easily fit a visit into their day, whether morning or evening. Other popular dog parks nearby include Bark Park (0.6 miles) and Boulder Creek Park (1.2 miles)—both favorites among local pup parents."
+  },
+  {
+    "name": "Sunset Dog Park",
+    "street": "E Warm Springs Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89120",
+    "latitude": 36.057026,
+    "longitude": -115.1550043,
+    "description": "For Las Vegas dog owners, Sunset Dog Park has become a reliable favorite—4.6 stars from 1,446 reviews. Open from 6am to 11pm daily, dog owners can plan visits around their pup's favorite times to be active. Keep the adventure going at other nearby dog parks like Desert Bloom Park (1.7 miles) or Silverado Ranch Park (3.2 miles)."
+  },
+  {
+    "name": "‍ Barkin Basin Park",
+    "street": "7351 W Alexander Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89129",
+    "latitude": 36.2329979,
+    "longitude": -115.254735,
+    "description": "Dog owners in Las Vegas have made Barkin Basin Park at 7351 W Alexander Rd a go-to spot, rating it 4.6 stars across 756 reviews. Open from 7am to 11pm daily, the park accommodates early risers and evening visitors alike. More dog-friendly parks nearby include Children's Memorial Park (1.0 miles) and Woofter Family Park (2.0 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Discovery Park",
+    "street": "2011 Paseo Verde Pkwy",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89012",
+    "latitude": 36.0176853,
+    "longitude": -115.0732361,
+    "description": "Las Vegas dog owners rate Discovery Park at 2011 Paseo Verde Pkwy highly, with 4.6 stars from 494 visits. Open from 6am to 12am daily, dog owners can easily fit a visit into busy schedules. For a change of scenery, Friendship Park is another dog-friendly destination 0.2 miles from here."
+  },
+  {
+    "name": "Knickerbocker Park",
+    "street": "10695 W Dorrell Ln",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89149",
+    "latitude": 36.2882315,
+    "longitude": -115.2992098,
+    "description": "Las Vegas dog owners rate Knickerbocker Park at 10695 W Dorrell Ln highly, with 4.6 stars from 480 visits. Open from 8am to 10pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Winding Trails Park is another dog-friendly destination 0.3 miles from here."
+  },
+  {
+    "name": "Police Memorial Park",
+    "street": "3250 Metro Academy Way",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89129",
+    "latitude": 36.2193447,
+    "longitude": -115.3109691,
+    "description": "Police Memorial Park at 3250 Metro Academy Way is well-regarded by Las Vegas dog owners, holding 4.6 stars across 444 reviews. Open from 7am to 11pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Lone Mountain Park (1.5 miles) or Lone Mountain Regional Park (2.0 miles)."
+  },
+  {
+    "name": "Gilcrease Brothers Park",
+    "street": "10011 Gilcrease Ave",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89149",
+    "latitude": 36.3029654,
+    "longitude": -115.302984,
+    "description": "With 4.6 stars from 428 reviews, Gilcrease Brothers Park at 10011 Gilcrease Ave has become a favorite among Las Vegas dog owners. Open from 7am to 11pm daily, the park offers flexibility for dog owners with varying routines. Looking for more places to take your pup? Winding Trails Park is another popular dog park just 0.8 miles away."
+  },
+  {
+    "name": "Huckleberry Park",
+    "street": "10325 Farm Rd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89166",
+    "latitude": 36.2993857,
+    "longitude": -115.3171738,
+    "description": "Dog owners in Las Vegas have made Huckleberry Park at 10325 Farm Rd a go-to spot, rating it 4.6 stars across 367 reviews. Open from 8am to 10pm daily, the park offers flexibility for dog owners with varying routines. For a change of scenery, Gilcrease Brothers Park is another dog-friendly destination 0.8 miles from here."
+  },
+  {
+    "name": "Bob Baskin Park",
+    "street": "2801 W Oakey Blvd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89102",
+    "latitude": 36.15154,
+    "longitude": -115.17915,
+    "description": "Dog owners in North Las Vegas have embraced Bob Baskin Park (2801 W Oakey Blvd) as a top destination—4.5 stars from 1,249 visits. Open from 7am to 11pm daily, there's always time for dog owners to bring their pup for some quality time. For more dog park adventures, explore Echo Trail Park (2.0 miles) or Lorenzi Park (2.1 miles) with your furry companion."
+  },
+  {
+    "name": "Galaxy Park",
+    "street": "4505 Farm Rd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89084",
+    "latitude": 36.3008598,
+    "longitude": -115.1891386,
+    "description": "North Las Vegas dog owners rate Galaxy Park at 4505 Farm Rd highly, with 4.5 stars from 61 visits. The steady stream of dog owner visits speaks to the park's appeal. For variety, the neighborhood offers more dog parks to explore: Aviary Park (1.5 miles) and Teton Trails Park (2.0 miles)."
+  },
+  {
+    "name": "Aviary Park",
+    "street": "6750 Aviary Wy",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89084",
+    "latitude": 36.278949,
+    "longitude": -115.1886961,
+    "description": "With 4.4 stars from 529 reviews, Aviary Park at 6750 Aviary Wy has become a favorite among North Las Vegas dog owners. Open from 5am to 12am daily, dog owners have plenty of flexibility to plan a visit. Other dog parks in the area include Northbrook Community Park (1.5 miles) and Teton Trails Park (1.5 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Cheyenne Ridge Park",
+    "street": "3814 Scott Robinson Blvd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89032",
+    "latitude": 36.2411745,
+    "longitude": -115.1665183,
+    "description": "At 3814 Scott Robinson Blvd, Cheyenne Ridge Park has 4.3 stars based on 242 reviews from North Las Vegas dog owners. This park provides dog owners in the community with a place to visit with their dogs. More dog parks in the area include Tierra De Palmas Park (0.8 miles) and Gold Crest Park (0.9 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Valley View Park",
+    "street": "2000 Bennett St",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89030",
+    "latitude": 36.196326,
+    "longitude": -115.144912,
+    "description": "Valley View Park at 2000 Bennett St holds a 4.3-star rating from 170 North Las Vegas dog owner visits. Open from 6am to 11pm daily, dog owners can stop by when it fits their schedule. Dog owners looking for variety can also visit Craig Ranch Dog Park (1.3 miles) or City View Park (1.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "‍ Northbrook Community Park",
+    "street": "4413 Sparkle Crest Ave",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89031",
+    "latitude": 36.260321,
+    "longitude": -115.201611,
+    "description": "Northbrook Community Park at 4413 Sparkle Crest Ave in North Las Vegas has 4.2 stars from 40 dog owner reviews. Open from 6am to 8pm daily, the park fits conveniently into different routines. More dog parks in the area include Goynes Park (0.7 miles) and Craig Ranch Regional Park (1.5 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Tierra De Palmas Park",
+    "street": "Tierra De Palmas Dr",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89031",
+    "latitude": 36.2507378,
+    "longitude": -115.1738281,
+    "description": "Tierra De Palmas Park in North Las Vegas is rated 4.2 stars by 67 dog owners. Local dog owners use this park as a spot to spend time with their furry companions. Nearby dog parks worth exploring with your pup include Cheyenne Ridge Park (0.8 miles) and Goynes Park (1.0 miles)."
+  },
+  {
+    "name": "Gold Crest Park",
+    "street": "714 Craig Creek Ave",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89032",
+    "latitude": 36.2360084,
+    "longitude": -115.1517561,
+    "description": "At 714 Craig Creek Ave in North Las Vegas, Gold Crest Park carries 4.2 stars from 139 dog owner reviews. Open from 6am to 11pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners might also enjoy Cheyenne Ridge Park, another dog park just 0.9 miles away."
+  },
+  {
+    "name": "‍ Coleman Park",
+    "street": "6336 Carmen Blvd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89108",
+    "latitude": 36.1846589,
+    "longitude": -115.2324955,
+    "description": "Dog owners in North Las Vegas have rated Coleman Park (6336 Carmen Blvd) 4.2 stars across 236 reviews. Open from 7am to 11pm daily, the park gives dog owners in the neighborhood time to bring their pups. More dog parks in the area include Woofter Family Park (1.6 miles) and Gary Dexter Park (1.6 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Goynes Park",
+    "street": "3909 W Washburn Rd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89031",
+    "latitude": 36.2540655,
+    "longitude": -115.192181,
+    "description": "Dog owners in North Las Vegas have rated Goynes Park (3909 W Washburn Rd) 4.2 stars across 242 reviews. Open from 6am to 11pm daily, the park is accessible for dog owners in the area. For dog owners who like to explore, Northbrook Community Park (0.7 miles) and Tierra De Palmas Park (1.0 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Alexander Villas Park",
+    "street": "3620 Lincoln Rd",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89115",
+    "latitude": 36.2256278,
+    "longitude": -115.0846623,
+    "description": "North Las Vegas dog owners rate Alexander Villas Park at 3620 Lincoln Rd highly, with 4.1 stars from 820 visits. Open from 6am to 11pm daily, there's room in the day for dog owners to bring their furry friends. Other dog parks in the area include Craig Ranch Dog Park (2.7 miles) and City View Park (3.0 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "City View Park",
+    "street": "101 E Cheyenne Ave",
+    "city": "North Las Vegas",
+    "state": "NV",
+    "zip": "89030",
+    "latitude": 36.2177597,
+    "longitude": -115.137509,
+    "description": "Dog owners in the North Las Vegas area will find City View Park at 101 E Cheyenne Ave—a local option for spending time with their pups. Open from 8am to 11pm daily, the park fits conveniently into different routines. Dog owners looking for variety can also visit Craig Ranch Dog Park (1.5 miles) or Gold Crest Park (1.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "Rancho San Rafael Regional",
+    "street": "1595 N Sierra St",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89503",
+    "latitude": 39.5435552,
+    "longitude": -119.8207394,
+    "description": "Dog owners in Reno have embraced Rancho San Rafael Regional (1595 N Sierra St) as a top destination—4.7 stars from 4,027 visits. Open from 8am to 7pm daily, dog owners can plan visits around their pup's favorite times to be active. For more dog park adventures, explore Whitaker Park (0.7 miles) or Rancho San Rafael Off-Leash (0.9 miles) with your furry companion."
+  },
+  {
+    "name": "Mayberry Park",
+    "street": "101 Woodland Ave",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89523",
+    "latitude": 39.5087106,
+    "longitude": -119.8965318,
+    "description": "Mayberry Park (4.7 stars from 923 reviews) is a popular destination for Reno dog owners, located at 101 Woodland Ave. Open from 6am to 7pm daily, the park works well for dog owners with different schedules. For a change of scenery, Northgate Park is another dog-friendly destination 1.0 miles from here."
+  },
+  {
+    "name": "Rancho San Rafael Off-Leash",
+    "street": "2398 Coleman Dr",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89503",
+    "latitude": 39.5486788,
+    "longitude": -119.835983,
+    "description": "Reno dog owners rate Rancho San Rafael Off-Leash at 2398 Coleman Dr highly, with 4.7 stars from 169 visits. The park serves dog owners well, providing a destination the community values. Other dog parks in the area include Rancho San Rafael Regional (0.9 miles) and Whitaker Park (1.2 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Dayton Valley Dog Park",
+    "street": "15 Old Como Rd",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89403",
+    "latitude": 39.2367772,
+    "longitude": -119.5738357,
+    "description": "For dog owners in the Reno area, Dayton Valley Dog Park (15 Old Como Rd) offers a 4.7-star experience based on 129 reviews. Open from 6am to 8:30pm daily, there's plenty of opportunity for dog owners to find a time that works. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Virginia Lake Park",
+    "street": "1980 Lakeside Dr",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89509",
+    "latitude": 39.5034816,
+    "longitude": -119.8066396,
+    "description": "For dog owners in the Reno area, Virginia Lake Park (1980 Lakeside Dr) offers a 4.7-star experience based on 58 reviews. Local dog owners appreciate what this park offers their four-legged friends. Other dog parks in the area include Virginia Lake Dog Park (0.4 miles) and Plumas Park (0.8 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Somersett West Park",
+    "street": "2110 Hawk Meadow Trail",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89523",
+    "latitude": 39.5365311,
+    "longitude": -119.9502596,
+    "description": "Located at 2110 Hawk Meadow Trail in Reno, Somersett West Park earns strong marks from local dog owners—4.7 stars from 31 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. More dog-friendly parks nearby include Northgate Park (3.3 miles) and Mayberry Park (3.4 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Audrey Harris Park",
+    "street": "6600 Lakeside Dr",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89511",
+    "latitude": 39.4657875,
+    "longitude": -119.8060195,
+    "description": "For dog owners in the Reno area, Audrey Harris Park (6600 Lakeside Dr) offers a 4.7-star experience based on 24 reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include Wheatland Park (0.4 miles) and Anderson Regional Park (0.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Damonte Ranch Park",
+    "street": "1950 Steamboat Pkwy",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89521",
+    "latitude": 39.4280889,
+    "longitude": -119.7257774,
+    "description": "Reno dog owners rate Damonte Ranch Park at 1950 Steamboat Pkwy highly, with 4.6 stars from 501 visits. Open from 8am to 8pm daily, there's room in the day for dog owners to bring their furry friends. More dog-friendly parks nearby include Center Creek Park (0.7 miles) and Double Diamond Park (0.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Crissie Caughlin Park",
+    "street": "3415 Idlewild Dr",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89509",
+    "latitude": 39.5109924,
+    "longitude": -119.8518519,
+    "description": "With 4.6 stars from 464 reviews, Crissie Caughlin Park at 3415 Idlewild Dr has become a favorite among Reno dog owners. Open from 8am to 10pm daily, the park offers flexibility for dog owners with varying routines. More dog-friendly parks nearby include Ivan Sack Park (0.4 miles) and Newlands Park (1.7 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Anderson Regional Park",
+    "street": "Anderson Park Ln",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89511",
+    "latitude": 39.4644752,
+    "longitude": -119.7901319,
+    "description": "In Reno, Anderson Regional Park has built a loyal following—4.5 stars from 94 dog owner reviews. Local dog owners appreciate what this park offers their four-legged friends. Dog owners can also take their pups to nearby Audrey Harris Park (0.9 miles) or Wheatland Park (0.9 miles)."
+  },
+  {
+    "name": "‍ Wheatland Park",
+    "street": "900 Wheatland Rd",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89511",
+    "latitude": 39.470713,
+    "longitude": -119.803944,
+    "description": "With 4.5 stars from 96 reviews, Wheatland Park at 900 Wheatland Rd has become a favorite among Reno dog owners. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Other dog parks in the area include Audrey Harris Park (0.4 miles) and Anderson Regional Park (0.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Highland Ranch Park",
+    "street": "1200 Highland Ranch Pkwy",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89433",
+    "latitude": 39.6115923,
+    "longitude": -119.7616495,
+    "description": "For dog owners in the Reno area, Highland Ranch Park (1200 Highland Ranch Pkwy) offers a 4.5-star experience based on 161 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Dog owners can also take their pups to nearby Kestrel Park (1.9 miles) or Wedekind Regional Park (3.4 miles)."
+  },
+  {
+    "name": "Summit Ridge Park",
+    "street": "",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "",
+    "latitude": 39.5261206,
+    "longitude": -119.8126581,
+    "description": "Reno dog owners rate Summit Ridge Park highly, with 4.5 stars from 162 visits. Open from 8am to 10pm daily, the park works well for dog owners with different schedules. Other dog parks in the area include Duck Park (0.0 miles) and Biggest Little Dog Park (0.2 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Cyan Park",
+    "street": "2121 Long Meadow Dr",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89521",
+    "latitude": 39.443984,
+    "longitude": -119.7290605,
+    "description": "Cyan Park at 2121 Long Meadow Dr is well-regarded by Reno dog owners, holding 4.5 stars across 210 reviews. Open from 5am to 10pm daily, the park offers flexibility for dog owners with varying routines. Nearby, Center Creek Park (0.9 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "South Valleys Regional Park",
+    "street": "15650 Wedge Pkwy",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89511",
+    "latitude": 39.404601,
+    "longitude": -119.7588961,
+    "description": "South Valleys Regional Park at 15650 Wedge Pkwy is well-regarded by Reno dog owners, holding 4.5 stars across 316 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Other dog parks in the area include Center Creek Park (2.2 miles) and Double Diamond Park (2.2 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Huffaker Park",
+    "street": "1160 E Huffaker Ln",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89511",
+    "latitude": 39.457398,
+    "longitude": -119.7677269,
+    "description": "Huffaker Park at 1160 E Huffaker Ln is well-regarded by Reno dog owners, holding 4.5 stars across 672 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. Looking for more places to take your pup? Anderson Regional Park is another popular dog park just 1.3 miles away."
+  },
+  {
+    "name": "Pah Rah Mountain Park",
+    "street": "1750 Shadow Ln",
+    "city": "Sparks",
+    "state": "NV",
+    "zip": "89434",
+    "latitude": 39.5635389,
+    "longitude": -119.7107927,
+    "description": "With 4.6 stars from 638 reviews, Pah Rah Mountain Park at 1750 Shadow Ln has become a favorite among Sparks dog owners. Open from 6am to 10pm daily, the park offers flexibility for dog owners with varying routines. For a change of scenery, Wedekind Regional Park is another dog-friendly destination 1.0 miles from here."
+  },
+  {
+    "name": "Wedekind Regional Park",
+    "street": "11 Disc Dr",
+    "city": "Sparks",
+    "state": "NV",
+    "zip": "89436",
+    "latitude": 39.5774538,
+    "longitude": -119.7167042,
+    "description": "At 11 Disc Dr, Wedekind Regional Park has 4.3 stars based on 69 reviews from Sparks dog owners. Open from 7:30am to 5:30pm, Mon through Thu, the park fits conveniently into different routines. Dog owners looking for variety can also visit Pah Rah Mountain Park (1.0 miles) or Kestrel Park (1.5 miles) with their four-legged friends."
+  },
+  {
+    "name": "Kestrel Park",
+    "street": "5611 Cathedral Peak Dr",
+    "city": "Sparks",
+    "state": "NV",
+    "zip": "89436",
+    "latitude": 39.5941717,
+    "longitude": -119.7334536,
+    "description": "In Sparks, dog owners can find Kestrel Park at 5611 Cathedral Peak Dr—a local park worth exploring with their furry companions. Open from 6am to 9:30pm daily, dog owners can stop by when it fits their schedule. Looking to explore more? Wedekind Regional Park is another dog-friendly park 1.5 miles from here."
+  },
+  {
+    "name": "Deer Park",
+    "street": "1700 Prater Way",
+    "city": "Sparks",
+    "state": "NV",
+    "zip": "89431",
+    "latitude": 39.5383765,
+    "longitude": -119.7667107,
+    "description": "Deer Park at 1700 Prater Way provides Sparks dog owners with a local spot to visit with their pups. Dog owners in the area appreciate having a local spot to bring their pups. For pups who want more adventure, Sparks Marina Dog Park is a nearby dog park worth visiting (1.0 miles)."
+  }
+]

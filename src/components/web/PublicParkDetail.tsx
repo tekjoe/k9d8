@@ -327,9 +327,13 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                   letterSpacing: isMobile ? -0.3 : -0.5,
                 }}
               >
-                {park.name}
+                {park.name.replace(/^[\s\u200d]+/, '')}
               </Text>
-              {/* Address hidden pending data remediation */}
+              {park.address && (
+                <Text style={{ fontSize: isMobile ? 13 : 15, color: '#6D6C6A' }} numberOfLines={1}>
+                  {park.address}
+                </Text>
+              )}
             </View>
 
             {/* Action Buttons */}
@@ -576,7 +580,7 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                     >
                       <Ionicons name="location" size={14} color="#9C9B99" />
                       <View style={{ flex: 1, gap: 2 }}>
-                        <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{np.name}</Text>
+                        <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{np.name.replace(/^[\s\u200d]+/, '')}</Text>
                         <Text style={{ fontSize: 11, color: '#9C9B99' }}>{np.city || ''}</Text>
                       </View>
                     </Pressable>
@@ -789,7 +793,7 @@ export default function PublicParkDetail({ slugOrId, state }: { slugOrId: string
                       >
                         <Ionicons name="location" size={14} color="#9C9B99" />
                         <View style={{ flex: 1, gap: 2 }}>
-                          <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{np.name}</Text>
+                          <Text style={{ fontSize: 13, fontWeight: '500', color: '#1A1918' }}>{np.name.replace(/^[\s\u200d]+/, '')}</Text>
                           <Text style={{ fontSize: 11, color: '#9C9B99' }}>{np.city || ''}</Text>
                         </View>
                       </Pressable>

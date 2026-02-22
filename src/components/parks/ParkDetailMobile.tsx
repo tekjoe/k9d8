@@ -343,11 +343,13 @@ export default function ParkDetailMobile({ slugOrId, state }: ParkDetailMobilePr
           {/* Header */}
           <View style={{ gap: 6, marginBottom: 20 }}>
             <Text style={{ fontSize: 24, fontWeight: '700', color: Colors.light.text }}>
-              {park.name}
+              {park.name.replace(/^[\s\u200d]+/, '')}
             </Text>
-            <Text style={{ fontSize: 15, color: '#6D6C6A' }}>
-              {park.address || 'San Francisco, CA'}
-            </Text>
+            {park.address && (
+              <Text style={{ fontSize: 15, color: '#6D6C6A' }}>
+                {park.address}
+              </Text>
+            )}
           </View>
 
           {/* Action Buttons */}

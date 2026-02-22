@@ -471,7 +471,7 @@
   },
   {
     "name": "Apple Grove Park",
-    "street": "15000 Hayes RdApple Valley",
+    "street": "15000 Hayes Rd",
     "city": "Lakeville",
     "state": "MN",
     "zip": "55124",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Savage Dog Park",
-    "street": "12425 Xenwood AveSavage",
+    "street": "12425 Xenwood Ave",
     "city": "Lakeville",
     "state": "MN",
     "zip": "55378",
@@ -541,7 +541,7 @@
   },
   {
     "name": "Andy's Bark Park",
-    "street": "11664 Dale RdWoodbury",
+    "street": "11664 Dale Rd",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55129",
@@ -551,7 +551,7 @@
   },
   {
     "name": "‍ Battle Creek Dog Park",
-    "street": "2350 Upper Afton RdMaplewood",
+    "street": "2350 Upper Afton Rd",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55119",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Indoor Zoomies indoor dog park",
-    "street": "10924 Greenbrier RdMinnetonka",
+    "street": "10924 Greenbrier Rd",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55305",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Carver Park",
-    "street": "7200 Park DrVictoria",
+    "street": "7200 Park Dr",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55386",
@@ -651,7 +651,7 @@
   },
   {
     "name": "Kaposia Landing",
-    "street": "800 Bryant AveSouth St Paul",
+    "street": "800 Bryant Ave",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55075",
@@ -661,7 +661,7 @@
   },
   {
     "name": "Dakota Woods Dog Park",
-    "street": "16470 Blaine AveRosemount",
+    "street": "16470 Blaine Ave",
     "city": "‍ Minneapolis",
     "state": "MN",
     "zip": "55068",
@@ -691,7 +691,7 @@
   },
   {
     "name": "Susan E. Lurton Park",
-    "street": "3580 Wayzata BlvdLong Lake",
+    "street": "3580 Wayzata Blvd",
     "city": "Minnetonka",
     "state": "MN",
     "zip": "55356",
@@ -721,7 +721,7 @@
   },
   {
     "name": "‍ Burton Park",
-    "street": "19600 Minnetonka BlvdExcelsior",
+    "street": "19600 Minnetonka Blvd",
     "city": "Minnetonka",
     "state": "MN",
     "zip": "55331",
@@ -991,7 +991,7 @@
   },
   {
     "name": "Pinecone Central Park",
-    "street": "1105 Central Park BlvdSartell",
+    "street": "1105 Central Park Blvd",
     "city": "St. Cloud",
     "state": "MN",
     "zip": "56377",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Sauk River Regional Park",
-    "street": "3237 Dolores DrSt Cloud",
+    "street": "3237 Dolores Dr",
     "city": "St. Cloud",
     "state": "MN",
     "zip": "56303",
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "Como Regional Park",
-    "street": "1199 Midway PkwySt Paul",
+    "street": "1199 Midway Pkwy",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55118",
@@ -1061,7 +1061,7 @@
   },
   {
     "name": "Crosby Farm Regional Park",
-    "street": "2595 Crosby Farm RdSt Paul",
+    "street": "2595 Crosby Farm Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55116",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Otter Lake Off-leash Dog Area",
-    "street": "5750 Otter Lake RdWhite Bear Township",
+    "street": "5750 Otter Lake Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55110",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Irvine Park",
-    "street": "251 Walnut StSt Paul",
+    "street": "251 Walnut St",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55102",
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "‍ Lilydale Off-Leash Dog Park",
-    "street": "1700 Lilydale RdSt Paul",
+    "street": "1700 Lilydale Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55118",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Harriet Island Regional Park",
-    "street": "49 Harriet Island RdSt Paul",
+    "street": "49 Harriet Island Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55107",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "Lilydale Regional Park",
-    "street": "950 Lilydale RdSt Paul",
+    "street": "950 Lilydale Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55118",
@@ -1141,7 +1141,7 @@
   },
   {
     "name": "Hidden Falls Regional Park",
-    "street": "1313 Hidden Falls DrSt Paul",
+    "street": "1313 Hidden Falls Dr",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55116",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "‍ Battle Creek Regional Park",
-    "street": "2300 Upper Afton RdMaplewood",
+    "street": "2300 Upper Afton Rd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55119",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Mississippi National River &",
-    "street": "120 W Kellogg BlvdSt Paul",
+    "street": "120 W Kellogg Blvd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55102",
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "City Of Mendota Heights Off-le",
-    "street": "Acacia BlvdMendota Heights",
+    "street": "Acacia Blvd",
     "city": "St. Paul",
     "state": "MN",
     "zip": "55120",

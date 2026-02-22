@@ -1,7 +1,7 @@
 [
   {
     "name": "Busse Forest Elk Pasture",
-    "street": "225 N Arlington Heights RdElk Grove Village",
+    "street": "225 N Arlington Heights Rd",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60007",
@@ -21,7 +21,7 @@
   },
   {
     "name": "‍ Malibu Park",
-    "street": "405 Tahoe Cir DrWheeling",
+    "street": "405 Tahoe Cir Dr",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60090",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Buffalo Creek Forest Preserve",
-    "street": "18163 Checker RdLong Grove",
+    "street": "18163 Checker Rd",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60047",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Husky Park",
-    "street": "1100 Lee StWheeling",
+    "street": "1100 Lee St",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60090",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Meadows Park",
-    "street": "1401 W Gregory StMt Prospect",
+    "street": "1401 W Gregory St",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60056",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Osage Park",
-    "street": "2076 N Old Hicks RdPalatine",
+    "street": "2076 N Old Hicks Rd",
     "city": "Arlington Heights",
     "state": "IL",
     "zip": "60074",
@@ -171,7 +171,7 @@
   },
   {
     "name": "Springbrook Prairie",
-    "street": "83RD Book Rd",
+    "street": "83",
     "city": "Aurora",
     "state": "IL",
     "zip": "60567",
@@ -231,7 +231,7 @@
   },
   {
     "name": "Stuart Sports Complex Dog Park",
-    "street": "39W546 Baseline RdSugar Grove",
+    "street": "39W546 Baseline Rd",
     "city": "Aurora",
     "state": "IL",
     "zip": "60554",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Maxwell Park",
-    "street": "305 N Parkside RdNormal",
+    "street": "305 N Parkside Rd",
     "city": "Bloomington",
     "state": "IL",
     "zip": "61761",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Shepard Park",
-    "street": "750 Hershey RdNormal",
+    "street": "750 Hershey Rd",
     "city": "Bloomington",
     "state": "IL",
     "zip": "61761",
@@ -351,7 +351,7 @@
   },
   {
     "name": "Shepard Dog Park",
-    "street": "701 Hershey RdNormal",
+    "street": "701 Hershey Rd",
     "city": "Bloomington",
     "state": "IL",
     "zip": "61761",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Savannah Green Park",
-    "street": "1010 Bull StNormal",
+    "street": "1010 Bull St",
     "city": "Bloomington",
     "state": "IL",
     "zip": "61761",
@@ -431,7 +431,7 @@
   },
   {
     "name": "Love's Travel Stop",
-    "street": "2007 N Main StNormal",
+    "street": "2007 N Main St",
     "city": "Bloomington",
     "state": "IL",
     "zip": "61761",
@@ -481,7 +481,7 @@
   },
   {
     "name": "‍ Oldfield Oaks",
-    "street": "2525 87th StDarien",
+    "street": "2525 87th St",
     "city": "Bolingbrook",
     "state": "IL",
     "zip": "60561",
@@ -591,7 +591,7 @@
   },
   {
     "name": "Discovery Park",
-    "street": "300 S Highpoint DrRomeoville",
+    "street": "300 S Highpoint Dr",
     "city": "Bolingbrook",
     "state": "IL",
     "zip": "60446",
@@ -611,7 +611,7 @@
   },
   {
     "name": "Urbana Dog Park",
-    "street": "1501 E Perkins RdUrbana",
+    "street": "1501 E Perkins Rd",
     "city": "Champaign",
     "state": "IL",
     "zip": "61802",
@@ -771,7 +771,7 @@
   },
   {
     "name": "Katherine Legge Memorial Park",
-    "street": "5901 S County Line RdHinsdale",
+    "street": "5901 S County Line Rd",
     "city": "Cicero",
     "state": "IL",
     "zip": "60521",
@@ -781,7 +781,7 @@
   },
   {
     "name": "‍ Ridgeland Common Park",
-    "street": "Lake StOak Park",
+    "street": "Lake St",
     "city": "Cicero",
     "state": "IL",
     "zip": "60302",
@@ -791,7 +791,7 @@
   },
   {
     "name": "‍ Fox Center & Park",
-    "street": "624 S Oak Park AveOak Park",
+    "street": "624 S Oak Park Ave",
     "city": "Cicero",
     "state": "IL",
     "zip": "60304",
@@ -811,7 +811,7 @@
   },
   {
     "name": "Miller Meadow",
-    "street": "2175 S 1st AveForest Park",
+    "street": "2175 S 1st Ave",
     "city": "Cicero",
     "state": "IL",
     "zip": "60130",
@@ -821,7 +821,7 @@
   },
   {
     "name": "‍ Barrie Park",
-    "street": "127 Garfield StOak Park",
+    "street": "127 Garfield St",
     "city": "Cicero",
     "state": "IL",
     "zip": "60302",
@@ -851,7 +851,7 @@
   },
   {
     "name": "Euclid Square Park",
-    "street": "705 W. FillmoreOak Park",
+    "street": "705 W. Fillmore",
     "city": "Cicero",
     "state": "IL",
     "zip": "60304",
@@ -861,7 +861,7 @@
   },
   {
     "name": "Freedom Park",
-    "street": "3701 Scoville AveBerwyn",
+    "street": "3701 Scoville Ave",
     "city": "Cicero",
     "state": "IL",
     "zip": "60402",
@@ -871,7 +871,7 @@
   },
   {
     "name": "Smirz Park",
-    "street": "3400 Highland AveBerwyn",
+    "street": "3400 Highland Ave",
     "city": "Cicero",
     "state": "IL",
     "zip": "60402",
@@ -881,7 +881,7 @@
   },
   {
     "name": "Veterans Memorial Park",
-    "street": "4101 Ridgeland AveStickney",
+    "street": "4101 Ridgeland Ave",
     "city": "Cicero",
     "state": "IL",
     "zip": "60402",
@@ -901,7 +901,7 @@
   },
   {
     "name": "Janura Park",
-    "street": "6601 W 28th StBerwyn",
+    "street": "6601 W 28th St",
     "city": "Cicero",
     "state": "IL",
     "zip": "60402",
@@ -971,7 +971,7 @@
   },
   {
     "name": "Brent Leh Dog Park",
-    "street": "328 Olive StEdwardsville",
+    "street": "328 Olive St",
     "city": "‍ Edwardsville",
     "state": "IL",
     "zip": "62025",
@@ -1041,7 +1041,7 @@
   },
   {
     "name": "Schweitzer Woods Forest Preser",
-    "street": "16N690 Sleepy Hollow RdWest Dundee",
+    "street": "16N690 Sleepy Hollow Rd",
     "city": "Elgin",
     "state": "IL",
     "zip": "60118",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Riley's Run Dog Park",
-    "street": "650 Lambert LnBartlett",
+    "street": "650 Lambert Ln",
     "city": "Elgin",
     "state": "IL",
     "zip": "60103",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "William C. Bartels Park",
-    "street": "104 Barrington AveEast Dundee",
+    "street": "104 Barrington Ave",
     "city": "Elgin",
     "state": "IL",
     "zip": "60118",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "Hammel Woods - DuPage River",
-    "street": "23435 W Black RdShorewood",
+    "street": "23435 W Black Rd",
     "city": "Joliet",
     "state": "IL",
     "zip": "60431",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Trantina Farms Dog Park",
-    "street": "15707 W 151st StHomer Glen",
+    "street": "15707 W 151st St",
     "city": "Joliet",
     "state": "IL",
     "zip": "60491",
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "Daisy Dog Park",
-    "street": "13214 Blakely DrPlainfield",
+    "street": "13214 Blakely Dr",
     "city": "Joliet",
     "state": "IL",
     "zip": "60585",
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "‍ BURNING BUSH TRAILS PARK",
-    "street": "1313 N Burning Bush LnMt Prospect",
+    "street": "1313 N Burning Bush Ln",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60056",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Prairie Lakes Park",
-    "street": "515 E Thacker StDes Plaines",
+    "street": "515 E Thacker St",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60018",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Cornell Park",
-    "street": "187 Ardmore RdDes Plaines",
+    "street": "187 Ardmore Rd",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60016",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Izaak Walton Park",
-    "street": "201 N Elmhurst RdProspect Heights",
+    "street": "201 N Elmhurst Rd",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60070",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "Busse Park",
-    "street": "101 S Owen StMt Prospect",
+    "street": "101 S Owen St",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60056",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "Des Plaines Manor Park",
-    "street": "500 Lasalle StDes Plaines",
+    "street": "500 Lasalle St",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60016",
@@ -1251,7 +1251,7 @@
   },
   {
     "name": "Robert T Jackson Clearwater",
-    "street": "1724 W Lonnquist BlvdMt Prospect",
+    "street": "1724 W Lonnquist Blvd",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60056",
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "River Trails Park",
-    "street": "1500 E Euclid AveMt Prospect",
+    "street": "1500 E Euclid Ave",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60056",
@@ -1271,7 +1271,7 @@
   },
   {
     "name": "Lions Recreation Center",
-    "street": "411 S Maple StMt Prospect",
+    "street": "411 S Maple St",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60056",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "‍ Prairie Wolf Forest Preserve",
-    "street": "11403 IL-22Highland Park",
+    "street": "11403 IL-22",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60035",
@@ -1311,7 +1311,7 @@
   },
   {
     "name": "Lions Woods",
-    "street": "6 N River RdDes Plaines",
+    "street": "6 N River Rd",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60016",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "Jaycee Park",
-    "street": "64 Compton LnProspect Heights",
+    "street": "64 Compton Ln",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60070",
@@ -1331,7 +1331,7 @@
   },
   {
     "name": "Hawthorne Glen Park",
-    "street": "4126 Miller DrGlenview",
+    "street": "4126 Miller Dr",
     "city": "‍ Mount Prospect",
     "state": "IL",
     "zip": "60026",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "Orland Park",
-    "street": "13951 LaGrange Rd",
+    "street": "13951 La",
     "city": "Orland Park",
     "state": "IL",
     "zip": "60462",
@@ -1371,7 +1371,7 @@
   },
   {
     "name": "Messenger Marsh",
-    "street": "S Bell RdHomer Glen",
+    "street": "S Bell Rd",
     "city": "Orland Park",
     "state": "IL",
     "zip": "60491",
@@ -1391,7 +1391,7 @@
   },
   {
     "name": "Kelly Park",
-    "street": "16675 Haven AveOrland Hills",
+    "street": "16675 Haven Ave",
     "city": "Orland Park",
     "state": "IL",
     "zip": "60487",
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "Tinley Park",
-    "street": "18200 84th AveTinley Park",
+    "street": "18200 84th Ave",
     "city": "Orland Park",
     "state": "IL",
     "zip": "60487",
@@ -1521,7 +1521,7 @@
   },
   {
     "name": "Happy Tails Dog Park",
-    "street": "Coal Car DrPekin",
+    "street": "Coal Car Dr",
     "city": "Peoria",
     "state": "IL",
     "zip": "61554",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "‍ Duryea Dog Park",
-    "street": "1001 E Duryea AvePeoria Heights",
+    "street": "1001 E Duryea Ave",
     "city": "Peoria",
     "state": "IL",
     "zip": "61616",
@@ -1601,7 +1601,7 @@
   },
   {
     "name": "Dog Paddle Beach",
-    "street": "5329 Forest Hills CtLoves Park",
+    "street": "5329 Forest Hills Ct",
     "city": "Rockford",
     "state": "IL",
     "zip": "61111",
@@ -1611,7 +1611,7 @@
   },
   {
     "name": "Schoonmaker Park",
-    "street": "10893 Ventura BlvdMachesney Park",
+    "street": "10893 Ventura Blvd",
     "city": "Rockford",
     "state": "IL",
     "zip": "61115",
@@ -1631,7 +1631,7 @@
   },
   {
     "name": "Willow Park",
-    "street": "905 Norman DrHoffman Estates",
+    "street": "905 Norman Dr",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60192",
@@ -1641,7 +1641,7 @@
   },
   {
     "name": "Busse Woods",
-    "street": "4006 Busse WdsElk Grove Village",
+    "street": "4006 Busse Wds",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60007",
@@ -1721,7 +1721,7 @@
   },
   {
     "name": "Carson Park",
-    "street": "1451 Kathleen WayElk Grove Village",
+    "street": "1451 Kathleen Way",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60007",
@@ -1741,7 +1741,7 @@
   },
   {
     "name": "Clauss Farm Recreation Area",
-    "street": "555 W Bryn Mawr AveRoselle",
+    "street": "555 W Bryn Mawr Ave",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60172",
@@ -1751,7 +1751,7 @@
   },
   {
     "name": "Hawk Hollow Dog Park",
-    "street": "1099 Bittersweet DrBartlett",
+    "street": "1099 Bittersweet Dr",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60103",
@@ -1761,7 +1761,7 @@
   },
   {
     "name": "Community Park",
-    "street": "1001 Zenith DrGlenview",
+    "street": "1001 Zenith Dr",
     "city": "Schaumburg",
     "state": "IL",
     "zip": "60025",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "Duncan Park",
-    "street": "500 N MacArthur Blvd",
+    "street": "500 N Mac",
     "city": "Springfield",
     "state": "IL",
     "zip": "62702",
@@ -1961,7 +1961,7 @@
   },
   {
     "name": "Independence Grove Off-Leash",
-    "street": "31531 N Milwaukee AveLibertyville",
+    "street": "31531 N Milwaukee Ave",
     "city": "Waukegan",
     "state": "IL",
     "zip": "60048",
@@ -1971,7 +1971,7 @@
   },
   {
     "name": "Duck Farm Off-Leash Dog Area",
-    "street": "21201 Grand AveLake Villa",
+    "street": "21201 Grand Ave",
     "city": "Waukegan",
     "state": "IL",
     "zip": "60046",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "Waukegan Savanna Forest Preser",
-    "street": "38820 N Delany RdWadsworth",
+    "street": "38820 N Delany Rd",
     "city": "Waukegan",
     "state": "IL",
     "zip": "60083",

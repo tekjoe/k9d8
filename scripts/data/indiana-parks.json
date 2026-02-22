@@ -51,7 +51,7 @@
   },
   {
     "name": "Cicero Township Dog Park",
-    "street": "750 Development DrTipton",
+    "street": "750 Development Dr",
     "city": "Cicero",
     "state": "IN",
     "zip": "46072",
@@ -451,7 +451,7 @@
   },
   {
     "name": "Crate Escapes Dog Park",
-    "street": "18595 Carousel LnWestfield",
+    "street": "18595 Carousel Ln",
     "city": "Indianapolis",
     "state": "IN",
     "zip": "46074",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Beckenholdt Park",
-    "street": "2770 N Franklin StGreenfield",
+    "street": "2770 N Franklin St",
     "city": "Indianapolis",
     "state": "IN",
     "zip": "46140",
@@ -571,7 +571,7 @@
   },
   {
     "name": "McCaw Park",
-    "street": "McCaw Park",
+    "street": "Mc",
     "city": "Lafayette",
     "state": "IN",
     "zip": "47905",

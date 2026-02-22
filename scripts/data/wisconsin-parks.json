@@ -1,7 +1,7 @@
 [
   {
     "name": "Outagamie County Dog Park",
-    "street": "2830 French RdAppleton",
+    "street": "2830 French Rd",
     "city": "‍ Appleton",
     "state": "WI",
     "zip": "54911",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Kaukauna Dog Park",
-    "street": "366 Farmland CtKaukauna",
+    "street": "366 Farmland Ct",
     "city": "Green Bay",
     "state": "WI",
     "zip": "54130",
@@ -71,7 +71,7 @@
   },
   {
     "name": "‍ Meadowbrook Park",
-    "street": "670 Hillcrest HeightsHoward",
+    "street": "670 Hillcrest Heights",
     "city": "Green Bay",
     "state": "WI",
     "zip": "54313",
@@ -111,7 +111,7 @@
   },
   {
     "name": "De Pere Dog Park",
-    "street": "1400 Biotech WayDe Pere",
+    "street": "1400 Biotech Way",
     "city": "Green Bay",
     "state": "WI",
     "zip": "54115",
@@ -191,7 +191,7 @@
   },
   {
     "name": "Warren Close Bark Park",
-    "street": "35610 89th StTwin Lakes",
+    "street": "35610 89th St",
     "city": "Kenosha",
     "state": "WI",
     "zip": "53181",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Harris Family Dog Park",
-    "street": "24100 75th StSalem Lakes",
+    "street": "24100 75th St",
     "city": "Kenosha",
     "state": "WI",
     "zip": "53168",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Springbrook Park",
-    "street": "3519 Springbrook WayLa Crosse",
+    "street": "3519 Springbrook Way",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -251,7 +251,7 @@
   },
   {
     "name": "Grandad Bluff Park",
-    "street": "3020 Grandad Bluff RdLa Crosse",
+    "street": "3020 Grandad Bluff Rd",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Riverside Park",
-    "street": "100 State StLa Crosse",
+    "street": "100 State St",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -271,7 +271,7 @@
   },
   {
     "name": "Viroqua Bark Park",
-    "street": "700 Power DrViroqua",
+    "street": "700 Power Dr",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54665",
@@ -291,7 +291,7 @@
   },
   {
     "name": "Myrick Park",
-    "street": "2107 La Crosse StLa Crosse",
+    "street": "2107 La Crosse St",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -311,7 +311,7 @@
   },
   {
     "name": "Van Riper Park",
-    "street": "206 Riders Club RdOnalaska",
+    "street": "206 Riders Club Rd",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54650",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Pammel Creek Park",
-    "street": "5502 Southdale DrLa Crosse",
+    "street": "5502 Southdale Dr",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Schuh Park",
-    "street": "2225 Horton StLa Crosse",
+    "street": "2225 Horton St",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -341,7 +341,7 @@
   },
   {
     "name": "‍ Red Cloud Park",
-    "street": "520 Powell StLa Crosse",
+    "street": "520 Powell St",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -351,7 +351,7 @@
   },
   {
     "name": "Wittenberg Park",
-    "street": "George StLa Crosse",
+    "street": "George St",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54603",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Houska Park",
-    "street": "1011 Joseph Houska DrLa Crosse",
+    "street": "1011 Joseph Houska Dr",
     "city": "‍ La Crosse",
     "state": "WI",
     "zip": "54601",
@@ -371,7 +371,7 @@
   },
   {
     "name": "Prairie Moraine Dog Park",
-    "street": "6679 Wesner LnVerona",
+    "street": "6679 Wesner Ln",
     "city": "Madison",
     "state": "WI",
     "zip": "53593",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Fly Dog Parks Park",
-    "street": "1786 WI-19Marshall",
+    "street": "1786 WI-19",
     "city": "Madison",
     "state": "WI",
     "zip": "53559",
@@ -411,7 +411,7 @@
   },
   {
     "name": "Token Creek Dog Park",
-    "street": "Token Creek LnDeFore",
+    "street": "Token Creek LnDe",
     "city": "Madison",
     "state": "WI",
     "zip": "53532",
@@ -481,7 +481,7 @@
   },
   {
     "name": "Badger Prairie County Park",
-    "street": "4654 Maple Grove DrVerona",
+    "street": "4654 Maple Grove Dr",
     "city": "Madison",
     "state": "WI",
     "zip": "53593",
@@ -521,7 +521,7 @@
   },
   {
     "name": "‍ Sunnyside Dog Park",
-    "street": "5564 Irish LnFitchburg",
+    "street": "5564 Irish Ln",
     "city": "Madison",
     "state": "WI",
     "zip": "53711",
@@ -541,7 +541,7 @@
   },
   {
     "name": "Grant Park",
-    "street": "100 Hawthorne AveSouth",
+    "street": "100 Hawthorne Ave",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53172",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Estabrook Park",
-    "street": "4400 Estabrook PkwyShorewood",
+    "street": "4400 Estabrook Pkwy",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53211",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Hoyt Park",
-    "street": "1800 N Swan BlvdWauwatosa",
+    "street": "1800 N Swan Blvd",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53226",
@@ -611,7 +611,7 @@
   },
   {
     "name": "Bay View Park",
-    "street": "3120 S Lake DrSt Francis",
+    "street": "3120 S Lake Dr",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53235",
@@ -621,7 +621,7 @@
   },
   {
     "name": "The Hounds & Tap",
-    "street": "W175N5645 Technology DrMenomonee Falls",
+    "street": "W175N5645 Technology Dr",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53051",
@@ -631,7 +631,7 @@
   },
   {
     "name": "Muttland Meadows",
-    "street": "789 S Green Bay RdGrafton",
+    "street": "789 S Green Bay Rd",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53024",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Warnimont Park",
-    "street": "5400 S Lake DrCudahy",
+    "street": "5400 S Lake Dr",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53110",
@@ -651,7 +651,7 @@
   },
   {
     "name": "Homestead Howl Dog Park",
-    "street": "N120W19809 Freistadt RdGermantown",
+    "street": "N120W19809 Freistadt Rd",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53022",
@@ -671,7 +671,7 @@
   },
   {
     "name": "‍ Mitchell Park",
-    "street": "19900 River RdBrookfield",
+    "street": "19900 River Rd",
     "city": "‍ Milwaukee",
     "state": "WI",
     "zip": "53045",
@@ -731,7 +731,7 @@
   },
   {
     "name": "Sturtevant Dog Park",
-    "street": "8500 Broadway DrSturtevant",
+    "street": "8500 Broadway Dr",
     "city": "Racine",
     "state": "WI",
     "zip": "53177",
@@ -781,7 +781,7 @@
   },
   {
     "name": "Mukwonago Dog Exercise Park",
-    "street": "W325 S9925 Beulah RdMukwonago",
+    "street": "W325 S9925 Beulah Rd",
     "city": "‍ Waukesha",
     "state": "WI",
     "zip": "53149",
@@ -791,7 +791,7 @@
   },
   {
     "name": "‍ Mukwonago Park",
-    "street": "S100 W31900County Hwy LO",
+    "street": "S100 W31900",
     "city": "Mukwonago",
     "state": "WI",
     "zip": "53149",
@@ -801,7 +801,7 @@
   },
   {
     "name": "Menomonee Park",
-    "street": "W220 N7884Town Line Rd",
+    "street": "W220 N7884",
     "city": "Menomonee Falls",
     "state": "WI",
     "zip": "53051",
@@ -811,7 +811,7 @@
   },
   {
     "name": "Fox Brook Park",
-    "street": "2925 N Barker RdBrookfield",
+    "street": "2925 N Barker Rd",
     "city": "‍ Waukesha",
     "state": "WI",
     "zip": "53045",

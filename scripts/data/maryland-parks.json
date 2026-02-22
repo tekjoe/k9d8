@@ -1,7 +1,7 @@
 [
   {
     "name": "Cromwell Valley Park",
-    "street": "2002 Cromwell Bridge RdParkville",
+    "street": "2002 Cromwell Bridge Rd",
     "city": "Baltimore",
     "state": "MD",
     "zip": "21234",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Double Rock Park",
-    "street": "8211 Glen RdParkville",
+    "street": "8211 Glen Rd",
     "city": "Baltimore",
     "state": "MD",
     "zip": "21234",
@@ -101,7 +101,7 @@
   },
   {
     "name": "Worthington Off Leash Dog Park",
-    "street": "8170 Hillsborough RdEllicott City",
+    "street": "8170 Hillsborough Rd",
     "city": "Baltimore",
     "state": "MD",
     "zip": "21043",
@@ -191,7 +191,7 @@
   },
   {
     "name": "Othello Regional Park",
-    "street": "1901A Jefferson Pike",
+    "street": "1901",
     "city": "Frederick",
     "state": "MD",
     "zip": "21758",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Grays Road Dog Park",
-    "street": "2695 Grays RdPrince",
+    "street": "2695 Grays Rd",
     "city": "Frederick",
     "state": "MD",
     "zip": "20678",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Ridge Road Recreational Park",
-    "street": "21155 Frederick RdGermantown",
+    "street": "21155 Frederick Rd",
     "city": "Frederick",
     "state": "MD",
     "zip": "20876",
@@ -251,7 +251,7 @@
   },
   {
     "name": "Poolesville Dog Park",
-    "street": "Wootton AvePoolesville",
+    "street": "Wootton Ave",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20837",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Rock Creek Regional Park",
-    "street": "6700 Needwood RdDerwood",
+    "street": "6700 Needwood Rd",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20855",
@@ -271,7 +271,7 @@
   },
   {
     "name": "Olney Manor Recreational Park",
-    "street": "16601 Georgia AveOlney",
+    "street": "16601 Georgia Ave",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20832",
@@ -291,7 +291,7 @@
   },
   {
     "name": "Great Seneca Park",
-    "street": "Frederick RdGermantown",
+    "street": "Frederick Rd",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20876",
@@ -301,7 +301,7 @@
   },
   {
     "name": "Montgomery Village Dog Park",
-    "street": "9701 Stewartown RdMontgomery Village",
+    "street": "9701 Stewartown Rd",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20886",
@@ -311,7 +311,7 @@
   },
   {
     "name": "Piedmont Woods Dog Park",
-    "street": "12825 Snowden Farm PkwyClarksburg",
+    "street": "12825 Snowden Farm Pkwy",
     "city": "Gaithersburg",
     "state": "MD",
     "zip": "20871",
@@ -421,7 +421,7 @@
   },
   {
     "name": "Parklawn Local Park",
-    "street": "13000 Veirs Mill RdWheaton-Glenmont",
+    "street": "13000 Veirs Mill Rd",
     "city": "Rockville",
     "state": "MD",
     "zip": "20853",
@@ -471,7 +471,7 @@
   },
   {
     "name": "Heurich Dog Park",
-    "street": "6001 Ager RdHyattsville",
+    "street": "6001 Ager Rd",
     "city": "Rockville",
     "state": "MD",
     "zip": "20782",
@@ -481,7 +481,7 @@
   },
   {
     "name": "‍ Waggertail Dog Park",
-    "street": "6599 51st AveRiverdale",
+    "street": "6599 51st Ave",
     "city": "Rockville",
     "state": "MD",
     "zip": "20737",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Dog Park",
-    "street": "11710 Orebaugh AveWheaton",
+    "street": "11710 Orebaugh Ave",
     "city": "Rockville",
     "state": "MD",
     "zip": "20902",
@@ -521,7 +521,7 @@
   },
   {
     "name": "Takoma Park",
-    "street": "198 Darwin AveTakoma Park",
+    "street": "198 Darwin Ave",
     "city": "Rockville",
     "state": "MD",
     "zip": "20912",

@@ -11,7 +11,7 @@
   },
   {
     "name": "McCoy Farm & Gardens",
-    "street": "1604 Taft HwySignal Mountain",
+    "street": "1604 Taft Hwy",
     "city": "Chattanooga",
     "state": "TN",
     "zip": "37377",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Point Park",
-    "street": "110 Point Park RdLookout Mountain",
+    "street": "110 Point Park Rd",
     "city": "Chattanooga",
     "state": "TN",
     "zip": "37350",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Greenway Farm Park",
-    "street": "3008 Hamill RdHixson",
+    "street": "3008 Hamill Rd",
     "city": "Chattanooga",
     "state": "TN",
     "zip": "37343",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Soddy-Daisy Dog Park",
-    "street": "9009 Dayton PikeSoddy-Daisy",
+    "street": "9009 Dayton Pike",
     "city": "Chattanooga",
     "state": "TN",
     "zip": "37379",
@@ -101,7 +101,7 @@
   },
   {
     "name": "East Ridge Dog Park",
-    "street": "1517 Tombras AveEast Ridge",
+    "street": "1517 Tombras Ave",
     "city": "Chattanooga",
     "state": "TN",
     "zip": "37412",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Carden Farm Dog Park",
-    "street": "401 Riverview DrClinton",
+    "street": "401 Riverview Dr",
     "city": "Knoxville",
     "state": "TN",
     "zip": "37716",
@@ -451,7 +451,7 @@
   },
   {
     "name": "Suggs Dog Park",
-    "street": "163 E South StCollierville",
+    "street": "163 E South St",
     "city": "‍ Memphis",
     "state": "TN",
     "zip": "38017",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Forgey Park",
-    "street": "1695 Riverdale RdGermantown",
+    "street": "1695 Riverdale Rd",
     "city": "‍ Memphis",
     "state": "TN",
     "zip": "38138",
@@ -521,7 +521,7 @@
   },
   {
     "name": "Two Rivers Dog Park",
-    "street": "3150 McGavock Pk",
+    "street": "3150 Mc",
     "city": "Nashville",
     "state": "TN",
     "zip": "37214",
@@ -651,7 +651,7 @@
   },
   {
     "name": "Nutro Dog Park",
-    "street": "4441 Columbia PikeThompson's Station",
+    "street": "4441 Columbia Pike",
     "city": "Nashville",
     "state": "TN",
     "zip": "37179",
@@ -661,7 +661,7 @@
   },
   {
     "name": "Fenway's Dog Park",
-    "street": "745 Caldwell DrGoodlettsville",
+    "street": "745 Caldwell Dr",
     "city": "Nashville",
     "state": "TN",
     "zip": "37072",

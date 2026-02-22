@@ -1,0 +1,462 @@
+[
+  {
+    "name": "Bowler Park",
+    "street": "4403 S Surprise Way",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83716",
+    "latitude": 43.5599832,
+    "longitude": -116.1323316,
+    "description": "Bowler Park at 4403 S Surprise Way is well-regarded by Boise dog owners, holding 4.9 stars across 54 reviews. Open from 6am to 8pm daily, dog owners have plenty of flexibility to plan a visit. For variety, the neighborhood offers more dog parks to explore: Cypress Park (1.5 miles) and Manitou Park (3.8 miles)."
+  },
+  {
+    "name": "The Military Reserve",
+    "street": "750 Mountain Cove Rd",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83702",
+    "latitude": 43.616832,
+    "longitude": -116.185013,
+    "description": "The Military Reserve (4.8 stars from 656 reviews) is a popular destination for Boise dog owners, located at 750 Mountain Cove Rd. Open from 6am to 10pm daily, dog owners have plenty of flexibility to plan a visit. For a change of scenery, Fort Boise Dog Park is another dog-friendly destination 0.1 miles from here."
+  },
+  {
+    "name": "Ann Morrison Park",
+    "street": "1000 S Americana Blvd",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83706",
+    "latitude": 43.6182859,
+    "longitude": -116.2156572,
+    "description": "Ann Morrison Park at 1000 S Americana Blvd in Boise is a community favorite, with 4,583 dog owners giving it 4.7 stars. Dog owners in the area know they can count on this park for quality time with their pups. Want to give your pup even more adventure? Together Treasure Valley Dog is another beloved dog park just 0.7 miles away."
+  },
+  {
+    "name": "‍ Esther Simplot Park",
+    "street": "3206 W Pleasanton Ave",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83702",
+    "latitude": 43.626365,
+    "longitude": -116.2287023,
+    "description": "For Boise dog owners, Esther Simplot Park at 3206 W Pleasanton Ave has become a reliable favorite—4.7 stars from 1,144 reviews. Open from 7am to 10pm daily, it's easy for dog owners to stop by whenever works best. Looking to mix things up? Ann Morrison Park is a nearby dog park 0.9 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Lucky Peak State Park",
+    "street": "74 Arrow Rock Rd",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83716",
+    "latitude": 43.6061757,
+    "longitude": -115.9540182,
+    "description": "Lucky Peak State Park at 74 Arrow Rock Rd is well-regarded by Boise dog owners, holding 4.7 stars across 335 reviews. Dog owners looking for a solid destination will find this park delivers. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Together Treasure Valley Dog",
+    "street": "3417 Crescent Rim Dr",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83706",
+    "latitude": 43.6103125,
+    "longitude": -116.224566,
+    "description": "For dog owners in the Boise area, Together Treasure Valley Dog (3417 Crescent Rim Dr) offers a 4.6-star experience based on 218 reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include Morris Hill Dog Park (0.6 miles) and Morris Hill Park (0.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Manitou Park",
+    "street": "2001 S Manitou Ave",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83706",
+    "latitude": 43.587635,
+    "longitude": -116.198734,
+    "description": "Manitou Park (4.6 stars from 318 reviews) is a popular destination for Boise dog owners, located at 2001 S Manitou Ave. Open from 6am to 9pm daily, dog owners can easily fit a visit into busy schedules. For variety, the neighborhood offers more dog parks to explore: Fort Boise Dog Park (2.0 miles) and Together Treasure Valley Dog (2.0 miles)."
+  },
+  {
+    "name": "Winstead Park",
+    "street": "6150 W Northview St",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83704",
+    "latitude": 43.6264868,
+    "longitude": -116.2578664,
+    "description": "At 6150 W Northview St in Boise, Winstead Park has built a loyal following—4.6 stars from 497 dog owner reviews. The park serves dog owners well, providing a destination the community values. For a change of scenery, Esther Simplot Park is another dog-friendly destination 1.5 miles from here."
+  },
+  {
+    "name": "Molenaar Park",
+    "street": "2815 S Maple Grove Rd",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83709",
+    "latitude": 43.5774967,
+    "longitude": -116.2943564,
+    "description": "For dog owners in the Boise area, Molenaar Park (2815 S Maple Grove Rd) offers a 4.6-star experience based on 606 reviews. Open from 6am to 9:50pm daily, dog owners can plan visits around work or their pup's energy level. For variety, the neighborhood offers more dog parks to explore: Pine Grove Park (1.5 miles) and Mariposa Park (2.7 miles)."
+  },
+  {
+    "name": "Fort Boise Dog Park",
+    "street": "733 Mountain Cove Rd",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83702",
+    "latitude": 43.6150793,
+    "longitude": -116.1860885,
+    "description": "With 4.5 stars from 11 reviews, Fort Boise Dog Park at 733 Mountain Cove Rd has become a favorite among Boise dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. More dog-friendly parks nearby include The Military Reserve (0.1 miles) and Ann Morrison Park (1.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Cypress Park",
+    "street": "4382 S Tableridge Way",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83716",
+    "latitude": 43.5624883,
+    "longitude": -116.1629067,
+    "description": "Dog owners in Boise have made Cypress Park at 4382 S Tableridge Way a go-to spot, rating it 4.5 stars across 139 reviews. Open from 7am to 9pm daily, the park offers flexibility for dog owners with varying routines. For a change of scenery, Bowler Park is another dog-friendly destination 1.5 miles from here."
+  },
+  {
+    "name": "Jullion Park",
+    "street": "3801 N Jullion Way",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83704",
+    "latitude": 43.639613,
+    "longitude": -116.306343,
+    "description": "Boise dog owners rate Jullion Park at 3801 N Jullion Way highly, with 4.5 stars from 199 visits. Open from 7am to 8pm daily, there's plenty of opportunity for dog owners to find a time that works. Dog owners exploring the neighborhood can also bring their furry friends to Redwood Park (1.1 miles)."
+  },
+  {
+    "name": "Castle Hills Park",
+    "street": "5350 Eugene St",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83703",
+    "latitude": 43.6688548,
+    "longitude": -116.2635437,
+    "description": "With 4.5 stars from 201 reviews, Castle Hills Park at 5350 Eugene St has become a favorite among Boise dog owners. Open from 6am to 10pm daily, dog owners can easily fit a visit into busy schedules. More dog-friendly parks nearby include Clubhound (1.4 miles) and Sunset Park (2.5 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Sunset Park",
+    "street": "2625 N 32nd St",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83703",
+    "latitude": 43.6436012,
+    "longitude": -116.2284526,
+    "description": "At 2625 N 32nd St in Boise, Sunset Park has built a loyal following—4.5 stars from 392 dog owner reviews. Open from 7am to 7pm daily, the park offers flexibility for dog owners with varying routines. Dog owners can also take their pups to nearby Esther Simplot Park (1.2 miles) or Ann Morrison Park (1.9 miles)."
+  },
+  {
+    "name": "Morris Hill Park",
+    "street": "10 N Roosevelt St",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83706",
+    "latitude": 43.6046661,
+    "longitude": -116.2333794,
+    "description": "At 10 N Roosevelt St in Boise, Morris Hill Park has built a loyal following—4.5 stars from 458 dog owner reviews. Open from 7am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby Morris Hill Dog Park (0.0 miles) or Together Treasure Valley Dog (0.6 miles)."
+  },
+  {
+    "name": "‍ Redwood Park",
+    "street": "2675 N Shamrock Ave",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83713",
+    "latitude": 43.6303214,
+    "longitude": -116.3243743,
+    "description": "Dog owners in Boise have rated Redwood Park (2675 N Shamrock Ave) 4.4 stars across 377 reviews. Dog owners looking for a local destination will find this park accessible. Nearby dog parks worth exploring with your pup include Jullion Park (1.1 miles) and Mariposa Park (1.4 miles)."
+  },
+  {
+    "name": "Centennial Dog Park",
+    "street": "Centennial Way",
+    "city": "Caldwell",
+    "state": "ID",
+    "zip": "83605",
+    "latitude": 43.6808628,
+    "longitude": -116.6861436,
+    "description": "331 dog owners have reviewed Centennial Dog Park in Caldwell, averaging 4.3 stars. This park provides dog owners in the community with a place to visit with their dogs. Dog owners visiting for the first time may want to read recent reviews to learn what to expect."
+  },
+  {
+    "name": "Atlas Waterfront Park",
+    "street": "2411 N Atlas Rd",
+    "city": "‍ Coeur D'Alene",
+    "state": "ID",
+    "zip": "83814",
+    "latitude": 47.6974393,
+    "longitude": -116.8192615,
+    "description": "Atlas Waterfront Park at 2411 N Atlas Rd is well-regarded by Coeur d'Alene dog owners, holding 4.8 stars across 145 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Dog owners exploring the neighborhood can also bring their furry friends to Central Bark Dog Park (1.5 miles)."
+  },
+  {
+    "name": "McEuen Park",
+    "street": "504 E Front Ave",
+    "city": "‍ Coeur D'Alene",
+    "state": "ID",
+    "zip": "83814",
+    "latitude": 47.6725201,
+    "longitude": -116.7795307,
+    "description": "For Coeur d'Alene dog owners, McEuen Park at 504 E Front Ave has become a reliable favorite—4.7 stars from 3,440 reviews. The park has earned genuine loyalty from dog owners who value what it offers. Looking to mix things up? Atlas Mill Dog Park is a nearby dog park 0.1 miles away that's worth exploring with your pup."
+  },
+  {
+    "name": "Atlas Mill Dog Park",
+    "street": "",
+    "city": "‍ Coeur D'Alene",
+    "state": "ID",
+    "zip": "",
+    "latitude": 47.6742994,
+    "longitude": -116.7811531,
+    "description": "In Coeur d'Alene, Atlas Mill Dog Park has built a loyal following—4.6 stars from 103 dog owner reviews. Open from 5am to 11pm daily, there's plenty of opportunity for dog owners to find a time that works. For a change of scenery, McEuen Park is another dog-friendly destination 0.1 miles from here."
+  },
+  {
+    "name": "Central Bark Dog Park",
+    "street": "3889 W Nez Perce Rd",
+    "city": "‍ Coeur D'Alene",
+    "state": "ID",
+    "zip": "83815",
+    "latitude": 47.7167482,
+    "longitude": -116.8321326,
+    "description": "Central Bark Dog Park at 3889 W Nez Perce Rd holds a 4.4-star rating from 368 Coeur d'Alene dog owner visits. Open from 5am to 11pm daily, local dog owners have time to explore with their furry companions. Looking to explore more? Atlas Waterfront Park is another dog-friendly park 1.5 miles from here."
+  },
+  {
+    "name": "Cherry Hill Dog Park",
+    "street": "1500 N 15th St",
+    "city": "‍ Coeur D'Alene",
+    "state": "ID",
+    "zip": "83814",
+    "latitude": 47.6902059,
+    "longitude": -116.764187,
+    "description": "Dog owners in Coeur d'Alene have rated Cherry Hill Dog Park (1500 N 15th St) 4.2 stars across 46 reviews. This park provides dog owners in the community with a place to visit with their dogs. Looking to explore more? Atlas Mill Dog Park is another dog-friendly park 1.4 miles from here."
+  },
+  {
+    "name": "Eagle Small Dog Park",
+    "street": "3151 E Greenbrook St",
+    "city": "Eagle",
+    "state": "ID",
+    "zip": "83714",
+    "latitude": 43.7116548,
+    "longitude": -116.3157119,
+    "description": "Eagle Small Dog Park at 3151 E Greenbrook St holds a 4.4-star rating from 14 Eagle dog owner visits. The park gives neighborhood dog owners a destination for outings with their four-legged friends. For pups who want more adventure, Castle Hills Park is a nearby dog park worth visiting (3.9 miles)."
+  },
+  {
+    "name": "Clubhound",
+    "street": "415 E Remington St",
+    "city": "Garden City",
+    "state": "ID",
+    "zip": "83714",
+    "latitude": 43.6490809,
+    "longitude": -116.2673891,
+    "description": "At 415 E Remington St in Garden City, Clubhound has built a loyal following—4.5 stars from 67 dog owner reviews. Dog owners looking for a solid destination will find this park delivers. Other dog parks in the area include Castle Hills Park (1.4 miles) and Winstead Park (1.6 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Pawfoot Dog Park",
+    "street": "1347 W Lancaster Rd",
+    "city": "Hayden",
+    "state": "ID",
+    "zip": "83835",
+    "latitude": 47.7880485,
+    "longitude": -116.7867299,
+    "description": "With 4.5 stars from 95 reviews, Pawfoot Dog Park at 1347 W Lancaster Rd has become a favorite among Hayden dog owners. Open from 6am to 9pm daily, the park offers flexibility for dog owners with varying routines. Based on the reviews, dog owners can expect a reliable spot for spending time with their pup."
+  },
+  {
+    "name": "Willowbrook Park",
+    "street": "141 Beacon Dr",
+    "city": "Idaho Falls",
+    "state": "ID",
+    "zip": "83402",
+    "latitude": 43.5083063,
+    "longitude": -112.032002,
+    "description": "With 4.8 stars from 9 reviews, Willowbrook Park at 141 Beacon Dr has become a favorite among Idaho Falls dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Nearby, Dog Park (1.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Community Park",
+    "street": "455 E 25th St",
+    "city": "Idaho Falls",
+    "state": "ID",
+    "zip": "83404",
+    "latitude": 43.4754801,
+    "longitude": -112.0250837,
+    "description": "Community Park at 455 E 25th St is well-regarded by Idaho Falls dog owners, holding 4.6 stars across 789 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Nearby, Willowbrook Park (2.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Dog Park",
+    "street": "3000 Lindsay Blvd",
+    "city": "Idaho Falls",
+    "state": "ID",
+    "zip": "83402",
+    "latitude": 43.5241662,
+    "longitude": -112.0589359,
+    "description": "At 3000 Lindsay Blvd in Idaho Falls, Dog Park has built a loyal following—4.5 stars from 78 dog owner reviews. Dog owners looking for a solid destination will find this park delivers. Nearby, Willowbrook Park (1.7 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "‍ Kuna Dog Park",
+    "street": "E Stagecoach Way",
+    "city": "Kuna",
+    "state": "ID",
+    "zip": "83634",
+    "latitude": 43.4847931,
+    "longitude": -116.4087462,
+    "description": "Kuna Dog Park in Kuna is rated 4.1 stars by 48 dog owners. Open from 7am to 9pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners might also enjoy Discovery Park, another dog park just 4.7 miles away."
+  },
+  {
+    "name": "Discovery Park",
+    "street": "2121 E Lake Hazel Rd",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.5464041,
+    "longitude": -116.3678772,
+    "description": "Dog owners in Meridian have made Discovery Park at 2121 E Lake Hazel Rd a go-to spot, rating it 4.8 stars across 537 reviews. Dog owners looking for a solid destination will find this park delivers. Dog owners can also take their pups to nearby Discovery Bark Park (0.2 miles) or Storey Bark Park (3.9 miles)."
+  },
+  {
+    "name": "Idaho Pups & Ales",
+    "street": "70 S Outpost Ln",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.6042891,
+    "longitude": -116.4300987,
+    "description": "For dog owners in the Meridian area, Idaho Pups & Ales (70 S Outpost Ln) offers a 4.8-star experience based on 14 reviews. Open from 11:30am to 9pm daily, dog owners can plan visits around work or their pup's energy level. For a change of scenery, Lochsa Falls Park is another dog-friendly destination 1.9 miles from here."
+  },
+  {
+    "name": "Reta Huskey Park",
+    "street": "2887 W Tubac Dr",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83646",
+    "latitude": 43.6377409,
+    "longitude": -116.4298704,
+    "description": "With 4.6 stars from 93 reviews, Reta Huskey Park at 2887 W Tubac Dr has become a favorite among Meridian dog owners. Local dog owners appreciate what this park offers their four-legged friends. Dog owners exploring the neighborhood can also bring their furry friends to Heroes Park (1.2 miles)."
+  },
+  {
+    "name": "Discovery Bark Park",
+    "street": "2385 E Lake Hazel Rd",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.546423,
+    "longitude": -116.3647214,
+    "description": "Located at 2385 E Lake Hazel Rd in Meridian, Discovery Bark Park earns strong marks from local dog owners—4.6 stars from 141 reviews. Open from 6am to 9pm daily, dog owners have plenty of flexibility to plan a visit. Other dog parks in the area include Discovery Park (0.2 miles) and Storey Bark Park (3.9 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Heroes Park",
+    "street": "3064 W Malta Dr",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83646",
+    "latitude": 43.6552878,
+    "longitude": -116.4331117,
+    "description": "Located at 3064 W Malta Dr in Meridian, Heroes Park earns strong marks from local dog owners—4.6 stars from 495 reviews. Open from 7am to 9pm daily, dog owners can plan visits around work or their pup's energy level. More dog-friendly parks nearby include Keith Bird Legacy Park (0.5 miles) and Reta Huskey Park (1.2 miles)—perfect for pups who love adventure."
+  },
+  {
+    "name": "Storey Park",
+    "street": "205 E Franklin Rd",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.6046043,
+    "longitude": -116.3913649,
+    "description": "Dog owners in Meridian have made Storey Park at 205 E Franklin Rd a go-to spot, rating it 4.6 stars across 757 reviews. Open from 6am to 10pm daily, there's plenty of opportunity for dog owners to find a time that works. Other dog parks in the area include Lochsa Falls Park (0.3 miles) and Storey Bark Park (0.3 miles)—both great for exploring with your four-legged friend."
+  },
+  {
+    "name": "Storey Bark Park",
+    "street": "430 E Watertower St",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.6008559,
+    "longitude": -116.3882017,
+    "description": "At 430 E Watertower St in Meridian, Storey Bark Park stands out with 4.6 stars from 1,246 happy dog owners. Open from 7am to 9pm daily, it's easy for dog owners to stop by whenever works best. Want to give your pup even more adventure? Storey Park is another beloved dog park just 0.3 miles away."
+  },
+  {
+    "name": "Crosby Park",
+    "street": "5389 N Dietrich Ave",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83646",
+    "latitude": 43.6556973,
+    "longitude": -116.4009922,
+    "description": "Meridian dog owners rate Crosby Park at 5389 N Dietrich Ave highly, with 4.5 stars from 25 visits. Dog owners frequent this park for its consistent quality and welcoming atmosphere. For a change of scenery, Heroes Park is another dog-friendly destination 1.6 miles from here."
+  },
+  {
+    "name": "Keith Bird Legacy Park",
+    "street": "3737 W Lost Rapids Dr",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83646",
+    "latitude": 43.6597583,
+    "longitude": -116.439791,
+    "description": "Keith Bird Legacy Park at 3737 W Lost Rapids Dr is well-regarded by Meridian dog owners, holding 4.5 stars across 96 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. For a change of scenery, Heroes Park is another dog-friendly destination 0.5 miles from here."
+  },
+  {
+    "name": "Lochsa Falls Park",
+    "street": "",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "",
+    "latitude": 43.6086295,
+    "longitude": -116.392326,
+    "description": "68 dog owners have reviewed Lochsa Falls Park in Meridian, averaging 4.4 stars. Open from 7am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners looking for variety can also visit Centennial Park (0.2 miles) or Storey Park (0.3 miles) with their four-legged friends."
+  },
+  {
+    "name": "Seasons Park",
+    "street": "5300 W Ridgeside St",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83646",
+    "latitude": 43.6270175,
+    "longitude": -116.4599535,
+    "description": "Dog owners in Meridian have rated Seasons Park (5300 W Ridgeside St) 4.4 stars across 79 reviews. Open from 6am to 9pm daily, dog owners have a window to spend time with their pups. Dog owners looking for variety can also visit Reta Huskey Park (1.7 miles) or Idaho Pups & Ales (2.2 miles) with their four-legged friends."
+  },
+  {
+    "name": "‍ Centennial Park",
+    "street": "223 E Idaho Ave",
+    "city": "Meridian",
+    "state": "ID",
+    "zip": "83642",
+    "latitude": 43.6109365,
+    "longitude": -116.3897246,
+    "description": "Centennial Park at 223 E Idaho Ave holds a 4.3-star rating from 111 Meridian dog owner visits. Dog owners looking for a local destination will find this park accessible. For pups who want more adventure, Lochsa Falls Park is a nearby dog park worth visiting (0.2 miles)."
+  },
+  {
+    "name": "Amity Dog Park",
+    "street": "2900 2nd St S",
+    "city": "Nampa",
+    "state": "ID",
+    "zip": "83686",
+    "latitude": 43.5878757,
+    "longitude": -116.5772434,
+    "description": "1,481 dog owners have made Amity Dog Park (2900 2nd St S) one of Nampa's most trusted parks (4.7 stars). Open from 7am to 9pm daily, the park is convenient for before work, after work, or weekend adventures. Nearby, Huckleberry Dog Park (2.3 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Huckleberry Dog Park",
+    "street": "11370 Smith Ave",
+    "city": "Nampa",
+    "state": "ID",
+    "zip": "83651",
+    "latitude": 43.5832356,
+    "longitude": -116.6219167,
+    "description": "Huckleberry Dog Park at 11370 Smith Ave is well-regarded by Nampa dog owners, holding 4.5 stars across 68 reviews. The steady stream of dog owner visits speaks to the park's appeal. Nearby, Amity Dog Park (2.3 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Bartz Field",
+    "street": "",
+    "city": "Pocatello",
+    "state": "ID",
+    "zip": "",
+    "latitude": 42.8620287,
+    "longitude": -112.450627,
+    "description": "Pocatello dog owners rate Bartz Field highly, with 4.5 stars from 97 visits. For dog owners in the area, this park has become a trusted spot for time with their pups. Nearby, Old Town Bark Park (0.1 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Old Town Bark Park",
+    "street": "W Center St",
+    "city": "Pocatello",
+    "state": "ID",
+    "zip": "83201",
+    "latitude": 42.8627056,
+    "longitude": -112.4496821,
+    "description": "231 dog owners have reviewed Old Town Bark Park in Pocatello, averaging 4.3 stars. Dog owners in the area appreciate having a local spot to bring their pups. Looking to explore more? Bartz Field is another dog-friendly park 0.1 miles from here."
+  },
+  {
+    "name": "Baxter's Dog Park",
+    "street": "240 Shoup Ave W",
+    "city": "Twin Falls",
+    "state": "ID",
+    "zip": "83301",
+    "latitude": 42.5652778,
+    "longitude": -114.4828124,
+    "description": "Baxter's Dog Park at 240 Shoup Ave W is well-regarded by Twin Falls dog owners, holding 4.4 stars across 556 reviews. Local dog owners appreciate what this park offers their four-legged friends. Local dog owners have clearly found this to be a worthwhile destination."
+  }
+]

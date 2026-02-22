@@ -1,0 +1,392 @@
+[
+  {
+    "name": "FETCH Park",
+    "street": "20257 Daugherty Rd",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "39560",
+    "latitude": 30.3762247,
+    "longitude": -89.1804761,
+    "description": "Located at 20257 Daugherty Rd in Gulfport, FETCH Park earns strong marks from local dog owners—4.7 stars from 108 reviews. For dog owners in the area, this park has become a trusted spot for time with their pups. The positive feedback from local dog owners speaks to the park's consistent quality."
+  },
+  {
+    "name": "Harrison County Dog Park",
+    "street": "",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "",
+    "latitude": 30.4553392,
+    "longitude": -89.1313136,
+    "description": "With 5.0 stars from 12 reviews, Harrison County Dog Park has become a favorite among Gulfport dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "D'Iberville Dog Park",
+    "street": "10071 7th Ave",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "39540",
+    "latitude": 30.431858,
+    "longitude": -88.9006035,
+    "description": "With 4.6 stars from 13 reviews, D'Iberville Dog Park at 10071 7th Ave has become a favorite among Gulfport dog owners. Dog owners in the area consistently choose this park as a go-to destination for their pups. Nearby, Pixie’s Memorial Dog Park (3.5 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Bark Park",
+    "street": "Jeffrey Cir",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "39501",
+    "latitude": 30.3894547,
+    "longitude": -89.0706222,
+    "description": "Dog owners in Gulfport have rated Bark Park 4.4 stars across 144 reviews. Open from 6:30am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners in the neighborhood can also take their furry friends to Seabee Base Dog Park, 2.0 miles away."
+  },
+  {
+    "name": "Seabee Base Dog Park",
+    "street": "",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "",
+    "latitude": 30.3674198,
+    "longitude": -89.0928155,
+    "description": "In Gulfport, Seabee Base Dog Park carries 4.4 stars from 25 dog owner reviews. For dog owners in the neighborhood, this park offers a place to take their pups. For pups who want more adventure, Bark Park is a nearby dog park worth visiting (2.0 miles)."
+  },
+  {
+    "name": "Waveland Bark Park",
+    "street": "220 Pine St",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "39576",
+    "latitude": 30.2798187,
+    "longitude": -89.3869613,
+    "description": "Dog owners in Gulfport have rated Waveland Bark Park (220 Pine St) 4.3 stars across 50 reviews. Open from 7am to 8pm daily, the park fits conveniently into different routines. Reading what other dog owners have experienced here can help with planning a visit."
+  },
+  {
+    "name": "Pixie’s Memorial Dog Park",
+    "street": "Egers Rd",
+    "city": "Gulfport",
+    "state": "MS",
+    "zip": "39531",
+    "latitude": 30.4077148,
+    "longitude": -88.9525865,
+    "description": "266 dog owners have reviewed Pixie’s Memorial Dog Park in Gulfport, averaging 4.2 stars. Open from 6am to 10pm daily, the park gives dog owners in the neighborhood time to bring their pups. Dog owners might also enjoy D'Iberville Dog Park, another dog park just 3.5 miles away."
+  },
+  {
+    "name": "Flowood Nature Park",
+    "street": "4077 Flowood Dr",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39232",
+    "latitude": 32.3476102,
+    "longitude": -90.0577698,
+    "description": "Located at 4077 Flowood Dr in Jackson, Flowood Nature Park earns strong marks from local dog owners—4.8 stars from 449 reviews. Open from 6am to 9pm daily, the park accommodates early risers and evening visitors alike. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Old Trace Park",
+    "street": "422 Post Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39157",
+    "latitude": 32.4282667,
+    "longitude": -90.0804105,
+    "description": "Jackson dog owners rate Old Trace Park at 422 Post Rd highly, with 4.7 stars from 825 visits. Open from 6am to 8pm daily, the park accommodates early risers and evening visitors alike. For a change of scenery, Dog Park is another dog-friendly destination 1.6 miles from here."
+  },
+  {
+    "name": "Ocean Springs Dog Park",
+    "street": "",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "",
+    "latitude": 30.4112904,
+    "longitude": -88.8279165,
+    "description": "In Jackson, Ocean Springs Dog Park earns strong marks from local dog owners—4.6 stars from 143 reviews. The steady stream of dog owner visits speaks to the park's appeal. Nearby, D'Iberville Dog Park (4.6 miles) offers dog owners another great spot to explore with their pups."
+  },
+  {
+    "name": "Fields of Barktopia",
+    "street": "107 Jackson Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39402",
+    "latitude": 31.3504353,
+    "longitude": -89.3990208,
+    "description": "With 4.6 stars from 83 reviews, Fields of Barktopia at 107 Jackson Rd has become a favorite among Jackson dog owners. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Dog owners looking for a dependable spot will find this park lives up to its ratings."
+  },
+  {
+    "name": "Pavilion Dog Park",
+    "street": "Boyce Thompson Dr",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39042",
+    "latitude": 32.2731263,
+    "longitude": -90.0213195,
+    "description": "Dog owners in Jackson have made Pavilion Dog Park a go-to spot, rating it 4.5 stars across 31 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. The steady stream of positive reviews suggests dog owners consistently have good experiences here."
+  },
+  {
+    "name": "Vicksburg Dog Park",
+    "street": "5800 US-61",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39180",
+    "latitude": 32.241178,
+    "longitude": -90.92301,
+    "description": "Located at 5800 US-61 in Jackson, Vicksburg Dog Park earns strong marks from local dog owners—4.5 stars from 38 reviews. Local dog owners appreciate what this park offers their four-legged friends. Local dog owners have clearly found this to be a worthwhile destination."
+  },
+  {
+    "name": "Laurel Street Park",
+    "street": "1841 Laurel St",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39202",
+    "latitude": 32.3185642,
+    "longitude": -90.1630996,
+    "description": "Laurel Street Park (4.5 stars from 114 reviews) is a popular destination for Jackson dog owners, located at 1841 Laurel St. Open from 5am to 10pm daily, dog owners have plenty of flexibility to plan a visit. Dog owners can also take their pups to nearby LeFleur's Bluff State Park (1.2 miles) or Jamie Fowler Boyll Park (1.2 miles)."
+  },
+  {
+    "name": "Play Place",
+    "street": "100 Furr Dr",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39218",
+    "latitude": 32.2172739,
+    "longitude": -90.1471818,
+    "description": "Located at 100 Furr Dr in Jackson, Play Place earns strong marks from local dog owners—4.5 stars from 152 reviews. Open from 6:30am to 10pm daily, the park offers flexibility for dog owners with varying routines. Looking for more places to take your pup? Richland Westside Park is another popular dog park just 0.8 miles away."
+  },
+  {
+    "name": "Dog Park",
+    "street": "7113 Old Canton Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39157",
+    "latitude": 32.4222352,
+    "longitude": -90.1064516,
+    "description": "Dog Park at 7113 Old Canton Rd is well-regarded by Jackson dog owners, holding 4.5 stars across 283 reviews. The park has earned its reputation among dog owners in the neighborhood as a reliable choice. Looking for more places to take your pup? Old Trace Park is another popular dog park just 1.6 miles away."
+  },
+  {
+    "name": "‍ LeFleur's Bluff State Park",
+    "street": "3315 Lakeland Terrace",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39216",
+    "latitude": 32.3310905,
+    "longitude": -90.1495891,
+    "description": "With 4.5 stars across 1,580 reviews, LeFleur's Bluff State Park at 3315 Lakeland Terrace has clearly won over Jackson dog owners. Open from 8am to 5pm daily, there's always time for dog owners to bring their pup for some quality time. Nearby, Jamie Fowler Boyll Park (0.3 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Clinton Bark Park",
+    "street": "913 Old Vicksburg Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39056",
+    "latitude": 32.3444253,
+    "longitude": -90.2985237,
+    "description": "At 913 Old Vicksburg Rd, Clinton Bark Park has 4.4 stars based on 15 reviews from Jackson dog owners. Open from 6am to 7pm daily, the park is accessible for dog owners in the area. Looking to explore more? Kids Towne Park is another dog-friendly park 0.0 miles from here."
+  },
+  {
+    "name": "Jamie Fowler Boyll Park",
+    "street": "1398 Lakeland Dr",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39216",
+    "latitude": 32.334241,
+    "longitude": -90.153708,
+    "description": "Located at 1398 Lakeland Dr, Jamie Fowler Boyll Park in Jackson is rated 4.4 stars by 34 dog owners. Open from 6am to 9pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Nearby dog parks worth exploring with your pup include LeFleur's Bluff State Park (0.3 miles) and Laurel Street Park (1.2 miles)."
+  },
+  {
+    "name": "Jenkins Park",
+    "street": "718 Old Whitfield Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39208",
+    "latitude": 32.2524701,
+    "longitude": -90.1057787,
+    "description": "Jenkins Park at 718 Old Whitfield Rd in Jackson has 4.4 stars from 77 dog owner reviews. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. For dog owners who like to explore, Play Place (3.4 miles) and Richland Westside Park (4.2 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Richland Westside Park",
+    "street": "160 Brandon Ave",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39218",
+    "latitude": 32.2100014,
+    "longitude": -90.1581157,
+    "description": "Richland Westside Park at 160 Brandon Ave holds a 4.4-star rating from 217 Jackson dog owner visits. Open from 6:30am to 10pm daily, the park fits conveniently into different routines. For dog owners who like to explore, Play Place (0.8 miles) and Jenkins Park (4.2 miles) are both nearby parks to try with your dog."
+  },
+  {
+    "name": "Tougaloo Park",
+    "street": "300 Brown St",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39206",
+    "latitude": 32.3931678,
+    "longitude": -90.1578235,
+    "description": "15 dog owners have reviewed Tougaloo Park at 300 Brown St in Jackson, averaging 4.1 stars. Open from 6am to 10pm daily, dog owners have flexibility to plan a visit with their four-legged friends. Dog owners might also enjoy Manhattan Park, another dog park just 1.3 miles away."
+  },
+  {
+    "name": "Manhattan Park",
+    "street": "210 Cedars of Lebanon Rd",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39206",
+    "latitude": 32.3736777,
+    "longitude": -90.159157,
+    "description": "Manhattan Park at 210 Cedars of Lebanon Rd provides Jackson dog owners with a local spot to visit with their pups. This park provides dog owners in the community with a place to visit with their dogs. More dog parks in the area include Tougaloo Park (1.3 miles) and Jamie Fowler Boyll Park (2.7 miles)—great options for mixing up your pup's routine."
+  },
+  {
+    "name": "Shelby Farms Dog Park",
+    "street": "Raleigh Lagrange Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38134",
+    "latitude": 35.1819166,
+    "longitude": -89.8652169,
+    "description": "For Southaven dog owners, Shelby Farms Dog Park has become a reliable favorite—4.8 stars from 1,126 reviews. Open from 6:30am to 8pm daily, dog owners can plan visits around their pup's favorite times to be active. Keep the adventure going at other nearby dog parks like Stoneridge Park (3.1 miles) or Shelby Farms Park (3.5 miles)."
+  },
+  {
+    "name": "Olive Branch City Park",
+    "street": "8267 Goodman Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38654",
+    "latitude": 34.9621049,
+    "longitude": -89.8441907,
+    "description": "At 8267 Goodman Rd in Southaven, Olive Branch City Park stands out with 4.7 stars from 1,936 happy dog owners. Open from 5:15am to 11pm daily, dog owners have plenty of flexibility to visit when it suits their schedule. For variety, many dog owners also bring their furry friends to Heroes Park (4.3 miles)—another great dog park in the area."
+  },
+  {
+    "name": "DeSoto County Veterans Park",
+    "street": "",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "",
+    "latitude": 34.9873822,
+    "longitude": -90.0034862,
+    "description": "For dog owners in the Southaven area, DeSoto County Veterans Park offers a 4.7-star experience based on 27 reviews. Dog owners in the area consistently choose this park as a go-to destination for their pups. For variety, the neighborhood offers more dog parks to explore: Cherry Valley Football Park (0.0 miles) and Brookhaven neighborhood park (1.1 miles)."
+  },
+  {
+    "name": "Renasant Park",
+    "street": "3335 Hwy 51 SHernando",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38632",
+    "latitude": 34.8531766,
+    "longitude": -89.9977704,
+    "description": "With 4.7 stars from 16 reviews, Renasant Park at 3335 Hwy 51 S has become a favorite among Southaven dog owners. The steady stream of dog owner visits speaks to the park's appeal. A solid track record makes this a reliable choice for dog owners."
+  },
+  {
+    "name": "Cherry Valley Football Park",
+    "street": "",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "",
+    "latitude": 34.9873822,
+    "longitude": -90.0034862,
+    "description": "In Southaven, Cherry Valley Football Park earns strong marks from local dog owners—4.7 stars from 10 reviews. Dog owners frequent this park for its consistent quality and welcoming atmosphere. Dog owners exploring the neighborhood can also bring their furry friends to DeSoto County Veterans Park (0.0 miles)."
+  },
+  {
+    "name": "Sea Isle Park",
+    "street": "1264 Wellsville Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38117",
+    "latitude": 35.0976053,
+    "longitude": -89.8896048,
+    "description": "Dog owners in Southaven have made Sea Isle Park at 1264 Wellsville Rd a go-to spot, rating it 4.6 stars across 465 reviews. Open from 6am to 8pm daily, dog owners can easily fit a visit into busy schedules. Dog owners exploring the neighborhood can also bring their furry friends to Forgey Park (3.7 miles)."
+  },
+  {
+    "name": "Overton Bark",
+    "street": "2080 Poplar Ave",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38104",
+    "latitude": 35.1419561,
+    "longitude": -89.9914489,
+    "description": "For dog owners in the Southaven area, Overton Bark (2080 Poplar Ave) offers a 4.6-star experience based on 496 reviews. Open from 6am to 8pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Tobey Dog Park is another popular dog park just 1.1 miles away."
+  },
+  {
+    "name": "Snowden Grove Park",
+    "street": "6450 Getwell Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38672",
+    "latitude": 34.9544446,
+    "longitude": -89.9361274,
+    "description": "At 6450 Getwell Rd in Southaven, Snowden Grove Park stands out with 4.6 stars from 1,026 happy dog owners. The strong community of dog owners here reflects how much the park is valued. Nearby, Central Park (2.0 miles) is another dog park favorite where you can take your four-legged friend."
+  },
+  {
+    "name": "Tobey Dog Park",
+    "street": "2599 Avery Ave",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38112",
+    "latitude": 35.1308527,
+    "longitude": -89.9766346,
+    "description": "15 dog owners have reviewed Tobey Dog Park at 2599 Avery Ave in Southaven, averaging 4.4 stars. Local dog owners use this park as a spot to spend time with their furry companions. Dog owners might also enjoy Tobey Park, another dog park just 0.0 miles away."
+  },
+  {
+    "name": "Central Park",
+    "street": "7505 Stonegate Blvd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38671",
+    "latitude": 34.9662906,
+    "longitude": -89.9674703,
+    "description": "Central Park (4.5 stars from 786 reviews) is a popular destination for Southaven dog owners, located at 7505 Stonegate Blvd. Open from 6am to 8pm daily, dog owners can plan visits around work or their pup's energy level. Looking for more places to take your pup? Southern Pines Park is another popular dog park just 0.7 miles away."
+  },
+  {
+    "name": "Central Bark",
+    "street": "539 S Front St",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38103",
+    "latitude": 35.1311411,
+    "longitude": -90.0613042,
+    "description": "Located at 539 S Front St, Central Bark in Southaven is rated 4.1 stars by 22 dog owners. Dog owners looking for a local destination will find this park accessible. Looking to explore more? Martyrs Park is another dog-friendly park 0.6 miles from here."
+  },
+  {
+    "name": "Swinnea Park",
+    "street": "6371 Swinnea Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38671",
+    "latitude": 34.9536832,
+    "longitude": -89.9722299,
+    "description": "Located at 6371 Swinnea Rd, Swinnea Park in Southaven is rated 4.2 stars by 45 dog owners. Open from 6am to 9pm daily, local dog owners have time to explore with their furry companions. For pups who want more adventure, Southern Pines Park is a nearby dog park worth visiting (0.3 miles)."
+  },
+  {
+    "name": "The Barking Lot Dog Park",
+    "street": "75 Jefferson Ave",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38103",
+    "latitude": 35.1470506,
+    "longitude": -90.052398,
+    "description": "In Southaven, dog owners can find The Barking Lot Dog Park at 75 Jefferson Ave—a local park worth exploring with their furry companions. The park gives neighborhood dog owners a destination for outings with their four-legged friends. Dog owners looking for variety can also visit Central Bark (1.2 miles) or Martyrs Park (1.7 miles) with their four-legged friends."
+  },
+  {
+    "name": "Southern Pines Park",
+    "street": "6655 Blue Spruce Dr",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38671",
+    "latitude": 34.9578849,
+    "longitude": -89.9745572,
+    "description": "Southaven dog owners have access to Southern Pines Park at 6655 Blue Spruce Dr for outings with their four-legged friends. This park provides dog owners in the community with a place to visit with their dogs. Looking to explore more? Swinnea Park is another dog-friendly park 0.3 miles from here."
+  },
+  {
+    "name": "Wooten Park",
+    "street": "2690 Nail Rd",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38637",
+    "latitude": 34.9481597,
+    "longitude": -90.0394072,
+    "description": "Located at 2690 Nail Rd, Wooten Park offers Southaven dog owners a neighborhood destination for their four-legged friends. The neighborhood benefits from having this park as an option for dog owners and their pups. Looking to explore more? Brookhaven neighborhood park is another dog-friendly park 2.5 miles from here."
+  },
+  {
+    "name": "Brookhaven neighborhood park",
+    "street": "1725 Brookhaven Dr",
+    "city": "Southaven",
+    "state": "MS",
+    "zip": "38671",
+    "latitude": 34.9805067,
+    "longitude": -90.0212109,
+    "description": "Dog owners in the Southaven area will find Brookhaven neighborhood park at 1725 Brookhaven Dr—a local option for spending time with their pups. Open from 7am to 9:30pm daily, dog owners have a window to spend time with their pups. Looking to explore more? DeSoto County Veterans Park is another dog-friendly park 1.1 miles from here."
+  }
+]

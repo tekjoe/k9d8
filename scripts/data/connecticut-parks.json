@@ -11,7 +11,7 @@
   },
   {
     "name": "Rowayton Dog Park",
-    "street": "36 McKinley StNorwalk",
+    "street": "36 McKinley St",
     "city": "Bridgeport",
     "state": "CT",
     "zip": "06853",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Indian Ledge Park",
-    "street": "Indian Ledge Park RdTrumbull",
+    "street": "Indian Ledge Park Rd",
     "city": "Bridgeport",
     "state": "CT",
     "zip": "06611",
@@ -71,7 +71,7 @@
   },
   {
     "name": "‍ Jared's Dog Park",
-    "street": "700 Peters LnStratford",
+    "street": "700 Peters Ln",
     "city": "Bridgeport",
     "state": "CT",
     "zip": "06614",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Taylor Farm Dog Park",
-    "street": "7 Calf Pasture Beach RdNorwalk",
+    "street": "7 Calf Pasture Beach Rd",
     "city": "Bridgeport",
     "state": "CT",
     "zip": "06855",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Eisenhower Dog Park",
-    "street": "1001 W River StMilford",
+    "street": "1001 W River St",
     "city": "Bridgeport",
     "state": "CT",
     "zip": "06461",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Riverfront Park",
-    "street": "300 Welles StGlastonbury",
+    "street": "300 Welles St",
     "city": "Hartford",
     "state": "CT",
     "zip": "06033",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Berlin Dog Park",
-    "street": "600 Spruce Brook RdBerlin",
+    "street": "600 Spruce Brook Rd",
     "city": "Hartford",
     "state": "CT",
     "zip": "06037",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Rocky Hill Dog Park",
-    "street": "376 Elm StRocky Hill",
+    "street": "376 Elm St",
     "city": "Hartford",
     "state": "CT",
     "zip": "06067",
@@ -301,7 +301,7 @@
   },
   {
     "name": "B.A.R.K. Park",
-    "street": "99 Rockwell Park RdBristol",
+    "street": "99 Rockwell Park Rd",
     "city": "Hartford",
     "state": "CT",
     "zip": "06010",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Wethersfield Dog Park",
-    "street": "154 Prospect StWethersfield",
+    "street": "154 Prospect St",
     "city": "Hartford",
     "state": "CT",
     "zip": "06109",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Windsor Dog Park",
-    "street": "145 Lang RdWindsor",
+    "street": "145 Lang Rd",
     "city": "Hartford",
     "state": "CT",
     "zip": "06095",
@@ -461,7 +461,7 @@
   },
   {
     "name": "‍ Waveny Park",
-    "street": "677 South AveNew Canaan",
+    "street": "677 South Ave",
     "city": "Norwalk",
     "state": "CT",
     "zip": "06840",
@@ -611,7 +611,7 @@
   },
   {
     "name": "Southbury Dog Park",
-    "street": "236 Roxbury RdSouthbury",
+    "street": "236 Roxbury Rd",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06488",
@@ -621,7 +621,7 @@
   },
   {
     "name": "Peterson Memorial Park",
-    "street": "123 Mad River RdWolcott",
+    "street": "123 Mad River Rd",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06716",
@@ -631,7 +631,7 @@
   },
   {
     "name": "Andrew Mountain Park",
-    "street": "Andrew Mountain RdNaugatuck",
+    "street": "Andrew Mountain Rd",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06770",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Watertown Dog Park",
-    "street": "1365 Main StWatertown",
+    "street": "1365 Main St",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06795",
@@ -661,7 +661,7 @@
   },
   {
     "name": "Hop Brook Lake",
-    "street": "4 Straits TurnpikeMiddlebury",
+    "street": "4 Straits Turnpike",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06762",
@@ -751,7 +751,7 @@
   },
   {
     "name": "Birge Pond/Hoppers",
-    "street": "54 Ambler RdBristol",
+    "street": "54 Ambler Rd",
     "city": "Waterbury",
     "state": "CT",
     "zip": "06010",
@@ -771,7 +771,7 @@
   },
   {
     "name": "Veterans Memorial Dog Park",
-    "street": "91 Bull Hill LnWest Haven",
+    "street": "91 Bull Hill Ln",
     "city": "‍ West Haven",
     "state": "CT",
     "zip": "06516",

@@ -41,7 +41,7 @@
   },
   {
     "name": "Nazareth Dog Park",
-    "street": "Black Rock RdNazareth",
+    "street": "Black Rock Rd",
     "city": "Allentown",
     "state": "PA",
     "zip": "18064",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Polk Valley Park",
-    "street": "2068 Polk Valley RdHellertown",
+    "street": "2068 Polk Valley Rd",
     "city": "Allentown",
     "state": "PA",
     "zip": "18055",
@@ -101,7 +101,7 @@
   },
   {
     "name": "Route 100 Off-Leash Dog Park",
-    "street": "1625 PA-100Fogelsville",
+    "street": "1625 PA-100",
     "city": "Allentown",
     "state": "PA",
     "zip": "18051",
@@ -201,7 +201,7 @@
   },
   {
     "name": "‍ Adams-Ricci Park",
-    "street": "100 E Penn DrEnola",
+    "street": "100 E Penn Dr",
     "city": "Harrisburg",
     "state": "PA",
     "zip": "17025",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Doggie Dugout-Registration",
-    "street": "4075 Lisburn RdBowmansdale",
+    "street": "4075 Lisburn Rd",
     "city": "Harrisburg",
     "state": "PA",
     "zip": "17055",
@@ -391,7 +391,7 @@
   },
   {
     "name": "‍ West Mill Creek Park",
-    "street": "Mill Creek RdGladwyne",
+    "street": "Mill Creek Rd",
     "city": "Philadelphia",
     "state": "PA",
     "zip": "19035",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Harford Park",
-    "street": "260 Gulph Creek RdWayne",
+    "street": "260 Gulph Creek Rd",
     "city": "Philadelphia",
     "state": "PA",
     "zip": "19087",
@@ -461,7 +461,7 @@
   },
   {
     "name": "Rolling Hill Park",
-    "street": "1301 Rose Glen RdGladwyne",
+    "street": "1301 Rose Glen Rd",
     "city": "Philadelphia",
     "state": "PA",
     "zip": "19035",
@@ -481,7 +481,7 @@
   },
   {
     "name": "‍ Horsham Dog Park",
-    "street": "1013 Horsham RdHorsham",
+    "street": "1013 Horsham Rd",
     "city": "Philadelphia",
     "state": "PA",
     "zip": "19044",
@@ -531,7 +531,7 @@
   },
   {
     "name": "‍ Mingo Creek County Park",
-    "street": "3111 Route 136Finleyville",
+    "street": "3111 Route 136",
     "city": "‍ Pittsburgh",
     "state": "PA",
     "zip": "15332",
@@ -571,7 +571,7 @@
   },
   {
     "name": "‍ Sewickley Heights Borough Park",
-    "street": "Hallaway RdSewickley",
+    "street": "Hallaway Rd",
     "city": "‍ Pittsburgh",
     "state": "PA",
     "zip": "15143",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Bark Park",
-    "street": "310 recreation roadBridgeville",
+    "street": "310 recreation road",
     "city": "‍ Pittsburgh",
     "state": "PA",
     "zip": "15017",
@@ -591,7 +591,7 @@
   },
   {
     "name": "White Oak Dog Park",
-    "street": "3 Muse LaneWhite Oak",
+    "street": "3 Muse Lane",
     "city": "‍ Pittsburgh",
     "state": "PA",
     "zip": "15131",
@@ -651,7 +651,7 @@
   },
   {
     "name": "The Indoor Dog Park",
-    "street": "2714 Rochester RdCranberry Twp",
+    "street": "2714 Rochester Rd",
     "city": "‍ Pittsburgh",
     "state": "PA",
     "zip": "16066",
@@ -701,7 +701,7 @@
   },
   {
     "name": "‍ French Creek State Park",
-    "street": "843 Park RdElverson",
+    "street": "843 Park Rd",
     "city": "Reading",
     "state": "PA",
     "zip": "19520",
@@ -741,7 +741,7 @@
   },
   {
     "name": "Lloyd Park",
-    "street": "403 Lloyd AveDowningtown",
+    "street": "403 Lloyd Ave",
     "city": "Reading",
     "state": "PA",
     "zip": "19335",
@@ -761,7 +761,7 @@
   },
   {
     "name": "Wertz's Red Bridge Recreationa",
-    "street": "2141 Tulpehocken RdWyomissing",
+    "street": "2141 Tulpehocken Rd",
     "city": "Reading",
     "state": "PA",
     "zip": "19610",
@@ -771,7 +771,7 @@
   },
   {
     "name": "Berks Leisure Area",
-    "street": "1901 Tulpehocken RdWyomissing",
+    "street": "1901 Tulpehocken Rd",
     "city": "Reading",
     "state": "PA",
     "zip": "19610",
@@ -831,7 +831,7 @@
   },
   {
     "name": "Hillside Park",
-    "street": "1188 Winola RdSouth Abington Township",
+    "street": "1188 Winola Rd",
     "city": "Scranton",
     "state": "PA",
     "zip": "18411",
@@ -841,7 +841,7 @@
   },
   {
     "name": "Abington Dog Park",
-    "street": "1610 W Grove StClarks Summit",
+    "street": "1610 W Grove St",
     "city": "Scranton",
     "state": "PA",
     "zip": "18411",
@@ -861,7 +861,7 @@
   },
   {
     "name": "West Pittston Dog Park",
-    "street": "555 Exeter AveWest Pittston",
+    "street": "555 Exeter Ave",
     "city": "Scranton",
     "state": "PA",
     "zip": "18643",

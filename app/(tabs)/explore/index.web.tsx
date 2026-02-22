@@ -65,8 +65,13 @@ function ParkListItem({ park, pupCount, distanceKm, selected, onPress }: ParkLis
       )}
       <View className="flex-1 ml-3">
         <Text className="text-sm font-semibold text-text mb-1" numberOfLines={1}>
-          {park.name}
+          {park.name.replace(/^[\s\u200d]+/, '')}
         </Text>
+        {park.address && (
+          <Text className="text-xs text-text-secondary mb-1" numberOfLines={1}>
+            {park.address}
+          </Text>
+        )}
         <View className="flex-row items-center">
           <Ionicons name="paw" size={12} color="#3D8A5A" />
           <Text className="text-xs text-secondary font-medium ml-1">
@@ -465,14 +470,18 @@ export default function DesktopExploreScreen() {
             <Pressable onPress={() => handleParkPress(selectedPark)}>
               <View className="flex-row justify-between items-start mb-2">
                 <Text className="text-lg font-bold text-text flex-1 mr-2">
-                  {selectedPark.name}
+                  {selectedPark.name.replace(/^[\s\u200d]+/, '')}
                 </Text>
                 <Pressable onPress={() => setSelectedPark(null)}>
                   <Ionicons name="close" size={24} color="#6D6C6A" />
                 </Pressable>
               </View>
 
-              {/* Address hidden pending data remediation */}
+              {selectedPark.address && (
+                <Text className="text-sm text-text-secondary mb-2" numberOfLines={1}>
+                  {selectedPark.address}
+                </Text>
+              )}
 
               <View className="flex-row items-center mb-3">
                 <Ionicons name="paw" size={16} color="#3D8A5A" />

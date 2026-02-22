@@ -101,7 +101,7 @@
   },
   {
     "name": "Creighton West Park",
-    "street": "Creighton RdBrambleton",
+    "street": "Creighton Rd",
     "city": "Alexandria",
     "state": "VA",
     "zip": "20148",
@@ -261,7 +261,7 @@
   },
   {
     "name": "‍ Windsor Castle Park",
-    "street": "705 Cedar StSmithfield",
+    "street": "705 Cedar St",
     "city": "Newport News",
     "state": "VA",
     "zip": "23430",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Kiln Creek Park",
-    "street": "2901 Kiln Creek PkwyTabb",
+    "street": "2901 Kiln Creek Pkwy",
     "city": "Newport News",
     "state": "VA",
     "zip": "23693",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Jim Barnett Park",
-    "street": "1001 E Cork StWinchester",
+    "street": "1001 E Cork St",
     "city": "Portsmouth",
     "state": "VA",
     "zip": "22601",
@@ -531,7 +531,7 @@
   },
   {
     "name": "Short Pump Park",
-    "street": "3329 Pump RdRidge",
+    "street": "3329 Pump Rd",
     "city": "Richmond",
     "state": "VA",
     "zip": "23233",

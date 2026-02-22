@@ -71,7 +71,7 @@
   },
   {
     "name": "Friendship Park",
-    "street": "12325 W McDowell Rd",
+    "street": "12325 W Mc",
     "city": "Glendale",
     "state": "AZ",
     "zip": "85323",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Bullard Wash Park",
-    "street": "W McDowell Rd",
+    "street": "W Mc",
     "city": "Goodyear",
     "state": "AZ",
     "zip": "85395",
@@ -231,7 +231,7 @@
   },
   {
     "name": "London Bridge Beach",
-    "street": "1340 McCulloch Blvd N",
+    "street": "1340 Mc",
     "city": "Lake Havasu City",
     "state": "AZ",
     "zip": "86403",
@@ -281,7 +281,7 @@
   },
   {
     "name": "SARA Park",
-    "street": "1740 McCulloch Blvd S",
+    "street": "1740 Mc",
     "city": "Lake Havasu City",
     "state": "AZ",
     "zip": "86406",
@@ -431,7 +431,7 @@
   },
   {
     "name": "‍ Paseo Vista Recreation Area",
-    "street": "3850 S McQueen Rd",
+    "street": "3850 S Mc",
     "city": "Mesa",
     "state": "AZ",
     "zip": "85286",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Desert Vista Dog Park",
-    "street": "11800 Desert VistaFountain Hills",
+    "street": "11800 Desert Vista",
     "city": "Mesa",
     "state": "AZ",
     "zip": "85268",
@@ -461,7 +461,7 @@
   },
   {
     "name": "Pocket Park",
-    "street": "22526 S Ellsworth RdQueen Creek",
+    "street": "22526 S Ellsworth Rd",
     "city": "Mesa",
     "state": "AZ",
     "zip": "85142",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "Naranja Park",
-    "street": "810 W Naranja DrOro Valley",
+    "street": "810 W Naranja Dr",
     "city": "Tucson",
     "state": "AZ",
     "zip": "85737",

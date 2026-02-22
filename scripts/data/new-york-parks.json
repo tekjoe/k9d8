@@ -1,7 +1,7 @@
 [
   {
     "name": "The Crossings Park",
-    "street": "580 Albany Shaker RdLoudonville",
+    "street": "580 Albany Shaker Rd",
     "city": "Albany",
     "state": "NY",
     "zip": "12211",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Saratoga Springs Dog Park",
-    "street": "10 Crescent StSaratoga Springs",
+    "street": "10 Crescent St",
     "city": "Albany",
     "state": "NY",
     "zip": "12866",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Town of Colonie Dog Park",
-    "street": "71 Schermerhorn RdCohoes",
+    "street": "71 Schermerhorn Rd",
     "city": "Albany",
     "state": "NY",
     "zip": "12047",
@@ -161,7 +161,7 @@
   },
   {
     "name": "K9 Barks N Brews",
-    "street": "2866 Pleasant AveHamburg",
+    "street": "2866 Pleasant Ave",
     "city": "Buffalo",
     "state": "NY",
     "zip": "14075",
@@ -241,7 +241,7 @@
   },
   {
     "name": "DeVeaux Woods State Park",
-    "street": "3100 Lewiston RdNiagara Falls",
+    "street": "3100 Lewiston Rd",
     "city": "Buffalo",
     "state": "NY",
     "zip": "14305",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Ellicott Creek Park",
-    "street": "1 Ellicott Creek RdTonawanda",
+    "street": "1 Ellicott Creek Rd",
     "city": "Buffalo",
     "state": "NY",
     "zip": "14150",
@@ -291,7 +291,7 @@
   },
   {
     "name": "Niawanda Park",
-    "street": "200 Niagara StTonawanda",
+    "street": "200 Niagara St",
     "city": "Buffalo",
     "state": "NY",
     "zip": "14150",
@@ -311,7 +311,7 @@
   },
   {
     "name": "Brookdale Park",
-    "street": "293 McKinley Pkwy",
+    "street": "293 Mc",
     "city": "Buffalo",
     "state": "NY",
     "zip": "14220",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Ossining Dog Park",
-    "street": "235 Cedar LnOssining",
+    "street": "235 Cedar Ln",
     "city": "Mount Vernon",
     "state": "NY",
     "zip": "10562",
@@ -431,7 +431,7 @@
   },
   {
     "name": "Willson’s Woods Park",
-    "street": "8 Bradford RdMt Vernon",
+    "street": "8 Bradford Rd",
     "city": "Mount Vernon",
     "state": "NY",
     "zip": "10553",
@@ -451,7 +451,7 @@
   },
   {
     "name": "Brush Park",
-    "street": "555 S 3rd AveMt Vernon",
+    "street": "555 S 3rd Ave",
     "city": "Mount Vernon",
     "state": "NY",
     "zip": "10550",
@@ -471,7 +471,7 @@
   },
   {
     "name": "Elmsford Dog Park",
-    "street": "Winthrop AveElmsford",
+    "street": "Winthrop Ave",
     "city": "Mount Vernon",
     "state": "NY",
     "zip": "10523",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Shore Park",
-    "street": "50 Shore RdPelham",
+    "street": "50 Shore Rd",
     "city": "New Rochelle",
     "state": "NY",
     "zip": "10803",
@@ -551,7 +551,7 @@
   },
   {
     "name": "Larchmont Dog Beach",
-    "street": "118 Park AveLarchmont",
+    "street": "118 Park Ave",
     "city": "New Rochelle",
     "state": "NY",
     "zip": "10538",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Manhattan Beach Dog Run",
-    "street": "Park AveBrooklyn",
+    "street": "Park Ave",
     "city": "New York",
     "state": "NY",
     "zip": "11235",
@@ -571,7 +571,7 @@
   },
   {
     "name": "Marcy Green Dog Park",
-    "street": "153 Marcy AveBrooklyn",
+    "street": "153 Marcy Ave",
     "city": "New York",
     "state": "NY",
     "zip": "11211",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Domino Park",
-    "street": "15 River StBrooklyn",
+    "street": "15 River St",
     "city": "New York",
     "state": "NY",
     "zip": "11211",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Hillside Dog Park",
-    "street": "Vine StBrooklyn",
+    "street": "Vine St",
     "city": "New York",
     "state": "NY",
     "zip": "11201",
@@ -661,7 +661,7 @@
   },
   {
     "name": "Kensington Dog Run",
-    "street": "397A Coney Island AveBrooklyn",
+    "street": "397A Coney Island Ave",
     "city": "New York",
     "state": "NY",
     "zip": "11218",
@@ -721,7 +721,7 @@
   },
   {
     "name": "Forest Park",
-    "street": "80-30 Park LnKew Gardens",
+    "street": "80-30 Park Ln",
     "city": "Queens",
     "state": "NY",
     "zip": "11415",
@@ -731,7 +731,7 @@
   },
   {
     "name": "Woofs Canine Club & Indoor",
-    "street": "187 W Main StWebster",
+    "street": "187 W Main St",
     "city": "Rochester",
     "state": "NY",
     "zip": "14580",
@@ -821,7 +821,7 @@
   },
   {
     "name": "Sweden Dog Park",
-    "street": "4752 Redman RdBrock",
+    "street": "4752 Redman Rd",
     "city": "Rochester",
     "state": "NY",
     "zip": "14420",
@@ -841,7 +841,7 @@
   },
   {
     "name": "Pittsford Dog Park",
-    "street": "34 East StPittsford",
+    "street": "34 East St",
     "city": "Rochester",
     "state": "NY",
     "zip": "14534",
@@ -851,7 +851,7 @@
   },
   {
     "name": "Lookup Park",
-    "street": "3850 E Henrietta RdHenrietta",
+    "street": "3850 E Henrietta Rd",
     "city": "Rochester",
     "state": "NY",
     "zip": "14467",
@@ -921,7 +921,7 @@
   },
   {
     "name": "Clark Reservation State Park",
-    "street": "6105 E Seneca TurnpikeJamesville",
+    "street": "6105 E Seneca Turnpike",
     "city": "Syracuse",
     "state": "NY",
     "zip": "13078",
@@ -931,7 +931,7 @@
   },
   {
     "name": "Onondaga Lake Park",
-    "street": "106 Lake DrLiverpool",
+    "street": "106 Lake Dr",
     "city": "Syracuse",
     "state": "NY",
     "zip": "13088",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "‍ Fiddlers Green Park",
-    "street": "4691 Solvay RdJamesville",
+    "street": "4691 Solvay Rd",
     "city": "Syracuse",
     "state": "NY",
     "zip": "13078",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Pleasantville Dog Park",
-    "street": "123 Castleton StPleasantville",
+    "street": "123 Castleton St",
     "city": "White Plains",
     "state": "NY",
     "zip": "10570",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "Harrison Park",
-    "street": "Crystal StHarrison",
+    "street": "Crystal St",
     "city": "White Plains",
     "state": "NY",
     "zip": "10528",
@@ -1271,7 +1271,7 @@
   },
   {
     "name": "Bronxville Dog Park",
-    "street": "28 Grove LnBronxville",
+    "street": "28 Grove Ln",
     "city": "Yonkers",
     "state": "NY",
     "zip": "10708",

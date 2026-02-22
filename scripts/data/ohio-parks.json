@@ -81,7 +81,7 @@
   },
   {
     "name": "Summit Park",
-    "street": "4335 Glendale Milford RdBlue Ash",
+    "street": "4335 Glendale Milford Rd",
     "city": "Cincinnati",
     "state": "OH",
     "zip": "45242",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Simmonds Family Dog Park",
-    "street": "8715 Hamilton Cleves Pike RdCleves",
+    "street": "8715 Hamilton Cleves Pike Rd",
     "city": "Cincinnati",
     "state": "OH",
     "zip": "45002",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Glenwood Gardens",
-    "street": "10397 Springfield PikeWyoming",
+    "street": "10397 Springfield Pike",
     "city": "Cincinnati",
     "state": "OH",
     "zip": "45215",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Symmes Township Park",
-    "street": "11600 N Lebanon RdLoveland",
+    "street": "11600 N Lebanon Rd",
     "city": "Cincinnati",
     "state": "OH",
     "zip": "45140",
@@ -231,7 +231,7 @@
   },
   {
     "name": "Green Man Park",
-    "street": "770 E McMillan St",
+    "street": "770 E Mc",
     "city": "Cincinnati",
     "state": "OH",
     "zip": "45206",
@@ -241,7 +241,7 @@
   },
   {
     "name": "‍ Rocky River Nature Center",
-    "street": "24000 Valley PkwyNorth Olmsted",
+    "street": "24000 Valley Pkwy",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44070",
@@ -271,7 +271,7 @@
   },
   {
     "name": "Carolyn Ludwig Mugrage Park",
-    "street": "4985 Windfall RdMedina",
+    "street": "4985 Windfall Rd",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44256",
@@ -301,7 +301,7 @@
   },
   {
     "name": "Canning Family K-9 Park",
-    "street": "3701 Veterans Memorial PkwyAvon",
+    "street": "3701 Veterans Memorial Pkwy",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44011",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Bow Wow Beach",
-    "street": "5027 Stow RdStow",
+    "street": "5027 Stow Rd",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44224",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Acacia Reservation",
-    "street": "Cedar RdLyndhur",
+    "street": "Cedar Rd",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44124",
@@ -351,7 +351,7 @@
   },
   {
     "name": "‍ Canine Meadow - Dog Park",
-    "street": "9038 Euclid Chardon RdKirtland",
+    "street": "9038 Euclid Chardon Rd",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44094",
@@ -391,7 +391,7 @@
   },
   {
     "name": "Wolf Creek Waterfall",
-    "street": "4931 Parkway DrGarfield Heights",
+    "street": "4931 Parkway Dr",
     "city": "Cleveland",
     "state": "OH",
     "zip": "44125",
@@ -531,7 +531,7 @@
   },
   {
     "name": "Three Creeks Metro Park",
-    "street": "3860 Bixby RdGrove",
+    "street": "3860 Bixby Rd",
     "city": "Columbus",
     "state": "OH",
     "zip": "43125",
@@ -571,7 +571,7 @@
   },
   {
     "name": "‍ Paw Paw Pavilion",
-    "street": "2471 Deep Hollow RdKettering",
+    "street": "2471 Deep Hollow Rd",
     "city": "Dayton",
     "state": "OH",
     "zip": "45419",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Oak Grove Park",
-    "street": "1790 E Social Row RdWashington Township",
+    "street": "1790 E Social Row Rd",
     "city": "Dayton",
     "state": "OH",
     "zip": "45458",
@@ -591,7 +591,7 @@
   },
   {
     "name": "Sandhill Dog Park",
-    "street": "229 Sandhill RdFairborn",
+    "street": "229 Sandhill Rd",
     "city": "Dayton",
     "state": "OH",
     "zip": "45324",
@@ -611,7 +611,7 @@
   },
   {
     "name": "Splash Your Pup",
-    "street": "4792-3 S Dixie DrMoraine",
+    "street": "4792-3 S Dixie Dr",
     "city": "Dayton",
     "state": "OH",
     "zip": "45439",
@@ -671,7 +671,7 @@
   },
   {
     "name": "Canal Run Dog Park",
-    "street": "550 S Main StMiamisburg",
+    "street": "550 S Main St",
     "city": "Dayton",
     "state": "OH",
     "zip": "45342",
@@ -681,7 +681,7 @@
   },
   {
     "name": "Sandy Ridge Reservation",
-    "street": "6195 Otten RdNorth Ridgeville",
+    "street": "6195 Otten Rd",
     "city": "Elyria",
     "state": "OH",
     "zip": "44039",
@@ -711,7 +711,7 @@
   },
   {
     "name": "Bradley Woods Reservation",
-    "street": "4538 Bradley RdWestlake",
+    "street": "4538 Bradley Rd",
     "city": "Elyria",
     "state": "OH",
     "zip": "44145",
@@ -891,7 +891,7 @@
   },
   {
     "name": "Cloverbrook Park",
-    "street": "7566 Cloverbrook Park DrCenterville",
+    "street": "7566 Cloverbrook Park Dr",
     "city": "Kettering",
     "state": "OH",
     "zip": "45459",
@@ -971,7 +971,7 @@
   },
   {
     "name": "‍ Vermilion River Reservation:",
-    "street": "51211 N Ridge RdVermilion",
+    "street": "51211 N Ridge Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44089",
@@ -981,7 +981,7 @@
   },
   {
     "name": "Royal Oaks, Lorain County",
-    "street": "38637 Parsons RdGrafton",
+    "street": "38637 Parsons Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44044",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Beaver Creek Trail End",
-    "street": "46900 Cooper Foster Park RdAmher",
+    "street": "46900 Cooper Foster Park Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44001",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "French Creek Reservation",
-    "street": "4540 French Creek RdSheffield",
+    "street": "4540 French Creek Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44054",
@@ -1031,7 +1031,7 @@
   },
   {
     "name": "Black River Reservation Bur",
-    "street": "6150 Ford RdElyria",
+    "street": "6150 Ford Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44035",
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "‍ Shell Cove Park",
-    "street": "4851 E Lake RdSheffield Lake",
+    "street": "4851 E Lake Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44054",
@@ -1061,7 +1061,7 @@
   },
   {
     "name": "Black River Reservation",
-    "street": "1495 Gulf RdElyria",
+    "street": "1495 Gulf Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44035",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Cassell Reservation",
-    "street": "815 High Bridge RdVermilion",
+    "street": "815 High Bridge Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44089",
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Cascade Park",
-    "street": "387 Furnace StElyria",
+    "street": "387 Furnace St",
     "city": "Lorain",
     "state": "OH",
     "zip": "44035",
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "Amherst Beaver Creek Reservati",
-    "street": "913 N Lake StAmher",
+    "street": "913 N Lake St",
     "city": "Lorain",
     "state": "OH",
     "zip": "44001",
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "Black River Reservation High",
-    "street": "1750 Ford RdElyria",
+    "street": "1750 Ford Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44035",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Weiss Field",
-    "street": "33401 Webber RdAvon Lake",
+    "street": "33401 Webber Rd",
     "city": "Lorain",
     "state": "OH",
     "zip": "44012",
@@ -1141,7 +1141,7 @@
   },
   {
     "name": "Voice of America MetroPark",
-    "street": "7850 VOA Park DrWest Chester Township",
+    "street": "7850 VOA Park Dr",
     "city": "Middletown",
     "state": "OH",
     "zip": "45069",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Infirmary Mound Park",
-    "street": "4351 Lancaster RdGranville",
+    "street": "4351 Lancaster Rd",
     "city": "Newark",
     "state": "OH",
     "zip": "43023",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "‍ Paws 2 Play Dog Park",
-    "street": "4309 Lancaster RdGranville",
+    "street": "4309 Lancaster Rd",
     "city": "Newark",
     "state": "OH",
     "zip": "43023",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Creekside Shelter at Big Creek",
-    "street": "Big Creek PkwyParma Heights",
+    "street": "Big Creek Pkwy",
     "city": "Parma",
     "state": "OH",
     "zip": "44130",
@@ -1291,7 +1291,7 @@
   },
   {
     "name": "Sheffield Lake Dog Park",
-    "street": "938 East DrSheffield Lake",
+    "street": "938 East Dr",
     "city": "Parma",
     "state": "OH",
     "zip": "44054",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "Olmsted Township Dog Park",
-    "street": "27180 Schady RdOlmsted Township",
+    "street": "27180 Schady Rd",
     "city": "Parma",
     "state": "OH",
     "zip": "44138",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "‍ Aukerman Park",
-    "street": "15561 York RdNorth Royalton",
+    "street": "15561 York Rd",
     "city": "Parma",
     "state": "OH",
     "zip": "44133",
@@ -1461,7 +1461,7 @@
   },
   {
     "name": "Side Cut Metropark",
-    "street": "1025 W River RdMaumee",
+    "street": "1025 W River Rd",
     "city": "‍ Toledo",
     "state": "OH",
     "zip": "43537",
@@ -1551,7 +1551,7 @@
   },
   {
     "name": "Strawberry Acres Park",
-    "street": "950 S McCord Rd",
+    "street": "950 S Mc",
     "city": "‍ Toledo",
     "state": "OH",
     "zip": "43528",
@@ -1571,7 +1571,7 @@
   },
   {
     "name": "Jake & Cooper's Bark Park",
-    "street": "2960 Pickle RdOregon",
+    "street": "2960 Pickle Rd",
     "city": "‍ Toledo",
     "state": "OH",
     "zip": "43616",
@@ -1611,7 +1611,7 @@
   },
   {
     "name": "‍ Boardman Park",
-    "street": "375 Boardman Poland RdBoardman",
+    "street": "375 Boardman Poland Rd",
     "city": "Youngstown",
     "state": "OH",
     "zip": "44512",
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "‍ Hubbard's Scentral Dog Park",
-    "street": "6068 W Liberty StHubbard",
+    "street": "6068 W Liberty St",
     "city": "Youngstown",
     "state": "OH",
     "zip": "44425",

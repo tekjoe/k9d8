@@ -1,7 +1,7 @@
 [
   {
     "name": "Mill Pond Park",
-    "street": "565 W Bennett StSaline",
+    "street": "565 W Bennett St",
     "city": "Ann Arbor",
     "state": "MI",
     "zip": "48176",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Garden City Parks Park",
-    "street": "150 Pavillion RdGarden City",
+    "street": "150 Pavillion Rd",
     "city": "Dearborn Heights",
     "state": "MI",
     "zip": "48135",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Rotary Park",
-    "street": "32465 Marquette StGarden City",
+    "street": "32465 Marquette St",
     "city": "Dearborn Heights",
     "state": "MI",
     "zip": "48135",
@@ -231,7 +231,7 @@
   },
   {
     "name": "‍ Orion Oaks Dog Park",
-    "street": "2301 Joslyn RdOrion Twp",
+    "street": "2301 Joslyn Rd",
     "city": "Detroit",
     "state": "MI",
     "zip": "48360",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Matthew C. Patterson Park",
-    "street": "16006 Essex DrGrosse Pointe Park",
+    "street": "16006 Essex Dr",
     "city": "Detroit",
     "state": "MI",
     "zip": "48230",
@@ -361,7 +361,7 @@
   },
   {
     "name": "‍ For-Mar Nature Preserve &",
-    "street": "2142 N Genesee RdBurton",
+    "street": "2142 N Genesee Rd",
     "city": "Flint",
     "state": "MI",
     "zip": "48509",
@@ -371,7 +371,7 @@
   },
   {
     "name": "Flushing County Park",
-    "street": "4417 N McKinley RdFlushing",
+    "street": "4417 N McKinley Rd",
     "city": "Flint",
     "state": "MI",
     "zip": "48433",
@@ -381,7 +381,7 @@
   },
   {
     "name": "The Mounds ORV Park",
-    "street": "6145 E Mt Morris RdMt Morris",
+    "street": "6145 E Mt Morris Rd",
     "city": "Flint",
     "state": "MI",
     "zip": "48458",
@@ -391,7 +391,7 @@
   },
   {
     "name": "Rust Park",
-    "street": "470 Rust Park DrGrand Blanc",
+    "street": "470 Rust Park Dr",
     "city": "Flint",
     "state": "MI",
     "zip": "48439",
@@ -431,7 +431,7 @@
   },
   {
     "name": "Elms Park",
-    "street": "4157 Elms RdSwartz Creek",
+    "street": "4157 Elms Rd",
     "city": "Flint",
     "state": "MI",
     "zip": "48473",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Physicians Park",
-    "street": "218 Reid RdGrand Blanc",
+    "street": "218 Reid Rd",
     "city": "Flint",
     "state": "MI",
     "zip": "48439",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Grand Ravines North County",
-    "street": "9920 42nd AveGeorgetown Twp",
+    "street": "9920 42nd Ave",
     "city": "Grand Rapids",
     "state": "MI",
     "zip": "49428",
@@ -681,7 +681,7 @@
   },
   {
     "name": "Lincoln Dog Park",
-    "street": "9651 Portage RdPortage",
+    "street": "9651 Portage Rd",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49002",
@@ -711,7 +711,7 @@
   },
   {
     "name": "South Westnedge Dog Park",
-    "street": "9010 S Westnedge AvePortage",
+    "street": "9010 S Westnedge Ave",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49024",
@@ -721,7 +721,7 @@
   },
   {
     "name": "Home Run Dog Park",
-    "street": "800 E Roosevelt AveBattle Creek",
+    "street": "800 E Roosevelt Ave",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49017",
@@ -751,7 +751,7 @@
   },
   {
     "name": "River Oaks County Park",
-    "street": "9202 E Michigan AveGalesburg",
+    "street": "9202 E Michigan Ave",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49053",
@@ -771,7 +771,7 @@
   },
   {
     "name": "South Westnedge Park",
-    "street": "9010 S Westnedge AvePortage",
+    "street": "9010 S Westnedge Ave",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49002",
@@ -791,7 +791,7 @@
   },
   {
     "name": "Bark Park",
-    "street": "6604 Lovers LnPortage",
+    "street": "6604 Lovers Ln",
     "city": "Kalamazoo",
     "state": "MI",
     "zip": "49002",
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Meridian Township Private",
-    "street": "1990 Central Park DrOkemos",
+    "street": "1990 Central Park Dr",
     "city": "Lansing",
     "state": "MI",
     "zip": "48864",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "‍ Hannah's Bark Park",
-    "street": "1458 N Harris StMt Pleasant",
+    "street": "1458 N Harris St",
     "city": "Mount Pleasant",
     "state": "MI",
     "zip": "48858",
@@ -1041,7 +1041,7 @@
   },
   {
     "name": "‍ Novi Tree Farm",
-    "street": "601 S Lake DrNovi",
+    "street": "601 S Lake Dr",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48377",
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "Gunnar Mettala Park",
-    "street": "645 MettalaWixom",
+    "street": "645 Mettala",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48393",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "‍ Heritage Park",
-    "street": "24915 Farmington RdFarmington Hills",
+    "street": "24915 Farmington Rd",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48336",
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Pavilion Shore Park",
-    "street": "43390 W 13 Mile RdNovi",
+    "street": "43390 W 13 Mile Rd",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48377",
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "Lakeshore Park",
-    "street": "601 S Lake DrNovi",
+    "street": "601 S Lake Dr",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48375",
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "Scenic Overlook #2",
-    "street": "1920 Old Novi RdNovi",
+    "street": "1920 Old Novi Rd",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48377",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Gilbert Willis Park",
-    "street": "2911 Chickasaw StWixom",
+    "street": "2911 Chickasaw St",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48393",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "Robert H. Long Nature Park",
-    "street": "40900 W 14 Mile RdCommerce Township",
+    "street": "40900 W 14 Mile Rd",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48390",
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "Lyon Oaks County Park",
-    "street": "52221 Pontiac TrailWixom",
+    "street": "52221 Pontiac Trail",
     "city": "‍ Novi",
     "state": "MI",
     "zip": "48393",
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "Marshbank Park",
-    "street": "2805 Hiller RdWest Bloomfield Township",
+    "street": "2805 Hiller Rd",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48324",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Clinton River Trail",
-    "street": "Clinton River TrailAuburn Hills",
+    "street": "Clinton River Trail",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48326",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Orion Oaks Park",
-    "street": "2635 S Baldwin RdOrion Twp",
+    "street": "2635 S Baldwin Rd",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48360",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Willow Beach Public Park",
-    "street": "2098 Willow Beach StKeego Harbor",
+    "street": "2098 Willow Beach St",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48320",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "‍ River Woods Park",
-    "street": "300 River Woods DriveAuburn Hills",
+    "street": "300 River Woods Drive",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48326",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "‍ Orchard Lake Nature Sanctuary",
-    "street": "4700 Pontiac TrailWest Bloomfield Township",
+    "street": "4700 Pontiac Trail",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48324",
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "Pontiac Lake Recreation Area",
-    "street": "2401 N Williams Lake RdWaterford Twp",
+    "street": "2401 N Williams Lake Rd",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48327",
@@ -1271,7 +1271,7 @@
   },
   {
     "name": "Waterford Oaks County Park",
-    "street": "1702 Scott Lake RdWaterford Twp",
+    "street": "1702 Scott Lake Rd",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48328",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Sylvan Manor Park",
-    "street": "2290-2292 Woodrow Wilson BlvdWest Bloomfield Township",
+    "street": "2290-2292 Woodrow Wilson Blvd",
     "city": "Pontiac",
     "state": "MI",
     "zip": "48324",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "Orion Oaks County Park",
-    "street": "2301 Clarkston RdLake Orion",
+    "street": "2301 Clarkston Rd",
     "city": "Rochester Hills",
     "state": "MI",
     "zip": "48360",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "River Bends Barrier Free Playg",
-    "street": "5700 22 Mile RdShelby Township",
+    "street": "5700 22 Mile Rd",
     "city": "Rochester Hills",
     "state": "MI",
     "zip": "48317",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "Drayton Plains Nature Center",
-    "street": "2125 Denby DrWaterford Twp",
+    "street": "2125 Denby Dr",
     "city": "Rochester Hills",
     "state": "MI",
     "zip": "48329",
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "Hawk Woods Park",
-    "street": "3799 Bald Mountain RdAuburn Hills",
+    "street": "3799 Bald Mountain Rd",
     "city": "Rochester Hills",
     "state": "MI",
     "zip": "48326",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "Beverly Hills Village Park",
-    "street": "18801 Beverly RdBeverly Hills",
+    "street": "18801 Beverly Rd",
     "city": "Southfield",
     "state": "MI",
     "zip": "48025",
@@ -1631,7 +1631,7 @@
   },
   {
     "name": "Douglas Evans Nature Preserve",
-    "street": "31845 Evergreen RdBeverly Hills",
+    "street": "31845 Evergreen Rd",
     "city": "Southfield",
     "state": "MI",
     "zip": "48025",
@@ -1641,7 +1641,7 @@
   },
   {
     "name": "Goldengate park",
-    "street": "18890 Rainbow DrLathrup Village",
+    "street": "18890 Rainbow Dr",
     "city": "Southfield",
     "state": "MI",
     "zip": "48076",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "Children's Garden",
-    "street": "27400 Southfield RdLathrup Village",
+    "street": "27400 Southfield Rd",
     "city": "Southfield",
     "state": "MI",
     "zip": "48076",
@@ -1691,7 +1691,7 @@
   },
   {
     "name": "David H Shepherd Park",
-    "street": "24198 Church StOak Park",
+    "street": "24198 Church St",
     "city": "Southfield",
     "state": "MI",
     "zip": "48237",
@@ -1741,7 +1741,7 @@
   },
   {
     "name": "‍ Palmer Park",
-    "street": "200 N Riverside AveSt Clair",
+    "street": "200 N Riverside Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48079",
@@ -1751,7 +1751,7 @@
   },
   {
     "name": "Greig Park",
-    "street": "795 N Carney DrSt Clair",
+    "street": "795 N Carney Dr",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48079",
@@ -1761,7 +1761,7 @@
   },
   {
     "name": "Blossom Heath Park",
-    "street": "24800 Jefferson AveSt Clair Shores",
+    "street": "24800 Jefferson Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48080",
@@ -1771,7 +1771,7 @@
   },
   {
     "name": "Baffin Brewing Company",
-    "street": "25113 Jefferson AveSt Clair Shores",
+    "street": "25113 Jefferson Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48081",
@@ -1781,7 +1781,7 @@
   },
   {
     "name": "Camp Bow Wow",
-    "street": "23720 Greater Mack AveSt Clair Shores",
+    "street": "23720 Greater Mack Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48080",
@@ -1791,7 +1791,7 @@
   },
   {
     "name": "Lake Saint Clair Metropark",
-    "street": "31300 Metro PkwyHarrison Twp",
+    "street": "31300 Metro Pkwy",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48045",
@@ -1801,7 +1801,7 @@
   },
   {
     "name": "Veterans Memorial Park",
-    "street": "32400 Jefferson AveSt Clair Shores",
+    "street": "32400 Jefferson Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48082",
@@ -1811,7 +1811,7 @@
   },
   {
     "name": "Fort Fraser",
-    "street": "17075 Anita AveFraser",
+    "street": "17075 Anita Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48026",
@@ -1821,7 +1821,7 @@
   },
   {
     "name": "Beaches Pet Resort & Training",
-    "street": "29335 Harper AveSt Clair Shores",
+    "street": "29335 Harper Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48081",
@@ -1831,7 +1831,7 @@
   },
   {
     "name": "‍ Algonac Dog Park",
-    "street": "1793-1799 Michigan StAlgonac",
+    "street": "1793-1799 Michigan St",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48001",
@@ -1841,7 +1841,7 @@
   },
   {
     "name": "Kaufman Park",
-    "street": "23499 Elaine StSt Clair Shores",
+    "street": "23499 Elaine St",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48080",
@@ -1861,7 +1861,7 @@
   },
   {
     "name": "East China Dog Park",
-    "street": "5111 Recor RdEast China Twp",
+    "street": "5111 Recor Rd",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48054",
@@ -1871,7 +1871,7 @@
   },
   {
     "name": "Prince Drewry Park",
-    "street": "21845 Quinn RdClinton Twp",
+    "street": "21845 Quinn Rd",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48035",
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "Ghesquiere Park",
-    "street": "19955 Mack AveGrosse Pointe Woods",
+    "street": "19955 Mack Ave",
     "city": "St. Clair Shores",
     "state": "MI",
     "zip": "48236",
@@ -1911,7 +1911,7 @@
   },
   {
     "name": "River Bends Park",
-    "street": "5700 22 Mile RdShelby Township",
+    "street": "5700 22 Mile Rd",
     "city": "Sterling Heights",
     "state": "MI",
     "zip": "48317",
@@ -1931,7 +1931,7 @@
   },
   {
     "name": "Red Oaks Nature Center",
-    "street": "30300 Hales StMadison Heights",
+    "street": "30300 Hales St",
     "city": "Sterling Heights",
     "state": "MI",
     "zip": "48071",
@@ -2001,7 +2001,7 @@
   },
   {
     "name": "‍ Pitchford Park",
-    "street": "49625 Romeo Plank RdMacomb",
+    "street": "49625 Romeo Plank Rd",
     "city": "Sterling Heights",
     "state": "MI",
     "zip": "48044",
@@ -2041,7 +2041,7 @@
   },
   {
     "name": "‍ Whispering Woods Kiwanis Park",
-    "street": "11000 21 Mile RdShelby Township",
+    "street": "11000 21 Mile Rd",
     "city": "Sterling Heights",
     "state": "MI",
     "zip": "48317",
@@ -2061,7 +2061,7 @@
   },
   {
     "name": "Heritage Park",
-    "street": "12111 Pardee RdTaylor",
+    "street": "12111 Pardee Rd",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48180",
@@ -2071,7 +2071,7 @@
   },
   {
     "name": "Jaycee Bicentennial Community",
-    "street": "Pinecrest StTaylor",
+    "street": "Pinecrest St",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48180",
@@ -2081,7 +2081,7 @@
   },
   {
     "name": "Boardman Park",
-    "street": "Haskell StTaylor",
+    "street": "Haskell St",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48180",
@@ -2101,7 +2101,7 @@
   },
   {
     "name": "Atlas Park",
-    "street": "24504 Ecorse RdTaylor",
+    "street": "24504 Ecorse Rd",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48180",
@@ -2111,7 +2111,7 @@
   },
   {
     "name": "Papp Park",
-    "street": "9350 Westlake StTaylor",
+    "street": "9350 Westlake St",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48180",
@@ -2121,7 +2121,7 @@
   },
   {
     "name": "Brownstown Dog Park",
-    "street": "23700 Lillian StBrownstown Township",
+    "street": "23700 Lillian St",
     "city": "‍ Taylor",
     "state": "MI",
     "zip": "48183",
@@ -2131,7 +2131,7 @@
   },
   {
     "name": "Innovation Hills",
-    "street": "2800 W Hamlin RdRochester Hills",
+    "street": "2800 W Hamlin Rd",
     "city": "Troy",
     "state": "MI",
     "zip": "48309",
@@ -2141,7 +2141,7 @@
   },
   {
     "name": "Oak Park",
-    "street": "21950 Scotia RdOak Park",
+    "street": "21950 Scotia Rd",
     "city": "Troy",
     "state": "MI",
     "zip": "48237",
@@ -2341,7 +2341,7 @@
   },
   {
     "name": "Pinery Park",
-    "street": "2301 De Hoop AveWyoming",
+    "street": "2301 De Hoop Ave",
     "city": "‍ Wyoming",
     "state": "MI",
     "zip": "49509",

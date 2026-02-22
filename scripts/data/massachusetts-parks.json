@@ -131,7 +131,7 @@
   },
   {
     "name": "JB's Indoor Dog Park",
-    "street": "106 Longwater DrNorwell",
+    "street": "106 Longwater Dr",
     "city": "Boston",
     "state": "MA",
     "zip": "02061",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Ames Nowell State Park",
-    "street": "Linwood StAbington",
+    "street": "Linwood St",
     "city": "Brockton",
     "state": "MA",
     "zip": "02351",
@@ -191,7 +191,7 @@
   },
   {
     "name": "Abington Dog Park",
-    "street": "441 Summer StAbington",
+    "street": "441 Summer St",
     "city": "Brockton",
     "state": "MA",
     "zip": "02351",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Goldstein Open Space",
-    "street": "201 West StRandolph",
+    "street": "201 West St",
     "city": "Brockton",
     "state": "MA",
     "zip": "02368",
@@ -231,7 +231,7 @@
   },
   {
     "name": "South Field Dog Park",
-    "street": "25 Memorial Grove AveWeymouth",
+    "street": "25 Memorial Grove Ave",
     "city": "Brockton",
     "state": "MA",
     "zip": "02190",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Dedham Dog Park",
-    "street": "269 Common StDedham",
+    "street": "269 Common St",
     "city": "Brockton",
     "state": "MA",
     "zip": "02026",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Stevens-Coolidge House & Garde",
-    "street": "153 Chickering RdNorth Andover",
+    "street": "153 Chickering Rd",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01845",
@@ -521,7 +521,7 @@
   },
   {
     "name": "Greycourt State Park",
-    "street": "37 Pleasant StMethuen",
+    "street": "37 Pleasant St",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01844",
@@ -531,7 +531,7 @@
   },
   {
     "name": "Peabody Dog Park",
-    "street": "34 Perkins StPeabody",
+    "street": "34 Perkins St",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01960",
@@ -551,7 +551,7 @@
   },
   {
     "name": "Riverside Dog Park",
-    "street": "150 Riverside AveHaverhill",
+    "street": "150 Riverside Ave",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01830",
@@ -561,7 +561,7 @@
   },
   {
     "name": "‍ Methuen Rail Trail Parking",
-    "street": "63 Railroad StMethuen",
+    "street": "63 Railroad St",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01844",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Danvers Dog Park",
-    "street": "57 Forest StDanvers",
+    "street": "57 Forest St",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01923",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Raymond J. Martin Riverside",
-    "street": "971 Riverside DrMethuen",
+    "street": "971 Riverside Dr",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01844",
@@ -621,7 +621,7 @@
   },
   {
     "name": "Edward S. Alekel Veterans",
-    "street": "123 Milk StMethuen",
+    "street": "123 Milk St",
     "city": "Lawrence",
     "state": "MA",
     "zip": "01844",
@@ -641,7 +641,7 @@
   },
   {
     "name": "Billerica Dog Park",
-    "street": "270 Treble Cove RdNorth Billerica",
+    "street": "270 Treble Cove Rd",
     "city": "Lowell",
     "state": "MA",
     "zip": "01862",
@@ -701,7 +701,7 @@
   },
   {
     "name": "The Cove",
-    "street": "104 W Pine StAuburndale",
+    "street": "104 W Pine St",
     "city": "Newton",
     "state": "MA",
     "zip": "02466",
@@ -711,7 +711,7 @@
   },
   {
     "name": "Eddie's Park",
-    "street": "111 W Central StNatick",
+    "street": "111 W Central St",
     "city": "Newton",
     "state": "MA",
     "zip": "01760",
@@ -721,7 +721,7 @@
   },
   {
     "name": "Cutler Park",
-    "street": "84 Kendrick StNeedham",
+    "street": "84 Kendrick St",
     "city": "Newton",
     "state": "MA",
     "zip": "02494",
@@ -731,7 +731,7 @@
   },
   {
     "name": "Beaver Brook Reservation",
-    "street": "66 Mill StBelmont",
+    "street": "66 Mill St",
     "city": "Newton",
     "state": "MA",
     "zip": "02478",
@@ -821,7 +821,7 @@
   },
   {
     "name": "Bell Watertown Public Dog Park",
-    "street": "300 Woodview WayWatertown",
+    "street": "300 Woodview Way",
     "city": "Newton",
     "state": "MA",
     "zip": "02472",
@@ -861,7 +861,7 @@
   },
   {
     "name": "Bare Cove Park",
-    "street": "Fort Hill StHingham",
+    "street": "Fort Hill St",
     "city": "Quincy",
     "state": "MA",
     "zip": "02043",
@@ -951,7 +951,7 @@
   },
   {
     "name": "Melrose Dog Park",
-    "street": "350 Lynn Fells PkwyMelrose",
+    "street": "350 Lynn Fells Pkwy",
     "city": "Somerville",
     "state": "MA",
     "zip": "02176",
@@ -981,7 +981,7 @@
   },
   {
     "name": "Friends of South Hadley Dog",
-    "street": "14 Mulligan DrSouth Hadley",
+    "street": "14 Mulligan Dr",
     "city": "Springfield",
     "state": "MA",
     "zip": "01075",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Agawam Parks & Recreation Park",
-    "street": "1000 Suffield StreetAgawam",
+    "street": "1000 Suffield Street",
     "city": "Springfield",
     "state": "MA",
     "zip": "01001",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "School Street Park",
-    "street": "511 School StAgawam",
+    "street": "511 School St",
     "city": "Springfield",
     "state": "MA",
     "zip": "01001",
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "Community Field",
-    "street": "Community Field RdHolyoke",
+    "street": "Community Field Rd",
     "city": "Springfield",
     "state": "MA",
     "zip": "01040",
@@ -1061,7 +1061,7 @@
   },
   {
     "name": "Dufresne Park",
-    "street": "Taylor StGranby",
+    "street": "Taylor St",
     "city": "Springfield",
     "state": "MA",
     "zip": "01033",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Amherst Dog Park",
-    "street": "Old Belchertown Rd #2Amher",
+    "street": "Old Belchertown Rd #2",
     "city": "Springfield",
     "state": "MA",
     "zip": "01002",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "‍ Fountain Park",
-    "street": "883 Tinkham RdWilbraham",
+    "street": "883 Tinkham Rd",
     "city": "Springfield",
     "state": "MA",
     "zip": "01095",
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Paws Park",
-    "street": "Petty Plain RdGreenfield",
+    "street": "Petty Plain Rd",
     "city": "Springfield",
     "state": "MA",
     "zip": "01301",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Erwin S. Wilder Wildlife Manag",
-    "street": "16 Toad Island RdNorton",
+    "street": "16 Toad Island Rd",
     "city": "Taunton",
     "state": "MA",
     "zip": "02766",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "Sweets Knoll State Park",
-    "street": "1387 Somerset AveDighton",
+    "street": "1387 Somerset Ave",
     "city": "Taunton",
     "state": "MA",
     "zip": "02715",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Wildlands Trust - Great River",
-    "street": "1025 Auburn StBridgewater",
+    "street": "1025 Auburn St",
     "city": "Taunton",
     "state": "MA",
     "zip": "02324",
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "North Attleboro Dog Park",
-    "street": "Dog ParkPlain St",
+    "street": "Dog Park",
     "city": "North Attleborough",
     "state": "MA",
     "zip": "02760",
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "Freetown-Fall River State",
-    "street": "110 Slab Bridge RdAssonet",
+    "street": "110 Slab Bridge Rd",
     "city": "Taunton",
     "state": "MA",
     "zip": "02702",
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Johnsons recreational park",
-    "street": "92 N Main StRaynham",
+    "street": "92 N Main St",
     "city": "Taunton",
     "state": "MA",
     "zip": "02767",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Camp Titicut",
-    "street": "190 Beech StBridgewater",
+    "street": "190 Beech St",
     "city": "Taunton",
     "state": "MA",
     "zip": "02324",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "‍ Blueberry Knoll Wildlife Area",
-    "street": "Stanley RdNorton",
+    "street": "Stanley Rd",
     "city": "Taunton",
     "state": "MA",
     "zip": "02766",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "King Oak Hill Park",
-    "street": "0 Emery LnWeymouth",
+    "street": "0 Emery Ln",
     "city": "Weymouth Town",
     "state": "MA",
     "zip": "02189",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "‍ Abigail Adams State Park",
-    "street": "770 Bridge StWeymouth",
+    "street": "770 Bridge St",
     "city": "Weymouth Town",
     "state": "MA",
     "zip": "02188",
@@ -1371,7 +1371,7 @@
   },
   {
     "name": "Kings Cove Park",
-    "street": "82-90 Bridge StWeymouth",
+    "street": "82-90 Bridge St",
     "city": "Weymouth Town",
     "state": "MA",
     "zip": "02191",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "Bradford Hawes Park",
-    "street": "167 Lakehurst AveWeymouth",
+    "street": "167 Lakehurst Ave",
     "city": "Weymouth Town",
     "state": "MA",
     "zip": "02189",
@@ -1391,7 +1391,7 @@
   },
   {
     "name": "Webb Park",
-    "street": "58 Summit StWeymouth",
+    "street": "58 Summit St",
     "city": "Weymouth Town",
     "state": "MA",
     "zip": "02188",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "Boynton Park",
-    "street": "50 Boynton PkwyPaxton",
+    "street": "50 Boynton Pkwy",
     "city": "‍ Worcester",
     "state": "MA",
     "zip": "01612",
@@ -1421,7 +1421,7 @@
   },
   {
     "name": "Butler Farm Dog Park",
-    "street": "44 Singletary RdMillbury",
+    "street": "44 Singletary Rd",
     "city": "‍ Worcester",
     "state": "MA",
     "zip": "01527",

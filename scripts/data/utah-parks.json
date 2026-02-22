@@ -11,7 +11,7 @@
   },
   {
     "name": "‍ Pioneer Park",
-    "street": "1285 S Angel StKaysville",
+    "street": "1285 S Angel St",
     "city": "Layton",
     "state": "UT",
     "zip": "84037",
@@ -21,7 +21,7 @@
   },
   {
     "name": "The Gailey Trail at Nicholls",
-    "street": "1105 E Nicholls RdFruit Heights",
+    "street": "1105 E Nicholls Rd",
     "city": "Layton",
     "state": "UT",
     "zip": "84037",
@@ -161,7 +161,7 @@
   },
   {
     "name": "‍ Saratoga Ridge Park",
-    "street": "Mount Saratoga BlvdSaratoga Springs",
+    "street": "Mount Saratoga Blvd",
     "city": "Lehi",
     "state": "UT",
     "zip": "84045",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Eagle Mountain Dog Park",
-    "street": "4550 Lehi-Fairfield RdEagle Mountain",
+    "street": "4550 Lehi-Fairfield Rd",
     "city": "Lehi",
     "state": "UT",
     "zip": "84005",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Willow Glen Home Owners Associ",
-    "street": "783 Crystal Crk RdAmerican Fork",
+    "street": "783 Crystal Crk Rd",
     "city": "Lehi",
     "state": "UT",
     "zip": "84003",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Blacksmith Fork Dog Park",
-    "street": "1570 Hyrum BlvdHyrum",
+    "street": "1570 Hyrum Blvd",
     "city": "Logan",
     "state": "UT",
     "zip": "84319",
@@ -351,7 +351,7 @@
   },
   {
     "name": "Whitlock Park",
-    "street": "201 E Whitlock AveSouth Salt Lake",
+    "street": "201 E Whitlock Ave",
     "city": "Millcreek",
     "state": "UT",
     "zip": "84115",
@@ -471,7 +471,7 @@
   },
   {
     "name": "Spanish Fork Dog Park",
-    "street": "400 S 600 E StSpanish Fork",
+    "street": "400 S 600 E St",
     "city": "Provo",
     "state": "UT",
     "zip": "84660",
@@ -531,7 +531,7 @@
   },
   {
     "name": "Willow Creek Dog Park",
-    "street": "4460 Split Rail LnPark City",
+    "street": "4460 Split Rail Ln",
     "city": "Salt Lake City",
     "state": "UT",
     "zip": "84098",
@@ -541,7 +541,7 @@
   },
   {
     "name": "Run-a-Muk Dog Park",
-    "street": "2387 Olympic PkwyPark City",
+    "street": "2387 Olympic Pkwy",
     "city": "Salt Lake City",
     "state": "UT",
     "zip": "84098",
@@ -571,7 +571,7 @@
   },
   {
     "name": "Murray Park",
-    "street": "296 E Murray Park AveMurray",
+    "street": "296 E Murray Park Ave",
     "city": "Salt Lake City",
     "state": "UT",
     "zip": "84107",
@@ -621,7 +621,7 @@
   },
   {
     "name": "Deer Ridge Off-Leash Dog Trail",
-    "street": "Deer Ridge DrDraper",
+    "street": "Deer Ridge Dr",
     "city": "Salt Lake City",
     "state": "UT",
     "zip": "84020",
@@ -681,7 +681,7 @@
   },
   {
     "name": "‍ West Jordan Off-Leash Dog Park",
-    "street": "5982 New Bingham HwyWest Jordan",
+    "street": "5982 New Bingham Hwy",
     "city": "Salt Lake City",
     "state": "UT",
     "zip": "84081",
@@ -761,7 +761,7 @@
   },
   {
     "name": "‍ Friendship Park",
-    "street": "5701 S Fashion BlvdMurray",
+    "street": "5701 S Fashion Blvd",
     "city": "South Jordan",
     "state": "UT",
     "zip": "84107",
@@ -771,7 +771,7 @@
   },
   {
     "name": "Stonebridge Park",
-    "street": "150 Stonebridge DrDraper",
+    "street": "150 Stonebridge Dr",
     "city": "South Jordan",
     "state": "UT",
     "zip": "84020",
@@ -981,7 +981,7 @@
   },
   {
     "name": "Hurricane Dog Park",
-    "street": "320 N 750Hurricane",
+    "street": "320 N 750",
     "city": "St. George",
     "state": "UT",
     "zip": "84737",
@@ -991,7 +991,7 @@
   },
   {
     "name": "Herriman dog park",
-    "street": "5105 Herriman Main StHerriman",
+    "street": "5105 Herriman Main St",
     "city": "West Jordan",
     "state": "UT",
     "zip": "84096",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Country Crossing Park",
-    "street": "4288 Harvest Moon DrSouth Jordan",
+    "street": "4288 Harvest Moon Dr",
     "city": "West Jordan",
     "state": "UT",
     "zip": "84095",
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "‍ Grant Park",
-    "street": "6150 S Main StMurray",
+    "street": "6150 S Main St",
     "city": "West Jordan",
     "state": "UT",
     "zip": "84107",

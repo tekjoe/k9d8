@@ -21,7 +21,7 @@
   },
   {
     "name": "Challenge Grove Park",
-    "street": "101 Bortons Mill RdCherry Hill Township",
+    "street": "101 Bortons Mill Rd",
     "city": "Camden",
     "state": "NJ",
     "zip": "08034",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Cooper River Park",
-    "street": "N Park DrPennsauken Township",
+    "street": "N Park Dr",
     "city": "Camden",
     "state": "NJ",
     "zip": "08109",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Robert Krupinski Sr. Memorial",
-    "street": "200 Blenheim AveWest Collingswood Heights",
+    "street": "200 Blenheim Ave",
     "city": "Camden",
     "state": "NJ",
     "zip": "08059",
@@ -101,7 +101,7 @@
   },
   {
     "name": "Brooklawn Dog Park",
-    "street": "Paris AveBrooklawn",
+    "street": "Paris Ave",
     "city": "Camden",
     "state": "NJ",
     "zip": "08030",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Croft Farm Dog Park",
-    "street": "100 Bortons Mill RdCherry Hill Township",
+    "street": "100 Bortons Mill Rd",
     "city": "Camden",
     "state": "NJ",
     "zip": "08034",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Bow Wow Dog Park",
-    "street": "2601 Cooper AvePennsauken Township",
+    "street": "2601 Cooper Ave",
     "city": "Camden",
     "state": "NJ",
     "zip": "08109",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Garret Mountain Reservation",
-    "street": "8 Mountain AveWoodland Park",
+    "street": "8 Mountain Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07424",
@@ -191,7 +191,7 @@
   },
   {
     "name": "Van Saun County Park",
-    "street": "216 Forest AveParamus",
+    "street": "216 Forest Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07652",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Saddle River County Park",
-    "street": "760 Saddle River RdSaddle Brook",
+    "street": "760 Saddle River Rd",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07663",
@@ -211,7 +211,7 @@
   },
   {
     "name": "Brookdale Park",
-    "street": "Watchung AveBloomfield",
+    "street": "Watchung Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07003",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Third Ward Park",
-    "street": "Passaic Ave & Van Houten AvePassaic",
+    "street": "Passaic Ave & Van Houten Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07055",
@@ -231,7 +231,7 @@
   },
   {
     "name": "Yanticaw Park",
-    "street": "Passaic AveNutley",
+    "street": "Passaic Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07110",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Anderson Park",
-    "street": "274 Bellevue AveMontclair",
+    "street": "274 Bellevue Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07043",
@@ -251,7 +251,7 @@
   },
   {
     "name": "Nutley Dog Park",
-    "street": "53-23 Bloomfield AveNutley",
+    "street": "53-23 Bloomfield Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07110",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Glen Rock NJ Dog Park",
-    "street": "390 Doremus AveGlen Rock",
+    "street": "390 Doremus Ave",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07452",
@@ -301,7 +301,7 @@
   },
   {
     "name": "‍ Rifle Camp Park",
-    "street": "387 Rifle Camp RdWoodland Park",
+    "street": "387 Rifle Camp Rd",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07424",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Carlstadt Dog Park",
-    "street": "411 Orchard StCarlstadt",
+    "street": "411 Orchard St",
     "city": "Clifton",
     "state": "NJ",
     "zip": "07072",
@@ -351,7 +351,7 @@
   },
   {
     "name": "‍ Jersey Dogs",
-    "street": "147 Franklin StBloomfield",
+    "street": "147 Franklin St",
     "city": "East Orange",
     "state": "NJ",
     "zip": "07003",
@@ -381,7 +381,7 @@
   },
   {
     "name": "East Brunswick Dog Park",
-    "street": "Dunhams Corner RdEast Brunswick",
+    "street": "Dunhams Corner Rd",
     "city": "East Orange",
     "state": "NJ",
     "zip": "08816",
@@ -421,7 +421,7 @@
   },
   {
     "name": "Central Playground",
-    "street": "371 Central AveCity of",
+    "street": "371 Central Ave",
     "city": "East Orange",
     "state": "NJ",
     "zip": "07050",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Colgate Park",
-    "street": "257 New StCity of",
+    "street": "257 New St",
     "city": "East Orange",
     "state": "NJ",
     "zip": "07050",
@@ -471,7 +471,7 @@
   },
   {
     "name": "Cameron Dog Park",
-    "street": "129 S Beverwyck RdParsippany",
+    "street": "129 S Beverwyck Rd",
     "city": "East Orange",
     "state": "NJ",
     "zip": "07054",
@@ -481,7 +481,7 @@
   },
   {
     "name": "Goffle Brook Park",
-    "street": "788 Lafayette AveHawthorne",
+    "street": "788 Lafayette Ave",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07506",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Warinanco Park",
-    "street": "2499 St George AveRoselle",
+    "street": "2499 St George Ave",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07203",
@@ -501,7 +501,7 @@
   },
   {
     "name": "Echo Lake Park",
-    "street": "1028 Springfield AveMountainside",
+    "street": "1028 Springfield Ave",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07092",
@@ -511,7 +511,7 @@
   },
   {
     "name": "Echo Lake Dog Park",
-    "street": "1137 Globe AveMountainside",
+    "street": "1137 Globe Ave",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07092",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Veterans Park",
-    "street": "26 Park RdBayonne",
+    "street": "26 Park Rd",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07002",
@@ -581,7 +581,7 @@
   },
   {
     "name": "Dennis P. Collins Park",
-    "street": "1 W 1st StBayonne",
+    "street": "1 W 1st St",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07002",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Fort Lee Dog Park",
-    "street": "519 Stillwell AveFort Lee",
+    "street": "519 Stillwell Ave",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07024",
@@ -611,7 +611,7 @@
   },
   {
     "name": "Elizabeth River Park",
-    "street": "165 Valley View RdHillside",
+    "street": "165 Valley View Rd",
     "city": "Elizabeth",
     "state": "NJ",
     "zip": "07205",
@@ -721,7 +721,7 @@
   },
   {
     "name": "Maxwell Place Park",
-    "street": "11TH Sinatra Dr NHoboken",
+    "street": "11",
     "city": "Jersey City",
     "state": "NJ",
     "zip": "07030",
@@ -751,7 +751,7 @@
   },
   {
     "name": "Union City Small Dog Park",
-    "street": "3325 Hudson AveUnion City",
+    "street": "3325 Hudson Ave",
     "city": "Jersey City",
     "state": "NJ",
     "zip": "07087",
@@ -861,7 +861,7 @@
   },
   {
     "name": "Viaduct Park",
-    "street": "1333 Madison StHoboken",
+    "street": "1333 Madison St",
     "city": "Jersey City",
     "state": "NJ",
     "zip": "07030",
@@ -871,7 +871,7 @@
   },
   {
     "name": "Elysian Park",
-    "street": "1001 Hudson StHoboken",
+    "street": "1001 Hudson St",
     "city": "Jersey City",
     "state": "NJ",
     "zip": "07030",
@@ -891,7 +891,7 @@
   },
   {
     "name": "Colonial Dog Park",
-    "street": "165 Mettlers RdSomerset",
+    "street": "165 Mettlers Rd",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "08873",
@@ -901,7 +901,7 @@
   },
   {
     "name": "Donaldson Park",
-    "street": "526 S 2nd AveHighland Park",
+    "street": "526 S 2nd Ave",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "08904",
@@ -911,7 +911,7 @@
   },
   {
     "name": "Heavenly Farms Park",
-    "street": "440 Dunhams Corner RdEast Brunswick",
+    "street": "440 Dunhams Corner Rd",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "08816",
@@ -931,7 +931,7 @@
   },
   {
     "name": "Bark Park",
-    "street": "Mannino Park DriveOld Bridge",
+    "street": "Mannino Park Drive",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "08857",
@@ -941,7 +941,7 @@
   },
   {
     "name": "Central Bark Dog Park",
-    "street": "255 Greenbrook RdGreen Brook Township",
+    "street": "255 Greenbrook Rd",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "08812",
@@ -951,7 +951,7 @@
   },
   {
     "name": "Southside Dog Park",
-    "street": "601 New Market AveSouth Plainfield",
+    "street": "601 New Market Ave",
     "city": "New Brunswick",
     "state": "NJ",
     "zip": "07080",
@@ -971,7 +971,7 @@
   },
   {
     "name": "Stephen R. Gregg Park",
-    "street": "930 John F. Kennedy BlvdBayonne",
+    "street": "930 John F. Kennedy Blvd",
     "city": "Newark",
     "state": "NJ",
     "zip": "07002",
@@ -991,7 +991,7 @@
   },
   {
     "name": "Washington Park",
-    "street": "181 Palisade AveUnion City",
+    "street": "181 Palisade Ave",
     "city": "Newark",
     "state": "NJ",
     "zip": "07087",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "South Mountain Dog Park",
-    "street": "Bear LnMillburn",
+    "street": "Bear Ln",
     "city": "Newark",
     "state": "NJ",
     "zip": "07040",
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "Belleville Dog Park",
-    "street": "341 Division AveBelleville",
+    "street": "341 Division Ave",
     "city": "Newark",
     "state": "NJ",
     "zip": "07109",
@@ -1031,7 +1031,7 @@
   },
   {
     "name": "Kearny Dog Park",
-    "street": "479 Passaic AveKearny",
+    "street": "479 Passaic Ave",
     "city": "Newark",
     "state": "NJ",
     "zip": "07032",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Watsessing Dog Park",
-    "street": "78-88 Locust AveBloomfield",
+    "street": "78-88 Locust Ave",
     "city": "Newark",
     "state": "NJ",
     "zip": "07003",
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "Holmdel Park",
-    "street": "44 Longstreet RdHolmdel",
+    "street": "44 Longstreet Rd",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "07733",
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "International Park",
-    "street": "Sadowski PkwyPerth Amboy",
+    "street": "Sadowski Pkwy",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Cross Farm Park",
-    "street": "10 Longbridge RdHolmdel",
+    "street": "10 Longbridge Rd",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "07733",
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "Colonial Park",
-    "street": "156 Mettlers RdSomerset",
+    "street": "156 Mettlers Rd",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08873",
@@ -1141,7 +1141,7 @@
   },
   {
     "name": "‍ Perth Amboy Municipal Marina",
-    "street": "300 Front StPerth Amboy",
+    "street": "300 Front St",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "Central Park",
-    "street": "Collins RdMorris Plains",
+    "street": "Collins Rd",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "07950",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Perth Amboy Fishing Pier",
-    "street": "Front StPerth Amboy",
+    "street": "Front St",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "Sadowski Parkway Waterfront",
-    "street": "105 Sadowski PkwyPerth Amboy",
+    "street": "105 Sadowski Pkwy",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "‍ Waterfront Walkway",
-    "street": "206 Front StPerth Amboy",
+    "street": "206 Front St",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Thompson Park",
-    "street": "Fir DrMonroe Township",
+    "street": "Fir Dr",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08831",
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Alvin P. Williams Memorial",
-    "street": "Port Reading AveSewaren",
+    "street": "Port Reading Ave",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "07077",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "‍ John F. Kennedy Memorial Park",
-    "street": "801-803 Washington RdParlin",
+    "street": "801-803 Washington Rd",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08859",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "Thomas Mundy Peterson Park",
-    "street": "40 Washington StPerth Amboy",
+    "street": "40 Washington St",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08861",
@@ -1251,7 +1251,7 @@
   },
   {
     "name": "John Zdanewicz Park",
-    "street": "330 N Feltus StSouth Amboy",
+    "street": "330 N Feltus St",
     "city": "‍ Perth Amboy",
     "state": "NJ",
     "zip": "08879",
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Off-Leash Dog Park",
-    "street": "64 Parrott Mill RdChatham",
+    "street": "64 Parrott Mill Rd",
     "city": "Plainfield",
     "state": "NJ",
     "zip": "07928",
@@ -1301,7 +1301,7 @@
   },
   {
     "name": "Grounds For Sculpture",
-    "street": "80 Sculptors WayHamilton Township",
+    "street": "80 Sculptors Way",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08619",
@@ -1311,7 +1311,7 @@
   },
   {
     "name": "Rosedale Dog Park",
-    "street": "Lawrence Hopewell TrailPennington",
+    "street": "Lawrence Hopewell Trail",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08534",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "D&R Canal State Park",
-    "street": "5 Burlington StFieldsboro",
+    "street": "5 Burlington St",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08505",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "Mercer County Park",
-    "street": "1638 Old Trenton RdWest Windsor Township",
+    "street": "1638 Old Trenton Rd",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08550",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "Rosedale Park",
-    "street": "424 Federal City RdPennington",
+    "street": "424 Federal City Rd",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08534",
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "Kuser Farm Park",
-    "street": "390 Newkirk AveHamilton Township",
+    "street": "390 Newkirk Ave",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08610",
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "Hamilton Dog park",
-    "street": "2206 Kuser RdHamilton Township",
+    "street": "2206 Kuser Rd",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08690",
@@ -1421,7 +1421,7 @@
   },
   {
     "name": "Lawrence Nature Center",
-    "street": "481 Drexel AveLawrence Township",
+    "street": "481 Drexel Ave",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08648",
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "The Hunterdon County Off-Leash",
-    "street": "310 NJ-12Flemington",
+    "street": "310 NJ-12",
     "city": "Trenton",
     "state": "NJ",
     "zip": "08822",
@@ -1491,7 +1491,7 @@
   },
   {
     "name": "‍ James J. Braddock North Hudson",
-    "street": "9003 Bergenline AveNorth Bergen",
+    "street": "9003 Bergenline Ave",
     "city": "West New York",
     "state": "NJ",
     "zip": "07047",
